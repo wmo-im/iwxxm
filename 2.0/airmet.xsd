@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.0" version="2.0" xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
+	<include schemaLocation="common.xsd"></include>
+	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd"></import>
+	<import namespace="http://www.opengis.net/om/2.0" schemaLocation="http://schemas.opengis.net/om/2.0/observation.xsd"></import>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
+	<annotation>
+		<documentation>AIRMET reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
+
+AIRMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These weather phenomena are reported as impacted regions of airspace.
+
+References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
+	</annotation>
+	<element name="AIRMET" type="iwxxm:AIRMETType" substitutionGroup="iwxxm:Report">
+		<annotation>
+			<documentation>An AIRMET (significant meteorological) report. AIRMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena over time. 
+
+The AIRMET report class represents the base AIRMET types that may be reported such as squall lines, thunderstorms, dust storms, turbulence, etc. AIRMETs may report either observed or forecast hazardous conditions.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AIRMETType">
+		<complexContent>
+			<extension base="iwxxm:ReportType">
+				<sequence>
+					<element name="issuingAirTrafficServicesUnit" type="iwxxm:UnitPropertyType">
+						<annotation>
+							<documentation>The ATS unit serving the FIR or CTA to which the AIRMET refers.  ICAO Annex 3 / WMO No. 49-2: A6-1: "Location indicator of FIR/CTA"</documentation>
+						</annotation>
+					</element>
+					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType">
+						<annotation>
+							<documentation>MWO originating this report</documentation>
+						</annotation>
+					</element>
+					<element name="sequenceNumber" type="string">
+						<annotation>
+							<documentation>The sequence number of this message.  For example: "5", "A3", or "2"</documentation>
+						</annotation>
+					</element>
+					<element name="validPeriod" type="gml:TimePeriodPropertyType">
+						<annotation>
+							<documentation>The valid period for the entire report, including all observations and forecast conditions.  Each observation/forecast phenomenon includes its own period of validity for described meteorological conditions, which is represented as the O&amp;M Observation validTime.</documentation>
+						</annotation>
+					</element>
+					<element name="cancelledSequenceNumber" type="string" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The cancelled AIRMET sequence number. Mandatory when this is a cancellation report, must be missing otherwise
+
+Examples:
+YUDD AIRMET 2 VALID ...
+YUDD AIRMET A3 VALID ...</documentation>
+						</annotation>
+					</element>
+					<element name="cancelledValidPeriod" type="gml:TimePeriodPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The valid period of a previous AIRMET that is cancelled by this AIRMET.  Mandatory when this is a cancellation report, must be missing otherwise</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenon" type="iwxxm:AeronauticalAreaWeatherPhenomenonType">
+						<annotation>
+							<documentation>The reported phenomenon, such as thunderstorm, tropical cyclone, icing, mountain wave, etc.</documentation>
+						</annotation>
+					</element>
+					<element name="analysis" type="om:OM_ObservationPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>AIRMETs may include the same phenomenon covering more than one area within the FIR/UIR/CTA, as well as observed and forecast conditions for each of these reported areas.  All combinations of observations and forecasts of meteorological conditions, including changing conditions, are represented by their own AIRMETEvolvingMeteorologicalCondition.
+
+Each analysis has a single EvolvingMeteorologicalCondition as its result.  </documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters</documentation>
+						</annotation>
+					</element>
+				</sequence>
+				<attribute use="required" name="status" type="iwxxm:AIRMETReportStatusType">
+					<annotation>
+						<documentation>The AIRMET report status - cancelled or normal</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AIRMETPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:AIRMET"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="AIRMETEvolvingMeteorologicalCondition" type="iwxxm:AIRMETEvolvingMeteorologicalConditionType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Conditions that indicate the presence of a specific AIRMET phenomenon such as volcanic ash or a thunderstorm, along with expected changes to the phenomenon such as intensity, speed, and direction.  These conditions are reported with OBS/FCST conditions on all SIGMET types.
+
+TC TOP (ABV and BLW) conditions are represented by the vertical component of the geometry.  For example: CB TOP FL500 is represented as a missing lowerLimit and an upperLimit of 500FL.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AIRMETEvolvingMeteorologicalConditionType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The expected direction of movement of a meteorological condition. When no movement is expected, this is a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason and the speedOfMotion will be 0.  Direction of motion to shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
+						</annotation>
+					</element>
+					<element name="geometry" type="aixm:AirspaceVolumePropertyType" minOccurs="1" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
+						</annotation>
+					</element>
+					<element name="geometryLowerLimitOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The reported relational operator for the airspace geometry lower limit. When reported, this operator is reported in conjunction with the airspace geometry's lower limit. 
+
+To report an airspace lower limit of below FL 300, airspace lower limit is reported as FL 300 and the operator is reported as "below".  When no operator is reported, the airspace lower limit represents an exact value with identical semantics to other measured quantities</documentation>
+						</annotation>
+					</element>
+					<element name="geometryUpperLimitOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The reported relational operator for the airspace geometry upper limit. When reported, this operator is reported in conjunction with the airspace geometry's upper limit. 
+
+To report an airspace upper limit of above FL 300, airspace upper limit is reported as FL 300 and the operator is reported as "above".  When no operator is reported, the airspace upper limit represents an exact value with identical semantics to other measured quantities</documentation>
+						</annotation>
+					</element>
+					<element name="speedOfMotion" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The expected speed of movement of a meteorological condition. When no movement is expected, this will have a value of 0 and directionOfMotion will have a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason. Speed of movement shall be given in either "km/h" or "[kn_i]" (knot).</documentation>
+						</annotation>
+					</element>
+					<element name="cloudBase" type="gml:LengthType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The cloud base of reported clouds.  Only used with an AIRMET reporting cloud phenomenon.  Height of cloud base shall be given in either "m" (metres) or "[ft_i]" (feet).
+
+Cloud base and top may differ from but should be within the AIRMET base and top which are reported in airspace upper and lower limits.</documentation>
+						</annotation>
+					</element>
+					<element name="cloudBaseReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The reference surface used for the value of the cloud base. For example, Mean Sea Level, Ground, standard pressure,  etc..</documentation>
+						</annotation>
+					</element>
+					<element name="cloudTop" type="gml:LengthType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The cloud top of reported clouds.  Only used with an AIRMET reporting cloud phenomenon.  Height of cloud top shall be given in either "m" (metres) or "[ft_i]" (feet).  
+
+Cloud base and top may differ from but should be within the AIRMET base and top which are reported in airspace upper and lower limits.</documentation>
+						</annotation>
+					</element>
+					<element name="cloudTopReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The reference surface used for the value of the cloud base. For example, Mean Sea Level, Ground, standard pressure,  etc..</documentation>
+						</annotation>
+					</element>
+					<element name="surfaceVisibility" type="gml:LengthType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The surface visibility.  Only used with SFC VIS AIRMETs. Horizontal surface visibility unit of measure shall be given as "m" (metre).
+
+ICAO Annex 3 / WMO No. 49-2:
+Appendix 6 Section 2.1</documentation>
+						</annotation>
+					</element>
+					<element name="surfaceVisibilityCause" type="iwxxm:WeatherCausingVisibilityReductionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The weather condition(s) causing reduced visibility.</documentation>
+						</annotation>
+					</element>
+					<element name="surfaceWindDirection" type="gml:AngleType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The widespread surface wind direction.  Only used with SFC WIND AIRMETs. Unit of measure shall be given as "deg" in degrees from true North.  A true north wind is indicated with a direction of 360.</documentation>
+						</annotation>
+					</element>
+					<element name="surfaceWindSpeed" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The widespread surface wind speed.  Only used with SFC WIND AIRMETs. Surface wind speed unit of measure shall be given as "m/s" or "[kn_i]" (knot).</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters</documentation>
+						</annotation>
+					</element>
+				</sequence>
+				<attribute name="intensityChange" type="iwxxm:AIRMETExpectedIntensityChangeType">
+					<annotation>
+						<documentation>The expected change in intensity for the reported meteorological condition (e.g., intensifying, weakening, or no change) determined at the time of AIRMET analysis based on the current state of the meteorological condition</documentation>
+					</annotation>
+				</attribute>
+				<attribute use="required" name="timeIndicator" type="iwxxm:TimeIndicatorType">
+					<annotation>
+						<documentation>Indication whether the information is observed and expected to continue, or forecast</documentation>
+					</annotation>
+				</attribute>
+				<attribute name="approximateLocation" type="boolean">
+					<annotation>
+						<documentation>Indicator of whether the location of phenomena is approximate. If not reported locations are not approximate</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AIRMETEvolvingMeteorologicalConditionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:AIRMETEvolvingMeteorologicalCondition"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<simpleType name="AIRMETReportStatusType">
+		<annotation>
+			<documentation>The status of an AIRMET report (e.g., a normal issuance, a cancellation of an earlier AIRMET)</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="NORMAL">
+				<annotation>
+					<documentation>A normal AIRMET report (not a cancellation)</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CANCELLATION">
+				<annotation>
+					<documentation>A cancellation of an earlier AIRMET report</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="AIRMETExpectedIntensityChangeType">
+		<annotation>
+			<documentation>Expected change in intensity for (significant) meteorological phenomena.  
+
+This is a copy of the ExpectedIntensityChange enumeration found in IWXXM 1.0. This copy removes the need for a dependency on IWXXM.  
+
+See WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 20 028 'Expected change in intensity'.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="NO_CHANGE">
+				<annotation>
+					<documentation>No change (NC)</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="WEAKEN">
+				<annotation>
+					<documentation>Forecast to weaken (WKN)</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="INTENSIFY">
+				<annotation>
+					<documentation>Forecast to intensify (INTSF)</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<complexType name="AeronauticalAreaWeatherPhenomenonType">
+		<annotation>
+			<documentation>Weather phenomenon of significance to aviation operations; used in AIRMET reports. The set of permitted options are defined in ICAO Annex 3 / WMO No. 49-2 C.3.1 sub-clause 1.1.4</documentation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/49-2/AirWxPhenomena</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
+	<complexType name="WeatherCausingVisibilityReductionType">
+		<annotation>
+			<documentation>A weather condition reducing visibility, such as dust, rain or volcanic ash.
+
+See ICAO Annex 3/ WMO No. 49-2 Appendix 6 Section 2.1.</documentation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
+</schema>

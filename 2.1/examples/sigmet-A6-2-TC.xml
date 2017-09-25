@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    An example of a SIGMET.  Original SIGMET from ICAO Annex 3 Amd 77 Example A6-2:
+
+      YUCC SIGMET 3 VALID 251600/252200 YUDO -
+      YUCC AMSWELL FIR TC GLORIA PSN N2706 W07306 CB OBS AT 1600Z WI 250NM OF TC CENTRE TOP FL500 NC
+      FCST AT 2200Z TC CENTRE PSN N2740 W07345
+-->
+<iwxxm:TropicalCycloneSIGMET xmlns:iwxxm="http://icao.int/iwxxm/2.1"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:om="http://www.opengis.net/om/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
+    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+
+    gml:id="sigmet-YUCC-20120825160000Z"
+    permissibleUsage="OPERATIONAL"
+    status="NORMAL">
+
+    <iwxxm:issuingAirTrafficServicesUnit>
+        <aixm:Unit gml:id="fic-YUCC">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="fic-YUCC-ts">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>YUCC FIC</aixm:name>
+                    <aixm:type>FIC</aixm:type>
+                    <aixm:designator>YUCC</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:issuingAirTrafficServicesUnit>
+    <iwxxm:originatingMeteorologicalWatchOffice>
+        <aixm:Unit gml:id="wmo-YUDO">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="mwo-YUDO-ts">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>YUDO MWO</aixm:name>
+                    <aixm:type>MWO</aixm:type>
+                    <aixm:designator>YUDO</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:originatingMeteorologicalWatchOffice>
+
+    <iwxxm:sequenceNumber>3</iwxxm:sequenceNumber>
+
+    <!-- Valid period for this report -->
+    <iwxxm:validPeriod>
+        <gml:TimePeriod gml:id="tp-20120825T1600Z-20120825T2200Z">
+            <gml:beginPosition>2012-08-25T16:00:00Z</gml:beginPosition>
+            <gml:endPosition>2012-08-25T22:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:validPeriod>
+
+    <!-- The significant meteorological phenomenon are listed in WMO No. 49 C.3.1. sub-clause 1.1.4 -->
+    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/TC"/>
+
+    <!-- OBS AT 1600Z -->
+    <iwxxm:analysis>
+        <om:OM_Observation gml:id="analysis-20120825T1600Z">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETEvolvingConditionAnalysis"/>
+            <!-- time of observed conditions -->
+            <om:phenomenonTime>
+                <gml:TimeInstant gml:id="ti-201208251600Z">
+                    <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:phenomenonTime>
+            <!-- time at which the results of the observation were made available -->
+            <om:resultTime>
+                <gml:TimeInstant gml:id="ti-201208251600Z2">
+                    <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:resultTime>
+            <!-- The valid period for this observation is the period of the entire SIGMET -->
+            <om:validTime xlink:href="#tp-20120825T1600Z-20120825T2200Z"/>
+            <om:procedure>
+                <metce:Process gml:id="p-49-2-sigmet">
+                    <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO SIGMET INFORMATION</gml:description>
+                </metce:Process>
+            </om:procedure>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionAnalysis"/>
+            <!-- featureOfInterest type and shape MUST refer to an SF_SamplingSurface -->
+            <om:featureOfInterest>
+                <sams:SF_SpatialSamplingFeature gml:id="sampling-surface-Amswell">
+                    <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
+                    <sf:sampledFeature>
+                        <aixm:Airspace gml:id="fir-YUCC">
+                            <aixm:timeSlice>
+                                <aixm:AirspaceTimeSlice gml:id="fir-YUCC-ts">
+                                    <gml:validTime/>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                    <aixm:type>FIR</aixm:type>
+                                    <aixm:designator>YUCC</aixm:designator>
+                                    <aixm:name>AMSWELL FIR</aixm:name>
+                                </aixm:AirspaceTimeSlice>
+                            </aixm:timeSlice>
+                        </aixm:Airspace>
+                    </sf:sampledFeature>
+                    <!-- FIR boundary - not typically reported -->
+                    <sams:shape nilReason="withheld"/>
+                </sams:SF_SpatialSamplingFeature>
+            </om:featureOfInterest>
+            <om:result>
+                <!-- CB OBS AT 1600Z WI 250NM OF TC CENTRE TOP FL500 NC -->
+                <iwxxm:SIGMETEvolvingConditionCollection gml:id="tc-obs-N2706" timeIndicator="OBSERVATION">
+                  <iwxxm:member>
+                    <iwxxm:SIGMETEvolvingCondition gml:id="tc-sec1" intensityChange="NO_CHANGE">
+                      <!-- This shape describes:
+                          N2706 W07306 CB TOP FL500 WI 150NM OF CENTRE i.e., a 150NM radius around -73.10 (lon), 27.10 (lat) -->
+                      <iwxxm:geometry>
+                          <aixm:AirspaceVolume gml:id="as1">
+                              <aixm:upperLimit uom="FL">500</aixm:upperLimit>
+                              <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                              <aixm:horizontalProjection>
+                                  <aixm:Surface gml:id="tc-obs-N2706-sfc" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                      <gml:polygonPatches>
+                                          <gml:PolygonPatch>
+                                              <gml:exterior>
+                                                  <gml:Ring>
+                                                      <gml:curveMember>
+                                                          <gml:Curve gml:id="curve01">
+                                                              <gml:segments>
+                                                                  <gml:CircleByCenterPoint numArc="1">
+                                                                      <gml:pos>27.10 -73.10</gml:pos>
+                                                                      <gml:radius uom="[nmi_i]">250</gml:radius>
+                                                                  </gml:CircleByCenterPoint>
+                                                              </gml:segments>
+                                                          </gml:Curve>
+                                                      </gml:curveMember>
+                                                  </gml:Ring>
+                                              </gml:exterior>
+                                          </gml:PolygonPatch>
+                                      </gml:polygonPatches>
+                                  </aixm:Surface>
+                              </aixm:horizontalProjection>
+                          </aixm:AirspaceVolume>
+                      </iwxxm:geometry>
+                    </iwxxm:SIGMETEvolvingCondition>
+                  </iwxxm:member>
+                </iwxxm:SIGMETEvolvingConditionCollection>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:analysis>
+
+    <!-- FCST AT 2200Z TC CENTRE PSN N2740 W07345 -->
+    <iwxxm:forecastPositionAnalysis>
+        <om:OM_Observation gml:id="analysis-20120825T1600Z2">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETPositionAnalysis"/>
+            <!-- time of forecast conditions -->
+            <om:phenomenonTime>
+                <gml:TimeInstant gml:id="ti-20120825T1600Z2">
+                    <gml:timePosition>2012-08-25T22:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:phenomenonTime>
+            <!-- time at which the results of the observation were made available -->
+            <om:resultTime>
+                <gml:TimeInstant gml:id="ti-201208251600Z3">
+                    <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:resultTime>
+            <!-- The valid period for this observation is the period of the entire SIGMET -->
+            <om:validTime xlink:href="#tp-20120825T1600Z-20120825T2200Z"/>
+            <om:procedure xlink:href="#p-49-2-sigmet"/>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/sigmet/positionAnalysis"/>
+            <om:featureOfInterest xlink:href="#sampling-surface-Amswell"/>
+            <om:result>
+                <iwxxm:SIGMETPositionCollection gml:id="position-collection-result-2">
+                    <iwxxm:member>
+                        <!-- TC CENTRE N2740 W07345 -->
+                        <iwxxm:SIGMETPosition gml:id="sigmet-fcst-N2706">
+                            <iwxxm:geometry>
+                                <aixm:AirspaceVolume gml:id="as2">
+                                    <aixm:horizontalProjection>
+                                        <aixm:Surface gml:id="sfc002" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                            <gml:polygonPatches>
+                                                <gml:PolygonPatch>
+                                                    <gml:exterior>
+                                                        <gml:Ring>
+                                                            <gml:curveMember>
+                                                                <gml:Curve gml:id="curve001">
+                                                                    <gml:segments>
+                                                                        <gml:CircleByCenterPoint numArc="1">
+                                                                            <gml:pos>27.6667 -73.75</gml:pos>
+                                                                            <gml:radius uom="[nmi_i]">0</gml:radius>
+                                                                        </gml:CircleByCenterPoint>
+                                                                    </gml:segments>
+                                                                </gml:Curve>
+                                                            </gml:curveMember>
+                                                        </gml:Ring>
+                                                    </gml:exterior>
+                                                </gml:PolygonPatch>
+                                            </gml:polygonPatches>
+                                        </aixm:Surface>
+                                    </aixm:horizontalProjection>
+                                </aixm:AirspaceVolume>
+                            </iwxxm:geometry>
+                        </iwxxm:SIGMETPosition>
+                    </iwxxm:member>
+                </iwxxm:SIGMETPositionCollection>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:forecastPositionAnalysis>
+
+    <iwxxm:tropicalCyclone>
+        <metce:TropicalCyclone gml:id="TC-Gloria">
+            <metce:name>Gloria</metce:name>
+        </metce:TropicalCyclone>
+    </iwxxm:tropicalCyclone>
+</iwxxm:TropicalCycloneSIGMET>

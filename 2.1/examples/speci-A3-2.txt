@@ -1,0 +1,28 @@
+SPECI YUDO 151115Z 05025G37KT 3000 1200NE+TSRA BKN005CB 25/22 Q1008 TEMPO TL1200 0600
+BECMG AT1200 8000 NSW NSC
+
+
+Special report for Donlon/International* issued on the 15th of the month at 1115 UTC;
+  surface wind direction 050 degrees; 
+  wind speed 25 knots, gusting 37 knots; 
+  prevailing visibility 3000 metres;
+  minimum visibility 1200 metres to north east;
+  thunderstorm with heavy rain; 
+  broken cumulonimbus cloud at 500 feet; 
+  air temperature 25 degrees Celsius; 
+  dew-point temperature 22 degrees Celsius; 
+  QNH 1008 hectopascals; 
+  
+temporarily from 1115 to 1200
+  prevailing visibility 600 metres;
+   
+becoming at 1200 UTC 
+  prevailing visibility 8 kilometres; 
+  (thunderstorm ceases)
+  nil significant weather;
+  nil significant cloud;
+
+* Fictitious location
+
+Note. In this example, the non-SI alternative units knot and foot were used for wind speed and height of cloud base, respectively.
+However, in accordance with Annex 5, the corresponding primary units metres per second and metre may be used instead.

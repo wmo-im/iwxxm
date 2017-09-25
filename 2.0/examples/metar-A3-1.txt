@@ -1,0 +1,18 @@
+METAR YUDO 221630Z 24004MPS 0600 R12/1000U DZ FG SCT010 OVC020 17/16 Q1018 BECMG TL1700 0800 FG BECMG AT1800 9999 NSW
+
+
+Routine report for Donlon/International* issued on the 22nd of the month at 1630 UTC; surface wind direction
+240 degrees; wind speed 4 metres per second; visibility (along the runway(s) in the local routine report; prevailing
+visibility in METAR) 600 metres; runway visual range representative of the touchdown zone for runway 12 is
+1 000 metres and the runway visual range values have shown an upward tendency during previous 10 minutes
+(RVR tendency to be included in METAR only); and moderate drizzle and fog; scattered cloud at 300 metres;
+overcast at 600 metres; air temperature 17 degrees Celsius; dew-point temperature 16 degrees Celsius; QNH
+1 018 hectopascals; trend during next 2 hours, visibility (along the runway(s) in the local routine report; prevailing
+visibility in METAR) becoming 800 metres in fog by 1700 UTC; at 1800 UTC visibility (along the runway(s) in
+the local routine report; prevailing visibility in METAR) becoming 10 kilometres or more and nil significant
+weather.
+
+* Fictitious location
+
+Note. In this example, the primary units metre per second and metre were used for wind speed and height of cloud base, respectively.
+However, in accordance with Annex 5, the corresponding non-SI alternative units knot and foot may be used instead.

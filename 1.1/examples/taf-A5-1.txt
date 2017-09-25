@@ -1,0 +1,19 @@
+TAF YUDO 160000Z 1606/1624 13005MPS 9000 BKN020
+BECMG 1606/1608 SCT015CB BKN020
+TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020
+FM161230 15004MPS 9999 BKN020
+
+
+TAF for Donlon/International* issued on the 16th of the month at 0000 UTC valid from 0600 UTC to 2400 UTC
+on the 16th of the month; surface wind direction 130 degrees; wind speed 5 metres per second; visibility
+9 kilometres, broken cloud at 600 metres; becoming between 0600 UTC and 0800 UTC on the 16th of the month,
+scattered cumulonimbus cloud at 450 metres and broken cloud at 600 metres; temporarily between 0800 UTC and
+1200 UTC on the 16th of the month surface wind direction 170 degrees; wind speed 6 metres per second gusting to
+12 metres per second; visibility 1 000 metres in a thunderstorm with moderate rain, scattered cumulonimbus cloud
+at 300 metres and broken cloud at 600 metres; from 1230 UTC on the 16th of the month surface wind direction
+150 degrees; wind speed 4 metres per second; visibility 10 kilometres or more; and broken cloud at 600 metres.
+
+* Fictitious location
+
+Note. In this example, the primary units metre per second and metre were used for wind speed and height of cloud base, respectively.
+However, in accordance with Annex 5, the corresponding non-SI alternative units knot and foot may be used instead.
