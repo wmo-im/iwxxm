@@ -9,5 +9,5 @@ Unlike the traditional forms of the ICAO Annex III / WMO No. 49 products (referr
 or TAC), IWXXM is not intended to be directly used by pilots. IWXXM is designed to be consumed by software acting on
 behalf of pilots, such as display software.
 
-**NOTE**: this repository is currently used for testing and evaluating GitHub as part of the IWXXM development process.  The
- WMO Task Team on Aviation XML (TT-AvXML) is currently evaluating the use of GitHub in IWXXM development
+**NOTE**: this repository is currently used for testing and evaluating GitHub as part of the IWXXM development process
+and is not yet official
