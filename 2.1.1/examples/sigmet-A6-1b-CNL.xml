@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    An example of a SIGMET.  Original SIGMET from ICAO Annex 3 Amd 77 Example A6-1b:
+
+      YUDD SIGMET 3 VALID 101345/101600 YUSO
+      YUDD SHANLON FIR/UIR CNL SIGMET 2 101200/101600
+-->
+<iwxxm:SIGMET xmlns:iwxxm="http://icao.int/iwxxm/2.1"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:om="http://www.opengis.net/om/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
+    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+
+    gml:id="sigmet-YUDD-201208101345Z"
+    permissibleUsage="OPERATIONAL"
+    status="CANCELLATION">
+
+    <iwxxm:issuingAirTrafficServicesUnit>
+        <aixm:Unit gml:id="fic-YUDD">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="fic-YUDD-ts">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>YUDD FIC</aixm:name>
+                    <aixm:type>FIC</aixm:type>
+                    <aixm:designator>YUDD</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:issuingAirTrafficServicesUnit>
+
+    <iwxxm:originatingMeteorologicalWatchOffice>
+        <aixm:Unit gml:id="wmo-YUSO">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="mwo-YUSO-ts">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>YUSO MWO</aixm:name>
+                    <aixm:type>MWO</aixm:type>
+                    <aixm:designator>YUSO</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:originatingMeteorologicalWatchOffice>
+
+    <iwxxm:sequenceNumber>3</iwxxm:sequenceNumber>
+
+    <!-- Valid period for this report -->
+    <iwxxm:validPeriod>
+        <gml:TimePeriod gml:id="tp-20120810T1345Z-20120810T1600Z">
+            <gml:beginPosition>2012-08-10T13:45:00Z</gml:beginPosition>
+            <gml:endPosition>2012-08-10T16:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:validPeriod>
+
+    <iwxxm:cancelledSequenceNumber>2</iwxxm:cancelledSequenceNumber>
+
+    <iwxxm:cancelledValidPeriod>
+        <gml:TimePeriod gml:id="tp-20120810T1200Z-20120810T1600Z">
+            <gml:beginPosition>2012-08-10T12:00:00Z</gml:beginPosition>
+            <gml:endPosition>2012-08-10T16:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:cancelledValidPeriod>
+
+    <iwxxm:phenomenon nilReason="inapplicable"/>
+
+    <iwxxm:analysis>
+        <om:OM_Observation gml:id="seca1">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETEvolvingConditionAnalysis"/>
+            <om:phenomenonTime nilReason="inapplicable"/>
+            <om:resultTime>
+                <gml:TimeInstant gml:id="ti-20120810T1345Z">
+                    <gml:timePosition>2012-08-10T13:45:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:resultTime>
+            <om:validTime xlink:href="#tp-20120810T1345Z-20120810T1600Z"/>
+            <om:procedure>
+                <metce:Process gml:id="p-49-2-sigmet">
+                    <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO SIGMET INFORMATION</gml:description>
+                </metce:Process>
+            </om:procedure>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionAnalysis"/>
+            <om:featureOfInterest>
+                <sams:SF_SpatialSamplingFeature gml:id="sampling-surface-Amswell">
+                    <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
+                    <sf:sampledFeature>
+                        <aixm:Airspace gml:id="fir-YUDD">
+                            <aixm:timeSlice>
+                                <aixm:AirspaceTimeSlice gml:id="fir-YUDD-ts">
+                                    <gml:validTime/>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                    <aixm:type>OTHER:FIR_UIR</aixm:type>
+                                    <aixm:designator>YUDD</aixm:designator>
+                                    <aixm:name>SHANLON FIR/UIR</aixm:name>
+                                </aixm:AirspaceTimeSlice>
+                            </aixm:timeSlice>
+                        </aixm:Airspace>
+                    </sf:sampledFeature>
+                    <!-- FIR boundary - not typically reported -->
+                    <sams:shape nilReason="withheld"/>
+                </sams:SF_SpatialSamplingFeature>
+            </om:featureOfInterest>
+            <om:result nilReason="inapplicable"/>
+        </om:OM_Observation>
+    </iwxxm:analysis>
+
+</iwxxm:SIGMET>

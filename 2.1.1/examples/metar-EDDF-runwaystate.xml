@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    An example of a METAR EDDF from 2013-03-12T05:50:00Z
+    resulting METAR (FM 15):
+    METAR EDDF 120550Z 03015KT 1400 R07R/P2000N R07C/P2000N R07L/1900U SN DRSN BR VV/// M04/M04 Q1000 R07R/11//90 R07C/15//90 R07L/15//90 BECMG 4000 NSW
+-->
+<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/2.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:om="http://www.opengis.net/om/2.0"
+    xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+    xmlns:sam="http://www.opengis.net/sampling/2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
+    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+    gml:id="metar-EDDF-20130312T055000Z" status="NORMAL" automatedStation="false" permissibleUsage="OPERATIONAL">
+    <iwxxm:observation>
+        <om:OM_Observation gml:id="obs-EDDF-20130312T055000Z">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeObservation"/>
+            <om:phenomenonTime>
+                <gml:TimeInstant gml:id="ti-20130312T055000Z">
+                    <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:phenomenonTime>
+            <om:resultTime xlink:href="#ti-20130312T055000Z"/>
+            <om:procedure>
+                <metce:Process gml:id="p-49-2-metar">
+                    <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 3 TECHNICAL SPECIFICATIONS RELATED TO METEOROLOGICAL OBSERVATIONS AND REPORTS</gml:description>
+                </metce:Process>
+            </om:procedure>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeObservation"/>
+            <om:featureOfInterest>
+                <sams:SF_SpatialSamplingFeature gml:id="sp-EDDF">
+                    <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
+                    <sam:sampledFeature>
+                        <!-- The aerodrome at which this observation took place -->
+                        <aixm:AirportHeliport gml:id="aerodrome-EDDF">
+                            <aixm:timeSlice>
+                                <aixm:AirportHeliportTimeSlice gml:id="aerodrome-EDDF-ts">
+                                    <gml:validTime/>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                    <aixm:designator>EDDF</aixm:designator>
+                                    <aixm:name>FRANKFURT AM MAIN INTERNATIONAL</aixm:name>
+                                    <aixm:locationIndicatorICAO>EDDF</aixm:locationIndicatorICAO>
+                                </aixm:AirportHeliportTimeSlice>
+                            </aixm:timeSlice>
+                        </aixm:AirportHeliport>
+                     </sam:sampledFeature>
+                    <sams:shape>
+                        <gml:Point gml:id="obs-point-EDDF"
+                            uomLabels="deg deg m"
+                            axisLabels="Lat Lon Altitude"
+                            srsDimension="3"
+                            srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
+                            <gml:pos>50.0464 8.5986 112</gml:pos>
+                        </gml:Point>
+                    </sams:shape>
+                </sams:SF_SpatialSamplingFeature>
+            </om:featureOfInterest>
+            <om:result>
+
+                <iwxxm:MeteorologicalAerodromeObservationRecord cloudAndVisibilityOK="false"
+                    gml:id="observation-record-EDDF-20130312T055000Z">
+                    <iwxxm:airTemperature uom="Cel">-4</iwxxm:airTemperature>
+                    <iwxxm:dewpointTemperature uom="Cel">-4</iwxxm:dewpointTemperature>
+                    <iwxxm:qnh uom="hPa">1000</iwxxm:qnh>
+                    <iwxxm:surfaceWind>
+                        <iwxxm:AerodromeSurfaceWind variableWindDirection="false">
+                            <iwxxm:meanWindDirection uom="deg">30</iwxxm:meanWindDirection>
+                            <iwxxm:meanWindSpeed uom="[kn_i]">15</iwxxm:meanWindSpeed>
+                        </iwxxm:AerodromeSurfaceWind>
+                    </iwxxm:surfaceWind>
+                    <iwxxm:visibility>
+                        <iwxxm:AerodromeHorizontalVisibility>
+                            <iwxxm:prevailingVisibility uom="m">1400</iwxxm:prevailingVisibility>
+                        </iwxxm:AerodromeHorizontalVisibility>
+                    </iwxxm:visibility>
+
+                    <iwxxm:rvr>
+                        <iwxxm:AerodromeRunwayVisualRange pastTendency="NO_CHANGE">
+                            <iwxxm:runway xlink:href="#runway-eddf-07-r-sf" />
+                            <iwxxm:meanRVR uom="m">2000</iwxxm:meanRVR>
+                            <iwxxm:meanRVROperator>ABOVE</iwxxm:meanRVROperator>
+                        </iwxxm:AerodromeRunwayVisualRange>
+                    </iwxxm:rvr>
+                    <iwxxm:rvr>
+                        <iwxxm:AerodromeRunwayVisualRange pastTendency="NO_CHANGE">
+                            <iwxxm:runway xlink:href="#runway-EDDF-07-c-sf" />
+                            <iwxxm:meanRVR uom="m">2000</iwxxm:meanRVR>
+                            <iwxxm:meanRVROperator>ABOVE</iwxxm:meanRVROperator>
+                        </iwxxm:AerodromeRunwayVisualRange>
+                    </iwxxm:rvr>
+                    <iwxxm:rvr>
+                        <iwxxm:AerodromeRunwayVisualRange pastTendency="UPWARD">
+                            <iwxxm:runway xlink:href="#runway-EDDF-07-l-sf" />
+                            <iwxxm:meanRVR uom="m">1900</iwxxm:meanRVR>
+                        </iwxxm:AerodromeRunwayVisualRange>
+                    </iwxxm:rvr>
+
+                    <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/SN"/>
+                    <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/DRSN"/>
+                    <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/BR"/>
+
+                    <iwxxm:cloud>
+                        <iwxxm:AerodromeObservedClouds>
+                          <iwxxm:verticalVisibility uom="N/A" xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/notObservable"/>
+                        </iwxxm:AerodromeObservedClouds>
+                     </iwxxm:cloud>
+                    <iwxxm:runwayState>
+                        <iwxxm:AerodromeRunwayState>
+                            <iwxxm:runway>
+                                <aixm:RunwayDirection  gml:id="runway-eddf-07-r-sf">
+                                    <aixm:timeSlice>
+                                        <aixm:RunwayDirectionTimeSlice gml:id="runway-eddf-07-r-sf-ts">
+                                            <gml:validTime/>
+                                            <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                            <aixm:designator>07R</aixm:designator>
+                                            <aixm:trueBearing>70</aixm:trueBearing>
+                                        </aixm:RunwayDirectionTimeSlice>
+                                    </aixm:timeSlice>
+                                </aixm:RunwayDirection>
+                            </iwxxm:runway>
+                            <iwxxm:depositType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-086/1"/>
+                            <iwxxm:contamination xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-087/1"/>
+                            <iwxxm:estimatedSurfaceFrictionOrBrakingAction xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-089/90"/>
+                        </iwxxm:AerodromeRunwayState>
+                    </iwxxm:runwayState>
+                    <iwxxm:runwayState>
+                        <iwxxm:AerodromeRunwayState>
+                            <iwxxm:runway>
+                                <aixm:RunwayDirection  gml:id="runway-EDDF-07-c-sf">
+                                    <aixm:timeSlice>
+                                        <aixm:RunwayDirectionTimeSlice gml:id="runway-EDDF-07-c-sf-ts">
+                                            <gml:validTime/>
+                                            <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                            <aixm:designator>07C</aixm:designator>
+                                            <aixm:trueBearing>70</aixm:trueBearing>
+                                        </aixm:RunwayDirectionTimeSlice>
+                                    </aixm:timeSlice>
+                                </aixm:RunwayDirection>
+                            </iwxxm:runway>
+                            <iwxxm:depositType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-086/1"/>
+                            <iwxxm:contamination xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-087/5"/>
+                            <iwxxm:estimatedSurfaceFrictionOrBrakingAction xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-089/90"/>
+                        </iwxxm:AerodromeRunwayState>
+                    </iwxxm:runwayState>
+                    <iwxxm:runwayState>
+                        <iwxxm:AerodromeRunwayState>
+                            <iwxxm:runway>
+                                <aixm:RunwayDirection  gml:id="runway-EDDF-07-l-sf">
+                                    <aixm:timeSlice>
+                                        <aixm:RunwayDirectionTimeSlice gml:id="runway-EDDF-07-l-sf-ts">
+                                            <gml:validTime/>
+                                            <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                            <aixm:designator>07L</aixm:designator>
+                                            <aixm:trueBearing>70</aixm:trueBearing>
+                                        </aixm:RunwayDirectionTimeSlice>
+                                    </aixm:timeSlice>
+                                </aixm:RunwayDirection>
+                            </iwxxm:runway>
+                            <iwxxm:depositType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-086/1"/>
+                            <iwxxm:contamination xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-087/5"/>
+                            <iwxxm:estimatedSurfaceFrictionOrBrakingAction xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-089/90"/>
+                        </iwxxm:AerodromeRunwayState>
+                    </iwxxm:runwayState>
+
+                </iwxxm:MeteorologicalAerodromeObservationRecord>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:observation>
+    <iwxxm:trendForecast>
+        <om:OM_Observation gml:id="trend-fcst-1">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeTrendForecast"/>
+            <om:phenomenonTime nilReason="unknown"/>
+            <om:resultTime xlink:href="#ti-20130312T055000Z"/>
+            <om:procedure xlink:href="#p-49-2-metar"/>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeTrendForecast"/>
+            <om:featureOfInterest xlink:href="#sp-EDDF"/>
+            <om:result>
+                <iwxxm:MeteorologicalAerodromeTrendForecastRecord gml:id="trend-fcst-record-1-201303120550Z-201303120750Z" changeIndicator="BECOMING" cloudAndVisibilityOK="false">
+                    <iwxxm:prevailingVisibility uom="m">4000</iwxxm:prevailingVisibility>
+                    <iwxxm:forecastWeather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+                </iwxxm:MeteorologicalAerodromeTrendForecastRecord>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:trendForecast>
+</iwxxm:METAR>

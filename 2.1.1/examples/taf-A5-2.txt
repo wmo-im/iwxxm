@@ -1,0 +1,7 @@
+TAF AMD YUDO 161500Z 1606/1624 CNL
+
+
+Amended TAF for Donlon/International* issued on the 16th of the month at 1500 UTC cancelling the
+previously issued TAF valid from 0000 UTC to 1800 UTC on the 16th of the month.
+
+* Fictitious location
