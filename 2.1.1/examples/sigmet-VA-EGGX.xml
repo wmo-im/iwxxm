@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+EGGX SIGMET 4 VALID 251600/252200 EGRR - 
+EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 1600Z SFC/FL550 N6000 W01150 - N5900 W01300 - N6000 W01600 - N6000 W01150 MOV S 60KT NC FCST 2200Z SFC/FL550 N6000 W01200 - N5800 W01400 - N6000 W01535 - N6000 W01200
+-->
+<!-- note: year and month of this SIGMET unknown; YYYY and MM used in place of actual values -->
+<iwxxm:VolcanicAshSIGMET xmlns:iwxxm="http://icao.int/iwxxm/2.1"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:om="http://www.opengis.net/om/2.0"
+    xmlns:sam="http://www.opengis.net/sampling/2.0"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
+    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+    gml:id="va-sigmet-EGGX-YYYYMM25T160000Z"
+    permissibleUsage="OPERATIONAL"
+    status="NORMAL">
+    <iwxxm:issuingAirTrafficServicesUnit>
+        <aixm:Unit gml:id="fic-EGGX">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="fic-EGGX-ts">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>SHANWICK OCEANIC AREA CONTROL CENTRE</aixm:name>
+                    <aixm:type>ATCC</aixm:type>
+                    <aixm:designator>EGGX</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:issuingAirTrafficServicesUnit>
+    <iwxxm:originatingMeteorologicalWatchOffice>
+        <aixm:Unit gml:id="wmo-EGRR">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="mwo-EGRR-ts">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>UK METEOROLOGICAL OFFICE - EXETER</aixm:name>
+                    <aixm:type>MWO</aixm:type>
+                    <aixm:designator>EGRR</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:originatingMeteorologicalWatchOffice>
+    <iwxxm:sequenceNumber>4</iwxxm:sequenceNumber>
+    <iwxxm:validPeriod>
+        <gml:TimePeriod gml:id="tp-25T16Z-25T22Z">
+            <gml:beginPosition>YYYY-MM-25T16:00:00Z</gml:beginPosition>
+            <gml:endPosition>YYYY-MM-25T22:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:validPeriod>
+    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
+    <iwxxm:analysis>
+        <om:OM_Observation gml:id="va-position-and-motion-EGGX-YYYYMM25T16Z">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETEvolvingConditionAnalysis"/>
+            <om:phenomenonTime>
+                <gml:TimeInstant gml:id="ti-25T16Z">
+                    <gml:timePosition>YYYY-MM-25T16:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:phenomenonTime>
+            <om:resultTime xlink:href="#ti-25T16Z"/>
+	    <om:validTime xlink:href="#tp-25T16Z-25T22Z"/>
+	    <om:procedure>
+                <metce:Process gml:id="p-49-2-va-sigmet">
+                    <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation [C.3.1.]7 SIGMET AND AIRMET INFORMATION, AERODROME WARNINGS AND WIND SHEAR WARNINGS AND ALERTS</gml:description>
+                </metce:Process>
+            </om:procedure>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
+            <om:featureOfInterest>
+                <sams:SF_SpatialSamplingFeature gml:id="ss-SHANWICK_OCA">
+                    <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
+                    <sam:sampledFeature>
+                        <aixm:Airspace gml:id="fir-EGGX">
+                            <aixm:timeSlice>
+                                <aixm:AirspaceTimeSlice gml:id="fir-EGGX-ts">
+                                    <gml:validTime/>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                    <aixm:type>FIR</aixm:type>
+                                    <aixm:designator>EGGX</aixm:designator>
+                                    <aixm:name>SHANWICK OCEANIC FIR</aixm:name>
+                                </aixm:AirspaceTimeSlice>
+                            </aixm:timeSlice>
+                        </aixm:Airspace>
+                    </sam:sampledFeature>
+                    <!-- FIR boundary - not typically reported -->
+                    <sams:shape nilReason="withheld"/>
+                </sams:SF_SpatialSamplingFeature>
+            </om:featureOfInterest>
+            <om:result>
+                <iwxxm:SIGMETEvolvingConditionCollection gml:id="emc-va-obs-EGGX-YYYYMM25T16Z" timeIndicator="OBSERVATION">
+                  <iwxxm:member>
+                    <iwxxm:SIGMETEvolvingCondition gml:id="sec1" intensityChange="NO_CHANGE">
+                      <iwxxm:directionOfMotion uom="deg">180</iwxxm:directionOfMotion>
+                      <iwxxm:geometry>
+                        <aixm:AirspaceVolume gml:id="av-va-obs-position-EGGX-YYYYMM25T16Z">
+                          <!-- omitted lower-limit implies that the volcanic ash cloud extends to ground/sea surface -->
+                          <aixm:upperLimit uom="FL">550</aixm:upperLimit>
+                          <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                          <aixm:horizontalProjection>
+                            <aixm:Surface gml:id="polygon-va-obs-position-EGGX-YYYYMM25T16Z"
+                              uomLabels="deg deg"
+                              axisLabels="Lat Lon"
+                              srsDimension="2"
+                              srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                              <gml:polygonPatches>
+                                <gml:PolygonPatch>
+                                  <gml:exterior>
+                                    <gml:LinearRing>
+                                      <!-- bounding polygon clipped to edge of FIR @ 60N -->
+                                      <gml:posList>
+                                        60.0 -11.5
+                                        59.0 -13.0
+                                        60.0 -16.0
+                                        60.0 -11.5
+                                      </gml:posList>
+                                    </gml:LinearRing>
+                                  </gml:exterior>
+                                </gml:PolygonPatch>
+                              </gml:polygonPatches>
+                            </aixm:Surface>
+                          </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                      </iwxxm:geometry>
+                      <iwxxm:speedOfMotion uom="[kn_i]">60</iwxxm:speedOfMotion>
+                    </iwxxm:SIGMETEvolvingCondition>
+                  </iwxxm:member>
+                </iwxxm:SIGMETEvolvingConditionCollection>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:analysis>
+    <iwxxm:forecastPositionAnalysis>
+        <om:OM_Observation gml:id="va-forecast-position-EGGX-YYYYMM25T22Z">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETPositionAnalysis"/>
+            <om:phenomenonTime>
+                <gml:TimeInstant gml:id="ti-25T22Z">
+                    <gml:timePosition>YYYY-MM-25T22:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:phenomenonTime>
+            <om:resultTime xlink:href="#ti-25T16Z"/>
+            <om:validTime xlink:href="#tp-25T16Z-25T22Z"/>
+            <om:procedure xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETPositionAnalysis"/>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
+            <om:featureOfInterest xlink:href="#ss-SHANWICK_OCA"/>
+            <om:result>
+                <iwxxm:SIGMETPositionCollection gml:id="mpc-EGGX-YYYYMM25T16Z">
+                    <iwxxm:member>
+                        <iwxxm:SIGMETPosition gml:id="mp-va-fcst-EGGX-YYYYMM25T16Z">
+                            <iwxxm:geometry>
+                                <aixm:AirspaceVolume gml:id="av-va-fcst-position-EGGX-YYYYMM25T22Z">
+                                    <aixm:horizontalProjection>
+                                        <aixm:Surface gml:id="polygon-va-fcst-position-EGGX-YYYYMM25T22Z" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                            <gml:polygonPatches>
+                                                <gml:PolygonPatch>
+                                                    <gml:exterior>
+                                                        <gml:LinearRing>
+                                                            <!-- bounding polygon clipped to edge of FIR @ 60N -->
+                                                            <gml:posList>
+                                                                60.0 -12.0
+                                                                58.0 -14.0
+                                                                60.0 -15.35
+                                                                60.0 -12.0
+                                                            </gml:posList>
+                                                        </gml:LinearRing>
+                                                    </gml:exterior>
+                                                </gml:PolygonPatch>
+                                            </gml:polygonPatches>
+                                        </aixm:Surface>
+                                    </aixm:horizontalProjection>
+                                </aixm:AirspaceVolume>
+                            </iwxxm:geometry>
+                        </iwxxm:SIGMETPosition>
+                    </iwxxm:member>
+                </iwxxm:SIGMETPositionCollection>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:forecastPositionAnalysis>
+    <iwxxm:eruptingVolcano>
+        <metce:Volcano gml:id="v-MT-HEKLA">
+            <metce:name>MT HEKLA</metce:name>
+            <metce:position>
+                <gml:Point gml:id="ref-point-MT-HEKLA" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <gml:pos>63.98 -19.67</gml:pos>
+                </gml:Point>
+            </metce:position>
+        </metce:Volcano>
+    </iwxxm:eruptingVolcano>
+</iwxxm:VolcanicAshSIGMET>

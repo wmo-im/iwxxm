@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    An example of a SIGMET.  Original SIGMET from ICAO Annex 3 Amd 77 Example A6-1a:
+    
+      YUDD SIGMET 2 VALID 101200/101600 YUSO –
+      YUDD SHANLON FIR/UIR OBSC TS FCST S OF N54 AND E OF W012 TOP FL390 MOV E 20KT WKN
+-->
+<iwxxm:SIGMET xmlns:iwxxm="http://icao.int/iwxxm/2.1"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:om="http://www.opengis.net/om/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
+    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+
+    gml:id="sigmet-YUDD-201208101200Z"
+    permissibleUsage="OPERATIONAL"
+    status="NORMAL">
+
+    <iwxxm:issuingAirTrafficServicesUnit>
+        <aixm:Unit gml:id="fic-YUDD">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="fic-YUDD-ts">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>YUDD FIC</aixm:name>
+                    <aixm:type>FIC</aixm:type>
+                    <aixm:designator>YUDD</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:issuingAirTrafficServicesUnit>
+    <iwxxm:originatingMeteorologicalWatchOffice>
+        <aixm:Unit gml:id="wmo-YUSO">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="mwo-YUSO-ts">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>YUSO MWO</aixm:name>
+                    <aixm:type>MWO</aixm:type>
+                    <aixm:designator>YUSO</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:originatingMeteorologicalWatchOffice>
+
+    <iwxxm:sequenceNumber>2</iwxxm:sequenceNumber>
+
+    <!-- Valid period for this report -->
+    <iwxxm:validPeriod>
+        <gml:TimePeriod gml:id="tp-20120810T1200Z-20120810T1600Z">
+            <gml:beginPosition>2012-08-10T12:00:00Z</gml:beginPosition>
+            <gml:endPosition>2012-08-10T16:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:validPeriod>
+
+    <!-- The significant meteorological phenomenon are listed in WMO No. 49 C.3.1. sub-clause 1.1.4 -->
+    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/OBSC_TS"/>
+
+    <!-- FCST S OF N54 AND E OF W012 TOP FL390 MOV E 20KT WKN -->
+    <iwxxm:analysis>
+        <om:OM_Observation gml:id="analysis1">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETEvolvingConditionAnalysis"/>
+            <!-- time of FCST conditions - if missing there is no FCST or OBS time -->
+            <om:phenomenonTime nilReason="missing"/>
+
+            <!-- time at which the results of the observation were made available -->
+            <om:resultTime>
+                <gml:TimeInstant gml:id="ti-201208101200Z">
+                    <gml:timePosition>2012-08-10T12:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:resultTime>
+            <!-- The valid period for this observation is the period of the entire SIGMET -->
+            <om:validTime xlink:href="#tp-20120810T1200Z-20120810T1600Z"/>
+            <om:procedure>
+                <metce:Process gml:id="p-49-2-sigmet">
+                    <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO SIGMET INFORMATION</gml:description>
+                </metce:Process>
+            </om:procedure>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionAnalysis"/>
+            <!-- featureOfInterest type and shape MUST refer to an SF_SamplingSurface -->
+            <om:featureOfInterest>
+                <sams:SF_SpatialSamplingFeature gml:id="sampling-surface-shanlon">
+                    <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
+                    <sf:sampledFeature>
+                        <aixm:Airspace gml:id="fir-YUDD">
+                            <aixm:timeSlice>
+                                <aixm:AirspaceTimeSlice gml:id="fir-YUDD-ts">
+                                    <gml:validTime/>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                    <aixm:type>OTHER:FIR_UIR</aixm:type>
+                                    <aixm:designator>YUDD</aixm:designator>
+                                    <aixm:name>SHANLON FIR/UIR</aixm:name>
+                                </aixm:AirspaceTimeSlice>
+                            </aixm:timeSlice>
+                        </aixm:Airspace>
+                    </sf:sampledFeature>
+                    <!-- FIR boundary - not typically reported -->
+                    <sams:shape nilReason="withheld"/>
+                </sams:SF_SpatialSamplingFeature>
+            </om:featureOfInterest>
+            <om:result>
+                <iwxxm:SIGMETEvolvingConditionCollection gml:id="fcst1" timeIndicator="FORECAST">
+                  <iwxxm:member>
+                    <iwxxm:SIGMETEvolvingCondition gml:id="sec1" intensityChange="WEAKEN">
+                      <iwxxm:directionOfMotion uom="deg">90</iwxxm:directionOfMotion>
+                      <!-- This shape describes: S OF N54 AND E OF W012 TOP FL390 -->
+                      <iwxxm:geometry>
+                        <aixm:AirspaceVolume gml:id="as1">
+                          <aixm:upperLimit uom="FL">390</aixm:upperLimit>
+                          <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                          <aixm:horizontalProjection>
+                            <aixm:Surface gml:id="sfc1" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                              <gml:polygonPatches>
+                                <gml:PolygonPatch>
+                                  <gml:exterior>
+                                    <gml:LinearRing>
+                                      <!-- bounding polygon clipped to edge of FIR @ 50N and 08W (in clockwise order) -->
+                                      <gml:posList>
+                                        54.0 -12.0 54.0 -8.0 50.0 -8.0 50.0 -12.0 54.0 -12.0
+                                      </gml:posList>
+                                    </gml:LinearRing>
+                                  </gml:exterior>
+                                </gml:PolygonPatch>
+                              </gml:polygonPatches>
+                            </aixm:Surface>
+                          </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                      </iwxxm:geometry>
+                      <iwxxm:speedOfMotion uom="[kn_i]">20</iwxxm:speedOfMotion>
+                    </iwxxm:SIGMETEvolvingCondition>
+                  </iwxxm:member>
+                </iwxxm:SIGMETEvolvingConditionCollection>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:analysis>
+
+</iwxxm:SIGMET>

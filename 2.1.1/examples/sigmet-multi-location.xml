@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Original SIGMET from ICAO EUR Doc 014 Regional SIGMET/AIRMET Guide (2015):
+
+      YUDD SIGMET 2 VALID 101200/101800 YUSO–
+      YUDD SHANLON FIR/UIR VA ERUPTION MT ASHVAL PSN N4315 E02115
+      VA CLD OBS AT 1200Z WI N4315 E02115 – N4345 E02145 N4330 E02215 – N4245 E02230 – N4230 E02145 - N4315 E02115 FL250/370 NC
+                      AND WI N4200 E02115 – N4217 E02130 – N4145 E02200 – N4130 E02130 – N4200 E02115 FL150/300 NC
+      FCST 1800Z VA CLD APRX N4330 E02215 – N4315 E02345 – N4145 E02315 – N4230 E02200 - N4330 E02215
+      FCST 1800Z VA CLD APRX N4200 E02145 – N4145 E02215 – N4100 E02215 - N4130 E02130 - N4200 E02145=
+-->
+<iwxxm:VolcanicAshSIGMET xmlns:iwxxm="http://icao.int/iwxxm/2.1"
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:metce="http://def.wmo.int/metce/2013"
+  xmlns:om="http://www.opengis.net/om/2.0"
+  xmlns:sam="http://www.opengis.net/sampling/2.0"
+  xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
+  http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
+  http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+  gml:id="va-sigmet-YUDD-YYYYMM10T120000Z"
+  permissibleUsage="OPERATIONAL"
+  status="NORMAL">
+  <iwxxm:issuingAirTrafficServicesUnit>
+    <aixm:Unit gml:id="fic-YUDD">
+      <aixm:timeSlice>
+        <aixm:UnitTimeSlice gml:id="fic-YUDD-ts">
+          <gml:validTime/>
+          <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+          <aixm:name>SHANWICK OCEANIC AREA CONTROL CENTRE</aixm:name>
+          <aixm:type>ATCC</aixm:type>
+          <aixm:designator>YUDD</aixm:designator>
+        </aixm:UnitTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Unit>
+  </iwxxm:issuingAirTrafficServicesUnit>
+  <iwxxm:originatingMeteorologicalWatchOffice>
+    <aixm:Unit gml:id="wmo-YUSO">
+      <aixm:timeSlice>
+        <aixm:UnitTimeSlice gml:id="mwo-YUSO-ts">
+          <gml:validTime/>
+          <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+          <aixm:name>UK METEOROLOGICAL OFFICE - EXETER</aixm:name>
+          <aixm:type>MWO</aixm:type>
+          <aixm:designator>YUSO</aixm:designator>
+        </aixm:UnitTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Unit>
+  </iwxxm:originatingMeteorologicalWatchOffice>
+  <iwxxm:sequenceNumber>2</iwxxm:sequenceNumber>
+  <iwxxm:validPeriod>
+    <gml:TimePeriod gml:id="tp-10T12Z-10T22Z">
+      <gml:beginPosition>YYYY-MM-10T12:00:00Z</gml:beginPosition>
+      <gml:endPosition>YYYY-MM-10T18:00:00Z</gml:endPosition>
+    </gml:TimePeriod>
+  </iwxxm:validPeriod>
+  <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
+  <!-- VA CLD OBS AT 1200Z WI N4315 E02115 – N4345 E02145 N4330 E02215 – N4245 E02230 – N4230 E02145 - N4315 E02115 FL250/370 NC
+                       AND WI N4200 E02115 – N4217 E02130 – N4145 E02200 – N4130 E02130 – N4200 E02115 FL150/300 NC -->
+  <iwxxm:analysis>
+    <om:OM_Observation gml:id="va-position-and-motion-YUDD-YYYYMM10T12Z">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETEvolvingConditionAnalysis"/>
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="ti-10T12Z">
+          <gml:timePosition>YYYY-MM-10T12:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#ti-10T12Z"/>
+      <om:validTime xlink:href="#tp-10T12Z-10T22Z"/>
+      <om:procedure xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETEvolvingConditionAnalysis"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
+      <om:featureOfInterest>
+        <sams:SF_SpatialSamplingFeature gml:id="ss-SHANWICK_OCA">
+          <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
+          <sam:sampledFeature>
+            <aixm:Airspace gml:id="fir-YUDD">
+              <aixm:timeSlice>
+                <aixm:AirspaceTimeSlice gml:id="fir-YUDD-ts">
+                  <gml:validTime/>
+                  <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                  <aixm:type>OTHER:FIR_UIR</aixm:type>
+                  <aixm:designator>YUDD</aixm:designator>
+                  <aixm:name>SHANLON FIR/UIR</aixm:name>
+                </aixm:AirspaceTimeSlice>
+              </aixm:timeSlice>
+            </aixm:Airspace>
+          </sam:sampledFeature>
+          <!-- FIR boundary - not typically reported -->
+          <sams:shape nilReason="withheld"/>
+        </sams:SF_SpatialSamplingFeature>
+      </om:featureOfInterest>
+      <om:result>
+        <iwxxm:SIGMETEvolvingConditionCollection gml:id="emc-va-obs-YUDD-YYYYMM10T12Z" timeIndicator="OBSERVATION">
+          <!-- WI N4315 E02115 – N4345 E02145 N4330 E02215 – N4245 E02230 – N4230 E02145 - N4315 E02115 FL250/370 NC -->
+          <iwxxm:member>
+            <iwxxm:SIGMETEvolvingCondition gml:id="mc-va-obs-YUDD-YYYYMM10T12Z1" intensityChange="NO_CHANGE">
+              <!-- N4315 E02115 – N4345 E02145 N4330 E02215 – N4245 E02230 – N4230 E02145 - N4315 E02115 FL250/370 -->
+              <iwxxm:geometry>
+                <aixm:AirspaceVolume gml:id="av-va-obs-position-YUDD-YYYYMM10T12Z1">
+                  <aixm:upperLimit uom="FL">370</aixm:upperLimit>
+                  <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                  <aixm:lowerLimit uom="FL">250</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface gml:id="polygon-va-obs-position-YUDD-YYYYMM10T12Z1" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2"
+                      srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                      <gml:polygonPatches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:LinearRing>
+                              <gml:posList>43.15 21.15 43.45 21.45 43.30 22.15 42.45 22.30 42.30 21.45 43.15 21.15</gml:posList>
+                            </gml:LinearRing>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:polygonPatches>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </iwxxm:geometry>
+            </iwxxm:SIGMETEvolvingCondition>
+          </iwxxm:member>
+          <!-- WI N4200 E02115 – N4217 E02130 – N4145 E02200 – N4130 E02130 – N4200 E02115 FL150/300 NC -->
+          <iwxxm:member>
+            <iwxxm:SIGMETEvolvingCondition gml:id="mc-va-obs-YUDD-YYYYMM10T12Z2" intensityChange="NO_CHANGE">
+              <!-- N4200 E02115 – N4217 E02130 – N4145 E02200 – N4130 E02130 – N4200 E02115 FL150/300 -->
+              <iwxxm:geometry>
+                <aixm:AirspaceVolume gml:id="av-va-obs-position-YUDD-YYYYMM10T12Z2">
+                  <aixm:upperLimit uom="FL">300</aixm:upperLimit>
+                  <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                  <aixm:lowerLimit uom="FL">150</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface gml:id="polygon-va-obs-position-YUDD-YYYYMM10T12Z2" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2"
+                      srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                      <gml:polygonPatches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:LinearRing>
+                              <gml:posList>42.00 21.15 42.17 21.30 41.45 22.00 41.30 21.30 42.00 21.15</gml:posList>
+                            </gml:LinearRing>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:polygonPatches>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </iwxxm:geometry>
+            </iwxxm:SIGMETEvolvingCondition>
+          </iwxxm:member>
+        </iwxxm:SIGMETEvolvingConditionCollection>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:analysis>
+  <iwxxm:forecastPositionAnalysis>
+    <om:OM_Observation gml:id="va-forecast-position-YUDD-YYYYMM10T22Z">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETPositionAnalysis"/>
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="ti-10T22Z">
+          <gml:timePosition>YYYY-MM-10T18:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#ti-10T12Z"/>
+      <om:validTime xlink:href="#tp-10T12Z-10T22Z"/>
+      <om:procedure xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETPositionAnalysis"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
+      <om:featureOfInterest xlink:href="#ss-SHANWICK_OCA"/>
+      <om:result>
+        <iwxxm:SIGMETPositionCollection gml:id="mpc-YUDD-YYYYMM10T12Z">
+          <!-- APRX N4330 E02215 – N4315 E02345 – N4145 E02315 – N4230 E02200 - N4330 E02215 -->
+          <iwxxm:member>
+            <iwxxm:SIGMETPosition gml:id="mp-va-fcst-YUDD-YYYYMM10T12Z1" approximateLocation="true">
+              <iwxxm:geometry>
+                <aixm:AirspaceVolume gml:id="av-va-fcst-position-YUDD-YYYYMM10T22Z1">
+                  <aixm:horizontalProjection>
+                    <aixm:Surface gml:id="polygon-va-fcst-position-YUDD-YYYYMM10T22Z1" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                      <gml:polygonPatches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:LinearRing>
+                              <gml:posList>43.30 22.15 43.15 23.45 41.45 23.15 42.30 22.00 43.30 22.15</gml:posList>
+                            </gml:LinearRing>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:polygonPatches>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </iwxxm:geometry>
+            </iwxxm:SIGMETPosition>
+          </iwxxm:member>
+          <!-- APRX N4200 E02145 – N4145 E02215 – N4100 E02215 - N4130 E02130 - N4200 E02145 -->
+          <iwxxm:member>
+            <iwxxm:SIGMETPosition gml:id="mp-va-fcst-YUDD-YYYYMM10T12Z2"  approximateLocation="true">
+              <iwxxm:geometry>
+                <aixm:AirspaceVolume gml:id="av-va-fcst-position-YUDD-YYYYMM10T22Z2">
+                  <aixm:horizontalProjection>
+                    <aixm:Surface gml:id="polygon-va-fcst-position-YUDD-YYYYMM10T22Z2" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                      <gml:polygonPatches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:LinearRing>
+                              <gml:posList>42.00 21.45 41.45 22.15 41.00 22.15 41.30 21.30 42.00 21.45</gml:posList>
+                            </gml:LinearRing>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:polygonPatches>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </iwxxm:geometry>
+            </iwxxm:SIGMETPosition>
+          </iwxxm:member>
+        </iwxxm:SIGMETPositionCollection>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:forecastPositionAnalysis>
+  <iwxxm:eruptingVolcano>
+    <metce:Volcano gml:id="v-MT-ASHVAL">
+      <metce:name>MT ASHVAL</metce:name>
+      <metce:position>
+        <gml:Point gml:id="ref-point-MT-ASHVAL" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+          <gml:pos>43.15 21.15</gml:pos>
+        </gml:Point>
+      </metce:position>
+    </metce:Volcano>
+  </iwxxm:eruptingVolcano>
+</iwxxm:VolcanicAshSIGMET>

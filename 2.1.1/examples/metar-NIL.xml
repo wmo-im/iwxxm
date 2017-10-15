@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    An example of a NIL METAR:
+      METAR YUDO 221630Z NIL
+-->
+<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/2.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0"
+    xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+    xmlns:sf="http://www.opengis.net/sampling/2.0"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
+    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+
+    gml:id="metar-YUDO-20120822163000Z"
+    status="MISSING"
+    permissibleUsage="OPERATIONAL"
+    automatedStation="false">
+
+    <iwxxm:observation>
+        <om:OM_Observation gml:id="obs-03839-20120824T12Z">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeObservation"/>
+            <!-- time at which the missing report was found to be missing -->
+            <om:phenomenonTime>
+                <gml:TimeInstant gml:id="ti-201208221630Z">
+                    <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:phenomenonTime>
+            <!-- time at which the results are made available (10 minutes later) -->
+            <om:resultTime>
+                <gml:TimeInstant gml:id="ti-201208221640Z">
+                    <gml:timePosition>2012-08-22T16:40:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:resultTime>
+            <om:procedure>
+                <metce:Process gml:id="p-49-2-metar">
+                    <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 3 TECHNICAL SPECIFICATIONS RELATED TO METEOROLOGICAL OBSERVATIONS AND REPORTS</gml:description>
+                </metce:Process>
+            </om:procedure>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeObservation"/>
+            <om:featureOfInterest>
+                <!-- featureOfInterest type and shape must refer to a point -->
+                <sams:SF_SpatialSamplingFeature gml:id="sampling-point-03839">
+                    <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
+                    <sf:sampledFeature>
+                        <!-- The aerodrome at which this observation took place -->
+                        <aixm:AirportHeliport gml:id="aerodrome-YUDO">
+                            <aixm:timeSlice>
+                                <aixm:AirportHeliportTimeSlice gml:id="aerodrome-YUDO-ts">
+                                    <gml:validTime/>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                    <aixm:designator>YUDO</aixm:designator>
+                                    <aixm:name>DONLON/INTERNATIONAL</aixm:name>
+                                    <aixm:locationIndicatorICAO>YUDO</aixm:locationIndicatorICAO>
+                                </aixm:AirportHeliportTimeSlice>
+                            </aixm:timeSlice>
+                        </aixm:AirportHeliport>
+                    </sf:sampledFeature>
+                    <sams:shape>
+                        <!-- This is where the observation took place, assumed to be representative of the entire aerodrome -->
+                        <gml:Point gml:id="point-5225-3201" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                            <gml:pos>12.34 -12.34</gml:pos>
+                        </gml:Point>
+                    </sams:shape>
+                </sams:SF_SpatialSamplingFeature>
+            </om:featureOfInterest>
+            <!-- The result of the observation -->
+            <om:result nilReason="missing"/>
+        </om:OM_Observation>
+    </iwxxm:observation>
+</iwxxm:METAR>
