@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/1.0RC2" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:gco="http://www.isotc211.org/2005/gco" 
+    xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:om="http://www.opengis.net/om/2.0"
+    xmlns:metce="http://def.wmo.int/metce/2013" 
+    xmlns:gss="http://www.isotc211.org/2005/gss"
+    xmlns:saf="http://icao.int/saf/1.0RC2" 
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+    xmlns:gts="http://www.isotc211.org/2005/gts" 
+    xmlns:gsr="http://www.isotc211.org/2005/gsr"
+    xmlns:sam="http://www.opengis.net/sampling/2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/1.0RC2 http://schemas.wmo.int/iwxxm/1.0RC2/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.0RC2/metce.xsd"
+    gml:id="metar-LKKV-20070725T12Z" status="NORMAL" automatedStation="false">
+    <iwxxm:observation>
+        <om:OM_Observation gml:id="obs-LKKV-20070725T120000Z">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeObservation"/>
+            <om:phenomenonTime>
+                <gml:TimeInstant gml:id="ti-20070725T12Z">
+                    <gml:timePosition>2007-07-25T12:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:phenomenonTime>
+            <om:resultTime xlink:href="#ti-20070725T12Z"/>
+            <om:procedure>
+                <metce:Process gml:id="p-49-2-metar">
+                    <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 3 TECHNICAL SPECIFICATIONS RELATED TO METEOROLOGICAL OBSERVATIONS AND REPORTS</gml:description>
+                </metce:Process>
+            </om:procedure>
+            <om:observedProperty
+                xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeObservation"
+                xlink:title="Observed properties for Meteorological Aerodrome Observation Reports (METAR and SPECI)"/>
+            <om:featureOfInterest>
+                <sams:SF_SpatialSamplingFeature gml:id="sp-LKKV">
+                    <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
+                    <sam:sampledFeature>
+                        <saf:Aerodrome gml:id="uuid.f4ebfc50-b727-11e2-9e96-0800200c9a66">
+                            <gml:identifier codeSpace="urn:uuid:">f4ebfc50-b727-11e2-9e96-0800200c9a66</gml:identifier>
+                            <saf:designator>LKKV</saf:designator>
+                            <saf:name>KARLOVY VARY INTERNATIONAL</saf:name>
+                            <saf:locationIndicatorICAO>LKKY</saf:locationIndicatorICAO>
+                            <saf:ARP>
+                                <gml:Point gml:id="ref-point-LKKV"
+                                    uomLabels="deg deg m"
+                                    axisLabels="Lat Lon Altitude" 
+                                    srsDimension="3"
+                                    srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
+                                    <gml:pos>50.20 12.92 606</gml:pos>
+                                </gml:Point>
+                            </saf:ARP>
+                        </saf:Aerodrome>
+                    </sam:sampledFeature>
+                    <sams:shape>
+                        <gml:Point gml:id="obs-point-LKKV"
+                            uomLabels="deg deg m"
+                            axisLabels="Lat Lon Altitude" 
+                            srsDimension="3"
+                            srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
+                            <gml:pos>50.20 12.92 606</gml:pos>
+                        </gml:Point>
+                    </sams:shape>
+                </sams:SF_SpatialSamplingFeature>
+            </om:featureOfInterest>
+            <om:result>
+                <iwxxm:MeteorologicalAerodromeObservationRecord cloudAndVisibilityOK="false"
+                    gml:id="observation-record-LKKV-20070725T12Z">
+                    <iwxxm:airTemperature uom="Cel">27</iwxxm:airTemperature>
+                    <iwxxm:dewpointTemperature uom="Cel">10</iwxxm:dewpointTemperature>
+                    <iwxxm:qnh uom="hPa">1010</iwxxm:qnh>
+                    <iwxxm:surfaceWind>
+                        <iwxxm:AerodromeSurfaceWind variableDirection="false">
+                            <iwxxm:meanWindDirection uom="deg">210</iwxxm:meanWindDirection>
+                            <iwxxm:meanWindSpeed uom="m/s">2.6</iwxxm:meanWindSpeed>
+                        </iwxxm:AerodromeSurfaceWind>
+                    </iwxxm:surfaceWind>
+                    <iwxxm:presentWeather 
+                        xlink:href="http://codes.wmo.int/306/4678/VCSH"
+                        xlink:title="Showers (in vicinity)"/>
+                    <iwxxm:recentWeather 
+                        xlink:href="http://codes.wmo.int/306/4678/TS"
+                        xlink:title="Thunderstorm"/>
+                    <iwxxm:runwayState>
+                        <iwxxm:AerodromeRunwayState>
+                            <iwxxm:depositType
+                                xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-086/1"
+                                xlink:title="Damp"/>
+                        </iwxxm:AerodromeRunwayState>
+                    </iwxxm:runwayState>
+                </iwxxm:MeteorologicalAerodromeObservationRecord>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:observation>
+</iwxxm:METAR>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A volcanic ash advisory.  Original VA Advisory from ICAO Annex 3 Example A2-1:
+    
+FVFE01 RJTD 230130
+VA ADVISORY
+
+DTG:                        20080923/0130Z 
+VAAC:                       TOKYO
+VOLCANO:                    KARYMSKY 1000-13
+PSN:                        N5403 E15927
+AREA:                       RUSSIA
+SUMMIT ELEV:                1536M
+ADVISORY NR:                2008/4
+INFO SOURCE:                MTSAT-1R KVERT KEMSD
+AVIATION COLOUR CODE:       RED
+ERUPTION DETAILS:           ERUPTION AT 20080923/0000Z FL300 REPORTED
+OBS VA DTG:                 23/0100Z
+OBS VA CLD:                 FL250/300 N5400 E15930 N5400 E16100 N5300 E15945 MOV SE 20KT
+                            SFC/FL200 N5130 E16130 N5130 E16230 N5230 E16230 N5230 E16130
+                            MOV SE 15KT
+FCST VA CLD +6 HR:          23/0700Z FL250/350 N5130 E16030 N5130 E16230 N5330 E16230 N5330
+                            E16030 SFC/FL180 N4830 E16330 N4830 E16630 N5130 E16630 N5130 
+                            E16330
+FCST VA CLD +12 HR:         23/1300Z SFC/FL270 N4830 E16130 N4830 E16600 N5300 E16600 N5300
+                            E16130
+FCST VA CLD +18 HR:         23/1900Z NO VA EXP
+RMK:                        LATEST REP FM KVERT (0120Z) INDICATES ERUPTION HAS CEASED.
+                            TWO DISPERSING VA CLD ARE EVIDENT ON SATELLITE IMAGERY
+NXT ADVISORY:               20080923/0730Z
+
+-->
+<iwxxm:VolcanicAshAdvisory xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:iwxxm="http://icao.int/iwxxm/2.0RC1" xmlns:metce="http://def.wmo.int/metce/2013"
+  xmlns:message="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" 
+  xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sam="http://www.opengis.net/sampling/2.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1 http://www.aixm.aero/gallery/content/public/schema/5.1_profiles/AIXM_WX/5.1a/AIXM_Features.xsd
+  http://icao.int/iwxxm/2.0RC1 http://schemas.wmo.int/iwxxm/2.0RC1/iwxxm.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd" gml:id="ID000">
+    
+  <iwxxm:issueTime>
+      <gml:TimeInstant gml:id="ti-200809230130">
+          <gml:timePosition>2008-09-23T01:30:00Z</gml:timePosition>
+      </gml:TimeInstant>
+  </iwxxm:issueTime>
+    
+  <iwxxm:issuingVolcanicAshAdvisoryCentre>
+    <aixm:Unit gml:id="urn.uuid.c1bbe653-e5b1-4bfe-b510-3ada3272305a">
+      <aixm:timeSlice>
+        <aixm:UnitTimeSlice gml:id="uTTokyoVolcanicAshCentreUnit">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vtTokyoVolcanicAshCentreUnit">
+              <gml:beginPosition>2008-01-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ltTokyoVolcanicAshCentreUnit">
+              <gml:beginPosition>2008-01-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:name>TOKYO</aixm:name>
+          <aixm:type>OTHER:VACC</aixm:type>
+        </aixm:UnitTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Unit>
+  </iwxxm:issuingVolcanicAshAdvisoryCentre>
+  
+  <iwxxm:volcano>
+    <metce:EruptingVolcano gml:id="karymsky">
+      <gml:description>FL300 REPORTED</gml:description>
+      <metce:name>KARYMSKY 1000-13</metce:name>
+      <metce:position>
+        <gml:Point gml:id="karymskyPt" srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
+            <gml:coordinates>54.03 159.27 1536</gml:coordinates>
+        </gml:Point>
+      </metce:position>
+      <metce:eruptionDate>2008-09-23T01:30:00Z</metce:eruptionDate>
+    </metce:EruptingVolcano>
+  </iwxxm:volcano>
+  
+  <iwxxm:advisoryNumber>2008/4</iwxxm:advisoryNumber>
+  <iwxxm:informationSource>MTSAT-1R KVERT KEMSD</iwxxm:informationSource>
+  <iwxxm:colourCode xlink:href="http://codes.wmo.int/49-2/AviationColourCode/RED"/>
+  
+  <iwxxm:analysis>
+    <om:OM_Observation gml:id="karymskyVAAObs">
+      <om:phenomenonTime>
+       <gml:TimeInstant gml:id="t1">
+         <gml:timePosition>2008-09-23T01:00:00Z</gml:timePosition>
+       </gml:TimeInstant>
+      </om:phenomenonTime>
+      <!-- time at which the results of the observation were made available -->
+      <om:resultTime>
+        <gml:TimeInstant gml:id="ti-2">
+          <gml:timePosition>2008-09-23T00:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:resultTime>
+      <om:procedure>
+        <metce:Process gml:id="p-49-2">
+          <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 2 Volcanic ash advisory information</gml:description>
+        </metce:Process>
+      </om:procedure>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VAAdvisory"/>
+      <om:featureOfInterest>
+          <sams:SF_SpatialSamplingFeature gml:id="ssf1">
+              <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
+              <sam:sampledFeature xlink:href="urn.uuid.c1bbe653-e5b1-4bfe-b510-3ada3272305a"/>
+              <sams:shape>
+                  <!-- Tokyo VAAC boundary -->
+                  <aixm:Surface gml:id="tvbavs" srsName="http://www.opengis.net/def/crs/EPSG/0/4326" srsDimension="2">
+                      <gml:patches>
+                          <gml:PolygonPatch>
+                              <gml:exterior>
+                                  <gml:LinearRing>
+                                      <!-- Approximate boundary -->
+                                      <gml:coordinates>60 90 60 177 50 158 43 165 25 165 25 155 20 155 20 130 10 130 10 100 20 130 20 90 60 90</gml:coordinates>
+                                  </gml:LinearRing>
+                              </gml:exterior>
+                          </gml:PolygonPatch>
+                      </gml:patches>
+                  </aixm:Surface>
+              </sams:shape>
+          </sams:SF_SpatialSamplingFeature>
+      </om:featureOfInterest>
+      <om:result>
+        <iwxxm:VolcanicAshConditions gml:id="vaCond1">
+          <!-- FL250/300 N5400 E15930 N5400 E16100 N5300 E15945 MOV SE 20KT -->
+          <iwxxm:ashCloud>
+            <iwxxm:VolcanicAshCloud gml:id="vac1">
+                <iwxxm:ashCloudExtent nilReason="unknown">
+                    <aixm:AirspaceVolume gml:id="vacav1">
+                        <aixm:upperLimit uom="FL">300</aixm:upperLimit>
+                        <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                        <aixm:lowerLimit uom="FL">250</aixm:lowerLimit>
+                        <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+                        <aixm:horizontalProjection>
+                            <aixm:Surface gml:id="s1">
+                                <gml:patches>
+                                    <gml:PolygonPatch>
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>54.00 159.30 54.00 161.00 53.00 159.45 54.00 159.30</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:PolygonPatch>
+                                </gml:patches>
+                            </aixm:Surface>
+                        </aixm:horizontalProjection>
+                    </aixm:AirspaceVolume>
+                </iwxxm:ashCloudExtent>
+                <iwxxm:directionOfMotion uom="deg">135</iwxxm:directionOfMotion>
+                <iwxxm:speedOfMotion uom="[kn_i]">20</iwxxm:speedOfMotion>
+            </iwxxm:VolcanicAshCloud>
+          </iwxxm:ashCloud>
+          <!-- SFC/FL200 N5130 E16130 N5130 E16230 N5230 E16230 N5230 E16130 MOV SE 15KT -->
+          <iwxxm:ashCloud>
+            <iwxxm:VolcanicAshCloud gml:id="vac2">
+              <iwxxm:ashCloudExtent>
+                <aixm:AirspaceVolume gml:id="vacav2">
+                  <aixm:upperLimit uom="FL">200</aixm:upperLimit>
+                  <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface gml:id="s2">
+                      <gml:patches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:LinearRing>
+                              <gml:posList>51.30 161.30 51.30 162.30 52.30 162.30 52.30 161.30 51.30 161.30</gml:posList>
+                            </gml:LinearRing>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:patches>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </iwxxm:ashCloudExtent>
+              <iwxxm:directionOfMotion uom="deg">135</iwxxm:directionOfMotion>
+              <iwxxm:speedOfMotion uom="[kn_i]">15</iwxxm:speedOfMotion>
+            </iwxxm:VolcanicAshCloud>
+          </iwxxm:ashCloud>
+        </iwxxm:VolcanicAshConditions>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:analysis>
+  
+  <!-- 23/0700Z -->
+  <iwxxm:analysis>
+    <om:OM_Observation gml:id="karymskyVAA6hr">
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="t2">
+          <gml:timePosition>2008-09-23T07:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <!-- time at which the results of the observation were made available -->
+      <om:resultTime xlink:href="#ti-2"/>
+      <om:procedure xlink:href="#p-49-2"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VAAdvisory"/>
+      <om:featureOfInterest xlink:href="#ssf1"/>
+      <om:result>
+        <iwxxm:VolcanicAshConditions gml:id="vaCond3">
+          <!-- FL250/350 N5130 E16030 Ð N5130 E16230 Ð N5330 E16230 Ð N5330 E16030 -->
+          <iwxxm:ashCloud>
+            <iwxxm:VolcanicAshCloud gml:id="vac3">
+              <iwxxm:ashCloudExtent>
+                <aixm:AirspaceVolume gml:id="vacav3">
+                  <aixm:upperLimit uom="FL">350</aixm:upperLimit>
+                  <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                  <aixm:lowerLimit uom="FL">250</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface gml:id="s3">
+                      <gml:patches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:LinearRing>
+                              <gml:posList>51.30 160.30 51.30 162.30 53.30 162.30 53.30 160.30 51.30 160.30</gml:posList>
+                            </gml:LinearRing>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:patches>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </iwxxm:ashCloudExtent>
+            </iwxxm:VolcanicAshCloud>
+          </iwxxm:ashCloud>
+          <!-- SFC/FL180 N4830 E16330 Ð N4830 E16630 Ð N5130 E16630 Ð N5130 E16330 -->
+          <iwxxm:ashCloud>
+            <iwxxm:VolcanicAshCloud gml:id="vac4">
+              <iwxxm:ashCloudExtent>
+                <aixm:AirspaceVolume gml:id="vacav4">
+                  <aixm:upperLimit uom="FL">180</aixm:upperLimit>
+                  <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface gml:id="s4">
+                      <gml:patches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:LinearRing>
+                              <gml:posList>48.30 163.30 48.30 166.30 51.30 166.30 51.30 163.30 48.30 163.30</gml:posList>
+                            </gml:LinearRing>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:patches>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </iwxxm:ashCloudExtent>
+            </iwxxm:VolcanicAshCloud>
+          </iwxxm:ashCloud>
+        </iwxxm:VolcanicAshConditions>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:analysis>
+  
+  <!-- 23/1300Z -->
+  <iwxxm:analysis>
+    <om:OM_Observation gml:id="karymskyVAA12hr">
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="t3">
+          <gml:timePosition>2008-09-23T13:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <!-- time at which the results of the observation were made available -->
+      <om:resultTime xlink:href="#ti-2"/>
+      <om:procedure xlink:href="#p-49-2"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VAAdvisory"/>
+      <om:featureOfInterest xlink:href="#ssf1"/>
+      <om:result>
+        <iwxxm:VolcanicAshConditions gml:id="vaCond4">
+          <!-- SFC/FL270 N4830 E16130 Ð N4830 E16600 Ð N5300 E16600 Ð N5300 E16130  -->
+          <iwxxm:ashCloud>
+            <iwxxm:VolcanicAshCloud gml:id="vac6">
+              <iwxxm:ashCloudExtent>
+                <aixm:AirspaceVolume gml:id="vacav6">
+                  <aixm:upperLimit uom="FL">270</aixm:upperLimit>
+                  <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface gml:id="s5">
+                      <gml:patches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:LinearRing>
+                              <gml:posList>48.30 161.30 48.30 166.00 53.00 166.00 53.00 161.30 48.30 161.30</gml:posList>
+                            </gml:LinearRing>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:patches>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </iwxxm:ashCloudExtent>
+            </iwxxm:VolcanicAshCloud>
+          </iwxxm:ashCloud>
+        </iwxxm:VolcanicAshConditions>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:analysis>
+  
+  <!-- 23/1900Z NO VA EXP -->
+  <iwxxm:analysis nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+  
+  <!-- Remark -->
+  <iwxxm:remarks>LATEST REP FM KVERT (0120Z) INDICATES ERUPTION HAS CEASED.  TWO DISPERSING VA CLD ARE EVIDENT ON SATELLITE IMAGERY</iwxxm:remarks>
+  
+  <iwxxm:nextAdvisoryEarliestTime>
+    <gml:TimeInstant gml:id="ti23">
+      <gml:timePosition>2008-09-23T07:30:00Z</gml:timePosition>
+    </gml:TimeInstant>
+  </iwxxm:nextAdvisoryEarliestTime>
+  <iwxxm:nextAdvisoryLatestTime xlink:href="#ti23"/>
+  
+</iwxxm:VolcanicAshAdvisory>

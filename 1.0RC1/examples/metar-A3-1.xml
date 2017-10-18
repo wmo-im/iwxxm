@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    An example of a METAR.  Original METAR from ICAO Annex 3 Example A3-1:
+      METAR YUDO 221630Z 24004MPS 0600 R12/1000U DZ FG SCT010 OVC020 17/16 Q1018 
+        BECMG TL1700 0800 FG BECMG AT1800 9999 NSW
+-->
+<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/1.0RC1"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:om="http://www.opengis.net/om/2.0"
+    xmlns:metce="http://data.wmo.int/def/metce/1.0RC1"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+    xmlns:sf="http://www.opengis.net/sampling/2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+    xsi:schemaLocation="http://icao.int/iwxxm/1.0RC1 http://schemas.wmo.int/iwxxm/1.0RC1/iwxxm.xsd
+    http://data.wmo.int/def/metce/1.0RC1 http://schemas.wmo.int/metce/1.0RC1/metce.xsd"
+
+    gml:id="metar-YUDO-20120822163000Z" status="NORMAL" automatedStation="false">
+    
+    <iwxxm:observation>
+        <om:OM_Observation gml:id="obs-03839-20120824T12Z">
+            <om:type xlink:href="http://data.wmo.int/def/49-2/MeteorologicalAerodromeObservation" xlink:title="Aerodrome Observation"/>
+            <!-- time at which the observation actually occured -->
+            <om:phenomenonTime>
+                <gml:TimeInstant gml:id="time-instant-201208221630Z">
+                    <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:phenomenonTime>
+            <!-- time at which the results of the observation were made available (10-minutes later) -->
+            <om:resultTime>
+                <gml:TimeInstant gml:id="time-instant-201208221640Z">
+                    <gml:timePosition>2012-08-22T16:40:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:resultTime>
+            <om:procedure xlink:href="http://data.wmo.int/def/process/AutomatedMETARObservation" xlink:title="Automated METAR"/>
+            <om:observedProperty xlink:href="http://data.wmo.int/def/observableProperty/metarSpeci/observation" xlink:title="Observed properties for METAR and SPECI (Meteorological Aerodrome Reports)"/>
+            <om:featureOfInterest>
+                <!-- featureOfInterest type and shape must refer to a sampling Point -->
+                <sams:SF_SpatialSamplingFeature gml:id="sampling-point-03839">
+                    <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint" xlink:title="SF_SamplingPoint"/>
+                    <sf:sampledFeature xlink:href="http://icao.int/id/aerodrome/YUDO" xlink:title="Fake Airport"/>
+                    <sams:shape>
+                        <!-- This is where the observation took place, this is assumed to be representative of the sampledFeature -->
+                        <gml:Point gml:id="point-03839" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                            <gml:pos>0.00 0.00</gml:pos>
+                        </gml:Point>
+                    </sams:shape>
+                </sams:SF_SpatialSamplingFeature>
+            </om:featureOfInterest>
+            <!-- The result of the observation --> 
+            <om:result>
+                <iwxxm:MeteorologicalAerodromeObservationRecord gml:id="or1" ceilingAndVisibilityOK="false">
+                    <iwxxm:airTemperature uom="http://opengis.net/def/uom/UCUM/0/Cel">17.0</iwxxm:airTemperature>
+                    <iwxxm:dewpointTemperature uom="http://opengis.net/def/uom/UCUM/0/Cel">16.0</iwxxm:dewpointTemperature>
+                    <iwxxm:qnh uom="http://opengis.net/def/uom/UCUM/0/hPa">1018</iwxxm:qnh>
+                    <iwxxm:rvr>
+                        <iwxxm:AerodromeRunwayVisualRange pastTendency="UPWARD">
+                            <iwxxm:meanRVR uom="http://opengis.net/def/uom/UCUM/0/m">1000</iwxxm:meanRVR>
+                            <iwxxm:runway xlink:href="http://icao.int/id/runway/YUDO/12" xlink:title="YUDO 12"/>
+                        </iwxxm:AerodromeRunwayVisualRange>
+                    </iwxxm:rvr>
+                    <iwxxm:surfaceWind>
+                        <iwxxm:AerodromeSurfaceWind variableDirection="false">
+                            <iwxxm:meanWindDirection uom="http://opengis.net/def/uom/UCUM/0/deg">240</iwxxm:meanWindDirection>
+                            <iwxxm:windSpeed uom="http://opengis.net/def/uom/UCUM/0/m/s">4.0</iwxxm:windSpeed>
+                        </iwxxm:AerodromeSurfaceWind>
+                    </iwxxm:surfaceWind>
+                    <iwxxm:presentWeather xlink:href="http://data.wmo.int/def/306/4678/DZ" xlink:title="Moderate Drizzle"/>
+                    <iwxxm:presentWeather xlink:href="http://data.wmo.int/def/306/4678/FG" xlink:title="Fog"/>
+                    <iwxxm:visibility>
+                        <iwxxm:AerodromeHorizontalVisibility>
+                            <iwxxm:prevailingVisibility uom="http://opengis.net/def/uom/UCUM/0/m">600</iwxxm:prevailingVisibility>
+                        </iwxxm:AerodromeHorizontalVisibility>
+                    </iwxxm:visibility>
+                    <iwxxm:cloud>
+                        <iwxxm:AerodromeObservedClouds>
+                            <iwxxm:layer>
+                                <iwxxm:CloudLayer>
+                                    <iwxxm:amount xlink:href="http://data.wmo.int/def/bufr-0-20-008/2" xlink:title="Scattered"/>
+                                    <iwxxm:base uom="http://opengis.net/def/uom/UCUM/0/ft">1000</iwxxm:base>
+                                </iwxxm:CloudLayer>
+                            </iwxxm:layer>
+                            <iwxxm:layer>
+                                <iwxxm:CloudLayer>
+                                    <iwxxm:amount xlink:href="http://data.wmo.int/def/bufr-0-20-008/4" xlink:title="Overcast"/>
+                                    <iwxxm:base uom="http://opengis.net/def/uom/UCUM/0/ft">2000</iwxxm:base>
+                                </iwxxm:CloudLayer>
+                            </iwxxm:layer>
+                        </iwxxm:AerodromeObservedClouds>
+                    </iwxxm:cloud>
+                </iwxxm:MeteorologicalAerodromeObservationRecord>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:observation>
+    <iwxxm:trendForecast>
+        <om:OM_Observation gml:id="trend-fcst-1-03839-201208221630Z-201208221700Z">
+            <om:type xlink:href="http://data.wmo.int/def/observationType/iwxxm/1.0RC1/MeteorologicalAerodromeTrendForecast" xlink:title="Aerodrome Trend Forecast"/>
+            <!-- time at which the forecast conditions actually occur -->
+            <om:phenomenonTime>
+                <gml:TimePeriod gml:id="time-period-201208221630Z-201208221700Z">
+                    <gml:beginPosition>2012-08-22T16:30:00Z</gml:beginPosition>
+                    <gml:endPosition>2012-08-22T17:00:00Z</gml:endPosition>
+                </gml:TimePeriod>
+            </om:phenomenonTime>
+            <!-- time at which the results of the observation were made available -->
+            <om:resultTime>
+                <gml:TimeInstant gml:id="fcst-time-instant-201208221640Z">
+                    <gml:timePosition>2012-08-22T16:40:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:resultTime>
+            <om:procedure xlink:href="http://data.wmo.int/def/process/HumanGeneratedTrendForecast"  xlink:title="Human-generated trend forecast"/>
+            <om:observedProperty xlink:href="http://data.wmo.int/def/observedProperty/metarSpeci/trendForecast" xlink:title="METAR trend forecast properties"/>
+            <om:featureOfInterest xlink:href="#sampling-point-03839"/>
+            <om:result>
+                <iwxxm:MeteorologicalAerodromeTrendForecastRecord gml:id="trend-fcst-record-03839-201208221630Z-201208221700Z" changeIndicator="BECOMING" ceilingAndVisibilityOK="false">
+                    <iwxxm:prevailingHorizontalVisibility uom="http://opengis.net/def/uom/UCUM/0/m">800</iwxxm:prevailingHorizontalVisibility>
+                    <iwxxm:forecastWeather xlink:href="http://data.wmo.int/def/306/4678/FG" xlink:title="Fog"/>
+                </iwxxm:MeteorologicalAerodromeTrendForecastRecord>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:trendForecast>
+    <iwxxm:trendForecast>
+        <om:OM_Observation gml:id="trend-fcst-2-03839-201208221630Z">
+            <om:type xlink:href="http://data.wmo.int/def/observationType/iwxxm/1.0RC1/MeteorologicalAerodromeTrendForecast" xlink:title="Aerodrome Trend Forecast"/>
+            <!-- time at which the forecast conditions actually occur -->
+            <om:phenomenonTime>
+                <gml:TimePeriod gml:id="time-period-201208221800Z-201208221900Z">
+                    <gml:beginPosition>2012-08-22T18:00:00Z</gml:beginPosition>
+                    <gml:endPosition>2012-08-22T19:00:00Z</gml:endPosition>
+                </gml:TimePeriod>
+            </om:phenomenonTime>
+            <!-- time at which the results of the observation were made available -->
+            <om:resultTime>
+                <gml:TimeInstant gml:id="fcst-time-instant2-201208221640Z">
+                    <gml:timePosition>2012-08-22T16:40:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:resultTime>
+            <om:procedure xlink:href="http://data.wmo.int/def/process/HumanGeneratedTrendForecast" xlink:title="Human-generated trend forecast"/>
+            <om:observedProperty xlink:href="http://data.wmo.int/def/observedProperty/metarSpeci/trendForecast" xlink:title="METAR trend forecast properties"/>
+            <om:featureOfInterest xlink:href="#sampling-point-03839"/>
+            <om:result>
+                <iwxxm:MeteorologicalAerodromeTrendForecastRecord gml:id="trend-fcst-record-03839-201208221800Z-201208221900Z" changeIndicator="BECOMING" ceilingAndVisibilityOK="false">
+                    <!-- No way currently to represent 10km OR MORE visibility --> 
+                    <iwxxm:prevailingHorizontalVisibility uom="http://opengis.net/def/uom/UCUM/0/km">10</iwxxm:prevailingHorizontalVisibility>
+                    <iwxxm:forecastWeather nilReason="http://data.wmo.int/def/nil-reason/nothingOfOperationalSignificance"/>
+                </iwxxm:MeteorologicalAerodromeTrendForecastRecord>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:trendForecast>
+</iwxxm:METAR>

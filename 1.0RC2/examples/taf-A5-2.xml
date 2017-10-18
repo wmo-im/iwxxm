@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    An example of a TAF.  Original TAF from ICAO Annex 3 Example A5-2:
+      TAF AMD YUDO 161500Z 1606/1624 CNL
+-->
+<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/1.0RC2" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:saf="http://icao.int/saf/1.0RC2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/1.0RC2 http://schemas.wmo.int/iwxxm/1.0RC2/iwxxm.xsd"
+
+    gml:id="taf-YUDO-20120816150000Z"
+    status="CANCELLATION">
+
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="ti-20120816150000Z">
+            <gml:timePosition>2012-08-16T15:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+
+    <!-- The time at which this TAF is intended to be used -->
+    <iwxxm:validTime>
+        <gml:TimePeriod gml:id="tp-201208161500-201208170000">
+            <gml:beginPosition>2012-08-16T15:00:00Z</gml:beginPosition>
+            <gml:endPosition>2012-08-17T00:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:validTime>
+
+    <!-- The Aerodrome of a previous report that is cancelled, amended or corrected -->
+    <iwxxm:previousReportAerodrome>
+      <saf:Aerodrome gml:id="uuid.dd062d88-3e64-4a5d-bebd-89476db9ebea">
+          <gml:identifier codeSpace="urn:uuid:">dd062d88-3e64-4a5d-bebd-89476db9ebea</gml:identifier>
+          <saf:designator>YUDO</saf:designator>
+          <saf:name>DONLON/INTERNATIONAL</saf:name>
+          <saf:locationIndicatorICAO>YUDO</saf:locationIndicatorICAO>
+          <saf:ARP>
+             <gml:Point gml:id="pt52284-32035" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                 <gml:pos>12.34 -12.34</gml:pos>
+             </gml:Point>
+          </saf:ARP>
+      </saf:Aerodrome>
+    </iwxxm:previousReportAerodrome>
+
+    <!-- The valid time period of a previous report that is cancelled, amended or corrected by this report -->
+    <iwxxm:previousReportValidPeriod>
+        <gml:TimePeriod gml:id="tp-201208160600-201208170000">
+            <gml:beginPosition>2012-08-16T06:00:00Z</gml:beginPosition>
+            <gml:endPosition>2012-08-17T00:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:previousReportValidPeriod>
+
+</iwxxm:TAF>

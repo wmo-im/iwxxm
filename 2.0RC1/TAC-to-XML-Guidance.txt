@@ -1,0 +1,159 @@
+==========================
+Introduction
+==========================
+This document provides guidance on how abbreviations and codes from the Traditional Alphanumeric Codes (TAC)
+are represented in XML (IWXXM).
+
+==========================
+METAR/SPECI
+==========================
+NIL (report)
+  (Represented as a status of "MISSING" on METAR/SPECI and TAF reports)
+
+CAVOK - Cloud and visibility OK
+  When CAVOK conditions apply, the appropriate Record type shall have "cloudAndVisibilityOK" set to true and visibility,
+  runway visual range, weather, and cloud information shall be missing.
+  
+CLRD - Runway contamination is cleared
+  When runway contamination has been cleared, AerodromeRunwayState shall have "cleared" set to true
+  
+NSC - No clouds of operational significance
+  When no cloud of operational significance is observed/forecast, and no restriction on vertical
+  visibility and 'CAVOK' is not appropriate, the cloud group shall be missing with a nil reason of
+  http://codes.wmo.int/common/nil/nothingOfOperationalSignificance
+
+NCD - No clouds detected (by auto system)
+  When no clouds are detected by the automatic observing system, it shall be indicated by a
+  missing cloud group with a nil reason of http://codes.wmo.int/common/nil/notDetectedByAutoSystem
+
+NOSIG - No significant changes are forecast
+  When no change is expected to occur, this shall be indicated by a single missing trend forecast with a nil
+  reason of http://codes.wmo.int/common/nil/noSignificantChange
+  
+NSW - No weather of operational significance
+  The expected end of occurrence of weather phenomena shall be indicated by a change forecast with a missing weather
+  group with a nil reason of http://codes.wmo.int/common/nil/nothingOfOperationalSignificance
+  
+R88 (runway designator for runway state)
+  When all runways are being indicated, the AerodromeRunwayState shall have "allRunways" set to true
+
+R99 (runway designator for runway state)
+  When a new runway state report is not available in time for dissemination of the METAR message, the
+  previous runway state report will be repeated
+
+SNOCLO - Runway closed due to snow
+  When a runway is closed due to snow, AerodromeRunwayState shall have "snowClosure" set to true
+
+Present weather "//"
+  When present weather cannot be observed by the automatic observing system due to a temporary failure of the
+  system/sensor, the present weather shall be missing with a nil reason of
+  http://codes.wmo.int/common/nil/notObservable
+
+Vertical visibility "VV///" (METAR/SPECI observations)
+  When the sky is obscured and the value of the vertical visibility cannot be determined by the automatic observing
+  system due to a temporary failure of the system/sensor, the vertical visibility shall be missing with a nil reason of
+  http://codes.wmo.int/common/nil/notObservable
+
+Cloud amount and height "//////"
+  When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the
+  cloud amount and the height of cloud base cannot be observed, this shall be indicated by a missing cloud layer
+  with a nil reason of either http://codes.wmo.int/common/nil/notObservable if the value could not be observed due to
+  a sensor or system failure, or http://codes.wmo.int/common/nil/notDetectedByAutoSystem if the automated system is
+  working properly but did not observe any values
+
+Cloud amount "///015"
+  When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the
+  cloud amount cannot be observed, this shall be indicated by a CloudLayer with a missing "amount" with a nil reason
+  of either http://codes.wmo.int/common/nil/notObservable if the value could not be observed due to
+  a sensor or system failure, or http://codes.wmo.int/common/nil/notDetectedByAutoSystem if the automated system is
+  working properly but did not observe any values
+
+Cloud height "BKN///"
+  When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the height of
+  cloud base cannot be observed, this shall be indicated by a CloudLayer with a missing "base" with a nil reason
+  of either http://codes.wmo.int/common/nil/notObservable if the value could not be observed due to
+  a sensor or system failure, or http://codes.wmo.int/common/nil/notDetectedByAutoSystem if the automated system is
+  working properly but did not observe any values
+
+Cloud type "///"
+  When cloud type cannot be observed by an auto system due to sensor limitations this shall be indicated by
+  http://codes.wmo.int/common/nil/notObservable.
+  
+Runway depth of deposit "//"
+  When the runway depth of deposits is operationally insignificant or is not measurable this shall be indicated by
+  a missing depthOfDeposits and a nilReason of either http://codes.wmo.int/common/nil/notObservable or
+  http://codes.wmo.int/common/nil/nothingOfOperationalSignificance.
+
+Runway depth of deposit "99" (value from WMO code table 1079) 
+  When the runway depth of deposits is not reported due to runway or runways non-operational due to snow, slush, ice, 
+  large drifts or runway clearance this shall be indicated by a missing depthOfDeposits and a nilReason of  
+  http://www.opengis.net/def/nil/OGC/0/unknown.
+  
+
+
+==========================
+TAF
+==========================
+NIL (report)
+  (Represented as a status of "MISSING" on METAR/SPECI and TAF reports)
+
+CAVOK - Cloud and visibility OK
+  When CAVOK conditions apply, the appropriate Record type shall have "cloudAndVisibilityOK" set to true and visibility,
+  runway visual range, weather, and cloud information shall be missing.
+  
+NSC - No clouds of operational significance
+  When no cloud of operational significance is observed/forecast, and 'CAVOK' is not appropriate, the cloud group shall be missing with a nil reason of
+  http://codes.wmo.int/common/nil/nothingOfOperationalSignificance
+  
+NSW - No weather of operational significance
+  The expected end of occurrence of weather phenomena shall be indicated by a change forecast with a missing weather
+  group with a nil reason of http://codes.wmo.int/common/nil/nothingOfOperationalSignificance
+
+Vertical visibility "VV///"
+  When the vertical visibility is not available for any reason, vertical visibility shall be missing with no nil reason.
+  
+==========================
+SIGMET
+==========================
+NO VA EXP - No volcanic ash expected
+  The expected end of occurrence of volcanic ash shall be indicated with a missing VolcanicAshSIGMET "phenomenon" with a
+  nil reason of http://codes.wmo.int/common/nil/nothingOfOperationalSignificance
+
+==========================
+Volcanic Ash Advisory
+==========================
+'UNKNOWN' volcano name
+  An unknown volcano name shall be indicated with an EruptingVolcano name of "UNKNOWN"
+  
+'UNNAMED' volcano name
+  An unnamed volcano shall be indicated with an EruptingVolcano name of "UNNAMED"
+  
+'UNKNOWN' volcano location
+  An unknown volcano location shall be indicated with a missing EruptingVolcano position with a nilReason of "unknown"
+  
+'UNKNOWN' aviation colour code
+  An unknown aviation colour code shall be indicated with a missing colourCode with a nilReason of "unknown"
+  
+'NOT GIVEN' aviation colour code
+  An aviation colour code that is not given shall be indicated with a missing colourCode with a nilReason of "withheld"
+
+'NIL' aviation colour code
+  A NIL aviation colour code shall be indicated with a missing colourCode with a nilReason of "missing"
+
+'VA NOT IDENTIFIABLE FM SATELLITE DATA'
+  Unidentifiable volcanic ash from satellite data shall be indicated with a nil ashCloudExtent with a nilReason of "unknown"
+  
+'NO VA EXP'
+  When no volcanic ash is expected it shall be indicated with a nil ashCloudExtent with a nilReason of 
+  http://codes.wmo.int/common/nil/nothingOfOperationalSignificance
+  
+'NOT AVBL'
+  When volcanic ash is not available it shall be indicated with a nil ashCloudExtent with a nilReason of 'missing'
+
+'NOT PROVIDED'
+  When volcanic ash is not provided it shall be indicated with a nil ashCloudExtent with a nilReason of 'withheld'
+  
+==========================
+Tropical Cyclone Advisory
+==========================
+'
