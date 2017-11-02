@@ -62,7 +62,7 @@
     <!-- FCST S OF N54 AND E OF W012 TOP FL390 MOV E 20KT WKN -->
     <iwxxm:analysis>
         <om:OM_Observation gml:id="analysis1">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETEvolvingConditionAnalysis"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETEvolvingConditionCollectionAnalysis"/>
             <!-- time of FCST conditions - if missing there is no FCST or OBS time -->
             <om:phenomenonTime nilReason="missing"/>
 
@@ -79,7 +79,7 @@
                     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO SIGMET INFORMATION</gml:description>
                 </metce:Process>
             </om:procedure>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionAnalysis"/>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionCollectionAnalysis"/>
             <!-- featureOfInterest type and shape MUST refer to an SF_SamplingSurface -->
             <om:featureOfInterest>
                 <sams:SF_SpatialSamplingFeature gml:id="sampling-surface-shanlon">

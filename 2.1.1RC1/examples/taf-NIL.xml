@@ -26,7 +26,7 @@
 
     <iwxxm:baseForecast>
         <om:OM_Observation gml:id="bf">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeBaseForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeForecast"/>
             <!-- time at which the missing report was found to be missing -->
             <om:phenomenonTime xlink:href="#ti-201208221600Z"/>
             <!-- time at which the results are made available -->
@@ -36,7 +36,7 @@
                     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 5 TECHNICAL SPECIFICATIONS RELATED TO FORECASTS</gml:description>
                 </metce:Process>
             </om:procedure>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/metarSpeci/observation"/>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeForecast"/>
             <om:featureOfInterest>
                 <!-- featureOfInterest type and shape must refer to a point -->
                 <sams:SF_SpatialSamplingFeature gml:id="sampling-point-03839">

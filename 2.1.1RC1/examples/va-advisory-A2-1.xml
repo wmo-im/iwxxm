@@ -48,19 +48,8 @@ NXT ADVISORY:               20080923/0730Z
     <aixm:Unit gml:id="vaac-TOKYO">
       <aixm:timeSlice>
         <aixm:UnitTimeSlice gml:id="uTTokyoVolcanicAshCentreUnit">
-          <gml:validTime>
-            <gml:TimePeriod gml:id="vtTokyoVolcanicAshCentreUnit">
-              <gml:beginPosition>2008-01-01T00:00:00Z</gml:beginPosition>
-              <gml:endPosition indeterminatePosition="unknown"/>
-            </gml:TimePeriod>
-          </gml:validTime>
+          <gml:validTime/>
           <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-          <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ltTokyoVolcanicAshCentreUnit">
-              <gml:beginPosition>2008-01-01T00:00:00Z</gml:beginPosition>
-              <gml:endPosition indeterminatePosition="unknown"/>
-            </gml:TimePeriod>
-          </aixm:featureLifetime>
           <aixm:name>TOKYO</aixm:name>
           <aixm:type>OTHER:VACC</aixm:type>
         </aixm:UnitTimeSlice>
@@ -103,7 +92,7 @@ NXT ADVISORY:               20080923/0730Z
           <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 2 Volcanic ash advisory information</gml:description>
         </metce:Process>
       </om:procedure>
-      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VAAdvisory"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VolcanicAshConditions"/>
       <om:featureOfInterest>
           <sams:SF_SpatialSamplingFeature gml:id="ssf1">
               <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
@@ -186,7 +175,7 @@ NXT ADVISORY:               20080923/0730Z
       <!-- time at which the results of the observation were made available -->
       <om:resultTime xlink:href="#ti-2"/>
       <om:procedure xlink:href="#p-49-2"/>
-      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VAAdvisory"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VolcanicAshConditions"/>
       <om:featureOfInterest xlink:href="#ssf1"/>
       <om:result>
         <iwxxm:VolcanicAshConditions gml:id="vaCond3">
@@ -258,7 +247,7 @@ NXT ADVISORY:               20080923/0730Z
       <!-- time at which the results of the observation were made available -->
       <om:resultTime xlink:href="#ti-2"/>
       <om:procedure xlink:href="#p-49-2"/>
-      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VAAdvisory"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VolcanicAshConditions"/>
       <om:featureOfInterest xlink:href="#ssf1"/>
       <om:result>
         <iwxxm:VolcanicAshConditions gml:id="vaCond4">
@@ -303,7 +292,7 @@ NXT ADVISORY:               20080923/0730Z
           </om:phenomenonTime>
           <om:resultTime xlink:href="#ti-2"/>
           <om:procedure xlink:href="#p-49-2"/>
-          <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VAAdvisory"/>
+          <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VolcanicAshConditions"/>
           <om:featureOfInterest xlink:href="#ssf1"/>
           <om:result nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
       </om:OM_Observation>

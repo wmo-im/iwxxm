@@ -58,7 +58,7 @@
     <!-- OBS N OF S50 TOP ABV FL100 STNR WKN -->
     <iwxxm:analysis>
         <om:OM_Observation gml:id="analysis">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/AIRMETEvolvingConditionAnalysis"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/AIRMETEvolvingConditionCollectionAnalysis"/>
             <!-- time of observed conditions -->
             <om:phenomenonTime nilReason="missing"/>
             
@@ -75,7 +75,7 @@
                     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO AIRMET INFORMATION</gml:description>
                 </metce:Process>
             </om:procedure>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/AIRMETEvolvingConditionAnalysis"/>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/AIRMETEvolvingConditionCollectionAnalysis"/>
             <!-- featureOfInterest type and shape MUST refer to an SF_SamplingSurface -->
             <om:featureOfInterest>
                 <sams:SF_SpatialSamplingFeature gml:id="sampling-surface-Amswell">
