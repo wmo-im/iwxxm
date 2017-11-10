@@ -250,29 +250,29 @@
          <sch:assert test="(if(exists(iwxxm:minimumTemperature) and (not(exists(iwxxm:minimumTemperature/@xsi:nil)) or iwxxm:minimumTemperature/@xsi:nil != 'true')) then (iwxxm:minimumTemperature/@uom = 'Cel') else true())">TAF.AATF2: minimumTemperature shall be reported in degrees Celsius (Cel).</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="TAF.TAF1">
+   <sch:pattern id="TAF.TAF19">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="(if(//iwxxm:MeteorologicalAerodromeForecastRecord/@changeIndicator) then(empty(iwxxm:MeteorologicalAerodromeForecastRecord/iwxxm:temperature)) else(true()))">TAF.TAF1: Forecast conditions cannot include temperature information. They are otherwise identical to the prevailing conditions</sch:assert>
+         <sch:assert test="(if(not(empty(iwxxm:baseForecast//om:result/iwxxm:MeteorologicalAerodromeForecastRecord)) and (iwxxm:baseForecast//om:result/iwxxm:MeteorologicalAerodromeForecastRecord/@cloudAndVisibilityOK = 'false')) then(exists(iwxxm:baseForecast//om:result/iwxxm:MeteorologicalAerodromeForecastRecord/iwxxm:cloud)) else(true()))">TAF.TAF19: cloud is mandatory in a non-empty baseForecast when cloudAndVisibilityOK is false</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF18">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="(if(exists(iwxxm:baseForecast//om:result/iwxxm:MeteorologicalAerodromeForecastRecord)) then((exists(iwxxm:baseForecast//om:result/iwxxm:MeteorologicalAerodromeForecastRecord/iwxxm:surfaceWind)) and (exists(iwxxm:baseForecast//om:result/iwxxm:MeteorologicalAerodromeForecastRecord/iwxxm:cloud))) else(true()))">TAF.TAF18: surfaceWind and cloud are mandatory in a non-empty baseForecast</sch:assert>
+         <sch:assert test="(if(not(empty(iwxxm:baseForecast//om:result/iwxxm:MeteorologicalAerodromeForecastRecord))) then(not(empty(iwxxm:baseForecast//om:result/iwxxm:MeteorologicalAerodromeForecastRecord/iwxxm:surfaceWind))) else(true()))">TAF.TAF18: surfaceWind is mandatory in a non-empty baseForecast</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF3">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="(if( @status = 'AMENDMENT' ) then (exists(iwxxm:previousReportValidPeriod)) else (true()))">TAF.TAF3: An amended report must also include the valid time of the amended report</sch:assert>
+         <sch:assert test="(if( @status = 'AMENDMENT' ) then (not(empty(iwxxm:previousReportValidPeriod))) else (true()))">TAF.TAF3: An amended report must also include the valid time of the amended report</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF4">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="(if( @status = 'CANCELLATION' ) then (exists(iwxxm:previousReportValidPeriod)) else (true()))">TAF.TAF4: A cancelled report must also include the valid time of the cancelled report</sch:assert>
+         <sch:assert test="(if( @status = 'CANCELLATION' ) then (not(empty(iwxxm:previousReportValidPeriod))) else (true()))">TAF.TAF4: A cancelled report must also include the valid time of the cancelled report</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF5">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="(if( @status = 'CORRECTION' ) then (exists(iwxxm:previousReportValidPeriod)) else (true()))">TAF.TAF5: A corrected report must reference</sch:assert>
+         <sch:assert test="(if( @status = 'CORRECTION' ) then (not(empty(iwxxm:previousReportValidPeriod))) else (true()))">TAF.TAF5: A corrected report must reference</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF9">
@@ -287,7 +287,7 @@
    </sch:pattern>
    <sch:pattern id="TAF.TAF11">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="(if( @status ne 'MISSING') then(exists(iwxxm:validTime)) else(true()))">TAF.TAF11: Non-missing TAF reports must contains validTime</sch:assert>
+         <sch:assert test="(if( @status ne 'MISSING') then(not(empty(iwxxm:validTime))) else(true()))">TAF.TAF11: Non-missing TAF reports must contains validTime</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF8">
@@ -380,16 +380,6 @@
          <sch:assert test="(if(exists(iwxxm:directionOfMotion) and (not(exists(iwxxm:directionOfMotion/@xsi:nil)) or iwxxm:directionOfMotion/@xsi:nil != 'true')) then (iwxxm:directionOfMotion/@uom = 'deg') else true())">SIGMET.SEC1: directionOfMotion shall be reported in degrees (deg).</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="SIGMET.SEC3">
-      <sch:rule context="//iwxxm:SIGMETEvolvingCondition">
-         <sch:assert test="(if(exists(iwxxm:geometryLowerLimitOperator)) then (iwxxm:geometryLowerLimitOperator = 'BELOW') else true())">SIGMET.SEC3: geometryLowerLimitOperator can either be NULL or BELOW.</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="SIGMET.SEC4">
-      <sch:rule context="//iwxxm:SIGMETEvolvingCondition">
-         <sch:assert test="(if(exists(iwxxm:geometryUpperLimitOperator)) then (iwxxm:geometryUpperLimitOperator = 'ABOVE') else true())">SIGMET.SEC4: geometryUpperLimitOperator can either be NULL or ABOVE</sch:assert>
-      </sch:rule>
-   </sch:pattern>
    <sch:pattern id="SIGMET.SEC2">
       <sch:rule context="//iwxxm:SIGMETEvolvingCondition">
          <sch:assert test="(if(exists(iwxxm:speedOfMotion) and (not(exists(iwxxm:speedOfMotion/@xsi:nil)) or iwxxm:speedOfMotion/@xsi:nil != 'true')) then ((iwxxm:speedOfMotion/@uom = 'km/h') or (iwxxm:speedOfMotion/@uom = '[kn_i]')) else true())">SIGMET.SEC2: speedOfMotion shall be reported in kilometres per hour (km/h) or knots ([kn_i]).</sch:assert>
@@ -438,16 +428,6 @@
    <sch:pattern id="AIRMET.AEC3">
       <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
          <sch:assert test="(if(exists(iwxxm:directionOfMotion) and (not(exists(iwxxm:directionOfMotion/@xsi:nil)) or iwxxm:directionOfMotion/@xsi:nil != 'true')) then (iwxxm:directionOfMotion/@uom = 'deg') else true())">AIRMET.AEC3: directionOfMotion shall be reported in degrees (deg).</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="AIRMET.AEC9">
-      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
-         <sch:assert test="(if(exists(iwxxm:geometryLowerLimitOperator)) then (iwxxm:geometryLowerLimitOperator = 'BELOW') else true())">AIRMET.AEC9: geometryLowerLimitOperator can either be NULL or BELOW.</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="AIRMET.AEC10">
-      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
-         <sch:assert test="(if(exists(iwxxm:geometryUpperLimitOperator)) then (iwxxm:geometryUpperLimitOperator = 'ABOVE') else true())">AIRMET.AEC10: geometryUpperLimitOperator can either be NULL or ABOVE</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AEC4">

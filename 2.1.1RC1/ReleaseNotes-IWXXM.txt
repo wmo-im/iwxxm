@@ -1,4 +1,12 @@
 ====================================
+2.1.1 - November 2017
+====================================
+- Removed Schematron rules SIGMET.SEC3, SIGMET.SEC4, AIRMET.AEC9 and AIRMET.AEC10 to fix vertical extend encoding for 
+    all allowed TAC combinations
+* Split Schematron rule TAF.TAF18 to create TAF.TAF19 to allow for missing iwxxm:cloud when CAVOK is reported.  Slight
+    enhancement to other Schematron rules for TAF
+
+====================================
 2.1 - March 2017
 ====================================
 * Modified AIRMET and SIGMET to correctly handle complex cases where there are multiple OBS/FCST elements and forecast
@@ -68,11 +76,12 @@
 * VAA variableWindDirection is now being generated correctly as an XML attribute, similar to other variableWindDirection
     flags in other reports
 * Implementation of METCE 1.2 structural requirements
-- Removed Schematron rule on TAF relating to BECMG and FROM groups followed by a PROB group.
+- Removed Schematron rule TAF.TAF10 for checking BECMG and FROM groups followed by a PROB group.
 * Clarified and fixed a number of examples, including the proper encoding of degree minutes and seconds as decimal
     degrees and incorporation of updates from Annex 3 Amendment 77
 * Simplified Schematron contexts
-- Removed redundant Schematron rule for checking sampled features in SIGMET
+- Removed redundant Schematron rule SIGMET.SIGMET6 for checking sampled features in SIGMET
+- Removed Schematron rule TAF.TAF7 and updated others to allow validation when bulletinized
 
 ====================================
 2.0 Release Candidate 1 - April 2016
