@@ -163,6 +163,9 @@ To report an airspace upper limit of above FL 300, airspace upper limit is repor
 							<documentation>The cloud base of reported clouds.  Only used with an AIRMET reporting cloud phenomenon.  Height of cloud base shall be given in either "m" (metres) or "[ft_i]" (feet).
 
 Cloud base and top may differ from but should be within the AIRMET base and top which are reported in airspace upper and lower limits.</documentation>
+							<appinfo>
+								<quantity>http://codes.wmo.int/common/quantity-kind/heightOfBaseOfCloud</quantity>
+							</appinfo>
 						</annotation>
 					</element>
 					<element name="cloudBaseReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
@@ -175,6 +178,9 @@ Cloud base and top may differ from but should be within the AIRMET base and top 
 							<documentation>The cloud top of reported clouds.  Only used with an AIRMET reporting cloud phenomenon.  Height of cloud top shall be given in either "m" (metres) or "[ft_i]" (feet).
 
 Cloud base and top may differ from but should be within the AIRMET base and top which are reported in airspace upper and lower limits.</documentation>
+							<appinfo>
+								<quantity>http://codes.wmo.int/common/quantity-kind/heightOfTopOfCloud</quantity>
+							</appinfo>
 						</annotation>
 					</element>
 					<element name="cloudTopReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
@@ -188,6 +194,9 @@ Cloud base and top may differ from but should be within the AIRMET base and top 
 
 ICAO Annex 3 / WMO No. 49-2:
 Appendix 6 Section 2.1</documentation>
+							<appinfo>
+								<quantity>http://codes.wmo.int/common/quantity-kind/aeronauticalPrevailingHorizontalVisibility</quantity>
+							</appinfo>
 						</annotation>
 					</element>
 					<element name="surfaceVisibilityCause" type="iwxxm:WeatherCausingVisibilityReductionType" minOccurs="0" maxOccurs="unbounded">
@@ -203,6 +212,9 @@ Appendix 6 Section 2.1</documentation>
 					<element name="surfaceWindSpeed" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The widespread surface wind speed.  Only used with SFC WIND AIRMETs. Surface wind speed unit of measure shall be given as "m/s" or "[kn_i]" (knot).</documentation>
+							<appinfo>
+								<quantity>http://codes.wmo.int/common/quantity-kind/windSpeed</quantity>
+							</appinfo>
 						</annotation>
 					</element>
 					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">

@@ -5,6 +5,7 @@
     all allowed TAC combinations
 * Split Schematron rule TAF.TAF18 to create TAF.TAF19 to allow for missing iwxxm:cloud when CAVOK is reported.  Slight
     enhancement to other Schematron rules for TAF
++ Added the missing quantity information in AIRMET.xsd
 
 ====================================
 2.1 - March 2017
