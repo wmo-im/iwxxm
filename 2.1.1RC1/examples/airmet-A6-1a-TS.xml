@@ -12,7 +12,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd 
     http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd 
-    http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd"
+    http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1.1RC1/iwxxm.xsd"
     
     permissibleUsage="OPERATIONAL"
     gml:id="airmet-YUDD-201405151520Z" status="NORMAL">
