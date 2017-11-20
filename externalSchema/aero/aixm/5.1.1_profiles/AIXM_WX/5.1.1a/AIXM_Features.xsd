@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--====================================================================-->
+<!--AIXM 5.1.1 (weather profile v5.1.1a)-->
+<!--This AIXM profile is developed for the weather domain, and -->
+<!--includes only select portions of AIXM 5.1.1 needed to represent: -->
+<!--  AirportHeliport, Airspace, AirspaceVolume, Runway, RunwayDirection, and Unit -->
+<!--www.aixm.aero-->
+<!--Originally Released:  April 2016-->
+<!--Weather Profile Released:  June 2016-->
+<!--====================================================================-->
+<!--
+		Copyright (c) 2016, EUROCONTROL & FAA
+		=====================================
+		All rights reserved.
+		Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+			* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+			* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+			* Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+		THIS SPECIFICATION IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+		==========================================
+		Editorial note: this license is an instance of the BSD license template as
+		provided by the Open Source Initiative:
+		http://www.opensource.org/licenses/bsd-license.php
+	-->
+<!-- Component: AIXM: Features -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.aixm.aero/schema/5.1.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="5.1.1">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<annotation>
+		<appinfo>
+			<gml:gmlProfileSchema>http://external.schemas.opengis.net/gmlAIXMProfile/1.1/gml321forAIXM.xsd</gml:gmlProfileSchema>
+		</appinfo>
+	</annotation>
+	<import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<include schemaLocation="./AIXM_DataTypes.xsd"/>
+	<include schemaLocation="./AIXM_AbstractGML_ObjectTypes.xsd"/>
+	<complexType name="AirportHeliportPropertyType">
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<element name="AirportHeliport" type="aixm:AirportHeliportType" substitutionGroup="aixm:AbstractAIXMFeature"/>
+	<complexType name="AirportHeliportType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMFeatureType">
+				<sequence>
+					<element name="timeSlice" type="aixm:AirportHeliportTimeSlicePropertyType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AirportHeliportTimeSlicePropertyType">
+		<sequence>
+			<element ref="aixm:AirportHeliportTimeSlice"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AirportHeliportTimeSlice" type="aixm:AirportHeliportTimeSliceType" substitutionGroup="gml:AbstractTimeSlice"/>
+	<complexType name="AirportHeliportTimeSliceType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMTimeSliceType">
+				<sequence>
+					<group ref="aixm:AirportHeliportPropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<sequence>
+								<element ref="aixm:AbstractAirportHeliportExtension"/>
+							</sequence>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="AirportHeliportPropertyGroup">
+		<sequence>
+			<element name="designator" type="aixm:CodeAirportHeliportDesignatorType" nillable="true" minOccurs="0"/>
+			<element name="name" type="aixm:TextNameType" nillable="true" minOccurs="0"/>
+			<element name="locationIndicatorICAO" type="aixm:CodeICAOType" nillable="true" minOccurs="0"/>
+			<element name="designatorIATA" type="aixm:CodeIATAType" nillable="true" minOccurs="0"/>
+			<element name="fieldElevation" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0"/>
+			<element name="ARP" type="aixm:ElevatedPointPropertyType" nillable="true" minOccurs="0" maxOccurs="1"/>
+		</sequence>
+	</group>
+	<element name="AbstractAirportHeliportExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<complexType name="RunwayPropertyType">
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<element name="Runway" type="aixm:RunwayType" substitutionGroup="aixm:AbstractAIXMFeature"/>
+	<complexType name="RunwayType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMFeatureType">
+				<sequence>
+					<element name="timeSlice" type="aixm:RunwayTimeSlicePropertyType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="RunwayTimeSlicePropertyType">
+		<sequence>
+			<element ref="aixm:RunwayTimeSlice"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="RunwayTimeSlice" type="aixm:RunwayTimeSliceType" substitutionGroup="gml:AbstractTimeSlice"/>
+	<complexType name="RunwayTimeSliceType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMTimeSliceType">
+				<sequence>
+					<group ref="aixm:RunwayPropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<sequence>
+								<element ref="aixm:AbstractRunwayExtension"/>
+							</sequence>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="RunwayPropertyGroup">
+		<sequence>
+			<element name="designator" type="aixm:TextDesignatorType" nillable="true" minOccurs="0"/>
+			<element name="type" type="aixm:CodeRunwayType" nillable="true" minOccurs="0"/>
+			<element name="associatedAirportHeliport" type="aixm:AirportHeliportPropertyType" nillable="true" minOccurs="0" maxOccurs="1"/>
+		</sequence>
+	</group>
+	<element name="AbstractRunwayExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<complexType name="RunwayBlastPadPropertyType">
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<complexType name="RunwayDirectionPropertyType">
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<element name="RunwayDirection" type="aixm:RunwayDirectionType" substitutionGroup="aixm:AbstractAIXMFeature"/>
+	<complexType name="RunwayDirectionType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMFeatureType">
+				<sequence>
+					<element name="timeSlice" type="aixm:RunwayDirectionTimeSlicePropertyType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="RunwayDirectionTimeSlicePropertyType">
+		<sequence>
+			<element ref="aixm:RunwayDirectionTimeSlice"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="RunwayDirectionTimeSlice" type="aixm:RunwayDirectionTimeSliceType" substitutionGroup="gml:AbstractTimeSlice"/>
+	<complexType name="RunwayDirectionTimeSliceType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMTimeSliceType">
+				<sequence>
+					<group ref="aixm:RunwayDirectionPropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<sequence>
+								<element ref="aixm:AbstractRunwayDirectionExtension"/>
+							</sequence>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="RunwayDirectionPropertyGroup">
+		<sequence>
+			<element name="designator" type="aixm:TextDesignatorType" nillable="true" minOccurs="0"/>
+			<element name="trueBearing" type="aixm:ValBearingType" nillable="true" minOccurs="0"/>
+			<element name="magneticBearing" type="aixm:ValBearingType" nillable="true" minOccurs="0"/>
+			<element name="usedRunway" type="aixm:RunwayPropertyType" nillable="true" minOccurs="0" maxOccurs="1"/>
+		</sequence>
+	</group>
+	<element name="AbstractRunwayDirectionExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<complexType name="AirspacePropertyType">
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<element name="Airspace" type="aixm:AirspaceType" substitutionGroup="aixm:AbstractAIXMFeature"/>
+	<complexType name="AirspaceType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMFeatureType">
+				<sequence>
+					<element name="timeSlice" type="aixm:AirspaceTimeSlicePropertyType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AirspaceTimeSlicePropertyType">
+		<sequence>
+			<element ref="aixm:AirspaceTimeSlice"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AirspaceTimeSlice" type="aixm:AirspaceTimeSliceType" substitutionGroup="gml:AbstractTimeSlice"/>
+	<complexType name="AirspaceTimeSliceType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMTimeSliceType">
+				<sequence>
+					<group ref="aixm:AirspacePropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<sequence>
+								<element ref="aixm:AbstractAirspaceExtension"/>
+							</sequence>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="AirspacePropertyGroup">
+		<sequence>
+			<element name="type" type="aixm:CodeAirspaceType" nillable="true" minOccurs="0"/>
+			<element name="designator" type="aixm:CodeAirspaceDesignatorType" nillable="true" minOccurs="0"/>
+			<element name="name" type="aixm:TextNameType" nillable="true" minOccurs="0"/>
+			<element name="designatorICAO" type="aixm:CodeYesNoType" nillable="true" minOccurs="0"/>
+			<element name="geometryComponent" type="aixm:AirspaceGeometryComponentPropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</group>
+	<element name="AbstractAirspaceExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<element name="AirspaceGeometryComponent" type="aixm:AirspaceGeometryComponentType"/>
+	<complexType name="AirspaceGeometryComponentType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMObjectType">
+				<sequence>
+					<group ref="aixm:AirspaceGeometryComponentPropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<choice>
+								<element ref="aixm:AbstractAirspaceGeometryComponentExtension"/>
+							</choice>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="AirspaceGeometryComponentPropertyGroup">
+		<sequence>
+			<element name="theAirspaceVolume" type="aixm:AirspaceVolumePropertyType" nillable="true" minOccurs="0"/>
+		</sequence>
+	</group>
+	<complexType name="AirspaceGeometryComponentPropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:AirspaceGeometryComponent"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="AbstractAirspaceGeometryComponentExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<element name="AirspaceVolume" type="aixm:AirspaceVolumeType"/>
+	<complexType name="AirspaceVolumeType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMObjectType">
+				<sequence>
+					<group ref="aixm:AirspaceVolumePropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<choice>
+								<element ref="aixm:AbstractAirspaceVolumeExtension"/>
+							</choice>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="AirspaceVolumePropertyGroup">
+		<sequence>
+			<element name="upperLimit" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0"/>
+			<element name="upperLimitReference" type="aixm:CodeVerticalReferenceType" nillable="true" minOccurs="0"/>
+			<element name="lowerLimit" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0"/>
+			<element name="lowerLimitReference" type="aixm:CodeVerticalReferenceType" nillable="true" minOccurs="0"/>
+			<element name="horizontalProjection" type="aixm:SurfacePropertyType" nillable="true" minOccurs="0" maxOccurs="1"/>
+		</sequence>
+	</group>
+	<complexType name="AirspaceVolumePropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:AirspaceVolume"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="AbstractAirspaceVolumeExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<element name="Curve" type="aixm:CurveType" substitutionGroup="gml:Curve"/>
+	<complexType name="CurveType">
+		<complexContent>
+			<extension base="gml:CurveType">
+				<sequence>
+					<group ref="aixm:CurvePropertyGroup"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="CurvePropertyGroup">
+		<sequence>
+			<element name="horizontalAccuracy" type="aixm:ValDistanceType" nillable="true" minOccurs="0"/>
+		</sequence>
+	</group>
+	<complexType name="CurvePropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:Curve"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="ElevatedCurve" type="aixm:ElevatedCurveType" substitutionGroup="aixm:Curve"/>
+	<complexType name="ElevatedCurveType">
+		<complexContent>
+			<extension base="aixm:CurveType">
+				<sequence>
+					<group ref="aixm:ElevatedCurvePropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<choice>
+								<element ref="aixm:AbstractElevatedCurveExtension"/>
+							</choice>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="ElevatedCurvePropertyGroup">
+		<sequence>
+			<element name="elevation" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0"/>
+			<element name="verticalAccuracy" type="aixm:ValDistanceType" nillable="true" minOccurs="0"/>
+		</sequence>
+	</group>
+	<complexType name="ElevatedCurvePropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:ElevatedCurve"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="AbstractElevatedCurveExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<element name="ElevatedPoint" type="aixm:ElevatedPointType" substitutionGroup="aixm:Point"/>
+	<complexType name="ElevatedPointType">
+		<complexContent>
+			<extension base="aixm:PointType">
+				<sequence>
+					<group ref="aixm:ElevatedPointPropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<choice>
+								<element ref="aixm:AbstractElevatedPointExtension"/>
+							</choice>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="ElevatedPointPropertyGroup">
+		<sequence>
+			<element name="elevation" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0"/>
+			<element name="verticalAccuracy" type="aixm:ValDistanceType" nillable="true" minOccurs="0"/>
+		</sequence>
+	</group>
+	<complexType name="ElevatedPointPropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:ElevatedPoint"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="AbstractElevatedPointExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<element name="ElevatedSurface" type="aixm:ElevatedSurfaceType" substitutionGroup="aixm:Surface"/>
+	<complexType name="ElevatedSurfaceType">
+		<complexContent>
+			<extension base="aixm:SurfaceType">
+				<sequence>
+					<group ref="aixm:ElevatedSurfacePropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<choice>
+								<element ref="aixm:AbstractElevatedSurfaceExtension"/>
+							</choice>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="ElevatedSurfacePropertyGroup">
+		<sequence>
+			<element name="elevation" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0"/>
+			<element name="verticalAccuracy" type="aixm:ValDistanceType" nillable="true" minOccurs="0"/>
+		</sequence>
+	</group>
+	<complexType name="ElevatedSurfacePropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:ElevatedSurface"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="AbstractElevatedSurfaceExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<element name="Point" type="aixm:PointType" substitutionGroup="gml:Point"/>
+	<complexType name="PointType">
+		<complexContent>
+			<extension base="gml:PointType">
+				<sequence>
+					<group ref="aixm:PointPropertyGroup"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="PointPropertyGroup">
+		<sequence>
+			<element name="horizontalAccuracy" type="aixm:ValDistanceType" nillable="true" minOccurs="0"/>
+		</sequence>
+	</group>
+	<complexType name="PointPropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:Point"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="Surface" type="aixm:SurfaceType" substitutionGroup="gml:Surface"/>
+	<complexType name="SurfaceType">
+		<complexContent>
+			<extension base="gml:SurfaceType">
+				<sequence>
+					<group ref="aixm:SurfacePropertyGroup"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="SurfacePropertyGroup">
+		<sequence>
+			<element name="horizontalAccuracy" type="aixm:ValDistanceType" nillable="true" minOccurs="0"/>
+		</sequence>
+	</group>
+	<complexType name="SurfacePropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:Surface"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="UnitPropertyType">
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<element name="Unit" type="aixm:UnitType" substitutionGroup="aixm:AbstractAIXMFeature"/>
+	<complexType name="UnitType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMFeatureType">
+				<sequence>
+					<element name="timeSlice" type="aixm:UnitTimeSlicePropertyType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="UnitTimeSlicePropertyType">
+		<sequence>
+			<element ref="aixm:UnitTimeSlice"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="UnitTimeSlice" type="aixm:UnitTimeSliceType" substitutionGroup="gml:AbstractTimeSlice"/>
+	<complexType name="UnitTimeSliceType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMTimeSliceType">
+				<sequence>
+					<group ref="aixm:UnitPropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<sequence>
+								<element ref="aixm:AbstractUnitExtension"/>
+							</sequence>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="UnitPropertyGroup">
+		<sequence>
+			<element name="name" type="aixm:TextNameType" nillable="true" minOccurs="0"/>
+			<element name="type" type="aixm:CodeUnitType" nillable="true" minOccurs="0"/>
+			<element name="designator" type="aixm:CodeOrganisationDesignatorType" nillable="true" minOccurs="0"/>
+		</sequence>
+	</group>
+	<element name="AbstractUnitExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+</schema>

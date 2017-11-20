@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:saf="http://icao.int/saf/1.0" targetNamespace="http://icao.int/saf/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <annotation>
+      <documentation>References to WMO and ICAO Technical Regulations within this XML schema shall have
+         no formal status and are for information purposes only. Where there are differences
+         between the Technical Regulations and the schema, the Technical Regulations shall
+         take precedence. Technical Regulations may impose requirements that are not described
+         in this schema.
+      </documentation>
+      <documentation>Simplified features from the aeronautical domain, such as aerodrome, runway, unit,
+         and airspace.  These features are simplified representations of more complex aeronautical
+         features found in AICM/AIXM that are used for storage or transmission.    There are
+         two independent issues involved in referencing aeronautical features:  1.  Using AICM/AIXM
+         classes directly for these concepts would introduce a dependency on AICM/AIXM, which
+         is a package of significant size and complexity  2.  Machine-readable, managed definitions
+         for these concepts (such as the location, capabilities, and other information for
+         the 'HTKJ' aerodrome) do not exist in a unified and authoritative form.  This information
+         is managed independently, and sometimes inconsistently, by many organizations worldwide
+         The current version of this package is intended to address the needs for producers
+         of meteorological information to be able to distribute the basic characteristics (identification,
+         location, time, etc.) of their aeronautical information to consumers.  In many cases
+         data producers are the best authority for up-to-date aeronautical information.  Downstream
+         consumers may then use this information or ignore it.    These concepts are represented
+         in a way that is intended to be largely consistent with AICM/AIXM.
+      </documentation>
+   </annotation>
+   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+   <include schemaLocation="dataTypes.xsd"/>
+   <include schemaLocation="features.xsd"/>
+   <include schemaLocation="measures.xsd"/>
+</schema>

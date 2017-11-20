@@ -1,0 +1,56 @@
+
+====================================
+1.0 - September 2013
+====================================
+Nil
+
+====================================
+1.0 Release Candidate 2 - May 2013
+====================================
+* Amended Package "«ApplicationSchema» WMO METCE" to be re-named "METCE"
+* Changed targetNamespace for Package "«ApplicationSchema» METCE" to: http://def.wmo.int/metce/2013
+* Changed version for Package "«ApplicationSchema» METCE" to 1.0RC2
+* Change xsdDocument tagged value for Package "«Leaf» Observation and Measurement Types" to 
+    "observation-types.xsd"; general style change for file-names to be all lower-case
+- Removed Class "«enumeration» ExpectedIntensityChange" from Package "«Leaf» Qualifiers"; this now found 
+    within IWXXM Package "«Leaf» SIGMET" 
+- Removed Class "«enumeration» ForecastChangeIndicator" from Package "«Leaf» Qualifiers"; this now found 
+    within IWXXM Package "«Leaf» METAR/SPECI"
+- Removed the (now empty) Package "«Leaf» Qualifiers"
+- Removed Classes "«CodeList» MeteorologicalPhenomenon" and "«CodeList» AeronauticalSignificantWeatherPhenomenon" 
+    (and associated context diagram) from Package "«Leaf» Meteorological Phenomena"; in line with changes 
+    surrounding MetBasic (see Release Notes), such «CodeList» classes are anticipated to be provided within 
+    domain/industry specific «Application Schema» such as IWXXM which will directly reference the appropriate 
+    WMO code-table
+- Removed stereotype «Type» from Class "MeasurementContext" from Package "«Leaf» Procedure"; use of this 
+    stereotype is deprecated in favour of un-stereotyped Classes
+* Within Package "«Leaf» Procedure" amend target of Association "MeasurementContext" (role name "context") 
+    to connect directly to Class "MeasurementContext" enabling some unnecessary complexity to be removed from
+    the model (see below)
+- Remove Classes "AbstractMeasurementContext" and "CompositeMeasurementContent" from Package "«Leaf» Procedure"; 
+    the additional complexity introduced by these classes is unwarranted given that the Association Role 
+    "context" from Class "«FeatureType» Process" has cardinality [0..*] (e.g. multiple "contexts" can be 
+    specified directly without the need for composition)
+* Renamed Attribute "uom" (Class "MeasurementContext" from Package "«Leaf» Procedure") to "unitOfMeasure"; this 
+    attribute is type UnitOfMeasure (from ISO 19103 Basic-types) which itself includes the attribute "uom" - the 
+    resulting serialisation would appear odd
+* Amended (the renamed) Attribute "unitOfMeasure" from Class "MeasurementContext" to be optional (e.g. cardinality 
+    [0..1]) as one may not want to specify the unit of measurement in all cases
++ Added constraint to Class "MeasurementContext" from Package "«Leaf» Procedure" to the effect that: 
+    { if measuringInterval or resolutionScale or both are given then uom must also be provided } 
+* Amended documentation for Class "«Feature Type» Volcano" from Package "«Leaf» Meteorological Phenomena" 
+    indicating guidance regarding the source of names for Volcano / EruptingVolcano; "Global Volcanism Program" 
+    (http://www.volcano.si.edu/world/find_names.cfm)
+* Amended Attribute “documentationRef” from Class “«FeatureType» Process” (Package "«Leaf» Procedure") such that 
+    cardinality is [0..1]; the previous specification of Attribute "documentationRef" is overly strict as a data 
+    publisher may be choose to embed a “gml:description” element, a default element available to all GML objects, 
+    within the data to describe the procedure rather than referring to an online description (e.g. when defining 
+    procedures at a fine level of granularity such as a given sensor in a particular calibrated state)  
+* Amended as necessary values for taggedValue "sequenceNumber" to ensure correct ordering of properties in 
+    resulting XSD serialisation; paying particular attention to Associations
+* Various improvements in model documentation
+
+=======================================
+1.0 Release Candidate 1 - December 2012
+=======================================
+Initial model release.

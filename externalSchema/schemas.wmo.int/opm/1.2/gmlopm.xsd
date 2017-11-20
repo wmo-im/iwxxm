@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+        xmlns:gml="http://www.opengis.net/gml/3.2"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.opengis.net/gml/3.2"
+        elementFormDefault="qualified"
+        version="3.2.1.2">
+   <annotation>
+      <documentation>GML Subset schema for gml:AbstractGML,gml:AbstractGMLType,gml:CodeType,gml:AssociationAttributeGroup,gml:OwnershipAttributeGroup,gml:UnitOfMeasureType,gml:AbstractObject,gml:AreaType,gml:LengthType,gml:VolumeType,gml:AssociationRoleType,gml:ReferenceType, written by gmlSubset.xslt.</documentation>
+   </annotation>
+   <import namespace="http://www.w3.org/1999/xlink"
+	   schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<!-- ================================================= --><element name="AbstractGML"
+            type="gml:AbstractGMLType"
+            abstract="true"
+            substitutionGroup="gml:AbstractObject">
+		    <annotation>
+			      <documentation>The abstract element gml:AbstractGML is "any GML object having identity".   It acts as the head of an XML Schema substitution group, which may include any element which is a GML feature, or other object, with identity.  This is used as a variable in content models in GML core and application schemas.  It is effectively an abstract superclass for all GML objects.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="AbstractGMLType" abstract="true">
+		    <sequence>
+			      <group ref="gml:StandardObjectProperties"/>
+		    </sequence>
+		    <attribute ref="gml:id" use="required"/>
+	  </complexType>
+<!-- ================================================= --><group name="StandardObjectProperties">
+		    <sequence>
+			      <element ref="gml:metaDataProperty" minOccurs="0" maxOccurs="unbounded"/>
+			      <element ref="gml:description" minOccurs="0"/>
+			      <element ref="gml:descriptionReference" minOccurs="0"/>
+			      <element ref="gml:identifier" minOccurs="0"/>
+			      <element ref="gml:name" minOccurs="0" maxOccurs="unbounded"/>
+		    </sequence>
+	  </group>
+<!-- ================================================= --><element name="metaDataProperty" type="gml:MetaDataPropertyType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="MetaDataPropertyType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+		    <sequence minOccurs="0">
+			      <element ref="gml:AbstractMetaData"/>
+		    </sequence>
+		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+		    <attribute name="about" type="anyURI"/>
+	  </complexType>
+<!-- ================================================= --><element name="AbstractMetaData"
+            type="gml:AbstractMetaDataType"
+            abstract="true"
+            substitutionGroup="gml:AbstractObject">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="AbstractMetaDataType" abstract="true" mixed="true">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+		    <sequence/>
+		    <attribute ref="gml:id"/>
+	  </complexType>
+<!-- ================================================= --><attribute name="id" type="ID">
+		    <annotation>
+			      <documentation>The attribute gml:id supports provision of a handle for the XML element representing a GML Object. Its use is mandatory for all GML objects. It is of XML type ID, so is constrained to be unique in the XML document within which it occurs.</documentation>
+		    </annotation>
+	  </attribute>
+<!-- ================================================= --><element name="AbstractObject" abstract="true">
+		    <annotation>
+			      <documentation>This element has no type defined, and is therefore implicitly (according to the rules of W3C XML Schema) an XML Schema anyType. It is used as the head of an XML Schema substitution group which unifies complex content and certain simple content elements used for datatypes in GML, including the gml:AbstractGML substitution group.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><attributeGroup name="AssociationAttributeGroup">
+		    <annotation>
+			      <documentation>XLink components are the standard method to support hypertext referencing in XML. An XML Schema attribute group, gml:AssociationAttributeGroup, is provided to support the use of Xlinks as the method for indicating the value of a property by reference in a uniform manner in GML.</documentation>
+		    </annotation>
+		    <attributeGroup ref="xlink:simpleAttrs"/>
+		    <attribute name="nilReason" type="gml:NilReasonType"/>
+		    <attribute ref="gml:remoteSchema">
+			      <annotation>
+				        <appinfo>deprecated</appinfo>
+			      </annotation>
+		    </attribute>
+	  </attributeGroup>
+<!-- ================================================= --><xs:attribute xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 xmlns="http://www.w3.org/1999/xhtml"
+                 name="lang">
+      <xs:annotation>
+         <xs:documentation>
+            <div>
+     
+               <h3>lang (as an attribute name)</h3>
+               <p>
+       denotes an attribute whose value
+       is a language code for the natural language of the content of
+       any element; its value is inherited.  This name is reserved
+       by virtue of its definition in the XML specification.</p>
+     
+            </div>
+            <div>
+               <h4>Notes</h4>
+               <p>
+      Attempting to install the relevant ISO 2- and 3-letter
+      codes as the enumerated possible values is probably never
+      going to be a realistic possibility.  
+     </p>
+               <p>
+      See BCP 47 at <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">
+       http://www.rfc-editor.org/rfc/bcp/bcp47.txt</a>
+      and the IANA language subtag registry at
+      <a href="http://www.iana.org/assignments/language-subtag-registry">
+       http://www.iana.org/assignments/language-subtag-registry</a>
+      for further information.
+     </p>
+               <p>
+      The union allows for the 'un-declaration' of xml:lang with
+      the empty string.
+     </p>
+            </div>
+         </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+         <xs:union memberTypes="xs:language">
+            <xs:simpleType>    
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value=""/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:union>
+      </xs:simpleType>
+   </xs:attribute>
+<!-- ================================================= --><simpleType name="NilReasonType">
+		    <annotation>
+			      <documentation>gml:NilReasonType defines a content model that allows recording of an explanation for a void value or other exception.
+gml:NilReasonType is a union of the following enumerated values:
+-	inapplicable there is no value
+-	missing the correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist
+-	template the value will be available later
+-	unknown the correct value is not known to, and not computable by, the sender of this data. However, a correct value probably exists
+-	withheld the value is not divulged
+-	other:text other brief explanation, where text is a string of two or more characters with no included spaces
+and
+-	anyURI which should refer to a resource which describes the reason for the exception
+A particular community may choose to assign more detailed semantics to the standard values provided. Alternatively, the URI method enables a specific or more complete explanation for the absence of a value to be provided elsewhere and indicated by-reference in an instance document.
+gml:NilReasonType is used as a member of a union in a number of simple content types where it is necessary to permit a value from the NilReasonType union as an alternative to the primary type.</documentation>
+		    </annotation>
+		    <union memberTypes="gml:NilReasonEnumeration anyURI"/>
+	  </simpleType>
+<!-- ================================================= --><simpleType name="NilReasonEnumeration">
+		    <union>
+			      <simpleType>
+				        <restriction base="string">
+					          <enumeration value="inapplicable"/>
+					          <enumeration value="missing"/>
+					          <enumeration value="template"/>
+					          <enumeration value="unknown"/>
+					          <enumeration value="withheld"/>
+				        </restriction>
+			      </simpleType>
+			      <simpleType>
+				        <restriction base="string">
+					          <pattern value="other:\w{2,}"/>
+				        </restriction>
+			      </simpleType>
+		    </union>
+	  </simpleType>
+<!-- ================================================= -->
+<!-- ================================================= --><attribute name="remoteSchema" type="anyURI">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+	  </attribute>
+<!-- ================================================= --><element name="description" type="gml:StringOrRefType">
+		    <annotation>
+			      <documentation>The value of this property is a text description of the object. gml:description uses gml:StringOrRefType as its content model, so it may contain a simple text string content, or carry a reference to an external description. The use of gml:description to reference an external description has been deprecated and replaced by the gml:descriptionReference property.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="StringOrRefType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+		    <simpleContent>
+			      <extension base="string">
+				        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+			      </extension>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= -->
+<!-- ================================================= --><element name="descriptionReference" type="gml:ReferenceType">
+		    <annotation>
+			      <documentation>The value of this property is a remote text description of the object. The xlink:href attribute of the gml:descriptionReference property references the external description.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="ReferenceType">
+		    <annotation>
+			      <documentation>gml:ReferenceType is intended to be used in application schemas directly, if a property element shall use a "by-reference only" encoding.</documentation>
+		    </annotation>
+		    <sequence/>
+		    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+	  </complexType>
+<!-- ================================================= --><attributeGroup name="OwnershipAttributeGroup">
+		    <annotation>
+			      <documentation>Encoding a GML property inline vs. by-reference shall not imply anything about the "ownership" of the contained or referenced GML Object, i.e. the encoding style shall not imply any "deep-copy" or "deep-delete" semantics. To express ownership over the contained or referenced GML Object, the gml:OwnershipAttributeGroup attribute group may be added to object-valued property elements. If the attribute group is not part of the content model of such a property element, then the value may not be "owned".
+When the value of the owns attribute is "true", the existence of inline or referenced object(s) depends upon the existence of the parent object.</documentation>
+		    </annotation>
+		    <attribute name="owns" type="boolean" default="false"/>
+	  </attributeGroup>
+<!-- ================================================= --><element name="identifier" type="gml:CodeWithAuthorityType">
+		    <annotation>
+			      <documentation>Often, a special identifier is assigned to an object by the maintaining authority with the intention that it is used in references to the object For such cases, the codeSpace shall be provided. That identifier is usually unique either globally or within an application domain. gml:identifier is a pre-defined property for such identifiers.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="CodeWithAuthorityType">
+		    <annotation>
+			      <documentation>gml:CodeWithAuthorityType requires that the codeSpace attribute is provided in an instance.</documentation>
+		    </annotation>
+		    <simpleContent>
+			      <restriction base="gml:CodeType">
+				        <attribute name="codeSpace" type="anyURI" use="required"/>
+			      </restriction>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><complexType name="CodeType">
+		    <annotation>
+			      <documentation>gml:CodeType is a generalized type to be used for a term, keyword or name.
+It adds a XML attribute codeSpace to a term, where the value of the codeSpace attribute (if present) shall indicate a dictionary, thesaurus, classification scheme, authority, or pattern for the term.</documentation>
+		    </annotation>
+		    <simpleContent>
+			      <extension base="string">
+				        <attribute name="codeSpace" type="anyURI"/>
+			      </extension>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><element name="name" type="gml:CodeType">
+		    <annotation>
+			      <documentation>The gml:name property provides a label or identifier for the object, commonly a descriptive name. An object may have several names, typically assigned by different authorities. gml:name uses the gml:CodeType content model.  The authority for a name is indicated by the value of its (optional) codeSpace attribute.  The name may or may not be unique, as determined by the rules of the organization responsible for the codeSpace.  In common usage there will be one name per authority, so a processing application may select the name from its preferred codeSpace.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="UnitOfMeasureType">
+		    <sequence/>
+		    <attribute name="uom" type="gml:UomIdentifier" use="required"/>
+	  </complexType>
+<!-- ================================================= --><simpleType name="UomIdentifier">
+		    <annotation>
+			      <documentation>The simple type gml:UomIdentifer defines the syntax and value space of the unit of measure identifier.</documentation>
+		    </annotation>
+		    <union memberTypes="gml:UomSymbol gml:UomURI"/>
+	  </simpleType>
+<!-- ================================================= --><simpleType name="UomSymbol">
+		    <annotation>
+			      <documentation>This type specifies a character string of length at least one, and restricted such that it must not contain any of the following characters: ":" (colon), " " (space), (newline), (carriage return), (tab). This allows values corresponding to familiar abbreviations, such as "kg", "m/s", etc. 
+It is recommended that the symbol be an identifier for a unit of measure as specified in the "Unified Code of Units of Measure" (UCUM) (http://aurora.regenstrief.org/UCUM). This provides a set of symbols and a grammar for constructing identifiers for units of measure that are unique, and may be easily entered with a keyboard supporting the limited character set known as 7-bit ASCII. ISO 2955 formerly provided a specification with this scope, but was withdrawn in 2001. UCUM largely follows ISO 2955 with modifications to remove ambiguities and other problems.</documentation>
+		    </annotation>
+		    <restriction base="string">
+			      <pattern value="[^: \n\r\t]+"/>
+		    </restriction>
+	  </simpleType>
+<!-- ================================================= --><simpleType name="UomURI">
+		    <annotation>
+			      <documentation>This type specifies a URI, restricted such that it must start with one of the following sequences: "#", "./", "../", or a string of characters followed by a ":". These patterns ensure that the most common URI forms are supported, including absolute and relative URIs and URIs that are simple fragment identifiers, but prohibits certain forms of relative URI that could be mistaken for unit of measure symbol . 
+NOTE	It is possible to re-write such a relative URI to conform to the restriction (e.g. "./m/s").
+In an instance document, on elements of type gml:MeasureType the mandatory uom attribute shall carry a value corresponding to either 
+-	a conventional unit of measure symbol,
+-	a link to a definition of a unit of measure that does not have a conventional symbol, or when it is desired to indicate a precise or variant definition.</documentation>
+		    </annotation>
+		    <restriction base="anyURI">
+			      <pattern value="([a-zA-Z][a-zA-Z0-9\-\+\.]*:|\.\./|\./|#).*"/>
+		    </restriction>
+	  </simpleType>
+<!-- ================================================= --><complexType name="AreaType">
+		    <simpleContent>
+			      <extension base="gml:MeasureType"/>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><complexType name="MeasureType">
+		    <annotation>
+			      <documentation>gml:MeasureType supports recording an amount encoded as a value of XML Schema double, together with a units of measure indicated by an attribute uom, short for "units Of measure". The value of the uom attribute identifies a reference system for the amount, usually a ratio or interval scale.</documentation>
+		    </annotation>
+		    <simpleContent>
+			      <extension base="double">
+				        <attribute name="uom" type="gml:UomIdentifier" use="required"/>
+			      </extension>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= -->
+<!-- ================================================= --><complexType name="LengthType">
+		    <annotation>
+			      <documentation>This is a prototypical definition for a specific measure type defined as a vacuous extension (i.e. aliases) of gml:MeasureType. In this case, the content model supports the description of a length (or distance) quantity, with its units. The unit of measure referenced by uom shall be suitable for a length, such as metres or feet.</documentation>
+		    </annotation>
+		    <simpleContent>
+			      <extension base="gml:MeasureType"/>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><complexType name="VolumeType">
+		    <simpleContent>
+			      <extension base="gml:MeasureType"/>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><complexType name="AssociationRoleType">
+		    <sequence minOccurs="0">
+			      <any namespace="##any"/>
+		    </sequence>
+		    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+	  </complexType>
+</schema>

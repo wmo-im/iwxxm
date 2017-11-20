@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:opm="http://def.wmo.int/opm/2013" xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:metce="http://def.wmo.int/metce/2013" targetNamespace="http://def.wmo.int/metce/2013" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1">
+   <annotation>
+      <documentation>References to WMO and ICAO Technical Regulations within this XML schema shall have
+         no formal status and are for information purposes only. Where there are differences
+         between the Technical Regulations and the schema, the Technical Regulations shall
+         take precedence. Technical Regulations may impose requirements that are not described
+         in this schema.
+      </documentation>
+      <documentation>This Logical Data Model is intended to support the entire scope of WMO concerns: weather,
+         climate and water. To reflect this scope, the model is named 'Modele pour l'Echange
+         des informations sur le Temps, le Climat et l'Eau' (METCE). In English, it may also
+         be known as the ‘METeorological Community Exchange’ model.  METCE is intended to provide
+         conceptual definitions of meteorological phenomena, entities and concepts in order
+         to underpin semantic interoperability in the weather, climate and water domain.  The
+         «Application Schema» includes: (i) specialisations of OM_Observation, OM_ComplexObservation
+         and OM_DiscreteCoverageObservation classes (from ISO 19156); (ii) a concrete implementation
+         of OM_Process (from ISO 19156); (iii) a number of meteorological feature types schemes
+         thereof; and (iv) some miscellaneous items (e.g. ?enumerations? for specifying intensity
+         changes).  The 'METCE' «Application Schema» will typically be imported to provide
+         a baseline conceptual model framework upon which community-specific Application Schema
+         are based.
+      </documentation>
+   </annotation>
+   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+   <import namespace="http://www.opengis.net/om/2.0" schemaLocation="http://schemas.opengis.net/om/2.0/observation.xsd"/>
+   <import namespace="http://www.opengis.net/samplingSpatial/2.0" schemaLocation="http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"/>
+   <import namespace="http://def.wmo.int/opm/2013" schemaLocation="http://schemas.wmo.int/opm/1.1/opm.xsd"/>
+   <include schemaLocation="procedure.xsd"/>
+   <!--observation-types.xsd removed-->
+   <include schemaLocation="phenomena.xsd"/>
+</schema>

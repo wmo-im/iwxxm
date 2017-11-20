@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:saf="http://icao.int/saf/1.0" targetNamespace="http://icao.int/saf/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <annotation>
+      <documentation>References to WMO and ICAO Technical Regulations within this XML schema shall have
+         no formal status and are for information purposes only. Where there are differences
+         between the Technical Regulations and the schema, the Technical Regulations shall
+         take precedence. Technical Regulations may impose requirements that are not described
+         in this schema.
+      </documentation>
+      <documentation>Package with Nillable Measure and NilReason</documentation>
+   </annotation>
+   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+   <include schemaLocation="saf.xsd"/>
+   <element name="DistanceWithNilReason" type="saf:DistanceWithNilReasonType">
+      <annotation>
+         <documentation>A nillable Distance quantity.  Unlike the base Distance measure, references to this
+            type may be nil and may include a nilReason
+         </documentation>
+      </annotation>
+   </element>
+   <complexType name="DistanceWithNilReasonType">
+      <simpleContent>
+         <extension base="gml:LengthType">
+            <attribute name="nilReason" type="gml:NilReasonType"/>
+         </extension>
+      </simpleContent>
+   </complexType>
+   <element name="LengthWithNilReason" type="saf:LengthWithNilReasonType">
+      <annotation>
+         <documentation>A nillable Length quantity.  Unlike the base Length measure, references to this type
+            may be nil and include a nilReason
+         </documentation>
+      </annotation>
+   </element>
+   <complexType name="LengthWithNilReasonType">
+      <simpleContent>
+         <extension base="gml:LengthType">
+            <attribute name="nilReason" type="gml:NilReasonType"/>
+         </extension>
+      </simpleContent>
+   </complexType>
+</schema>

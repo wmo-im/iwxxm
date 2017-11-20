@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--====================================================================-->
+  <!--AIXM 5.1 (weather profile)-->
+  <!--This AIXM profile is developed for the weather domain, and -->
+  <!--includes only select portions of AIXM 5.1 needed to represent: --> 
+  <!--  AirportHeliport, Airspace, AirspaceVolume, Runway, RunwayDirection, and Unit -->
+  <!--www.aixm.aero-->
+  <!--Originally Released:  February 2010-->
+  <!--Weather Profile Released:  January 2015-->
+<!--====================================================================-->
+<!--
+		Copyright (c) 2015, EUROCONTROL & FAA
+		=====================================
+		All rights reserved.
+		Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+			* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+			* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+			* Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+		THIS SPECIFICATION IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+		==========================================
+		Editorial note: this license is an instance of the BSD license template as
+		provided by the Open Source Initiative:
+		http://www.opensource.org/licenses/bsd-license.php
+	-->
+<!-- Component: AIXM: Features -->
+<schema xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.aixm.aero/schema/5.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="5.1">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="./ISO_19136_Schemas/gml.xsd"/>
+	<import namespace="http://www.w3.org/1999/xlink" schemaLocation="./xlink/xlinks.xsd"/>
+	<include schemaLocation="./AIXM_DataTypes.xsd"/>
+	<include schemaLocation="./AIXM_AbstractGML_ObjectTypes.xsd"/>
+	<annotation>
+		<appinfo>
+			<gml:gmlProfileSchema>http://www.aixm.aero/schema/5.0/profile/gml4aixm.xsd</gml:gmlProfileSchema>
+		</appinfo>
+	</annotation>
+	<annotation>
+		<appinfo source="www.aixm.aero/schema/5.0">AIXM_Features.xsd</appinfo>
+	</annotation>
+	<annotation>
+		<documentation>Package containing the definition of the core AIXM Features and Objects.
+
+- The AIXM Features describe real world entities and are fundamental in AIXM. AIXM features can be concrete and tangible, or abstract and conceptual and can change in time. Features are represented as classes with a stereotype {feature}.
+
+- The AIXM Objects are abstractions of real world entities or, more frequently, properties of these entities, which do not exist outside of a feature. Objects are represented as classes with a stereotype {object}.</documentation>
+	</annotation>
+	<complexType name="RunwayDirectionPropertyType">
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<element name="RunwayDirection" type="aixm:RunwayDirectionType" substitutionGroup="aixm:AbstractAIXMFeature">
+		<annotation>
+			<appinfo>
+				<gml:description>One of the two landing and take-off directions of a runway for which attributes like TORA, TODA, LDA, etc. may be defined.</gml:description>
+			</appinfo>
+		</annotation>
+	</element>
+	<complexType name="RunwayDirectionType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMFeatureType">
+				<sequence>
+					<element name="timeSlice" type="aixm:RunwayDirectionTimeSlicePropertyType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="RunwayDirectionTimeSlicePropertyType">
+		<sequence>
+			<element ref="aixm:RunwayDirectionTimeSlice"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="RunwayDirectionTimeSlice" type="aixm:RunwayDirectionTimeSliceType" substitutionGroup="gml:AbstractTimeSlice"/>
+	<complexType name="RunwayDirectionTimeSliceType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMTimeSliceType">
+				<sequence>
+					<group ref="aixm:RunwayDirectionPropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<sequence>
+								<element ref="aixm:AbstractRunwayDirectionExtension"/>
+							</sequence>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="RunwayDirectionPropertyGroup">
+		<sequence>
+			<element name="designator" type="aixm:TextDesignatorType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The full textual designator of the landing and take-off direction.
+Examples: 27, 35L, 01R.
+</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="trueBearing" type="aixm:ValBearingType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The measured angle between the runway direction and True North at a given position. Note : The True North is the north point at which the meridian lines meet.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+		  <element name="magneticBearing" type="aixm:ValBearingType" nillable="true" minOccurs="0">
+		    <annotation>
+		      <appinfo>
+		        <gml:description>The measured angle between the runway direction and Magnetic North at a given position.</gml:description>
+		      </appinfo>
+		    </annotation>
+		  </element>
+			<element name="usedRunway" type="aixm:RunwayPropertyType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The runway used by the RunwayDirection.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+		</sequence>
+	</group>
+	<element name="AbstractRunwayDirectionExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<complexType name="RunwayPropertyType">
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<element name="Runway" type="aixm:RunwayType" substitutionGroup="aixm:AbstractAIXMFeature">
+		<annotation>
+			<appinfo>
+				<gml:description>A defined rectangular area on a land aerodrome/heliport prepared for the landing and take-off of aircraft.
+Note: this includes the concept of Final Approach and Take-Off Area (FATO) for helicopters.</gml:description>
+			</appinfo>
+		</annotation>
+	</element>
+	<complexType name="RunwayType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMFeatureType">
+				<sequence>
+					<element name="timeSlice" type="aixm:RunwayTimeSlicePropertyType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="RunwayTimeSlicePropertyType">
+		<sequence>
+			<element ref="aixm:RunwayTimeSlice"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="RunwayTimeSlice" type="aixm:RunwayTimeSliceType" substitutionGroup="gml:AbstractTimeSlice"/>
+	<complexType name="RunwayTimeSliceType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMTimeSliceType">
+				<sequence>
+					<group ref="aixm:RunwayPropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<sequence>
+								<element ref="aixm:AbstractRunwayExtension"/>
+							</sequence>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="RunwayPropertyGroup">
+		<sequence>
+			<element name="designator" type="aixm:TextDesignatorType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The full textual designator of the runway, used to uniquely identify it at an aerodrome/heliport which has more than one.
+E.g. 09/27, 02R/20L, RWY 1.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+		  <element name="type" type="aixm:CodeRunwayType" nillable="true" minOccurs="0">
+		    <annotation>
+		      <appinfo>
+		        <gml:description>The type can be either runway for airplanes or  final approach and take off area (FATO) for helicopters.</gml:description>
+		      </appinfo>
+		    </annotation>
+		  </element>
+			<element name="associatedAirportHeliport" type="aixm:AirportHeliportPropertyType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The Airport the Runway is associated with.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+		</sequence>
+	</group>
+	<element name="AbstractRunwayExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+  <complexType name="AirportHeliportPropertyType">
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+  </complexType>
+  <element name="AirportHeliport" type="aixm:AirportHeliportType" substitutionGroup="aixm:AbstractAIXMFeature">
+    <annotation>
+      <appinfo>
+        <gml:description>A defined area on land or water (including any buildings, installations and equipment) intended to be used either wholly or in part for the arrival, departure and surface movement of aircraft/helicopters.
+        </gml:description>
+      </appinfo>
+    </annotation>
+  </element>
+  <complexType name="AirportHeliportType">
+    <complexContent>
+      <extension base="aixm:AbstractAIXMFeatureType">
+        <sequence>
+          <element name="timeSlice" type="aixm:AirportHeliportTimeSlicePropertyType" maxOccurs="unbounded"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AirportHeliportTimeSlicePropertyType">
+    <sequence>
+      <element ref="aixm:AirportHeliportTimeSlice"/>
+    </sequence>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="AirportHeliportTimeSlice" type="aixm:AirportHeliportTimeSliceType" substitutionGroup="gml:AbstractTimeSlice"/>
+  <complexType name="AirportHeliportTimeSliceType">
+    <complexContent>
+      <extension base="aixm:AbstractAIXMTimeSliceType">
+        <sequence>
+          <group ref="aixm:AirportHeliportPropertyGroup"/>
+          <element name="extension" minOccurs="0" maxOccurs="unbounded">
+            <complexType>
+              <sequence>
+                <element ref="aixm:AbstractAirportHeliportExtension"/>
+              </sequence>
+              <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+            </complexType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <group name="AirportHeliportPropertyGroup">
+    <sequence>
+      <element name="designator" type="aixm:CodeAirportHeliportDesignatorType" nillable="true" minOccurs="0">
+        <annotation>
+          <appinfo>
+            <gml:description>A coded designator for an Aerodrome/Heliport.
+              The rules according to which this identifier should be formed are as follows:
+              1. If the AD/HP has an ICAO four letter location indicator, then this one will become the CODE_ID for the Aerodrome/Heliport;
+              2. If the AD/HP does not have an ICAO four letter location indicator, but it has an IATA three letter code,  then this one will become the CODE_ID for the Aerodrome/Heliport;
+              3. If the AD/HP has neither an ICAO four letter location indicator nor an IATA three letter code, then an artificial generated code will be used. This will contain a group of letters and a number. The group of letters could be the 2 letter code of the State being responsible for the Aerodrome/Heliport and the number could be an integer between 0001 and 9999.</gml:description>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="name" type="aixm:TextNameType" nillable="true" minOccurs="0">
+        <annotation>
+          <appinfo>
+            <gml:description>The primary official name of an aerodrome as designated by an appropriate authority.</gml:description>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="locationIndicatorICAO" type="aixm:CodeICAOType" nillable="true" minOccurs="0">
+        <annotation>
+          <appinfo>
+            <gml:description>The four letter ICAO location indicator of the aerodrome/heliport, as listed in ICAO DOC 7910.
+            </gml:description>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="designatorIATA" type="aixm:CodeIATAType" nillable="true" minOccurs="0">
+        <annotation>
+          <appinfo>
+            <gml:description>The identifier that is assigned to a location in accordance with rules (resolution 767) governed by the International Air Transport Association (IATA).
+            </gml:description>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="fieldElevation" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0">
+        <annotation>
+          <appinfo>
+            <gml:description>The vertical distance above Mean Sea Level (MSL) of the highest point of the landing area.</gml:description>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="ARP" type="aixm:ElevatedPointPropertyType" nillable="true" minOccurs="0">
+        <annotation>
+          <appinfo>
+            <gml:description>Airport reference point.</gml:description>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </group>
+  <element name="AbstractAirportHeliportExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+  <complexType name="AirspacePropertyType">
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<element name="Airspace" type="aixm:AirspaceType" substitutionGroup="aixm:AbstractAIXMFeature">
+		<annotation>
+			<appinfo>
+				<gml:description>A defined three dimensional region of space relevant to air traffic.</gml:description>
+			</appinfo>
+		</annotation>
+	</element>
+	<complexType name="AirspaceType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMFeatureType">
+				<sequence>
+					<element name="timeSlice" type="aixm:AirspaceTimeSlicePropertyType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AirspaceTimeSlicePropertyType">
+		<sequence>
+			<element ref="aixm:AirspaceTimeSlice"/>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AirspaceTimeSlice" type="aixm:AirspaceTimeSliceType" substitutionGroup="gml:AbstractTimeSlice"/>
+	<complexType name="AirspaceTimeSliceType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMTimeSliceType">
+				<sequence>
+					<group ref="aixm:AirspacePropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<sequence>
+								<element ref="aixm:AbstractAirspaceExtension"/>
+							</sequence>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="AirspacePropertyGroup">
+		<sequence>
+			<element name="type" type="aixm:CodeAirspaceType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>A code indicating the general structure or characteristics of a particular airspace.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="designator" type="aixm:CodeAirspaceDesignatorType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>A published sequence of characters allowing the identification of the airspace.
+Description:
+Typical examples are the ID of the Danger, Prohibited, Temporary segregated Areas, etc.
+
+</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="name" type="aixm:TextNameType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The name given to an airspace by a responsible authority.
+Description:
+It should be written as published, with no significance to upper or lower case letters.
+</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="designatorICAO" type="aixm:CodeYesNoType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>A code indicating the Airspace designator is recorded in ICAO Doc. 7910.
+</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="geometryComponent" type="aixm:AirspaceGeometryComponentPropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<appinfo>
+						<gml:description>An portion of airspace that contributes to the defintion of an Airspace geometry.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+		</sequence>
+	</group>
+	<element name="AbstractAirspaceExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<complexType name="AirspaceGeometryComponentPropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:AirspaceGeometryComponent"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="AirspaceGeometryComponent" type="aixm:AirspaceGeometryComponentType">
+		<annotation>
+			<appinfo>
+				<gml:description>The role of the component in the airspace geometry. If the geometry of an airspace is composed of single volume, then the attributes of this association class may be left empty.</gml:description>
+			</appinfo>
+		</annotation>
+	</element>
+	<complexType name="AirspaceGeometryComponentType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMObjectType">
+				<sequence>
+					<group ref="aixm:AirspaceGeometryComponentPropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<sequence>
+								<element ref="aixm:AbstractAirspaceGeometryComponentExtension"/>
+							</sequence>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="AirspaceGeometryComponentPropertyGroup">
+		<sequence>
+			<element name="theAirspaceVolume" type="aixm:AirspaceVolumePropertyType" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>An portion of airspace that contributes to the defintion of an Airspace geometry.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+		</sequence>
+	</group>
+	<element name="AbstractAirspaceGeometryComponentExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<complexType name="AirspaceVolumePropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:AirspaceVolume"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="AirspaceVolume" type="aixm:AirspaceVolumeType">
+		<annotation>
+			<appinfo>
+				<gml:description>A defined volume in the air, described as horizontal projection with vertical limits.</gml:description>
+			</appinfo>
+		</annotation>
+	</element>
+	<complexType name="AirspaceVolumeType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMObjectType">
+				<sequence>
+					<group ref="aixm:AirspaceVolumePropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<sequence>
+								<element ref="aixm:AbstractAirspaceVolumeExtension"/>
+							</sequence>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="AirspaceVolumePropertyGroup">
+		<sequence>
+			<element name="upperLimit" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The vertical position of the airspace ceiling.
+</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="upperLimitReference" type="aixm:CodeVerticalReferenceType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The reference surface used for the value of the upper limit. For example, Mean Sea Level, Ground, standard pressure,  etc..
+</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="lowerLimit" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The vertical position of the airspace floor.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="lowerLimitReference" type="aixm:CodeVerticalReferenceType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The reference surface used for the value of the lower limit. For example, Mean Sea Level, Ground, standard pressure,  etc..</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="horizontalProjection" type="aixm:SurfacePropertyType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The surface defining the horizontal shape of the AirspaceVolume.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+		</sequence>
+	</group>
+	<element name="AbstractAirspaceVolumeExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+  <complexType name="UnitPropertyType">
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+  </complexType>
+  <element name="Unit" type="aixm:UnitType" substitutionGroup="aixm:AbstractAIXMFeature">
+    <annotation>
+      <appinfo>
+        <gml:description>A generic term meaning variously all types of 'units' providing all types of services. This includes particularly Air Traffic Management (ATM) Units but also units which are not express verbs included in ATM such as SAR, MET, COM etc.</gml:description>
+      </appinfo>
+    </annotation>
+  </element>
+  <complexType name="UnitType">
+    <complexContent>
+      <extension base="aixm:AbstractAIXMFeatureType">
+        <sequence>
+          <element name="timeSlice" type="aixm:UnitTimeSlicePropertyType" maxOccurs="unbounded"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="UnitTimeSlicePropertyType">
+    <sequence>
+      <element ref="aixm:UnitTimeSlice"/>
+    </sequence>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="UnitTimeSlice" type="aixm:UnitTimeSliceType" substitutionGroup="gml:AbstractTimeSlice"/>
+  <complexType name="UnitTimeSliceType">
+    <complexContent>
+      <extension base="aixm:AbstractAIXMTimeSliceType">
+        <sequence>
+          <group ref="aixm:UnitPropertyGroup"/>
+          <element name="extension" minOccurs="0" maxOccurs="unbounded">
+            <complexType>
+              <sequence>
+                <element ref="aixm:AbstractUnitExtension"/>
+              </sequence>
+              <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+            </complexType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <group name="UnitPropertyGroup">
+    <sequence>
+      <element name="name" type="aixm:TextNameType" nillable="true" minOccurs="0">
+        <annotation>
+          <appinfo>
+            <gml:description>The full textual name of a unit. This name must be established according to the rules specified by ICAO, viz.: in the official language of the country, transposed into the Latin Alphabet where necessary.</gml:description>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="type" type="aixm:CodeUnitType" nillable="true" minOccurs="0">
+        <annotation>
+          <appinfo>
+            <gml:description>A type by which the Unit is recognised, usually related to the standard type of services provided by it (e.g. area control centre, advisory centre, aeronautical information services office).
+            </gml:description>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="designator" type="aixm:CodeOrganisationDesignatorType" nillable="true" minOccurs="0">
+        <annotation>
+          <appinfo>
+            <gml:description>A coded designator associated with the Unit. For example, the ICAO Location Indicator of an ACC, as listed in DOC 7910.
+            </gml:description>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </group>
+  <element name="AbstractUnitExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>	
+	<complexType name="ElevatedPointPropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:ElevatedPoint"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="ElevatedPoint" type="aixm:ElevatedPointType" substitutionGroup="aixm:Point">
+		<annotation>
+			<appinfo>
+				<gml:description>An AIXM Point derived from GM_Point that includes properties for describing a point with elevation and vertical extent.  Used in obstacles, navaids, etc.</gml:description>
+			</appinfo>
+		</annotation>
+	</element>
+	<complexType name="ElevatedPointType">
+		<complexContent>
+			<extension base="aixm:PointType">
+				<sequence>
+					<group ref="aixm:ElevatedPointPropertyGroup"/>
+					<element name="extension" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<choice>
+								<element ref="aixm:AbstractElevatedPointExtension"/>
+							</choice>
+							<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="ElevatedPointPropertyGroup">
+		<sequence>
+			<element name="elevation" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The vertical distance of the point measured from Mean Sea Level (MSL).</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="geoidUndulation" type="aixm:ValDistanceSignedType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The distance of the geoid above (positive) or below (negative) the mathematical reference ellipsoid at the location of the point.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="verticalDatum" type="aixm:CodeVerticalDatumType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The set of reference points or a mathematical model of the Earth's surface (a datum) against which vertical position measurements are made as basis for measuring elevations.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="verticalAccuracy" type="aixm:ValDistanceType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The difference between the recorded elevation of a feature and its true elevation referenced to the same vertical datum expressed as a linear error at 95 percent probability.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+		</sequence>
+	</group>
+	<element name="AbstractElevatedPointExtension" type="aixm:AbstractExtensionType" abstract="true" substitutionGroup="aixm:AbstractExtension"/>
+	<complexType name="PointPropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:Point"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="Point" type="aixm:PointType" substitutionGroup="gml:Point">
+		<annotation>
+			<appinfo>
+				<gml:description>AIXM Point containing horizontal accuracy data. In AIXM horizontal accuracy is considered a property of the geometry.</gml:description>
+			</appinfo>
+		</annotation>
+	</element>
+	<complexType name="PointType">
+		<complexContent>
+			<extension base="gml:PointType">
+				<sequence>
+					<group ref="aixm:PointPropertyGroup"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="PointPropertyGroup">
+		<sequence>
+			<element name="horizontalAccuracy" type="aixm:ValDistanceType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The difference between the recorded horizontal coordinates of a feature and its true position referenced to the same geodetic datum expressed as a circular error at 95 percent probability.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+		</sequence>
+	</group>
+	<complexType name="SurfacePropertyType">
+		<complexContent>
+			<extension base="aixm:AbstractAIXMPropertyType">
+				<sequence>
+					<element ref="aixm:Surface"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="Surface" type="aixm:SurfaceType" substitutionGroup="gml:Surface">
+		<annotation>
+			<appinfo>
+				<gml:description>An AIXM surface derived from GM_Surface and extended to include Horizontal Accuracy Properties</gml:description>
+			</appinfo>
+		</annotation>
+	</element>
+	<complexType name="SurfaceType">
+		<complexContent>
+			<extension base="gml:SurfaceType">
+				<sequence>
+					<group ref="aixm:SurfacePropertyGroup"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<group name="SurfacePropertyGroup">
+		<sequence>
+			<element name="horizontalAccuracy" type="aixm:ValDistanceType" nillable="true" minOccurs="0">
+				<annotation>
+					<appinfo>
+						<gml:description>The difference between the recorded horizontal coordinates of a feature and its true position referenced to the same geodetic datum expressed as a circular error at 95 percent probability.</gml:description>
+					</appinfo>
+				</annotation>
+			</element>
+		</sequence>
+	</group>
+</schema>

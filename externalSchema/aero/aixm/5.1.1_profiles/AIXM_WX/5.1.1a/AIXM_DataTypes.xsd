@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--====================================================================-->
+<!--AIXM 5.1.1 (weather profile v5.1.1a)-->
+<!--This AIXM profile is developed for the weather domain, and -->
+<!--includes only select portions of AIXM 5.1.1 needed to represent: -->
+<!--  AirportHeliport, Airspace, AirspaceVolume, Runway, RunwayDirection, and Unit -->
+<!--www.aixm.aero-->
+<!--Originally Released:  April 2016-->
+<!--Weather Profile Released:  June 2016-->
+<!--====================================================================-->
+<!--
+		Copyright (c) 2016, EUROCONTROL & FAA
+		=====================================
+		All rights reserved.
+		Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+			* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+			* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+			* Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+		THIS SPECIFICATION IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+		==========================================
+		Editorial note: this license is an instance of the BSD license template as
+		provided by the Open Source Initiative:
+		http://www.opensource.org/licenses/bsd-license.php
+	-->
+<!-- Component: AIXM: Data Types -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.aixm.aero/schema/5.1.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="5.1.1">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<annotation>
+		<appinfo>
+			<gml:gmlProfileSchema>http://external.schemas.opengis.net/gmlAIXMProfile/1.1/gml321forAIXM.xsd</gml:gmlProfileSchema>
+		</appinfo>
+	</annotation>
+	<simpleType name="AlphaType">
+		<restriction base="string">
+			<pattern value="[A-Z]*"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="AlphanumericType">
+		<restriction base="string">
+			<pattern value="([A-Z]|\d)*"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="Character1Type">
+		<restriction base="string">
+			<pattern value="([A-Z]|[0-9])+([ \+\-/]*([A-Z]|[0-9])+)*"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="Character3Type">
+		<restriction base="string">
+			<pattern value="([A-Z]|[0-9]|[, !&quot;&amp;#$%'\(\)\*\+\-\./:;&lt;=>\?@\[\\\]\^_\|\{\}])*"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="CodeAirportHeliportBaseType">
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="AD"/>
+					<enumeration value="AH"/>
+					<enumeration value="HP"/>
+					<enumeration value="LS"/>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<simpleType name="CodeAirportHeliportDesignatorBaseType">
+		<restriction base="aixm:AlphanumericType">
+			<maxLength value="6"/>
+			<minLength value="3"/>
+		</restriction>
+	</simpleType>
+	<complexType name="CodeAirportHeliportDesignatorType">
+		<simpleContent>
+			<extension base="aixm:CodeAirportHeliportDesignatorBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="CodeAirportHeliportType">
+		<simpleContent>
+			<extension base="aixm:CodeAirportHeliportBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="CodeAirspaceBaseType">
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="NAS"/>
+					<enumeration value="FIR"/>
+					<enumeration value="FIR_P"/>
+					<enumeration value="UIR"/>
+					<enumeration value="UIR_P"/>
+					<enumeration value="CTA"/>
+					<enumeration value="CTA_P"/>
+					<enumeration value="OCA_P"/>
+					<enumeration value="OCA"/>
+					<enumeration value="UTA"/>
+					<enumeration value="UTA_P"/>
+					<enumeration value="TMA"/>
+					<enumeration value="TMA_P"/>
+					<enumeration value="CTR"/>
+					<enumeration value="CTR_P"/>
+					<enumeration value="OTA"/>
+					<enumeration value="SECTOR"/>
+					<enumeration value="SECTOR_C"/>
+					<enumeration value="TSA"/>
+					<enumeration value="CBA"/>
+					<enumeration value="RCA"/>
+					<enumeration value="RAS"/>
+					<enumeration value="AWY"/>
+					<enumeration value="MTR"/>
+					<enumeration value="P"/>
+					<enumeration value="R"/>
+					<enumeration value="D"/>
+					<enumeration value="ADIZ"/>
+					<enumeration value="NO_FIR"/>
+					<enumeration value="PART"/>
+					<enumeration value="CLASS"/>
+					<enumeration value="POLITICAL"/>
+					<enumeration value="D_OTHER"/>
+					<enumeration value="TRA"/>
+					<enumeration value="A"/>
+					<enumeration value="W"/>
+					<enumeration value="PROTECT"/>
+					<enumeration value="AMA"/>
+					<enumeration value="ASR"/>
+					<enumeration value="ADV"/>
+					<enumeration value="UADV"/>
+					<enumeration value="ATZ"/>
+					<enumeration value="ATZ_P"/>
+					<enumeration value="HTZ"/>
+					<enumeration value="NAS_P"/>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<simpleType name="CodeAirspaceDesignatorBaseType">
+		<restriction base="aixm:Character3Type">
+			<maxLength value="10"/>
+			<minLength value="1"/>
+		</restriction>
+	</simpleType>
+	<complexType name="CodeAirspaceDesignatorType">
+		<simpleContent>
+			<extension base="aixm:CodeAirspaceDesignatorBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="CodeAirspaceType">
+		<simpleContent>
+			<extension base="aixm:CodeAirspaceBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="CodeIATABaseType">
+		<restriction base="aixm:AlphaType">
+			<maxLength value="3"/>
+			<minLength value="3"/>
+		</restriction>
+	</simpleType>
+	<complexType name="CodeIATAType">
+		<simpleContent>
+			<extension base="aixm:CodeIATABaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="CodeICAOBaseType">
+		<restriction base="aixm:AlphaType">
+			<maxLength value="4"/>
+			<minLength value="4"/>
+		</restriction>
+	</simpleType>
+	<complexType name="CodeICAOType">
+		<simpleContent>
+			<extension base="aixm:CodeICAOBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="CodeOrganisationDesignatorBaseType">
+		<restriction base="aixm:Character1Type">
+			<maxLength value="12"/>
+			<minLength value="1"/>
+		</restriction>
+	</simpleType>
+	<complexType name="CodeOrganisationDesignatorType">
+		<simpleContent>
+			<extension base="aixm:CodeOrganisationDesignatorBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="CodeRunwayBaseType">
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="RWY"/>
+					<enumeration value="FATO"/>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<complexType name="CodeRunwayType">
+		<simpleContent>
+			<extension base="aixm:CodeRunwayBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="CodeUnitBaseType">
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="ACC"/>
+					<enumeration value="ADSU"/>
+					<enumeration value="ADVC"/>
+					<enumeration value="ALPS"/>
+					<enumeration value="AOF"/>
+					<enumeration value="APP"/>
+					<enumeration value="APP_ARR"/>
+					<enumeration value="APP_DEP"/>
+					<enumeration value="ARO"/>
+					<enumeration value="ATCC"/>
+					<enumeration value="ATFMU"/>
+					<enumeration value="ATMU"/>
+					<enumeration value="ATSU"/>
+					<enumeration value="BOF"/>
+					<enumeration value="BS"/>
+					<enumeration value="COM"/>
+					<enumeration value="FCST"/>
+					<enumeration value="FIC"/>
+					<enumeration value="GCA"/>
+					<enumeration value="MET"/>
+					<enumeration value="MWO"/>
+					<enumeration value="NOF"/>
+					<enumeration value="OAC"/>
+					<enumeration value="PAR"/>
+					<enumeration value="RAD"/>
+					<enumeration value="RAFC"/>
+					<enumeration value="RCC"/>
+					<enumeration value="RSC"/>
+					<enumeration value="SAR"/>
+					<enumeration value="SMC"/>
+					<enumeration value="SMR"/>
+					<enumeration value="SRA"/>
+					<enumeration value="SSR"/>
+					<enumeration value="TAR"/>
+					<enumeration value="TWR"/>
+					<enumeration value="UAC"/>
+					<enumeration value="UDF"/>
+					<enumeration value="UIC"/>
+					<enumeration value="VDF"/>
+					<enumeration value="WAFC"/>
+					<enumeration value="ARTCC"/>
+					<enumeration value="FSS"/>
+					<enumeration value="TRACON"/>
+					<enumeration value="MIL"/>
+					<enumeration value="MILOPS"/>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<complexType name="CodeUnitType">
+		<simpleContent>
+			<extension base="aixm:CodeUnitBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="CodeVerticalReferenceBaseType">
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="SFC"/>
+					<enumeration value="MSL"/>
+					<enumeration value="W84"/>
+					<enumeration value="STD"/>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<complexType name="CodeVerticalReferenceType">
+		<simpleContent>
+			<extension base="aixm:CodeVerticalReferenceBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="CodeYesNoBaseType">
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="YES"/>
+					<enumeration value="NO"/>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<complexType name="CodeYesNoType">
+		<simpleContent>
+			<extension base="aixm:CodeYesNoBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="TextDesignatorBaseType">
+		<restriction base="aixm:Character3Type">
+			<maxLength value="16"/>
+			<minLength value="1"/>
+		</restriction>
+	</simpleType>
+	<complexType name="TextDesignatorType">
+		<simpleContent>
+			<extension base="aixm:TextDesignatorBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="TextNameBaseType">
+		<restriction base="aixm:Character3Type">
+			<maxLength value="60"/>
+			<minLength value="1"/>
+		</restriction>
+	</simpleType>
+	<complexType name="TextNameType">
+		<simpleContent>
+			<extension base="aixm:TextNameBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="UomDistanceType">
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="NM"/>
+					<enumeration value="KM"/>
+					<enumeration value="M"/>
+					<enumeration value="FT"/>
+					<enumeration value="MI"/>
+					<enumeration value="CM"/>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<simpleType name="UomDistanceVerticalType">
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="FT"/>
+					<enumeration value="M"/>
+					<enumeration value="FL"/>
+					<enumeration value="SM"/>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<simpleType name="ValBearingBaseType">
+		<restriction base="decimal">
+			<maxInclusive value="360"/>
+			<minInclusive value="000"/>
+		</restriction>
+	</simpleType>
+	<complexType name="ValBearingType">
+		<simpleContent>
+			<extension base="aixm:ValBearingBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="ValDistanceBaseType">
+		<restriction base="decimal">
+			<minInclusive value="0"/>
+		</restriction>
+	</simpleType>
+	<complexType name="ValDistanceType">
+		<simpleContent>
+			<extension base="aixm:ValDistanceBaseType">
+				<attribute name="uom" type="aixm:UomDistanceType"/>
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="ValDistanceVerticalBaseType">
+		<restriction base="string">
+			<pattern value="((\+|\-){0,1}[0-9]{1,8}(\.[0-9]{1,4}){0,1})|UNL|GND|FLOOR|CEILING"/>
+		</restriction>
+	</simpleType>
+	<complexType name="ValDistanceVerticalType">
+		<simpleContent>
+			<extension base="aixm:ValDistanceVerticalBaseType">
+				<attribute name="uom" type="aixm:UomDistanceVerticalType"/>
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+</schema>

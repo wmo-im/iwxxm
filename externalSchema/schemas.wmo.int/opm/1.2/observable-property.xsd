@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://def.wmo.int/opm/2013" version="1.2" xmlns:opm="http://def.wmo.int/opm/2013" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
+	<annotation>
+		<documentation>«Leaf» package for the 'Observable Property Model' 
+
+References to WMO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
+	</annotation>
+	<element name="AbstractObservableProperty" type="opm:AbstractObservablePropertyType" substitutionGroup="gml:AbstractGML" abstract="true">
+		<annotation>
+			<documentation>An 'observable property' is a physical property that can be observed. Typically, this will be a quantitative property (Quantity [1]) such as 'dew-point temperature'.
+
+This abstract class enables either a single physical property to be specified or a composite observable property that aggregates a set of physical properties for a given observation context.
+
+In many cases, the observed physical property will be sourced from a controlled vocabulary, thesaurus or ontology.
+
+[1] Quantity: property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed as a number and a reference (from the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf])</documentation>
+		</annotation>
+	</element>
+	<complexType name="AbstractObservablePropertyType" abstract="true">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element name="label" type="string" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The attribute 'label' provides the primary human-readable label describing the observable physical property.</documentation>
+						</annotation>
+					</element>
+					<element name="altLabel" type="string" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The attribute 'altLabel' provides an alternative human-readable label used to describe the physical property.</documentation>
+						</annotation>
+					</element>
+					<element name="notation" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The attribute 'notation' provides a notation or code-value that is used to identify the physical property within a given context.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AbstractObservablePropertyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="opm:AbstractObservableProperty"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="CompositeObservableProperty" type="opm:CompositeObservablePropertyType" substitutionGroup="opm:AbstractObservableProperty">
+		<annotation>
+			<documentation>CompositeObservableProperty provides a single object within which a number of AbstractObservableProperty instances can be aggregated.</documentation>
+		</annotation>
+	</element>
+	<complexType name="CompositeObservablePropertyType">
+		<complexContent>
+			<extension base="opm:AbstractObservablePropertyType">
+				<sequence>
+					<element name="property" type="opm:AbstractObservablePropertyPropertyType" minOccurs="2" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The association role 'property' references an observable physical property. 
+
+The observable physical property may be defined in-line or sourced from an external controlled vocabulary, thesaurus or ontology.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+				<attribute use="required" name="count" type="integer">
+					<annotation>
+						<documentation>The number of observed physical properties aggregated within this composite.</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="CompositeObservablePropertyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="opm:CompositeObservableProperty"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="ObservableProperty" type="opm:ObservablePropertyType" substitutionGroup="opm:AbstractObservableProperty">
+		<annotation>
+			<documentation>An 'observable property' is a physical property that can be observed. Typically, this will be a quantitative property (Quantity [1]) such as 'dew-point temperature'.
+
+In many cases, the observed physical property will be sourced from a controlled vocabulary, thesaurus or ontology. The definition may be a simple a SKOS Concept or a node in a well-defined ontology. As such, the attributes of ObservableProperty have been elided; we simply need to assert that the entity has compatible semantics with the ObservableProperty class defined herein.
+
+[1] Quantity: property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed as a number and a reference (from the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf])</documentation>
+		</annotation>
+	</element>
+	<complexType name="ObservablePropertyType">
+		<complexContent>
+			<extension base="opm:AbstractObservablePropertyType">
+				<sequence></sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ObservablePropertyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="opm:ObservableProperty"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="QualifiedObservableProperty" type="opm:QualifiedObservablePropertyType" substitutionGroup="opm:ObservableProperty">
+		<annotation>
+			<documentation>The class 'QualifiedObservableProperty' describes an observable physical property that is qualified or constrained within a given measurement context. Qualification of the observed physical property may take several forms:
+- a specific unit of measure; 
+- a statistical operator (e.g. maximum) plus the aggregation context that the statistical operator applies to; or
+- a constraint (e.g. radiance in wavelength band 50nm to 100nm).</documentation>
+		</annotation>
+	</element>
+	<complexType name="QualifiedObservablePropertyType">
+		<complexContent>
+			<extension base="opm:ObservablePropertyType">
+				<sequence>
+					<element name="unitOfMeasure" type="gml:UnitOfMeasureType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The attribute 'uom' specifies the unit of measure used in the measurement of this physical property.</documentation>
+						</annotation>
+					</element>
+					<element name="constraint" type="opm:ConstraintPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The association role 'constraint' references the Constraint ?DataType? that specifies the constraints applied to the observable physical property in this context.</documentation>
+						</annotation>
+					</element>
+					<element name="qualifier" type="opm:StatisticalQualifierPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The association role 'qualifier' references the StatisticalQualifier ?DataType? that specifies the statistical function and aggregation patter applied to the base physical property in order to define a statistical summary property.</documentation>
+						</annotation>
+					</element>
+					<element name="baseProperty" type="opm:ObservablePropertyPropertyType">
+						<annotation>
+							<documentation>The association role 'baseProperty' references the observable physical property from which this qualified property derives. 
+
+The observable physical property may be defined in-line or sourced from an external controlled vocabulary, thesaurus or ontology.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="QualifiedObservablePropertyPropertyType">
+		<sequence minOccurs="0">
+			<element ref="opm:QualifiedObservableProperty"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="ScalarConstraint" type="opm:ScalarConstraintType" substitutionGroup="opm:Constraint">
+		<annotation>
+			<documentation>The class 'ScalarConstraint' allows an observed physical property to be constrained according to specific values of the constraining property. For example, the base property 'air temperature' may be constrained such that we are concerned only with the air temperature at 2.0 metres above local ground level (e.g. a screen temperature). In this example, 'height above local ground level' is the constraint property.</documentation>
+		</annotation>
+	</element>
+	<complexType name="ScalarConstraintType">
+		<complexContent>
+			<extension base="opm:ConstraintType">
+				<sequence>
+					<element name="unitOfMeasure" type="gml:UnitOfMeasureType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The attribute 'uom' specifies the unit of measure used in the specification of the constraint property value.</documentation>
+						</annotation>
+					</element>
+					<element name="value" type="double" minOccurs="1" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The attribute 'value' provides the value of the constraint property.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+				<attribute use="required" name="comparisonOperator" type="opm:ComparisonOperatorType">
+					<annotation>
+						<documentation>Attribute 'comparisonOperator' defines the mathematical operator relating the scalar constraint to the supplied numeric value; e.g. comparisonOperator = "eq" and value = "10.0" implies that the constraint is equal to the value 10.0.</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ScalarConstraintPropertyType">
+		<sequence>
+			<element ref="opm:ScalarConstraint"></element>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="StatisticalQualifier" type="opm:StatisticalQualifierType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>An observed physical property may be represent a statistical summary with respect to a base property; e.g. maximum UV index over a 3-hour period.
+
+The class 'StatisticalQualifier' defines the type of statistical function plus the mechanism that is used to aggregate the base property values to create the statistical summary: length, area, volume, duration or other.
+
+Statistical summary properties may be defined by chaining a set of statistical operations together. For example: mean daily maximum temperature over a month period comprises two statistical operations with respect to the base property 'air temperature' - (i) maximum over a 24-hour duration, (ii) mean over a 1-month duration.</documentation>
+		</annotation>
+	</element>
+	<complexType name="StatisticalQualifierType">
+		<sequence>
+			<element name="description" type="string" minOccurs="0" maxOccurs="1">
+				<annotation>
+					<documentation>The attribute 'description' provides a textual description of the statistical qualification applied to the base observable physical property.</documentation>
+				</annotation>
+			</element>
+			<element name="aggregationArea" type="gml:AreaType" minOccurs="0" maxOccurs="1">
+				<annotation>
+					<documentation>The attribute 'aggregationArea' defines the spatial area over which the statistical function is applied in order to determine the statistical summary.</documentation>
+				</annotation>
+			</element>
+			<element name="aggregationLength" type="gml:LengthType" minOccurs="0" maxOccurs="1">
+				<annotation>
+					<documentation>The attribute 'aggregationLength' defines the spatial length over which the statistical function is applied in order to determine the statistical summary.</documentation>
+				</annotation>
+			</element>
+			<element name="aggregationTimePeriod" type="duration" minOccurs="0" maxOccurs="1">
+				<annotation>
+					<documentation>The attribute 'aggregationTimePeriod' defines the temporal duration over which the statistical function is applied in order to determine the statistical summary.</documentation>
+				</annotation>
+			</element>
+			<element name="aggregationVolume" type="gml:VolumeType" minOccurs="0" maxOccurs="1">
+				<annotation>
+					<documentation>The attribute 'aggregationVolume' defines the spatial volume over which the statistical function is applied in order to determine the statistical summary.</documentation>
+				</annotation>
+			</element>
+			<element name="otherAggregation" type="gml:AssociationRoleType" minOccurs="0" maxOccurs="1">
+				<annotation>
+					<documentation>The attribute 'otherAggregation' defines the any type of aggregation (other than duration, length, area or volume) over which the statistical function is applied in order to determine the statistical summary; e.g. prevailing visibility is [approximately] defined as a mean visibility in each horizontal direction.</documentation>
+				</annotation>
+			</element>
+			<element name="statisticalFunction" type="gml:CodeType">
+				<annotation>
+					<documentation>The attribute 'statisticalFunction' defines the type of statistical function that is applied to the base observed property values in order to generate the statistical summary.</documentation>
+					<appinfo>
+						<gml:defaultCodeSpace>http://def.wmo.int/opm/2013/CodeList_StatisticalFunctionCode.xml#StatisticalFunctionCode</gml:defaultCodeSpace>
+					</appinfo>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="StatisticalQualifierPropertyType">
+		<sequence>
+			<element ref="opm:StatisticalQualifier"></element>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="CategoryConstraint" type="opm:CategoryConstraintType" substitutionGroup="opm:Constraint">
+		<annotation>
+			<documentation>The class 'CategoryConstraint' enables a category-based constraint to be specified. For example, in aviation the only clouds of significance for terminal aerodrome operations are convective clouds (cumulonimbus, towering cumulus etc.). The observed physical property 'cloud base [height]' may be constrained such that it is applicable only to clouds of a given type. In this example, a single instance of CategoryConstraint would be defined referencing both cloud types (cumulonimbus and towering cumulus); 'cloud type' is the constraint property.</documentation>
+		</annotation>
+	</element>
+	<complexType name="CategoryConstraintType">
+		<complexContent>
+			<extension base="opm:ConstraintType">
+				<sequence>
+					<element name="value" type="gml:CodeType" minOccurs="1" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The attribute 'value' defines the category member that applies to this constraint.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="CategoryConstraintPropertyType">
+		<sequence>
+			<element ref="opm:CategoryConstraint"></element>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="RangeConstraint" type="opm:RangeConstraintType" substitutionGroup="opm:Constraint">
+		<annotation>
+			<documentation>The class 'RangeConstraint' allows an observed physical property to be constrained according to a range of values of the constraining property. For example, the base property 'radiance' may be constrained such that we are concerned only with the radiance between wavelengths of 50nm to 100nm. In this example, 'wavelength' is the constraint property.</documentation>
+		</annotation>
+	</element>
+	<complexType name="RangeConstraintType">
+		<complexContent>
+			<extension base="opm:ConstraintType">
+				<sequence>
+					<element name="unitOfMeasure" type="gml:UnitOfMeasureType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The attribute 'uom' specifies the unit of measure used in the specification of the constraint property value.</documentation>
+						</annotation>
+					</element>
+					<element name="value" minOccurs="1" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The association role 'value' references an instance of the RangeBounds class that specifies the extreme limits of the range that apply to the constraint property.</documentation>
+						</annotation>
+						<complexType>
+							<complexContent>
+								<extension base="gml:AbstractMemberType">
+									<sequence>
+										<element ref="opm:RangeBounds"></element>
+									</sequence>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="RangeConstraintPropertyType">
+		<sequence>
+			<element ref="opm:RangeConstraint"></element>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="Constraint" type="opm:ConstraintType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>The class 'Constraint' enables the constraints relating to an observable physical property in a given measurement context to be specified.</documentation>
+		</annotation>
+	</element>
+	<complexType name="ConstraintType">
+		<sequence>
+			<element name="description" type="string" minOccurs="0" maxOccurs="1">
+				<annotation>
+					<documentation>The attribute 'description' provides a textual description of the constraint applied to the base observable physical property.</documentation>
+				</annotation>
+			</element>
+			<element name="constraintProperty" type="opm:ObservablePropertyPropertyType">
+				<annotation>
+					<documentation>The association role 'constraintProperty' references the physical property that is used to constrain the target observable physical property. For example, the observed physical property 'radiance' may be constrained such that one is concerned only with the radiance between wavelength 50nm to 100nm. In this example, 'wavelength' is the constraint property.
+
+The physical property may be defined in-line or referenced from an external controlled vocabulary, thesaurus or ontology.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="ConstraintPropertyType">
+		<sequence>
+			<element ref="opm:Constraint"></element>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="RangeBounds" type="opm:RangeBoundsType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>The class 'RangeBounds' describes the extreme limits of a property value range (also known as a property value interval).</documentation>
+		</annotation>
+	</element>
+	<complexType name="RangeBoundsType">
+		<sequence>
+			<element name="rangeStart" type="double">
+				<annotation>
+					<documentation>The attribute 'rangeStart' provides the extreme lower limit of the range or interval.</documentation>
+				</annotation>
+			</element>
+			<element name="rangeEnd" type="double">
+				<annotation>
+					<documentation>The attribute 'rangeEnd' provides the extreme upper limit of the range or interval.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+		<attribute use="required" name="endComparison" type="opm:ComparisonOperatorType">
+			<annotation>
+				<documentation>Attribute 'endComparison' defines the mathematical operator relating the upper boundary of the range constraint to the supplied numeric value; e.g. when specifying a wavelength band, endComparison = "eq", uom = "nm" and value = "100.0" implies that the upper range of the wavelength band is 100 nanometres.</documentation>
+			</annotation>
+		</attribute>
+		<attribute use="required" name="startComparison" type="opm:ComparisonOperatorType">
+			<annotation>
+				<documentation>Attribute 'startComparison' defines the mathematical operator relating the lower boundary of the range constraint to the supplied numeric value; e.g. when specifying a wavelength band, startComparison = "eq", uom = "nm" and value = "50.0" implies that the lower range of the wavelength band is 50 nanometres.</documentation>
+			</annotation>
+		</attribute>
+	</complexType>
+	<complexType name="RangeBoundsPropertyType">
+		<sequence>
+			<element ref="opm:RangeBounds"></element>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<simpleType name="ComparisonOperatorType">
+		<annotation>
+			<documentation>«Enumeration» 'ComparisonOperator' defines the set mathematical operators that may be used to compare numerical values; not equal, less than, less than or equal, equal, greater than or equal and greater than.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="ne">
+				<annotation>
+					<documentation>Comparison operator: "not equal to"</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="lt">
+				<annotation>
+					<documentation>Comparison operator: "less than"</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="le">
+				<annotation>
+					<documentation>Comparison operator: "less than or equal to"</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="eq">
+				<annotation>
+					<documentation>Comparison operator: "equal to"</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ge">
+				<annotation>
+					<documentation>Comparison operator: "greater than or equal to"</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="gt">
+				<annotation>
+					<documentation>Comparison operator: "greater than"</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<complexType name="StatisticalFunctionCodeType">
+		<annotation>
+			<documentation>The «CodeList» class 'StatisticalFunctionCode' specifies the type of statistical function that is applied to the base observable property to define the statistical summary; e.g. maximum air temperature.
+
+Note that WMO provides two code-tables listing statistical operators: 
+- WMO No. 306 Vol I.2 Part B FM 92 GRIB code-table 4.10 'Type of statistical processing'; and
+- WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 08 023 'First-order statistics'
+
+The GRIB2 code-table is defined as the 'recommended' vocabulary for this «CodeList» class but lacks some of the necessary terms. For example, the GRIB code-table includes 'Average' but does not include 'Mean', 'Mode' or 'Median' (which can be found in the BUFR code-table). However, the BUFR code-table is _NOT_ chosen because 'Accumulation' is entirely missing. Given that 'extensibility' is set to 'any', authors are free to refer to their preferred 'statistical operator' vocabulary. The GRIB code-table is only a recommendation. </documentation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/grib2/codeflag/4.10</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
+</schema>

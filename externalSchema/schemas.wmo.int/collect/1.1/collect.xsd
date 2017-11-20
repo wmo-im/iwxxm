@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://def.wmo.int/collect/2014" xmlns:collect="http://def.wmo.int/collect/2014" version="1.1" xmlns:gml="http://www.opengis.net/gml/3.2">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<element name="MeteorologicalBulletin" type="collect:MeteorologicalBulletinType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>A Meteorological Bulletin is a text comprising meteorological information preceded by an appropriate heading.
+
+Paragraph 2.3.3 of the WMO Manual on the Global Telecommunication System (WMO No. 386) defines the contents of meteorological bulletins.  Clauses applicable here include:
+
+	- The text of a bulletin shall be in one code form only.
+	- The text of a bulletin shall not contain both ¡§essential¡¨ and ¡§additional¡¨ data as defined in Resolution 40 (Cg-XII).</documentation>
+		</annotation>
+	</element>
+	<complexType name="MeteorologicalBulletinType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="bulletinIdentifier" type="string">
+						<annotation>
+							<documentation>General file naming convention described in Attachment II-15 to WMO Manual on the Global Telecommunication System (WMO No. 386) is being used for bulletinIdentifier, which also makes references to the abbreviated headings described in Paragraph 2.3.2.</documentation>
+						</annotation>
+					</element>
+					<element name="meteorologicalInformation" type="collect:MeteorologicalInformationMemberPropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="MeteorologicalBulletinPropertyType">
+		<sequence minOccurs="0">
+			<element ref="collect:MeteorologicalBulletin"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	
+	<complexType name="MeteorologicalInformationMemberPropertyType">
+		<sequence minOccurs="1" maxOccurs="1">
+			<element ref="gml:AbstractFeature"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+</schema>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://def.wmo.int/collect/2014" version="1.2" xmlns:collect="http://def.wmo.int/collect/2014" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
+	<annotation>
+		<documentation>The WMO Feature Collection Model is used to represent a collection of GML feature instances of the same type of meteorological information. The intent is to allow XML encoded meteorological information to be packaged in a way that emulates the existing data distribution practices used within the Global Telecommunication System (GTS) and Aeronautical Fixed System (AFS).
+
+Note: The collection of meteorological information is often referred to as a bulletin.
+
+Note: XML encodings of meteorological information are defined in Part D; for example FM 205-15 EXT IWXXM-XML.
+
+Note: Aggregation of meteorological information in form of meteorological bulletins usually takes place at a station or centre originating or compiling the bulletin, as agreed internationally.  A meteorological bulletin may have one or more instances of meteorological information.  If meteorological reports of routine messages are not available during compilation, a NIL report of that station should be included in the published contents of the bulletin.
+
+References to WMO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
+		<appinfo>
+			<gml:gmlProfileSchema>gmlcollect.xsd</gml:gmlProfileSchema>
+		</appinfo>
+	</annotation>
+	<element name="MeteorologicalBulletin" type="collect:MeteorologicalBulletinType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>A Meteorological Bulletin is a text comprising meteorological information preceded by an appropriate heading.
+
+Paragraph 2.3.3 of the WMO Manual on the Global Telecommunication System (WMO No. 386) defines the contents of meteorological bulletins.  Clauses applicable here include:
+
+	- The text of a bulletin shall be in one code form only.
+	- The text of a bulletin shall not contain both “essential” and “additional” data as defined in Resolution 40 (Cg-XII).</documentation>
+		</annotation>
+	</element>
+	<complexType name="MeteorologicalBulletinType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="meteorologicalInformation" type="collect:MeteorologicalInformationMemberPropertyType" minOccurs="1" maxOccurs="unbounded"></element>
+					<element name="bulletinIdentifier" type="string">
+						<annotation>
+							<documentation>General file naming convention described in Attachment II-15 to WMO Manual on the Global Telecommunication System (WMO No. 386) is being used for bulletinIdentifier, which also makes references to the abbreviated headings described in Paragraph 2.3.2.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="MeteorologicalBulletinPropertyType">
+		<sequence minOccurs="0">
+			<element ref="collect:MeteorologicalBulletin"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<complexType name="MeteorologicalInformationMemberPropertyType">
+		<sequence minOccurs="1" maxOccurs="1">
+			<element ref="gml:AbstractFeature"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+</schema>

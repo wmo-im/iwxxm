@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://def.wmo.int/metce/2013" version="1.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+	<include schemaLocation="procedure.xsd"></include>
+	<include schemaLocation="phenomena.xsd"></include>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
+	<annotation>
+		<documentation>This Logical Data Model is intended to support the entire scope of WMO concerns: weather, climate and water. To reflect this scope, the model is named 'Modele pour l'Echange des informations sur le Temps, le Climat et l'Eau' (METCE). In English, it may also be known as the "METeorological Community Exchange" model.
+
+METCE is intended to provide conceptual definitions of meteorological phenomena, entities and concepts in order to underpin semantic interoperability in the weather, climate and water domain.
+
+The &lt;&lt;Application Schema&gt;&gt; includes: (i) a concrete implementation of OM_Process (from ISO 19156); (ii) a number of meteorological feature types schemes thereof; and (iii) some miscellaneous items (e.g. &lt;&lt;Enumerations&gt;&gt; for specifying intensity changes).
+
+The 'METCE' &lt;&lt;Application Schema&gt;&gt; will typically be imported to provide a baseline conceptual model framework upon which community-specific Application Schema are based.
+
+References to WMO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
+		<appinfo>
+			<gml:gmlProfileSchema>gmlmetce.xsd</gml:gmlProfileSchema>
+		</appinfo>
+	</annotation>
+</schema>

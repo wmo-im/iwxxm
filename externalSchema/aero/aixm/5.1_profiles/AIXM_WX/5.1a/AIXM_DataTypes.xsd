@@ -1,0 +1,1404 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--====================================================================-->
+  <!--AIXM 5.1 (weather profile)-->
+  <!--This AIXM profile is developed for the weather domain, and -->
+  <!--includes only select portions of AIXM 5.1 needed to represent: --> 
+  <!--  AirportHeliport, Airspace, AirspaceVolume, Runway, RunwayDirection, and Unit -->
+  <!--www.aixm.aero-->
+  <!--Originally Released:  February 2010-->
+  <!--Weather Profile Released:  January 2015-->
+<!--====================================================================-->
+<!--
+		Copyright (c) 2015, EUROCONTROL & FAA
+		=====================================
+		All rights reserved.
+		Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+			* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+			* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+			* Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+		THIS SPECIFICATION IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+		==========================================
+		Editorial note: this license is an instance of the BSD license template as
+		provided by the Open Source Initiative:
+		http://www.opensource.org/licenses/bsd-license.php
+	-->
+<!-- Component: AIXM: Data Types -->
+<schema xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.aixm.aero/schema/5.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="5.1">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="./ISO_19136_Schemas/gml.xsd"/>
+	<annotation>
+		<appinfo>
+			<gml:gmlProfileSchema>http://www.aixm.aero/schema/5.1/profile/gml4aixm.xsd</gml:gmlProfileSchema>
+		</appinfo>
+	</annotation>
+	<annotation>
+		<appinfo source="www.aixm.aero/schema/5.1">AIXM_DataTypes.xsd</appinfo>
+	</annotation>
+	<annotation>
+		<documentation>Package containing the datatypes that are used throughout the AIXM. 
+
+There are three different types of datatypes: 
+- datatype - This is basic data type that specifies a pattern to use.
+- enumeration - This codes a fixed list of values. The OTHER value is important for mapping future changes to the list. If a value is added in the future and is not recognised by the current enumeration, it is mapped to the OTHER value.
+- codelist - This is similar to an enumeration in that it is used to indicate a list of possible values. However, the list can be expanded, which means that the codelist is a union between the explicitly enumerated values and free text.</documentation>
+	</annotation>
+	<simpleType name="AlphaType">
+		<annotation>
+			<appinfo>
+				<gml:description>A type representing a combination of alphabetic characters.</gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="string">
+			<pattern value="[A-Z]*"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="AlphanumericType">
+		<annotation>
+			<appinfo>
+				<gml:description>A type representing a combination of alphabetic and numeric characters.</gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="string">
+			<pattern value="([A-Z]|\d)*"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="Character1Type">
+		<annotation>
+			<appinfo>
+				<gml:description>A string of Simple Latin upper case letters and/or digits and/or a few special characters (space,  plus sign, minus sign, solidus -'/').</gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="string">
+			<pattern value="([A-Z]|[0-9])+([ \+\-/]*([A-Z]|[0-9])+)*"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="Character3Type">
+		<annotation>
+			<appinfo>
+				<gml:description>A string of Simple Latin upper case letters and/or digits and/or more special characters (space| exclamation mark| double quote| number sign| dollar sign| percent| ampersand| quote| left paren| right paren| asterisk| plus sign| comma| minus sign| period| solidus| colon| semicolon| less than operator| equals operator| greater than operator| question mark| commercial at| left bracket| reverse solidus| right bracket| circumflex| underscore| vertical bar| left brace| right brace).</gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="string">
+			<pattern value="([A-Z]|[0-9]|[, !&quot;&amp;#$%'\(\)\*\+\-\./:;&lt;=>\?@\[\\\]\^_\|\{\}])*"/>
+		</restriction>
+	</simpleType>
+	<complexType name="CodeVerticalReferenceType">
+		<simpleContent>
+			<extension base="aixm:CodeVerticalReferenceBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="CodeAirportHeliportDesignatorType">
+		<simpleContent>
+			<extension base="aixm:CodeAirportHeliportDesignatorBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="CodeAirspaceDesignatorType">
+		<simpleContent>
+			<extension base="aixm:CodeAirspaceDesignatorBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="CodeIATAType">
+		<simpleContent>
+			<extension base="aixm:CodeIATABaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="CodeICAOType">
+		<simpleContent>
+			<extension base="aixm:CodeICAOBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="CodeAirportHeliportType">
+		<simpleContent>
+			<extension base="aixm:CodeAirportHeliportBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="CodeAirspaceType">
+		<simpleContent>
+			<extension base="aixm:CodeAirspaceBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+  <complexType name="CodeRunwayType">
+    <simpleContent>
+      <extension base="aixm:CodeRunwayBaseType">
+        <attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="CodeUnitType">
+		<simpleContent>
+			<extension base="aixm:CodeUnitBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+  <complexType name="CodeYesNoType">
+    <simpleContent>
+      <extension base="aixm:CodeYesNoBaseType">
+        <attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="ValBearingType">
+    <simpleContent>
+      <extension base="aixm:ValBearingBaseType">
+        <attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="TextDesignatorType">
+		<simpleContent>
+			<extension base="aixm:TextDesignatorBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="TextNameType">
+		<simpleContent>
+			<extension base="aixm:TextNameBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="UomDistanceType">
+		<annotation>
+			<appinfo>
+				<gml:description>A unit of measurement for a horizontal distance.
+For example, metres, feet, nautical miles, kilometres, etc...</gml:description>
+			</appinfo>
+		</annotation>
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="NM">
+						<annotation>
+							<appinfo>
+								<gml:description>Nautical miles.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="KM">
+						<annotation>
+							<appinfo>
+								<gml:description>Kilometres.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="M">
+						<annotation>
+							<appinfo>
+								<gml:description>Metres.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="FT">
+						<annotation>
+							<appinfo>
+								<gml:description>Feet.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="MI">
+						<annotation>
+							<appinfo>
+								<gml:description>Statute Mile</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="CM">
+						<annotation>
+							<appinfo>
+								<gml:description>Centimetre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<simpleType name="UomDistanceVerticalType">
+		<annotation>
+			<appinfo>
+				<gml:description>A unit of measurement for a vertical distance.
+For example, Flight Level, metres, feet. </gml:description>
+			</appinfo>
+		</annotation>
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="FT">
+						<annotation>
+							<appinfo>
+								<gml:description>Feet.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="M">
+						<annotation>
+							<appinfo>
+								<gml:description>Meters.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="FL">
+						<annotation>
+							<appinfo>
+								<gml:description>Flight level in hundreds of feet.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="SM">
+						<annotation>
+							<appinfo>
+								<gml:description>Standard meters (tens of meters).</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<complexType name="ValDistanceType">
+		<simpleContent>
+			<extension base="aixm:ValDistanceBaseType">
+				<attribute name="uom" type="aixm:UomDistanceType"/>
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="ValDistanceVerticalType">
+		<simpleContent>
+			<extension base="aixm:ValDistanceVerticalBaseType">
+				<attribute name="uom" type="aixm:UomDistanceVerticalType"/>
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="CodeVerticalDatumType">
+		<simpleContent>
+			<extension base="aixm:CodeVerticalDatumBaseType">
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="ValDistanceSignedType">
+		<simpleContent>
+			<extension base="aixm:ValDistanceSignedBaseType">
+				<attribute name="uom" type="aixm:UomDistanceType"/>
+				<attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="CodeVerticalReferenceBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>A code indicating the reference for a vertical distance.
+Two series of values exist:
+1) real distance: from GND, from the MSL, from the WGS-84 ellipsoid;
+2) distance based on a difference of pressures, according to the standard atmosphere.</gml:description>
+			</appinfo>
+		</annotation>
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="SFC">
+						<annotation>
+							<appinfo>
+								<gml:description>The distance measured from the surface of the Earth (equivalent to AGL - Above Ground Level).</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="MSL">
+						<annotation>
+							<appinfo>
+								<gml:description>The distance measured from mean sea level (equivalent to altitude).</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="W84">
+						<annotation>
+							<appinfo>
+								<gml:description>The distance measured from the WGS84 ellipsoid.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="STD">
+						<annotation>
+							<appinfo>
+								<gml:description>The vertical distance is measured with an altimeter set to the standard atmosphere.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<simpleType name="CodeAirportHeliportDesignatorBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>A coded identifier for an Aerodrome/Heliport. 
+The rules according to which this identifier should be formed are as follows:
+1) If the AD/HP has an ICAO four letter location indicator, this will become the CODE_ID for the Aerodrome/Heliport;
+2) If the AD/HP does not have an ICAO four letter location indicator but has an IATA three letter code, then this will become the CODE_ID for the Aerodrome/Heliport;
+3) If the AD/HP does not have either an ICAO four letter location indicator or an IATA three letter code, an artificially generated code will be used. This will contain a group of letters and a number. The group of letters could be the 2 letter code of the State responsible for the Aerodrome/Heliport (or one of these, if there are more than one, like ED and ET for Germany) and the number could be an integer between 0001 and 9999. </gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="aixm:AlphanumericType">
+			<minLength value="3"/>
+			<maxLength value="6"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="CodeAirspaceDesignatorBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>Allowed types of airspace.</gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="aixm:Character3Type">
+			<minLength value="1"/>
+			<maxLength value="10"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="CodeOrganisationDesignatorBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>The coded identifier of an organisation, authority, agency or unit.</gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="aixm:Character1Type">
+			<minLength value="1"/>
+			<maxLength value="12"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="CodeIATABaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>The three letter coded location identifier of an airport/heliport according to the IATA Resolution 763. </gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="aixm:AlphaType">
+			<minLength value="3"/>
+			<maxLength value="3"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="CodeICAOBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>The four letter coded location identifier as published in the ICAO DOC 7910 - Location Indicators. </gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="aixm:AlphaType">
+			<minLength value="4"/>
+			<maxLength value="4"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="CodeAirportHeliportBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>A code specifying whether a particular entity occurrence is an Aerodrome or a Heliport. </gml:description>
+			</appinfo>
+		</annotation>
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="AD">
+						<annotation>
+							<appinfo>
+								<gml:description>Aerodrome only.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="AH">
+						<annotation>
+							<appinfo>
+								<gml:description>Aerodrome with heliport landing area.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="HP">
+						<annotation>
+							<appinfo>
+								<gml:description>Heliport only.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="LS">
+						<annotation>
+							<appinfo>
+								<gml:description>Landing site.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<simpleType name="CodeAirspaceBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>A coded list of values that indicates a type of airspace.</gml:description>
+			</appinfo>
+		</annotation>
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="NAS">
+						<annotation>
+							<appinfo>
+								<gml:description>National Airspace System.
+[note: The airspace within which a State provides Air Traffic Services is usually composed of:1) the territories over which the State has jurisdiction;2) those portions of the airspace over the high seas or in airspace of undetermined sovereignty where the provision of ATS are provided as determined by regional agreements. It can usually be determined by the UNION of FIRs (including, where appropriate, NO-FIRs) of the UNION of NAS-P. .] 
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="FIR">
+						<annotation>
+							<appinfo>
+								<gml:description>Flight information region.  Airspace of defined dimensions within which flight information service and alerting service are provided.
+Description:
+ICAO Recognized.
+Might, for example, be used if service provided by more than one unit.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="FIR_P">
+						<annotation>
+							<appinfo>
+								<gml:description>Part of an FIR.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="UIR">
+						<annotation>
+							<appinfo>
+								<gml:description>Upper flight information region.  An upper airspace of defined dimensions within which flight information service and alerting service are provided.
+Description:
+Non-ICAO Recognized.
+Each state determines its definition for upper airspace.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="UIR_P">
+						<annotation>
+							<appinfo>
+								<gml:description>Part of a UIR.
+[note: Might, for example, be used if more than one unites provide service in different parts of a UIR .] 
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="CTA">
+						<annotation>
+							<appinfo>
+								<gml:description>Control area.  A controlled airspace extending upwards from a specified limit above the earth.
+Description:
+ICAO Recognized.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="CTA_P">
+						<annotation>
+							<appinfo>
+								<gml:description>Part of a CTA.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="OCA_P">
+						<annotation>
+							<appinfo>
+								<gml:description>Part of an OCA.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="OCA">
+						<annotation>
+							<appinfo>
+								<gml:description>Oceanic control area.  A Control Area extending upwards in the upper airspace.
+Description:
+Non-ICAO Recognized.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="UTA">
+						<annotation>
+							<appinfo>
+								<gml:description>Upper control area.  A Control Area extending upwards in the upper airspace.
+Description:
+Non-ICAO Recognized.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="UTA_P">
+						<annotation>
+							<appinfo>
+								<gml:description>Part of a UTA.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="TMA">
+						<annotation>
+							<appinfo>
+								<gml:description>Terminal control area.  Control area normally established at the confluence of ATS routes in the vicinity of one or more major aerodromes.
+Description:
+Non-ICAO Recognized.
+Mainly used in Europe under the Flexible Use of Airspace concept.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="TMA_P">
+						<annotation>
+							<appinfo>
+								<gml:description>Part of a TMA.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="CTR">
+						<annotation>
+							<appinfo>
+								<gml:description>Control zone.  A controlled airspace extending upwards from the surface of the earth to a specified upper limit.
+Description:
+ICAO Recognized.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="CTR_P">
+						<annotation>
+							<appinfo>
+								<gml:description>Part of a CTR.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="OTA">
+						<annotation>
+							<appinfo>
+								<gml:description>Oceanic transition area.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="SECTOR">
+						<annotation>
+							<appinfo>
+								<gml:description>Control sector.  A subdivision of a designated control area within which responsibility is assigned to one controller or to a small group of controllers.
+Description:
+ICAO Recognized.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="SECTOR_C">
+						<annotation>
+							<appinfo>
+								<gml:description>Temporary consolidated (collapsed) sector.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="TSA">
+						<annotation>
+							<appinfo>
+								<gml:description>Temporary segregated area (FUA).  Airspace of pre-defined dimensions within which activities require the reservation of airspace for the exclusive use of specific users during a predetermined period of time.
+Description:
+(NATO) An area in which there are special restrictive measures employed to prevent or minimize interference between friendly forces. 
+An area under military jurisdiction in which special security measures are employed to prevent unauthorized entry.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="CBA">
+						<annotation>
+							<appinfo>
+								<gml:description>Cross border area (FUA).  Airspace of defined dimensions, above the land areas or territorial waters of more than one state.
+Description:
+Non-ICAO Recognized.
+Mainly used in Europe under the Flexible Use of Airspace concept.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="RCA">
+						<annotation>
+							<appinfo>
+								<gml:description>Reduced co-ordination area (FUA).  Portion of airspace of defined dimensions within which general aviation traffic is permitted "off-route" without requiring general aviation traffic controllers to initiate co-ordination with OAT controllers.
+Description:
+Non-ICAO Recognized.
+Mainly used in Europe under the Flexible Use of Airspace concept.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="RAS">
+						<annotation>
+							<appinfo>
+								<gml:description>Regulated airspace (not otherwise covered).</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="AWY">
+						<annotation>
+							<appinfo>
+								<gml:description>Airway (corridor).  A control area or portion thereof established in the form of a corridor.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="MTR">
+						<annotation>
+							<appinfo>
+								<gml:description>Military Training Route buffer.  A control area or portion thereof, established in the form of a corridor around a military training route in order to protect it from other traffic.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="P">
+						<annotation>
+							<appinfo>
+								<gml:description>Prohibited area.  Airspace of defined dimensions, above the land areas or territorial waters of a State, within which the flight of aircraft is prohibited.
+Description:
+ICAO Recognized.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="R">
+						<annotation>
+							<appinfo>
+								<gml:description>Restricted area.  Airspace of defined dimensions, above the land areas or territorial waters of a State, within which the flight of aircraft is restricted in accordance with certain specified conditions.
+Description:
+ICAO Recognized.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="D">
+						<annotation>
+							<appinfo>
+								<gml:description>Danger area.  Airspace of defined dimensions within which activities dangerous to the flight of aircraft may exist at specified times.
+Description:
+ICAO Recognized.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ADIZ">
+						<annotation>
+							<appinfo>
+								<gml:description>Air Defence Identification Zone.  Special designated airspace of defined dimensions within which aircraft are required to comply with special identification and/or reporting procedures additional to those related to the provision of air traffic services (ATS).
+Description:
+ICAO Recognized.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="NO_FIR">
+						<annotation>
+							<appinfo>
+								<gml:description>Airspace for which not even an FIR is defined.
+[note: There are parts in the world for which there is neither an FIR nor any other airspace-type is defined. These airspaces will be marked as NO-FIR .]  
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="PART">
+						<annotation>
+							<appinfo>
+								<gml:description>Part of an airspace (used in airspace aggregation).</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="CLASS">
+						<annotation>
+							<appinfo>
+								<gml:description>Airspace having a specified class.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="POLITICAL">
+						<annotation>
+							<appinfo>
+								<gml:description>Political/administrative area.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="D_OTHER">
+						<annotation>
+							<appinfo>
+								<gml:description>Activities of dangerous nature (other than a danger area).</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="TRA">
+						<annotation>
+							<appinfo>
+								<gml:description>Temporary reserved area (FUA).  Airspace of pre-defined dimensions within which activities require the reservation of airspace during a predetermined period of time.
+Description:
+Non-ICAO Recognized.
+Mainly used in Europe under the Flexible Use of Airspace concept.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="A">
+						<annotation>
+							<appinfo>
+								<gml:description>Alert area. Airspace which may contain a high volume of pilot training activities or unusual type of aerial activity, neither of which is hazardous to aircraft.
+Description:
+Non-ICAO Recognized.
+Mainly used in contiguous United States and its territories. 
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="W">
+						<annotation>
+							<appinfo>
+								<gml:description>Warning area.  A non-regulatory airspace of defined dimensions designated over international waters that contains activity which may be hazardous to aircraft not participating in the activity. The purpose of such warning areas is to warn non participating pilots of the potential danger.
+Description:
+Non-ICAO Recognized.
+Mainly used in contiguous United States and its territories.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="PROTECT">
+						<annotation>
+							<appinfo>
+								<gml:description>Airspace protected from specific air traffic.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="AMA">
+						<annotation>
+							<appinfo>
+								<gml:description>Minimum altitude area.  The lowest altitude to be used under instrument meteorological conditions (IMC) which will provide a minimum vertical clearance of 300 m (1 000 ft) or in designated mountainous terrain 600 m (2 000 ft) above all obstacles located in the area specified.
+Description:
+ICAO Recognized.
+Published by many States as rectangles of 1 x 1 degree on the ENR 6 charts. Note - In the exact calculation 984 feet can be used as an equivalent to 300 metres. 
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ASR">
+						<annotation>
+							<appinfo>
+								<gml:description>Altimeter setting region.  Airspace of defined dimensions within which standardized altimeter setting procedures apply.
+Description:
+Non-ICAO Recognized.
+For example, during flight the altimeter shall be set to the current altimeter setting of the nearest station along the route of flight.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ADV">
+						<annotation>
+							<appinfo>
+								<gml:description>Advisory Area.  An area of defined dimensions within which air traffic advisory service is available.
+Description:
+ICAO Recognized.
+Air traffic control service provides a much more complete service than air traffic advisory service; advisory areas and routes are therefore not established within controlled airspace, but air traffic advisory service may be provided below and above. 
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="UADV">
+						<annotation>
+							<appinfo>
+								<gml:description>Upper Advisory Area.  An area of defined dimensions in upper airspace within which air traffic advisory service is available.
+Description:
+ICAO Recognized.
+Air traffic control service provides a much more complete service than air traffic advisory service; advisory areas and routes are therefore not established within controlled airspace, but air traffic advisory service may be provided below and above. 
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ATZ">
+						<annotation>
+							<appinfo>
+								<gml:description>Airport Traffic Zone.  Airspace of defined dimensions established around an airport for the protection of airport traffic.
+Description:
+ICAO Recognized.
+</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ATZ_P">
+						<annotation>
+							<appinfo>
+								<gml:description>Part of an airport traffic zone</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="HTZ">
+						<annotation>
+							<appinfo>
+								<gml:description>Helicopter traffic zone</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="NAS_P">
+						<annotation>
+							<appinfo>
+								<gml:description>A part of a national airspace system</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+  <complexType name="CodeOrganisationDesignatorType">
+    <simpleContent>
+      <extension base="aixm:CodeOrganisationDesignatorBaseType">
+        <attribute name="nilReason" type="gml:NilReasonEnumeration"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <simpleType name="CodeRunwayBaseType">
+    <annotation>
+      <appinfo>
+        <gml:description>A code that makes a distinction between runways for airplanes and FATO for helicopters.</gml:description>
+      </appinfo>
+    </annotation>
+    <union>
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="RWY">
+            <annotation>
+              <appinfo>
+                <gml:description>Runway for airplanes</gml:description>
+              </appinfo>
+            </annotation>
+          </enumeration>
+          <enumeration value="FATO">
+            <annotation>
+              <appinfo>
+                <gml:description>Final Approach and Take Off Area for helicopters</gml:description>
+              </appinfo>
+            </annotation>
+          </enumeration>
+        </restriction>
+      </simpleType>
+      <simpleType>
+        <restriction base="string">
+          <pattern value="OTHER(:(\w|_){1,58})?"/>
+        </restriction>
+      </simpleType>
+    </union>
+  </simpleType><simpleType name="CodeUnitBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>A unit providing particular ATS services. </gml:description>
+			</appinfo>
+		</annotation>
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="ACC">
+						<annotation>
+							<appinfo>
+								<gml:description>Area control centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ADSU">
+						<annotation>
+							<appinfo>
+								<gml:description>Automatic dependent surveillance unit.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ADVC">
+						<annotation>
+							<appinfo>
+								<gml:description>Advisory centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ALPS">
+						<annotation>
+							<appinfo>
+								<gml:description>Alerting post.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="AOF">
+						<annotation>
+							<appinfo>
+								<gml:description>Aeronautical information services office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="APP">
+						<annotation>
+							<appinfo>
+								<gml:description>Approach control office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="APP_ARR">
+						<annotation>
+							<appinfo>
+								<gml:description>Arrivals approach control office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="APP_DEP">
+						<annotation>
+							<appinfo>
+								<gml:description>Departures approach control office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ARO">
+						<annotation>
+							<appinfo>
+								<gml:description>Aerodrome reporting office/ATS reporting office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ATCC">
+						<annotation>
+							<appinfo>
+								<gml:description>Air traffic control centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ATFMU">
+						<annotation>
+							<appinfo>
+								<gml:description>Air traffic flow management unit.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ATMU">
+						<annotation>
+							<appinfo>
+								<gml:description>Air traffic management unit.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ATSU">
+						<annotation>
+							<appinfo>
+								<gml:description>Air traffic services unit.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="BOF">
+						<annotation>
+							<appinfo>
+								<gml:description>Briefing office (note: Note ICAO listed by nonetheless used.)</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="BS">
+						<annotation>
+							<appinfo>
+								<gml:description>Commercial broadcasting station.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="COM">
+						<annotation>
+							<appinfo>
+								<gml:description>Communications office/centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="FCST">
+						<annotation>
+							<appinfo>
+								<gml:description>Forecasting office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="FIC">
+						<annotation>
+							<appinfo>
+								<gml:description>Flight information centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="GCA">
+						<annotation>
+							<appinfo>
+								<gml:description>Ground controlled approach systems office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="MET">
+						<annotation>
+							<appinfo>
+								<gml:description>Meteorological office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="MWO">
+						<annotation>
+							<appinfo>
+								<gml:description>Meteorological watch office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="NOF">
+						<annotation>
+							<appinfo>
+								<gml:description>International NOTAM office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="OAC">
+						<annotation>
+							<appinfo>
+								<gml:description>Ocean control centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="PAR">
+						<annotation>
+							<appinfo>
+								<gml:description>Precision approach radar centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="RAD">
+						<annotation>
+							<appinfo>
+								<gml:description>Radar unit/office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="RAFC">
+						<annotation>
+							<appinfo>
+								<gml:description>Regional area forecast centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="RCC">
+						<annotation>
+							<appinfo>
+								<gml:description>Rescue co-ordination centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="RSC">
+						<annotation>
+							<appinfo>
+								<gml:description>Rescue sub-centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="SAR">
+						<annotation>
+							<appinfo>
+								<gml:description>Search and rescue centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="SMC">
+						<annotation>
+							<appinfo>
+								<gml:description>Surface movement control office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="SMR">
+						<annotation>
+							<appinfo>
+								<gml:description>Surface movement radar office.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="SRA">
+						<annotation>
+							<appinfo>
+								<gml:description>Surveillance radar approach office/centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="SSR">
+						<annotation>
+							<appinfo>
+								<gml:description>Secondary surveillance radar office/centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="TAR">
+						<annotation>
+							<appinfo>
+								<gml:description>Terminal area surveillance radar office/centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="TWR">
+						<annotation>
+							<appinfo>
+								<gml:description>Aerodrome control tower.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="UAC">
+						<annotation>
+							<appinfo>
+								<gml:description>Upper area control centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="UDF">
+						<annotation>
+							<appinfo>
+								<gml:description>UHF direction finding station.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="UIC">
+						<annotation>
+							<appinfo>
+								<gml:description>Upper information centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="VDF">
+						<annotation>
+							<appinfo>
+								<gml:description>VHF direction finding station.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="WAFC">
+						<annotation>
+							<appinfo>
+								<gml:description>World area forecast centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="ARTCC">
+						<annotation>
+							<appinfo>
+								<gml:description>Air route traffic control centre.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="FSS">
+						<annotation>
+							<appinfo>
+								<gml:description>Flight service station.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="TRACON">
+						<annotation>
+							<appinfo>
+								<gml:description>Terminal radar approach control.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="MIL">
+						<annotation>
+							<appinfo>
+								<gml:description>Military station/unit (or military office in general).</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="MILOPS">
+						<annotation>
+							<appinfo>
+								<gml:description>Planning/briefing office for military flight operations.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+  <simpleType name="CodeYesNoBaseType">
+    <annotation>
+      <appinfo>
+        <gml:description>A code for a logical value: Yes or No.</gml:description>
+      </appinfo>
+    </annotation>
+    <union>
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="YES">
+            <annotation>
+              <appinfo>
+                <gml:description>Yes.</gml:description>
+              </appinfo>
+            </annotation>
+          </enumeration>
+          <enumeration value="NO">
+            <annotation>
+              <appinfo>
+                <gml:description>No.</gml:description>
+              </appinfo>
+            </annotation>
+          </enumeration>
+        </restriction>
+      </simpleType>
+      <simpleType>
+        <restriction base="string">
+          <pattern value="OTHER(:(\w|_){1,58})?"/>
+        </restriction>
+      </simpleType>
+    </union>
+  </simpleType>
+	<simpleType name="TextDesignatorBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>A textual designator.</gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="aixm:Character3Type">
+			<minLength value="1"/>
+			<maxLength value="16"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="TextNameBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>The official name of a State, an aerodrome, a unit, etc.. </gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="aixm:Character3Type">
+			<minLength value="1"/>
+			<maxLength value="60"/>
+		</restriction>
+	</simpleType>
+  <simpleType name="ValBearingBaseType">
+    <annotation>
+      <appinfo>
+        <gml:description>The value of a bearing indication (at a given point) measured as the angle between the bearing and either True North or Magnetic North (this should appear explicitly or implicitly). The angle is measured clockwise from 0 degrees up to and including 360 degrees. The value can also be a VOR radial. For example, Westward is expressed as 270. </gml:description>
+      </appinfo>
+    </annotation>
+    <restriction base="decimal">
+      <minInclusive value="000"/>
+      <maxInclusive value="360"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="ValDistanceBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>A (positive) distance. </gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="decimal">
+			<minInclusive value="0"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="ValDistanceVerticalBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>A vertical distance value.
+For example, Upper and lower limits of an airspace, an ATS route, FL100, 600M, 300 FT, etc.. 
+
+This data type also allows some special non-numerical values:
+
+GND - meaning "the Surface of the Earth";
+UNL - meaning "unlimited";
+FLOOR - meaning "the bottom of the airspace"; necessary to express usages for Airspace that have a non-constant lower limit;
+CEILING - meaning "the top of the airspace"; necessary to express usages for Airspace that have a non-constant upper limit.</gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="string">
+			<pattern value="((\+|\-){0,1}[0-9]{1,8}(\.[0-9]{1,4}){0,1})|UNL|GND|FLOOR|CEILING"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="CodeVerticalDatumBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>List of vertical datums.</gml:description>
+			</appinfo>
+		</annotation>
+		<union>
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="EGM_96">
+						<annotation>
+							<appinfo>
+								<gml:description>(ICAO Doc 9674) Earth gravitational model 1996.  ICAO recommended vertical datum.</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="AHD">
+						<annotation>
+							<appinfo>
+								<gml:description>Australian Height Datum</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+					<enumeration value="NAVD88">
+						<annotation>
+							<appinfo>
+								<gml:description>North American Vertical Datum of 1988</gml:description>
+							</appinfo>
+						</annotation>
+					</enumeration>
+				</restriction>
+			</simpleType>
+			<simpleType>
+				<restriction base="string">
+					<pattern value="OTHER(:(\w|_){1,58})?"/>
+				</restriction>
+			</simpleType>
+		</union>
+	</simpleType>
+	<simpleType name="ValDistanceSignedBaseType">
+		<annotation>
+			<appinfo>
+				<gml:description>A signed distance.</gml:description>
+			</appinfo>
+		</annotation>
+		<restriction base="decimal"/>
+	</simpleType>
+</schema>

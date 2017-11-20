@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:saf="http://icao.int/saf/1.0" targetNamespace="http://icao.int/saf/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <annotation>
+      <documentation>References to WMO and ICAO Technical Regulations within this XML schema shall have
+         no formal status and are for information purposes only. Where there are differences
+         between the Technical Regulations and the schema, the Technical Regulations shall
+         take precedence. Technical Regulations may impose requirements that are not described
+         in this schema.
+      </documentation>
+      <documentation>Package containing the definition of the core SAF Features. Features in this package
+         roughly correspond to AIXM equivalents.
+      </documentation>
+      <appinfo>
+         <sch:title xmlns:sch="http://purl.oclc.org/dsdl/schematron">Schematron validation</sch:title>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="saf" uri="http://icao.int/saf/1.0"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="sam" uri="http://www.opengis.net/sampling/2.0"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="sams" uri="http://www.opengis.net/samplingSpatial/2.0"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="om" uri="http://www.opengis.net/om/2.0"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="gml" uri="http://www.opengis.net/gml/3.2"/>
+      </appinfo>
+   </annotation>
+   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+   <include schemaLocation="saf.xsd"/>
+   <element name="Airspace" substitutionGroup="gml:AbstractFeature" type="saf:AirspaceType">
+      <annotation>
+         <documentation>A defined three dimensional region of space relevant to air traffic.</documentation>
+         <appinfo>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="Airspace1">
+               <sch:rule context="//saf:Airspace/saf:designator">
+                  <sch:assert test="matches(text(), '^([A-Z]|[0-9]|[, !&#34;&amp;#\$%''\(\)\*\+\-\./:;&lt;=&gt;\?@\[\\\]\^_\|\{\}]){1,10}$')">Airspace: designator not match with pattern CodeAirspaceDesignatorType</sch:assert>
+               </sch:rule>
+            </sch:pattern>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="Airspace2">
+               <sch:rule context="//saf:Airspace/saf:name">
+                  <sch:assert test="matches(text(), '^([A-Z]|[0-9]|[, !&#34;&amp;#\$%''\(\)\*\+\-\./:;&lt;=&gt;\?@\[\\\]\^_\|\{\}]){1,60}$')">Airspace: name not match with pattern TextNameType</sch:assert>
+               </sch:rule>
+            </sch:pattern>
+         </appinfo>
+      </annotation>
+   </element>
+   <complexType name="AirspaceType">
+      <complexContent>
+         <extension base="gml:AbstractFeatureType">
+            <sequence>
+               <element maxOccurs="1" minOccurs="0" name="type" type="saf:CodeAirspaceTypeType">
+                  <annotation>
+                     <documentation>A code indicating the general structure or characteristics of a particular airspace.</documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="designator" type="saf:CodeAirspaceDesignatorTypeType">
+                  <annotation>
+                     <documentation>A published sequence of characters allowing the identification of the airspace. Description:
+                        Typical examples are the ID of the Danger, Prohibited, Temporary segregated Areas,
+                        etc.
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="name" type="saf:TextNameTypeType">
+                  <annotation>
+                     <documentation>The name given to an airspace by a responsible authority. Description: It should be
+                        written as published, with no significance to upper or lower case letters.
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="designatorICAO" type="boolean">
+                  <annotation>
+                     <documentation>A code indicating the Airspace designator is recorded in ICAO Doc. 7910.</documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="unbounded" minOccurs="0" name="geometryComponent" type="saf:AirspaceVolumePropertyType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="AirspacePropertyType">
+      <sequence minOccurs="0">
+         <element ref="saf:Airspace"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element name="Aerodrome" substitutionGroup="gml:AbstractFeature" type="saf:AerodromeType">
+      <annotation>
+         <documentation>A defined area on land or water (including any buildings, installations and equipment)
+            intended to be used either wholly or in part for the arrival, departure and surface
+            movement of aircraft/helicopters.
+         </documentation>
+         <appinfo>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="Aerodrome1">
+               <sch:rule context="//saf:Aerodrome/saf:designator">
+                  <sch:assert test="matches(text(), '^([A-Z]|\d){3,6}$')">Aerodrome: designator not match with pattern CodeAirportHeliportDesignatorType</sch:assert>
+               </sch:rule>
+            </sch:pattern>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="Aerodrome2">
+               <sch:rule context="//saf:Aerodrome/saf:name">
+                  <sch:assert test="matches(text(), '^([A-Z]|[0-9]|[, !&#34;&amp;#\$%''\(\)\*\+\-\./:;&lt;=&gt;\?@\[\\\]\^_\|\{\}]){1,60}$')">Aerodrome: name not match with pattern TextNameType</sch:assert>
+               </sch:rule>
+            </sch:pattern>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="Aerodrome3">
+               <sch:rule context="//saf:Aerodrome/saf:locationIndicatorICAO">
+                  <sch:assert test="matches(text(), '^[A-Z]{4}$')">Aerodrome: locationIndicatorICAO not match with pattern CodeICAOType</sch:assert>
+               </sch:rule>
+            </sch:pattern>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="Aerodrome4">
+               <sch:rule context="//saf:Aerodrome/saf:designatorIATA">
+                  <sch:assert test="matches(text(), '^[A-Z]{3}$')">Aerodrome: designatorIATA not match with pattern CodeIATAType</sch:assert>
+               </sch:rule>
+            </sch:pattern>
+         </appinfo>
+      </annotation>
+   </element>
+   <complexType name="AerodromeType">
+      <complexContent>
+         <extension base="gml:AbstractFeatureType">
+            <sequence>
+               <element maxOccurs="1" minOccurs="0" name="designator" type="saf:CodeAirportHeliportDesignatorTypeType">
+                  <annotation>
+                     <documentation>A coded designator for an Aerodrome/Heliport. The rules according to which this identifier
+                        should be formed are as follows: 1. If the AD/HP has an ICAO four letter location
+                        indicator, then this one will become the CODE_ID for the Aerodrome/Heliport; 2. If
+                        the AD/HP does not have an ICAO four letter location indicator, but it has an IATA
+                        three letter code,  then this one will become the CODE_ID for the Aerodrome/Heliport;
+                        3. If the AD/HP has neither an ICAO four letter location indicator nor an IATA three
+                        letter code, then an artificial generated code will be used. This will contain a group
+                        of letters and a number. The group of letters could be the 2 letter code of the State
+                        being responsible for the Aerodrome/Heliport and the number could be an integer between
+                        0001 and 9999.
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="name" type="saf:TextNameTypeType">
+                  <annotation>
+                     <documentation>The primary official name of an aerodrome as designated by an appropriate authority.</documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="locationIndicatorICAO" type="saf:CodeICAOTypeType">
+                  <annotation>
+                     <documentation>The four letter ICAO location indicator of the aerodrome/heliport, as listed in ICAO
+                        DOC 7910.
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="designatorIATA" type="saf:CodeIATATypeType">
+                  <annotation>
+                     <documentation>The identifier that is assigned to a location in accordance with rules (resolution
+                        767) governed by the International Air Transport Association (IATA).
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="fieldElevation" type="gml:LengthType">
+                  <annotation>
+                     <documentation>The vertical distance above Mean Sea Level (MSL) of the highest point of the landing
+                        area.
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="ARP" type="gml:PointPropertyType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="AerodromePropertyType">
+      <sequence minOccurs="0">
+         <element ref="saf:Aerodrome"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element name="Unit" substitutionGroup="gml:AbstractFeature" type="saf:UnitType">
+      <annotation>
+         <documentation>A generic term meaning variously all types of 'units' providing all types of services.
+            This includes particularly Air Traffic Management (ATM) Units but also units which
+            are not express verbs included in ATM such as SAR, MET, COM etc.
+         </documentation>
+         <appinfo>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="Unit1">
+               <sch:rule context="//saf:Unit/saf:name">
+                  <sch:assert test="matches(text(), '^([A-Z]|[0-9]|[, !&#34;&amp;#\$%''\(\)\*\+\-\./:;&lt;=&gt;\?@\[\\\]\^_\|\{\}]){1,60}$')">Unit: name not match with pattern TextNameType</sch:assert>
+               </sch:rule>
+            </sch:pattern>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="Unit2">
+               <sch:rule context="//saf:Unit/saf:designator">
+                  <sch:assert test="matches(text(), '^([A-Z]|[0-9])+([ \+\-/]*([A-Z]|[0-9])+){1,12}$')">Unit: designator not match with pattern CodeOrganisationDesignatorType</sch:assert>
+               </sch:rule>
+            </sch:pattern>
+         </appinfo>
+      </annotation>
+   </element>
+   <complexType name="UnitType">
+      <complexContent>
+         <extension base="gml:AbstractFeatureType">
+            <sequence>
+               <element maxOccurs="1" minOccurs="0" name="name" type="saf:TextNameTypeType">
+                  <annotation>
+                     <documentation>The full textual name of a unit. This name must be established according to the rules
+                        specified by ICAO, viz.: in the official language of the country, transposed into
+                        the Latin Alphabet where necessary.
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="type" type="saf:CodeUnitTypeType">
+                  <annotation>
+                     <documentation>A type by which the Unit is recognised, usually related to the standard type of services
+                        provided by it (e.g. area control centre, advisory centre, aeronautical information
+                        services office).
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="designator" type="saf:CodeOrganisationDesignatorTypeType">
+                  <annotation>
+                     <documentation>A coded designator associated with the Unit. For example, the ICAO Location Indicator
+                        of an ACC, as listed in DOC 7910.
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="position" type="gml:PointPropertyType">
+                  <annotation>
+                     <documentation>Identifies the geographical point of the Unit.</documentation>
+                  </annotation>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="UnitPropertyType">
+      <sequence minOccurs="0">
+         <element ref="saf:Unit"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element name="RunwayDirection" substitutionGroup="gml:AbstractFeature" type="saf:RunwayDirectionType">
+      <annotation>
+         <documentation>One of the two landing and take-off directions of a runway for which attributes like
+            TORA, TODA, LDA, etc. may be defined.
+         </documentation>
+         <appinfo>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="RunwayDirection1">
+               <sch:rule context="//saf:RunwayDirection/saf:designator">
+                  <sch:assert test="matches(text(), '^([A-Z]|[0-9]|[, !&#34;&amp;#\$%''\(\)\*\+\-\./:;&lt;=&gt;\?@\[\\\]\^_\|\{\}]){1,16}$')">RunwayDirection: designator not match with pattern TextDesignatorType</sch:assert>
+               </sch:rule>
+            </sch:pattern>
+         </appinfo>
+      </annotation>
+   </element>
+   <complexType name="RunwayDirectionType">
+      <complexContent>
+         <extension base="gml:AbstractFeatureType">
+            <sequence>
+               <element maxOccurs="1" minOccurs="0" name="designator" type="saf:TextDesignatorTypeType">
+                  <annotation>
+                     <documentation>The full textual designator of the landing and take-off direction. Examples: 27, 35L,
+                        01R.
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="trueBearing" type="gml:AngleType">
+                  <annotation>
+                     <documentation>The measured angle between the runway direction and True North at a given position.
+                        Note : The True North is the north point at which the meridian lines meet.
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="elevationTDZ" type="gml:LengthType">
+                  <annotation>
+                     <documentation>Elevation of touch down zone:   The value of the highest elevation of the runway Touch
+                        Down Zone (TDZ).  
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="usedRunway" type="saf:RunwayPropertyType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="RunwayDirectionPropertyType">
+      <sequence minOccurs="0">
+         <element ref="saf:RunwayDirection"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element abstract="true" name="Service" substitutionGroup="gml:AbstractFeature" type="saf:ServiceType">
+      <annotation>
+         <documentation>The provision of tangible goods, information, instructions, guidance, etc. to pilots,
+            flights, aircraft operators and other personnel and institutions concerned with flight
+            operations.
+         </documentation>
+         <appinfo>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="Service1">
+               <sch:rule context="//saf:Service/saf:name">
+                  <sch:assert test="matches(text(), '^([A-Z]|[0-9]|[, !&#34;&amp;#\$%''\(\)\*\+\-\./:;&lt;=&gt;\?@\[\\\]\^_\|\{\}]){1,60}$')">Service: name not match with pattern TextNameType</sch:assert>
+               </sch:rule>
+            </sch:pattern>
+         </appinfo>
+      </annotation>
+   </element>
+   <complexType abstract="true" name="ServiceType">
+      <complexContent>
+         <extension base="gml:AbstractFeatureType">
+            <sequence>
+               <element maxOccurs="1" minOccurs="0" name="flightOperations" type="saf:CodeFlightDestinationTypeType">
+                  <annotation>
+                     <documentation>The destination (arriving, departing, etc.) of the flights for which the information
+                        is provided.
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="name" type="saf:TextNameTypeType">
+                  <annotation>
+                     <documentation>A free text name by which the service is identified.</documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="serviceProvider" type="saf:UnitPropertyType"/>
+               <element maxOccurs="1" minOccurs="0" name="location" type="gml:PointPropertyType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="ServicePropertyType">
+      <sequence minOccurs="0">
+         <element ref="saf:Service"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element name="Runway" substitutionGroup="gml:AbstractFeature" type="saf:RunwayType">
+      <annotation>
+         <documentation>A defined rectangular area on a land aerodrome/heliport prepared for the landing and
+            take-off of aircraft. Note: this includes the concept of Final Approach and Take-Off
+            Area (FATO) for helicopters.
+         </documentation>
+         <appinfo>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron" id="Runway1">
+               <sch:rule context="//saf:Runway/saf:designator">
+                  <sch:assert test="matches(text(), '^([A-Z]|[0-9]|[, !&#34;&amp;#\$%''\(\)\*\+\-\./:;&lt;=&gt;\?@\[\\\]\^_\|\{\}]){1,16}$')">Runway: designator not match with pattern TextDesignatorType</sch:assert>
+               </sch:rule>
+            </sch:pattern>
+         </appinfo>
+      </annotation>
+   </element>
+   <complexType name="RunwayType">
+      <complexContent>
+         <extension base="gml:AbstractFeatureType">
+            <sequence>
+               <element maxOccurs="1" minOccurs="0" name="designator" type="saf:TextDesignatorTypeType">
+                  <annotation>
+                     <documentation>The full textual designator of the runway, used to uniquely identify it at an aerodrome/heliport
+                        which has more than one. E.g. 09/27, 02R/20L, RWY 1.
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="associatedAirportHeliport" type="saf:AerodromePropertyType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="RunwayPropertyType">
+      <sequence minOccurs="0">
+         <element ref="saf:Runway"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element name="AirspaceVolume" substitutionGroup="gml:AbstractGML" type="saf:AirspaceVolumeType">
+      <annotation>
+         <documentation>A defined volume in the air, described as horizontal projection with vertical limits.</documentation>
+      </annotation>
+   </element>
+   <complexType name="AirspaceVolumeType">
+      <complexContent>
+         <extension base="gml:AbstractGMLType">
+            <sequence>
+               <element maxOccurs="1" minOccurs="0" name="upperLimit" type="gml:LengthType">
+                  <annotation>
+                     <documentation>The vertical position of the airspace ceiling.</documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="upperLimitReference" type="saf:CodeVerticalReferenceTypeType">
+                  <annotation>
+                     <documentation>The reference surface used for the value of the upper limit. For example, Mean Sea
+                        Level, Ground, standard pressure,  etc..
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="lowerLimit" type="gml:LengthType">
+                  <annotation>
+                     <documentation>The vertical position of the airspace floor.</documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="lowerLimitReference" type="saf:CodeVerticalReferenceTypeType">
+                  <annotation>
+                     <documentation>The reference surface used for the value of the lower limit. For example, Mean Sea
+                        Level, Ground, standard pressure,  etc..
+                     </documentation>
+                  </annotation>
+               </element>
+               <element maxOccurs="1" minOccurs="0" name="horizontalProjection" type="gml:SurfacePropertyType"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="AirspaceVolumePropertyType">
+      <sequence minOccurs="0">
+         <element ref="saf:AirspaceVolume"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+</schema>

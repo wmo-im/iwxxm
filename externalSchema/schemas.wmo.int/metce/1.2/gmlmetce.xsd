@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+        xmlns:gml="http://www.opengis.net/gml/3.2"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.opengis.net/gml/3.2"
+        elementFormDefault="qualified"
+        version="3.2.1.2">
+   <annotation>
+      <documentation>GML Subset schema for gml:AbstractFeature,gml:AbstractFeatureType,gml:AssociationAttributeGroup,gml:OwnershipAttributeGroup,gml:PointPropertyType,gml:CodeType,gml:AbstractGML,gml:AbstractGMLType,gml:UnitOfMeasureType,gml:AbstractObject, written by gmlSubset.xslt.</documentation>
+   </annotation>
+   <import namespace="http://www.w3.org/1999/xlink"
+	   schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<!-- ================================================= --><element name="AbstractFeature"
+            type="gml:AbstractFeatureType"
+            abstract="true"
+            substitutionGroup="gml:AbstractGML">
+		    <annotation>
+			      <documentation>This abstract element serves as the head of a substitution group which may contain any elements whose content model is derived from gml:AbstractFeatureType.  This may be used as a variable in the construction of content models.  
+gml:AbstractFeature may be thought of as "anything that is a GML feature" and may be used to define variables or templates in which the value of a GML property is "any feature". This occurs in particular in a GML feature collection where the feature member properties contain one or multiple copies of gml:AbstractFeature respectively.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="AbstractFeatureType" abstract="true">
+		    <annotation>
+			      <documentation>The basic feature model is given by the gml:AbstractFeatureType.
+The content model for gml:AbstractFeatureType adds two specific properties suitable for geographic features to the content model defined in gml:AbstractGMLType. 
+The value of the gml:boundedBy property describes an envelope that encloses the entire feature instance, and is primarily useful for supporting rapid searching for features that occur in a particular location. 
+The value of the gml:location property describes the extent, position or relative location of the feature.</documentation>
+		    </annotation>
+		    <complexContent>
+			      <extension base="gml:AbstractGMLType">
+				        <sequence>
+					          <element ref="gml:boundedBy" minOccurs="0"/>
+					          <element ref="gml:location" minOccurs="0"/>
+				        </sequence>
+			      </extension>
+		    </complexContent>
+	  </complexType>
+<!-- ================================================= --><complexType name="AbstractGMLType" abstract="true">
+		    <sequence>
+			      <group ref="gml:StandardObjectProperties"/>
+		    </sequence>
+		    <attribute ref="gml:id" use="required"/>
+	  </complexType>
+<!-- ================================================= --><group name="StandardObjectProperties">
+		    <sequence>
+			      <element ref="gml:metaDataProperty" minOccurs="0" maxOccurs="unbounded"/>
+			      <element ref="gml:description" minOccurs="0"/>
+			      <element ref="gml:descriptionReference" minOccurs="0"/>
+			      <element ref="gml:identifier" minOccurs="0"/>
+			      <element ref="gml:name" minOccurs="0" maxOccurs="unbounded"/>
+		    </sequence>
+	  </group>
+<!-- ================================================= --><element name="metaDataProperty" type="gml:MetaDataPropertyType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="MetaDataPropertyType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+		    <sequence minOccurs="0">
+			      <element ref="gml:AbstractMetaData"/>
+		    </sequence>
+		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+		    <attribute name="about" type="anyURI"/>
+	  </complexType>
+<!-- ================================================= --><element name="AbstractMetaData"
+            type="gml:AbstractMetaDataType"
+            abstract="true"
+            substitutionGroup="gml:AbstractObject">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="AbstractMetaDataType" abstract="true" mixed="true">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+		    <sequence/>
+		    <attribute ref="gml:id"/>
+	  </complexType>
+<!-- ================================================= --><attribute name="id" type="ID">
+		    <annotation>
+			      <documentation>The attribute gml:id supports provision of a handle for the XML element representing a GML Object. Its use is mandatory for all GML objects. It is of XML type ID, so is constrained to be unique in the XML document within which it occurs.</documentation>
+		    </annotation>
+	  </attribute>
+<!-- ================================================= --><element name="AbstractObject" abstract="true">
+		    <annotation>
+			      <documentation>This element has no type defined, and is therefore implicitly (according to the rules of W3C XML Schema) an XML Schema anyType. It is used as the head of an XML Schema substitution group which unifies complex content and certain simple content elements used for datatypes in GML, including the gml:AbstractGML substitution group.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><attributeGroup name="AssociationAttributeGroup">
+		    <annotation>
+			      <documentation>XLink components are the standard method to support hypertext referencing in XML. An XML Schema attribute group, gml:AssociationAttributeGroup, is provided to support the use of Xlinks as the method for indicating the value of a property by reference in a uniform manner in GML.</documentation>
+		    </annotation>
+		    <attributeGroup ref="xlink:simpleAttrs"/>
+		    <attribute name="nilReason" type="gml:NilReasonType"/>
+		    <attribute ref="gml:remoteSchema">
+			      <annotation>
+				        <appinfo>deprecated</appinfo>
+			      </annotation>
+		    </attribute>
+	  </attributeGroup>
+<!-- ================================================= --><xs:attribute xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 xmlns="http://www.w3.org/1999/xhtml"
+                 name="lang">
+      <xs:annotation>
+         <xs:documentation>
+            <div>
+     
+               <h3>lang (as an attribute name)</h3>
+               <p>
+       denotes an attribute whose value
+       is a language code for the natural language of the content of
+       any element; its value is inherited.  This name is reserved
+       by virtue of its definition in the XML specification.</p>
+     
+            </div>
+            <div>
+               <h4>Notes</h4>
+               <p>
+      Attempting to install the relevant ISO 2- and 3-letter
+      codes as the enumerated possible values is probably never
+      going to be a realistic possibility.  
+     </p>
+               <p>
+      See BCP 47 at <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">
+       http://www.rfc-editor.org/rfc/bcp/bcp47.txt</a>
+      and the IANA language subtag registry at
+      <a href="http://www.iana.org/assignments/language-subtag-registry">
+       http://www.iana.org/assignments/language-subtag-registry</a>
+      for further information.
+     </p>
+               <p>
+      The union allows for the 'un-declaration' of xml:lang with
+      the empty string.
+     </p>
+            </div>
+         </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+         <xs:union memberTypes="xs:language">
+            <xs:simpleType>    
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value=""/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:union>
+      </xs:simpleType>
+   </xs:attribute>
+<!-- ================================================= --><simpleType name="NilReasonType">
+		    <annotation>
+			      <documentation>gml:NilReasonType defines a content model that allows recording of an explanation for a void value or other exception.
+gml:NilReasonType is a union of the following enumerated values:
+-	inapplicable there is no value
+-	missing the correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist
+-	template the value will be available later
+-	unknown the correct value is not known to, and not computable by, the sender of this data. However, a correct value probably exists
+-	withheld the value is not divulged
+-	other:text other brief explanation, where text is a string of two or more characters with no included spaces
+and
+-	anyURI which should refer to a resource which describes the reason for the exception
+A particular community may choose to assign more detailed semantics to the standard values provided. Alternatively, the URI method enables a specific or more complete explanation for the absence of a value to be provided elsewhere and indicated by-reference in an instance document.
+gml:NilReasonType is used as a member of a union in a number of simple content types where it is necessary to permit a value from the NilReasonType union as an alternative to the primary type.</documentation>
+		    </annotation>
+		    <union memberTypes="gml:NilReasonEnumeration anyURI"/>
+	  </simpleType>
+<!-- ================================================= --><simpleType name="NilReasonEnumeration">
+		    <union>
+			      <simpleType>
+				        <restriction base="string">
+					          <enumeration value="inapplicable"/>
+					          <enumeration value="missing"/>
+					          <enumeration value="template"/>
+					          <enumeration value="unknown"/>
+					          <enumeration value="withheld"/>
+				        </restriction>
+			      </simpleType>
+			      <simpleType>
+				        <restriction base="string">
+					          <pattern value="other:\w{2,}"/>
+				        </restriction>
+			      </simpleType>
+		    </union>
+	  </simpleType>
+<!-- ================================================= -->
+<!-- ================================================= --><attribute name="remoteSchema" type="anyURI">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+	  </attribute>
+<!-- ================================================= --><element name="description" type="gml:StringOrRefType">
+		    <annotation>
+			      <documentation>The value of this property is a text description of the object. gml:description uses gml:StringOrRefType as its content model, so it may contain a simple text string content, or carry a reference to an external description. The use of gml:description to reference an external description has been deprecated and replaced by the gml:descriptionReference property.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="StringOrRefType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+		    <simpleContent>
+			      <extension base="string">
+				        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+			      </extension>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= -->
+<!-- ================================================= --><element name="descriptionReference" type="gml:ReferenceType">
+		    <annotation>
+			      <documentation>The value of this property is a remote text description of the object. The xlink:href attribute of the gml:descriptionReference property references the external description.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="ReferenceType">
+		    <annotation>
+			      <documentation>gml:ReferenceType is intended to be used in application schemas directly, if a property element shall use a "by-reference only" encoding.</documentation>
+		    </annotation>
+		    <sequence/>
+		    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+	  </complexType>
+<!-- ================================================= --><attributeGroup name="OwnershipAttributeGroup">
+		    <annotation>
+			      <documentation>Encoding a GML property inline vs. by-reference shall not imply anything about the "ownership" of the contained or referenced GML Object, i.e. the encoding style shall not imply any "deep-copy" or "deep-delete" semantics. To express ownership over the contained or referenced GML Object, the gml:OwnershipAttributeGroup attribute group may be added to object-valued property elements. If the attribute group is not part of the content model of such a property element, then the value may not be "owned".
+When the value of the owns attribute is "true", the existence of inline or referenced object(s) depends upon the existence of the parent object.</documentation>
+		    </annotation>
+		    <attribute name="owns" type="boolean" default="false"/>
+	  </attributeGroup>
+<!-- ================================================= --><element name="identifier" type="gml:CodeWithAuthorityType">
+		    <annotation>
+			      <documentation>Often, a special identifier is assigned to an object by the maintaining authority with the intention that it is used in references to the object For such cases, the codeSpace shall be provided. That identifier is usually unique either globally or within an application domain. gml:identifier is a pre-defined property for such identifiers.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="CodeWithAuthorityType">
+		    <annotation>
+			      <documentation>gml:CodeWithAuthorityType requires that the codeSpace attribute is provided in an instance.</documentation>
+		    </annotation>
+		    <simpleContent>
+			      <restriction base="gml:CodeType">
+				        <attribute name="codeSpace" type="anyURI" use="required"/>
+			      </restriction>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><complexType name="CodeType">
+		    <annotation>
+			      <documentation>gml:CodeType is a generalized type to be used for a term, keyword or name.
+It adds a XML attribute codeSpace to a term, where the value of the codeSpace attribute (if present) shall indicate a dictionary, thesaurus, classification scheme, authority, or pattern for the term.</documentation>
+		    </annotation>
+		    <simpleContent>
+			      <extension base="string">
+				        <attribute name="codeSpace" type="anyURI"/>
+			      </extension>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><element name="name" type="gml:CodeType">
+		    <annotation>
+			      <documentation>The gml:name property provides a label or identifier for the object, commonly a descriptive name. An object may have several names, typically assigned by different authorities. gml:name uses the gml:CodeType content model.  The authority for a name is indicated by the value of its (optional) codeSpace attribute.  The name may or may not be unique, as determined by the rules of the organization responsible for the codeSpace.  In common usage there will be one name per authority, so a processing application may select the name from its preferred codeSpace.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><element name="boundedBy" type="gml:BoundingShapeType" nillable="true">
+		    <annotation>
+			      <documentation>This property describes the minimum bounding box or rectangle that encloses the entire feature.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="BoundingShapeType">
+		    <sequence>
+			      <choice>
+				        <element ref="gml:Envelope"/>
+				        <element ref="gml:Null"/>
+			      </choice>
+		    </sequence>
+		    <attribute name="nilReason" type="gml:NilReasonType"/>
+	  </complexType>
+<!-- ================================================= --><element name="Envelope"
+            type="gml:EnvelopeType"
+            substitutionGroup="gml:AbstractObject">
+		    <annotation>
+			      <documentation>Envelope defines an extent using a pair of positions defining opposite corners in arbitrary dimensions. The first direct position is the "lower corner" (a coordinate position consisting of all the minimal ordinates for each dimension for all points within the envelope), the second one the "upper corner" (a coordinate position consisting of all the maximal ordinates for each dimension for all points within the envelope).
+The use of the properties "coordinates" and "pos" has been deprecated. The explicitly named properties "lowerCorner" and "upperCorner" shall be used instead.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="EnvelopeType">
+		    <choice>
+			      <sequence>
+				        <element name="lowerCorner" type="gml:DirectPositionType"/>
+				        <element name="upperCorner" type="gml:DirectPositionType"/>
+			      </sequence>
+			      <element ref="gml:pos" minOccurs="2" maxOccurs="2">
+				        <annotation>
+					          <appinfo>deprecated</appinfo>
+				        </annotation>
+			      </element>
+			      <element ref="gml:coordinates"/>
+		    </choice>
+		    <attributeGroup ref="gml:SRSReferenceGroup"/>
+	  </complexType>
+<!-- ================================================= --><complexType name="DirectPositionType">
+		    <annotation>
+			      <documentation>Direct position instances hold the coordinates for a position within some coordinate reference system (CRS). Since direct positions, as data types, will often be included in larger objects (such as geometry elements) that have references to CRS, the srsName attribute will in general be missing, if this particular direct position is included in a larger element with such a reference to a CRS. In this case, the CRS is implicitly assumed to take on the value of the containing object's CRS.
+if no srsName attribute is given, the CRS shall be specified as part of the larger context this geometry element is part of, typically a geometric object like a point, curve, etc.</documentation>
+		    </annotation>
+		    <simpleContent>
+			      <extension base="gml:doubleList">
+				        <attributeGroup ref="gml:SRSReferenceGroup"/>
+			      </extension>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><simpleType name="doubleList">
+		    <annotation>
+			      <documentation>A type for a list of values of the respective simple type.</documentation>
+		    </annotation>
+		    <list itemType="double"/>
+	  </simpleType>
+<!-- ================================================= -->
+<!-- ================================================= --><attributeGroup name="SRSReferenceGroup">
+		    <annotation>
+			      <documentation>The attribute group SRSReferenceGroup is an optional reference to the CRS used by this geometry, with optional additional information to simplify the processing of the coordinates when a more complete definition of the CRS is not needed.
+In general the attribute srsName points to a CRS instance of gml:AbstractCoordinateReferenceSystem. For well-known references it is not required that the CRS description exists at the location the URI points to. 
+If no srsName attribute is given, the CRS shall be specified as part of the larger context this geometry element is part of.</documentation>
+		    </annotation>
+		    <attribute name="srsName" type="anyURI"/>
+		    <attribute name="srsDimension" type="positiveInteger"/>
+		    <attributeGroup ref="gml:SRSInformationGroup"/>
+	  </attributeGroup>
+<!-- ================================================= --><attributeGroup name="SRSInformationGroup">
+		    <annotation>
+			      <documentation>The attributes uomLabels and axisLabels, defined in the SRSInformationGroup attribute group, are optional additional and redundant information for a CRS to simplify the processing of the coordinate values when a more complete definition of the CRS is not needed. This information shall be the same as included in the complete definition of the CRS, referenced by the srsName attribute. When the srsName attribute is included, either both or neither of the axisLabels and uomLabels attributes shall be included. When the srsName attribute is omitted, both of these attributes shall be omitted.
+The attribute axisLabels is an ordered list of labels for all the axes of this CRS. The gml:axisAbbrev value should be used for these axis labels, after spaces and forbidden characters are removed. When the srsName attribute is included, this attribute is optional. When the srsName attribute is omitted, this attribute shall also be omitted.
+The attribute uomLabels is an ordered list of unit of measure (uom) labels for all the axes of this CRS. The value of the string in the gml:catalogSymbol should be used for this uom labels, after spaces and forbidden characters are removed. When the axisLabels attribute is included, this attribute shall also be included. When the axisLabels attribute is omitted, this attribute shall also be omitted.</documentation>
+		    </annotation>
+		    <attribute name="axisLabels" type="gml:NCNameList"/>
+		    <attribute name="uomLabels" type="gml:NCNameList"/>
+	  </attributeGroup>
+<!-- ================================================= --><simpleType name="NCNameList">
+		    <annotation>
+			      <documentation>A type for a list of values of the respective simple type.</documentation>
+		    </annotation>
+		    <list itemType="NCName"/>
+	  </simpleType>
+<!-- ================================================= -->
+<!-- ================================================= --><element name="pos" type="gml:DirectPositionType"/>
+<!-- ================================================= --><element name="coordinates" type="gml:CoordinatesType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="CoordinatesType">
+		    <annotation>
+			      <documentation>This type is deprecated for tuples with ordinate values that are numbers.
+CoordinatesType is a text string, intended to be used to record an array of tuples or coordinates. 
+While it is not possible to enforce the internal structure of the string through schema validation, some optional attributes have been provided in previous versions of GML to support a description of the internal structure. These attributes are deprecated. The attributes were intended to be used as follows:
+Decimal	symbol used for a decimal point (default="." a stop or period)
+cs        	symbol used to separate components within a tuple or coordinate string (default="," a comma)
+ts        	symbol used to separate tuples or coordinate strings (default=" " a space)
+Since it is based on the XML Schema string type, CoordinatesType may be used in the construction of tables of tuples or arrays of tuples, including ones that contain mixed text and numeric values.</documentation>
+		    </annotation>
+		    <simpleContent>
+			      <extension base="string">
+				        <attribute name="decimal" type="string" default="."/>
+				        <attribute name="cs" type="string" default=","/>
+				        <attribute name="ts" type="string" default=" "/>
+			      </extension>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><element name="Null" type="gml:NilReasonType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><element name="location" type="gml:LocationPropertyType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="LocationPropertyType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+		    <sequence>
+			      <choice>
+				        <element ref="gml:AbstractGeometry"/>
+				        <element ref="gml:LocationKeyWord"/>
+				        <element ref="gml:LocationString"/>
+				        <element ref="gml:Null"/>
+			      </choice>
+		    </sequence>
+		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+	  </complexType>
+<!-- ================================================= --><element name="AbstractGeometry"
+            type="gml:AbstractGeometryType"
+            abstract="true"
+            substitutionGroup="gml:AbstractGML">
+		    <annotation>
+			      <documentation>The AbstractGeometry element is the abstract head of the substitution group for all geometry elements of GML. This includes pre-defined and user-defined geometry elements. Any geometry element shall be a direct or indirect extension/restriction of AbstractGeometryType and shall be directly or indirectly in the substitution group of AbstractGeometry.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="AbstractGeometryType" abstract="true">
+		    <annotation>
+			      <documentation>All geometry elements are derived directly or indirectly from this abstract supertype. A geometry element may have an identifying attribute (gml:id), one or more names (elements identifier and name) and a description (elements description and descriptionReference) . It may be associated with a spatial reference system (attribute group gml:SRSReferenceGroup).
+The following rules shall be adhered to:
+-	Every geometry type shall derive from this abstract type.
+-	Every geometry element (i.e. an element of a geometry type) shall be directly or indirectly in the substitution group of AbstractGeometry.</documentation>
+		    </annotation>
+		    <complexContent>
+			      <extension base="gml:AbstractGMLType">
+				        <attributeGroup ref="gml:SRSReferenceGroup"/>
+			      </extension>
+		    </complexContent>
+	  </complexType>
+<!-- ================================================= --><element name="AbstractGML"
+            type="gml:AbstractGMLType"
+            abstract="true"
+            substitutionGroup="gml:AbstractObject">
+		    <annotation>
+			      <documentation>The abstract element gml:AbstractGML is "any GML object having identity".   It acts as the head of an XML Schema substitution group, which may include any element which is a GML feature, or other object, with identity.  This is used as a variable in content models in GML core and application schemas.  It is effectively an abstract superclass for all GML objects.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><element name="LocationKeyWord" type="gml:CodeType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><element name="LocationString" type="gml:StringOrRefType">
+		    <annotation>
+			      <appinfo>deprecated</appinfo>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="PointPropertyType">
+		    <annotation>
+			      <documentation>A property that has a point as its value domain may either be an appropriate geometry element encapsulated in an element of this type or an XLink reference to a remote geometry element (where remote includes geometry elements located elsewhere in the same document). Either the reference or the contained element shall be given, but neither both nor none.</documentation>
+		    </annotation>
+		    <sequence minOccurs="0">
+			      <element ref="gml:Point"/>
+		    </sequence>
+		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+		    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	  </complexType>
+<!-- ================================================= --><element name="Point"
+            type="gml:PointType"
+            substitutionGroup="gml:AbstractGeometricPrimitive">
+		    <annotation>
+			      <documentation>A Point is defined by a single coordinate tuple. The direct position of a point is specified by the pos element which is of type DirectPositionType.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="PointType">
+		    <complexContent>
+			      <extension base="gml:AbstractGeometricPrimitiveType">
+				        <sequence>
+					          <choice>
+						            <element ref="gml:pos"/>
+						            <element ref="gml:coordinates"/>
+					          </choice>
+				        </sequence>
+			      </extension>
+		    </complexContent>
+	  </complexType>
+<!-- ================================================= --><complexType name="AbstractGeometricPrimitiveType" abstract="true">
+		    <annotation>
+			      <documentation>gml:AbstractGeometricPrimitiveType is the abstract root type of the geometric primitives. A geometric primitive is a geometric object that is not decomposed further into other primitives in the system. All primitives are oriented in the direction implied by the sequence of their coordinate tuples.</documentation>
+		    </annotation>
+		    <complexContent>
+			      <extension base="gml:AbstractGeometryType"/>
+		    </complexContent>
+	  </complexType>
+<!-- ================================================= --><element name="AbstractGeometricPrimitive"
+            type="gml:AbstractGeometricPrimitiveType"
+            abstract="true"
+            substitutionGroup="gml:AbstractGeometry">
+		    <annotation>
+			      <documentation>The AbstractGeometricPrimitive element is the abstract head of the substitution group for all (pre- and user-defined) geometric primitives.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="UnitOfMeasureType">
+		    <sequence/>
+		    <attribute name="uom" type="gml:UomIdentifier" use="required"/>
+	  </complexType>
+<!-- ================================================= --><simpleType name="UomIdentifier">
+		    <annotation>
+			      <documentation>The simple type gml:UomIdentifer defines the syntax and value space of the unit of measure identifier.</documentation>
+		    </annotation>
+		    <union memberTypes="gml:UomSymbol gml:UomURI"/>
+	  </simpleType>
+<!-- ================================================= --><simpleType name="UomSymbol">
+		    <annotation>
+			      <documentation>This type specifies a character string of length at least one, and restricted such that it must not contain any of the following characters: ":" (colon), " " (space), (newline), (carriage return), (tab). This allows values corresponding to familiar abbreviations, such as "kg", "m/s", etc. 
+It is recommended that the symbol be an identifier for a unit of measure as specified in the "Unified Code of Units of Measure" (UCUM) (http://aurora.regenstrief.org/UCUM). This provides a set of symbols and a grammar for constructing identifiers for units of measure that are unique, and may be easily entered with a keyboard supporting the limited character set known as 7-bit ASCII. ISO 2955 formerly provided a specification with this scope, but was withdrawn in 2001. UCUM largely follows ISO 2955 with modifications to remove ambiguities and other problems.</documentation>
+		    </annotation>
+		    <restriction base="string">
+			      <pattern value="[^: \n\r\t]+"/>
+		    </restriction>
+	  </simpleType>
+<!-- ================================================= --><simpleType name="UomURI">
+		    <annotation>
+			      <documentation>This type specifies a URI, restricted such that it must start with one of the following sequences: "#", "./", "../", or a string of characters followed by a ":". These patterns ensure that the most common URI forms are supported, including absolute and relative URIs and URIs that are simple fragment identifiers, but prohibits certain forms of relative URI that could be mistaken for unit of measure symbol . 
+NOTE	It is possible to re-write such a relative URI to conform to the restriction (e.g. "./m/s").
+In an instance document, on elements of type gml:MeasureType the mandatory uom attribute shall carry a value corresponding to either 
+-	a conventional unit of measure symbol,
+-	a link to a definition of a unit of measure that does not have a conventional symbol, or when it is desired to indicate a precise or variant definition.</documentation>
+		    </annotation>
+		    <restriction base="anyURI">
+			      <pattern value="([a-zA-Z][a-zA-Z0-9\-\+\.]*:|\.\./|\./|#).*"/>
+		    </restriction>
+	  </simpleType>
+</schema>

@@ -1,0 +1,23 @@
+
+====================================
+1.0 - September 2013
+====================================
++ Added "FIR/UIR" airspace type in support of Annex 3 reporting requirements
+
+====================================
+1.0 Release Candidate 2 - May 2013
+====================================
+* Changed the package name from "Simple Aviation Features" to "Simple Aeronautical Features"
+* Replaced all aeronautical features with simplified versions of AIXM classes.
+    For example, FIR was replaced by the AIXM class named Airspace with type "FIR", and the MWO class was
+    replaced by the AIXM class named Unit with appropriate type
+    AirportHeliport was named Aerodrome
++ Added location and identification information for all aeronautical features in a form consistent with
+    AIXM (see above)
++ Added examples of several SAF features
+
+=======================================
+1.0 Release Candidate 1 - December 2012
+=======================================
+Initial model release including simplified representations of AirspaceSolid and the
+aeronautical domain features required by ICAO Annex 3 Amendment 75.

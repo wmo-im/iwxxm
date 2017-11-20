@@ -1,0 +1,77 @@
+====================================
+1.1 -
+====================================
+Nil
+
+====================================
+1.0 - September 2013
+====================================
+Nil
+
+====================================
+1.0 Release Candidate 2 - May 2013
+====================================
+* Changed targetNamespace for Package "«ApplicationSchema» OPM" to: http://def.wmo.int/opm/2013
+* Changed version for Package "«ApplicationSchema» OPM" to 1.0RC2
+* Renamed Package "«Leaf» ObservableProperty" to "«Leaf» Observable Property"
+* Changed xsdDocument tagged value for (re-named) Package "«Leaf» Observable Property" to 
+    "observable-property.xsd"; general style change for file-names to be all lower-case
+- Removed stereotype «Type» from Class "ObservableProperty" from Package "«Leaf» Procedure"; 
+    use of this stereotype is deprecated in favour of un-stereotyped Classes
+- Removed stereotype «Type» from Class "AbstractObservableProperty" from Package "«Leaf» Procedure"; 
+    use of this stereotype is deprecated in favour of un-stereotyped Classes
+- Removed stereotype «Type» from Class "CompositeObservableProperty" from Package "«Leaf» Procedure"; 
+    use of this stereotype is deprecated in favour of un-stereotyped Classes
+- Removed stereotype «Type» from Class "QualifiedObservableProperty" from Package "«Leaf» Procedure"; 
+    use of this stereotype is deprecated in favour of un-stereotyped Classes
+* Updated URI for "vocabulary" tagged value for Class "«CodeList» StatisticalFunctionCode" defined 
+    in Package "«Leaf» Observable Property": "http://codes.wmo.int/grib2/codeflag/4.10"
+* Amended documentation for Class "«CodeList» StatisticalFunctionCode" to refer to (primarily) "WMO No. 
+    306 Vol I.2 Part B FM 92 GRIB code-table 4.10 'Type of statistical processing'" and (supplemental) 
+    "WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 08 023 'First-order statistics'"
+* Updated "codeSpace" tagged value for Class "«CodeList» StatisticalFunctionCode" defined in Package 
+    "«Leaf» Observable Property": "http://codes.wmo.int/grib2"
+* Updated "dictionaryIdentifier" tagged value for Class "«CodeList» StatisticalFunctionCode" defined 
+    in Package "«Leaf» Observable Property": "http://codes.wmo.int/grib2/codeflag/4.10"
+* Updated "memberIdentifierStem" tagged value for Class "«CodeList» StatisticalFunctionCode" defined 
+    in Package "«Leaf» Observable Property": "http://codes.wmo.int/grib2/codeflag/4.10"
+* Updated Attribute "aggregationTimePeriod" (Class "«DataType» StatisticalQualifier" from Package 
+    "«Leaf» Observable Property") to specify type TM_PeriodDuration (from ISO 19108)
+* Amended name of Attribute "uom" from Classes "QualifiedObservableProperty", "«DataType» 
+    ScalarConstraint" and "«DataType» RangeConstraint" to "unitOfMeasure"; this attribute is type 
+    UnitOfMeasure (from ISO 19103 Basic-types) which itself includes the attribute "uom" - the resulting 
+    serialisation would appear odd 
+* Amended Attribute “unitOfMeasure” from Classes “«DataType» ScalarConstraint“ and “«DataType» 
+    RangeConstraint“ to have cardinality [0..1]; amended following assessment of INSPIRE implementation of 
+    the Observable Property Model
+* Amended ordering of Attributes from Class "«DataType» ScalarConstraint" to ensure that "unitOfMeasure"
+    precedes "value"; set taggedValue "sequenceNumber" accordingly
+* Amended taggedValues for Attribute "count" from Class "CompositeObservableProperty" to allow 
+    serialisation as XML attribute; xsdAsAttribute = "true"
++ Added new Class “«enumeration» ComparisonOperator” to provide a set of (simple) mathematical operators 
+    (e.g. “ne”, “lt”, “le”, “eq”, “ge”, “gt”) – this shall be equivalent to the INSPIRE Class “«enumeration» 
+    ComparisonOperatorValue” that has values “equalTo”, “notEqualTo”, “lessThan”, “greaterThan”, 
+    “lessThanOrEqualTo” and “greaterThanOrEqualTo”; included following assessment of INSPIRE implementation 
+    of the Observable Property Model
+* Amended Attribute “value” from Class “«DataType» ScalarConstraint" to specify type "Number"
++ Added Attribute “comparisonOperator” (type “«enumeration» ComparisonOperator”) to Class “«DataType» 
+    ScalarConstraint” with cardinality [1]; mark for serialisation as XML Attribute by specifying taggedValue 
+    xsdAsAttribute = "true"; included following assessment of INSPIRE implementation of the Observable 
+    Property Model
++ Added Attributes “startComparison” and “endComparison” (both type “«enumeration» ComparisonOperator”) to 
+    Class “«DataType» RangeBounds” with cardinality [1]; mark both Attributes for serialisation as XML 
+    attribute by specifying taggedValue xsdAsAttribute = "true"; added following assessment of INSPIRE 
+    implementation of the Observable Property Model
+* Amended as necessary values for taggedValue "sequenceNumber" to ensure correct ordering of properties in 
+    resulting XSD serialisation; paying particular attention to Associations
+* Various improvements in model documentation
+
+Note: for 1.0 Release Candidate 2 the WMO codes registry is deployed at http://test.wmocodes.info
+    rather than the eventual target location of http://codes.wmo.int
+
+=======================================
+1.0 Release Candidate 1 - December 2012
+=======================================
+Initial model release based on work from Open Geospatial Consortium (OGC) Sensor Web Enablement (SWE)
+    standards working group and subsequent revision within INSPIRE Data Specification Thematic Working 
+    Groups.

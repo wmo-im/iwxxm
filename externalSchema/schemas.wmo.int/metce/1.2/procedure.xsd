@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://def.wmo.int/metce/2013" version="1.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns:opm="http://def.wmo.int/opm/2013" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://def.wmo.int/opm/2013" schemaLocation="http://schemas.wmo.int/opm/1.2/opm.xsd"></import>
+	<import namespace="http://www.opengis.net/om/2.0" schemaLocation="http://schemas.opengis.net/om/2.0/observation.xsd"></import>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
+	<annotation>
+		<documentation>The 'Procedure' package provides a concrete implementation of the abstract OM_Process class (from ISO 19156).
+
+The implementation is intended to support the following requirements:
+1) reference to supporting documentation (attribute "documentationRef"); e.g. online documentation describing the procedure in detail;
+2) specification of parameters that remain fixed within a particular configuration of the procedure (Configuration); a soft-typed approach is used here following the pattern adopted for OM_Observation/parameter;
+3) specification of the resolution [1] with which each observed physical phenomenon is measured; and
+4) specification of the measuring interval [2] of the instrument or sensor for each observed physical phenomenon.
+
+[1] Resolution: smallest change in a quantity being measured that causes a perceptible change in the corresponding indication (from the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf])
+[2] Measuring interval: set of values of quantities of the same kind that can be measured by a given measuring instrument or measuring system with specified instrumental uncertainty, under defined conditions (from the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf])
+
+References to WMO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
+	</annotation>
+	<element name="Process" type="metce:ProcessType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Class 'OM_Process' (related to OM_Observation via the 'Procedure' Association) is used to define the process(es) involved in generating an observation. An instance of OM_Process is often an instrument or sensor (perhaps even a sensor in a given calibrated state), but it may be a human observer executing a set of instructions, a simulator or process algorithm. The 'Procedure' should provide sufficient information to interpret the result of an observation; thus if a sensor is recalibrated or its height above local ground is changed, a new instance of OM_Process should be created and associated with subsequent observations from that sensor (at least until the sensor is changed again).
+
+Predominantly we expect the Process instance to be externally published / defined and 'static' (e.g. perhaps changing less often than once per month due to amendments to operational protocols etc.).
+
+The class 'Process' provides a concrete implementation of OM_Process (from ISO 19156).
+
+The implementation is intended to support the following requirements:
+1) reference to supporting documentation (documentationRef); e.g. online documentation describing the procedure in detail;
+2) specification of parameters that remain fixed within a particular configuration of the procedure (Configuration); a soft-typed approach is used here following the pattern adopted for OM_Observation/parameter;
+3) specification of the resolution [1] with which each observed physical phenomenon is measured; and
+4) specification of the measuring interval [2] of the instrument or sensor for each observed physical phenomenon.
+
+[1] Resolution: smallest change in a quantity being measured that causes a perceptible change in the corresponding indication (from the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf])
+[2] Measuring interval: set of values of quantities of the same kind that can be measured by a given measuring instrument or measuring system with specified instrumental uncertainty, under defined conditions (from the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf])</documentation>
+		</annotation>
+	</element>
+	<complexType name="ProcessType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="documentationRef" type="gml:CodeType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Reference to an external process definition providing information about relevant documentation that describes the associated Process.</documentation>
+						</annotation>
+					</element>
+					<element name="parameter" type="om:NamedValuePropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The association role 'parameter' references an instance of NamedValue that specifies parameters associated with a particular configuration of the procedure (Configuration)</documentation>
+						</annotation>
+					</element>
+					<element name="context" type="metce:MeasurementContextPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The association role 'context' references an instance of MeasurementContext class that defines resolution and measuring interval for a specific measurand.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ProcessPropertyType">
+		<sequence minOccurs="0">
+			<element ref="metce:Process"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="MeasurementContext" type="metce:MeasurementContextType" substitutionGroup="gml:AbstractGML">
+		<annotation>
+			<documentation>Instances of the class 'MeasurementContext' specify the resolution [1] and measuring interval [2] for a given physical property in the context of this measurement procedure.
+
+[1] Resolution: smallest change in a quantity being measured that causes a perceptible change in the corresponding indication (from the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf])
+[2] Measuring interval: set of values of quantities of the same kind that can be measured by a given measuring instrument or measuring system with specified instrumental uncertainty, under defined conditions (from the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf])</documentation>
+		</annotation>
+	</element>
+	<complexType name="MeasurementContextType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element name="unitOfMeasure" type="gml:UnitOfMeasureType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The attribute 'uom' specifies the unit of measure that the values of 'resolution' and 'measuring interval' are specified in.
+
+Typically, this will also be the unit of measure used to specify the measured quantity values. Unless otherwise specified, this unit of measure can be assumed to be the default unit of measure for this measurand.</documentation>
+						</annotation>
+					</element>
+					<element name="measureand">
+						<annotation>
+							<documentation>The attribute 'measurand' [1] specifies the physical property that the associated 'resolution' and 'measuring interval' apply to.
+
+The measurand may be sourced from an external controlled vocabulary, thesaurus or ontology or defined locally. 
+
+The measurand may reference a qualified observable property if required. 
+
+If the measurand references an observable physical property that serves as the base property for a qualified observable property, the measurement context is assumed to apply to ALL the qualified observable properties that reference this base property unless otherwise stated. For example, observable physical property 'radiance' may be qualified to measure wavelength bands 50-100nm, 100-200nm, 200-500nm etc. A measurement context associated with 'radiance' would be inferred to apply to all of these qualified radiance properties.
+
+[1] Measurand: quantity intended to be measured (from the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf]</documentation>
+						</annotation>
+						<complexType>
+							<complexContent>
+								<extension base="gml:AbstractMemberType">
+									<sequence>
+										<element ref="opm:ObservableProperty"></element>
+									</sequence>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+					<element name="measuringInterval" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The attribute 'measuringInterval' [1] specifies the extreme lower and upper limits of property values of the 'measurand' that can measured within this procedure, using the unit of measure 'uom'.
+
+[1] Measuring interval: set of values of quantities of the same kind that can be measured by a given measuring instrument or measuring system with specified instrumental uncertainty, under defined conditions (from the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf])</documentation>
+						</annotation>
+						<complexType>
+							<complexContent>
+								<extension base="gml:AbstractMemberType">
+									<sequence>
+										<element ref="metce:RangeBounds"></element>
+									</sequence>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+					<element name="resolutionScale" type="integer" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The attribute 'resolutionScale' specifies the smallest change (e.g. the 'resolution' [1]) in property value of the 'measurand' that is intended to be measured within this procedure, using the unit of measure 'uom'.
+
+This shall be provided as a scaling factor.
+
+For example:
+
+	- scale = -2 implies a precision of 100 units
+	- scale = -1 implies a precision of 10 units
+	- scale = 0 implies a precision of 1 unit
+	- scale = 1 implies a precision of 0.1 units
+	- scale = 2 implies a precision of 0.01 units
+
+etc.
+
+[1] Resolution: smallest change in a quantity being measured that causes a perceptible change in the corresponding indication (from the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf])</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="MeasurementContextPropertyType">
+		<sequence minOccurs="0">
+			<element ref="metce:MeasurementContext"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="RangeBounds" type="metce:RangeBoundsType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>The class 'RangeBounds' describes the extreme limits of a property value range (also known as a property value interval).</documentation>
+		</annotation>
+	</element>
+	<complexType name="RangeBoundsType">
+		<sequence>
+			<element name="rangeStart" type="double">
+				<annotation>
+					<documentation>The attribute 'rangeStart' provides the extreme lower limit of the range or interval.</documentation>
+				</annotation>
+			</element>
+			<element name="rangeEnd" type="double">
+				<annotation>
+					<documentation>The attribute 'rangeEnd' provides the extreme upper limit of the range or interval.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="RangeBoundsPropertyType">
+		<sequence>
+			<element ref="metce:RangeBounds"></element>
+		</sequence>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+</schema>

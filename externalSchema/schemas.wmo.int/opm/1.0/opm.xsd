@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:opm="http://def.wmo.int/opm/2013" targetNamespace="http://def.wmo.int/opm/2013" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <annotation>
+      <documentation>References to WMO and ICAO Technical Regulations within this XML schema shall have
+         no formal status and are for information purposes only. Where there are differences
+         between the Technical Regulations and the schema, the Technical Regulations shall
+         take precedence. Technical Regulations may impose requirements that are not described
+         in this schema.
+      </documentation>
+      <documentation>The 'Observable Property' model enables observed physical properties (also termed
+         "Quantities" within the 'International vocabulary of metrology' [http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf])
+         to be aggregated into composite properties and for any qualification or constraint
+         relating to those observed physical properties to be explicitly described.  A data
+         publisher may need to use the Observed Property Model  to explicitly define any qualification
+         or constraint applied to the observed property, or, where the observation results
+         in the evaluation of multiple properties, to explicitly define each of those individual
+         physical properties.  Usage:  The Observable Property Model may be used to specify
+         constraint or qualification of a physical quantity (or set of physical quantities)
+         within the context of a specific observation or measurement event; e.g. via OM_Observation/parameter
+         Attribute (from ISO 19156, type Class "NamedValue"):     - name: http://def.wmo.int/opm/2013/observable-property#property
+         [1]     - parameter: instance of Class "AbstractObservableProperty" or concrete subclass
+         thereof [2]  Note that Class "OM_Observation" asserts a constraint such that the value
+         of the parameter/NamedValue/name Attribute shall not occur more than once within a
+         given instance of Class OM_Observation. In situations where multiple physical quantities
+         are observed or measured, the value of the associated parameter/NamedValue/value Attribute
+         may be specified as an instance of Class "CompositeObservableProperty" thus allowing
+         a set of observable properties to be specified.   Also note that, whilst Class "OM_Observation"
+         provides Attribute "observedProperty" for specifying the (physical) property observed
+         or measured the cardinality of this Attribute is one (e.g. only a single property
+         can be referenced). Furthermore, this Attribute is implemented "by reference" (serialised
+         as gml:ReferenceType) implying that one cannot define an instance of Class "CompositeObservableProperty"
+         in-line within the data. Whilst it is permissible to make a local reference to an
+         instance of Class "CompositeObservableProperty" defined elsewhere within the data,
+         it is preferable to reference an external definition. The reason for this is that
+         the value of Attribute "observedProperty" is used by the OGC Sensor Observation Service
+         as a key on which data is indexed; use of internal references are likely to inhibit
+         discovery and retrieval of data.   Alternatively, if the constraint or qualification
+         of the physical quantity (or set of physical quantities) is consistent within a repeatable
+         procedure, it may be defined within the context of that procedure; e.g. via the Process/parameter
+         Attribute (from "«Application Schema» METCE", type Class "NamedValue").  Note that
+         in the case of Class "Process", there is no constraint on the number of occurences
+         of a given parameter name. However, recommended practice indicates the use of an instance
+         of Class "CompositeObservableProperty" where a set of observable properties are to
+         be specified.  [1] Association Role "property" is specified to have type Class "AbstractObservableProperty"
+         [2] Class "AbstractObservableProperty" has concrete sub-classes "ObservableProperty",
+         "QualifiedObservableProperty" and "CompositeObservableProperty".
+      </documentation>
+   </annotation>
+   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+   <include schemaLocation="observable-property.xsd"/>
+</schema>

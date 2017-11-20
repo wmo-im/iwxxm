@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" targetNamespace="http://def.wmo.int/metce/2013" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <annotation>
+      <documentation>References to WMO and ICAO Technical Regulations within this XML schema shall have
+         no formal status and are for information purposes only. Where there are differences
+         between the Technical Regulations and the schema, the Technical Regulations shall
+         take precedence. Technical Regulations may impose requirements that are not described
+         in this schema.
+      </documentation>
+      <documentation>The package 'Meteorological Phenomena' contains «FeatureType» entities that have a
+         significant role in meteorology; e.g. volcanoes and tropical cyclones.  A list of
+         meteorological phenomena are provided in WMO No. 306 Vol I.2 FM 94 BUFR code-table
+         0 08 011 'Meteorological Feature' (see below). It is anticipated that in future releases
+         the additional meteorological features listed therein will be incorporated.  Meteorological
+         Features (from WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 08 011): - Quasi-stationary
+         front at the surface - Quasi-stationary front above the surface - Warm front at the
+         surface - Warm front above the surface - Cold front at the surface - Cold front above
+         the surface - Occlusion - Instability line - Intertropical front - Convergence line
+         - Jet stream - Cloud clear - Cloud - Turbulence - Storm - Airframe icing - [Erupting]
+         Volcano - Atmospherics - Special clouds - Thunderstorm - Tropical cyclone - Mountain
+         wave - Duststorm - Sandstorm
+      </documentation>
+   </annotation>
+   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+   <include schemaLocation="metce.xsd"/>
+   <element name="TropicalCyclone" substitutionGroup="gml:AbstractFeature" type="metce:TropicalCycloneType">
+      <annotation>
+         <documentation>Cyclone of tropical origin of small diameter (some hundreds of kilometres) with minimum
+            surface pressure in some cases less than 900 hPa, very violent winds and torrential
+            rain; sometimes accompanied by thunderstorms. It usually contains a central region,
+            known as the “eye” of the storm, with a diameter of the order of some tens of kilometres,
+            and with light winds and more or less lightly clouded sky.  WMO No. 306 Vol I.1 code-table
+            3704 "Shape and definition of the eye of the tropical cyclone" and WMO No. 306 Vol
+            I.1 code-table 3790 "Intensity of the tropical cyclone" provide additional candidate
+            attributes that may be incorporated within this «FeatureType» in subsequent versions
+            of METCE.
+         </documentation>
+      </annotation>
+   </element>
+   <complexType name="TropicalCycloneType">
+      <complexContent>
+         <extension base="gml:AbstractFeatureType">
+            <sequence>
+               <element name="name" type="string">
+                  <annotation>
+                     <documentation>Name of tropical cyclone.</documentation>
+                  </annotation>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="TropicalCyclonePropertyType">
+      <sequence minOccurs="0">
+         <element ref="metce:TropicalCyclone"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element name="Volcano" substitutionGroup="gml:AbstractFeature" type="metce:VolcanoType">
+      <annotation>
+         <documentation>A volcano irrespective of the volcano's current state (e.g. passive or erupting).
+            Note that the "Global Volcanism Program" provides an online, searchable catalogue
+            of volcanoes which may assist in identifying the authoritative name for a given volcano
+            feature [http://www.volcano.si.edu/world/]. (informative) 
+         </documentation>
+      </annotation>
+   </element>
+   <complexType name="VolcanoType">
+      <complexContent>
+         <extension base="gml:AbstractFeatureType">
+            <sequence>
+               <element name="name" type="string">
+                  <annotation>
+                     <documentation>The name of the volcano.</documentation>
+                  </annotation>
+               </element>
+               <element name="position" type="gml:PointPropertyType">
+                  <annotation>
+                     <documentation>The position of the volcano.</documentation>
+                  </annotation>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="VolcanoPropertyType">
+      <sequence minOccurs="0">
+         <element ref="metce:Volcano"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+   <element name="EruptingVolcano" substitutionGroup="metce:Volcano" type="metce:EruptingVolcanoType">
+      <annotation>
+         <documentation>A volcano that is currently erupting, or has recently erupted, that is the source
+            of volcanic ash or other significant meteorological phenomena described in operational
+            weather reports.
+         </documentation>
+      </annotation>
+   </element>
+   <complexType name="EruptingVolcanoType">
+      <complexContent>
+         <extension base="metce:VolcanoType">
+            <sequence>
+               <element name="eruptionDate" type="dateTime">
+                  <annotation>
+                     <documentation>The date of eruption for the volcano.</documentation>
+                  </annotation>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <complexType name="EruptingVolcanoPropertyType">
+      <sequence minOccurs="0">
+         <element ref="metce:EruptingVolcano"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup"/>
+      <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+   </complexType>
+</schema>

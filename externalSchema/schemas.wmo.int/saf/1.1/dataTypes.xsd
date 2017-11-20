@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:saf="http://icao.int/saf/1.1" targetNamespace="http://icao.int/saf/1.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1">
+   <annotation>
+      <documentation>References to WMO and ICAO Technical Regulations within this XML schema shall have
+         no formal status and are for information purposes only. Where there are differences
+         between the Technical Regulations and the schema, the Technical Regulations shall
+         take precedence. Technical Regulations may impose requirements that are not described
+         in this schema.
+      </documentation>
+      <documentation>Package containing the datatypes that are used throughout SAF. This is restricted
+         set that are roughly analogous to equivalent AIXM data types.  
+      </documentation>
+   </annotation>
+   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+   <include schemaLocation="saf.xsd"/>
+   <element name="TextDesignatorType" substitutionGroup="gml:AbstractObject" type="saf:TextDesignatorTypeType">
+      <annotation>
+         <documentation>A textual designator.</documentation>
+      </annotation>
+   </element>
+   <complexType name="TextDesignatorTypeType">
+      <simpleContent>
+         <extension base="string"/>
+      </simpleContent>
+   </complexType>
+   <element name="TextNameType" substitutionGroup="gml:AbstractObject" type="saf:TextNameTypeType">
+      <annotation>
+         <documentation>The official name of a State, an aerodrome, a unit, etc.. </documentation>
+      </annotation>
+   </element>
+   <complexType name="TextNameTypeType">
+      <simpleContent>
+         <extension base="string"/>
+      </simpleContent>
+   </complexType>
+   <element name="CodeAirspaceDesignatorType" substitutionGroup="gml:AbstractObject" type="saf:CodeAirspaceDesignatorTypeType"/>
+   <complexType name="CodeAirspaceDesignatorTypeType">
+      <simpleContent>
+         <extension base="string"/>
+      </simpleContent>
+   </complexType>
+   <element name="CodeOrganisationDesignatorType" substitutionGroup="gml:AbstractObject" type="saf:CodeOrganisationDesignatorTypeType">
+      <annotation>
+         <documentation>The coded identifier of an organisation, authority, agency or unit.</documentation>
+      </annotation>
+   </element>
+   <complexType name="CodeOrganisationDesignatorTypeType">
+      <simpleContent>
+         <extension base="string"/>
+      </simpleContent>
+   </complexType>
+   <element name="CodeIATAType" substitutionGroup="gml:AbstractObject" type="saf:CodeIATATypeType">
+      <annotation>
+         <documentation>The three letter coded location identifier of an airport/heliport according to the
+            IATA Resolution 763. 
+         </documentation>
+      </annotation>
+   </element>
+   <complexType name="CodeIATATypeType">
+      <simpleContent>
+         <extension base="string"/>
+      </simpleContent>
+   </complexType>
+   <element name="CodeAirportHeliportDesignatorType" substitutionGroup="gml:AbstractObject" type="saf:CodeAirportHeliportDesignatorTypeType">
+      <annotation>
+         <documentation>A coded identifier for an Aerodrome/Heliport/Aerodrome. The rules according to which
+            this identifier should be formed are as follows: 1) If the AD/HP has an ICAO four
+            letter location indicator, this will become the CODE_ID for the Aerodrome/Heliport;
+            2) If the AD/HP does not have an ICAO four letter location indicator but has an IATA
+            three letter code, then this will become the CODE_ID for the Aerodrome/Heliport; 3)
+            If the AD/HP does not have either an ICAO four letter location indicator or an IATA
+            three letter code, an artificially generated code will be used. This will contain
+            a group of letters and a number. The group of letters could be the 2 letter code of
+            the State responsible for the Aerodrome/Heliport (or one of these, if there are more
+            than one, like ED and ET for Germany) and the number could be an integer between 0001
+            and 9999. 
+         </documentation>
+      </annotation>
+   </element>
+   <complexType name="CodeAirportHeliportDesignatorTypeType">
+      <simpleContent>
+         <extension base="string"/>
+      </simpleContent>
+   </complexType>
+   <element name="CodeICAOType" substitutionGroup="gml:AbstractObject" type="saf:CodeICAOTypeType">
+      <annotation>
+         <documentation>The four letter coded location identifier as published in the ICAO DOC 7910 - Location
+            Indicators.
+         </documentation>
+      </annotation>
+   </element>
+   <complexType name="CodeICAOTypeType">
+      <simpleContent>
+         <extension base="string"/>
+      </simpleContent>
+   </complexType>
+   <simpleType name="CodeAirspaceTypeType">
+      <annotation>
+         <documentation>The valid codes that may be used for airspace type (e.g., flight information region,
+            upper information region, controlled airspace).  Equivalent to AIXM CodeAirspaceType,
+            except that only the codes of interest outside AIXM were used.
+         </documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="FIR">
+            <annotation>
+               <documentation>Flight information region. Airspace of defined dimensions within which flight information
+                  service and alerting service are provided.  Description: ICAO Recognized. Might, for
+                  example, be used if service provided by more than one unit.
+               </documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="UIR">
+            <annotation>
+               <documentation>Upper flight information region. An upper airspace of defined dimensions within which
+                  flight information service and alerting service are provided.  Description: Non-ICAO
+                  Recognized. Each state determines its definition for upper airspace.
+               </documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="FIR_UIR">
+            <annotation>
+               <documentation>Flight information region or upper flight information region.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="CTA">
+            <annotation>
+               <documentation>Control area. A controlled airspace extending upwards from a specified limit above
+                  the earth.  Description: ICAO Recognized.
+               </documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="CodeVerticalReferenceTypeType">
+      <annotation>
+         <documentation>The type of vertical reference (e.g., surface, mean sea level)  This class is copied
+            from the AIXM class with the same name.
+         </documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="SFC">
+            <annotation>
+               <documentation>The distance measured from the surface of the Earth (equivalent to AGL - Above Ground
+                  Level).
+               </documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="MSL">
+            <annotation>
+               <documentation>The distance measured from mean sea level (equivalent to altitude). </documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="W84">
+            <annotation>
+               <documentation>The distance measured from the WGS84 ellipsoid. </documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="STD">
+            <annotation>
+               <documentation>The vertical distance is measured with an altimeter set to the standard atmosphere.</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="CodeFlightDestinationTypeType">
+      <annotation>
+         <documentation>A coded list of values that designate the intentions of a flight in relation with
+            a location, such as arrival, departure or over-flight.
+         </documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="ALL">
+            <annotation>
+               <documentation>All types (arrival, departure and overflying).</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="ARR">
+            <annotation>
+               <documentation>Arrival flights.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="DEP">
+            <annotation>
+               <documentation>Departing flights.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="OVERFLY">
+            <annotation>
+               <documentation>Overflying flights.</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="CodeUnitTypeType">
+      <annotation>
+         <documentation>A unit providing particular ATS services. </documentation>
+      </annotation>
+      <restriction base="string">
+         <enumeration value="ARO">
+            <annotation>
+               <documentation>Aerodrome reporting office/ATS reporting office. </documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="ATCC">
+            <annotation>
+               <documentation>Air traffic control centre. </documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="ATSU">
+            <annotation>
+               <documentation>Air traffic services unit. </documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="FIC">
+            <annotation>
+               <documentation>Flight information centre. </documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="MWO">
+            <annotation>
+               <documentation>Meteorological watch office. </documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+</schema>

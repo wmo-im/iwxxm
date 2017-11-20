@@ -1,0 +1,16 @@
+====================================
+1.2 - August 2016
+====================================
+Nil
+
+====================================
+1.2 Release Candidate 1 - April 2016
+====================================
+* UML model has been changed to make EA 12.1 the primary mechanism for generating XML schema
+* A GML profile schema is used to exclude unnecessary GML features to be accessed when referencing the COLLECT schema
+* COLLECT schema with embedded schematrons is no longer created to further reduce the size of the XSDs
+
+====================================
+1.1 - June 2015
+====================================
+Initial introduction to model release.
