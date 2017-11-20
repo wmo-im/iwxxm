@@ -168,7 +168,7 @@
       </om:phenomenonTime>
       <om:resultTime xlink:href="#ti-10T12Z"/>
       <om:validTime xlink:href="#tp-10T12Z-10T22Z"/>
-      <om:procedure xlink:href="#p-49-2-sigmet"/>
+      <om:procedure xlink:href="#p-49-2-va-sigmet"/>
       <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETPositionCollectionAnalysis"/>
       <om:featureOfInterest xlink:href="#ss-SHANWICK_OCA"/>
       <om:result>
