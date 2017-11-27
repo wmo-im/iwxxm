@@ -1,0 +1,6 @@
+tocTab[tocTab.length] = new Array("0.6:1", "", "Context Diagram: Volcanic Ash Advisory", "EARoot/EA6/EA140.htm", "175.png", "4313", "0", "", "Logical diagram0","{587618BA-212B-431e-AFEC-62E605BCB737}");
+tocTab[tocTab.length] = new Array("0.6:2", "", "Context Diagram: Volcanic Ash Conditions", "EARoot/EA6/EA142.htm", "175.png", "4314", "0", "", "Logical diagram0","{A329D056-537A-4749-AB64-EFE379E87932}");
+tocTab[tocTab.length] = new Array("0.6:3", "", "«featureType» VolcanicAshAdvisory", "EARoot/EA6/EA151.htm", "5.png", "E11157", "0", "", "Class0","{5B908549-2E66-4358-BB49-4175A5F74F31}");
+tocTab[tocTab.length] = new Array("0.6:4", "", "«featureType» VolcanicAshConditions", "EARoot/EA6/EA152.htm", "5.png", "E11160", "0", "", "Class0","{715606D4-23EE-4d00-B0EA-DFD4ADD16D85}");
+tocTab[tocTab.length] = new Array("0.6:5", "", "«featureType» VolcanicAshCloud", "EARoot/EA6/EA153.htm", "5.png", "E11155", "0", "", "Class0","{2C5C6822-A4A0-4c50-9284-1EC52FEE4E2B}");
+tocTab[tocTab.length] = new Array("0.6:6", "", "«codeList» AviationColourCode", "EARoot/EA6/EA154.htm", "5.png", "E11156", "0", "", "Class0","{37D77271-E81A-41c0-ADA0-89E8EB63D82C}");
