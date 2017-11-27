@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    An example of a NIL METAR bulletin:
+    An example of a NIL METAR (which can be used independently) packaged into a bulletin:
 
       SAYU31 YUDO 221630
       METAR YUDO 221630Z NIL
