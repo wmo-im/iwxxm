@@ -1,0 +1,177 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  <ldp:Container rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction">
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/SQ">
+        <dct:description xml:lang="en">Squall</dct:description>
+        <rdfs:label xml:lang="en">Squall</rdfs:label>
+        <skos:notation>SQ</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/GS">
+        <dct:description xml:lang="en">Small Hail</dct:description>
+        <rdfs:label xml:lang="en">Small Hail</rdfs:label>
+        <skos:notation>GS</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/BR">
+        <dct:description xml:lang="en">Mist</dct:description>
+        <rdfs:label xml:lang="en">Mist</rdfs:label>
+        <skos:notation>BR</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/VA">
+        <dct:description xml:lang="en">Volcanic Ash</dct:description>
+        <rdfs:label xml:lang="en">Volcanic Ash</rdfs:label>
+        <skos:notation>VA</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/SA">
+        <dct:description xml:lang="en">Sand</dct:description>
+        <rdfs:label xml:lang="en">Sand</rdfs:label>
+        <skos:notation>SA</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <rdfs:label xml:lang="en">Weather Causing Visibility Reduction</rdfs:label>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/HZ">
+        <dct:description xml:lang="en">Haze</dct:description>
+        <rdfs:label xml:lang="en">Haze</rdfs:label>
+        <skos:notation>HZ</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/DU">
+        <dct:description xml:lang="en">Dust</dct:description>
+        <rdfs:label xml:lang="en">Dust</rdfs:label>
+        <skos:notation>DU</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/SS">
+        <dct:description xml:lang="en">Sandstorm</dct:description>
+        <rdfs:label xml:lang="en">Sandstorm</rdfs:label>
+        <skos:notation>SS</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/DZ">
+        <dct:description xml:lang="en">Drizzle</dct:description>
+        <rdfs:label xml:lang="en">Drizzle</rdfs:label>
+        <skos:notation>DZ</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/FU">
+        <dct:description xml:lang="en">Smoke</dct:description>
+        <rdfs:label xml:lang="en">Smoke</rdfs:label>
+        <skos:notation>FU</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/SG">
+        <dct:description xml:lang="en">Snow grams</dct:description>
+        <rdfs:label xml:lang="en">Snow grams</rdfs:label>
+        <skos:notation>SG</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/PL">
+        <dct:description xml:lang="en">Ice pellets</dct:description>
+        <rdfs:label xml:lang="en">Ice pellets</rdfs:label>
+        <skos:notation>PL</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/RA">
+        <dct:description xml:lang="en">Rain</dct:description>
+        <rdfs:label xml:lang="en">Rain</rdfs:label>
+        <skos:notation>RA</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <rdf:type rdf:resource="http://purl.org/linked-data/registry#Register"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/FG">
+        <dct:description xml:lang="en">Fog</dct:description>
+        <rdfs:label xml:lang="en">Fog</rdfs:label>
+        <skos:notation>FG</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/SN">
+        <dct:description xml:lang="en">Snow</dct:description>
+        <rdfs:label xml:lang="en">Snow</rdfs:label>
+        <skos:notation>SN</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2016-12-30T13:26:25.95Z</dct:modified>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/PO">
+        <dct:description xml:lang="en">Dust/stand whirls</dct:description>
+        <rdfs:label xml:lang="en">Dust/stand whirls</rdfs:label>
+        <skos:notation>PO</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <dct:description xml:lang="en">ICAO Annex 3/ WMO No. 49-2 Appendix 6 Section 2.1 under SFC VIS</dct:description>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/DS">
+        <dct:description xml:lang="en">Duststorm</dct:description>
+        <rdfs:label xml:lang="en">Duststorm</rdfs:label>
+        <skos:notation>DS</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/FC">
+        <dct:description xml:lang="en">Funnel Cloud</dct:description>
+        <rdfs:label xml:lang="en">Funnel Cloud</rdfs:label>
+        <skos:notation>FC</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/GR">
+        <dct:description xml:lang="en">Hail</dct:description>
+        <rdfs:label xml:lang="en">Hail</rdfs:label>
+        <skos:notation>GR</skos:notation>
+      </skos:Concept>
+    </skos:member>
+  </ldp:Container>
+</rdf:RDF>
