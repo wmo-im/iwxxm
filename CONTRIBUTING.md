@@ -6,7 +6,7 @@ and contributing to the IWXXM schema and repository.
 ## Reporting IWXXM Issues
 Issues should first be raised on the cbs-tt-avxml@wmo.int email list.  Prior discussions and issues can be found and searched
 through https://groups.google.com/a/wmo.int/forum/#!categories/cbs-tt-avxml.  Once the issue has been discussed with IWXXM developers and confirmed,
-a formal issue can be created on the [GitHub issues](https://github.com/wmo-im/iwxxm/issues) page.
+a formal issue will be created by the IWXXM developers on the [GitHub issues](https://github.com/wmo-im/iwxxm/issues) page.
 
 ## Providing IWXXM Changes and Bug Fixes
 Before making or committing any changes, perform the one-time [initial Git configuration](#initial-git-configuration).
