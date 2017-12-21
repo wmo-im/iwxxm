@@ -30,18 +30,18 @@ NXT MSG:                    20040925/2000Z
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd
   http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
-  gml:id="ID000" permissibleUsage="OPERATIONAL">
+  gml:id="uuid.217b27d6-fbc0-499b-b58e-4ee062c86cd4" permissibleUsage="OPERATIONAL">
 
   <iwxxm:issueTime>
-      <gml:TimeInstant gml:id="ti-200409251600">
+      <gml:TimeInstant gml:id="uuid.d1858428-a96d-4825-aecd-07a929ab07d2">
           <gml:timePosition>2004-09-25T16:00:00Z</gml:timePosition>
       </gml:TimeInstant>
   </iwxxm:issueTime>
 
   <iwxxm:issuingTropicalCycloneAdvisoryCentre>
-    <aixm:Unit gml:id="tcac-YUFO">
+    <aixm:Unit gml:id="uuid.f4fdc1cc-6bfa-4f4c-9ea9-df5e2c2bd762">
       <aixm:timeSlice>
-        <aixm:UnitTimeSlice gml:id="uTTCACUnit">
+        <aixm:UnitTimeSlice gml:id="uuid.42cdad72-4180-4cfe-afe9-f743f87088ef">
           <gml:validTime/>
           <aixm:interpretation>SNAPSHOT</aixm:interpretation>
           <aixm:type>OTHER:TCAC</aixm:type>
@@ -55,34 +55,34 @@ NXT MSG:                    20040925/2000Z
   <iwxxm:advisoryNumber>01</iwxxm:advisoryNumber>
 
   <iwxxm:observation>
-    <om:OM_Observation gml:id="tca-YUFO-01-obs">
+    <om:OM_Observation gml:id="uuid.720fbd91-a522-4872-a1d7-a512075dc1a6">
       <om:phenomenonTime>
-       <gml:TimeInstant gml:id="t1">
+       <gml:TimeInstant gml:id="uuid.023a036d-6945-492b-b9e5-30bf5df83179">
          <gml:timePosition>2004-09-25T16:00:00Z</gml:timePosition>
        </gml:TimeInstant>
       </om:phenomenonTime>
       <!-- time at which the results of the observation were made available -->
       <om:resultTime xlink:href="#ti-200409251600"/>
       <om:procedure>
-        <metce:Process gml:id="p-49-2">
+        <metce:Process gml:id="uuid.c09f7e9e-0ec6-4091-b0d8-3e500ed711af">
           <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 2 Tropical cyclone advisory information</gml:description>
         </metce:Process>
       </om:procedure>
       <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TropicalCycloneObservedConditions"/>
       <om:featureOfInterest>
-          <sams:SF_SpatialSamplingFeature gml:id="obs1-feature">
+          <sams:SF_SpatialSamplingFeature gml:id="uuid.d0e29da6-c205-4421-beb7-a35440a2e088">
               <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
               <sam:sampledFeature xlink:href="#tcac-YUFO"/>
               <!-- TC centre -->
               <sams:shape>
-                  <gml:Point gml:id="obs1-point" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                  <gml:Point gml:id="uuid.8b4b12ed-461a-4716-8191-6cf41ad77471" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                       <gml:pos>27.1 -73.1</gml:pos>
                   </gml:Point>
               </sams:shape>
           </sams:SF_SpatialSamplingFeature>
       </om:featureOfInterest>
       <om:result>
-        <iwxxm:TropicalCycloneObservedConditions gml:id="tcCond1">
+        <iwxxm:TropicalCycloneObservedConditions gml:id="uuid.78eddcd7-acfe-4649-b633-36189eaffc5d">
             <iwxxm:movement>MOVING</iwxxm:movement>
             <iwxxm:movementDirection uom="deg">315</iwxxm:movementDirection>
             <iwxxm:movementSpeed uom="km/h">20</iwxxm:movementSpeed>
@@ -95,9 +95,9 @@ NXT MSG:                    20040925/2000Z
 
   <!-- 6-hour forecast at 25/2200Z -->
   <iwxxm:forecast>
-    <om:OM_Observation gml:id="tca-YUFO-01-fcst-6hr">
+    <om:OM_Observation gml:id="uuid.1d8eae14-fca6-4247-9e13-dda703a2ee91">
       <om:phenomenonTime>
-        <gml:TimeInstant gml:id="ti-200409252200">
+        <gml:TimeInstant gml:id="uuid.6b115305-4200-4053-8ddb-0d036f907b69">
           <gml:timePosition>2004-09-25T22:00:00Z</gml:timePosition>
         </gml:TimeInstant>
       </om:phenomenonTime>
@@ -106,19 +106,19 @@ NXT MSG:                    20040925/2000Z
       <om:procedure xlink:href="#p-49-2"/>
       <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TropicalCycloneForecastConditions"/>
       <om:featureOfInterest>
-          <sams:SF_SpatialSamplingFeature gml:id="fcst1-feature">
+          <sams:SF_SpatialSamplingFeature gml:id="uuid.6b369dd3-1c28-422a-bd49-56378b138e5e">
               <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
               <sam:sampledFeature xlink:href="#tcac-YUFO"/>
               <!-- TC centre -->
               <sams:shape>
-                  <gml:Point gml:id="fcst1-point" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                  <gml:Point gml:id="uuid.e91ca02c-3625-4cdb-928c-d7979d45f2bc" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                       <gml:pos>27.8 -73.83333</gml:pos>
                   </gml:Point>
               </sams:shape>
           </sams:SF_SpatialSamplingFeature>
       </om:featureOfInterest>
       <om:result>
-        <iwxxm:TropicalCycloneForecastConditions gml:id="tcCond3">
+        <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.75adc697-201c-485d-8356-1845ad46ae77">
             <iwxxm:maximumSurfaceWindSpeed uom="m/s">22</iwxxm:maximumSurfaceWindSpeed>
         </iwxxm:TropicalCycloneForecastConditions>
       </om:result>
@@ -127,9 +127,9 @@ NXT MSG:                    20040925/2000Z
 
   <!-- 12 hour forecast at 26/0400Z -->
   <iwxxm:forecast>
-      <om:OM_Observation gml:id="tca-YUFO-01-fcst-12hr">
+      <om:OM_Observation gml:id="uuid.598b9b20-c9d4-40ef-8a35-04fe4df8db5e">
           <om:phenomenonTime>
-              <gml:TimeInstant gml:id="ti-200409260400">
+              <gml:TimeInstant gml:id="uuid.b7991033-e147-4b77-8589-226c8eea39d4">
                   <gml:timePosition>2004-09-26T04:00:00Z</gml:timePosition>
               </gml:TimeInstant>
           </om:phenomenonTime>
@@ -138,19 +138,19 @@ NXT MSG:                    20040925/2000Z
           <om:procedure xlink:href="#p-49-2"/>
           <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TropicalCycloneForecastConditions"/>
           <om:featureOfInterest>
-              <sams:SF_SpatialSamplingFeature gml:id="fcst2-feature">
+              <sams:SF_SpatialSamplingFeature gml:id="uuid.7f43de4b-5679-4355-a93f-d1931841f698">
                   <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
                   <sam:sampledFeature xlink:href="#tcac-YUFO"/>
                   <!-- TC centre -->
                   <sams:shape>
-                      <gml:Point gml:id="fcst2-point" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                      <gml:Point gml:id="uuid.2e386620-5d45-4b7d-b171-4013f10f5ddc" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                           <gml:pos>28.5 -74.5</gml:pos>
                       </gml:Point>
                   </sams:shape>
               </sams:SF_SpatialSamplingFeature>
           </om:featureOfInterest>
           <om:result>
-              <iwxxm:TropicalCycloneForecastConditions gml:id="tcCond4">
+              <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.13515111-4e81-4b60-85a7-eedc2b5f874f">
                   <iwxxm:maximumSurfaceWindSpeed uom="m/s">22</iwxxm:maximumSurfaceWindSpeed>
               </iwxxm:TropicalCycloneForecastConditions>
           </om:result>
@@ -159,9 +159,9 @@ NXT MSG:                    20040925/2000Z
 
   <!-- 18-hour forecast -->
   <iwxxm:forecast>
-      <om:OM_Observation gml:id="tca-YUFO-01-fcst-18hr">
+      <om:OM_Observation gml:id="uuid.50a39248-b6eb-4e9c-99d3-19e8d58b4d4e">
           <om:phenomenonTime>
-              <gml:TimeInstant gml:id="ti-200409261000">
+              <gml:TimeInstant gml:id="uuid.a747f059-2d07-4ba7-9317-c7e7eddc5adf">
                   <gml:timePosition>2004-09-26T10:00:00Z</gml:timePosition>
               </gml:TimeInstant>
           </om:phenomenonTime>
@@ -170,19 +170,19 @@ NXT MSG:                    20040925/2000Z
           <om:procedure xlink:href="#p-49-2"/>
           <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TropicalCycloneForecastConditions"/>
           <om:featureOfInterest>
-              <sams:SF_SpatialSamplingFeature gml:id="fcst3-feature">
+              <sams:SF_SpatialSamplingFeature gml:id="uuid.e10eddd3-3157-44d7-a8a1-94d50342d31e">
                   <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
                   <sam:sampledFeature xlink:href="#tcac-YUFO"/>
                   <!-- TC centre -->
                   <sams:shape>
-                      <gml:Point gml:id="fcst3-point" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                      <gml:Point gml:id="uuid.6dc4b702-ea53-4dc0-a261-ff8931bc84db" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                           <gml:pos>28.86667 -75.00</gml:pos>
                       </gml:Point>
                   </sams:shape>
               </sams:SF_SpatialSamplingFeature>
           </om:featureOfInterest>
           <om:result>
-              <iwxxm:TropicalCycloneForecastConditions gml:id="tcCond5">
+              <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.6c9b5a04-8be5-4a3e-8cb8-590e6a67d159">
                   <iwxxm:maximumSurfaceWindSpeed uom="m/s">21</iwxxm:maximumSurfaceWindSpeed>
               </iwxxm:TropicalCycloneForecastConditions>
           </om:result>
@@ -191,9 +191,9 @@ NXT MSG:                    20040925/2000Z
 
   <!-- 24-hour forecast -->
   <iwxxm:forecast>
-      <om:OM_Observation gml:id="tca-YUFO-01-fcst-24hr">
+      <om:OM_Observation gml:id="uuid.10953e18-32c7-4cee-837b-b26d0f19d97e">
           <om:phenomenonTime>
-              <gml:TimeInstant gml:id="ti-200409261600">
+              <gml:TimeInstant gml:id="uuid.3d372d30-0a48-4d4b-9f9b-a27bbd764890">
                   <gml:timePosition>2004-09-26T16:00:00Z</gml:timePosition>
               </gml:TimeInstant>
           </om:phenomenonTime>
@@ -202,19 +202,19 @@ NXT MSG:                    20040925/2000Z
           <om:procedure xlink:href="#p-49-2"/>
           <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TropicalCycloneForecastConditions"/>
           <om:featureOfInterest>
-              <sams:SF_SpatialSamplingFeature gml:id="fcst4-feature">
+              <sams:SF_SpatialSamplingFeature gml:id="uuid.f06fae34-714f-48d2-8e5d-ec5b0ee3684e">
                   <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
                   <sam:sampledFeature xlink:href="#tcac-YUFO"/>
                   <!-- TC centre -->
                   <sams:shape>
-                      <gml:Point gml:id="fcst4-point" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                      <gml:Point gml:id="uuid.d26643a3-1106-4003-9978-558cdbef0e78" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                           <gml:pos>29.2 -75.5</gml:pos>
                       </gml:Point>
                   </sams:shape>
               </sams:SF_SpatialSamplingFeature>
           </om:featureOfInterest>
           <om:result>
-              <iwxxm:TropicalCycloneForecastConditions gml:id="tcCond6">
+              <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.708829ef-4ca3-4229-b57c-5f1c937c3b2b">
                   <iwxxm:maximumSurfaceWindSpeed uom="m/s">20</iwxxm:maximumSurfaceWindSpeed>
               </iwxxm:TropicalCycloneForecastConditions>
           </om:result>
@@ -222,7 +222,7 @@ NXT MSG:                    20040925/2000Z
   </iwxxm:forecast>
 
   <iwxxm:expectedNextAdvisoryTime>
-    <gml:TimeInstant gml:id="ti23">
+    <gml:TimeInstant gml:id="uuid.002b0056-d267-47b7-a9ef-4c7ca70aacd9">
       <gml:timePosition>2004-09-25T20:00:00Z</gml:timePosition>
     </gml:TimeInstant>
   </iwxxm:expectedNextAdvisoryTime>

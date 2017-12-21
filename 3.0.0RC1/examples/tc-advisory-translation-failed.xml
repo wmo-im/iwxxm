@@ -15,7 +15,7 @@ INVALID INVALID INVALID
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd
   http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
-  gml:id="ID000" permissibleUsage="OPERATIONAL"
+  gml:id="uuid.4a954e38-b132-4d3c-aaba-90dbd056d497" permissibleUsage="OPERATIONAL"
   translatedBulletinID="TTAAiiCCCYYGGgg"
   translatedBulletinReceptionTime="2014-05-15T15:29:00Z"
   translationCentreDesignator="YUZZ"
@@ -29,24 +29,24 @@ INVALID INVALID INVALID
   INVALID INVALID INVALID">
 
   <iwxxm:issueTime>
-      <gml:TimeInstant gml:id="ti-200409251600">
+      <gml:TimeInstant gml:id="uuid.3ea6b416-595b-4eb0-ad4c-3879fa5726d2">
           <gml:timePosition>2004-09-25T16:00:00Z</gml:timePosition>
       </gml:TimeInstant>
   </iwxxm:issueTime>
 
   <iwxxm:issuingTropicalCycloneAdvisoryCentre>
-    <aixm:Unit gml:id="tcac-YUFO">
+    <aixm:Unit gml:id="uuid.cf31d51c-7cac-4541-9183-5b295f56ae99">
       <aixm:timeSlice>
-        <aixm:UnitTimeSlice gml:id="uTTCACUnit">
+        <aixm:UnitTimeSlice gml:id="uuid.11e05972-5994-43f9-ab66-307b6d22fe89">
           <gml:validTime>
-            <gml:TimePeriod gml:id="vtTCACUnit">
+            <gml:TimePeriod gml:id="uuid.612e584d-774c-4408-a6a7-762180f240c6">
               <gml:beginPosition>2004-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>SNAPSHOT</aixm:interpretation>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ltTCACUnit">
+            <gml:TimePeriod gml:id="uuid.7da41706-7660-4e0d-a26d-a00cc8b2ea87">
               <gml:beginPosition>2004-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
