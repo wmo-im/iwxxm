@@ -1,0 +1,170 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  <reg:Register rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena">
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/OCNL_TCU">
+        <dct:description xml:lang="en">Occasional towering cumulus cloud</dct:description>
+        <rdfs:label xml:lang="en">Occasional towering cumulus cloud</rdfs:label>
+        <skos:notation>OCNL TCU</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/OCNL_CB">
+        <dct:description xml:lang="en">Occasional cumulonimbus cloud</dct:description>
+        <rdfs:label xml:lang="en">Occasional cumulonimbus cloud</rdfs:label>
+        <skos:notation>OCNL CB</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/ISOL_CB">
+        <dct:description xml:lang="en">Isolated cumulonimbus cloud</dct:description>
+        <rdfs:label xml:lang="en">Isolated cumulonimbus cloud</rdfs:label>
+        <skos:notation>ISOL CB</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <dct:description xml:lang="en">ICAO Annex 3/ WMO No. 49-2 Appendix 6 Section 2.1</dct:description>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/MOD_ICE">
+        <dct:description xml:lang="en">Moderate icing</dct:description>
+        <rdfs:label xml:lang="en">Moderate icing</rdfs:label>
+        <skos:notation>MOD ICE</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/BKN_CLD">
+        <dct:description xml:lang="en">Broken cloud</dct:description>
+        <rdfs:label xml:lang="en">Broken cloud</rdfs:label>
+        <skos:notation>BKN CLD</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <rdfs:label xml:lang="en">Air Wx Phenomena</rdfs:label>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/SFC_WIND">
+        <dct:description xml:lang="en">Widespread mean surface wind</dct:description>
+        <rdfs:label xml:lang="en">Widespread mean surface wind</rdfs:label>
+        <skos:notation>SFC WIND nn[n]MPS</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/MT_OBSC">
+        <dct:description xml:lang="en">Mountain obscuration</dct:description>
+        <rdfs:label xml:lang="en">Mountain obscuration</rdfs:label>
+        <skos:notation>MT OBSC</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/SFC_VIS">
+        <dct:description xml:lang="en">Surface visibility</dct:description>
+        <rdfs:label xml:lang="en">Surface visibility</rdfs:label>
+        <skos:notation>SFC VIS nnnnM (mm)</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/FRQ_CB">
+        <dct:description xml:lang="en">Frequent cumulonimbus cloud</dct:description>
+        <rdfs:label xml:lang="en">Frequent cumulonimbus cloud</rdfs:label>
+        <skos:notation>FRQ CB</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/OCNL_TS">
+        <dct:description xml:lang="en">Occasional thunderstorms</dct:description>
+        <rdfs:label>Occasional thunderstorms</rdfs:label>
+        <skos:notation xml:lang="en">OCNL TS</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2016-12-30T13:26:05.884Z</dct:modified>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/FRQ_TCU">
+        <dct:description xml:lang="en">Frequent towering cumulus cloud</dct:description>
+        <rdfs:label xml:lang="en">Frequent towering cumulus cloud</rdfs:label>
+        <skos:notation>FRQ TCU</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/OVC_CLD">
+        <dct:description xml:lang="en">Overcast cloud</dct:description>
+        <rdfs:label xml:lang="en">Overcast cloud</rdfs:label>
+        <skos:notation>OVC CLD</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/ISOL_TCU">
+        <dct:description xml:lang="en">Isolated towering cumulus cloud</dct:description>
+        <rdfs:label xml:lang="en">Isolated towering cumulus cloud</rdfs:label>
+        <skos:notation>ISOL TCU</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/MOD_MTW">
+        <dct:description xml:lang="en">Moderate mountain wave</dct:description>
+        <rdfs:label xml:lang="en">Moderate mountain wave</rdfs:label>
+        <skos:notation>MOD MTW</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/MOD_TURB">
+        <dct:description xml:lang="en">Moderate turbulence</dct:description>
+        <rdfs:label xml:lang="en">Moderate turbulence</rdfs:label>
+        <skos:notation>MOD TURB</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/ISOL_TSGR">
+        <dct:description xml:lang="en">Isolated thunderstorms with hail</dct:description>
+        <rdfs:label xml:lang="en">Isolated thunderstorms with hail</rdfs:label>
+        <skos:notation>ISOL TSGR</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/ISOL_TS">
+        <dct:description xml:lang="en">Isolated thunderstorms</dct:description>
+        <rdfs:label xml:lang="en">Isolated thunderstorms</rdfs:label>
+        <skos:notation>ISOL TS</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/OCNL_TSGR">
+        <dct:description xml:lang="en">Occasional thunderstorms with hail</dct:description>
+        <rdfs:label xml:lang="en">Occasional thunderstorms with hail</rdfs:label>
+        <skos:notation>OCNL TSGR</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+  </reg:Register>
+</rdf:RDF>
