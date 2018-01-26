@@ -20,43 +20,43 @@
                         http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
 			http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd
 			http://def.wmo.int/collect/2014 http://schemas.wmo.int/collect/1.2/collect.xsd"
-    gml:id="uuid.efb207d7-e82a-4dbd-8a5c-9cbe4fad41b7">
+    gml:id="uuid.507b41d4-2656-4f93-a1d7-2d01bd8e4c50">
 
    <collect:meteorologicalInformation>
 
         <iwxxm:TAF 
-            gml:id="taf-YUDO-201208160000Z"
+            gml:id="uuid.ae3b123f-4fa1-447e-aa0e-5a950c8abff2"
             permissibleUsage="OPERATIONAL"
             status="MISSING">
         
             <iwxxm:issueTime>
-                <gml:TimeInstant gml:id="ti-201208221600Z">
+                <gml:TimeInstant gml:id="uuid.b28ba3dd-6544-4d7b-9a1f-342c63b458b5">
                     <gml:timePosition>2012-08-16T00:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:issueTime>
         
             <iwxxm:baseForecast>
-                <om:OM_Observation gml:id="bf">
+                <om:OM_Observation gml:id="uuid.314a496c-8cc4-419f-be94-f7ce233c3bfe">
                     <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/3.0/MeteorologicalAerodromeForecast"/>
                     <!-- time at which the missing report was found to be missing -->
                     <om:phenomenonTime xlink:href="#ti-201208221600Z"/>
                     <!-- time at which the results are made available -->
                     <om:resultTime xlink:href="#ti-201208221600Z"/>
                     <om:procedure>
-                        <metce:Process gml:id="p-49-2-taf">
+                        <metce:Process gml:id="uuid.057c06bd-c3ff-483d-a32d-9727fd2c6314">
                             <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 5 TECHNICAL SPECIFICATIONS RELATED TO FORECASTS</gml:description>
                         </metce:Process>
                     </om:procedure>
                     <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeForecast"/>
                     <om:featureOfInterest>
                         <!-- featureOfInterest type and shape must refer to a point -->
-                        <sams:SF_SpatialSamplingFeature gml:id="sampling-point-03839">
+                        <sams:SF_SpatialSamplingFeature gml:id="uuid.f91de288-35ec-4386-89bc-41dd84a9df69">
                             <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
                             <sf:sampledFeature>
                                 <!-- The aerodrome at which this observation took place -->
-                                <aixm:AirportHeliport gml:id="aerodrome-YUDO">
+                                <aixm:AirportHeliport gml:id="uuid.b50f56f1-7291-40bb-90c1-5aad1e0ba833">
                                     <aixm:timeSlice>
-                                        <aixm:AirportHeliportTimeSlice gml:id="aerodrome-YUDO-ts">
+                                        <aixm:AirportHeliportTimeSlice gml:id="uuid.64158cdb-c157-4df0-aba7-f2a385bb5935">
                                             <gml:validTime/>
                                             <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                                             <aixm:designator>YUDO</aixm:designator>
@@ -68,7 +68,7 @@
                             </sf:sampledFeature>
                             <sams:shape>
                                 <!-- This is where the observation took place, assumed to be representative of the entire aerodrome -->
-                                <gml:Point gml:id="point-5225-3201" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                <gml:Point gml:id="uuid.aedd0423-5540-49a0-954f-393b040450f4" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:pos>12.34 -12.34</gml:pos>
                                 </gml:Point>
                             </sams:shape>

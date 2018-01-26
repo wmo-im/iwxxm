@@ -16,41 +16,41 @@
     http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
     http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
 
-    gml:id="speci-YUDO-20120822163000Z"
+    gml:id="uuid.8ca15300-d667-4364-86a1-ab8bec9ba833"
     status="NORMAL"
     permissibleUsage="OPERATIONAL"
     automatedStation="false">
 
     <iwxxm:observation>
-        <om:OM_Observation gml:id="obs-03839">
+        <om:OM_Observation gml:id="uuid.b218a1a4-2aa4-4047-969a-dbc5403b5091">
             <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/3.0/MeteorologicalAerodromeObservation"/>
             <!-- time at which the observation actually occured -->
             <om:phenomenonTime>
-                <gml:TimeInstant gml:id="ti-201208151115">
+                <gml:TimeInstant gml:id="uuid.4929b573-d296-4261-bdf9-8d3e389ed72e">
                     <gml:timePosition>2012-08-15T11:15:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </om:phenomenonTime>
             <!-- time at which the results of the observation were made available (10-minutes later) -->
             <om:resultTime>
-                <gml:TimeInstant gml:id="ti-2012081511125">
+                <gml:TimeInstant gml:id="uuid.cb26ec9c-bf49-401a-8385-cafdb23b2d40">
                     <gml:timePosition>2012-08-15T11:25:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </om:resultTime>
             <om:procedure>
-                <metce:Process gml:id="p-49-2-speci">
+                <metce:Process gml:id="uuid.53a0ae9b-d79d-4fb9-ad47-b320c0da2bf0">
                     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 3 TECHNICAL SPECIFICATIONS RELATED TO METEOROLOGICAL OBSERVATIONS AND REPORTS</gml:description>
                 </metce:Process>
             </om:procedure>
             <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeObservation"/>
             <om:featureOfInterest>
                 <!-- featureOfInterest type and shape must refer to a point -->
-                <sams:SF_SpatialSamplingFeature gml:id="sampling-point-03839">
+                <sams:SF_SpatialSamplingFeature gml:id="uuid.9ec6d02d-9c90-4e8e-8844-91fb2c7eb2f6">
                     <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
                     <sf:sampledFeature>
                         <!-- The aerodrome at which this observation took place -->
-                        <aixm:AirportHeliport gml:id="aerodrome-YUDO">
+                        <aixm:AirportHeliport gml:id="uuid.84a7fdc6-ff14-470c-a4b4-587688f02049">
                             <aixm:timeSlice>
-                                <aixm:AirportHeliportTimeSlice gml:id="aerodrome-YUDO-ts">
+                                <aixm:AirportHeliportTimeSlice gml:id="uuid.fa9959d1-8c30-4b1e-b854-bc0fcaed64b9">
                                     <gml:validTime/>
                                     <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                                     <aixm:designator>YUDO</aixm:designator>
@@ -62,7 +62,7 @@
                     </sf:sampledFeature>
                     <sams:shape>
                         <!-- This is where the observation took place, assumed to be representative of the entire aerodrome -->
-                        <gml:Point gml:id="point-5225-3201" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                        <gml:Point gml:id="uuid.b5e759b2-a6e4-4d0d-80cd-718ef62932dd" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                             <gml:pos>12.34 -12.34</gml:pos>
                         </gml:Point>
                     </sams:shape>
@@ -70,7 +70,7 @@
             </om:featureOfInterest>
             <!-- The result of the observation -->
             <om:result>
-                <iwxxm:MeteorologicalAerodromeObservationRecord gml:id="or1" cloudAndVisibilityOK="false">
+                <iwxxm:MeteorologicalAerodromeObservationRecord gml:id="uuid.1b08e09f-708f-496e-bea9-0c29378dca77" cloudAndVisibilityOK="false">
                     <iwxxm:airTemperature uom="Cel">25.0</iwxxm:airTemperature>
                     <iwxxm:dewpointTemperature uom="Cel">22.0</iwxxm:dewpointTemperature>
                     <iwxxm:qnh uom="hPa">1008</iwxxm:qnh>
@@ -105,11 +105,11 @@
         </om:OM_Observation>
     </iwxxm:observation>
     <iwxxm:trendForecast>
-        <om:OM_Observation gml:id="trend-fcst-1">
+        <om:OM_Observation gml:id="uuid.f159bbd9-bb16-4965-89c1-85719fe23587">
             <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/3.0/MeteorologicalAerodromeTrendForecast"/>
             <!-- time at which the forecast conditions actually occur -->
             <om:phenomenonTime>
-                <gml:TimePeriod gml:id="tp-201208221630Z-201208221700Z">
+                <gml:TimePeriod gml:id="uuid.ea6fb3d7-9a0f-4943-8b2c-ef0d3244edda">
                     <gml:beginPosition>2012-08-15T11:15:00Z</gml:beginPosition>
                     <gml:endPosition>2012-08-15T12:00:00Z</gml:endPosition>
                 </gml:TimePeriod>
@@ -120,18 +120,18 @@
             <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeTrendForecast"/>
             <om:featureOfInterest xlink:href="#sampling-point-03839"/>
             <om:result>
-                <iwxxm:MeteorologicalAerodromeTrendForecastRecord gml:id="trend-fcst-record-03839-201208221630Z-201208221700Z" changeIndicator="TEMPORARY_FLUCTUATIONS" cloudAndVisibilityOK="false">
+                <iwxxm:MeteorologicalAerodromeTrendForecastRecord gml:id="uuid.1fcd6178-2764-4b35-826a-4d167d37c558" changeIndicator="TEMPORARY_FLUCTUATIONS" cloudAndVisibilityOK="false">
                     <iwxxm:prevailingVisibility uom="m">600</iwxxm:prevailingVisibility>
                 </iwxxm:MeteorologicalAerodromeTrendForecastRecord>
             </om:result>
         </om:OM_Observation>
     </iwxxm:trendForecast>
     <iwxxm:trendForecast>
-        <om:OM_Observation gml:id="trend-fcst-2">
+        <om:OM_Observation gml:id="uuid.c5fae12c-6139-4da4-aa08-1674c11589fe">
             <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/3.0/MeteorologicalAerodromeTrendForecast"/>
             <!-- time at which the forecast conditions actually occur -->
             <om:phenomenonTime>
-                <gml:TimeInstant gml:id="ti-44">
+                <gml:TimeInstant gml:id="uuid.9c559e62-d2f6-47df-b8cf-4b85b966d362">
                     <gml:timePosition>2012-08-15T12:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </om:phenomenonTime>
@@ -141,7 +141,7 @@
             <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeTrendForecast"/>
             <om:featureOfInterest xlink:href="#sampling-point-03839"/>
             <om:result>
-                <iwxxm:MeteorologicalAerodromeTrendForecastRecord gml:id="trend-fcst-record-03839-201208221800Z-201208221900Z" changeIndicator="BECOMING" cloudAndVisibilityOK="false">
+                <iwxxm:MeteorologicalAerodromeTrendForecastRecord gml:id="uuid.d3071042-2012-48c7-9e4e-df49ffc8a3b9" changeIndicator="BECOMING" cloudAndVisibilityOK="false">
                     <iwxxm:prevailingVisibility uom="m">8000</iwxxm:prevailingVisibility>
                     <iwxxm:forecastWeather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
                     <iwxxm:cloud nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>

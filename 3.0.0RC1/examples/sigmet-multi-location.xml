@@ -21,13 +21,13 @@
   xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd
   http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
   http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
-  gml:id="va-sigmet-YUDD-YYYYMM10T120000Z"
+  gml:id="uuid.b4d56d93-3866-4f75-b493-da9a4bb2404c"
   permissibleUsage="OPERATIONAL"
   status="NORMAL">
   <iwxxm:issuingAirTrafficServicesUnit>
-    <aixm:Unit gml:id="fic-YUDD">
+    <aixm:Unit gml:id="uuid.37f89b19-7774-496b-a20d-f30627c45d17">
       <aixm:timeSlice>
-        <aixm:UnitTimeSlice gml:id="fic-YUDD-ts">
+        <aixm:UnitTimeSlice gml:id="uuid.c01e968b-77b1-4cfd-aedb-50d37f09c345">
           <gml:validTime/>
           <aixm:interpretation>SNAPSHOT</aixm:interpretation>
           <aixm:name>SHANWICK OCEANIC AREA CONTROL CENTRE</aixm:name>
@@ -38,9 +38,9 @@
     </aixm:Unit>
   </iwxxm:issuingAirTrafficServicesUnit>
   <iwxxm:originatingMeteorologicalWatchOffice>
-    <aixm:Unit gml:id="wmo-YUSO">
+    <aixm:Unit gml:id="uuid.252469f5-d46a-41b4-a932-87e37328c474">
       <aixm:timeSlice>
-        <aixm:UnitTimeSlice gml:id="mwo-YUSO-ts">
+        <aixm:UnitTimeSlice gml:id="uuid.58703e69-de03-41b8-b18c-9209e37aff94">
           <gml:validTime/>
           <aixm:interpretation>SNAPSHOT</aixm:interpretation>
           <aixm:name>UK METEOROLOGICAL OFFICE - EXETER</aixm:name>
@@ -52,7 +52,7 @@
   </iwxxm:originatingMeteorologicalWatchOffice>
   <iwxxm:sequenceNumber>2</iwxxm:sequenceNumber>
   <iwxxm:validPeriod>
-    <gml:TimePeriod gml:id="tp-10T12Z-10T22Z">
+    <gml:TimePeriod gml:id="uuid.06f1383c-c034-4ae0-9459-a0b99a3612a9">
       <gml:beginPosition>YYYY-MM-10T12:00:00Z</gml:beginPosition>
       <gml:endPosition>YYYY-MM-10T18:00:00Z</gml:endPosition>
     </gml:TimePeriod>
@@ -61,28 +61,28 @@
   <!-- VA CLD OBS AT 1200Z WI N4315 E02115 – N4345 E02145 N4330 E02215 – N4245 E02230 – N4230 E02145 - N4315 E02115 FL250/370 NC
                        AND WI N4200 E02115 – N4217 E02130 – N4145 E02200 – N4130 E02130 – N4200 E02115 FL150/300 NC -->
   <iwxxm:analysis>
-    <om:OM_Observation gml:id="va-position-and-motion-YUDD-YYYYMM10T12Z">
+    <om:OM_Observation gml:id="uuid.be132ece-3217-4448-866d-d47feeb7914d">
       <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/3.0/SIGMETEvolvingConditionCollectionAnalysis"/>
       <om:phenomenonTime>
-        <gml:TimeInstant gml:id="ti-10T12Z">
+        <gml:TimeInstant gml:id="uuid.5599e948-f719-4fc2-85fc-20ad96644250">
           <gml:timePosition>YYYY-MM-10T12:00:00Z</gml:timePosition>
         </gml:TimeInstant>
       </om:phenomenonTime>
       <om:resultTime xlink:href="#ti-10T12Z"/>
       <om:validTime xlink:href="#tp-10T12Z-10T22Z"/>
       <om:procedure>
-        <metce:Process gml:id="p-49-2-va-sigmet">
+        <metce:Process gml:id="uuid.44a28548-e50b-44dd-93a2-acb32843dc8e">
           <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation [C.3.1.]7 SIGMET AND AIRMET INFORMATION, AERODROME WARNINGS AND WIND SHEAR WARNINGS AND ALERTS</gml:description>
         </metce:Process>
       </om:procedure>
       <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionCollectionAnalysis"/>
       <om:featureOfInterest>
-        <sams:SF_SpatialSamplingFeature gml:id="ss-SHANWICK_OCA">
+        <sams:SF_SpatialSamplingFeature gml:id="uuid.066936d2-7d12-4447-9feb-b74fe3069490">
           <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
           <sam:sampledFeature>
-            <aixm:Airspace gml:id="fir-YUDD">
+            <aixm:Airspace gml:id="uuid.eb9d349c-242c-4193-981a-935ee2e547a2">
               <aixm:timeSlice>
-                <aixm:AirspaceTimeSlice gml:id="fir-YUDD-ts">
+                <aixm:AirspaceTimeSlice gml:id="uuid.23909d58-4be9-43a1-8eb8-2d1e3b64432e">
                   <gml:validTime/>
                   <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                   <aixm:type>OTHER:FIR_UIR</aixm:type>
@@ -97,19 +97,19 @@
         </sams:SF_SpatialSamplingFeature>
       </om:featureOfInterest>
       <om:result>
-        <iwxxm:SIGMETEvolvingConditionCollection gml:id="emc-va-obs-YUDD-YYYYMM10T12Z" timeIndicator="OBSERVATION">
+        <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.ed862622-5643-4c5a-8922-01a04d18dbab" timeIndicator="OBSERVATION">
           <!-- WI N4315 E02115 – N4345 E02145 N4330 E02215 – N4245 E02230 – N4230 E02145 - N4315 E02115 FL250/370 NC -->
           <iwxxm:member>
-            <iwxxm:SIGMETEvolvingCondition gml:id="mc-va-obs-YUDD-YYYYMM10T12Z1" intensityChange="NO_CHANGE">
+            <iwxxm:SIGMETEvolvingCondition gml:id="uuid.6cad5163-6a30-48a0-b723-2a14b5a93cc8" intensityChange="NO_CHANGE">
               <!-- N4315 E02115 – N4345 E02145 N4330 E02215 – N4245 E02230 – N4230 E02145 - N4315 E02115 FL250/370 -->
               <iwxxm:geometry>
-                <aixm:AirspaceVolume gml:id="av-va-obs-position-YUDD-YYYYMM10T12Z1">
+                <aixm:AirspaceVolume gml:id="uuid.8f3df57f-54a0-40dc-8c2d-b9cfe15f68fa">
                   <aixm:upperLimit uom="FL">370</aixm:upperLimit>
                   <aixm:upperLimitReference>STD</aixm:upperLimitReference>
                   <aixm:lowerLimit uom="FL">250</aixm:lowerLimit>
                   <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
                   <aixm:horizontalProjection>
-                    <aixm:Surface gml:id="polygon-va-obs-position-YUDD-YYYYMM10T12Z1" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2"
+                    <aixm:Surface gml:id="uuid.ca46d217-05d8-4f30-9ce0-b56b76af8d16" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2"
                       srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                       <gml:polygonPatches>
                         <gml:PolygonPatch>
@@ -128,16 +128,16 @@
           </iwxxm:member>
           <!-- WI N4200 E02115 – N4217 E02130 – N4145 E02200 – N4130 E02130 – N4200 E02115 FL150/300 NC -->
           <iwxxm:member>
-            <iwxxm:SIGMETEvolvingCondition gml:id="mc-va-obs-YUDD-YYYYMM10T12Z2" intensityChange="NO_CHANGE">
+            <iwxxm:SIGMETEvolvingCondition gml:id="uuid.2425da44-f643-45c8-972c-ff122f50de80" intensityChange="NO_CHANGE">
               <!-- N4200 E02115 – N4217 E02130 – N4145 E02200 – N4130 E02130 – N4200 E02115 FL150/300 -->
               <iwxxm:geometry>
-                <aixm:AirspaceVolume gml:id="av-va-obs-position-YUDD-YYYYMM10T12Z2">
+                <aixm:AirspaceVolume gml:id="uuid.99d24aa8-6778-4356-be69-e91e529836ab">
                   <aixm:upperLimit uom="FL">300</aixm:upperLimit>
                   <aixm:upperLimitReference>STD</aixm:upperLimitReference>
                   <aixm:lowerLimit uom="FL">150</aixm:lowerLimit>
                   <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
                   <aixm:horizontalProjection>
-                    <aixm:Surface gml:id="polygon-va-obs-position-YUDD-YYYYMM10T12Z2" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2"
+                    <aixm:Surface gml:id="uuid.4a5d7c8d-9ab3-402a-86ff-3889823df192" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2"
                       srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                       <gml:polygonPatches>
                         <gml:PolygonPatch>
@@ -159,10 +159,10 @@
     </om:OM_Observation>
   </iwxxm:analysis>
   <iwxxm:forecastPositionAnalysis>
-    <om:OM_Observation gml:id="va-forecast-position-YUDD-YYYYMM10T22Z">
+    <om:OM_Observation gml:id="uuid.ee97301b-9177-4241-87eb-34c239621973">
       <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/3.0/SIGMETPositionCollectionAnalysis"/>
       <om:phenomenonTime>
-        <gml:TimeInstant gml:id="ti-10T22Z">
+        <gml:TimeInstant gml:id="uuid.cce9b23a-d604-4194-8f73-2b7357ee4a9c">
           <gml:timePosition>YYYY-MM-10T18:00:00Z</gml:timePosition>
         </gml:TimeInstant>
       </om:phenomenonTime>
@@ -172,14 +172,14 @@
       <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETPositionCollectionAnalysis"/>
       <om:featureOfInterest xlink:href="#ss-SHANWICK_OCA"/>
       <om:result>
-        <iwxxm:SIGMETPositionCollection gml:id="mpc-YUDD-YYYYMM10T12Z">
+        <iwxxm:SIGMETPositionCollection gml:id="uuid.fad0d2b4-7b60-4843-b17c-501f7b13efe0">
           <!-- APRX N4330 E02215 – N4315 E02345 – N4145 E02315 – N4230 E02200 - N4330 E02215 -->
           <iwxxm:member>
-            <iwxxm:SIGMETPosition gml:id="mp-va-fcst-YUDD-YYYYMM10T12Z1" approximateLocation="true">
+            <iwxxm:SIGMETPosition gml:id="uuid.a229e75e-9c12-4bac-a4d3-37eeaa99023f" approximateLocation="true">
               <iwxxm:geometry>
-                <aixm:AirspaceVolume gml:id="av-va-fcst-position-YUDD-YYYYMM10T22Z1">
+                <aixm:AirspaceVolume gml:id="uuid.908afad2-34ae-49bf-8f7a-866961c781f1">
                   <aixm:horizontalProjection>
-                    <aixm:Surface gml:id="polygon-va-fcst-position-YUDD-YYYYMM10T22Z1" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <aixm:Surface gml:id="uuid.c5464381-23a9-4641-8a79-df05e394302e" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                       <gml:polygonPatches>
                         <gml:PolygonPatch>
                           <gml:exterior>
@@ -197,11 +197,11 @@
           </iwxxm:member>
           <!-- APRX N4200 E02145 – N4145 E02215 – N4100 E02215 - N4130 E02130 - N4200 E02145 -->
           <iwxxm:member>
-            <iwxxm:SIGMETPosition gml:id="mp-va-fcst-YUDD-YYYYMM10T12Z2"  approximateLocation="true">
+            <iwxxm:SIGMETPosition gml:id="uuid.43b58951-4023-4805-97f3-bad21c4e6f74"  approximateLocation="true">
               <iwxxm:geometry>
-                <aixm:AirspaceVolume gml:id="av-va-fcst-position-YUDD-YYYYMM10T22Z2">
+                <aixm:AirspaceVolume gml:id="uuid.c8c2ee62-3075-4642-89b9-8a84f28e510a">
                   <aixm:horizontalProjection>
-                    <aixm:Surface gml:id="polygon-va-fcst-position-YUDD-YYYYMM10T22Z2" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <aixm:Surface gml:id="uuid.c772f1bd-7684-4572-9907-7c742cc2013a" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                       <gml:polygonPatches>
                         <gml:PolygonPatch>
                           <gml:exterior>
@@ -222,10 +222,10 @@
     </om:OM_Observation>
   </iwxxm:forecastPositionAnalysis>
   <iwxxm:eruptingVolcano>
-    <metce:Volcano gml:id="v-MT-ASHVAL">
+    <metce:Volcano gml:id="uuid.8c2bf282-1268-4066-bfc9-a56f7ae999f5">
       <metce:name>MT ASHVAL</metce:name>
       <metce:position>
-        <gml:Point gml:id="ref-point-MT-ASHVAL" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+        <gml:Point gml:id="uuid.2b5a1e46-9282-4912-a314-98ef9c65edae" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
           <gml:pos>43.15 21.15</gml:pos>
         </gml:Point>
       </metce:position>

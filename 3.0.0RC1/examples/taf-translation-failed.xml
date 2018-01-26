@@ -13,7 +13,7 @@
     http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
     http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
 
-    gml:id="taf-YUDO-201208160000Z"
+    gml:id="uuid.fa3ce106-f401-4670-ae50-cdf76bf68912"
     permissibleUsage="OPERATIONAL"
     translatedBulletinID="TTAAiiCCCYYGGgg"
     translatedBulletinReceptionTime="2014-05-15T15:29:00Z"
@@ -25,14 +25,14 @@
 
     <iwxxm:issueTime>
         <!-- Original TAF: 151800Z -->
-        <gml:TimeInstant gml:id="ti-201208151800Z">
+        <gml:TimeInstant gml:id="uuid.1b9f7d3f-e09f-4d60-8fca-56b0de4dfebd">
             <gml:timePosition>2012-08-15T18:00:00Z</gml:timePosition>
         </gml:TimeInstant>
     </iwxxm:issueTime>
     <!-- The time at which this TAF is intended to be used -->
     <iwxxm:validTime>
         <!-- Original TAF: 1600/1618 -->
-        <gml:TimePeriod gml:id="tp-201208160000-201208161800">
+        <gml:TimePeriod gml:id="uuid.e1352c79-926c-4493-9046-bba70cf8c578">
             <gml:beginPosition>2012-08-16T00:00:00Z</gml:beginPosition>
             <gml:endPosition>2012-08-16T18:00:00Z</gml:endPosition>
         </gml:TimePeriod>

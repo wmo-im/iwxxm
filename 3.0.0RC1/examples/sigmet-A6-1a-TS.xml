@@ -15,14 +15,14 @@
     http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
     http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
 
-    gml:id="sigmet-YUDD-201208101200Z"
+    gml:id="uuid.8debfaca-7116-4b32-9378-b472ca64e823"
     permissibleUsage="OPERATIONAL"
     status="NORMAL">
 
     <iwxxm:issuingAirTrafficServicesUnit>
-        <aixm:Unit gml:id="fic-YUDD">
+        <aixm:Unit gml:id="uuid.fb27bee4-d1a0-4e47-87b3-7dbd863a55bf">
             <aixm:timeSlice>
-                <aixm:UnitTimeSlice gml:id="fic-YUDD-ts">
+                <aixm:UnitTimeSlice gml:id="uuid.83c6260a-67c8-46f9-ab95-5f8ea92c3236">
                     <gml:validTime/>
                     <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                     <aixm:name>YUDD FIC</aixm:name>
@@ -33,9 +33,9 @@
         </aixm:Unit>
     </iwxxm:issuingAirTrafficServicesUnit>
     <iwxxm:originatingMeteorologicalWatchOffice>
-        <aixm:Unit gml:id="wmo-YUSO">
+        <aixm:Unit gml:id="uuid.104eed56-d042-40b1-8704-484da1e47070">
             <aixm:timeSlice>
-                <aixm:UnitTimeSlice gml:id="mwo-YUSO-ts">
+                <aixm:UnitTimeSlice gml:id="uuid.2bb4af1b-ad05-4be3-b9e4-a1a7848a0180">
                     <gml:validTime/>
                     <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                     <aixm:name>YUSO MWO</aixm:name>
@@ -50,7 +50,7 @@
 
     <!-- Valid period for this report -->
     <iwxxm:validPeriod>
-        <gml:TimePeriod gml:id="tp-20120810T1200Z-20120810T1600Z">
+        <gml:TimePeriod gml:id="uuid.18e9591a-b3f0-4927-b723-b4f66d7c386f">
             <gml:beginPosition>2012-08-10T12:00:00Z</gml:beginPosition>
             <gml:endPosition>2012-08-10T16:00:00Z</gml:endPosition>
         </gml:TimePeriod>
@@ -61,33 +61,33 @@
 
     <!-- FCST S OF N54 AND E OF W012 TOP FL390 MOV E 20KT WKN -->
     <iwxxm:analysis>
-        <om:OM_Observation gml:id="analysis1">
+        <om:OM_Observation gml:id="uuid.3c96a88a-8388-40d3-8d1d-fb5f69d071d7">
             <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/3.0/SIGMETEvolvingConditionCollectionAnalysis"/>
             <!-- time of FCST conditions - if missing there is no FCST or OBS time -->
             <om:phenomenonTime nilReason="missing"/>
 
             <!-- time at which the results of the observation were made available -->
             <om:resultTime>
-                <gml:TimeInstant gml:id="ti-201208101200Z">
+                <gml:TimeInstant gml:id="uuid.7754148a-7769-4adc-93fc-d591bf19c715">
                     <gml:timePosition>2012-08-10T12:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </om:resultTime>
             <!-- The valid period for this observation is the period of the entire SIGMET -->
             <om:validTime xlink:href="#tp-20120810T1200Z-20120810T1600Z"/>
             <om:procedure>
-                <metce:Process gml:id="p-49-2-sigmet">
+                <metce:Process gml:id="uuid.e5f851f2-4e6d-4656-bd45-77fc6fdc6388">
                     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO SIGMET INFORMATION</gml:description>
                 </metce:Process>
             </om:procedure>
             <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionCollectionAnalysis"/>
             <!-- featureOfInterest type and shape MUST refer to an SF_SamplingSurface -->
             <om:featureOfInterest>
-                <sams:SF_SpatialSamplingFeature gml:id="sampling-surface-shanlon">
+                <sams:SF_SpatialSamplingFeature gml:id="uuid.44664773-df86-400b-9c97-37764b7245ba">
                     <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
                     <sf:sampledFeature>
-                        <aixm:Airspace gml:id="fir-YUDD">
+                        <aixm:Airspace gml:id="uuid.e8411dad-219a-4018-ad55-c5791a87c86d">
                             <aixm:timeSlice>
-                                <aixm:AirspaceTimeSlice gml:id="fir-YUDD-ts">
+                                <aixm:AirspaceTimeSlice gml:id="uuid.de6d3114-bafe-47d6-a47f-2fbe43581a54">
                                     <gml:validTime/>
                                     <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                                     <aixm:type>OTHER:FIR_UIR</aixm:type>
@@ -102,17 +102,17 @@
                 </sams:SF_SpatialSamplingFeature>
             </om:featureOfInterest>
             <om:result>
-                <iwxxm:SIGMETEvolvingConditionCollection gml:id="fcst1" timeIndicator="FORECAST">
+                <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.06446fea-1935-4101-b3e8-74f286a9b74d" timeIndicator="FORECAST">
                   <iwxxm:member>
-                    <iwxxm:SIGMETEvolvingCondition gml:id="sec1" intensityChange="WEAKEN">
+                    <iwxxm:SIGMETEvolvingCondition gml:id="uuid.10f68782-703d-43a6-a4e5-af27469edc6e" intensityChange="WEAKEN">
                       <iwxxm:directionOfMotion uom="deg">90</iwxxm:directionOfMotion>
                       <!-- This shape describes: S OF N54 AND E OF W012 TOP FL390 -->
                       <iwxxm:geometry>
-                        <aixm:AirspaceVolume gml:id="as1">
+                        <aixm:AirspaceVolume gml:id="uuid.d4938cc8-c129-4cd7-bda5-588c434ef996">
                           <aixm:upperLimit uom="FL">390</aixm:upperLimit>
                           <aixm:upperLimitReference>STD</aixm:upperLimitReference>
                           <aixm:horizontalProjection>
-                            <aixm:Surface gml:id="sfc1" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                            <aixm:Surface gml:id="uuid.e20caa4b-2b93-4d28-9b14-e04196314999" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                               <gml:polygonPatches>
                                 <gml:PolygonPatch>
                                   <gml:exterior>

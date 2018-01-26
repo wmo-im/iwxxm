@@ -565,6 +565,11 @@
          <sch:assert test="sum( //iwxxm:extension/.//text()/string-length(.) ) +sum( //iwxxm:extension/.//element()/( (string-length( name() ) * 2 ) + 5 ) ) +sum( //iwxxm:extension/.//@*/( 1 + string-length(name()) + 3 + string-length(.) ) ) +sum( //iwxxm:extension/.//comment()/( string-length( . ) + 7 ) ) lt 5000">COMMON.Report4: Total size of extension content must not exceed 5000 characters per report</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="COMMON.Report5">
+     <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory">
+       <sch:assert test="if( //@gml:id[not(matches(.,'uuid\.[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}'))]) then false() else true()">COMMON.Report5: All gml:ids in IWXXM reports must be UUID version 4</sch:assert>
+     </sch:rule>
+   </sch:pattern>
    <sch:pattern id="COMMON.Report2">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory">
          <sch:assert test="(if(@permissibleUsage eq 'OPERATIONAL') then( not( exists(@permissibleUsageReason))) else(true()))">COMMON.Report2: Operational reports should not include a permissibleUsageReason</sch:assert>

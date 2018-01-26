@@ -15,7 +15,7 @@
     http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
     http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
 
-    gml:id="airmet-YUDD-201405151520Z"
+    gml:id="uuid.a587cca7-b8e1-4633-b3a5-7a0e5f6e50c9"
     permissibleUsage="OPERATIONAL"
     translatedBulletinID="TTAAiiCCCYYGGgg"
     translatedBulletinReceptionTime="2014-05-15T15:29:00Z"
@@ -28,9 +28,9 @@
     status="NORMAL">
 
     <iwxxm:issuingAirTrafficServicesUnit>
-        <aixm:Unit gml:id="fic-YUDD">
+        <aixm:Unit gml:id="uuid.500c55b8-3d10-40cb-8243-159b05ca0e98">
             <aixm:timeSlice>
-                <aixm:UnitTimeSlice gml:id="fic-YUDD-ts">
+                <aixm:UnitTimeSlice gml:id="uuid.6f05c703-4024-4ea2-85a2-6c4a1b2bb949">
                     <gml:validTime/>
                     <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                     <aixm:name>YUDD FIC</aixm:name>
@@ -41,9 +41,9 @@
         </aixm:Unit>
     </iwxxm:issuingAirTrafficServicesUnit>
     <iwxxm:originatingMeteorologicalWatchOffice>
-        <aixm:Unit gml:id="wmo-YUDD">
+        <aixm:Unit gml:id="uuid.8831a1d6-dff0-49c7-81d6-802055d5be01">
             <aixm:timeSlice>
-                <aixm:UnitTimeSlice gml:id="wmo-YUDD-ts">
+                <aixm:UnitTimeSlice gml:id="uuid.5d46b0da-40c0-4d6f-a331-10c05693ac7c">
                     <gml:validTime/>
                     <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                     <aixm:name>YUDD MWO</aixm:name>
@@ -57,7 +57,7 @@
     <iwxxm:sequenceNumber>1</iwxxm:sequenceNumber>
 
     <iwxxm:validPeriod>
-        <gml:TimePeriod gml:id="tp1">
+        <gml:TimePeriod gml:id="uuid.b1c4f44c-f702-43a8-95c7-79c5823d9dd0">
             <gml:beginPosition>2014-05-15T15:20:00</gml:beginPosition>
             <gml:endPosition>2014-05-15T18:00:00</gml:endPosition>
         </gml:TimePeriod>
