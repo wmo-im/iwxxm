@@ -8,17 +8,10 @@
 -->
 <iwxxm:TropicalCycloneSIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
-    xmlns:om="http://www.opengis.net/om/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0"
-    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
-    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
-
-    gml:id="uuid.f12194be-0d82-49ad-ad97-41e46f724dec"
-    permissibleUsage="OPERATIONAL"
-    status="NORMAL">
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+    gml:id="uuid.f12194be-0d82-49ad-ad97-41e46f724dec" permissibleUsage="OPERATIONAL" status="NORMAL">
 
     <iwxxm:issuingAirTrafficServicesUnit>
         <aixm:Unit gml:id="uuid.ee9eedf1-52d2-45b4-8f7c-f027dd25c5e6">
@@ -47,7 +40,30 @@
         </aixm:Unit>
     </iwxxm:originatingMeteorologicalWatchOffice>
 
+    <iwxxm:flightInformationRegion>
+        <aixm:Airspace gml:id="uuid.83b13711-6bf4-4497-9293-6bb5490bc259">
+            <aixm:timeSlice>
+                <aixm:AirspaceTimeSlice gml:id="uuid.44f4afb1-fab4-4d01-8030-7d51b43eb4ed">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:type>FIR</aixm:type>
+                    <aixm:designator>YUCC</aixm:designator>
+                    <aixm:name>AMSWELL FIR</aixm:name>
+                </aixm:AirspaceTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Airspace>
+    </iwxxm:flightInformationRegion>
+
+    <!-- FIR boundary not typically reported -->
+
     <iwxxm:sequenceNumber>3</iwxxm:sequenceNumber>
+
+    <!-- time at which the results of the observation were made available (issued) -->
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.f598d1e0-8e2d-4af1-a4ee-83d04b37f19e">
+            <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
 
     <!-- Valid period for this report -->
     <iwxxm:validPeriod>
@@ -62,148 +78,92 @@
 
     <!-- OBS AT 1600Z -->
     <iwxxm:analysis>
-        <om:OM_Observation gml:id="uuid.4cd84f41-edbf-4dc6-ba67-88048d9d1368">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/3.0/SIGMETEvolvingConditionCollectionAnalysis"/>
+        <!-- CB OBS AT 1600Z WI 250NM OF TC CENTRE TOP FL500 NC -->
+        <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.89147e42-7ce0-493e-b81d-6ba6a989e8a1" timeIndicator="OBSERVATION">
             <!-- time of observed conditions -->
-            <om:phenomenonTime>
+            <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.2f6d2369-b614-4522-8c76-bc44d770ce5e">
                     <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
-            </om:phenomenonTime>
-            <!-- time at which the results of the observation were made available -->
-            <om:resultTime>
-                <gml:TimeInstant gml:id="uuid.f598d1e0-8e2d-4af1-a4ee-83d04b37f19e">
-                    <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
-                </gml:TimeInstant>
-            </om:resultTime>
-            <!-- The valid period for this observation is the period of the entire SIGMET -->
-            <om:validTime xlink:href="#tp-20120825T1600Z-20120825T2200Z"/>
-            <om:procedure>
-                <metce:Process gml:id="uuid.7cb644bf-d7d8-4842-803e-84cc4de4e8f0">
-                    <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO SIGMET INFORMATION</gml:description>
-                </metce:Process>
-            </om:procedure>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionCollectionAnalysis"/>
-            <!-- featureOfInterest type and shape MUST refer to an SF_SamplingSurface -->
-            <om:featureOfInterest>
-                <sams:SF_SpatialSamplingFeature gml:id="uuid.8eb74801-27b9-4e74-8704-5bfa18ded253">
-                    <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
-                    <sf:sampledFeature>
-                        <aixm:Airspace gml:id="uuid.83b13711-6bf4-4497-9293-6bb5490bc259">
-                            <aixm:timeSlice>
-                                <aixm:AirspaceTimeSlice gml:id="uuid.44f4afb1-fab4-4d01-8030-7d51b43eb4ed">
-                                    <gml:validTime/>
-                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                                    <aixm:type>FIR</aixm:type>
-                                    <aixm:designator>YUCC</aixm:designator>
-                                    <aixm:name>AMSWELL FIR</aixm:name>
-                                </aixm:AirspaceTimeSlice>
-                            </aixm:timeSlice>
-                        </aixm:Airspace>
-                    </sf:sampledFeature>
-                    <!-- FIR boundary - not typically reported -->
-                    <sams:shape nilReason="withheld"/>
-                </sams:SF_SpatialSamplingFeature>
-            </om:featureOfInterest>
-            <om:result>
-                <!-- CB OBS AT 1600Z WI 250NM OF TC CENTRE TOP FL500 NC -->
-                <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.89147e42-7ce0-493e-b81d-6ba6a989e8a1" timeIndicator="OBSERVATION">
-                  <iwxxm:member>
-                    <iwxxm:SIGMETEvolvingCondition gml:id="uuid.c0a23437-9eb7-4e6b-82f2-6fbd5757440c" intensityChange="NO_CHANGE">
-                      <!-- This shape describes:
-                          N2706 W07306 CB TOP FL500 WI 150NM OF CENTRE i.e., a 150NM radius around -73.10 (lon), 27.10 (lat) -->
-                      <iwxxm:geometry>
-                          <aixm:AirspaceVolume gml:id="uuid.08077323-fbd5-4e04-a787-fccff0543f0a">
-                              <aixm:upperLimit uom="FL">500</aixm:upperLimit>
-                              <aixm:upperLimitReference>STD</aixm:upperLimitReference>
-                              <aixm:horizontalProjection>
-                                  <aixm:Surface gml:id="uuid.62695824-f234-4618-b459-90bb795cde9a" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                      <gml:polygonPatches>
-                                          <gml:PolygonPatch>
-                                              <gml:exterior>
-                                                  <gml:Ring>
-                                                      <gml:curveMember>
-                                                          <gml:Curve gml:id="uuid.b7fa4047-2e78-431c-ba95-3fdf6343e3b5">
-                                                              <gml:segments>
-                                                                  <gml:CircleByCenterPoint numArc="1">
-                                                                      <gml:pos>27.10 -73.10</gml:pos>
-                                                                      <gml:radius uom="[nmi_i]">250</gml:radius>
-                                                                  </gml:CircleByCenterPoint>
-                                                              </gml:segments>
-                                                          </gml:Curve>
-                                                      </gml:curveMember>
-                                                  </gml:Ring>
-                                              </gml:exterior>
-                                          </gml:PolygonPatch>
-                                      </gml:polygonPatches>
-                                  </aixm:Surface>
-                              </aixm:horizontalProjection>
-                          </aixm:AirspaceVolume>
-                      </iwxxm:geometry>
-                    </iwxxm:SIGMETEvolvingCondition>
-                  </iwxxm:member>
-                </iwxxm:SIGMETEvolvingConditionCollection>
-            </om:result>
-        </om:OM_Observation>
+            </iwxxm:phenomenonTime>
+            <iwxxm:member>
+                <iwxxm:SIGMETEvolvingCondition gml:id="uuid.c0a23437-9eb7-4e6b-82f2-6fbd5757440c" intensityChange="NO_CHANGE">
+                    <!-- This shape describes:
+                        N2706 W07306 CB TOP FL500 WI 150NM OF CENTRE i.e., a 150NM radius around -73.10 (lon), 27.10 (lat) -->
+                    <iwxxm:geometry>
+                        <aixm:AirspaceVolume gml:id="uuid.08077323-fbd5-4e04-a787-fccff0543f0a">
+                            <aixm:upperLimit uom="FL">500</aixm:upperLimit>
+                            <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.62695824-f234-4618-b459-90bb795cde9a" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:Ring>
+                                                    <gml:curveMember>
+                                                        <gml:Curve gml:id="uuid.b7fa4047-2e78-431c-ba95-3fdf6343e3b5">
+                                                            <gml:segments>
+                                                                <gml:CircleByCenterPoint numArc="1">
+                                                                    <gml:pos>27.10 -73.10</gml:pos>
+                                                                    <gml:radius uom="[nmi_i]">250</gml:radius>
+                                                                </gml:CircleByCenterPoint>
+                                                            </gml:segments>
+                                                        </gml:Curve>
+                                                    </gml:curveMember>
+                                                </gml:Ring>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:geometry>
+                </iwxxm:SIGMETEvolvingCondition>
+            </iwxxm:member>
+        </iwxxm:SIGMETEvolvingConditionCollection>
     </iwxxm:analysis>
 
     <!-- FCST AT 2200Z TC CENTRE PSN N2740 W07345 -->
     <iwxxm:forecastPositionAnalysis>
-        <om:OM_Observation gml:id="uuid.caee76a0-bb11-48d3-b1cb-d916302dc81d">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/3.0/SIGMETPositionCollectionAnalysis"/>
+        <iwxxm:SIGMETPositionCollection gml:id="uuid.59824907-bcbe-476d-8151-8743e4a1b7db">
             <!-- time of forecast conditions -->
-            <om:phenomenonTime>
+            <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.aab0df0d-6ee9-4ff8-82b2-06a2a42ab0a9">
                     <gml:timePosition>2012-08-25T22:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
-            </om:phenomenonTime>
-            <!-- time at which the results of the observation were made available -->
-            <om:resultTime>
-                <gml:TimeInstant gml:id="uuid.b76d57ea-3648-4d91-8d71-6b627424b16c">
-                    <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
-                </gml:TimeInstant>
-            </om:resultTime>
-            <!-- The valid period for this observation is the period of the entire SIGMET -->
-            <om:validTime xlink:href="#tp-20120825T1600Z-20120825T2200Z"/>
-            <om:procedure xlink:href="#p-49-2-sigmet"/>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETPositionCollectionAnalysis"/>
-            <om:featureOfInterest xlink:href="#sampling-surface-Amswell"/>
-            <om:result>
-                <iwxxm:SIGMETPositionCollection gml:id="uuid.59824907-bcbe-476d-8151-8743e4a1b7db">
-                    <iwxxm:member>
-                        <!-- TC CENTRE N2740 W07345 -->
-                        <iwxxm:SIGMETPosition gml:id="uuid.338354de-7634-4fca-ac75-3675cb592284">
-                            <iwxxm:geometry>
-                                <aixm:AirspaceVolume gml:id="uuid.4ed35f91-7189-4b9c-baed-19b5cec0b4c1">
-                                    <aixm:horizontalProjection>
-                                        <aixm:Surface gml:id="uuid.c76ff9fa-ec6b-48ed-8f26-ed37c47bbc38" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                            <gml:polygonPatches>
-                                                <gml:PolygonPatch>
-                                                    <gml:exterior>
-                                                        <gml:Ring>
-                                                            <gml:curveMember>
-                                                                <gml:Curve gml:id="uuid.0380d35a-1d35-46a2-bbc8-38190206bfe8">
-                                                                    <gml:segments>
-                                                                        <gml:CircleByCenterPoint numArc="1">
-                                                                            <gml:pos>27.6667 -73.75</gml:pos>
-                                                                            <gml:radius uom="[nmi_i]">0</gml:radius>
-                                                                        </gml:CircleByCenterPoint>
-                                                                    </gml:segments>
-                                                                </gml:Curve>
-                                                            </gml:curveMember>
-                                                        </gml:Ring>
-                                                    </gml:exterior>
-                                                </gml:PolygonPatch>
-                                            </gml:polygonPatches>
-                                        </aixm:Surface>
-                                    </aixm:horizontalProjection>
-                                </aixm:AirspaceVolume>
-                            </iwxxm:geometry>
-                        </iwxxm:SIGMETPosition>
-                    </iwxxm:member>
-                </iwxxm:SIGMETPositionCollection>
-            </om:result>
-        </om:OM_Observation>
+            </iwxxm:phenomenonTime>
+            <iwxxm:member>
+                <!-- TC CENTRE N2740 W07345 -->
+                <iwxxm:SIGMETPosition gml:id="uuid.338354de-7634-4fca-ac75-3675cb592284">
+                    <iwxxm:geometry>
+                        <aixm:AirspaceVolume gml:id="uuid.4ed35f91-7189-4b9c-baed-19b5cec0b4c1">
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.c76ff9fa-ec6b-48ed-8f26-ed37c47bbc38" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:Ring>
+                                                    <gml:curveMember>
+                                                        <gml:Curve gml:id="uuid.0380d35a-1d35-46a2-bbc8-38190206bfe8">
+                                                            <gml:segments>
+                                                                <gml:CircleByCenterPoint numArc="1">
+                                                                    <gml:pos>27.6667 -73.75</gml:pos>
+                                                                    <gml:radius uom="[nmi_i]">0</gml:radius>
+                                                                </gml:CircleByCenterPoint>
+                                                            </gml:segments>
+                                                        </gml:Curve>
+                                                    </gml:curveMember>
+                                                </gml:Ring>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:geometry>
+                </iwxxm:SIGMETPosition>
+            </iwxxm:member>
+        </iwxxm:SIGMETPositionCollection>
     </iwxxm:forecastPositionAnalysis>
 
     <iwxxm:tropicalCyclone>
