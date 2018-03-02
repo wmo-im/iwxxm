@@ -126,11 +126,12 @@ NXT MSG:                    20040925/2000Z
     <!-- 24-hour forecast -->
     <iwxxm:forecast>
         <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.708829ef-4ca3-4229-b57c-5f1c937c3b2b">
-            <iwxxm:tropicalCyclonePosition>
-                <iwxxm:phenomenonTime>
+            <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.3d372d30-0a48-4d4b-9f9b-a27bbd764890">
                     <gml:timePosition>2004-09-26T16:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:tropicalCyclonePosition>
                 <gml:Point gml:id="uuid.d26643a3-1106-4003-9978-558cdbef0e78" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:pos>29.2 -75.5</gml:pos>
                 </gml:Point>
