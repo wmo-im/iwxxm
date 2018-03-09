@@ -240,7 +240,7 @@ NXT ADVISORY:               20080923/0730Z
 
     <!-- 23/1900Z NO VA EXP -->
     <iwxxm:analysis>
-        <iwxxm:VolcanicAshConditions>
+        <iwxxm:VolcanicAshConditions gml:id="uuid.e453c86f-6912-47f0-9649-19d656b1bd1f">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.9b7632de-7591-4c3a-a876-99304e3d9d51">
                     <gml:timePosition>2008-09-23T19:00:00Z</gml:timePosition>

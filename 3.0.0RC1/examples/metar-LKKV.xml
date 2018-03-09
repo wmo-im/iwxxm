@@ -2,101 +2,81 @@
 <iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:om="http://www.opengis.net/om/2.0"
     xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
-    xmlns:sam="http://www.opengis.net/sampling/2.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
-    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
     gml:id="uuid.ce3b61b9-d360-4da1-83b9-67e668406869" status="NORMAL" automatedStation="false" permissibleUsage="OPERATIONAL">
+    
+    <iwxxm:aerodrome>
+        <!-- The aerodrome at which this observation took place -->
+        <aixm:AirportHeliport gml:id="uuid.249725b7-1d1f-4431-8ff0-bbbe65c5f5c0">
+            <aixm:timeSlice>
+                <aixm:AirportHeliportTimeSlice gml:id="uuid.c69cbe8a-81da-4ddc-a4a8-995e052327d2">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:designator>LKKV</aixm:designator>
+                    <aixm:name>KARLOVY VARY INTERNATIONAL</aixm:name>
+                    <aixm:locationIndicatorICAO>LKKV</aixm:locationIndicatorICAO>
+                </aixm:AirportHeliportTimeSlice>
+            </aixm:timeSlice>
+        </aixm:AirportHeliport>
+    </iwxxm:aerodrome>
+    
+    <iwxxm:observationTime>
+        <gml:TimeInstant gml:id="uuid.27e26b04-27e7-4c41-adaa-2b16ba92e310">
+            <gml:timePosition>2007-07-25T12:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:observationTime>
+    
+    <!-- Location not known by issuer -->
+    <iwxxm:observationLocation nilReason="unknown"/>
+    
     <iwxxm:observation>
-        <om:OM_Observation gml:id="uuid.f1ee2439-7dc2-478d-9a42-1a4577e83146">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/3.0/MeteorologicalAerodromeObservation"/>
-            <om:phenomenonTime>
-                <gml:TimeInstant gml:id="uuid.27e26b04-27e7-4c41-adaa-2b16ba92e310">
-                    <gml:timePosition>2007-07-25T12:00:00Z</gml:timePosition>
-                </gml:TimeInstant>
-            </om:phenomenonTime>
-            <om:resultTime xlink:href="#ti-20070725T12Z"/>
-            <om:procedure>
-                <metce:Process gml:id="uuid.a931097a-48a9-4f31-99c3-ed4ca3da8c09">
-                    <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 3 TECHNICAL SPECIFICATIONS RELATED TO METEOROLOGICAL OBSERVATIONS AND REPORTS</gml:description>
-                </metce:Process>
-            </om:procedure>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeObservation"/>
-            <om:featureOfInterest>
-                <sams:SF_SpatialSamplingFeature gml:id="uuid.77f712fd-f7fd-4762-812a-70acc7103af5">
-                    <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
-                    <sam:sampledFeature>
-                        <aixm:AirportHeliport gml:id="uuid.249725b7-1d1f-4431-8ff0-bbbe65c5f5c0">
-                            <aixm:timeSlice>
-                                <aixm:AirportHeliportTimeSlice gml:id="uuid.c69cbe8a-81da-4ddc-a4a8-995e052327d2">
-                                    <gml:validTime/>
-                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                                    <aixm:designator>LKKV</aixm:designator>
-                                    <aixm:name>KARLOVY VARY INTERNATIONAL</aixm:name>
-                                    <aixm:locationIndicatorICAO>LKKV</aixm:locationIndicatorICAO>
-                                </aixm:AirportHeliportTimeSlice>
-                            </aixm:timeSlice>
-                        </aixm:AirportHeliport>
-                    </sam:sampledFeature>
-                    <sams:shape>
-                        <gml:Point gml:id="uuid.70c31fd7-c5cf-4c64-ad24-67f2ce15b0e6" uomLabels="deg deg m" axisLabels="Lat Lon Altitude" srsDimension="3" srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
-                            <gml:pos>50.20 12.92 606</gml:pos>
-                        </gml:Point>
-                    </sams:shape>
-                </sams:SF_SpatialSamplingFeature>
-            </om:featureOfInterest>
-            <om:result>
-                <iwxxm:MeteorologicalAerodromeObservationRecord cloudAndVisibilityOK="false" gml:id="uuid.dccac4d8-c332-4353-997b-822db356eafa">
-                    <iwxxm:airTemperature uom="Cel">27</iwxxm:airTemperature>
-                    <iwxxm:dewpointTemperature uom="Cel">10</iwxxm:dewpointTemperature>
-                    <iwxxm:qnh uom="hPa">1010</iwxxm:qnh>
-                    <iwxxm:surfaceWind>
-                        <iwxxm:AerodromeSurfaceWind variableWindDirection="false">
-                            <iwxxm:meanWindDirection uom="deg">210</iwxxm:meanWindDirection>
-                            <iwxxm:meanWindSpeed uom="m/s">2.6</iwxxm:meanWindSpeed>
-                        </iwxxm:AerodromeSurfaceWind>
-                    </iwxxm:surfaceWind>
-                    <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/VCSH"/>
-                    <iwxxm:recentWeather xlink:href="http://codes.wmo.int/306/4678/TS"/>
-                    <!-- WS R18C -->
-                    <iwxxm:windShear>
-                      <iwxxm:AerodromeWindShear>
-                        <iwxxm:runway>
-                          <aixm:RunwayDirection gml:id="uuid.3f6809e8-12e1-49ec-a2de-a714fd66fd07">
-                            <aixm:timeSlice>
-                              <aixm:RunwayDirectionTimeSlice gml:id="uuid.6e500b68-defe-453a-8569-e6efa8d903f1">
-                                <gml:validTime/>
-                                <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                                <aixm:designator>18C</aixm:designator>
+        <iwxxm:MeteorologicalAerodromeObservation cloudAndVisibilityOK="false" gml:id="uuid.dccac4d8-c332-4353-997b-822db356eafa">
+            <iwxxm:airTemperature uom="Cel">27</iwxxm:airTemperature>
+            <iwxxm:dewpointTemperature uom="Cel">10</iwxxm:dewpointTemperature>
+            <iwxxm:qnh uom="hPa">1010</iwxxm:qnh>
+            <iwxxm:surfaceWind>
+                <iwxxm:AerodromeSurfaceWind variableWindDirection="false">
+                    <iwxxm:meanWindDirection uom="deg">210</iwxxm:meanWindDirection>
+                    <iwxxm:meanWindSpeed uom="m/s">2.6</iwxxm:meanWindSpeed>
+                </iwxxm:AerodromeSurfaceWind>
+            </iwxxm:surfaceWind>
+            <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/VCSH"/>
+            <iwxxm:recentWeather xlink:href="http://codes.wmo.int/306/4678/TS"/>
+            <!-- WS R18C -->
+            <iwxxm:windShear>
+              <iwxxm:AerodromeWindShear>
+                <iwxxm:runway>
+                  <aixm:RunwayDirection gml:id="uuid.3f6809e8-12e1-49ec-a2de-a714fd66fd07">
+                    <aixm:timeSlice>
+                      <aixm:RunwayDirectionTimeSlice gml:id="uuid.6e500b68-defe-453a-8569-e6efa8d903f1">
+                        <gml:validTime/>
+                        <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                        <aixm:designator>18C</aixm:designator>
+                      </aixm:RunwayDirectionTimeSlice>
+                    </aixm:timeSlice>
+                  </aixm:RunwayDirection>
+                </iwxxm:runway>
+              </iwxxm:AerodromeWindShear>
+            </iwxxm:windShear>
+          <iwxxm:runwayState>
+                <iwxxm:AerodromeRunwayState>
+                    <iwxxm:runway>
+                      <aixm:RunwayDirection gml:id="uuid.4ce3040f-69a1-4703-8a21-78a33c14ddce">
+                          <aixm:timeSlice>
+                              <aixm:RunwayDirectionTimeSlice gml:id="uuid.da0eb705-ba52-4d66-8d0d-130b99be5692">
+                                  <gml:validTime/>
+                                  <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                  <aixm:designator>11</aixm:designator>
                               </aixm:RunwayDirectionTimeSlice>
-                            </aixm:timeSlice>
-                          </aixm:RunwayDirection>
-                        </iwxxm:runway>
-                      </iwxxm:AerodromeWindShear>
-                    </iwxxm:windShear>
-                  <iwxxm:runwayState>
-                        <iwxxm:AerodromeRunwayState>
-                            <iwxxm:runway>
-                              <aixm:RunwayDirection gml:id="uuid.4ce3040f-69a1-4703-8a21-78a33c14ddce">
-                                  <aixm:timeSlice>
-                                      <aixm:RunwayDirectionTimeSlice gml:id="uuid.da0eb705-ba52-4d66-8d0d-130b99be5692">
-                                          <gml:validTime/>
-                                          <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                                          <aixm:designator>11</aixm:designator>
-                                      </aixm:RunwayDirectionTimeSlice>
-                                  </aixm:timeSlice>
-                              </aixm:RunwayDirection>
-                            </iwxxm:runway>
-                            <iwxxm:depositType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-086/1"/>
-                        </iwxxm:AerodromeRunwayState>
-                    </iwxxm:runwayState>
-                </iwxxm:MeteorologicalAerodromeObservationRecord>
-            </om:result>
-        </om:OM_Observation>
+                          </aixm:timeSlice>
+                      </aixm:RunwayDirection>
+                    </iwxxm:runway>
+                    <iwxxm:depositType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-086/1"/>
+                </iwxxm:AerodromeRunwayState>
+            </iwxxm:runwayState>
+        </iwxxm:MeteorologicalAerodromeObservation>
     </iwxxm:observation>
 </iwxxm:METAR>

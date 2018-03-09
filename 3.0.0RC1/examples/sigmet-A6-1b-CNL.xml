@@ -7,13 +7,9 @@
 -->
 <iwxxm:SIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
-    xmlns:om="http://www.opengis.net/om/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0"
-    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
-    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
 
     gml:id="uuid.6fe37ba5-7ad5-471a-ac44-48ddefb2c23f"
     permissibleUsage="OPERATIONAL"
@@ -46,8 +42,29 @@
             </aixm:timeSlice>
         </aixm:Unit>
     </iwxxm:originatingMeteorologicalWatchOffice>
+    
+    <iwxxm:flightInformationRegion>
+        <aixm:Airspace gml:id="uuid.02abae65-6254-4682-9bf3-eb5638d3c80f">
+            <aixm:timeSlice>
+                <aixm:AirspaceTimeSlice gml:id="uuid.bba3b2e0-9bc9-4cf5-a3b8-55dc56cdd753">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:type>OTHER:FIR_UIR</aixm:type>
+                    <aixm:designator>YUDD</aixm:designator>
+                    <aixm:name>SHANLON FIR/UIR</aixm:name>
+                </aixm:AirspaceTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Airspace>
+    </iwxxm:flightInformationRegion>
 
     <iwxxm:sequenceNumber>3</iwxxm:sequenceNumber>
+  
+    <!-- time at which the results of the observation were made available (issued) -->
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.877a0733-fafb-4826-9afc-005c89a9dd3b">
+            <gml:timePosition>2012-08-10T13:45:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
 
     <!-- Valid period for this report -->
     <iwxxm:validPeriod>
@@ -68,44 +85,5 @@
 
     <iwxxm:phenomenon nilReason="inapplicable"/>
 
-    <iwxxm:analysis>
-        <om:OM_Observation gml:id="uuid.7c75707a-b0e9-4784-b6d9-5218c055e8ca">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/3.0/SIGMETEvolvingConditionCollectionAnalysis"/>
-            <om:phenomenonTime nilReason="inapplicable"/>
-            <om:resultTime>
-                <gml:TimeInstant gml:id="uuid.877a0733-fafb-4826-9afc-005c89a9dd3b">
-                    <gml:timePosition>2012-08-10T13:45:00Z</gml:timePosition>
-                </gml:TimeInstant>
-            </om:resultTime>
-            <om:validTime xlink:href="#tp-20120810T1345Z-20120810T1600Z"/>
-            <om:procedure>
-                <metce:Process gml:id="uuid.05a38462-4063-466d-9010-413a085f3407">
-                    <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO SIGMET INFORMATION</gml:description>
-                </metce:Process>
-            </om:procedure>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionCollectionAnalysis"/>
-            <om:featureOfInterest>
-                <sams:SF_SpatialSamplingFeature gml:id="uuid.081f550e-29e2-42cb-8f9a-cb3f02c53d1f">
-                    <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
-                    <sf:sampledFeature>
-                        <aixm:Airspace gml:id="uuid.02abae65-6254-4682-9bf3-eb5638d3c80f">
-                            <aixm:timeSlice>
-                                <aixm:AirspaceTimeSlice gml:id="uuid.bba3b2e0-9bc9-4cf5-a3b8-55dc56cdd753">
-                                    <gml:validTime/>
-                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                                    <aixm:type>OTHER:FIR_UIR</aixm:type>
-                                    <aixm:designator>YUDD</aixm:designator>
-                                    <aixm:name>SHANLON FIR/UIR</aixm:name>
-                                </aixm:AirspaceTimeSlice>
-                            </aixm:timeSlice>
-                        </aixm:Airspace>
-                    </sf:sampledFeature>
-                    <!-- FIR boundary - not typically reported -->
-                    <sams:shape nilReason="withheld"/>
-                </sams:SF_SpatialSamplingFeature>
-            </om:featureOfInterest>
-            <om:result nilReason="inapplicable"/>
-        </om:OM_Observation>
-    </iwxxm:analysis>
-
+    <iwxxm:analysis nilReason="inapplicable"/>
 </iwxxm:SIGMET>

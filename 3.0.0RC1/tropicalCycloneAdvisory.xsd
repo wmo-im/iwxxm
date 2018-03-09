@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0RC1" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0RC1" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
-	<import namespace="http://www.opengis.net/om/2.0" schemaLocation="http://schemas.opengis.net/om/2.0/observation.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
 		<documentation>Tropical Cyclone Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
@@ -39,12 +38,12 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>Advisory number, starting with 1 for each cyclone</documentation>
 						</annotation>
 					</element>
-					<element name="observation" type="om:OM_ObservationPropertyType">
+					<element name="observation" type="iwxxm:TropicalCycloneObservedConditionsPropertyType">
 						<annotation>
 							<documentation>The observed conditions of the tropical cyclone</documentation>
 						</annotation>
 					</element>
-					<element name="forecast" type="om:OM_ObservationPropertyType" minOccurs="4" maxOccurs="4">
+				    <element name="forecast" type="iwxxm:TropicalCycloneForecastConditionsPropertyType" minOccurs="4" maxOccurs="4">
 						<annotation>
 							<documentation>The forecast conditions of the tropical cyclone, one each for the 6 hour, 12 hour, 18 hour, and 24 hour forecast periods</documentation>
 						</annotation>
@@ -86,6 +85,8 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
+				    <element name="phenomenonTime" type="iwxxm:TimeObjectPropertyType"/>
+				    <element name="tropicalCyclonePosition" type="gml:PointPropertyType"/>
 					<element name="movement" type="iwxxm:TropicalCycloneMovementType">
 						<annotation>
 							<documentation>The movement observed for the tropical cyclone</documentation>
@@ -136,6 +137,8 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
+				    <element name="phenomenonTime" type="iwxxm:TimeObjectPropertyType"/>
+				    <element name="tropicalCyclonePosition" type="gml:PointPropertyType"/>
 					<element name="maximumSurfaceWindSpeed" type="gml:SpeedType">
 						<annotation>
 							<documentation>The forecast maximum surface wind speed.  Maximum wind speeds shall be provided in either two units of measures: "m/s"or "[kn_i]" (knot).</documentation>

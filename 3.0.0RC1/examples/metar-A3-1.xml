@@ -29,20 +29,23 @@
           </aixm:timeSlice>
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
+
+    <!-- time at which the METAR phenomena were observed -->
+    <iwxxm:observationTime>
+        <gml:TimeInstant gml:id="uuid.85802aab-b4e5-4c4b-9303-10a02064e243">
+            <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:observationTime>
+
+    <!-- Where the observation took place, assumed to be representative of the entire aerodrome -->
+    <iwxxm:observationLocation>
+        <gml:Point gml:id="uuid.dd2c810b-edaa-4ad9-bb65-9ab774d1522e" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+            <gml:pos>12.34 -12.34</gml:pos>
+        </gml:Point>
+    </iwxxm:observationLocation>
+
     <iwxxm:observation>
         <iwxxm:MeteorologicalAerodromeObservation gml:id="uuid.dc262f4d-1dc8-428b-91d8-74e10ed3cf69" cloudAndVisibilityOK="false">
-            <!-- time at which the METAR phenomena were observed -->
-            <iwxxm:phenomenonTime>
-                <gml:TimeInstant gml:id="uuid.85802aab-b4e5-4c4b-9303-10a02064e243">
-                    <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
-                </gml:TimeInstant>
-            </iwxxm:phenomenonTime>
-            <!-- Where the observation took place, assumed to be representative of the entire aerodrome -->
-            <iwxxm:observationLocation>
-                <gml:Point gml:id="uuid.dd2c810b-edaa-4ad9-bb65-9ab774d1522e" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                    <gml:pos>12.34 -12.34</gml:pos>
-                </gml:Point>
-            </iwxxm:observationLocation>
             <iwxxm:airTemperature uom="Cel">17.0</iwxxm:airTemperature>
             <iwxxm:dewpointTemperature uom="Cel">16.0</iwxxm:dewpointTemperature>
             <iwxxm:qnh uom="hPa">1018</iwxxm:qnh>

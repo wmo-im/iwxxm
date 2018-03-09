@@ -339,6 +339,15 @@ For example, the "above" operator in conjunction with the reported quantity 10.6
 		<attributeGroup ref="gml:AssociationAttributeGroup"/>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
 	</complexType>
+    <complexType name="TimeObjectPropertyType">
+        <annotation>
+            <documentation>This property type is not provided directly by GML</documentation>
+        </annotation>
+        <sequence minOccurs="0">
+            <element ref="gml:AbstractTimeObject"/>
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </complexType>
 	<simpleType name="TimeIndicatorType">
 		<annotation>
 			<documentation>Whether the information is observed and expected to continue, or forecast</documentation>

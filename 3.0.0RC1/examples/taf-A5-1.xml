@@ -42,11 +42,11 @@
         </gml:TimePeriod>
     </iwxxm:validTime>
     <!-- This is where the forecast took place, this is assumed to be representative of the sampledFeature -->
-    <iwxxm:location>
+    <iwxxm:forecastLocation>
         <gml:Point gml:id="uuid.4f5ce1f8-ae4c-4dea-99c7-6bc15ca6b004" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
             <gml:pos>12.34 -12.34</gml:pos>
         </gml:Point>
-    </iwxxm:location>
+    </iwxxm:forecastLocation>
     <iwxxm:baseForecast>
        <!-- Original TAF: 13005MPS 9000 BKN020 -->
         <iwxxm:MeteorologicalAerodromeForecast gml:id="uuid.13048235-8f8a-4587-a6be-e8ce99f4525c" cloudAndVisibilityOK="false">

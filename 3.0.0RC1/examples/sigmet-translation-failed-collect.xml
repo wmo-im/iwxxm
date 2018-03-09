@@ -8,24 +8,18 @@
 -->
 <collect:MeteorologicalBulletin
     xmlns:collect="http://def.wmo.int/collect/2014"
-    xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1"
-    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-    xmlns:metce="http://def.wmo.int/metce/2013"
-    xmlns:om="http://www.opengis.net/om/2.0"
-    xmlns:sf="http://www.opengis.net/sampling/2.0"
-    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd
-                        http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
-			http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd
-			http://def.wmo.int/collect/2014 http://schemas.wmo.int/collect/1.2/collect.xsd"
+    xsi:schemaLocation="http://def.wmo.int/collect/2014 http://schemas.wmo.int/collect/1.2/collect.xsd"
     gml:id="uuid.fee171e9-1aec-4815-bcca-9e3c467388c6">
 
     <collect:meteorologicalInformation>
 	
-        <iwxxm:SIGMET 
+        <iwxxm:SIGMET
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+            xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1"
+            xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
             gml:id="uuid.636569b5-6b9b-4ed7-aa60-ad373a9e372b"
             permissibleUsage="OPERATIONAL"
             translatedBulletinID="WSYU31 YUSO 101000"
@@ -64,7 +58,27 @@
               </aixm:Unit>
             </iwxxm:originatingMeteorologicalWatchOffice>
             
+            <iwxxm:flightInformationRegion>
+                <aixm:Airspace gml:id="uuid.eb9d349c-242c-4193-981a-935ee2e547a2">
+                    <aixm:timeSlice>
+                        <aixm:AirspaceTimeSlice gml:id="uuid.23909d58-4be9-43a1-8eb8-2d1e3b64432e">
+                            <gml:validTime/>
+                            <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                            <aixm:type>FIR</aixm:type>
+                            <aixm:designator>YUDD</aixm:designator>
+                            <aixm:name>SHANLON FIR</aixm:name>
+                        </aixm:AirspaceTimeSlice>
+                    </aixm:timeSlice>
+                </aixm:Airspace>
+            </iwxxm:flightInformationRegion>
+            
             <iwxxm:sequenceNumber>2</iwxxm:sequenceNumber>
+            
+            <iwxxm:issueTime>
+                <gml:TimeInstant gml:id="uuid.5599e948-f719-4fc2-85fc-20ad96644250">
+                    <gml:timePosition>2012-08-10T12:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:issueTime>
         
             <iwxxm:validPeriod>
                 <gml:TimePeriod gml:id="uuid.2635a879-81e5-4ac0-994f-b46050ba5e83">
