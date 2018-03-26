@@ -54,8 +54,6 @@
                 </gml:TimeInstant>
             </iwxxm:observationTime>
             
-            <iwxxm:observationLocation nilReason="missing"/>
-
             <!-- NIL/missing reports do not have reported weather conditions -->
             <iwxxm:observation nilReason="missing"/>
         </iwxxm:METAR>
