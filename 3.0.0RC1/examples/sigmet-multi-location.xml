@@ -54,6 +54,7 @@
                     <aixm:type>OTHER:FIR_UIR</aixm:type>
                     <aixm:designator>YUDD</aixm:designator>
                     <aixm:name>SHANLON FIR/UIR</aixm:name>
+                    <!-- FIR boundary can be reported in an aixm:geometryComponent -->
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
         </aixm:Airspace>

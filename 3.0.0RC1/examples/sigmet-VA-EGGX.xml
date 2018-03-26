@@ -49,6 +49,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                     <aixm:type>FIR</aixm:type>
                     <aixm:designator>EGGX</aixm:designator>
                     <aixm:name>SHANWICK OCEANIC FIR</aixm:name>
+                    <!-- FIR boundary can be reported in an aixm:geometryComponent -->
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
         </aixm:Airspace>

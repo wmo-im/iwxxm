@@ -109,7 +109,6 @@ A6-1: "Location indicator of FIR/CTA"</documentation>
 						</annotation>
 					</element>
 				    <element name="flightInformationRegion" type="iwxxm:AirspacePropertyType"/>
-					<element name="flightInformationRegionBoundary" type="gml:GeometryPropertyType" minOccurs="0"/>
 					<element name="sequenceNumber" type="string">
 						<annotation>
 							<documentation>The sequence number of this message.  For example: "5", "A3", or "2"</documentation>

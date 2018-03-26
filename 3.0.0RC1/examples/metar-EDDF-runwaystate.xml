@@ -28,6 +28,13 @@
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
     
+    <!-- the same as observationTime except for corrections/re-issuances --> 
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+            <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
     <iwxxm:observationTime>
         <gml:TimeInstant gml:id="uuid.064bf483-439b-4e40-91b8-8aadd0638d92">
             <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>

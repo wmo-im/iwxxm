@@ -30,6 +30,13 @@
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
 
+    <!-- the same as observationTime except for corrections/re-issuances --> 
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+            <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+ 
     <!-- time at which the METAR phenomena were observed -->
     <iwxxm:observationTime>
         <gml:TimeInstant gml:id="uuid.85802aab-b4e5-4c4b-9303-10a02064e243">

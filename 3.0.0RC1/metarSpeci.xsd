@@ -23,8 +23,8 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 			<extension base="iwxxm:ReportType">
 				<sequence>
 				    <element name="aerodrome" type="iwxxm:AirportHeliportPropertyType"/>
+				    <element name="issueTime" type="gml:TimeInstantPropertyType"/>
 				    <element name="observationTime" type="gml:TimeInstantPropertyType"/>
-				    <element name="observationLocation" type="gml:PointPropertyType"/>
 					<element name="observation" type="iwxxm:MeteorologicalAerodromeObservationPropertyType">
 						<annotation>
 							<documentation>The observation which resulted in the current meteorological conditions at an aerodrome</documentation>

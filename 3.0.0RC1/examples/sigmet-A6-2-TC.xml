@@ -49,12 +49,12 @@
                     <aixm:type>FIR</aixm:type>
                     <aixm:designator>YUCC</aixm:designator>
                     <aixm:name>AMSWELL FIR</aixm:name>
+                    <!-- FIR boundary can be reported in an aixm:geometryComponent -->
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
         </aixm:Airspace>
     </iwxxm:flightInformationRegion>
 
-    <!-- FIR boundary not typically reported -->
 
     <iwxxm:sequenceNumber>3</iwxxm:sequenceNumber>
 
