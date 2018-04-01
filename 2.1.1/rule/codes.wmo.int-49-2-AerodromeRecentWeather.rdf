@@ -1,0 +1,174 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  <ldp:Container rdf:about="http://codes.wmo.int/49-2/AerodromeRecentWeather">
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSSN">
+        <rdfs:label xml:lang="en">Thunderstorm with precipitation of snow</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSUP">
+        <rdfs:label xml:lang="en">Thunderstorm with unidentified precipitation</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SHUP">
+        <rdfs:label xml:lang="en">Unidentified showery precipitation</rdfs:label>
+        <rdfs:label xml:lang="en">Showery precipitation of unidentified precipitation</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/DS">
+        <rdfs:label xml:lang="en">Duststorm</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:notation>D-6</skos:notation>
+    <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/FC">
+        <rdfs:label xml:lang="en">Funnel cloud(s) (tornado or water-spout)</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <rdfs:label>Code Table D-6: Aerodrome recent weather</rdfs:label>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/VA">
+        <rdfs:label xml:lang="en">Volcanic ash</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/FZRA">
+        <rdfs:label xml:lang="en">Precipitation of freezng rain</rdfs:label>
+        <rdfs:label xml:lang="en">Precipitation of freezing rain</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/BLSN">
+        <rdfs:label xml:lang="en">Blowing snow</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSGR">
+        <rdfs:label xml:lang="en">Thunderstorm with precipitation of hail</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SHSN">
+        <rdfs:label xml:lang="en">Showery precipitation of snow</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SHGR">
+        <rdfs:label xml:lang="en">Showery precipitation of hail</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/RA">
+        <rdfs:label xml:lang="en">Precipitation of rain</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/PL">
+        <rdfs:label xml:lang="en">Precipitation of ice pellets</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SG">
+        <rdfs:label xml:lang="en">Precipitation of snow grains</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:52:41.1Z</dct:modified>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSGS">
+        <rdfs:label xml:lang="en">Thunderstorm with precipitation of snow pellets/small hail</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/FZDZ">
+        <rdfs:label xml:lang="en">Precipitation of freezing drizzle</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >2</owl:versionInfo>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSRA">
+        <rdfs:label xml:lang="en">Thunderstorm with precipitation of rain</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/UP">
+        <rdfs:label xml:lang="en">Unidentified precipitation</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TS">
+        <rdfs:label xml:lang="en">Thunderstorm</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/DZ">
+        <rdfs:label xml:lang="en">Precipitation of drizzle</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SN">
+        <rdfs:label xml:lang="en">Precipitation of snow</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/FZUP">
+        <rdfs:label xml:lang="en">Unidentified freezing precipitation</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SHRA">
+        <rdfs:label xml:lang="en">Showery precipitation of rain</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SS">
+        <rdfs:label xml:lang="en">Sandstorm</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <dct:description xml:lang="en">The items within this code table are the weather types that may be reported within a meteorological aerodrome observation report that have occurred during the period since the last issued routine report or last hour, whichever is shorter, but are not observed at the time of the observation. Requirements for reporting recent weather at an aerodrome are specified in Technical Regulations, Volume II (WMO-No. 49), Part II, Appendix 3, [C.3.1.] 4.8.1.1.  This code table contains the set of weather types that are permitted for reporting recent weather. These are a subset of the enumerated set of meteorologically valid combinations specified in Part A, Code Table 4678 comprising elements ‘intensity or proximity’, ‘descriptor’, ‘precipitation’, ‘obscuration’ and/or ‘other’.</dct:description>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SHGS">
+        <rdfs:label xml:lang="en">Showery precipitation of snow pellets/small hail</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://purl.org/linked-data/registry#Register"/>
+  </ldp:Container>
+</rdf:RDF>
