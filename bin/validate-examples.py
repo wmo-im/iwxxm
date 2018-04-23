@@ -33,11 +33,12 @@ def main():
         result = validate_dir(dir)
         if result > 0:
             print "========= Validation FAILED on %s =========" % dir
-            returnCode = 1
+            returnCode = result
         else:
             print "========= Validation SUCCESSFUL on %s =========" % dir
 
-    return returnCode
+    if returnCode != 0:
+        sys.exit( returnCode )
 
 def validate_dir(dir):
     catalogTemplate='catalog.template.xml'

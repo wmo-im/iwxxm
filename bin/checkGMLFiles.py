@@ -128,4 +128,6 @@ if __name__ == "__main__":
         print_usage()
         sys.exit()
 
-    check_files(examplesDir)
+    code = check_files(examplesDir)
+    if code != 0:
+        sys.exit(code)
