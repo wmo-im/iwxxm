@@ -8,7 +8,6 @@
 	<include schemaLocation="sigmet.xsd"></include>
 	<include schemaLocation="taf.xsd"></include>
 	<include schemaLocation="metarSpeci.xsd"></include>
-	<import namespace="http://www.opengis.net/samplingSpatial/2.0" schemaLocation="http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
 		<documentation>The ICAO Meteorological Information Exchange Model (IWXXM) package, including METAR, SPECI, TAF, and other reports as defined in ICAO Annex 3, Amendment 76.  IWXXM reports are essential operational meteorology products used to enable safe and efficient air travel worldwide.

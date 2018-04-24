@@ -142,14 +142,14 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The wind speed.  Only reported when volcanic ash is not identifiable from satellite data.  If speed of motion of ash cloud is estimated from wind speed, unit of measure shall be given in "m/s" or "[kn_i]" (knot).</documentation>
 						</annotation>
 					</element>
-					<element name="windLowerLimit" type="gml:LengthType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The lower limits of wind conditions.  Only reported when volcanic ash is not identifiable from satellite data.</documentation>
-						</annotation>
-					</element>
 					<element name="windDirection" type="gml:AngleType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The wind direction.  Only reported when volcanic ash is not identifiable from satellite data, and not reported when winds are variable.  Direction of movement shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
+						</annotation>
+					</element>
+					<element name="windLowerLimit" type="gml:LengthType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The lower limits of wind conditions.  Only reported when volcanic ash is not identifiable from satellite data.</documentation>
 						</annotation>
 					</element>
 					<element name="windLowerLimitReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
