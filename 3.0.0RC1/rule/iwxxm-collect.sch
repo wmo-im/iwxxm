@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
    <sch:title>Schematron validation</sch:title>
-   <sch:ns prefix="collect" uri="http://def.wmo.int/collect/2014"/>
-   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/3.0RC1"/>
+   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/3.0"/>
    <sch:ns prefix="sf" uri="http://www.opengis.net/sampling/2.0"/>
    <sch:ns prefix="sams" uri="http://www.opengis.net/samplingSpatial/2.0"/>
    <sch:ns prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
@@ -10,6 +9,7 @@
    <sch:ns prefix="om" uri="http://www.opengis.net/om/2.0"/>
    <sch:ns prefix="gml" uri="http://www.opengis.net/gml/3.2"/>
    <sch:ns prefix="aixm" uri="http://www.aixm.aero/schema/5.1.1"/>
+   <sch:ns prefix="collect" uri="http://def.wmo.int/collect/2014"/>
    <sch:pattern id="COLLECT.MB1">
       <sch:rule context="//collect:MeteorologicalBulletin">
          <sch:assert test="count(distinct-values(for $item in //collect:meteorologicalInformation/child::node() return(node-name($item))))eq 1">COLLECT.MB1: All meteorologicalInformation instances in MeteorologicalBulletin must be of the same type</sch:assert>
@@ -95,68 +95,63 @@
          <sch:assert test="(if( @allRunways eq 'true' ) then( empty(iwxxm:runway) ) else true())">METAR_SPECI.AWS1: When all runways are affected by wind shear, no specific runways should be reported</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="METAR_SPECI.MATFR5">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeTrendForecastRecord">
-         <sch:assert test="(if( @changeIndicator eq 'NO_SIGNIFICANT_CHANGES' ) then (empty(iwxxm:prevailingVisibility) and empty(iwxxm:prevailingVisibilityOperator) and empty(iwxxm:clouds) and empty(iwxxm:forecastWeather) and empty(iwxxm:cloudAndVisibilityOK)) else (true()))">METAR_SPECI.MATFR5: prevailingVisibility, prevailingVisibilityOperator, clouds, forecastWeather and cloudAndVisibilityOK should be absent when changeIndicator equals 'NO_SIGNIFICANT_CHANGES'</sch:assert>
-      </sch:rule>
-   </sch:pattern>
    <sch:pattern id="METAR_SPECI.MATFR1">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeTrendForecastRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeTrendForecast">
          <sch:assert test="(if( @cloudAndVisibilityOK eq 'true' ) then (empty(iwxxm:cloud)) else (true()))">METAR_SPECI.MATFR1: clouds should be absent when cloudAndVisibilityOK is true</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MATFR2">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeTrendForecastRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeTrendForecast">
          <sch:assert test="(if( @cloudAndVisibilityOK eq 'true' ) then (empty(iwxxm:forecastWeather)) else (true()))">METAR_SPECI.MATFR2: forecastWeather should be absent when cloudAndVisibilityOK is true</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MATFR4">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeTrendForecastRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeTrendForecast">
          <sch:assert test="(if( @cloudAndVisibilityOK eq 'true' ) then (empty(iwxxm:prevailingVisibility) and empty(iwxxm:prevailingVisibilityOperator)) else (true()))">METAR_SPECI.MATFR4: prevailingVisibility and prevailingVisibilityOperator should be absent when cloudAndVisibilityOK is true</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MATFR3">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeTrendForecastRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeTrendForecast">
          <sch:assert test="(if(exists(iwxxm:prevailingVisibility) and (not(exists(iwxxm:prevailingVisibility/@xsi:nil)) or iwxxm:prevailingVisibility/@xsi:nil != 'true')) then (iwxxm:prevailingVisibility/@uom = 'm') else true())">METAR_SPECI.MATFR3: prevailingVisibility shall be reported in metres (m).</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORec6">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservationRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation">
          <sch:assert test="(if(exists(iwxxm:airTemperature) and (not(exists(iwxxm:airTemperature/@xsi:nil)) or iwxxm:airTemperature/@xsi:nil != 'true')) then (iwxxm:airTemperature/@uom = 'Cel') else true())">METAR_SPECI.MAORec6: airTemperature shall be reported in degrees Celsius (Cel).</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORec4">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservationRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation">
          <sch:assert test="(if(@cloudAndVisibilityOK eq 'true' ) then (empty(iwxxm:cloud)) else (true()))">METAR_SPECI.MAORec4: clouds should be absent when cloudAndVisibilityOK is true</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORec3">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservationRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation">
          <sch:assert test="(if(@cloudAndVisibilityOK='true') then empty(iwxxm:presentWeather) else true())">METAR_SPECI.MAORec3: presentWeather should not be reported when cloudAndVisibilityOK is true</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORec2">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservationRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation">
          <sch:assert test="(if(@cloudAndVisibilityOK='true') then empty(iwxxm:rvr) else true())">METAR_SPECI.MAORec2: rvr should not be reported when cloudAndVisibilityOK is true</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORec1">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservationRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation">
          <sch:assert test="(if(@cloudAndVisibilityOK='true') then empty(iwxxm:visibility) else true())">METAR_SPECI.MAORec1: visibility should not be reported when cloudAndVisibilityOK is true</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORec7">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservationRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation">
          <sch:assert test="(if(exists(iwxxm:dewpointTemperature) and (not(exists(iwxxm:dewpointTemperature/@xsi:nil)) or iwxxm:dewpointTemperature/@xsi:nil != 'true')) then (iwxxm:dewpointTemperature/@uom = 'Cel') else true())">METAR_SPECI.MAORec7: dewpointTemperature shall be reported in degrees Celsius (Cel).</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORec8">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservationRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation">
          <sch:assert test="(if(exists(iwxxm:qnh) and (not(exists(iwxxm:qnh/@xsi:nil)) or iwxxm:qnh/@xsi:nil != 'true')) then (iwxxm:qnh/@uom = 'hPa') else true())">METAR_SPECI.MAORec8: qnh shall be reported in hectopascals (hPa).</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORec5">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservationRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation">
          <sch:assert test="(if((exists(iwxxm:visibility)) and (iwxxm:visibility//iwxxm:prevailingVisibility/number(text()) lt 1500) and (iwxxm:visibility//iwxxm:prevailingVisibility/@uom eq 'm')) then (exists(iwxxm:rvr)) else true())">METAR_SPECI.MAORec5: Table A3-2 Note 7 states: "To be included if visibility or RVR &amp;lt; 1500 m; for up to a maximum of four runways". This is interpreted to mean that if the prevailing visibility is below 1500 meters, RVR should always be included</sch:assert>
       </sch:rule>
    </sch:pattern>
@@ -221,22 +216,22 @@
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.MAFR2">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeForecastRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeForecast">
          <sch:assert test="(if(@cloudAndVisibilityOK = 'true') then empty(iwxxm:cloud) else true())">TAF.MAFR2: cloud should not be reported when cloudAndVisibilityOK is true</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.MAFR1">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeForecastRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeForecast">
          <sch:assert test="(if(@cloudAndVisibilityOK = 'true') then empty(iwxxm:prevailingVisibility) else true())">TAF.MAFR1: prevailingVisibility should not be reported when cloudAndVisibilityOK is true</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.MAFR3">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeForecastRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeForecast">
          <sch:assert test="(if(@cloudAndVisibilityOK = 'true') then empty(iwxxm:weather) else true())">TAF.MAFR3: weather should not be reported when cloudAndVisibilityOK is true</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.MAFR4">
-      <sch:rule context="//iwxxm:MeteorologicalAerodromeForecastRecord">
+      <sch:rule context="//iwxxm:MeteorologicalAerodromeForecast">
          <sch:assert test="(if(exists(iwxxm:prevailingVisibility) and (not(exists(iwxxm:prevailingVisibility/@xsi:nil)) or iwxxm:prevailingVisibility/@xsi:nil != 'true')) then (iwxxm:prevailingVisibility/@uom = 'm') else true())">TAF.MAFR4: prevailingVisibility shall be reported in metres (m).</sch:assert>
       </sch:rule>
    </sch:pattern>
@@ -560,15 +555,15 @@
          <sch:assert test="(if(exists(iwxxm:base) and (not(exists(iwxxm:base/@xsi:nil)) or iwxxm:base/@xsi:nil != 'true')) then ((iwxxm:base/@uom = 'm') or (iwxxm:base/@uom = '[ft_i]')) else true())">COMMON.CL1: base shall be reported in metres (m) or feet ([ft_i]).</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="COMMON.Report5">
+      <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory">
+         <sch:assert test="if( //@gml:id[not(matches(.,'uuid\.[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}'))]) then false() else true()">COMMON.Report5: All gml:ids in IWXXM reports must be UUID version 4</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="COMMON.Report4">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory">
          <sch:assert test="sum( //iwxxm:extension/.//text()/string-length(.) ) +sum( //iwxxm:extension/.//element()/( (string-length( name() ) * 2 ) + 5 ) ) +sum( //iwxxm:extension/.//@*/( 1 + string-length(name()) + 3 + string-length(.) ) ) +sum( //iwxxm:extension/.//comment()/( string-length( . ) + 7 ) ) lt 5000">COMMON.Report4: Total size of extension content must not exceed 5000 characters per report</sch:assert>
       </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="COMMON.Report5">
-     <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory">
-       <sch:assert test="if( //@gml:id[not(matches(.,'uuid\.[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}'))]) then false() else true()">COMMON.Report5: All gml:ids in IWXXM reports must be UUID version 4</sch:assert>
-     </sch:rule>
    </sch:pattern>
    <sch:pattern id="COMMON.Report2">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory">
