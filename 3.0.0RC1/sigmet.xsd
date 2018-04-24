@@ -155,45 +155,17 @@ YUDD SIGMET A3 VALID ...</documentation>
 The expected end of occurrence of volcanic ash ("NO VA EXP") is indicated with a missing SIGMET phenomenon with a nil reason of nothingOfOperationalSignificance</documentation>
 						</annotation>
 					</element>
-					<element name="analysis" minOccurs="0" maxOccurs="1">
+					<element name="analysis" type="iwxxm:SIGMETEvolvingConditionCollectionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>SIGMETs may include the same phenomenon covering more than one area within the FIR/UIR/CTA, as well as observed and forecast conditions for each of these reported areas.  All combinations of observations and forecasts of meteorological conditions, including changing conditions, are represented by their own SIGMETEvolvingMeteorologicalCondition.
 
 Each analysis has a single EvolvingMeteorologicalCondition as its result.  </documentation>
 						</annotation>
-						<complexType>
-							<complexContent>
-								<extension base="gml:AbstractMemberType">
-									<sequence>
-										<element ref="iwxxm:SIGMETEvolvingConditionCollection"></element>
-										<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
-											<annotation>
-												<documentation>Extension block for optional and/or additional parameters for element SIGMET</documentation>
-											</annotation>
-										</element>
-									</sequence>
-								</extension>
-							</complexContent>
-						</complexType>
 					</element>
-					<element name="forecastPositionAnalysis" minOccurs="0" maxOccurs="1">
+					<element name="forecastPositionAnalysis" type="iwxxm:SIGMETPositionCollectionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>One or more forecast positions at the end of the valid period - one for each phenomenon area within an FIR.  These are modeled as a single OM_Observation sub-type with a feature collection result due to the shared time and other observation metadata for all forecast positions.</documentation>
 						</annotation>
-						<complexType>
-							<complexContent>
-								<extension base="gml:AbstractMemberType">
-									<sequence>
-										<element ref="iwxxm:SIGMETPositionCollection"></element>
-										<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
-											<annotation>
-												<documentation>Extension block for optional and/or additional parameters for element SIGMET</documentation>
-											</annotation>
-										</element>
-									</sequence>
-								</extension>
-							</complexContent>
-						</complexType>
 					</element>
 					<element name="volcanicAshMovedToFIR" type="iwxxm:AirspacePropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>

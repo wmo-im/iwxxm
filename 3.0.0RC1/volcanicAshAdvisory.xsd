@@ -46,24 +46,10 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The aviation colour code</documentation>
 						</annotation>
 					</element>
-					<element name="analysis" minOccurs="0" maxOccurs="unbounded">
+					<element name="analysis" type="iwxxm:VolcanicAshConditionsType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The observed and estimated positions of volcanic ash clouds.  Each analysis represents an observed or 6/12/18 hour forecast of volcanic ash.</documentation>
 						</annotation>
-						<complexType>
-							<complexContent>
-								<extension base="gml:AbstractMemberType">
-									<sequence>
-										<element ref="iwxxm:VolcanicAshConditions"></element>
-										<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
-											<annotation>
-												<documentation>Extension block for optional and/or additional parameters for element VolcanicAshAdvisory</documentation>
-											</annotation>
-										</element>
-									</sequence>
-								</extension>
-							</complexContent>
-						</complexType>
 					</element>
 					<element name="remarks" type="string" minOccurs="0" maxOccurs="1">
 						<annotation>

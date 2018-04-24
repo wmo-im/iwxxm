@@ -106,24 +106,10 @@ YUDD AIRMET A3 VALID ...</documentation>
 							<documentation>The reported phenomenon, such as thunderstorm, tropical cyclone, icing, mountain wave, etc.</documentation>
 						</annotation>
 					</element>
-					<element name="analysis" minOccurs="0" maxOccurs="1">
+					<element name="analysis" type="iwxxm:AIRMETEvolvingConditionCollectionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>AIRMETs may include the same phenomenon covering more than one area within the FIR/UIR/CTA, as well as observed and forecast conditions for each of these reported areas.  AIRMETs may include a single set of observed and/or forecast conditions at a particular time, which is represented  as a single analysis with a single AIRMETEvolvingConditionCollection as its result.</documentation>
 						</annotation>
-						<complexType>
-							<complexContent>
-								<extension base="gml:AbstractMemberType">
-									<sequence>
-										<element ref="iwxxm:AIRMETEvolvingConditionCollection"></element>
-										<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
-											<annotation>
-												<documentation>Extension block for optional and/or additional parameters for element AIRMET</documentation>
-											</annotation>
-										</element>
-									</sequence>
-								</extension>
-							</complexContent>
-						</complexType>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>

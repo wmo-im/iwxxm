@@ -41,43 +41,15 @@ Prevailing conditions and forecast changes differ in that the prevailing conditi
 							<documentation>The time frame at which this report is valid.  All forecast elements should be valid within this period</documentation>
 						</annotation>
 					</element>
-					<element name="baseForecast" minOccurs="0" maxOccurs="1">
+					<element name="baseForecast" type="iwxxm:MeteorologicalAerodromeForecastType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The prevailing conditions.  Mandatory in all cases except missing or cancelled reports</documentation>
 						</annotation>
-						<complexType>
-							<complexContent>
-								<extension base="gml:AbstractMemberType">
-									<sequence>
-										<element ref="iwxxm:MeteorologicalAerodromeForecast"></element>
-										<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
-											<annotation>
-												<documentation>Extension block for optional and/or additional parameters for element TAF</documentation>
-											</annotation>
-										</element>
-									</sequence>
-								</extension>
-							</complexContent>
-						</complexType>
 					</element>
-					<element name="changeForecast" minOccurs="0" maxOccurs="unbounded">
+					<element name="changeForecast" type="iwxxm:MeteorologicalAerodromeForecastType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Forecast that modifies the base forecast.  While there is no maximum number of forecasts, this should normally not exceed five in number. &lt;b&gt;&lt;u&gt; &lt;/u&gt;&lt;/b&gt;ICAO Annex 3 / WMO No. 49-2: Section 1.5: "The number of change and probability groups should be kept to a minimum and should not normally exceed five groups".</documentation>
 						</annotation>
-						<complexType>
-							<complexContent>
-								<extension base="gml:AbstractMemberType">
-									<sequence>
-										<element ref="iwxxm:MeteorologicalAerodromeForecast"></element>
-										<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
-											<annotation>
-												<documentation>Extension block for optional and/or additional parameters for element TAF</documentation>
-											</annotation>
-										</element>
-									</sequence>
-								</extension>
-							</complexContent>
-						</complexType>
 					</element>
 					<element name="previousReportAerodrome" type="iwxxm:AirportHeliportPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
