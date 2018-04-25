@@ -23,6 +23,12 @@
             permissibleUsage="OPERATIONAL"
             status="MISSING">
 
+            <iwxxm:issueTime>
+                <gml:TimeInstant gml:id="uuid.b28ba3dd-6544-4d7b-9a1f-342c63b458b5">
+                    <gml:timePosition>2012-08-16T00:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:issueTime>
+            
             <iwxxm:aerodrome>
                 <aixm:AirportHeliport gml:id="uuid.b50f56f1-7291-40bb-90c1-5aad1e0ba833">
                     <aixm:timeSlice>
@@ -37,12 +43,6 @@
                 </aixm:AirportHeliport>
             </iwxxm:aerodrome>
         
-            <iwxxm:issueTime>
-                <gml:TimeInstant gml:id="uuid.b28ba3dd-6544-4d7b-9a1f-342c63b458b5">
-                    <gml:timePosition>2012-08-16T00:00:00Z</gml:timePosition>
-                </gml:TimeInstant>
-            </iwxxm:issueTime>
-
             <iwxxm:validTime nilReason="missing"/>
 
             <iwxxm:baseForecast nilReason="missing"/>

@@ -14,6 +14,11 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
     gml:id="uuid.64c3912b-b09a-494a-8731-321f28b759e4"
     permissibleUsage="OPERATIONAL"
     status="NORMAL">
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.94838606-4ec4-437c-9be1-901b8e7a33c6">
+            <gml:timePosition>YYYY-MM-25T16:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
     <iwxxm:issuingAirTrafficServicesUnit>
         <aixm:Unit gml:id="uuid.cdca7fc8-2ca0-42fd-b335-822e3f8c7921">
             <aixm:timeSlice>
@@ -40,7 +45,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
             </aixm:timeSlice>
         </aixm:Unit>
     </iwxxm:originatingMeteorologicalWatchOffice>
-    <iwxxm:flightInformationRegion>
+    <iwxxm:issuingAirTrafficServicesRegion>
         <aixm:Airspace gml:id="uuid.1fa42185-604c-4a56-a578-d1eb07109c38">
             <aixm:timeSlice>
                 <aixm:AirspaceTimeSlice gml:id="uuid.df98083d-660a-45be-9292-8037b13da46c">
@@ -53,13 +58,8 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
         </aixm:Airspace>
-    </iwxxm:flightInformationRegion>
+    </iwxxm:issuingAirTrafficServicesRegion>
     <iwxxm:sequenceNumber>4</iwxxm:sequenceNumber>
-    <iwxxm:issueTime>
-        <gml:TimeInstant gml:id="uuid.94838606-4ec4-437c-9be1-901b8e7a33c6">
-            <gml:timePosition>YYYY-MM-25T16:00:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:issueTime>
     <iwxxm:validPeriod>
         <gml:TimePeriod gml:id="uuid.099bfa3a-0fb2-4a79-87f5-076fa28e6711">
             <gml:beginPosition>YYYY-MM-25T16:00:00Z</gml:beginPosition>

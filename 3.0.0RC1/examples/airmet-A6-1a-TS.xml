@@ -14,6 +14,12 @@
     permissibleUsage="OPERATIONAL"
     gml:id="uuid.69a2497b-193c-47bf-a6bd-1cc71acbc8e5" status="NORMAL">
     
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.6ffb87f7-6eef-4bae-b4f2-016e2951d7dd">
+            <gml:timePosition>2014-05-15T15:20:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
     <iwxxm:issuingAirTrafficServicesUnit>
         <aixm:Unit gml:id="uuid.1b54b36f-bc16-4111-abb6-05ff6aad744b">
             <aixm:timeSlice>
@@ -41,7 +47,7 @@
         </aixm:Unit>
     </iwxxm:originatingMeteorologicalWatchOffice>
 
-    <iwxxm:flightInformationRegion>
+    <iwxxm:issuingAirTrafficServicesRegion>
         <aixm:Airspace gml:id="uuid.09f5436c-cf2c-40ca-add5-c95a8f6875f9">
               <aixm:timeSlice>
                     <aixm:AirspaceTimeSlice gml:id="uuid.c62fe63e-792d-49e6-9f09-b6c2940d1591">
@@ -54,16 +60,10 @@
                     </aixm:AirspaceTimeSlice>
               </aixm:timeSlice>
         </aixm:Airspace>
-    </iwxxm:flightInformationRegion>
+    </iwxxm:issuingAirTrafficServicesRegion>
 
     <iwxxm:sequenceNumber>1</iwxxm:sequenceNumber>
 
-    <iwxxm:issueTime>
-        <gml:TimeInstant gml:id="uuid.6ffb87f7-6eef-4bae-b4f2-016e2951d7dd">
-            <gml:timePosition>2014-05-15T15:20:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:issueTime>
-    
     <iwxxm:validPeriod>
         <gml:TimePeriod gml:id="uuid.74b125c2-a4ad-4434-b3c0-f650eb57ce93">
             <gml:beginPosition>2014-05-15T15:20:00</gml:beginPosition>

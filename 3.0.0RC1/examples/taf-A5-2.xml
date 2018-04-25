@@ -14,6 +14,12 @@
     permissibleUsage="OPERATIONAL"
     status="CANCELLATION">
 
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.2a142955-e0ef-4164-a550-ec80a3258150">
+            <gml:timePosition>2012-08-16T15:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
     <iwxxm:aerodrome>
         <aixm:AirportHeliport gml:id="uuid.65730df9-a2fd-4815-9d3f-d6f6770bc6cf">
             <aixm:timeSlice>
@@ -27,12 +33,6 @@
             </aixm:timeSlice>
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
-
-    <iwxxm:issueTime>
-        <gml:TimeInstant gml:id="uuid.2a142955-e0ef-4164-a550-ec80a3258150">
-            <gml:timePosition>2012-08-16T15:00:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:issueTime>
 
     <!-- The time at which this TAF is intended to be used -->
     <iwxxm:validTime>
