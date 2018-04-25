@@ -101,12 +101,12 @@ YUDD AIRMET A3 VALID ...</documentation>
 							<documentation>The valid period of a previous AIRMET that is cancelled by this AIRMET.  Mandatory when this is a cancellation report, must be missing otherwise</documentation>
 						</annotation>
 					</element>
-					<element name="phenomenon" type="iwxxm:AeronauticalAreaWeatherPhenomenonType">
+					<element name="phenomenon" type="iwxxm:AeronauticalAreaWeatherPhenomenonPropertyType">
 						<annotation>
 							<documentation>The reported phenomenon, such as thunderstorm, tropical cyclone, icing, mountain wave, etc.</documentation>
 						</annotation>
 					</element>
-					<element name="analysis" type="iwxxm:AIRMETEvolvingConditionCollectionType" minOccurs="0" maxOccurs="1">
+					<element name="analysis" type="iwxxm:AIRMETEvolvingConditionCollectionPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>AIRMETs may include the same phenomenon covering more than one area within the FIR/UIR/CTA, as well as observed and forecast conditions for each of these reported areas.  AIRMETs may include a single set of observed and/or forecast conditions at a particular time, which is represented  as a single analysis with a single AIRMETEvolvingConditionCollection as its result.</documentation>
 						</annotation>
@@ -143,7 +143,7 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The expected direction of movement of a meteorological condition. When no movement is expected, this is a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason and the speedOfMotion will be 0.  Direction of motion to shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
 						</annotation>
@@ -213,7 +213,7 @@ Appendix 6 Section 2.1</documentation>
 							</appinfo>
 						</annotation>
 					</element>
-					<element name="surfaceVisibilityCause" type="iwxxm:WeatherCausingVisibilityReductionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="surfaceVisibilityCause" type="iwxxm:WeatherCausingVisibilityReductionPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The weather condition(s) causing reduced visibility.</documentation>
 						</annotation>
@@ -237,7 +237,7 @@ Appendix 6 Section 2.1</documentation>
 						</annotation>
 					</element>
 				</sequence>
-				<attribute name="intensityChange" type="iwxxm:AIRMETExpectedIntensityChangeType">
+				<attribute name="intensityChange" type="iwxxm:AIRMETExpectedIntensityChangePropertyType">
 					<annotation>
 						<documentation>The expected change in intensity for the reported meteorological condition (e.g., intensifying, weakening, or no change) determined at the time of AIRMET analysis based on the current state of the meteorological condition</documentation>
 					</annotation>

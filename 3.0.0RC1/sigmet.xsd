@@ -148,21 +148,21 @@ YUDD SIGMET A3 VALID ...</documentation>
 							<documentation>The valid period of a previous SIGMET that is cancelled by this SIGMET.  Mandatory when this is a cancellation report, must be missing otherwise</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="phenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonType">
+					<element nillable="true" name="phenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonPropertyType">
 						<annotation>
 							<documentation>The reported phenomenon, such as thunderstorm, tropical cyclone, icing, mountain wave, etc.
 
 The expected end of occurrence of volcanic ash ("NO VA EXP") is indicated with a missing SIGMET phenomenon with a nil reason of nothingOfOperationalSignificance</documentation>
 						</annotation>
 					</element>
-					<element name="analysis" type="iwxxm:SIGMETEvolvingConditionCollectionType" minOccurs="0" maxOccurs="1">
+					<element name="analysis" type="iwxxm:SIGMETEvolvingConditionCollectionPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>SIGMETs may include the same phenomenon covering more than one area within the FIR/UIR/CTA, as well as observed and forecast conditions for each of these reported areas.  All combinations of observations and forecasts of meteorological conditions, including changing conditions, are represented by their own SIGMETEvolvingMeteorologicalCondition.
 
 Each analysis has a single EvolvingMeteorologicalCondition as its result.  </documentation>
 						</annotation>
 					</element>
-					<element name="forecastPositionAnalysis" type="iwxxm:SIGMETPositionCollectionType" minOccurs="0" maxOccurs="1">
+					<element name="forecastPositionAnalysis" type="iwxxm:SIGMETPositionCollectionPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>One or more forecast positions at the end of the valid period - one for each phenomenon area within an FIR.  These are modeled as a single OM_Observation sub-type with a feature collection result due to the shared time and other observation metadata for all forecast positions.</documentation>
 						</annotation>
@@ -204,7 +204,7 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>This element refers to the expected direction of movement which the phenomenon is moving towards, .e.g, "moving east". When no movement is expected, this is a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason and the speedOfMotion will be 0.
 
@@ -272,7 +272,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="tropicalCyclone" type="metce:TropicalCyclonePropertyType">
+					<element name="tropicalCyclone" type="metce:TropicalCyclonePropertyPropertyType">
 						<annotation>
 							<documentation>The tropical cyclone being reported in this SIGMET.
 
@@ -304,7 +304,7 @@ When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclo
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="eruptingVolcano" type="metce:VolcanoPropertyType">
+					<element name="eruptingVolcano" type="metce:VolcanoPropertyPropertyType">
 						<annotation>
 							<documentation>The volcano that is erupting</documentation>
 						</annotation>

@@ -38,7 +38,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>Advisory number, starting with 1 for each cyclone</documentation>
 						</annotation>
 					</element>
-					<element name="observation" type="iwxxm:TropicalCycloneObservedConditionsType">
+					<element name="observation" type="iwxxm:TropicalCycloneObservedConditionsPropertyType">
 						<annotation>
 							<documentation>The observed conditions of the tropical cyclone</documentation>
 						</annotation>

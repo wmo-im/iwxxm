@@ -37,7 +37,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The time at which phenomena were observed.  This may differ from the times reported for forecast conditions</documentation>
 						</annotation>
 					</element>
-					<element name="observation" type="iwxxm:MeteorologicalAerodromeObservationType">
+					<element name="observation" type="iwxxm:MeteorologicalAerodromeObservationPropertyType">
 						<annotation>
 							<documentation>The observation which resulted in the current meteorological conditions at an aerodrome</documentation>
 						</annotation>
@@ -172,7 +172,7 @@ When no operator is reported, prevailing visibility represents an exact value wi
 						</annotation>
 					</element>
 					<element name="surfaceWind" type="iwxxm:AerodromeSurfaceWindTrendForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
-					<element nillable="true" name="forecastWeather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3"></element>
+					<element nillable="true" name="forecastWeather" type="iwxxm:AerodromeForecastWeatherPropertyType" minOccurs="0" maxOccurs="3"></element>
 					<element nillable="true" name="cloud" type="iwxxm:AerodromeCloudForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
@@ -248,7 +248,7 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 					<element name="surfaceWind" type="iwxxm:AerodromeSurfaceWindPropertyType"></element>
 					<element name="visibility" type="iwxxm:AerodromeHorizontalVisibilityPropertyType" minOccurs="0" maxOccurs="1"></element>
 					<element name="rvr" type="iwxxm:AerodromeRunwayVisualRangePropertyType" minOccurs="0" maxOccurs="4"></element>
-					<element nillable="true" name="presentWeather" type="iwxxm:AerodromePresentWeatherType" minOccurs="0" maxOccurs="3"></element>
+					<element nillable="true" name="presentWeather" type="iwxxm:AerodromePresentWeatherPropertyType" minOccurs="0" maxOccurs="3"></element>
 					<element nillable="true" name="cloud" minOccurs="0" maxOccurs="1">
 						<complexType>
 							<complexContent>
@@ -258,7 +258,7 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 							</complexContent>
 						</complexType>
 					</element>
-					<element name="recentWeather" type="iwxxm:AerodromeRecentWeatherType" minOccurs="0" maxOccurs="3"></element>
+					<element name="recentWeather" type="iwxxm:AerodromeRecentWeatherPropertyType" minOccurs="0" maxOccurs="3"></element>
 					<element name="windShear" type="iwxxm:AerodromeWindShearPropertyType" minOccurs="0" maxOccurs="1"></element>
 					<element name="seaState" type="iwxxm:AerodromeSeaStatePropertyType" minOccurs="0" maxOccurs="1"></element>
 					<element name="runwayState" type="iwxxm:AerodromeRunwayStatePropertyType" minOccurs="0" maxOccurs="unbounded"></element>
@@ -297,7 +297,7 @@ When CAVOK conditions are observed, no other information on visibility, runway v
 					<documentation>The runway to which the conditions apply.  The runway may be missing in cases where all runways are closed due to snow</documentation>
 				</annotation>
 			</element>
-			<element name="depositType" type="iwxxm:RunwayDepositsType" minOccurs="0" maxOccurs="1">
+			<element name="depositType" type="iwxxm:RunwayDepositsPropertyType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>The type of runway deposit, such as damp conditions, wet snow, or ice.
 
@@ -305,7 +305,7 @@ WMO 306:
 Table 0919</documentation>
 				</annotation>
 			</element>
-			<element name="contamination" type="iwxxm:RunwayContaminationType" minOccurs="0" maxOccurs="1">
+			<element name="contamination" type="iwxxm:RunwayContaminationPropertyType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Proportion of runway surface that is contaminated - usually expressed as a percentage of the total runway area.
 
@@ -323,7 +323,7 @@ See WMO No. 306:
 					</appinfo>
 				</annotation>
 			</element>
-			<element nillable="true" name="depthOfDeposit" type="iwxxm:DistanceWithNilReasonType" minOccurs="0" maxOccurs="1">
+			<element nillable="true" name="depthOfDeposit" type="iwxxm:DistanceWithNilReasonPropertyType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Depth of deposit on the surface of the runway.
 
@@ -335,7 +335,7 @@ See WMO No. 306 WMO Code table 1079.</documentation>
 					</appinfo>
 				</annotation>
 			</element>
-			<element name="estimatedSurfaceFrictionOrBrakingAction" type="iwxxm:RunwayFrictionCoefficientType" minOccurs="0" maxOccurs="1">
+			<element name="estimatedSurfaceFrictionOrBrakingAction" type="iwxxm:RunwayFrictionCoefficientPropertyType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>The estimated surface friction or braking action for the affected runway.  When braking conditions are not reported and/or the runway is not operational estimatedSurfaceFrictionOrBrakingAction will not be reported.
 
@@ -467,7 +467,7 @@ Section 4.8.1.5a</documentation>
 Significant wave height shall be reported in meters ("m").</documentation>
 				</annotation>
 			</element>
-			<element name="seaState" type="iwxxm:SeaSurfaceStateType" minOccurs="0" maxOccurs="1">
+			<element name="seaState" type="iwxxm:SeaSurfaceStatePropertyType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>The state of the sea observed by aeronautical meteorological stations established on offshore structures in support of helicopter operations
 
@@ -528,7 +528,7 @@ Table 3700</documentation>
 	</element>
 	<complexType name="AerodromeObservedCloudsType">
 		<sequence>
-			<element nillable="true" name="verticalVisibility" type="iwxxm:LengthWithNilReasonType" minOccurs="0" maxOccurs="1">
+			<element nillable="true" name="verticalVisibility" type="iwxxm:LengthWithNilReasonPropertyType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>The reported vertical visibility.  Vertical visibility is defined as the vertical visual range into an obscuring medium.
 

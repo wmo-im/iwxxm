@@ -82,7 +82,7 @@ A single vertical visibility may be reported, but cannot be reported with cloud 
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<element nillable="true" name="verticalVisibility" type="iwxxm:LengthWithNilReasonType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="verticalVisibility" type="iwxxm:LengthWithNilReasonPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The vertical visibility.  Vertical visibility is defined as the vertical visual range into an obscuring medium.
 
@@ -216,12 +216,12 @@ When no operator is reported, wind gust speed is an exact value with identical s
 	</element>
 	<complexType name="CloudLayerType">
 		<sequence>
-			<element nillable="true" name="amount" type="iwxxm:CloudAmountReportedAtAerodromeType">
+			<element nillable="true" name="amount" type="iwxxm:CloudAmountReportedAtAerodromePropertyType">
 				<annotation>
 					<documentation>The observed cloud amount</documentation>
 				</annotation>
 			</element>
-			<element nillable="true" name="base" type="iwxxm:DistanceWithNilReasonType">
+			<element nillable="true" name="base" type="iwxxm:DistanceWithNilReasonPropertyType">
 				<annotation>
 					<documentation>For a given cloud or cloud layer, height of the lowest level in the atmosphere at which the air contains a perceptible quantity of cloud particles.
 
@@ -231,7 +231,7 @@ Measured cloud bases shall be reported in meters ("m") or feet ("[ft_i]").</docu
 					</appinfo>
 				</annotation>
 			</element>
-			<element nillable="true" name="cloudType" type="iwxxm:SigConvectiveCloudTypeType" minOccurs="0" maxOccurs="1">
+			<element nillable="true" name="cloudType" type="iwxxm:SigConvectiveCloudTypePropertyType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>The observed significant cloud types: cumulonimbus or towering cumulus</documentation>
 				</annotation>

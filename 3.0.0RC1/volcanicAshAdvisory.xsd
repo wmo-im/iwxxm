@@ -26,7 +26,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The issuing VAAC</documentation>
 						</annotation>
 					</element>
-					<element name="volcano" type="metce:EruptingVolcanoPropertyType">
+					<element name="volcano" type="metce:EruptingVolcanoPropertyPropertyType">
 						<annotation>
 							<documentation>The erupting volcano that is the source of volcanic ash</documentation>
 						</annotation>
@@ -41,12 +41,12 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>Information source - described in free text</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="colourCode" type="iwxxm:AviationColourCodeType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="colourCode" type="iwxxm:AviationColourCodePropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The aviation colour code</documentation>
 						</annotation>
 					</element>
-					<element name="analysis" type="iwxxm:VolcanicAshConditionsType" minOccurs="0" maxOccurs="unbounded">
+					<element name="analysis" type="iwxxm:VolcanicAshConditionsPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The observed and estimated positions of volcanic ash clouds.  Each analysis represents an observed or 6/12/18 hour forecast of volcanic ash.</documentation>
 						</annotation>

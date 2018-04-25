@@ -41,12 +41,12 @@ Prevailing conditions and forecast changes differ in that the prevailing conditi
 							<documentation>The time frame at which this report is valid.  All forecast elements should be valid within this period</documentation>
 						</annotation>
 					</element>
-					<element name="baseForecast" type="iwxxm:MeteorologicalAerodromeForecastType" minOccurs="0" maxOccurs="1">
+					<element name="baseForecast" type="iwxxm:MeteorologicalAerodromeForecastPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The prevailing conditions.  Mandatory in all cases except missing or cancelled reports</documentation>
 						</annotation>
 					</element>
-					<element name="changeForecast" type="iwxxm:MeteorologicalAerodromeForecastType" minOccurs="0" maxOccurs="unbounded">
+					<element name="changeForecast" type="iwxxm:MeteorologicalAerodromeForecastPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Forecast that modifies the base forecast.  While there is no maximum number of forecasts, this should normally not exceed five in number. &lt;b&gt;&lt;u&gt; &lt;/u&gt;&lt;/b&gt;ICAO Annex 3 / WMO No. 49-2: Section 1.5: "The number of change and probability groups should be kept to a minimum and should not normally exceed five groups".</documentation>
 						</annotation>
@@ -121,7 +121,7 @@ When no operator is reported, prevailing visibility represents an exact value wi
 						</annotation>
 					</element>
 					<element name="surfaceWind" type="iwxxm:AerodromeSurfaceWindForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
-					<element name="weather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3"></element>
+					<element name="weather" type="iwxxm:AerodromeForecastWeatherPropertyType" minOccurs="0" maxOccurs="3"></element>
 					<element name="cloud" type="iwxxm:AerodromeCloudForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
 					<element name="temperature" type="iwxxm:AerodromeAirTemperatureForecastPropertyType" minOccurs="0" maxOccurs="2"></element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
