@@ -101,6 +101,11 @@ Note that the TAC representations for "FM", "TL", and "AT" are represented by th
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
+				    <element name="phenomenonTime" type="iwxxm:TimeObjectPropertyType">
+				        <annotation>
+				            <documentation>The time at which meteorological phenomena occur</documentation>
+				        </annotation>
+				    </element>
 					<element name="prevailingVisibility" type="gml:LengthType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The prevailing horizontal visibility, mandatory except when ceiling and visibility is reported as OK
@@ -121,7 +126,7 @@ When no operator is reported, prevailing visibility represents an exact value wi
 						</annotation>
 					</element>
 					<element name="surfaceWind" type="iwxxm:AerodromeSurfaceWindForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
-					<element name="weather" type="iwxxm:AerodromeForecastWeatherPropertyType" minOccurs="0" maxOccurs="3"></element>
+					<element name="weather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3"></element>
 					<element name="cloud" type="iwxxm:AerodromeCloudForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
 					<element name="temperature" type="iwxxm:AerodromeAirTemperatureForecastPropertyType" minOccurs="0" maxOccurs="2"></element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">

@@ -43,25 +43,11 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The observed conditions of the tropical cyclone</documentation>
 						</annotation>
 					</element>
-					<element name="forecast" minOccurs="4" maxOccurs="4">
-						<annotation>
-							<documentation>The forecast conditions of the tropical cyclone, one each for the 6 hour, 12 hour, 18 hour, and 24 hour forecast periods</documentation>
-						</annotation>
-						<complexType>
-							<complexContent>
-								<extension base="gml:AbstractMemberType">
-									<sequence>
-										<element ref="iwxxm:TropicalCycloneForecastConditions"></element>
-										<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
-											<annotation>
-												<documentation>Extension block for optional and/or additional parameters for element TropicalCycloneAdvisory</documentation>
-											</annotation>
-										</element>
-									</sequence>
-								</extension>
-							</complexContent>
-						</complexType>
-					</element>
+				    <element name="forecast" type="iwxxm:TropicalCycloneForecastConditionsPropertyType" minOccurs="4" maxOccurs="4">
+				        <annotation>
+				            <documentation>The forecast conditions of the tropical cyclone, one each for the 6 hour, 12 hour, 18 hour, and 24 hour forecast periods</documentation>
+				        </annotation>
+				    </element>
 					<element name="remarks" type="string" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Remarks, as necessary</documentation>

@@ -26,7 +26,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The issuing VAAC</documentation>
 						</annotation>
 					</element>
-					<element name="volcano" type="metce:EruptingVolcanoPropertyPropertyType">
+					<element name="volcano" type="metce:EruptingVolcanoPropertyType">
 						<annotation>
 							<documentation>The erupting volcano that is the source of volcanic ash</documentation>
 						</annotation>
@@ -41,7 +41,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>Information source - described in free text</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="colourCode" type="iwxxm:AviationColourCodePropertyType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="colourCode" type="iwxxm:AviationColourCodeType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The aviation colour code</documentation>
 						</annotation>
@@ -91,7 +91,12 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="ashCloud" type="iwxxm:VolcanicAshCloudPropertyType" minOccurs="1" maxOccurs="unbounded"></element>
+				    <element name="phenomenonTime" type="gml:TimeInstantPropertyType">
+				        <annotation>
+				            <documentation>The time at which meteorological phenomena occur</documentation>
+				        </annotation>
+				    </element>
+				    <element name="ashCloud" type="iwxxm:VolcanicAshCloudPropertyType" minOccurs="1" maxOccurs="unbounded"></element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshConditions</documentation>
@@ -117,11 +122,6 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="phenomenonTime" type="gml:TimeInstantPropertyType">
-						<annotation>
-							<documentation>The time at which meteorological phenomena occur</documentation>
-						</annotation>
-					</element>
 					<element nillable="true" name="ashCloudExtent" type="aixm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The horizontal and vertical extent of the ash cloud</documentation>

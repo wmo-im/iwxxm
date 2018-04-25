@@ -20,12 +20,12 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="member" type="iwxxm:SIGMETEvolvingConditionPropertyType" minOccurs="1" maxOccurs="2"></element>
-					<element name="phenomenonTime" type="gml:TimeInstantPropertyType">
-						<annotation>
-							<documentation>The time at which meteorological phenomena occur</documentation>
-						</annotation>
-					</element>
+				    <element name="phenomenonTime" type="gml:TimeInstantPropertyType">
+				        <annotation>
+				            <documentation>The time at which meteorological phenomena occur</documentation>
+				        </annotation>
+				    </element>
+				    <element name="member" type="iwxxm:SIGMETEvolvingConditionPropertyType" minOccurs="1" maxOccurs="2"></element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element SIGMETEvolvingConditionCollection</documentation>
@@ -148,7 +148,7 @@ YUDD SIGMET A3 VALID ...</documentation>
 							<documentation>The valid period of a previous SIGMET that is cancelled by this SIGMET.  Mandatory when this is a cancellation report, must be missing otherwise</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="phenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonPropertyType">
+					<element nillable="true" name="phenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonType">
 						<annotation>
 							<documentation>The reported phenomenon, such as thunderstorm, tropical cyclone, icing, mountain wave, etc.
 
@@ -204,7 +204,7 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonPropertyType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>This element refers to the expected direction of movement which the phenomenon is moving towards, .e.g, "moving east". When no movement is expected, this is a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason and the speedOfMotion will be 0.
 
@@ -272,7 +272,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="tropicalCyclone" type="metce:TropicalCyclonePropertyPropertyType">
+					<element name="tropicalCyclone" type="metce:TropicalCyclonePropertyType">
 						<annotation>
 							<documentation>The tropical cyclone being reported in this SIGMET.
 
@@ -304,7 +304,7 @@ When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclo
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="eruptingVolcano" type="metce:VolcanoPropertyPropertyType">
+					<element name="eruptingVolcano" type="metce:VolcanoPropertyType">
 						<annotation>
 							<documentation>The volcano that is erupting</documentation>
 						</annotation>
@@ -334,6 +334,11 @@ When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclo
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
+				    <element name="phenomenonTime" type="gml:TimeInstantPropertyType">
+				        <annotation>
+				            <documentation>The time at which meteorological phenomena occur</documentation>
+				        </annotation>
+				    </element>
 					<element name="member" type="iwxxm:SIGMETPositionPropertyType" minOccurs="1" maxOccurs="2"></element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>

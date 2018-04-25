@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
-	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd"></import>
+    <include schemaLocation="measures.xsd"></include>
+    <import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
 		<documentation>Common constructs used across multiple packages.  This package includes constructs closely related to the aviation weather domain.
@@ -82,7 +83,7 @@ A single vertical visibility may be reported, but cannot be reported with cloud 
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<element nillable="true" name="verticalVisibility" type="iwxxm:LengthWithNilReasonPropertyType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="verticalVisibility" type="iwxxm:LengthWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The vertical visibility.  Vertical visibility is defined as the vertical visual range into an obscuring medium.
 
@@ -216,12 +217,12 @@ When no operator is reported, wind gust speed is an exact value with identical s
 	</element>
 	<complexType name="CloudLayerType">
 		<sequence>
-			<element nillable="true" name="amount" type="iwxxm:CloudAmountReportedAtAerodromePropertyType">
+			<element nillable="true" name="amount" type="iwxxm:CloudAmountReportedAtAerodromeType">
 				<annotation>
 					<documentation>The observed cloud amount</documentation>
 				</annotation>
 			</element>
-			<element nillable="true" name="base" type="iwxxm:DistanceWithNilReasonPropertyType">
+			<element nillable="true" name="base" type="iwxxm:DistanceWithNilReasonType">
 				<annotation>
 					<documentation>For a given cloud or cloud layer, height of the lowest level in the atmosphere at which the air contains a perceptible quantity of cloud particles.
 
@@ -231,7 +232,7 @@ Measured cloud bases shall be reported in meters ("m") or feet ("[ft_i]").</docu
 					</appinfo>
 				</annotation>
 			</element>
-			<element nillable="true" name="cloudType" type="iwxxm:SigConvectiveCloudTypePropertyType" minOccurs="0" maxOccurs="1">
+			<element nillable="true" name="cloudType" type="iwxxm:SigConvectiveCloudTypeType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>The observed significant cloud types: cumulonimbus or towering cumulus</documentation>
 				</annotation>
@@ -344,6 +345,15 @@ For example, the "above" operator in conjunction with the reported quantity 10.6
 			<any processContents="strict"/>
 		</sequence>
 	</complexType>
+    <complexType name="TimeObjectPropertyType">
+        <annotation>
+            <documentation>This property type is not provided directly by GML</documentation>
+        </annotation>
+        <sequence minOccurs="0">
+            <element ref="gml:AbstractTimeObject"/>
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </complexType>
 	<simpleType name="TimeIndicatorType">
 		<annotation>
 			<documentation>Whether the information is observed and expected to continue, or forecast</documentation>
