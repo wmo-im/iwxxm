@@ -5,12 +5,12 @@
       SPECI YUDO 151115Z 05025G37KT 3000 1200NE+TSRA BKN005CB 25/22 Q1008 TEMPO TL1200 0600
         BECMG AT1200 8000 NSW NSC
 -->
-<iwxxm:SPECI xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1" xmlns:xlink="http://www.w3.org/1999/xlink"
+<iwxxm:SPECI xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
 
     gml:id="uuid.8ca15300-d667-4364-86a1-ab8bec9ba833"
     status="NORMAL"

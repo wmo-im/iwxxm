@@ -4,13 +4,13 @@ EGGX SIGMET 4 VALID 251600/252200 EGRR -
 EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 1600Z SFC/FL550 N6000 W01150 - N5900 W01300 - N6000 W01600 - N6000 W01150 MOV S 60KT NC FCST 2200Z SFC/FL550 N6000 W01200 - N5800 W01400 - N6000 W01535 - N6000 W01200
 -->
 <!-- note: year and month of this SIGMET unknown; YYYY and MM used in place of actual values -->
-<iwxxm:VolcanicAshSIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1"
+<iwxxm:VolcanicAshSIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
     gml:id="uuid.64c3912b-b09a-494a-8731-321f28b759e4"
     permissibleUsage="OPERATIONAL"
     status="NORMAL">
