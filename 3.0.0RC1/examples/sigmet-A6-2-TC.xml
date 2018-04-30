@@ -6,13 +6,20 @@
       YUCC AMSWELL FIR TC GLORIA PSN N2706 W07306 CB OBS AT 1600Z WI 250NM OF TC CENTRE TOP FL500 NC
       FCST AT 2200Z TC CENTRE PSN N2740 W07345
 -->
-<iwxxm:TropicalCycloneSIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1"
+<iwxxm:TropicalCycloneSIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
     gml:id="uuid.f12194be-0d82-49ad-ad97-41e46f724dec" permissibleUsage="OPERATIONAL" status="NORMAL">
 
+    <!-- time at which the results of the observation were made available (issued) -->
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.f598d1e0-8e2d-4af1-a4ee-83d04b37f19e">
+            <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
     <iwxxm:issuingAirTrafficServicesUnit>
         <aixm:Unit gml:id="uuid.ee9eedf1-52d2-45b4-8f7c-f027dd25c5e6">
             <aixm:timeSlice>
@@ -40,7 +47,7 @@
         </aixm:Unit>
     </iwxxm:originatingMeteorologicalWatchOffice>
 
-    <iwxxm:flightInformationRegion>
+    <iwxxm:issuingAirTrafficServicesRegion>
         <aixm:Airspace gml:id="uuid.83b13711-6bf4-4497-9293-6bb5490bc259">
             <aixm:timeSlice>
                 <aixm:AirspaceTimeSlice gml:id="uuid.44f4afb1-fab4-4d01-8030-7d51b43eb4ed">
@@ -49,21 +56,14 @@
                     <aixm:type>FIR</aixm:type>
                     <aixm:designator>YUCC</aixm:designator>
                     <aixm:name>AMSWELL FIR</aixm:name>
+                    <!-- FIR boundary can be reported in an aixm:geometryComponent -->
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
         </aixm:Airspace>
-    </iwxxm:flightInformationRegion>
+    </iwxxm:issuingAirTrafficServicesRegion>
 
-    <!-- FIR boundary not typically reported -->
 
     <iwxxm:sequenceNumber>3</iwxxm:sequenceNumber>
-
-    <!-- time at which the results of the observation were made available (issued) -->
-    <iwxxm:issueTime>
-        <gml:TimeInstant gml:id="uuid.f598d1e0-8e2d-4af1-a4ee-83d04b37f19e">
-            <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:issueTime>
 
     <!-- Valid period for this report -->
     <iwxxm:validPeriod>

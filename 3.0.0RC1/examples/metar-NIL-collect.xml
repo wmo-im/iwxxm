@@ -15,11 +15,11 @@
     <collect:meteorologicalInformation>
 
         <iwxxm:METAR
-            xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1"
+            xmlns:iwxxm="http://icao.int/iwxxm/3.0"
             xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
             xmlns:gml="http://www.opengis.net/gml/3.2"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+            xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
             gml:id="uuid.15ff064a-6dc4-41e0-bafa-8ee78ed4dc25"
             status="MISSING"
             permissibleUsage="OPERATIONAL"
@@ -39,6 +39,13 @@
                     </aixm:timeSlice>
                 </aixm:AirportHeliport>
             </iwxxm:aerodrome>
+            
+            <!-- the same as observationTime except for corrections/re-issuances --> 
+            <iwxxm:issueTime>
+                <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+                    <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:issueTime>
 
             <!-- time at which the observation occurred -->
             <iwxxm:observationTime>
@@ -47,8 +54,6 @@
                 </gml:TimeInstant>
             </iwxxm:observationTime>
             
-            <iwxxm:observationLocation nilReason="missing"/>
-
             <!-- NIL/missing reports do not have reported weather conditions -->
             <iwxxm:observation nilReason="missing"/>
         </iwxxm:METAR>

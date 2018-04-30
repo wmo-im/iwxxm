@@ -9,16 +9,21 @@
       FCST 1800Z VA CLD APRX N4330 E02215 – N4315 E02345 – N4145 E02315 – N4230 E02200 - N4330 E02215
       FCST 1800Z VA CLD APRX N4200 E02145 – N4145 E02215 – N4100 E02215 - N4130 E02130 - N4200 E02145=
 -->
-<iwxxm:VolcanicAshSIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1"
+<iwxxm:VolcanicAshSIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
     gml:id="uuid.b4d56d93-3866-4f75-b493-da9a4bb2404c"
     permissibleUsage="OPERATIONAL"
     status="NORMAL">
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.5599e948-f719-4fc2-85fc-20ad96644250">
+            <gml:timePosition>YYYY-MM-10T12:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
     <iwxxm:issuingAirTrafficServicesUnit>
         <aixm:Unit gml:id="uuid.37f89b19-7774-496b-a20d-f30627c45d17">
             <aixm:timeSlice>
@@ -45,7 +50,7 @@
             </aixm:timeSlice>
         </aixm:Unit>
     </iwxxm:originatingMeteorologicalWatchOffice>
-    <iwxxm:flightInformationRegion>
+    <iwxxm:issuingAirTrafficServicesRegion>
         <aixm:Airspace gml:id="uuid.eb9d349c-242c-4193-981a-935ee2e547a2">
             <aixm:timeSlice>
                 <aixm:AirspaceTimeSlice gml:id="uuid.23909d58-4be9-43a1-8eb8-2d1e3b64432e">
@@ -54,16 +59,12 @@
                     <aixm:type>OTHER:FIR_UIR</aixm:type>
                     <aixm:designator>YUDD</aixm:designator>
                     <aixm:name>SHANLON FIR/UIR</aixm:name>
+                    <!-- FIR boundary can be reported in an aixm:geometryComponent -->
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
         </aixm:Airspace>
-    </iwxxm:flightInformationRegion>
+    </iwxxm:issuingAirTrafficServicesRegion>
     <iwxxm:sequenceNumber>2</iwxxm:sequenceNumber>
-    <iwxxm:issueTime>
-        <gml:TimeInstant gml:id="uuid.5599e948-f719-4fc2-85fc-20ad96644250">
-            <gml:timePosition>YYYY-MM-10T12:00:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:issueTime>
     <iwxxm:validPeriod>
         <gml:TimePeriod gml:id="uuid.06f1383c-c034-4ae0-9459-a0b99a3612a9">
             <gml:beginPosition>YYYY-MM-10T12:00:00Z</gml:beginPosition>

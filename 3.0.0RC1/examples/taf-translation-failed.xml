@@ -4,10 +4,10 @@
     
       TAF YUDO 151800Z 1600/1618 INVALID
 -->
-<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1" xmlns:gml="http://www.opengis.net/gml/3.2"
+<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
 
     gml:id="uuid.fa3ce106-f401-4670-ae50-cdf76bf68912"
     permissibleUsage="OPERATIONAL"
@@ -19,6 +19,13 @@
     translationFailedTAC="TAF YUDO 151800Z 1600/1618 INVALID"
     status="NORMAL">
 
+    <iwxxm:issueTime>
+        <!-- Original TAF: 151800Z -->
+        <gml:TimeInstant gml:id="uuid.1b9f7d3f-e09f-4d60-8fca-56b0de4dfebd">
+            <gml:timePosition>2012-08-15T18:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
     <iwxxm:aerodrome>
         <aixm:AirportHeliport gml:id="uuid.b50f56f1-7291-40bb-90c1-5aad1e0ba833">
             <aixm:timeSlice>
@@ -33,12 +40,6 @@
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
 
-    <iwxxm:issueTime>
-        <!-- Original TAF: 151800Z -->
-        <gml:TimeInstant gml:id="uuid.1b9f7d3f-e09f-4d60-8fca-56b0de4dfebd">
-            <gml:timePosition>2012-08-15T18:00:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:issueTime>
     <!-- The time at which this TAF is intended to be used -->
     <iwxxm:validTime>
         <!-- Original TAF: 1600/1618 -->

@@ -4,13 +4,13 @@
     resulting METAR (FM 15):
     METAR EDDF 120550Z 03015KT 1400 R07R/P2000N R07C/P2000N R07L/1900U SN DRSN BR VV/// M04/M04 Q1000 R07R/11//90 R07C/15//90 R07L/15//90 BECMG 4000 NSW
 -->
-<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1"
+<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
     gml:id="uuid.96a5ba6a-47ce-4c10-bc56-355a32dcf22c" status="NORMAL" automatedStation="false" permissibleUsage="OPERATIONAL">
     
     <iwxxm:aerodrome>
@@ -23,26 +23,28 @@
                     <aixm:designator>EDDF</aixm:designator>
                     <aixm:name>FRANKFURT AM MAIN INTERNATIONAL</aixm:name>
                     <aixm:locationIndicatorICAO>EDDF</aixm:locationIndicatorICAO>
+                    <aixm:ARP>
+                        <aixm:ElevatedPoint gml:id="uuid.68f896c8-6889-4b5b-8d79-1f1216ceb72f" srsDimension="3" srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
+                            <gml:pos>50.0464 8.5986 112</gml:pos>
+                        </aixm:ElevatedPoint>
+                    </aixm:ARP>
                 </aixm:AirportHeliportTimeSlice>
             </aixm:timeSlice>
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
+    
+    <!-- the same as observationTime except for corrections/re-issuances --> 
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+            <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
     
     <iwxxm:observationTime>
         <gml:TimeInstant gml:id="uuid.064bf483-439b-4e40-91b8-8aadd0638d92">
             <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>
         </gml:TimeInstant>
     </iwxxm:observationTime>
-    
-    <iwxxm:observationLocation>
-        <gml:Point gml:id="uuid.68f896c8-6889-4b5b-8d79-1f1216ceb72f"
-            uomLabels="deg deg m"
-            axisLabels="Lat Lon Altitude"
-            srsDimension="3"
-            srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
-            <gml:pos>50.0464 8.5986 112</gml:pos>
-        </gml:Point>
-    </iwxxm:observationLocation>
     
     <iwxxm:observation>
         <iwxxm:MeteorologicalAerodromeObservation cloudAndVisibilityOK="false"

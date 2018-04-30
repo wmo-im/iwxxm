@@ -1,4 +1,11 @@
 ====================================
+3.0.0RC1 - ??
+====================================
+* Restructure the model to remove O&M
+- Remove Schematron rule METAR_SPECI.MATFR5 as it has become redundant
+
+
+====================================
 2.1.1 - November 2017
 ====================================
 - Removed Schematron rules SIGMET.SEC3, SIGMET.SEC4, AIRMET.AEC9 and AIRMET.AEC10 to fix vertical extend encoding for 

@@ -17,12 +17,18 @@
         <iwxxm:TAF
             xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
             xmlns:gml="http://www.opengis.net/gml/3.2"
-            xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1"
-            xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+            xmlns:iwxxm="http://icao.int/iwxxm/3.0"
+            xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
             gml:id="uuid.ae3b123f-4fa1-447e-aa0e-5a950c8abff2"
             permissibleUsage="OPERATIONAL"
             status="MISSING">
 
+            <iwxxm:issueTime>
+                <gml:TimeInstant gml:id="uuid.b28ba3dd-6544-4d7b-9a1f-342c63b458b5">
+                    <gml:timePosition>2012-08-16T00:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:issueTime>
+            
             <iwxxm:aerodrome>
                 <aixm:AirportHeliport gml:id="uuid.b50f56f1-7291-40bb-90c1-5aad1e0ba833">
                     <aixm:timeSlice>
@@ -37,12 +43,6 @@
                 </aixm:AirportHeliport>
             </iwxxm:aerodrome>
         
-            <iwxxm:issueTime>
-                <gml:TimeInstant gml:id="uuid.b28ba3dd-6544-4d7b-9a1f-342c63b458b5">
-                    <gml:timePosition>2012-08-16T00:00:00Z</gml:timePosition>
-                </gml:TimeInstant>
-            </iwxxm:issueTime>
-
             <iwxxm:validTime nilReason="missing"/>
 
             <iwxxm:baseForecast nilReason="missing"/>

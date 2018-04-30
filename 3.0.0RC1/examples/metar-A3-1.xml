@@ -5,11 +5,11 @@
       METAR YUDO 221630Z 24004MPS 0600 R12/1000U DZ FG SCT010 OVC020 17/16 Q1018
       BECMG TL1700 0800 FG BECMG AT1800 9999 NSW
 -->
-<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/3.0RC1" xmlns:xlink="http://www.w3.org/1999/xlink"
+<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0RC1 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
     gml:id="uuid.510df5de-fefb-4406-bafd-faab35333ec0"
     permissibleUsage="OPERATIONAL"
     status="NORMAL"
@@ -25,24 +25,29 @@
               <aixm:designator>YUDO</aixm:designator>
               <aixm:name>DONLON/INTERNATIONAL</aixm:name>
               <aixm:locationIndicatorICAO>YUDO</aixm:locationIndicatorICAO>
+              <aixm:ARP>
+                <aixm:ElevatedPoint gml:id="uuid.dd2c810b-edaa-4ad9-bb65-9ab774d1522e" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <gml:pos>12.34 -12.34</gml:pos>
+                </aixm:ElevatedPoint>
+              </aixm:ARP>
             </aixm:AirportHeliportTimeSlice>
           </aixm:timeSlice>
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
 
+    <!-- the same as observationTime except for corrections/re-issuances --> 
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+            <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+ 
     <!-- time at which the METAR phenomena were observed -->
     <iwxxm:observationTime>
         <gml:TimeInstant gml:id="uuid.85802aab-b4e5-4c4b-9303-10a02064e243">
             <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
         </gml:TimeInstant>
     </iwxxm:observationTime>
-
-    <!-- Where the observation took place, assumed to be representative of the entire aerodrome -->
-    <iwxxm:observationLocation>
-        <gml:Point gml:id="uuid.dd2c810b-edaa-4ad9-bb65-9ab774d1522e" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-            <gml:pos>12.34 -12.34</gml:pos>
-        </gml:Point>
-    </iwxxm:observationLocation>
 
     <iwxxm:observation>
         <iwxxm:MeteorologicalAerodromeObservation gml:id="uuid.dc262f4d-1dc8-428b-91d8-74e10ed3cf69" cloudAndVisibilityOK="false">
