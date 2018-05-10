@@ -72,6 +72,9 @@ def validate_dir(dir):
     else:
         print 'CHECKING GML correctness finished successfuly'
 
+    # this can return status codes of 256, which is an undefined value sometimes interpreted as 0.  Force it to a valid value
+    if validationResult != 0:
+        validationResult = 1
     return validationResult | checkResult
 
 if __name__ == '__main__':
