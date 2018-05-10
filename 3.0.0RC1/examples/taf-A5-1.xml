@@ -50,7 +50,7 @@
        <!-- Original TAF: 13005MPS 9000 BKN020 -->
         <iwxxm:MeteorologicalAerodromeForecast gml:id="uuid.13048235-8f8a-4587-a6be-e8ce99f4525c" cloudAndVisibilityOK="false">
             <!-- Base forecast phenomena occur throughout the valid period of the TAF -->
-            <iwxxm:phenomenonTime xlink:href="#tp-201208160000-201208161800"/>
+            <iwxxm:phenomenonTime xlink:href="#uuid.ed5d465f-51fb-4ecc-834a-2ee26bb1196f"/>
             <!-- base forecast conditions are valid throughout the TAF valid period -->
             <iwxxm:prevailingVisibility uom="m">9000</iwxxm:prevailingVisibility>
             <iwxxm:surfaceWind>

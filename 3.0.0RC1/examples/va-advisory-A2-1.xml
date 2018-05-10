@@ -258,6 +258,6 @@ NXT ADVISORY:               20080923/0730Z
             <gml:timePosition>2008-09-23T07:30:00Z</gml:timePosition>
         </gml:TimeInstant>
     </iwxxm:nextAdvisoryEarliestTime>
-    <iwxxm:nextAdvisoryLatestTime xlink:href="#ti23"/>
+    <iwxxm:nextAdvisoryLatestTime xlink:href="#uuid.0480febc-1d6f-49bc-bca3-b54011e2f54f"/>
 
 </iwxxm:VolcanicAshAdvisory>

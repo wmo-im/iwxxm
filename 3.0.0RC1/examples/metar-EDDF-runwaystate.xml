@@ -67,21 +67,21 @@
 
             <iwxxm:rvr>
                 <iwxxm:AerodromeRunwayVisualRange pastTendency="NO_CHANGE">
-                    <iwxxm:runway xlink:href="#runway-eddf-07-r-sf" />
+                    <iwxxm:runway xlink:href="#uuid.f1ff030c-1e4c-40a5-be9a-fbb714369f7f" />
                     <iwxxm:meanRVR uom="m">2000</iwxxm:meanRVR>
                     <iwxxm:meanRVROperator>ABOVE</iwxxm:meanRVROperator>
                 </iwxxm:AerodromeRunwayVisualRange>
             </iwxxm:rvr>
             <iwxxm:rvr>
                 <iwxxm:AerodromeRunwayVisualRange pastTendency="NO_CHANGE">
-                    <iwxxm:runway xlink:href="#runway-EDDF-07-c-sf" />
+                    <iwxxm:runway xlink:href="#uuid.46f64d66-03fb-4469-85a2-ab712aa8a7ff" />
                     <iwxxm:meanRVR uom="m">2000</iwxxm:meanRVR>
                     <iwxxm:meanRVROperator>ABOVE</iwxxm:meanRVROperator>
                 </iwxxm:AerodromeRunwayVisualRange>
             </iwxxm:rvr>
             <iwxxm:rvr>
                 <iwxxm:AerodromeRunwayVisualRange pastTendency="UPWARD">
-                    <iwxxm:runway xlink:href="#runway-EDDF-07-l-sf" />
+                    <iwxxm:runway xlink:href="#uuid.fa34a796-e0d1-409d-a544-90d6787d46ca" />
                     <iwxxm:meanRVR uom="m">1900</iwxxm:meanRVR>
                 </iwxxm:AerodromeRunwayVisualRange>
             </iwxxm:rvr>
