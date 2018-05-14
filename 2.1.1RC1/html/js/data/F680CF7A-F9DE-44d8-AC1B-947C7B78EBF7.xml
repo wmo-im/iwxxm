@@ -1,4 +1,0 @@
-tocTab[tocTab.length] = new Array("0.8:1", "", "Context Diagram: Measure", "EARoot/EA8/EA186.htm", "175.png", "4322", "0", "", "Logical diagram0","{8D563886-9C57-4c5c-A650-9B69AC4FF741}");
-tocTab[tocTab.length] = new Array("0.8:2", "", "AngleWithNilReason", "EARoot/EA8/EA189.htm", "5.png", "E11183", "0", "", "Class0","{D1EAD7B6-7825-4e94-BE03-CBD5307AA1A0}");
-tocTab[tocTab.length] = new Array("0.8:3", "", "DistanceWithNilReason", "EARoot/EA8/EA190.htm", "5.png", "E11182", "0", "", "Class0","{CBC4C6D8-DE57-4e16-BB44-6DB450590E50}");
-tocTab[tocTab.length] = new Array("0.8:4", "", "LengthWithNilReason", "EARoot/EA8/EA191.htm", "5.png", "E11181", "0", "", "Class0","{234205D4-4280-40c2-90EA-8906B3B5C7B7}");
