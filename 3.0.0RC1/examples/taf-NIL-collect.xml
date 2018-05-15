@@ -43,8 +43,6 @@
                 </aixm:AirportHeliport>
             </iwxxm:aerodrome>
         
-            <iwxxm:validTime nilReason="missing"/>
-
             <iwxxm:baseForecast nilReason="missing"/>
         </iwxxm:TAF>
 

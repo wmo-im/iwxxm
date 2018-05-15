@@ -31,17 +31,12 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORep1">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
-         <sch:assert test="(if(@status eq 'MISSING') then( exists(iwxxm:observation//om:result/@nilReason) and ((empty(@automatedStation) or (@automatedStation eq 'false')) and empty(iwxxm:trendForecast)) ) else(true()))">METAR_SPECI.MAORep1: Missing reports only include identifying information (time, aerodrome) and no other information</sch:assert>
+         <sch:assert test="(if(@status eq 'MISSING') then( exists(iwxxm:observation/@nilReason) and ((empty(@automatedStation) or (@automatedStation eq 'false')) and empty(iwxxm:trendForecast)) ) else(true()))">METAR_SPECI.MAORep1: Missing reports only include identifying information (time, aerodrome) and no other information</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORep6">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
          <sch:assert test="(if(exists(.//iwxxm:trendForecast) and not((count(.//iwxxm:trendForecast) eq 1) and (.//iwxxm:trendForecast = ''))) then(empty(distinct-values(for $trend-forecast in .//iwxxm:trendForecast return((deep-equal(.//iwxxm:observation/om:OM_Observation/om:featureOfInterest//sf:sampledFeature,$trend-forecast/om:OM_Observation/om:featureOfInterest//sf:sampledFeature)) or (concat('#', current()//iwxxm:observation/om:OM_Observation/om:featureOfInterest/sams:SF_SpatialSamplingFeature/@gml:id)=$trend-forecast/om:OM_Observation/om:featureOfInterest/@xlink:href)))[.=false()])) else(true()))">METAR_SPECI.MAORep6: The sampled feature should be equal in observation and trendForecast</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="METAR_SPECI.MAORep3">
-      <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
-         <sch:assert test="(((exists(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/aixm:AirportHeliport)) or (contains(string(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/@xlink:href), 'aerodrome')) ) and ( if(exists(.//om:OM_Observation/om:featureOfInterest/@xlink:href)) then(concat( '#', current()//om:OM_Observation//sams:SF_SpatialSamplingFeature/@gml:id ) = .//om:OM_Observation/om:featureOfInterest/@xlink:href) else(true())))">METAR_SPECI.MAORep3: The sampled feature for a METAR/SPECI observation is an aerodrome</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORep7">
@@ -266,7 +261,7 @@
    </sch:pattern>
    <sch:pattern id="TAF.TAF9">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="(if( @status = 'MISSING' ) then( (exists(iwxxm:baseForecast//om:result/@nilReason)) and ((empty(iwxxm:validTime)) and ((empty(iwxxm:previousReportValidPeriod)) and (empty(iwxxm:changeForecast))))) else( true()))">TAF.TAF9: Missing TAF reports only include aerodrome information and issue time information</sch:assert>
+         <sch:assert test="(if( @status = 'MISSING' ) then( (exists(iwxxm:baseForecast/@nilReason)) and ((empty(iwxxm:validTime)) and ((empty(iwxxm:previousReportValidPeriod)) and (empty(iwxxm:changeForecast))))) else( true()))">TAF.TAF9: Missing TAF reports only include aerodrome information and issue time information</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF2">
@@ -314,11 +309,6 @@
          <sch:assert test="(if((exists(.//iwxxm:changeForecast/om:OM_Observation)) and (empty(.//iwxxm:changeForecast/om:OM_Observation/om:result/@nilReason))) then((exists(.//iwxxm:changeForecast/om:OM_Observation/om:validTime/gml:TimePeriod))or(concat( '#', current()//iwxxm:validTime/gml:TimePeriod/@gml:id ) = .//iwxxm:changeForecast/om:OM_Observation/om:validTime/@xlink:href)) else(true()))">TAF.TAF13: The O&amp;amp;M validTime of changeForecast must be a time period for TAF forecasts</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="TAF.TAF6">
-      <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="(empty(distinct-values(for $change-forecast in iwxxm:changeForecast return($change-forecast/om:OM_Observation/om:resultTime//gml:timePosition/text()=iwxxm:baseForecast/om:OM_Observation/om:resultTime//gml:timePosition/text())or($change-forecast/om:OM_Observation/om:resultTime/@xlink:href=iwxxm:baseForecast/om:OM_Observation/om:resultTime/@xlink:href))[.=false()]))">TAF.TAF6: resultTime for the baseForecast and the changeForecasts must match</sch:assert>
-      </sch:rule>
-   </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET9">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
          <sch:assert test="(if(exists(iwxxm:forecastPositionAnalysis)) then(not(exists(iwxxm:analysis/om:OM_Observation/om:result/iwxxm:EvolvingMeteorologicalCondition/iwxxm:speedOfMotion)) and not(exists(iwxxm:analysis/om:OM_Observation/om:result/iwxxm:EvolvingMeteorologicalCondition/iwxxm:directionOfMotion))) else(true()))">SIGMET.SIGMET9: SIGMET can not have both a forecastPositionAnalysis and expected speed and/or direction of motion</sch:assert>
@@ -326,7 +316,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET1">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="(if(@status = 'CANCELLATION') then exists(iwxxm:analysis//om:result/@nilReason) else(true()))">SIGMET.SIGMET1: A cancelled SIGMET should only include identifying information (time and airspace) and no other information</sch:assert>
+         <sch:assert test="(if(@status = 'CANCELLATION') then exists(iwxxm:analysis/@nilReason) else(true()))">SIGMET.SIGMET1: A cancelled SIGMET should only include identifying information (time and airspace) and no other information</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET2">
@@ -341,7 +331,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET4">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if((@status ne 'CANCELLATION') and (not(@translationFailedTAC))) then((exists(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/aixm:Airspace)) or (contains(string(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/@xlink:href), 'fir')) or (contains(string(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/@xlink:href), 'uir')) or (contains(string(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/@xlink:href), 'cta')) ) and ( if(exists(.//om:OM_Observation/om:featureOfInterest/@xlink:href)) then (concat( '#', current()//om:OM_Observation//sams:SF_SpatialSamplingFeature/@gml:id ) = .//om:OM_Observation/om:featureOfInterest/@xlink:href) else(true())) else(true()))">SIGMET.SIGMET4: Sampled feature in analysis and forecastPositionAnalysis must be an FIR, UIR, or CTA</sch:assert>
+          <sch:assert test="if((@status ne 'CANCELLATION') and (not(@translationFailedTAC))) then(exists(iwxxm:issuingAirTrafficServicesRegion/aixm:Airspace)) else(true())">SIGMET.SIGMET4: Sampled feature in analysis and forecastPositionAnalysis must be an FIR, UIR, or CTA</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET7">
