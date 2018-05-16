@@ -178,17 +178,12 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 	</complexType>
 	<simpleType name="TropicalCycloneMovementType">
 		<annotation>
-			<documentation>The movement type for a tropical cyclone, either MOVING, MOVING_SLOWLY, or STATIONARY</documentation>
+			<documentation>The movement type for a tropical cyclone, either MOVING or STATIONARY</documentation>
 		</annotation>
 		<restriction base="string">
 			<enumeration value="MOVING">
 				<annotation>
 					<documentation>The tropical cyclone is moving and will be reported with the associated movement speed and direction</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="MOVING_SLOWLY">
-				<annotation>
-					<documentation>The tropical cyclone is moving slowly (&lt; 6 km/h or 3 kt) and will not have a reported movement speed or direction</documentation>
 				</annotation>
 			</enumeration>
 			<enumeration value="STATIONARY">
