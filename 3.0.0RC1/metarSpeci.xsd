@@ -13,6 +13,33 @@ SPECI reports are special (i.e., non-routine) observation made at an aerodrome a
 
 References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
+	<simpleType name="TrendForecastTimeIndicatorType">
+		<annotation>
+			<documentation>Time indicators for trend forecast conditions.  These are equivalent to the traditional FM, TL, and AT codes</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="AT">
+				<annotation>
+					<documentation>This trend forecast specifies a time instant at which time conditions occur (AT)</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="UNTIL">
+				<annotation>
+					<documentation>This trend forecast specifies a time period which commences at the beginning of the trend forecast period and is completed by a specified time (TL)</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FROM">
+				<annotation>
+					<documentation>This trend forecast specifies a time period which commences at a specified time and is completed by the end of the trend forecast period (FM)</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FROM_UNTIL">
+				<annotation>
+					<documentation>This trend forecast specifies a time period which commences at a specified time and is completed by another specified time (FM and TL)</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
 	<element name="MeteorologicalAerodromeObservationReport" type="iwxxm:MeteorologicalAerodromeObservationReportType" substitutionGroup="iwxxm:Report" abstract="true">
 		<annotation>
 			<documentation>A report of observed and trend forecast weather phenomenon from the surface near an aerodrome.  This is a shared superclass for METAR and SPECI reports, which have identical reported information.</documentation>
@@ -157,6 +184,11 @@ When no clouds of operational significance or no weather of operational signific
 				            <documentation>The time at which meteorological phenomena occur</documentation>
 				        </annotation>
 				    </element>
+                    <element name="timeIndicator" type="iwxxm:TrendForecastTimeIndicatorType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The human-readable time indicator for this trend forecast.  This should match the time period or time instant reported in the phenomenon time</documentation>
+						</annotation>
+					</element>
 					<element name="prevailingVisibility" type="gml:LengthType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The prevailing horizontal visibility reported in a trend forecast.
