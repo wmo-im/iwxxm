@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
+	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
 		<documentation>Tropical Cyclone Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
@@ -95,6 +96,11 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 							<documentation>The tropical cyclone position</documentation>
 						</annotation>
 					</element>
+					<element name="cumulonimbusCloudLocation" type="aixm:AirspaceVolumePropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Location of cumulonimbus cloud</documentation>
+						</annotation>
+					</element>
 					<element name="movement" type="iwxxm:TropicalCycloneMovementType">
 						<annotation>
 							<documentation>The movement observed for the tropical cyclone</documentation>
@@ -145,7 +151,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="phenomenonTime" type="gml:TimeInstantPropertyType">
+					<element name="phenomenonTime" type="iwxxm:TimeObjectPropertyType">
 						<annotation>
 							<documentation>The time at which meteorological phenomena occur</documentation>
 						</annotation>
