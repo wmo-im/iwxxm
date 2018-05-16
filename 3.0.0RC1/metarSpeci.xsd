@@ -266,7 +266,15 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 					<element name="recentWeather" type="iwxxm:AerodromeRecentWeatherType" minOccurs="0" maxOccurs="3"></element>
 					<element name="windShear" type="iwxxm:AerodromeWindShearPropertyType" minOccurs="0" maxOccurs="1"></element>
 					<element name="seaState" type="iwxxm:AerodromeSeaStatePropertyType" minOccurs="0" maxOccurs="1"></element>
-					<element name="runwayState" type="iwxxm:AerodromeRunwayStatePropertyType" minOccurs="0" maxOccurs="unbounded"></element>
+					<element nillable="true" name="runwayState" minOccurs="0" maxOccurs="unbounded">
+						<complexType>
+							<complexContent>
+								<extension base="iwxxm:AerodromeRunwayStatePropertyType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element MeteorologicalAerodromeObservation</documentation>
@@ -367,14 +375,6 @@ ICAO Annex 3 / WMO No. 49-2:
 "CLRD"
 
 Section 4.8.1.5, Table A3-2 "State of the runway"</documentation>
-			</annotation>
-		</attribute>
-		<attribute name="snowClosure" type="boolean">
-			<annotation>
-				<documentation>Indicates whether the aerodrome is closed due to an extreme deposit of snow.  This affects all runways
-&lt;b&gt;
-&lt;/b&gt;WMO 306:
-Section 15.13.6.1</documentation>
 			</annotation>
 		</attribute>
 	</complexType>

@@ -8,6 +8,9 @@
     - TCA observed movement speed can no longer be reported as "moving slowly", per the Annex change
 * All gml:ids are now UUIDs, and this is supported by appropriate Schematron rules.  This allows IWXXM message
     intermediaries to re-assemble COLLECT advisories freely without requiring IWXXM message modification en route
+* Snow closure of all runways is now properly indicated, rather than being a snowClosure boolean on a single runway state.
+    The snowClosure boolean was removed, and full aerodrome/all runways snow closure is now indicated with a nilReason of
+    "http://codes.wmo.int/bufr4/codeflag/0-20-085/1" with a single runwayState element
 - Remove Schematron rule METAR_SPECI.MATFR5 as it has become redundant
 
 ====================================

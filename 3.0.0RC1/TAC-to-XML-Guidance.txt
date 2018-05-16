@@ -33,8 +33,8 @@ R88 (runway designator for runway state)
 R99 (runway designator for runway state)
   When a new runway state report is not available in time for dissemination of the METAR message, the previous runway state report will be repeated
 
-SNOCLO - Runway closed due to snow
-  When a runway is closed due to snow, AerodromeRunwayState shall have "snowClosure" set to true
+SNOCLO - Runways closed due to snow
+  When all runways are closed due to snow, this shall be indicated with a nil "runwayState" with a nilReason of "http://codes.wmo.int/bufr4/codeflag/0-20-085/1"
 
 Present weather "//"
   When present weather cannot be observed by the automatic observing system due to a temporary failure of the system/sensor, "presentWeather" shall be nil with a nil reason of "http://codes.wmo.int/common/nil/notObservable"
