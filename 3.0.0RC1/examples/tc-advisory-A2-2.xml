@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- A tropical cyclone advisory.  Original TC Advisory from ICAO Annex 3 Amd 77 Example A2-2:
+<!-- A tropical cyclone advisory.  Original TC Advisory from ICAO Annex 3 Example A2-2:
 
 TC ADVISORY
 
-DTG:                        20040925/1600Z
+DTG:                        20040925/1900Z
 TCAC:                       YUFO
 TC:                         GLORIA
-NR:                         01
-PSN:                        N2706 W07306
+ADVISORY NR:                2004/13
+OBS PSN:                    25/1800Z N2706 W07306
+CB:                         WI 250NM OF TC CENTRE
 MOV:                        NW 20KMH
 C:                          965HPA
 MAX WIND:                   22MPS
@@ -64,6 +65,32 @@ NXT MSG:                    20040925/2000Z
                     <gml:pos>27.1 -73.1</gml:pos>
                 </gml:Point>
             </iwxxm:tropicalCyclonePosition>
+            <iwxxm:cumulonimbusCloudLocation>
+                <aixm:AirspaceVolume gml:id="uuid.d4938cc8-c129-4cd7-bda5-588c434ef996">
+                    <aixm:horizontalProjection>
+                        <aixm:Surface gml:id="uuid.62695824-f234-4618-b459-90bb795cde9a" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                            <gml:polygonPatches>
+                                <gml:PolygonPatch>
+                                    <gml:exterior>
+                                        <gml:Ring>
+                                            <gml:curveMember>
+                                                <gml:Curve gml:id="uuid.b7fa4047-2e78-431c-ba95-3fdf6343e3b5">
+                                                    <gml:segments>
+                                                        <gml:CircleByCenterPoint numArc="1">
+                                                            <gml:pos>27.1 -73.1</gml:pos>
+                                                            <gml:radius uom="[nmi_i]">250</gml:radius>
+                                                        </gml:CircleByCenterPoint>
+                                                    </gml:segments>
+                                                </gml:Curve>
+                                            </gml:curveMember>
+                                        </gml:Ring>
+                                    </gml:exterior>
+                                </gml:PolygonPatch>
+                            </gml:polygonPatches>
+                        </aixm:Surface>
+                    </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+            </iwxxm:cumulonimbusCloudLocation>
             <iwxxm:movement>MOVING</iwxxm:movement>
             <iwxxm:movementDirection uom="deg">315</iwxxm:movementDirection>
             <iwxxm:movementSpeed uom="km/h">20</iwxxm:movementSpeed>

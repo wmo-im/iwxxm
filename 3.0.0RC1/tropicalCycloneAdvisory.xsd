@@ -33,9 +33,9 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The tropical cyclone name.  If the tropical cyclone is unnamed, 'NN' may be used</documentation>
 						</annotation>
 					</element>
-					<element name="advisoryNumber" type="int">
+					<element name="advisoryNumber" type="string">
 						<annotation>
-							<documentation>Advisory number, starting with 1 for each cyclone</documentation>
+							<documentation>Advisory number: year in full and message number (separate sequence for each cyclone)</documentation>
 						</annotation>
 					</element>
 					<element name="observation" type="iwxxm:TropicalCycloneObservedConditionsPropertyType">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    An example of a AIRMET which failed translation.  This is an example modified from ICAO Annex 3 Amd 77 Example A6-1
+    An example of a AIRMET which failed translation.  This is an example modified from ICAO Annex 3 Example A6-1
     where 'ISOL TS' from the original example was changed to 'INVALID TS', which is an invalid AIRMET:
 
     YUDD AIRMET 1 VALID 151520/151800 YUSO –

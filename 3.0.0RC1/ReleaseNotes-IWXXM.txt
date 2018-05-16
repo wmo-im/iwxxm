@@ -1,9 +1,14 @@
 ====================================
 3.0.0RC1 - ??
 ====================================
-* Restructure the model to remove O&M
+* Restructured and simplified the model to remove the Observations and Measurements model (O&M)
+* Incorporated ICAO Annex 3 / WMO No. 49 changes:
+    + Space Weather Advisory products have been added as a new product
+    * Tropical Cyclone Advisory (TCA) sequence numbers are now of the form "2004/13" instead of simple numbers
+    - TCA observed movement speed can no longer be reported as "moving slowly", per the Annex change
+* All gml:ids are now UUIDs, and this is supported by appropriate Schematron rules.  This allows IWXXM message
+    intermediaries to re-assemble COLLECT advisories freely without requiring IWXXM message modification en route
 - Remove Schematron rule METAR_SPECI.MATFR5 as it has become redundant
-
 
 ====================================
 2.1.1 - November 2017
