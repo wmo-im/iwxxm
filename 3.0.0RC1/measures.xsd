@@ -42,4 +42,28 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 			</extension>
 		</simpleContent>
 	</complexType>
+	<element name="MeasureWithNilReason" type="iwxxm:MeasureWithNilReasonType">
+		<annotation>
+			<documentation>A nillable Measure quantity.  Unlike the base measure, references to this type may be nil and may include a nilReason</documentation>
+		</annotation>
+	</element>
+    <complexType name="MeasureWithNilReasonType">
+        <simpleContent>
+            <extension base="gml:MeasureType">
+                <attribute name="nilReason" type="gml:NilReasonType"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+	<element name="VelocityWithNilReason" type="iwxxm:VelocityWithNilReasonType">
+		<annotation>
+			<documentation>A nillable Velocity quantity.  Unlike the base Velocity measure, references to this type may be nil and may include a nilReason</documentation>
+		</annotation>
+	</element>
+    <complexType name="VelocityWithNilReasonType">
+        <simpleContent>
+            <extension base="gml:MeasureType">
+                <attribute name="nilReason" type="gml:NilReasonType"/>
+            </extension>
+        </simpleContent>
+    </complexType>
 </schema>
