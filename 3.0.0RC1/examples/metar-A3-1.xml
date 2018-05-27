@@ -110,6 +110,7 @@
                     <gml:endPosition>2012-08-22T17:00:00Z</gml:endPosition>
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
+            <iwxxm:timeIndicator>UNTIL</iwxxm:timeIndicator>
             <iwxxm:prevailingVisibility uom="m">800</iwxxm:prevailingVisibility>
             <iwxxm:forecastWeather xlink:href="http://codes.wmo.int/306/4678/FG"/>
         </iwxxm:MeteorologicalAerodromeTrendForecast>
