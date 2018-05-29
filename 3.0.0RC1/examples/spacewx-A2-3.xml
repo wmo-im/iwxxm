@@ -42,8 +42,8 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
     <iwxxm:advisoryNumber>2016/2</iwxxm:advisoryNumber>
     <iwxxm:replacedAdvisoryNumber>2016/1</iwxxm:replacedAdvisoryNumber>
     
-    <iwxxm:phenomena xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/HF_COM_MOD"/>
-    <iwxxm:phenomena xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/GNSS_MOD"/>
+    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/HF_COM_MOD"/>
+    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/GNSS_MOD"/>
     
     <!-- 20161108/0100Z HNH HSH E18000 – W18000 -->
     <iwxxm:analysis>

@@ -39,9 +39,9 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The number of the advisory being replaced.  Example "2018/1"</documentation>
 						</annotation>
 					</element>
-					<element name="phenomena" type="iwxxm:SpaceWeatherPhenomenaType" minOccurs="1" maxOccurs="unbounded">
+					<element name="phenomenon" type="iwxxm:SpaceWeatherPhenomenaType" minOccurs="1" maxOccurs="unbounded">
 						<annotation>
-							<documentation>The space weather phenomena</documentation>
+							<documentation>The space weather phenomenon, such as radiation or satellite communication</documentation>
 						</annotation>
 					</element>
 					<element name="analysis" type="iwxxm:SpaceWeatherAnalysisPropertyType" minOccurs="1" maxOccurs="5">

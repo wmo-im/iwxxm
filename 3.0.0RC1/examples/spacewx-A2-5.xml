@@ -42,7 +42,7 @@ NXT ADVISORY:       20161108/0700Z
     <iwxxm:advisoryNumber>2016/2</iwxxm:advisoryNumber>
     <iwxxm:replacedAdvisoryNumber>2016/1</iwxxm:replacedAdvisoryNumber>
     
-    <iwxxm:phenomena xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/HF_COM_SEV"/>
+    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/HF_COM_SEV"/>
     
     <!-- 08/0100Z DAYLIGHT SIDE -->
     <iwxxm:analysis>
