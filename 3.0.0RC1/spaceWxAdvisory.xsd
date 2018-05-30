@@ -46,7 +46,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 					</element>
 					<element name="analysis" type="iwxxm:SpaceWeatherAnalysisPropertyType" minOccurs="1" maxOccurs="5">
 						<annotation>
-							<documentation>Observed and forecast space weather information</documentation>
+							<documentation>Observed and forecast space weather information.  Analyses should be reported in the order in which they occur, starting with the initial observed/forecast conditions and proceeding through each subsequent forecast to the end of the period</documentation>
 						</annotation>
 					</element>
 					<element name="remarks" type="string" minOccurs="0" maxOccurs="1">
