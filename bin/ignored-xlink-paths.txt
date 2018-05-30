@@ -1,0 +1,11 @@
+# Used by checkGMLFiles.py to determine which xlink:href paths are ignored in the validation process
+# This is used to permanently exclude some paths, as well as temporarily keep WMO Codes registry paths from
+# failing validation during development until they can be made operationally available
+
+# Permanent exclusions
+http:\/\/codes\.wmo\.int.*observation-type.*
+http:\/\/codes\.wmo\.int.*observable-property.*
+
+# Temporary exclusions (to be re-enabled once available, ideally before the release is issued)
+http:\/\/codes\.wmo\.int\/49-2\/SpaceWxLocation.*
+http:\/\/codes\.wmo\.int\/49-2\/SpaceWxPhenomena.*

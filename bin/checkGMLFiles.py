@@ -39,8 +39,9 @@ def check_files(dir):
     gmlIdRE = re.compile(r"""( \s+(?P<attr_name>gml:id)=\"(?P<attr_value>.*?)\" )""", re.VERBOSE|re.DOTALL)
     xlinkHrefRE = re.compile(r"""( \s+(?P<attr_name>xlink:href)=\"(?P<attr_value>.*?)\" )""", re.VERBOSE|re.DOTALL)
 
-    # xlink:hrefs that are ignored and for whom HTTP resolution is not attempted
-    ignoredXLinkUrlRE = re.compile(r"""(.*(codes\.wmo\.int).*(observation-type|observable-property)\/.*)""", re.VERBOSE|re.DOTALL)
+    scriptDir=os.path.dirname(os.path.abspath(__file__))
+    # xlink:hrefs that are ignored and for which HTTP resolution is not attempted
+    ignoredXLinkUrlREs = readIgnoredXLinkPathRegExes(scriptDir+'/ignored-xlink-paths.txt')
     checkedXLinkTargets = {}
 
     returnCode=0
@@ -81,9 +82,14 @@ def check_files(dir):
                     #check that HTTP paths resolve
                     else:
                         if checkedXLinkTargets.get(xlinkTarget) is None:
-                            if ignoredXLinkUrlRE.search( xlinkTarget ):
-                                print "\tIgnoring %s (matches the ignore list)" % xlinkTarget
-                            else:
+                            checked = True
+                            # see if this XLink matches any of the ignore rules
+                            for ignoredXLinkUrlRE in ignoredXLinkUrlREs:
+                                if ignoredXLinkUrlRE.search( xlinkTarget ):
+                                    print "\tIgnoring %s (matches the ignore list)" % xlinkTarget
+                                    checked = False
+
+                            if checked:
                                 print "\tRESOLVING xlink:href %s" % xlinkTarget
                                 response = urllib2.urlopen(xlinkTarget)
                                 code = response.getcode()
@@ -99,6 +105,18 @@ def check_files(dir):
                                 response.close()
 
     return returnCode
+
+def readIgnoredXLinkPathRegExes(filename):
+    paths = []
+    with open(filename) as f:
+        for line in f.readlines():
+            # ignore comment and blank lines
+            if line.startswith('#') or not line.strip():
+                continue
+            ignoredRE = re.compile( line.strip(), re.VERBOSE | re.DOTALL)
+            paths.append(ignoredRE)
+
+    return paths
 
 ###############################################################
 # Main program                                                #
