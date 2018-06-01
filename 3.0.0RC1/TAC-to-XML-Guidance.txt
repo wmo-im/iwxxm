@@ -65,6 +65,9 @@ Trend forecast BECMG without a specified time (TL, AT, FM)
 
 Trend forecast TEMPO without a specified time (TL, AT, FM)
   When a trend forecast is reported with a TEMPO block without a specified time and the period commences at the beginning of the trend forecast period and ceases by the end of the trend forecast period this should be represented as a phenomenonTime with a nilReason of "missing"
+
+Observed quantities with a nil reason
+  When observed measures or quantities (such as air temperature or prevailing visibility) can not be reported due to sensor failures, the XML element should have xsi:nil set to "true", the uom set to "N/A", and the nilReason set to "http://codes.wmo.int/common/nil/notObservable"
   
 ==========================
 TAF
