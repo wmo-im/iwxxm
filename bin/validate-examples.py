@@ -56,7 +56,7 @@ def validate_dir(dir):
 
     print 'Validating %s against XML Schema and Schematron' % dir
     examplesDir = os.path.join(dir,'examples')
-    validationResult = os.system( 'bin/crux-1.2.jar -c %s -s %s/rule/iwxxm.sch %s/*.xml' % (thisCatalogFile,dir,examplesDir) )
+    validationResult = os.system( 'bin/crux-1.3-all.jar -c %s -s %s/rule/iwxxm.sch %s/*.xml' % (thisCatalogFile,dir,examplesDir) )
     if validationResult > 0:
         print 'FAILED validation.  Continuing...'
     else:
