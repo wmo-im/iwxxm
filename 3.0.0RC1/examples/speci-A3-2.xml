@@ -71,7 +71,7 @@
             </iwxxm:visibility>
             <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/+TSRA"/>
             <iwxxm:cloud>
-                <iwxxm:AerodromeObservedClouds>
+                <iwxxm:AerodromeCloud>
                     <iwxxm:layer>
                         <iwxxm:CloudLayer>
                             <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"/>
@@ -79,7 +79,7 @@
                             <iwxxm:cloudType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-012/9"/>
                         </iwxxm:CloudLayer>
                     </iwxxm:layer>
-                </iwxxm:AerodromeObservedClouds>
+                </iwxxm:AerodromeCloud>
             </iwxxm:cloud>
         </iwxxm:MeteorologicalAerodromeObservation>
     </iwxxm:observation>
@@ -103,7 +103,7 @@
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:prevailingVisibility uom="m">8000</iwxxm:prevailingVisibility>
-            <iwxxm:forecastWeather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:weather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
             <iwxxm:cloud nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:MeteorologicalAerodromeTrendForecast>
     </iwxxm:trendForecast>

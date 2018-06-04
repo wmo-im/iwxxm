@@ -209,7 +209,7 @@ When no operator is reported, prevailing visibility represents an exact value wi
 						</annotation>
 					</element>
 					<element name="surfaceWind" type="iwxxm:AerodromeSurfaceWindTrendForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
-					<element nillable="true" name="forecastWeather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3"></element>
+					<element nillable="true" name="weather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3"></element>
 					<element nillable="true" name="cloud" type="iwxxm:AerodromeCloudForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
@@ -289,7 +289,7 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 					<element nillable="true" name="cloud" minOccurs="0" maxOccurs="1">
 						<complexType>
 							<complexContent>
-								<extension base="iwxxm:AerodromeObservedCloudsPropertyType">
+								<extension base="iwxxm:AerodromeCloudPropertyType">
 									<attribute name="nilReason" type="gml:NilReasonType"/>
 								</extension>
 							</complexContent>
@@ -558,12 +558,12 @@ Table 3700</documentation>
 		</sequence>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	<element name="AerodromeObservedClouds" type="iwxxm:AerodromeObservedCloudsType" substitutionGroup="gml:AbstractObject">
+	<element name="AerodromeCloud" type="iwxxm:AerodromeCloudType" substitutionGroup="gml:AbstractObject">
 		<annotation>
 			<documentation>An aggregation of observed cloud conditions typically reported together at an aerodrome, including cloud types, cloud layers, and vertical visibility.  </documentation>
 		</annotation>
 	</element>
-	<complexType name="AerodromeObservedCloudsType">
+	<complexType name="AerodromeCloudType">
 		<sequence>
 			<element nillable="true" name="verticalVisibility" type="iwxxm:LengthWithNilReasonType" minOccurs="0" maxOccurs="1">
 				<annotation>
@@ -595,9 +595,9 @@ When the sky is obscured and the value of the vertical visibility cannot be dete
 			</element>
 		</sequence>
 	</complexType>
-	<complexType name="AerodromeObservedCloudsPropertyType">
+	<complexType name="AerodromeCloudPropertyType">
 		<sequence>
-			<element ref="iwxxm:AerodromeObservedClouds"></element>
+			<element ref="iwxxm:AerodromeCloud"></element>
 		</sequence>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>

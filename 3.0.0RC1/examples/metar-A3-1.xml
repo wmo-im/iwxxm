@@ -84,7 +84,7 @@
             <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/DZ"/>
             <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/FG"/>
             <iwxxm:cloud>
-                <iwxxm:AerodromeObservedClouds>
+                <iwxxm:AerodromeCloud>
                     <iwxxm:layer>
                         <iwxxm:CloudLayer>
                             <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/2"/>
@@ -97,7 +97,7 @@
                             <iwxxm:base uom="[ft_i]">2000</iwxxm:base>
                         </iwxxm:CloudLayer>
                     </iwxxm:layer>
-                </iwxxm:AerodromeObservedClouds>
+                </iwxxm:AerodromeCloud>
             </iwxxm:cloud>
         </iwxxm:MeteorologicalAerodromeObservation>
     </iwxxm:observation>
@@ -112,7 +112,7 @@
             </iwxxm:phenomenonTime>
             <iwxxm:timeIndicator>UNTIL</iwxxm:timeIndicator>
             <iwxxm:prevailingVisibility uom="m">800</iwxxm:prevailingVisibility>
-            <iwxxm:forecastWeather xlink:href="http://codes.wmo.int/306/4678/FG"/>
+            <iwxxm:weather xlink:href="http://codes.wmo.int/306/4678/FG"/>
         </iwxxm:MeteorologicalAerodromeTrendForecast>
     </iwxxm:trendForecast>
     <iwxxm:trendForecast>
@@ -127,7 +127,7 @@
             <iwxxm:timeIndicator>AT</iwxxm:timeIndicator>
             <iwxxm:prevailingVisibility uom="m">10000</iwxxm:prevailingVisibility>
             <iwxxm:prevailingVisibilityOperator>ABOVE</iwxxm:prevailingVisibilityOperator>
-            <iwxxm:forecastWeather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:weather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:MeteorologicalAerodromeTrendForecast>
     </iwxxm:trendForecast>
 </iwxxm:METAR>
