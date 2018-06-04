@@ -272,11 +272,9 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="tropicalCyclone" type="metce:TropicalCyclonePropertyType">
+					<element name="tropicalCyclone" type="metce:TropicalCyclonePropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The tropical cyclone being reported in this SIGMET.
-
-When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclone is unnamed</documentation>
+							<documentation>The tropical cyclone being reported in this SIGMET, required in all cases other than cancellations. When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclone is unnamed</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -304,9 +302,9 @@ When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclo
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="eruptingVolcano" type="metce:VolcanoPropertyType">
+					<element name="eruptingVolcano" type="metce:VolcanoPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The volcano that is erupting</documentation>
+							<documentation>The volcano that is erupting - required in all cases other than cancellations</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
