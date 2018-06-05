@@ -101,11 +101,11 @@ Note that the TAC representations for "FM", "TL", and "AT" are represented by th
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-				    <element name="phenomenonTime" type="iwxxm:TimeObjectPropertyType">
-				        <annotation>
-				            <documentation>The time at which meteorological phenomena occur</documentation>
-				        </annotation>
-				    </element>
+					<element name="phenomenonTime" type="gml:TimePeriodPropertyType">
+						<annotation>
+							<documentation>The time at which the reported phenomena or change of phenomena occur.  For change indicators of FROM, PROB 30/40, and TEMPO this is the period of time at which reported meteorological conditions occur.  For BECOMING conditions this represents the time over which conditions are changing.  This is equivalent to how time information is reported in the TAC codes</documentation>
+						</annotation>
+					</element>
 					<element name="prevailingVisibility" type="gml:LengthType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The prevailing horizontal visibility, mandatory except when ceiling and visibility is reported as OK
