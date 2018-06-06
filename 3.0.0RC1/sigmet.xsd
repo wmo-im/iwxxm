@@ -112,12 +112,12 @@ ICAO Annex 3 / WMO No. 49-2:
 A6-1: "Location indicator of FIR/CTA"</documentation>
 						</annotation>
 					</element>
-					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType">
+					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>MWO originating this report</documentation>
 						</annotation>
 					</element>
-					<element name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType">
+					<element name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The ATS region (FIR, UIR, CTA, or FIR/UIR)</documentation>
 						</annotation>
@@ -148,7 +148,7 @@ YUDD SIGMET A3 VALID ...</documentation>
 							<documentation>The valid period of a previous SIGMET that is cancelled by this SIGMET.  Mandatory when this is a cancellation report, must be missing otherwise</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="phenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonType">
+					<element nillable="true" name="phenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The reported phenomenon, such as thunderstorm, tropical cyclone, icing, mountain wave, etc.
 
@@ -277,11 +277,6 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 							<documentation>The tropical cyclone being reported in this SIGMET, required in all cases other than cancellations. When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclone is unnamed</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
-						<annotation>
-							<documentation>Extension block for optional and/or additional parameters for element TropicalCycloneSIGMET</documentation>
-						</annotation>
-					</element>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -305,11 +300,6 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 					<element name="eruptingVolcano" type="metce:VolcanoPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The volcano that is erupting - required in all cases other than cancellations</documentation>
-						</annotation>
-					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
-						<annotation>
-							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshSIGMET</documentation>
 						</annotation>
 					</element>
 				</sequence>

@@ -65,7 +65,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The time at which phenomena were observed.  This may differ from the times reported for forecast conditions</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="observation" type="iwxxm:MeteorologicalAerodromeObservationPropertyType">
+					<element nillable="true" name="observation" type="iwxxm:MeteorologicalAerodromeObservationPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The observation which resulted in the current meteorological conditions at an aerodrome</documentation>
 						</annotation>

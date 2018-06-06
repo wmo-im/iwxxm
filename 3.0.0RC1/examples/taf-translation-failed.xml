@@ -48,6 +48,5 @@
             <gml:endPosition>2012-08-16T18:00:00Z</gml:endPosition>
         </gml:TimePeriod>
     </iwxxm:validTime>
-    <iwxxm:baseForecast nilReason="missing"/>
 
 </iwxxm:TAF>

@@ -67,12 +67,12 @@ The AIRMET report class represents the base AIRMET types that may be reported su
 							<documentation>The ATS unit serving the FIR or CTA to which the AIRMET refers.  ICAO Annex 3 / WMO No. 49-2: A6-1: "Location indicator of FIR/CTA"</documentation>
 						</annotation>
 					</element>
-					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType">
+					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>MWO originating this report</documentation>
 						</annotation>
 					</element>
-					<element name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType">
+					<element name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The ATS region (FIR, UIR, CTA, or FIR/UIR)</documentation>
 						</annotation>
@@ -101,7 +101,7 @@ YUDD AIRMET A3 VALID ...</documentation>
 							<documentation>The valid period of a previous AIRMET that is cancelled by this AIRMET.  Mandatory when this is a cancellation report, must be missing otherwise</documentation>
 						</annotation>
 					</element>
-					<element name="phenomenon" type="iwxxm:AeronauticalAreaWeatherPhenomenonType">
+					<element name="phenomenon" type="iwxxm:AeronauticalAreaWeatherPhenomenonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The reported phenomenon, such as thunderstorm, tropical cyclone, icing, mountain wave, etc.</documentation>
 						</annotation>

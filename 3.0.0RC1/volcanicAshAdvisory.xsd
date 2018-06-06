@@ -20,23 +20,27 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="iwxxm:ReportType">
 				<sequence>
-					<element name="issueTime" type="gml:TimeInstantPropertyType"></element>
+					<element name="issueTime" type="gml:TimeInstantPropertyType">
+						<annotation>
+							<documentation>The time at which this report was issued</documentation>
+						</annotation>
+					</element>
 					<element name="issuingVolcanicAshAdvisoryCentre" type="iwxxm:UnitPropertyType">
 						<annotation>
 							<documentation>The issuing VAAC</documentation>
 						</annotation>
 					</element>
-					<element name="volcano" type="metce:EruptingVolcanoPropertyType">
+					<element name="volcano" type="metce:EruptingVolcanoPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The erupting volcano that is the source of volcanic ash</documentation>
 						</annotation>
 					</element>
-					<element name="advisoryNumber" type="string">
+					<element name="advisoryNumber" type="string" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Advisory number: year in full and message number (separate sequence for each volcano)</documentation>
 						</annotation>
 					</element>
-					<element name="informationSource" type="string">
+					<element name="informationSource" type="string" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Information source - described in free text</documentation>
 						</annotation>
@@ -58,12 +62,12 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 					</element>
 					<element name="nextAdvisoryEarliestTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The latest time at which the next advisory will be issued</documentation>
+							<documentation>The earliest time at which the next advisory will be issued</documentation>
 						</annotation>
 					</element>
 					<element name="nextAdvisoryLatestTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The earliest time at which the next advisory will be issued</documentation>
+							<documentation>The latest time at which the next advisory will be issued</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
