@@ -45,14 +45,4 @@ INVALID INVALID INVALID
         </aixm:Unit>
     </iwxxm:issuingTropicalCycloneAdvisoryCentre>
 
-    <iwxxm:tropicalCycloneName>GLORIA</iwxxm:tropicalCycloneName>
-    <iwxxm:advisoryNumber>0</iwxxm:advisoryNumber>
-
-    <iwxxm:observation nilReason="missing"/>
-    <iwxxm:forecast nilReason="missing"/>
-    <iwxxm:forecast nilReason="missing"/>
-    <iwxxm:forecast nilReason="missing"/>
-    <iwxxm:forecast nilReason="missing"/>
-    <iwxxm:expectedNextAdvisoryTime/>
-
 </iwxxm:TropicalCycloneAdvisory>

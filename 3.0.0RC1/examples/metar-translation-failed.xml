@@ -48,6 +48,4 @@
         </gml:TimeInstant>
     </iwxxm:observationTime>
     
-    <iwxxm:observation nilReason="missing"/>
-
 </iwxxm:METAR>

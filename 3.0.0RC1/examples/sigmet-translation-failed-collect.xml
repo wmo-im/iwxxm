@@ -50,33 +50,6 @@
                 </aixm:timeSlice>
               </aixm:Unit>
             </iwxxm:issuingAirTrafficServicesUnit>
-            <iwxxm:originatingMeteorologicalWatchOffice>
-              <aixm:Unit gml:id="uuid.701a3f46-6b7b-4878-ad74-71436d8c953c">
-                <aixm:timeSlice>
-                  <aixm:UnitTimeSlice gml:id="uuid.f99e1e20-003e-4605-bcfe-c1524a4cd7c2">
-                    <gml:validTime/>
-                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                    <aixm:name>YUSO MWO</aixm:name>
-                    <aixm:type>MWO</aixm:type>
-                    <aixm:designator>YUSO</aixm:designator>
-                  </aixm:UnitTimeSlice>
-                </aixm:timeSlice>
-              </aixm:Unit>
-            </iwxxm:originatingMeteorologicalWatchOffice>
-            
-            <iwxxm:issuingAirTrafficServicesRegion>
-                <aixm:Airspace gml:id="uuid.eb9d349c-242c-4193-981a-935ee2e547a2">
-                    <aixm:timeSlice>
-                        <aixm:AirspaceTimeSlice gml:id="uuid.23909d58-4be9-43a1-8eb8-2d1e3b64432e">
-                            <gml:validTime/>
-                            <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                            <aixm:type>FIR</aixm:type>
-                            <aixm:designator>YUDD</aixm:designator>
-                            <aixm:name>SHANLON FIR</aixm:name>
-                        </aixm:AirspaceTimeSlice>
-                    </aixm:timeSlice>
-                </aixm:Airspace>
-            </iwxxm:issuingAirTrafficServicesRegion>
             
             <iwxxm:sequenceNumber>2</iwxxm:sequenceNumber>
             
@@ -86,10 +59,6 @@
                     <gml:endPosition>2012-08-10T16:00:00Z</gml:endPosition>
                 </gml:TimePeriod>
             </iwxxm:validPeriod>
-        
-            <iwxxm:phenomenon nilReason="missing"/>
-        
-            <iwxxm:analysis nilReason="missing"/>
         
         </iwxxm:SIGMET>
 

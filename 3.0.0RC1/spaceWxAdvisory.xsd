@@ -29,7 +29,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The issuing space weather centre (SWXC)</documentation>
 						</annotation>
 					</element>
-					<element name="advisoryNumber" type="string">
+					<element name="advisoryNumber" type="string" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Advisory number: four digit year and unique message number.  Example "2018/1"</documentation>
 						</annotation>
@@ -39,12 +39,12 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The number of the advisory being replaced.  Example "2018/1"</documentation>
 						</annotation>
 					</element>
-					<element name="phenomenon" type="iwxxm:SpaceWeatherPhenomenaType" minOccurs="1" maxOccurs="unbounded">
+					<element name="phenomenon" type="iwxxm:SpaceWeatherPhenomenaType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The space weather phenomenon, such as radiation or satellite communication</documentation>
 						</annotation>
 					</element>
-					<element name="analysis" type="iwxxm:SpaceWeatherAnalysisPropertyType" minOccurs="1" maxOccurs="5">
+					<element name="analysis" type="iwxxm:SpaceWeatherAnalysisPropertyType" minOccurs="0" maxOccurs="5">
 						<annotation>
 							<documentation>Observed and forecast space weather information.  Analyses should be reported in the order in which they occur, starting with the initial observed/forecast conditions and proceeding through each subsequent forecast to the end of the period</documentation>
 						</annotation>
