@@ -29,7 +29,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The issuing space weather centre (SWXC)</documentation>
 						</annotation>
 					</element>
-					<element name="advisoryNumber" type="string">
+					<element name="advisoryNumber" type="iwxxm:StringWithNilReasonType">
 						<annotation>
 							<documentation>Advisory number: four digit year and unique message number.  Example "2018/1"</documentation>
 						</annotation>

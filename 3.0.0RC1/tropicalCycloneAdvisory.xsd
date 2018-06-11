@@ -29,12 +29,12 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The issuing TCAC</documentation>
 						</annotation>
 					</element>
-					<element name="tropicalCycloneName" type="string">
+				    <element name="tropicalCycloneName" type="iwxxm:StringWithNilReasonType">
 						<annotation>
 							<documentation>The tropical cyclone name.  If the tropical cyclone is unnamed, 'NN' may be used</documentation>
 						</annotation>
 					</element>
-					<element name="advisoryNumber" type="string">
+				    <element name="advisoryNumber" type="iwxxm:StringWithNilReasonType">
 						<annotation>
 							<documentation>Advisory number: year in full and message number (separate sequence for each cyclone)</documentation>
 						</annotation>
@@ -44,7 +44,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The observed conditions of the tropical cyclone</documentation>
 						</annotation>
 					</element>
-				    <element name="forecast" type="iwxxm:TropicalCycloneForecastConditionsPropertyType" minOccurs="4" maxOccurs="4">
+					<element nillable="true" name="forecast" type="iwxxm:TropicalCycloneForecastConditionsPropertyType" minOccurs="4" maxOccurs="4">
 				        <annotation>
 				            <documentation>The forecast conditions of the tropical cyclone, one each for the 6 hour, 12 hour, 18 hour, and 24 hour forecast periods</documentation>
 				        </annotation>
@@ -86,7 +86,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="phenomenonTime" type="gml:TimeInstantPropertyType">
+					<element name="phenomenonTime" type="iwxxm:TimeObjectPropertyType">
 						<annotation>
 							<documentation>The time at which meteorological phenomena occur</documentation>
 						</annotation>

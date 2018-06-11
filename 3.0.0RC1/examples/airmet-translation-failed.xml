@@ -43,33 +43,9 @@
             </aixm:timeSlice>
         </aixm:Unit>
     </iwxxm:issuingAirTrafficServicesUnit>
-    <iwxxm:originatingMeteorologicalWatchOffice>
-        <aixm:Unit gml:id="uuid.8831a1d6-dff0-49c7-81d6-802055d5be01">
-            <aixm:timeSlice>
-                <aixm:UnitTimeSlice gml:id="uuid.5d46b0da-40c0-4d6f-a331-10c05693ac7c">
-                    <gml:validTime/>
-                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                    <aixm:name>YUDD MWO</aixm:name>
-                    <aixm:type>MWO</aixm:type>
-                    <aixm:designator>YUDD</aixm:designator>
-                </aixm:UnitTimeSlice>
-            </aixm:timeSlice>
-        </aixm:Unit>
-    </iwxxm:originatingMeteorologicalWatchOffice>
+    <iwxxm:originatingMeteorologicalWatchOffice nilReason="missing"/>
 
-    <iwxxm:issuingAirTrafficServicesRegion>
-        <aixm:Airspace gml:id="uuid.02abae65-6254-4682-9bf3-eb5638d3c80f">
-            <aixm:timeSlice>
-                <aixm:AirspaceTimeSlice gml:id="uuid.bba3b2e0-9bc9-4cf5-a3b8-55dc56cdd753">
-                    <gml:validTime/>
-                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                    <aixm:type>OTHER:FIR_UIR</aixm:type>
-                    <aixm:designator>YUDD</aixm:designator>
-                    <aixm:name>SHANLON FIR/UIR</aixm:name>
-                </aixm:AirspaceTimeSlice>
-            </aixm:timeSlice>
-        </aixm:Airspace>
-    </iwxxm:issuingAirTrafficServicesRegion>
+    <iwxxm:issuingAirTrafficServicesRegion nilReason="missing"/>
 
     <iwxxm:sequenceNumber>1</iwxxm:sequenceNumber>
 

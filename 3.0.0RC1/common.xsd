@@ -8,6 +8,18 @@
 
 References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
+	<element name="StringWithNilReason" type="iwxxm:StringWithNilReasonType">
+		<annotation>
+			<documentation>A nillable string quantity.  References to this type may be nil and may include a nilReason</documentation>
+		</annotation>
+	</element>
+    <complexType name="StringWithNilReasonType">
+        <simpleContent>
+            <extension base="string">
+                <attribute name="nilReason" type="gml:NilReasonType"/>
+            </extension>
+        </simpleContent>
+    </complexType>
 	<element name="Report" type="iwxxm:ReportType" substitutionGroup="gml:AbstractFeature" abstract="true">
 		<annotation>
 			<documentation>The base type for all reports, including information that is common across all report types</documentation>
