@@ -84,7 +84,6 @@
             <iwxxm:phenomenonTime nilReason="missing"/>
             <iwxxm:member>
                 <iwxxm:SIGMETEvolvingCondition gml:id="uuid.10f68782-703d-43a6-a4e5-af27469edc6e" intensityChange="WEAKEN">
-                    <iwxxm:directionOfMotion uom="deg">90</iwxxm:directionOfMotion>
                     <!-- This shape describes: S OF N54 AND E OF W012 TOP FL390 -->
                     <iwxxm:geometry>
                         <aixm:AirspaceVolume gml:id="uuid.d4938cc8-c129-4cd7-bda5-588c434ef996">
@@ -108,6 +107,7 @@
                             </aixm:horizontalProjection>
                         </aixm:AirspaceVolume>
                     </iwxxm:geometry>
+                    <iwxxm:directionOfMotion uom="deg">90</iwxxm:directionOfMotion>
                     <iwxxm:speedOfMotion uom="[kn_i]">20</iwxxm:speedOfMotion>
                 </iwxxm:SIGMETEvolvingCondition>
             </iwxxm:member>
