@@ -331,6 +331,13 @@ For example, the "above" operator in conjunction with the reported quantity 10.6
 		<attributeGroup ref="gml:AssociationAttributeGroup"/>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
 	</complexType>
+	<complexType name="AirspaceVolumePropertyType">
+		<sequence minOccurs="0">
+			<element ref="aixm:AirspaceVolume"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
 	<complexType name="AirportHeliportPropertyType">
 		<sequence minOccurs="0">
 			<element ref="aixm:AirportHeliport"/>

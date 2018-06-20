@@ -148,7 +148,7 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 							<documentation>The expected direction of movement of a meteorological condition. When no movement is expected, this is a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason and the speedOfMotion will be 0.  Direction of motion to shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
 						</annotation>
 					</element>
-					<element name="geometry" type="aixm:AirspaceVolumePropertyType">
+					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
 						</annotation>

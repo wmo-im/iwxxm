@@ -143,7 +143,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="location" type="aixm:AirspaceVolumePropertyType">
+					<element name="location" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The geographic location at which space weather phenomena occur</documentation>
 						</annotation>
