@@ -145,7 +145,7 @@
             <iwxxm:phenomenonTime>
                 <gml:TimePeriod gml:id="uuid.06f40788-ea21-471e-8c17-c0ef5b581c98">
                     <gml:beginPosition>2012-08-16T12:30:00Z</gml:beginPosition>
-                    <gml:endPosition>2012-08-17T00:00:00Z</gml:endPosition>
+                    <gml:endPosition>2012-08-16T18:00:00Z</gml:endPosition>
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             <iwxxm:prevailingVisibility uom="m">10000</iwxxm:prevailingVisibility>
