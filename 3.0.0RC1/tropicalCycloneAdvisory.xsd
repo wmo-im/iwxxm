@@ -96,7 +96,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 							<documentation>The tropical cyclone position</documentation>
 						</annotation>
 					</element>
-					<element name="cumulonimbusCloudLocation" type="aixm:AirspaceVolumePropertyType" minOccurs="0" maxOccurs="unbounded">
+					<element name="cumulonimbusCloudLocation" type="iwxxm:AirspaceVolumePropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Location of cumulonimbus cloud</documentation>
 						</annotation>

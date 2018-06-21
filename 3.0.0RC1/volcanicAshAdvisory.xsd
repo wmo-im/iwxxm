@@ -126,7 +126,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element nillable="true" name="ashCloudExtent" type="aixm:AirspaceVolumePropertyType">
+					<element nillable="true" name="ashCloudExtent" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The horizontal and vertical extent of the ash cloud</documentation>
 						</annotation>
