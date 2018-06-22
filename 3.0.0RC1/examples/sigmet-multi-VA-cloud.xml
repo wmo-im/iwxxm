@@ -75,7 +75,7 @@
     <!-- VA CLD OBS AT 1200Z WI N4315 E02115 – N4345 E02145 N4330 E02215 – N4245 E02230 – N4230 E02145 - N4315 E02115 FL250/370 NC
                        AND WI N4200 E02115 – N4217 E02130 – N4145 E02200 – N4130 E02130 – N4200 E02115 FL150/300 NC -->
     <iwxxm:analysis>
-        <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.ed862622-5643-4c5a-8922-01a04d18dbab" timeIndicator="OBSERVATION">
+        <iwxxm:VolcanicAshSIGMETEvolvingConditionCollection gml:id="uuid.ed862622-5643-4c5a-8922-01a04d18dbab" timeIndicator="OBSERVATION" volcanoId="uuid.8c2bf282-1268-4066-bfc9-a56f7ae999f5">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.5299e948-f719-4fd2-85fc-20ad96644250">
                     <gml:timePosition>YYYY-MM-10T12:00:00Z</gml:timePosition>
@@ -138,10 +138,10 @@
                     </iwxxm:geometry>
                 </iwxxm:SIGMETEvolvingCondition>
             </iwxxm:member>
-        </iwxxm:SIGMETEvolvingConditionCollection>
+        </iwxxm:VolcanicAshSIGMETEvolvingConditionCollection>
     </iwxxm:analysis>
     <iwxxm:forecastPositionAnalysis>
-        <iwxxm:SIGMETPositionCollection gml:id="uuid.fad0d2b4-7b60-4843-b17c-501f7b13efe0">
+        <iwxxm:VolcanicAshSIGMETPositionCollection gml:id="uuid.fad0d2b4-7b60-4843-b17c-501f7b13efe0" volcanoId="uuid.8c2bf282-1268-4066-bfc9-a56f7ae999f5">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.cce9b23a-d604-4194-8f73-2b7357ee4a9c">
                     <gml:timePosition>YYYY-MM-10T18:00:00Z</gml:timePosition>
@@ -191,7 +191,7 @@
                     </iwxxm:geometry>
                 </iwxxm:SIGMETPosition>
             </iwxxm:member>
-        </iwxxm:SIGMETPositionCollection>
+        </iwxxm:VolcanicAshSIGMETPositionCollection>
     </iwxxm:forecastPositionAnalysis>
     <iwxxm:eruptingVolcano>
         <metce:Volcano gml:id="uuid.8c2bf282-1268-4066-bfc9-a56f7ae999f5">

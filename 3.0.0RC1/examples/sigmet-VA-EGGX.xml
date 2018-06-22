@@ -68,7 +68,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
     </iwxxm:validPeriod>
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
     <iwxxm:analysis>
-        <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.fb90468d-60bb-4828-99ed-3ff730759ac3" timeIndicator="OBSERVATION">
+        <iwxxm:VolcanicAshSIGMETEvolvingConditionCollection gml:id="uuid.fb90468d-60bb-4828-99ed-3ff730759ac3" timeIndicator="OBSERVATION" volcanoId="#uuid.99646618-9ec7-47c0-8b50-daba5b6b1da9">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.0fff6dbb-ba23-4794-810e-d2b79c895053">
                     <gml:timePosition>YYYY-MM-25T16:00:00Z</gml:timePosition>
@@ -110,10 +110,10 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                   <iwxxm:speedOfMotion uom="[kn_i]">60</iwxxm:speedOfMotion>
                 </iwxxm:SIGMETEvolvingCondition>
           </iwxxm:member>
-        </iwxxm:SIGMETEvolvingConditionCollection>
+        </iwxxm:VolcanicAshSIGMETEvolvingConditionCollection>
     </iwxxm:analysis>
     <iwxxm:forecastPositionAnalysis>
-        <iwxxm:SIGMETPositionCollection gml:id="uuid.a76bad9a-9d0b-45ea-82ed-c5f697b9d68a">
+        <iwxxm:VolcanicAshSIGMETPositionCollection gml:id="uuid.a76bad9a-9d0b-45ea-82ed-c5f697b9d68a" volcanoId="#uuid.99646618-9ec7-47c0-8b50-daba5b6b1da9">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.8176a547-141d-471f-b12f-10b7338dadbe">
                     <gml:timePosition>YYYY-MM-25T22:00:00Z</gml:timePosition>
@@ -146,7 +146,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                     </iwxxm:geometry>
                 </iwxxm:SIGMETPosition>
             </iwxxm:member>
-        </iwxxm:SIGMETPositionCollection>
+        </iwxxm:VolcanicAshSIGMETPositionCollection>
     </iwxxm:forecastPositionAnalysis>
     <iwxxm:eruptingVolcano>
         <metce:Volcano gml:id="uuid.99646618-9ec7-47c0-8b50-daba5b6b1da9">
