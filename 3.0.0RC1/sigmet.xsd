@@ -11,6 +11,138 @@ SIGMETs report the occurrence and/or expected occurrence of specified en-route w
 
 References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
+	<element name="TropicalCyclonePosition" type="iwxxm:TropicalCyclonePositionType" substitutionGroup="gml:AbstractGML">
+		<annotation>
+			<documentation>The location of a tropical cyclone</documentation>
+		</annotation>
+	</element>
+	<complexType name="TropicalCyclonePositionType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element name="centre" type="gml:PointPropertyType">
+						<annotation>
+							<documentation>The location of the centre of the cyclone</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TropicalCyclonePositionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:TropicalCyclonePosition"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+    <element name="TropicalCycloneSIGMETEvolvingConditionCollection" type="iwxxm:TropicalCycloneSIGMETEvolvingConditionCollectionType" substitutionGroup="iwxxm:SIGMETEvolvingConditionCollection">
+		<annotation>
+			<documentation>Evolving condition collection for tropical cyclone SIGMETs</documentation>
+		</annotation>
+	</element>
+	<complexType name="TropicalCycloneSIGMETEvolvingConditionCollectionType">
+		<complexContent>
+		    <extension base="iwxxm:SIGMETEvolvingConditionCollectionType">
+				<sequence>
+					<element name="tropicalCyclonePosition">
+						<annotation>
+							<documentation>The tropical cyclone position</documentation>
+						</annotation>
+						<complexType>
+							<complexContent>
+								<extension base="gml:AbstractMemberType">
+									<sequence>
+										<element ref="iwxxm:TropicalCyclonePosition"></element>
+									</sequence>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+				</sequence>
+		        <attribute use="required" name="tropicalCycloneId" type="string"></attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TropicalCycloneSIGMETEvolvingConditionCollectionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:TropicalCycloneSIGMETEvolvingConditionCollection"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+    <element name="TropicalCycloneSIGMETPositionCollection" type="iwxxm:TropicalCycloneSIGMETPositionCollectionType" substitutionGroup="iwxxm:SIGMETPositionCollection">
+		<annotation>
+			<documentation>Position collection for tropical cyclone SIGMETs</documentation>
+		</annotation>
+	</element>
+	<complexType name="TropicalCycloneSIGMETPositionCollectionType">
+		<complexContent>
+		    <extension base="iwxxm:SIGMETPositionCollectionType">
+				<sequence>
+					<element name="tropicalCyclonePosition">
+						<complexType>
+							<complexContent>
+								<extension base="gml:AbstractMemberType">
+									<sequence>
+										<element ref="iwxxm:TropicalCyclonePosition"></element>
+									</sequence>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+				</sequence>
+				<attribute use="required" name="tropicalCycloneId" type="string"></attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TropicalCycloneSIGMETPositionCollectionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:TropicalCycloneSIGMETPositionCollection"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+    <element name="VolcanicAshSIGMETEvolvingConditionCollection" type="iwxxm:VolcanicAshSIGMETEvolvingConditionCollectionType" substitutionGroup="iwxxm:SIGMETEvolvingConditionCollection">
+		<annotation>
+			<documentation>Evolving condition collection for volcanic ash SIGMETs</documentation>
+		</annotation>
+	</element>
+	<complexType name="VolcanicAshSIGMETEvolvingConditionCollectionType">
+		<complexContent>
+		    <extension base="iwxxm:SIGMETEvolvingConditionCollectionType">
+				<sequence></sequence>
+		        <attribute use="required" name="volcanoId" type="string"></attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="VolcanicAshSIGMETEvolvingConditionCollectionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:VolcanicAshSIGMETEvolvingConditionCollection"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+    <element name="VolcanicAshSIGMETPositionCollection" type="iwxxm:VolcanicAshSIGMETPositionCollectionType" substitutionGroup="iwxxm:SIGMETPositionCollection">
+		<annotation>
+			<documentation>Position collection for volcanic ash SIGMETs</documentation>
+		</annotation>
+	</element>
+	<complexType name="VolcanicAshSIGMETPositionCollectionType">
+		<complexContent>
+		    <extension base="iwxxm:SIGMETPositionCollectionType">
+				<sequence></sequence>
+				<attribute use="required" name="volcanoId" type="string"></attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="VolcanicAshSIGMETPositionCollectionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:VolcanicAshSIGMETPositionCollection"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
 	<element name="SIGMETEvolvingConditionCollection" type="iwxxm:SIGMETEvolvingConditionCollectionType" substitutionGroup="gml:AbstractFeature">
 		<annotation>
 			<documentation>A collection of SIGMETEvolvingConditions, each representing a location where SIGMET observed or forecast conditions exist.  All members of this collection are of type SIGMETEvolvingCondition.</documentation>
@@ -25,7 +157,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 				            <documentation>The time at which meteorological phenomena occur</documentation>
 				        </annotation>
 				    </element>
-				    <element name="member" type="iwxxm:SIGMETEvolvingConditionPropertyType" minOccurs="1" maxOccurs="unbounded">
+				    <element name="member" type="iwxxm:SIGMETEvolvingConditionPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The members of this collection</documentation>
 						</annotation>
@@ -343,7 +475,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 				            <documentation>The time at which meteorological phenomena occur</documentation>
 				        </annotation>
 				    </element>
-					<element name="member" type="iwxxm:SIGMETPositionPropertyType" minOccurs="1" maxOccurs="unbounded">
+					<element name="member" type="iwxxm:SIGMETPositionPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The members of this collection</documentation>
 						</annotation>
