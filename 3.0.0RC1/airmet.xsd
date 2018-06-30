@@ -19,7 +19,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-				    <element name="phenomenonTime" type="gml:TimeInstantPropertyType">
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
 				        <annotation>
 				            <documentation>The time at which meteorological phenomena occur</documentation>
 				        </annotation>
@@ -71,12 +71,12 @@ The AIRMET report class represents the base AIRMET types that may be reported su
 							<documentation>The ATS unit serving the FIR or CTA to which the AIRMET refers.  ICAO Annex 3 / WMO No. 49-2: A6-1: "Location indicator of FIR/CTA"</documentation>
 						</annotation>
 					</element>
-					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType">
+					<element nillable="true" name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType">
 						<annotation>
 							<documentation>MWO originating this report</documentation>
 						</annotation>
 					</element>
-					<element name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType">
+					<element nillable="true" name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType">
 						<annotation>
 							<documentation>The ATS region (FIR, UIR, CTA, or FIR/UIR)</documentation>
 						</annotation>
@@ -147,7 +147,7 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="geometry" type="aixm:AirspaceVolumePropertyType">
+					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
 						</annotation>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.2/metce.xsd"></import>
-	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
 		<documentation>SIGMET reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
@@ -11,31 +10,6 @@ SIGMETs report the occurrence and/or expected occurrence of specified en-route w
 
 References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
-	<element name="TropicalCyclonePosition" type="iwxxm:TropicalCyclonePositionType" substitutionGroup="gml:AbstractGML">
-		<annotation>
-			<documentation>The location of a tropical cyclone</documentation>
-		</annotation>
-	</element>
-	<complexType name="TropicalCyclonePositionType">
-		<complexContent>
-			<extension base="gml:AbstractGMLType">
-				<sequence>
-					<element name="centre" type="gml:PointPropertyType">
-						<annotation>
-							<documentation>The location of the centre of the cyclone</documentation>
-						</annotation>
-					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="TropicalCyclonePositionPropertyType">
-		<sequence minOccurs="0">
-			<element ref="iwxxm:TropicalCyclonePosition"></element>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
-	</complexType>
     <element name="TropicalCycloneSIGMETEvolvingConditionCollection" type="iwxxm:TropicalCycloneSIGMETEvolvingConditionCollectionType" substitutionGroup="iwxxm:SIGMETEvolvingConditionCollection">
 		<annotation>
 			<documentation>Evolving condition collection for tropical cyclone SIGMETs</documentation>
@@ -45,22 +19,17 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 		    <extension base="iwxxm:SIGMETEvolvingConditionCollectionType">
 				<sequence>
-					<element name="tropicalCyclonePosition">
+					<element name="tropicalCyclonePosition" type="iwxxm:TropicalCyclonePositionPropertyType">
 						<annotation>
 							<documentation>The tropical cyclone position</documentation>
 						</annotation>
-						<complexType>
-							<complexContent>
-								<extension base="gml:AbstractMemberType">
-									<sequence>
-										<element ref="iwxxm:TropicalCyclonePosition"></element>
-									</sequence>
-								</extension>
-							</complexContent>
-						</complexType>
 					</element>
 				</sequence>
-		        <attribute use="required" name="tropicalCycloneId" type="string"></attribute>
+				<attribute use="required" name="tropicalCycloneId" type="string">
+					<annotation>
+						<documentation>The ID of the relevant TropicalCyclone</documentation>
+					</annotation>
+				</attribute>
 			</extension>
 		</complexContent>
 	</complexType>
@@ -71,7 +40,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-    <element name="TropicalCycloneSIGMETPositionCollection" type="iwxxm:TropicalCycloneSIGMETPositionCollectionType" substitutionGroup="iwxxm:SIGMETPositionCollection">
+	<element name="TropicalCycloneSIGMETPositionCollection" type="iwxxm:TropicalCycloneSIGMETPositionCollectionType" substitutionGroup="iwxxm:SIGMETPositionCollection">
 		<annotation>
 			<documentation>Position collection for tropical cyclone SIGMETs</documentation>
 		</annotation>
@@ -80,19 +49,17 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 		    <extension base="iwxxm:SIGMETPositionCollectionType">
 				<sequence>
-					<element name="tropicalCyclonePosition">
-						<complexType>
-							<complexContent>
-								<extension base="gml:AbstractMemberType">
-									<sequence>
-										<element ref="iwxxm:TropicalCyclonePosition"></element>
-									</sequence>
-								</extension>
-							</complexContent>
-						</complexType>
+					<element name="tropicalCyclonePosition" type="iwxxm:TropicalCyclonePositionPropertyType">
+						<annotation>
+							<documentation>The tropical cyclone position</documentation>
+						</annotation>
 					</element>
 				</sequence>
-				<attribute use="required" name="tropicalCycloneId" type="string"></attribute>
+				<attribute use="required" name="tropicalCycloneId" type="string">
+					<annotation>
+						<documentation>The ID of the relevant TropicalCyclone</documentation>
+					</annotation>
+				</attribute>
 			</extension>
 		</complexContent>
 	</complexType>
@@ -112,7 +79,11 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 		    <extension base="iwxxm:SIGMETEvolvingConditionCollectionType">
 				<sequence></sequence>
-		        <attribute use="required" name="volcanoId" type="string"></attribute>
+				<attribute use="required" name="volcanoId" type="string">
+					<annotation>
+						<documentation>The ID of the relevant EruptingVolcano</documentation>
+					</annotation>
+				</attribute>
 			</extension>
 		</complexContent>
 	</complexType>
@@ -132,7 +103,11 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 		    <extension base="iwxxm:SIGMETPositionCollectionType">
 				<sequence></sequence>
-				<attribute use="required" name="volcanoId" type="string"></attribute>
+				<attribute use="required" name="volcanoId" type="string">
+					<annotation>
+						<documentation>The ID of the relevant EruptingVolcano</documentation>
+					</annotation>
+				</attribute>
 			</extension>
 		</complexContent>
 	</complexType>
@@ -152,16 +127,11 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-				    <element name="phenomenonTime" type="gml:TimeInstantPropertyType">
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
 				        <annotation>
 				            <documentation>The time at which meteorological phenomena occur</documentation>
 				        </annotation>
 				    </element>
-				    <element name="member" type="iwxxm:SIGMETEvolvingConditionPropertyType" minOccurs="0" maxOccurs="unbounded">
-						<annotation>
-							<documentation>The members of this collection</documentation>
-						</annotation>
-					</element>
 				    <element name="member" type="iwxxm:SIGMETEvolvingConditionPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The members of this collection</documentation>
@@ -201,7 +171,7 @@ In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE 
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="geometry" type="aixm:AirspaceVolumePropertyType">
+					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The geographic region affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in Annex 3: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
 						</annotation>
@@ -253,12 +223,12 @@ ICAO Annex 3 / WMO No. 49-2:
 A6-1: "Location indicator of FIR/CTA"</documentation>
 						</annotation>
 					</element>
-					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType">
+					<element nillable="true" name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType">
 						<annotation>
 							<documentation>MWO originating this report</documentation>
 						</annotation>
 					</element>
-					<element name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType">
+					<element nillable="true" name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType">
 						<annotation>
 							<documentation>The ATS region (FIR, UIR, CTA, or FIR/UIR)</documentation>
 						</annotation>
@@ -345,14 +315,7 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>This element refers to the expected direction of movement which the phenomenon is moving towards, .e.g, "moving east". When no movement is expected, this is a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason and the speedOfMotion will be 0.
-
-This element value is given in degrees from true North. Plane angle unit of measure (uom) is "deg". </documentation>
-						</annotation>
-					</element>
-					<element name="geometry" type="aixm:AirspaceVolumePropertyType">
+					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
 						</annotation>
@@ -445,7 +408,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="eruptingVolcano" type="metce:VolcanoPropertyType" minOccurs="0" maxOccurs="1">
+					<element name="eruptingVolcano" type="metce:VolcanoPropertyType" minOccurs="0" maxOccurs="2">
 						<annotation>
 							<documentation>The volcano that is erupting - required in all cases other than cancellations</documentation>
 						</annotation>
@@ -470,7 +433,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-				    <element name="phenomenonTime" type="gml:TimeInstantPropertyType">
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
 				        <annotation>
 				            <documentation>The time at which meteorological phenomena occur</documentation>
 				        </annotation>
@@ -492,6 +455,36 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 	<complexType name="SIGMETPositionCollectionPropertyType">
 		<sequence minOccurs="0">
 			<element ref="iwxxm:SIGMETPositionCollection"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	    <element name="TropicalCyclonePosition" type="iwxxm:TropicalCyclonePositionType" substitutionGroup="gml:AbstractGML">
+		<annotation>
+			<documentation>The location of a tropical cyclone</documentation>
+		</annotation>
+	</element>
+	<complexType name="TropicalCyclonePositionType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element name="centre" type="gml:PointPropertyType">
+						<annotation>
+							<documentation>The location of the centre of the cyclone</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element TropicalCyclonePosition</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TropicalCyclonePositionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:TropicalCyclonePosition"></element>
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>

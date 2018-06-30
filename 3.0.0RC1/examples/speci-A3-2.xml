@@ -17,6 +17,13 @@
     permissibleUsage="OPERATIONAL"
     automatedStation="false">
     
+    <!-- the same as observationTime except for corrections/re-issuances --> 
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+            <gml:timePosition>2012-08-15T11:15:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
     <iwxxm:aerodrome>
         <!-- The aerodrome at which this observation took place -->
         <aixm:AirportHeliport gml:id="uuid.84a7fdc6-ff14-470c-a4b4-587688f02049">
@@ -36,13 +43,6 @@
             </aixm:timeSlice>
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
-    
-    <!-- the same as observationTime except for corrections/re-issuances --> 
-    <iwxxm:issueTime>
-        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
-            <gml:timePosition>2012-08-15T11:15:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:issueTime>
     
     <iwxxm:observationTime>
         <gml:TimeInstant gml:id="uuid.4929b573-d296-4261-bdf9-8d3e389ed72e">
