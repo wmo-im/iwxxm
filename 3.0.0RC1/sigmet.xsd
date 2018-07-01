@@ -10,14 +10,14 @@ SIGMETs report the occurrence and/or expected occurrence of specified en-route w
 
 References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
-    <element name="TropicalCycloneSIGMETEvolvingConditionCollection" type="iwxxm:TropicalCycloneSIGMETEvolvingConditionCollectionType" substitutionGroup="iwxxm:SIGMETEvolvingConditionCollection">
+	<element name="TropicalCycloneSIGMETEvolvingConditionCollection" type="iwxxm:TropicalCycloneSIGMETEvolvingConditionCollectionType" substitutionGroup="iwxxm:SIGMETEvolvingConditionCollection">
 		<annotation>
 			<documentation>Evolving condition collection for tropical cyclone SIGMETs</documentation>
 		</annotation>
 	</element>
 	<complexType name="TropicalCycloneSIGMETEvolvingConditionCollectionType">
 		<complexContent>
-		    <extension base="iwxxm:SIGMETEvolvingConditionCollectionType">
+			<extension base="iwxxm:SIGMETEvolvingConditionCollectionType">
 				<sequence>
 					<element name="tropicalCyclonePosition" type="iwxxm:TropicalCyclonePositionPropertyType">
 						<annotation>
@@ -47,7 +47,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 	</element>
 	<complexType name="TropicalCycloneSIGMETPositionCollectionType">
 		<complexContent>
-		    <extension base="iwxxm:SIGMETPositionCollectionType">
+			<extension base="iwxxm:SIGMETPositionCollectionType">
 				<sequence>
 					<element name="tropicalCyclonePosition" type="iwxxm:TropicalCyclonePositionPropertyType">
 						<annotation>
@@ -70,14 +70,14 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-    <element name="VolcanicAshSIGMETEvolvingConditionCollection" type="iwxxm:VolcanicAshSIGMETEvolvingConditionCollectionType" substitutionGroup="iwxxm:SIGMETEvolvingConditionCollection">
+	<element name="VolcanicAshSIGMETEvolvingConditionCollection" type="iwxxm:VolcanicAshSIGMETEvolvingConditionCollectionType" substitutionGroup="iwxxm:SIGMETEvolvingConditionCollection">
 		<annotation>
 			<documentation>Evolving condition collection for volcanic ash SIGMETs</documentation>
 		</annotation>
 	</element>
 	<complexType name="VolcanicAshSIGMETEvolvingConditionCollectionType">
 		<complexContent>
-		    <extension base="iwxxm:SIGMETEvolvingConditionCollectionType">
+			<extension base="iwxxm:SIGMETEvolvingConditionCollectionType">
 				<sequence></sequence>
 				<attribute use="required" name="volcanoId" type="string">
 					<annotation>
@@ -94,14 +94,14 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-    <element name="VolcanicAshSIGMETPositionCollection" type="iwxxm:VolcanicAshSIGMETPositionCollectionType" substitutionGroup="iwxxm:SIGMETPositionCollection">
+	<element name="VolcanicAshSIGMETPositionCollection" type="iwxxm:VolcanicAshSIGMETPositionCollectionType" substitutionGroup="iwxxm:SIGMETPositionCollection">
 		<annotation>
 			<documentation>Position collection for volcanic ash SIGMETs</documentation>
 		</annotation>
 	</element>
 	<complexType name="VolcanicAshSIGMETPositionCollectionType">
 		<complexContent>
-		    <extension base="iwxxm:SIGMETPositionCollectionType">
+			<extension base="iwxxm:SIGMETPositionCollectionType">
 				<sequence></sequence>
 				<attribute use="required" name="volcanoId" type="string">
 					<annotation>
@@ -128,11 +128,11 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
-				        <annotation>
-				            <documentation>The time at which meteorological phenomena occur</documentation>
-				        </annotation>
-				    </element>
-				    <element name="member" type="iwxxm:SIGMETEvolvingConditionPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The time at which meteorological phenomena occur</documentation>
+						</annotation>
+					</element>
+					<element name="member" type="iwxxm:SIGMETEvolvingConditionPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The members of this collection</documentation>
 						</annotation>
@@ -434,10 +434,10 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
-				        <annotation>
-				            <documentation>The time at which meteorological phenomena occur</documentation>
-				        </annotation>
-				    </element>
+						<annotation>
+							<documentation>The time at which meteorological phenomena occur</documentation>
+						</annotation>
+					</element>
 					<element name="member" type="iwxxm:SIGMETPositionPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The members of this collection</documentation>
@@ -459,7 +459,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	    <element name="TropicalCyclonePosition" type="iwxxm:TropicalCyclonePositionType" substitutionGroup="gml:AbstractGML">
+	<element name="TropicalCyclonePosition" type="iwxxm:TropicalCyclonePositionType" substitutionGroup="gml:AbstractGML">
 		<annotation>
 			<documentation>The location of a tropical cyclone</documentation>
 		</annotation>
