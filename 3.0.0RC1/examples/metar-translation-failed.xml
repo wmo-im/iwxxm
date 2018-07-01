@@ -20,6 +20,13 @@
     translationFailedTAC="METAR YUDO 221630Z INVALID"
     status="NORMAL">
     
+    <!-- the same as observationTime except for corrections/re-issuances --> 
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+            <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
     <iwxxm:aerodrome>
         <!-- The aerodrome at which this observation took place -->
         <aixm:AirportHeliport gml:id="uuid.7a8db8f9-281a-40ca-a443-40253790bfff">
@@ -34,13 +41,6 @@
             </aixm:timeSlice>
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
-    
-    <!-- the same as observationTime except for corrections/re-issuances --> 
-    <iwxxm:issueTime>
-        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
-            <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:issueTime>
     
     <iwxxm:observationTime>
         <gml:TimeInstant gml:id="uuid.064bf483-439b-4e40-91b8-8aadd0638d92">

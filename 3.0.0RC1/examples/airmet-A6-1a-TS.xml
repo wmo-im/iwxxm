@@ -66,8 +66,8 @@
 
     <iwxxm:validPeriod>
         <gml:TimePeriod gml:id="uuid.74b125c2-a4ad-4434-b3c0-f650eb57ce93">
-            <gml:beginPosition>2014-05-15T15:20:00</gml:beginPosition>
-            <gml:endPosition>2014-05-15T18:00:00</gml:endPosition>
+            <gml:beginPosition>2014-05-15T15:20:00Z</gml:beginPosition>
+            <gml:endPosition>2014-05-15T18:00:00Z</gml:endPosition>
         </gml:TimePeriod>
     </iwxxm:validPeriod>
     
@@ -80,7 +80,6 @@
             <iwxxm:phenomenonTime nilReason="missing"/>
             <iwxxm:member>
                 <iwxxm:AIRMETEvolvingCondition gml:id="uuid.deeb1ae5-0094-4ec8-af92-aa7b3f156a3f" intensityChange="WEAKEN">
-                    <iwxxm:directionOfMotion xsi:nil="true" uom="N/A" nilReason="inapplicable"/>
                     <iwxxm:geometry>
                         <aixm:AirspaceVolume gml:id="uuid.8ed71782-7c63-4ca5-9ed6-a31b788f64af">
                             <aixm:lowerLimit uom="FL">100</aixm:lowerLimit>
@@ -102,6 +101,7 @@
                         </aixm:AirspaceVolume>
                     </iwxxm:geometry>
                     <iwxxm:geometryUpperLimitOperator>ABOVE</iwxxm:geometryUpperLimitOperator>
+                    <iwxxm:directionOfMotion xsi:nil="true" uom="N/A" nilReason="inapplicable"/>
                     <iwxxm:speedOfMotion uom="[kn_i]">0</iwxxm:speedOfMotion>
                 </iwxxm:AIRMETEvolvingCondition>
             </iwxxm:member>

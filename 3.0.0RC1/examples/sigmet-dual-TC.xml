@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+YUDD SIGMET 2 VALID 101200/101800 YUSO–                   
+YUDD SHANLON FIR                                          
+TC GLORIA PSN N2100 W06200                                (TC position obs@12Z.  Not repeatable) - TCPosition under TCSIGMETEvolvingCondition below
+CB OBS AT 1200Z                                           TropicalCycloneSIGMETEvolvingConditionCollection
+WI 20NM OF TC CENTRE TOP FL500 WKN                        (CB 1 - obs) - SIGMETEvolvingCondition/member
+WI N20 W090 – N05 W090 – N10 W100 – N20 W100 – N20 W090   (CB 2 - obs) - SIGMETEvolvingCondition/member
+FCST AT 1800Z                                             TropicalCycloneSIGMETPositionCollection
+TC CENTRE N2230 W06330                                    (fcst TC position @ 18Z)   - TCPosition
+AND
+TC HARRIET PSN N2215 W06100                               (TC position obs@12Z.  Not repeatable) - TCPosition under TCSIGMETEvolvingCondition below
+CB FCST AT 1200Z                                          TropicalCycloneSIGMETEvolvingConditionCollection
+WI 20NM OF CENTRE TOP FL400 WKN                           (CB 1 - obs) - SIGMETEvolvingCondition/member
+FCST AT 1600Z                                             TropicalCycloneSIGMETPositionCollection
+TC CENTRE N2345 W06230                                    (fcst TC position @ 16Z)   - TCPosition
+WI N20 W090 – N05 W090 – N10 W100 – N20 W100 – N20 W090   (fcst CB @ 16Z) - SIGMETEvolvingCondition/member
+FCST AT 1800Z TC CENTRE N2345 W06230=                     (fcst TC position @ 18Z)   - TCPosition
+-->
+<iwxxm:TropicalCycloneSIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+    gml:id="uuid.f12194be-0d82-49ad-ad97-41e46f724dec" permissibleUsage="OPERATIONAL" status="NORMAL">
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.f598d1e0-8e2d-4af1-a4ee-83d04b37f19e">
+            <gml:timePosition>2012-08-10T12:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
+    <iwxxm:issuingAirTrafficServicesUnit>
+        <aixm:Unit gml:id="uuid.ee9eedf1-52d2-45b4-8f7c-f027dd25c5e6">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="uuid.608b9022-1c51-4729-bd89-67543b3d7d68">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>YUCC FIC</aixm:name>
+                    <aixm:type>FIC</aixm:type>
+                    <aixm:designator>YUCC</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:issuingAirTrafficServicesUnit>
+    <iwxxm:originatingMeteorologicalWatchOffice>
+        <aixm:Unit gml:id="uuid.d8835dc7-18db-424e-929a-e4c79be92cad">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="uuid.0fac05ad-b4c5-49df-9e88-31fe413d087a">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>YUDO MWO</aixm:name>
+                    <aixm:type>MWO</aixm:type>
+                    <aixm:designator>YUDO</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:originatingMeteorologicalWatchOffice>
+    
+    <iwxxm:issuingAirTrafficServicesRegion>
+        <aixm:Airspace gml:id="uuid.83b13711-6bf4-4497-9293-6bb5490bc259">
+            <aixm:timeSlice>
+                <aixm:AirspaceTimeSlice gml:id="uuid.44f4afb1-fab4-4d01-8030-7d51b43eb4ed">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:type>FIR</aixm:type>
+                    <aixm:designator>YUCC</aixm:designator>
+                    <aixm:name>AMSWELL FIR</aixm:name>
+                    <!-- FIR boundary can be reported in an aixm:geometryComponent -->
+                </aixm:AirspaceTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Airspace>
+    </iwxxm:issuingAirTrafficServicesRegion>
+    
+    <iwxxm:sequenceNumber>2</iwxxm:sequenceNumber>
+    
+    <iwxxm:validPeriod>
+        <gml:TimePeriod gml:id="uuid.d26ff125-63ea-4cd8-b2cf-75629b9ecbe3">
+            <gml:beginPosition>2012-08-10T12:00:00Z</gml:beginPosition>
+            <gml:endPosition>2012-08-10T18:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:validPeriod>
+    
+    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/TC"/>
+    <!-- Gloria OBS @ 12Z -->
+    <iwxxm:analysis>
+        <iwxxm:TropicalCycloneSIGMETEvolvingConditionCollection gml:id="uuid.83f5cc33-26a9-4486-9681-aa5290fb3e68" timeIndicator="OBSERVATION" tropicalCycloneId="#uuid.c529d539-2fa9-428d-937a-867e50056f16">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.2f6d2369-b614-4522-8c76-bc44d770ce5e">
+                    <gml:timePosition>2012-08-10T12:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <!-- CB 1 -->
+            <iwxxm:member>
+                <iwxxm:SIGMETEvolvingCondition intensityChange="WEAKEN" gml:id="uuid.89147e42-7ce0-493e-b81d-6ba6a989e8a1">
+                    <iwxxm:geometry>
+                        <aixm:AirspaceVolume gml:id="uuid.4ed35f91-7189-4b9c-baed-19b5cec0b4c1">
+                            <aixm:upperLimit uom="FL">500</aixm:upperLimit>
+                            <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.c76ff9fa-ec6b-48ed-8f26-ed37c47bbc38" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:Ring>
+                                                    <gml:curveMember>
+                                                        <gml:Curve gml:id="uuid.0380d35a-1d35-46a2-bbc8-38190206bfe8">
+                                                            <gml:segments>
+                                                                <gml:CircleByCenterPoint numArc="1">
+                                                                    <gml:pos>0.0 0.0</gml:pos>
+                                                                    <gml:radius uom="[nmi_i]">20</gml:radius>
+                                                                </gml:CircleByCenterPoint>
+                                                            </gml:segments>
+                                                        </gml:Curve>
+                                                    </gml:curveMember>
+                                                </gml:Ring>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:geometry>
+                </iwxxm:SIGMETEvolvingCondition>
+            </iwxxm:member>
+            <!-- CB 2 -->
+            <iwxxm:member>
+                <iwxxm:SIGMETEvolvingCondition gml:id="uuid.7063ccf7-7cd5-4fed-b895-4f092bb527a4">
+                    <iwxxm:geometry>
+                        <aixm:AirspaceVolume gml:id="uuid.e6252550-6f0b-4699-911e-c1dcf71093d6">
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.06af4165-1989-4657-a5bd-a0e4824d6363" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:LinearRing>
+                                                    <gml:posList>
+                                                        0.0 0.0
+                                                        0.0 0.0
+                                                        0.0 0.0
+                                                        0.0 0.0
+                                                    </gml:posList>
+                                                </gml:LinearRing>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:geometry>
+                </iwxxm:SIGMETEvolvingCondition>
+            </iwxxm:member>
+            <iwxxm:tropicalCyclonePosition>
+                <iwxxm:TropicalCyclonePosition gml:id="uuid.6129faed-6649-4818-8b3e-2082fb8bbcb5">
+                    <iwxxm:centre>
+                        <gml:Point gml:id="uuid.24df5fde-1888-4cb6-b3b2-ea88a86ee1f5" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                            <gml:pos>0 0</gml:pos>
+                        </gml:Point>
+                    </iwxxm:centre>
+                </iwxxm:TropicalCyclonePosition>
+            </iwxxm:tropicalCyclonePosition>
+        </iwxxm:TropicalCycloneSIGMETEvolvingConditionCollection>
+    </iwxxm:analysis>
+    <!-- Harriet FCST @ 12Z -->
+    <iwxxm:analysis>
+        <iwxxm:TropicalCycloneSIGMETEvolvingConditionCollection gml:id="uuid.e0621b8e-287c-47fd-bb16-e068ac7ebe2f" timeIndicator="FORECAST" tropicalCycloneId="#uuid.18b73cde-1200-49c9-8b55-ed96f91ec955">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.81121096-aba7-4fa5-ac6a-bb59f9ff8d78">
+                    <gml:timePosition>2012-08-10T12:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <!-- CB -->
+            <iwxxm:member>
+                <iwxxm:SIGMETEvolvingCondition intensityChange="WEAKEN" gml:id="uuid.c83bcaf5-d4b1-449c-9659-d67b1caf124b">
+                    <iwxxm:geometry>
+                        <aixm:AirspaceVolume gml:id="uuid.a0cfb632-32e3-4780-8e94-88c17dd5446c">
+                            <aixm:upperLimit uom="FL">400</aixm:upperLimit>
+                            <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.8139065d-eead-4361-b35c-e1551993750e" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:Ring>
+                                                    <gml:curveMember>
+                                                        <gml:Curve gml:id="uuid.2fdbcc8b-bd64-4205-bb37-26a60ea7b1d3">
+                                                            <gml:segments>
+                                                                <gml:CircleByCenterPoint numArc="1">
+                                                                    <gml:pos>0.0 0.0</gml:pos>
+                                                                    <gml:radius uom="[nmi_i]">20</gml:radius>
+                                                                </gml:CircleByCenterPoint>
+                                                            </gml:segments>
+                                                        </gml:Curve>
+                                                    </gml:curveMember>
+                                                </gml:Ring>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:geometry>
+                </iwxxm:SIGMETEvolvingCondition>
+            </iwxxm:member>
+            <iwxxm:tropicalCyclonePosition>
+                <iwxxm:TropicalCyclonePosition gml:id="uuid.b4eeb13e-f601-40a5-abc5-68ee824be4c4">
+                    <iwxxm:centre>
+                        <gml:Point gml:id="uuid.7ec4345b-8651-4da8-a574-028a849e9e9c" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                            <gml:pos>0 0</gml:pos>
+                        </gml:Point>
+                    </iwxxm:centre>
+                </iwxxm:TropicalCyclonePosition>
+            </iwxxm:tropicalCyclonePosition>
+        </iwxxm:TropicalCycloneSIGMETEvolvingConditionCollection>
+    </iwxxm:analysis>
+    <!-- Gloria FCST @ 18Z -->
+    <iwxxm:forecastPositionAnalysis>
+        <iwxxm:TropicalCycloneSIGMETPositionCollection gml:id="uuid.3fca1586-99d6-4a22-9777-549e59320b63" tropicalCycloneId="#uuid.c529d539-2fa9-428d-937a-867e50056f16">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.8d5e8ea5-8d80-49ca-9d26-c7a5849fb5eb">
+                    <gml:timePosition>2012-08-10T18:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:tropicalCyclonePosition>
+                <iwxxm:TropicalCyclonePosition gml:id="uuid.80a14882-806d-4321-9c4f-fb589c4920e3">
+                    <iwxxm:centre>
+                        <gml:Point gml:id="uuid.5b1b7fad-9568-41b9-8f21-dae35746a03e" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                            <gml:pos>0.0 0.0</gml:pos>
+                        </gml:Point>
+                    </iwxxm:centre>
+                </iwxxm:TropicalCyclonePosition>
+            </iwxxm:tropicalCyclonePosition>
+        </iwxxm:TropicalCycloneSIGMETPositionCollection>
+    </iwxxm:forecastPositionAnalysis>
+    <!-- Harriet FCST position @ 16Z -->
+    <iwxxm:forecastPositionAnalysis>
+        <iwxxm:TropicalCycloneSIGMETPositionCollection gml:id="uuid.b2c779f8-6114-433b-a14d-175fd7e10f9d" tropicalCycloneId="#uuid.18b73cde-1200-49c9-8b55-ed96f91ec955">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.6df3c5be-4728-4de9-b770-4755a6137cde">
+                    <gml:timePosition>2012-08-10T16:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:member>
+                <iwxxm:SIGMETPosition gml:id="uuid.338354de-7634-4fca-ac75-3675cb592284">
+                    <iwxxm:geometry>
+                        <aixm:AirspaceVolume gml:id="uuid.a0de814a-e896-45fd-bb10-b3998e77a804">
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.99f77d61-4639-482c-a744-1a866ef0bf57" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:LinearRing>
+                                                    <gml:posList>
+                                                        0.0 0.0
+                                                        0.0 0.0
+                                                        0.0 0.0
+                                                        0.0 0.0
+                                                    </gml:posList>
+                                                </gml:LinearRing>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:geometry>
+                </iwxxm:SIGMETPosition>
+            </iwxxm:member>
+            <iwxxm:tropicalCyclonePosition>
+                <iwxxm:TropicalCyclonePosition gml:id="uuid.566bf7c5-4fa4-4bc6-b421-da472a61c90a">
+                    <iwxxm:centre>
+                        <gml:Point gml:id="uuid.615434d0-3b92-4b5f-9918-fa11ce06392c" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                            <gml:pos>0.0 0.0</gml:pos>
+                        </gml:Point>
+                    </iwxxm:centre>
+                </iwxxm:TropicalCyclonePosition>
+            </iwxxm:tropicalCyclonePosition>
+        </iwxxm:TropicalCycloneSIGMETPositionCollection>
+    </iwxxm:forecastPositionAnalysis>
+    <!-- Harriet FCST position @ 18Z -->
+    <iwxxm:forecastPositionAnalysis>
+        <iwxxm:TropicalCycloneSIGMETPositionCollection gml:id="uuid.f00993b2-bf2f-4337-8b33-0412596f2f5c" tropicalCycloneId="#uuid.18b73cde-1200-49c9-8b55-ed96f91ec955">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.8f39944b-2595-4da8-82ae-0ffe70f1ed39">
+                    <gml:timePosition>2012-08-10T18:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:tropicalCyclonePosition>
+                <iwxxm:TropicalCyclonePosition gml:id="uuid.6cca3303-1ef9-4a4d-b56a-c5ca9be77696">
+                    <iwxxm:centre>
+                        <gml:Point gml:id="uuid.a30e43b9-a4fd-4826-8fe0-2fe236ed27af" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                            <gml:pos>0.0 0.0</gml:pos>
+                        </gml:Point>
+                    </iwxxm:centre>
+                </iwxxm:TropicalCyclonePosition>
+            </iwxxm:tropicalCyclonePosition>
+        </iwxxm:TropicalCycloneSIGMETPositionCollection>
+    </iwxxm:forecastPositionAnalysis>
+    <iwxxm:tropicalCyclone>
+        <metce:TropicalCyclone gml:id="uuid.c529d539-2fa9-428d-937a-867e50056f16">
+            <metce:name>Gloria</metce:name>
+        </metce:TropicalCyclone>
+    </iwxxm:tropicalCyclone>
+    <iwxxm:tropicalCyclone>
+        <metce:TropicalCyclone gml:id="uuid.18b73cde-1200-49c9-8b55-ed96f91ec955">
+            <metce:name>Harriet</metce:name>
+        </metce:TropicalCyclone>
+    </iwxxm:tropicalCyclone>
+</iwxxm:TropicalCycloneSIGMET>

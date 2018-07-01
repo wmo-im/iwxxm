@@ -61,7 +61,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 	</element>
     <complexType name="VelocityWithNilReasonType">
         <simpleContent>
-            <extension base="gml:MeasureType">
+			<extension base="gml:SpeedType">
                 <attribute name="nilReason" type="gml:NilReasonType"/>
             </extension>
         </simpleContent>

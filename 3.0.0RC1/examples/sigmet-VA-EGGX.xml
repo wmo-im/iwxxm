@@ -76,7 +76,6 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
             </iwxxm:phenomenonTime>
             <iwxxm:member>
                 <iwxxm:SIGMETEvolvingCondition gml:id="uuid.b3f301d8-e8b4-4d24-91b1-78f52672edcb" intensityChange="NO_CHANGE">
-                  <iwxxm:directionOfMotion uom="deg">180</iwxxm:directionOfMotion>
                   <iwxxm:geometry>
                     <aixm:AirspaceVolume gml:id="uuid.6a77deae-62d5-43c0-99df-c40a6ddf4e3f">
                       <!-- omitted lower-limit implies that the volcanic ash cloud extends to ground/sea surface -->
@@ -107,7 +106,8 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                       </aixm:horizontalProjection>
                     </aixm:AirspaceVolume>
                   </iwxxm:geometry>
-                  <iwxxm:speedOfMotion uom="[kn_i]">60</iwxxm:speedOfMotion>
+                    <iwxxm:directionOfMotion uom="deg">180</iwxxm:directionOfMotion>
+                    <iwxxm:speedOfMotion uom="[kn_i]">60</iwxxm:speedOfMotion>
                 </iwxxm:SIGMETEvolvingCondition>
           </iwxxm:member>
         </iwxxm:SIGMETEvolvingConditionCollection>
