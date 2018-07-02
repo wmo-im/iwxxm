@@ -23,8 +23,8 @@
     "http://codes.wmo.int/bufr4/codeflag/0-20-085/1" with a single runwayState element (issue #48)
 * AerodromeObservedClouds was renamed to AerodromeCloud for consistency with other portions of IWXXM (issue #81)
 * Added an iwxxm:AirspaceVolumePropertyType to allow for http://... nilReasons to be used with AirspaceVolume references (issue #94)
-+ METAR/SPECI now have an optional timeIndicator which may be used to indicate FM/TL/AT explicitly (issue #7).  Enhanced
-    documentation on TAF phenomenonTime to clarify the meaning with timeIndicators of BECOMING (issue #13).
++ METAR/SPECI now have an optional timeIndicator which may be used to indicate FM/TL/AT explicitly (issue #7).
+* Enhanced documentation on TAF phenomenonTime to clarify the meaning with timeIndicators of BECOMING (issue #13).
 
 ====================================
 2.1.1 - November 2017
