@@ -134,7 +134,10 @@ Volcanic Ash Advisory
 
 'NOT PROVIDED'
   When volcanic ash is not provided it shall be indicated with a "ashCloudExtent" with a nilReason of "withheld"
-  
+
+'NIL' remarks
+  NIL remarks shall be indicated with an missing "remarks" element
+
 ==========================
 Tropical Cyclone Advisory
 ==========================
