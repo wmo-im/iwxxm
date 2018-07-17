@@ -137,6 +137,9 @@ Volcanic Ash Advisory
 
 'NIL' remarks
   NIL remarks shall be indicated with an missing "remarks" element
+  
+'NO FURTHER ADVISORIES'
+  A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "Inapplicable"
 
 ==========================
 Tropical Cyclone Advisory
@@ -146,3 +149,15 @@ Tropical Cyclone Advisory
 
 'NIL' remarks
   NIL remarks shall be indicated with an missing "remarks" element
+  
+'NO MSG EXP'
+  A NIL shall be indicated with "expectedNextAdvisoryTime" with a nilReason of "Inapplicable"
+  
+==========================
+Space Weather Advisory
+==========================
+'NIL' remarks
+  NIL remarks shall be indicated with an missing "remarks" element
+  
+'NO FURTHER ADVISORIES'
+  A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "Inapplicable"
