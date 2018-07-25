@@ -53,7 +53,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                     <gml:timePosition>2016-11-08T01:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            
             <!-- HNH E18000 - W18000 -->
             <iwxxm:region>
                 <iwxxm:SpaceWeatherRegion gml:id="uuid.186a603f-7a4a-4873-9ec7-29faccd2015e">
@@ -77,7 +76,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                     <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/HNH"/>
                 </iwxxm:SpaceWeatherRegion>
             </iwxxm:region>
-            
             <!-- HSH E18000 - W18000 -->
             <iwxxm:region>
                 <iwxxm:SpaceWeatherRegion gml:id="uuid.529da7b6-3512-4418-a84e-3267f57f36eb">
@@ -164,7 +162,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
     <!-- Remark -->
     <iwxxm:remarks>LOW LVL GEOMAGNETIC STORMING CAUSING INCREASED AURORAL ACT AND SUBSEQUENT MOD DEGRADATION OF GNSS AND HF COM AVBL IN THE AURORAL ZONE. THIS STORMING EXP TO SUBSIDE IN THE FCST PERIOD. SEE WWW.SPACEWEATHERPROVIDER.WEB</iwxxm:remarks>
     
-    <iwxxm:nextAdvisoryEarliestTime nilReason="inapplicable"/>
-    <iwxxm:nextAdvisoryLatestTime nilReason="inapplicable"/>
+    <iwxxm:nextAdvisoryTime nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
     
 </iwxxm:SpaceWeatherAdvisory>

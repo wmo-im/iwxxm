@@ -24,6 +24,13 @@
             status="MISSING"
             permissibleUsage="OPERATIONAL"
             automatedStation="false">
+            
+            <!-- the same as observationTime except for corrections/re-issuances --> 
+            <iwxxm:issueTime>
+                <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+                    <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:issueTime>
 
             <iwxxm:aerodrome>
                 <!-- The aerodrome at which this observation took place -->
@@ -39,13 +46,6 @@
                     </aixm:timeSlice>
                 </aixm:AirportHeliport>
             </iwxxm:aerodrome>
-            
-            <!-- the same as observationTime except for corrections/re-issuances --> 
-            <iwxxm:issueTime>
-                <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
-                    <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
-                </gml:TimeInstant>
-            </iwxxm:issueTime>
 
             <!-- time at which the observation occurred -->
             <iwxxm:observationTime>
@@ -55,7 +55,8 @@
             </iwxxm:observationTime>
             
             <!-- NIL/missing reports do not have reported weather conditions -->
-            <iwxxm:observation nilReason="missing"/>
+	    <iwxxm:observation nilReason="http://codes.wmo.int/common/nil/missing"/>
+
         </iwxxm:METAR>
 
     </collect:meteorologicalInformation>

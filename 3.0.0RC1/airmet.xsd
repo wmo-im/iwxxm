@@ -19,12 +19,16 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-				    <element name="phenomenonTime" type="gml:TimeInstantPropertyType">
-				        <annotation>
-				            <documentation>The time at which meteorological phenomena occur</documentation>
-				        </annotation>
-				    </element>
-				    <element name="member" type="iwxxm:AIRMETEvolvingConditionPropertyType" minOccurs="1" maxOccurs="2"></element>
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
+						<annotation>
+							<documentation>The time at which meteorological phenomena occur</documentation>
+						</annotation>
+					</element>
+					<element name="member" type="iwxxm:AIRMETEvolvingConditionPropertyType" minOccurs="1" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The members of this collection</documentation>
+						</annotation>
+					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element AIRMETEvolvingConditionCollection</documentation>
@@ -67,17 +71,17 @@ The AIRMET report class represents the base AIRMET types that may be reported su
 							<documentation>The ATS unit serving the FIR or CTA to which the AIRMET refers.  ICAO Annex 3 / WMO No. 49-2: A6-1: "Location indicator of FIR/CTA"</documentation>
 						</annotation>
 					</element>
-					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType">
+					<element nillable="true" name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType">
 						<annotation>
 							<documentation>MWO originating this report</documentation>
 						</annotation>
 					</element>
-					<element name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType">
+					<element nillable="true" name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType">
 						<annotation>
 							<documentation>The ATS region (FIR, UIR, CTA, or FIR/UIR)</documentation>
 						</annotation>
 					</element>
-					<element name="sequenceNumber" type="string">
+					<element name="sequenceNumber" type="iwxxm:StringWithNilReasonType">
 						<annotation>
 							<documentation>The sequence number of this message.  For example: "5", "A3", or "2"</documentation>
 						</annotation>
@@ -101,12 +105,12 @@ YUDD AIRMET A3 VALID ...</documentation>
 							<documentation>The valid period of a previous AIRMET that is cancelled by this AIRMET.  Mandatory when this is a cancellation report, must be missing otherwise</documentation>
 						</annotation>
 					</element>
-					<element name="phenomenon" type="iwxxm:AeronauticalAreaWeatherPhenomenonType">
+					<element nillable="true" name="phenomenon" type="iwxxm:AeronauticalAreaWeatherPhenomenonType">
 						<annotation>
 							<documentation>The reported phenomenon, such as thunderstorm, tropical cyclone, icing, mountain wave, etc.</documentation>
 						</annotation>
 					</element>
-					<element name="analysis" type="iwxxm:AIRMETEvolvingConditionCollectionPropertyType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="analysis" type="iwxxm:AIRMETEvolvingConditionCollectionPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>AIRMETs may include the same phenomenon covering more than one area within the FIR/UIR/CTA, as well as observed and forecast conditions for each of these reported areas.  AIRMETs may include a single set of observed and/or forecast conditions at a particular time, which is represented  as a single analysis with a single AIRMETEvolvingConditionCollection as its result.</documentation>
 						</annotation>
@@ -143,11 +147,6 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The expected direction of movement of a meteorological condition. When no movement is expected, this is a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason and the speedOfMotion will be 0.  Direction of motion to shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
-						</annotation>
-					</element>
 					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
@@ -165,6 +164,11 @@ To report an airspace lower limit of below FL 300, airspace lower limit is repor
 							<documentation>The reported relational operator for the airspace geometry upper limit. When reported, this operator is reported in conjunction with the airspace geometry's upper limit.
 
 To report an airspace upper limit of above FL 300, airspace upper limit is reported as FL 300 and the operator is reported as "above".  When no operator is reported, the airspace upper limit represents an exact value with identical semantics to other measured quantities</documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The expected direction of movement of a meteorological condition. When no movement is expected, this is a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason and the speedOfMotion will be 0.  Direction of motion to shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
 						</annotation>
 					</element>
 					<element name="speedOfMotion" type="gml:SpeedType" minOccurs="0" maxOccurs="1">

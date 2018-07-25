@@ -83,7 +83,7 @@
         </gml:TimePeriod>
     </iwxxm:cancelledValidPeriod>
 
-    <iwxxm:phenomenon nilReason="inapplicable"/>
+    <iwxxm:phenomenon nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
 
-    <iwxxm:analysis nilReason="inapplicable"/>
+    <iwxxm:analysis nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
 </iwxxm:SIGMET>

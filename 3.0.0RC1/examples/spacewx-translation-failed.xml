@@ -43,8 +43,14 @@ INVALID INVALID INVALID
         </aixm:Unit>
     </iwxxm:issuingSpaceWeatherCentre>
     
-    <iwxxm:advisoryNumber nilReason="missing"/>
-    <iwxxm:phenomenon  nilReason="missing"/>
-    <iwxxm:analysis  nilReason="missing"/>
-    
+    <iwxxm:advisoryNumber nilReason="http://codes.wmo.int/common/nil/missing"/>
+
+    <iwxxm:phenomenon  nilReason="http://codes.wmo.int/common/nil/missing"/>
+
+    <iwxxm:analysis  nilReason="http://codes.wmo.int/common/nil/missing"/>
+
+    <iwxxm:remarks nilReason="http://codes.wmo.int/common/nil/missing"/>
+
+    <iwxxm:nextAdvisoryTime nilReason="http://codes.wmo.int/common/nil/missing"/>
+
 </iwxxm:SpaceWeatherAdvisory>

@@ -30,17 +30,17 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The issuing VAAC</documentation>
 						</annotation>
 					</element>
-					<element name="volcano" type="metce:EruptingVolcanoPropertyType">
+					<element nillable="true" name="volcano" type="metce:EruptingVolcanoPropertyType">
 						<annotation>
 							<documentation>The erupting volcano that is the source of volcanic ash</documentation>
 						</annotation>
 					</element>
-				    <element name="advisoryNumber" type="iwxxm:StringWithNilReasonType">
+					<element name="advisoryNumber" type="iwxxm:StringWithNilReasonType">
 						<annotation>
 							<documentation>Advisory number: year in full and message number (separate sequence for each volcano)</documentation>
 						</annotation>
 					</element>
-				    <element name="informationSource" type="iwxxm:StringWithNilReasonType">
+					<element nillable="true" name="informationSource" type="iwxxm:StringWithNilReasonType">
 						<annotation>
 							<documentation>Information source - described in free text</documentation>
 						</annotation>
@@ -50,24 +50,25 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The aviation colour code</documentation>
 						</annotation>
 					</element>
-					<element name="analysis" type="iwxxm:VolcanicAshConditionsPropertyType" minOccurs="0" maxOccurs="unbounded">
+					<element nillable="true" name="analysis" type="iwxxm:VolcanicAshConditionsPropertyType" minOccurs="1" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The observed and estimated positions of volcanic ash clouds.  Each analysis represents an observed or 6/12/18 hour forecast of volcanic ash.</documentation>
 						</annotation>
 					</element>
-					<element name="remarks" type="string" minOccurs="0" maxOccurs="1">
+					<element name="remarks" type="iwxxm:StringWithNilReasonType">
 						<annotation>
-							<documentation>Remarks, as necessary</documentation>
+							<documentation>Remarks, as necessary.
+
+When the remark is nil, it should be indicated by a missing remarks with a nil reason of 'inapplicable'</documentation>
 						</annotation>
 					</element>
-					<element name="nextAdvisoryEarliestTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
+					<element name="nextAdvisoryTime" type="gml:TimeInstantPropertyType">
 						<annotation>
-							<documentation>The earliest time at which the next advisory will be issued</documentation>
-						</annotation>
-					</element>
-					<element name="nextAdvisoryLatestTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The latest time at which the next advisory will be issued</documentation>
+							<documentation>The time at which the next advisory will be issued
+
+Use attribute indeterminatePosition to element timePosition to indicate if the actual temporal position is before or after the specified value.
+
+When no subsequent advisory is expected to be issued it should be indicated by a missing expected advisory time with a nil reason of 'inapplicable'</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -95,12 +96,12 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-				    <element name="phenomenonTime" type="iwxxm:TimeObjectPropertyType">
-				        <annotation>
-				            <documentation>The time at which meteorological phenomena occur</documentation>
-				        </annotation>
-				    </element>
-				    <element name="ashCloud" type="iwxxm:VolcanicAshCloudPropertyType" minOccurs="1" maxOccurs="unbounded"></element>
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
+						<annotation>
+							<documentation>The time at which meteorological phenomena occur</documentation>
+						</annotation>
+					</element>
+					<element name="ashCloud" type="iwxxm:VolcanicAshCloudPropertyType" minOccurs="1" maxOccurs="unbounded"></element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshConditions</documentation>

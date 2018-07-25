@@ -161,11 +161,13 @@ NXT MSG:                    20040925/2000Z
             <iwxxm:tropicalCyclonePosition>
                 <gml:Point gml:id="uuid.d26643a3-1106-4003-9978-558cdbef0e78" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:pos>29.2 -75.5</gml:pos>
-                </gml:Point>
+	    </gml:Point>
             </iwxxm:tropicalCyclonePosition>
             <iwxxm:maximumSurfaceWindSpeed uom="m/s">20</iwxxm:maximumSurfaceWindSpeed>
         </iwxxm:TropicalCycloneForecastConditions>
     </iwxxm:forecast>
+
+    <iwxxm:remarks nilReason="http://codes.wmo.int/common/nil/inappropriate"/>
 
     <iwxxm:expectedNextAdvisoryTime>
         <gml:TimeInstant gml:id="uuid.002b0056-d267-47b7-a9ef-4c7ca70aacd9">

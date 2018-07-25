@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
-	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
 		<documentation>Tropical Cyclone Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
@@ -29,34 +28,38 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The issuing TCAC</documentation>
 						</annotation>
 					</element>
-				    <element name="tropicalCycloneName" type="iwxxm:StringWithNilReasonType">
+					<element nillable="true" name="tropicalCycloneName" type="iwxxm:StringWithNilReasonType">
 						<annotation>
 							<documentation>The tropical cyclone name.  If the tropical cyclone is unnamed, 'NN' may be used</documentation>
 						</annotation>
 					</element>
-				    <element name="advisoryNumber" type="iwxxm:StringWithNilReasonType">
+					<element name="advisoryNumber" type="iwxxm:StringWithNilReasonType">
 						<annotation>
 							<documentation>Advisory number: year in full and message number (separate sequence for each cyclone)</documentation>
 						</annotation>
 					</element>
-					<element name="observation" type="iwxxm:TropicalCycloneObservedConditionsPropertyType">
+					<element nillable="true" name="observation" type="iwxxm:TropicalCycloneObservedConditionsPropertyType">
 						<annotation>
 							<documentation>The observed conditions of the tropical cyclone</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="forecast" type="iwxxm:TropicalCycloneForecastConditionsPropertyType" minOccurs="4" maxOccurs="4">
-				        <annotation>
-				            <documentation>The forecast conditions of the tropical cyclone, one each for the 6 hour, 12 hour, 18 hour, and 24 hour forecast periods</documentation>
-				        </annotation>
-				    </element>
-					<element name="remarks" type="string" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>Remarks, as necessary</documentation>
+							<documentation>The forecast conditions of the tropical cyclone, one each for the 6 hour, 12 hour, 18 hour, and 24 hour forecast periods</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="expectedNextAdvisoryTime" type="gml:TimeInstantPropertyType">
+					<element name="remarks" type="iwxxm:StringWithNilReasonType">
+						<annotation>
+							<documentation>Remarks, as necessary.
+
+When the remark is nil, it should be indicated by a missing remarks with a nil reason of 'inapplicable'</documentation>
+						</annotation>
+					</element>
+					<element name="expectedNextAdvisoryTime" type="gml:TimeInstantPropertyType">
 						<annotation>
 							<documentation>The time at which the next advisory is expected to be issued.
+
+Use attribute indeterminatePosition to element timePosition to indicate if the actual temporal position is before or after the specified value.
 
 When no subsequent advisory is expected to be issued it should be indicated by a missing expected advisory time with a nil reason of 'inapplicable'</documentation>
 						</annotation>
@@ -86,7 +89,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="phenomenonTime" type="iwxxm:TimeObjectPropertyType">
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
 						<annotation>
 							<documentation>The time at which meteorological phenomena occur</documentation>
 						</annotation>
@@ -151,7 +154,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="phenomenonTime" type="iwxxm:TimeObjectPropertyType">
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
 						<annotation>
 							<documentation>The time at which meteorological phenomena occur</documentation>
 						</annotation>

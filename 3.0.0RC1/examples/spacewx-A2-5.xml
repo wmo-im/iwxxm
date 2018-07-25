@@ -52,7 +52,6 @@ NXT ADVISORY:       20161108/0700Z
                     <gml:timePosition>2016-11-08T01:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            
             <iwxxm:region>
                 <iwxxm:SpaceWeatherRegion gml:id="uuid.c264db5c-3f0b-4444-ab5e-71f48a514644">
                     <iwxxm:location>
@@ -264,15 +263,10 @@ NXT ADVISORY:       20161108/0700Z
     <!-- Remark -->
     <iwxxm:remarks>PERIODIC HF COM ABSORPTION OBS AND LIKELY TO CONT IN THE NEAR TERM. CMPL AND PERIODIC LOSS OF HF ON THE SUNLIT SIDE OF THE EARTH EXP. CONT HF COM DEGRADATION LIKELY OVER THE NXT 7 DAYS. SEE WWW.SPACEWEATHERPROVIDER.WEB</iwxxm:remarks>
     
-    <iwxxm:nextAdvisoryEarliestTime>
+    <iwxxm:nextAdvisoryTime>
         <gml:TimeInstant gml:id="uuid.ff02e4b5-e54c-4ec3-b34c-842229274727">
             <gml:timePosition>2016-11-08T07:00:00Z</gml:timePosition>
         </gml:TimeInstant>
-    </iwxxm:nextAdvisoryEarliestTime>
-    <iwxxm:nextAdvisoryLatestTime>
-        <gml:TimeInstant gml:id="uuid.dc836fac-5236-4b6c-8c81-cac676fd5f3b">
-            <gml:timePosition>2016-11-08T07:00:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:nextAdvisoryLatestTime>
+    </iwxxm:nextAdvisoryTime>
     
 </iwxxm:SpaceWeatherAdvisory>
