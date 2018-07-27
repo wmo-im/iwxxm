@@ -19,11 +19,13 @@
     gml:id="uuid.b4d56d93-3866-4f75-b493-da9a4bb2404c"
     permissibleUsage="OPERATIONAL"
     status="NORMAL">
+
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.5599e948-f719-4fc2-85fc-20ad96644250">
             <gml:timePosition>YYYY-MM-10T12:00:00Z</gml:timePosition>
         </gml:TimeInstant>
     </iwxxm:issueTime>
+
     <iwxxm:issuingAirTrafficServicesUnit>
         <aixm:Unit gml:id="uuid.37f89b19-7774-496b-a20d-f30627c45d17">
             <aixm:timeSlice>
@@ -37,6 +39,7 @@
             </aixm:timeSlice>
         </aixm:Unit>
     </iwxxm:issuingAirTrafficServicesUnit>
+
     <iwxxm:originatingMeteorologicalWatchOffice>
         <aixm:Unit gml:id="uuid.252469f5-d46a-41b4-a932-87e37328c474">
             <aixm:timeSlice>
@@ -50,6 +53,7 @@
             </aixm:timeSlice>
         </aixm:Unit>
     </iwxxm:originatingMeteorologicalWatchOffice>
+
     <iwxxm:issuingAirTrafficServicesRegion>
         <aixm:Airspace gml:id="uuid.eb9d349c-242c-4193-981a-935ee2e547a2">
             <aixm:timeSlice>
@@ -64,24 +68,27 @@
             </aixm:timeSlice>
         </aixm:Airspace>
     </iwxxm:issuingAirTrafficServicesRegion>
+
     <iwxxm:sequenceNumber>2</iwxxm:sequenceNumber>
+
     <iwxxm:validPeriod>
         <gml:TimePeriod gml:id="uuid.06f1383c-c034-4ae0-9459-a0b99a3612a9">
             <gml:beginPosition>YYYY-MM-10T12:00:00Z</gml:beginPosition>
             <gml:endPosition>YYYY-MM-10T18:00:00Z</gml:endPosition>
         </gml:TimePeriod>
     </iwxxm:validPeriod>
+
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
+
     <!-- VA CLD OBS AT 1200Z WI N4315 E02115 – N4345 E02145 N4330 E02215 – N4245 E02230 – N4230 E02145 - N4315 E02115 FL250/370 NC
                        AND WI N4200 E02115 – N4217 E02130 – N4145 E02200 – N4130 E02130 – N4200 E02115 FL150/300 NC -->
     <iwxxm:analysis>
-        <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.ed862622-5643-4c5a-8922-01a04d18dbab" timeIndicator="OBSERVATION">
+        <iwxxm:VolcanicAshSIGMETEvolvingConditionCollection gml:id="uuid.ed862622-5643-4c5a-8922-01a04d18dbab" timeIndicator="OBSERVATION" volcanoId="uuid.8c2bf282-1268-4066-bfc9-a56f7ae999f5">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.5299e948-f719-4fd2-85fc-20ad96644250">
                     <gml:timePosition>YYYY-MM-10T12:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-
             <!-- WI N4315 E02115 – N4345 E02145 N4330 E02215 – N4245 E02230 – N4230 E02145 - N4315 E02115 FL250/370 NC -->
             <iwxxm:member>
                 <iwxxm:SIGMETEvolvingCondition gml:id="uuid.6cad5163-6a30-48a0-b723-2a14b5a93cc8" intensityChange="NO_CHANGE">
@@ -138,10 +145,11 @@
                     </iwxxm:geometry>
                 </iwxxm:SIGMETEvolvingCondition>
             </iwxxm:member>
-        </iwxxm:SIGMETEvolvingConditionCollection>
+        </iwxxm:VolcanicAshSIGMETEvolvingConditionCollection>
     </iwxxm:analysis>
+
     <iwxxm:forecastPositionAnalysis>
-        <iwxxm:SIGMETPositionCollection gml:id="uuid.fad0d2b4-7b60-4843-b17c-501f7b13efe0">
+        <iwxxm:VolcanicAshSIGMETPositionCollection gml:id="uuid.fad0d2b4-7b60-4843-b17c-501f7b13efe0" volcanoId="uuid.8c2bf282-1268-4066-bfc9-a56f7ae999f5">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.cce9b23a-d604-4194-8f73-2b7357ee4a9c">
                     <gml:timePosition>YYYY-MM-10T18:00:00Z</gml:timePosition>
@@ -191,8 +199,9 @@
                     </iwxxm:geometry>
                 </iwxxm:SIGMETPosition>
             </iwxxm:member>
-        </iwxxm:SIGMETPositionCollection>
+        </iwxxm:VolcanicAshSIGMETPositionCollection>
     </iwxxm:forecastPositionAnalysis>
+
     <iwxxm:eruptingVolcano>
         <metce:Volcano gml:id="uuid.8c2bf282-1268-4066-bfc9-a56f7ae999f5">
             <metce:name>MT ASHVAL</metce:name>
@@ -203,4 +212,5 @@
             </metce:position>
         </metce:Volcano>
     </iwxxm:eruptingVolcano>
+
 </iwxxm:VolcanicAshSIGMET>

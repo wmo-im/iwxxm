@@ -33,6 +33,7 @@
             </aixm:timeSlice>
         </aixm:Unit>
     </iwxxm:issuingAirTrafficServicesUnit>
+
     <iwxxm:originatingMeteorologicalWatchOffice>
         <aixm:Unit gml:id="uuid.d8835dc7-18db-424e-929a-e4c79be92cad">
             <aixm:timeSlice>
@@ -62,7 +63,6 @@
         </aixm:Airspace>
     </iwxxm:issuingAirTrafficServicesRegion>
 
-
     <iwxxm:sequenceNumber>3</iwxxm:sequenceNumber>
 
     <!-- Valid period for this report -->
@@ -79,7 +79,7 @@
     <!-- OBS AT 1600Z -->
     <iwxxm:analysis>
         <!-- CB OBS AT 1600Z WI 250NM OF TC CENTRE TOP FL500 NC -->
-        <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.89147e42-7ce0-493e-b81d-6ba6a989e8a1" timeIndicator="OBSERVATION">
+        <iwxxm:TropicalCycloneSIGMETEvolvingConditionCollection gml:id="uuid.89147e42-7ce0-493e-b81d-6ba6a989e8a1" timeIndicator="OBSERVATION" tropicalCycloneId="uuid.c529d539-2fa9-428d-937a-867e50056f16">
             <!-- time of observed conditions -->
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.2f6d2369-b614-4522-8c76-bc44d770ce5e">
@@ -120,12 +120,17 @@
                     </iwxxm:geometry>
                 </iwxxm:SIGMETEvolvingCondition>
             </iwxxm:member>
-        </iwxxm:SIGMETEvolvingConditionCollection>
+            <iwxxm:tropicalCyclonePosition>
+                <gml:Point gml:id="uuid.e84be2a6-cb1e-4905-b70a-6958c3cea1e3">
+                    <gml:pos>27.10 -73.10</gml:pos>
+                </gml:Point>
+            </iwxxm:tropicalCyclonePosition>
+        </iwxxm:TropicalCycloneSIGMETEvolvingConditionCollection>
     </iwxxm:analysis>
 
     <!-- FCST AT 2200Z TC CENTRE PSN N2740 W07345 -->
     <iwxxm:forecastPositionAnalysis>
-        <iwxxm:SIGMETPositionCollection gml:id="uuid.59824907-bcbe-476d-8151-8743e4a1b7db">
+        <iwxxm:TropicalCycloneSIGMETPositionCollection gml:id="uuid.59824907-bcbe-476d-8151-8743e4a1b7db" tropicalCycloneId="uuid.c529d539-2fa9-428d-937a-867e50056f16">
             <!-- time of forecast conditions -->
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.aab0df0d-6ee9-4ff8-82b2-06a2a42ab0a9">
@@ -135,35 +140,15 @@
             <iwxxm:member>
                 <!-- TC CENTRE N2740 W07345 -->
                 <iwxxm:SIGMETPosition gml:id="uuid.338354de-7634-4fca-ac75-3675cb592284">
-                    <iwxxm:geometry>
-                        <aixm:AirspaceVolume gml:id="uuid.4ed35f91-7189-4b9c-baed-19b5cec0b4c1">
-                            <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.c76ff9fa-ec6b-48ed-8f26-ed37c47bbc38" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                    <gml:polygonPatches>
-                                        <gml:PolygonPatch>
-                                            <gml:exterior>
-                                                <gml:Ring>
-                                                    <gml:curveMember>
-                                                        <gml:Curve gml:id="uuid.0380d35a-1d35-46a2-bbc8-38190206bfe8">
-                                                            <gml:segments>
-                                                                <gml:CircleByCenterPoint numArc="1">
-                                                                    <gml:pos>27.6667 -73.75</gml:pos>
-                                                                    <gml:radius uom="[nmi_i]">0</gml:radius>
-                                                                </gml:CircleByCenterPoint>
-                                                            </gml:segments>
-                                                        </gml:Curve>
-                                                    </gml:curveMember>
-                                                </gml:Ring>
-                                            </gml:exterior>
-                                        </gml:PolygonPatch>
-                                    </gml:polygonPatches>
-                                </aixm:Surface>
-                            </aixm:horizontalProjection>
-                        </aixm:AirspaceVolume>
-                    </iwxxm:geometry>
+                    <iwxxm:geometry nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
                 </iwxxm:SIGMETPosition>
             </iwxxm:member>
-        </iwxxm:SIGMETPositionCollection>
+            <iwxxm:tropicalCyclonePosition>
+                <gml:Point gml:id="uuid.1e0ca159-77e7-4d85-8ace-44aadf52f9af">
+                    <gml:pos>27.6667 -73.75</gml:pos>
+                </gml:Point>
+            </iwxxm:tropicalCyclonePosition>
+        </iwxxm:TropicalCycloneSIGMETPositionCollection>
     </iwxxm:forecastPositionAnalysis>
 
     <iwxxm:tropicalCyclone>

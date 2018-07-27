@@ -15,6 +15,13 @@
     status="NORMAL"
     automatedStation="false">
 
+    <!-- the same as observationTime except for corrections/re-issuances --> 
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+            <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+
     <!-- The aerodrome at which this observation took place -->
     <iwxxm:aerodrome>
         <aixm:AirportHeliport gml:id="uuid.143d63d9-15f5-442e-9bdc-1f3db93fb619">
@@ -35,13 +42,6 @@
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
 
-    <!-- the same as observationTime except for corrections/re-issuances --> 
-    <iwxxm:issueTime>
-        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
-            <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:issueTime>
- 
     <!-- time at which the METAR phenomena were observed -->
     <iwxxm:observationTime>
         <gml:TimeInstant gml:id="uuid.85802aab-b4e5-4c4b-9303-10a02064e243">
@@ -101,6 +101,7 @@
             </iwxxm:cloud>
         </iwxxm:MeteorologicalAerodromeObservation>
     </iwxxm:observation>
+
     <iwxxm:trendForecast>
         <iwxxm:MeteorologicalAerodromeTrendForecast gml:id="uuid.46584004-93bf-4638-a8be-86a61bc85e0f" changeIndicator="BECOMING">
             <!-- time at which the forecast conditions actually occur -->
@@ -115,6 +116,7 @@
             <iwxxm:weather xlink:href="http://codes.wmo.int/306/4678/FG"/>
         </iwxxm:MeteorologicalAerodromeTrendForecast>
     </iwxxm:trendForecast>
+
     <iwxxm:trendForecast>
         <iwxxm:MeteorologicalAerodromeTrendForecast gml:id="uuid.be66f283-6aae-4a84-bc84-3831c9b2e7ef" changeIndicator="BECOMING">
             <!-- time at which the forecast conditions actually occur -->
@@ -130,4 +132,5 @@
             <iwxxm:weather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:MeteorologicalAerodromeTrendForecast>
     </iwxxm:trendForecast>
+
 </iwxxm:METAR>

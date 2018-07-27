@@ -14,11 +14,13 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
     gml:id="uuid.64c3912b-b09a-494a-8731-321f28b759e4"
     permissibleUsage="OPERATIONAL"
     status="NORMAL">
+
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.94838606-4ec4-437c-9be1-901b8e7a33c6">
             <gml:timePosition>YYYY-MM-25T16:00:00Z</gml:timePosition>
         </gml:TimeInstant>
     </iwxxm:issueTime>
+
     <iwxxm:issuingAirTrafficServicesUnit>
         <aixm:Unit gml:id="uuid.cdca7fc8-2ca0-42fd-b335-822e3f8c7921">
             <aixm:timeSlice>
@@ -32,6 +34,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
             </aixm:timeSlice>
         </aixm:Unit>
     </iwxxm:issuingAirTrafficServicesUnit>
+
     <iwxxm:originatingMeteorologicalWatchOffice>
         <aixm:Unit gml:id="uuid.358af98d-e353-480c-880d-c94000fe8341">
             <aixm:timeSlice>
@@ -45,6 +48,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
             </aixm:timeSlice>
         </aixm:Unit>
     </iwxxm:originatingMeteorologicalWatchOffice>
+
     <iwxxm:issuingAirTrafficServicesRegion>
         <aixm:Airspace gml:id="uuid.1fa42185-604c-4a56-a578-d1eb07109c38">
             <aixm:timeSlice>
@@ -59,16 +63,20 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
             </aixm:timeSlice>
         </aixm:Airspace>
     </iwxxm:issuingAirTrafficServicesRegion>
+
     <iwxxm:sequenceNumber>4</iwxxm:sequenceNumber>
+
     <iwxxm:validPeriod>
         <gml:TimePeriod gml:id="uuid.099bfa3a-0fb2-4a79-87f5-076fa28e6711">
             <gml:beginPosition>YYYY-MM-25T16:00:00Z</gml:beginPosition>
             <gml:endPosition>YYYY-MM-25T22:00:00Z</gml:endPosition>
         </gml:TimePeriod>
     </iwxxm:validPeriod>
+
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
+
     <iwxxm:analysis>
-        <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.fb90468d-60bb-4828-99ed-3ff730759ac3" timeIndicator="OBSERVATION">
+        <iwxxm:VolcanicAshSIGMETEvolvingConditionCollection gml:id="uuid.fb90468d-60bb-4828-99ed-3ff730759ac3" timeIndicator="OBSERVATION" volcanoId="uuid.99646618-9ec7-47c0-8b50-daba5b6b1da9">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.0fff6dbb-ba23-4794-810e-d2b79c895053">
                     <gml:timePosition>YYYY-MM-25T16:00:00Z</gml:timePosition>
@@ -76,7 +84,6 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
             </iwxxm:phenomenonTime>
             <iwxxm:member>
                 <iwxxm:SIGMETEvolvingCondition gml:id="uuid.b3f301d8-e8b4-4d24-91b1-78f52672edcb" intensityChange="NO_CHANGE">
-                  <iwxxm:directionOfMotion uom="deg">180</iwxxm:directionOfMotion>
                   <iwxxm:geometry>
                     <aixm:AirspaceVolume gml:id="uuid.6a77deae-62d5-43c0-99df-c40a6ddf4e3f">
                       <!-- omitted lower-limit implies that the volcanic ash cloud extends to ground/sea surface -->
@@ -107,13 +114,15 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                       </aixm:horizontalProjection>
                     </aixm:AirspaceVolume>
                   </iwxxm:geometry>
+                  <iwxxm:directionOfMotion uom="deg">180</iwxxm:directionOfMotion>
                   <iwxxm:speedOfMotion uom="[kn_i]">60</iwxxm:speedOfMotion>
                 </iwxxm:SIGMETEvolvingCondition>
-          </iwxxm:member>
-        </iwxxm:SIGMETEvolvingConditionCollection>
+            </iwxxm:member>
+        </iwxxm:VolcanicAshSIGMETEvolvingConditionCollection>
     </iwxxm:analysis>
+
     <iwxxm:forecastPositionAnalysis>
-        <iwxxm:SIGMETPositionCollection gml:id="uuid.a76bad9a-9d0b-45ea-82ed-c5f697b9d68a">
+        <iwxxm:VolcanicAshSIGMETPositionCollection gml:id="uuid.a76bad9a-9d0b-45ea-82ed-c5f697b9d68a" volcanoId="uuid.99646618-9ec7-47c0-8b50-daba5b6b1da9">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.8176a547-141d-471f-b12f-10b7338dadbe">
                     <gml:timePosition>YYYY-MM-25T22:00:00Z</gml:timePosition>
@@ -146,8 +155,9 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                     </iwxxm:geometry>
                 </iwxxm:SIGMETPosition>
             </iwxxm:member>
-        </iwxxm:SIGMETPositionCollection>
+    </iwxxm:VolcanicAshSIGMETPositionCollection>
     </iwxxm:forecastPositionAnalysis>
+
     <iwxxm:eruptingVolcano>
         <metce:Volcano gml:id="uuid.99646618-9ec7-47c0-8b50-daba5b6b1da9">
             <metce:name>MT HEKLA</metce:name>
@@ -158,4 +168,5 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
             </metce:position>
         </metce:Volcano>
     </iwxxm:eruptingVolcano>
+
 </iwxxm:VolcanicAshSIGMET>

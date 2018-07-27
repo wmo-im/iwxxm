@@ -43,7 +43,7 @@
                 </aixm:AirportHeliport>
             </iwxxm:aerodrome>
         
-            <iwxxm:baseForecast nilReason="missing"/>
+	    <iwxxm:baseForecast nilReason="http://codes.wmo.int/common/nil/missing"/>
         </iwxxm:TAF>
 
     </collect:meteorologicalInformation>

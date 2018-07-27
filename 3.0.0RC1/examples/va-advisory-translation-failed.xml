@@ -50,9 +50,16 @@ INVALID INVALID INVALID">
       </aixm:Unit>
     </iwxxm:issuingVolcanicAshAdvisoryCentre>
 
-    <iwxxm:volcano nilReason="missing"/>
-    <iwxxm:advisoryNumber nilReason="missing"/>
-    <iwxxm:informationSource nilReason="missing"/>
-    <iwxxm:analysis nilReason="missing"/>
+    <iwxxm:volcano nilReason="http://codes.wmo.int/common/nil/missing"/>
+
+    <iwxxm:advisoryNumber nilReason="http://codes.wmo.int/common/nil/missing"/>
+
+    <iwxxm:informationSource nilReason="http://codes.wmo.int/common/nil/missing"/>
+
+    <iwxxm:analysis nilReason="http://codes.wmo.int/common/nil/missing"/>
+
+    <iwxxm:remarks nilReason="http://codes.wmo.int/common/nil/missing"/>
+
+    <iwxxm:nextAdvisoryTime nilReason="http://codes.wmo.int/common/nil/missing"/>
 
 </iwxxm:VolcanicAshAdvisory>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
-	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
 		<documentation>Space Weather Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
@@ -39,29 +38,30 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The number of the advisory being replaced.  Example "2018/1"</documentation>
 						</annotation>
 					</element>
-					<element name="phenomenon" type="iwxxm:SpaceWeatherPhenomenaType" minOccurs="1" maxOccurs="unbounded">
+					<element nillable="true" name="phenomenon" type="iwxxm:SpaceWeatherPhenomenaType" minOccurs="1" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The space weather phenomenon, such as radiation or satellite communication</documentation>
 						</annotation>
 					</element>
-					<element name="analysis" type="iwxxm:SpaceWeatherAnalysisPropertyType" minOccurs="1" maxOccurs="5">
+					<element nillable="true" name="analysis" type="iwxxm:SpaceWeatherAnalysisPropertyType" minOccurs="1" maxOccurs="5">
 						<annotation>
 							<documentation>Observed and forecast space weather information.  Analyses should be reported in the order in which they occur, starting with the initial observed/forecast conditions and proceeding through each subsequent forecast to the end of the period</documentation>
 						</annotation>
 					</element>
-					<element name="remarks" type="string" minOccurs="0" maxOccurs="1">
+					<element name="remarks" type="iwxxm:StringWithNilReasonType">
 						<annotation>
-							<documentation>Remarks, as necessary</documentation>
+							<documentation>Remarks, as necessary.
+
+When the remark is nil, it should be indicated by a missing remarks with a nil reason of 'inapplicable'</documentation>
 						</annotation>
 					</element>
-					<element name="nextAdvisoryEarliestTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
+					<element name="nextAdvisoryTime" type="gml:TimeInstantPropertyType">
 						<annotation>
-							<documentation>The earliest time at which the next advisory will be issued</documentation>
-						</annotation>
-					</element>
-					<element name="nextAdvisoryLatestTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The latest time at which the next advisory will be issued</documentation>
+							<documentation>The time at which the next advisory will be issued
+
+Use attribute indeterminatePosition to element timePosition to indicate if the actual temporal position is before or after the specified value.
+
+When no subsequent advisory is expected to be issued it should be indicated by a missing expected advisory time with a nil reason of 'inapplicable'</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -89,7 +89,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="phenomenonTime" type="iwxxm:TimeObjectPropertyType">
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
 						<annotation>
 							<documentation>The time at which meteorological phenomena occur</documentation>
 						</annotation>
@@ -115,28 +115,6 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
-	</complexType>
-	<complexType name="SpaceWeatherLocationType">
-		<annotation>
-			<appinfo>
-				<vocabulary>http://codes.wmo.int/49-2/SpaceWxLocation</vocabulary>
-				<extensibility>none</extensibility>
-			</appinfo>
-		</annotation>
-		<complexContent>
-			<extension base="gml:ReferenceType"></extension>
-		</complexContent>
-	</complexType>
-	<complexType name="SpaceWeatherPhenomenaType">
-		<annotation>
-			<appinfo>
-				<vocabulary>http://codes.wmo.int/49-2/SpaceWxPhenomena</vocabulary>
-				<extensibility>none</extensibility>
-			</appinfo>
-		</annotation>
-		<complexContent>
-			<extension base="gml:ReferenceType"></extension>
-		</complexContent>
 	</complexType>
 	<element name="SpaceWeatherRegion" type="iwxxm:SpaceWeatherRegionType" substitutionGroup="gml:AbstractFeature"></element>
 	<complexType name="SpaceWeatherRegionType">
@@ -173,5 +151,27 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<complexType name="SpaceWeatherLocationType">
+		<annotation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/49-2/SpaceWxLocation</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SpaceWeatherPhenomenaType">
+		<annotation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/49-2/SpaceWxPhenomena</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
 	</complexType>
 </schema>

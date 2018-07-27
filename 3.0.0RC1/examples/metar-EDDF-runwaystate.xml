@@ -13,6 +13,13 @@
     xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
     gml:id="uuid.96a5ba6a-47ce-4c10-bc56-355a32dcf22c" status="NORMAL" automatedStation="false" permissibleUsage="OPERATIONAL">
     
+    <!-- the same as observationTime except for corrections/re-issuances --> 
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+            <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
     <iwxxm:aerodrome>
         <!-- The aerodrome at which this observation took place -->
         <aixm:AirportHeliport gml:id="uuid.124c4e83-3137-450e-aab3-3259d92282fd">
@@ -33,13 +40,6 @@
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
     
-    <!-- the same as observationTime except for corrections/re-issuances --> 
-    <iwxxm:issueTime>
-        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
-            <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:issueTime>
-    
     <iwxxm:observationTime>
         <gml:TimeInstant gml:id="uuid.064bf483-439b-4e40-91b8-8aadd0638d92">
             <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>
@@ -49,7 +49,6 @@
     <iwxxm:observation>
         <iwxxm:MeteorologicalAerodromeObservation cloudAndVisibilityOK="false"
             gml:id="uuid.5980a075-9a27-4da7-b657-8c8f7032f24c">
-            
             <iwxxm:airTemperature uom="Cel">-4</iwxxm:airTemperature>
             <iwxxm:dewpointTemperature uom="Cel">-4</iwxxm:dewpointTemperature>
             <iwxxm:qnh uom="hPa">1000</iwxxm:qnh>
@@ -64,7 +63,6 @@
                     <iwxxm:prevailingVisibility uom="m">1400</iwxxm:prevailingVisibility>
                 </iwxxm:AerodromeHorizontalVisibility>
             </iwxxm:visibility>
-
             <iwxxm:rvr>
                 <iwxxm:AerodromeRunwayVisualRange pastTendency="NO_CHANGE">
                     <iwxxm:runway xlink:href="#uuid.f1ff030c-1e4c-40a5-be9a-fbb714369f7f" />
@@ -85,17 +83,15 @@
                     <iwxxm:meanRVR uom="m">1900</iwxxm:meanRVR>
                 </iwxxm:AerodromeRunwayVisualRange>
             </iwxxm:rvr>
-
             <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/SN"/>
             <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/DRSN"/>
             <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/BR"/>
-
             <iwxxm:cloud>
                 <iwxxm:AerodromeCloud>
                   <iwxxm:verticalVisibility uom="N/A" xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/notObservable"/>
                 </iwxxm:AerodromeCloud>
              </iwxxm:cloud>
-            <iwxxm:runwayState>
+	     <iwxxm:runwayState>
                 <iwxxm:AerodromeRunwayState>
                     <iwxxm:runway>
                         <aixm:RunwayDirection  gml:id="uuid.f1ff030c-1e4c-40a5-be9a-fbb714369f7f">
@@ -152,9 +148,9 @@
                     <iwxxm:estimatedSurfaceFrictionOrBrakingAction xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-089/90"/>
                 </iwxxm:AerodromeRunwayState>
             </iwxxm:runwayState>
-
         </iwxxm:MeteorologicalAerodromeObservation>
     </iwxxm:observation>
+
     <iwxxm:trendForecast>
         <iwxxm:MeteorologicalAerodromeTrendForecast gml:id="uuid.83222aab-9e5f-4296-a7f5-3d7e2af4ae45" changeIndicator="BECOMING" cloudAndVisibilityOK="false">
             <iwxxm:phenomenonTime nilReason="unknown"/>
@@ -162,4 +158,5 @@
             <iwxxm:weather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:MeteorologicalAerodromeTrendForecast>
     </iwxxm:trendForecast>
+
 </iwxxm:METAR>

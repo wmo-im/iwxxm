@@ -78,7 +78,6 @@ NXT ADVISORY:               20080923/0730Z
                     <gml:timePosition>2008-09-23T01:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-
             <!-- FL250/300 N5400 E15930 N5400 E16100 N5300 E15945 MOV SE 20KT -->
             <iwxxm:ashCloud>
                 <iwxxm:VolcanicAshCloud gml:id="uuid.4dd54d1a-9a18-4065-b9e9-a0f25ced8f17">
@@ -253,11 +252,10 @@ NXT ADVISORY:               20080923/0730Z
     <!-- Remark -->
     <iwxxm:remarks>LATEST REP FM KVERT (0120Z) INDICATES ERUPTION HAS CEASED.  TWO DISPERSING VA CLD ARE EVIDENT ON SATELLITE IMAGERY</iwxxm:remarks>
 
-    <iwxxm:nextAdvisoryEarliestTime>
+    <iwxxm:nextAdvisoryTime>
         <gml:TimeInstant gml:id="uuid.0480febc-1d6f-49bc-bca3-b54011e2f54f">
             <gml:timePosition>2008-09-23T07:30:00Z</gml:timePosition>
         </gml:TimeInstant>
-    </iwxxm:nextAdvisoryEarliestTime>
-    <iwxxm:nextAdvisoryLatestTime xlink:href="#uuid.0480febc-1d6f-49bc-bca3-b54011e2f54f"/>
+    </iwxxm:nextAdvisoryTime>
 
 </iwxxm:VolcanicAshAdvisory>

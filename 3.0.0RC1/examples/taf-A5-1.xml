@@ -20,6 +20,7 @@
             <gml:timePosition>2012-08-15T18:00:00Z</gml:timePosition>
         </gml:TimeInstant>
     </iwxxm:issueTime>
+
     <iwxxm:aerodrome>
         <aixm:AirportHeliport gml:id="uuid.a5a157ad-5b93-443d-a8e6-8324816ccb7e">
             <aixm:timeSlice>
@@ -38,6 +39,7 @@
             </aixm:timeSlice>
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
+
     <!-- The time at which this TAF is intended to be used -->
     <iwxxm:validTime>
         <!-- Original TAF: 1600/1618 -->
@@ -46,6 +48,7 @@
             <gml:endPosition>2012-08-16T18:00:00Z</gml:endPosition>
         </gml:TimePeriod>
     </iwxxm:validTime>
+
     <iwxxm:baseForecast>
        <!-- Original TAF: 13005MPS 9000 BKN020 -->
         <iwxxm:MeteorologicalAerodromeForecast gml:id="uuid.13048235-8f8a-4587-a6be-e8ce99f4525c" cloudAndVisibilityOK="false">
@@ -71,6 +74,7 @@
             </iwxxm:cloud>
         </iwxxm:MeteorologicalAerodromeForecast>
     </iwxxm:baseForecast>
+
     <!-- Original TAF: BECMG 1606/1608 SCT015CB BKN020 -->
     <iwxxm:changeForecast>
         <iwxxm:MeteorologicalAerodromeForecast gml:id="uuid.fe2635c8-3994-4423-b79f-123593fa2b55" changeIndicator="BECOMING" cloudAndVisibilityOK="false">
@@ -99,6 +103,7 @@
             </iwxxm:cloud>
         </iwxxm:MeteorologicalAerodromeForecast>
     </iwxxm:changeForecast>
+
     <!-- Original TAF: TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020 -->
     <iwxxm:changeForecast>
         <iwxxm:MeteorologicalAerodromeForecast gml:id="uuid.8985ba4e-f6f0-4dc2-8dd7-2cbf86a64056" changeIndicator="TEMPORARY_FLUCTUATIONS" cloudAndVisibilityOK="false">
@@ -139,6 +144,7 @@
             </iwxxm:cloud>
         </iwxxm:MeteorologicalAerodromeForecast>
     </iwxxm:changeForecast>
+
     <!-- Original TAF: FM161230 15004MPS 9999 BKN020 -->
     <iwxxm:changeForecast>
         <iwxxm:MeteorologicalAerodromeForecast gml:id="uuid.aeadfb00-4cfa-46b5-af21-1e79e4b6b1b5" changeIndicator="FROM" cloudAndVisibilityOK="false">

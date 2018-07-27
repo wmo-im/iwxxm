@@ -53,7 +53,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                     <gml:timePosition>2016-11-08T01:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            
             <!-- HNH E18000 – W18000 ABV FL350 -->
             <iwxxm:region>
                 <iwxxm:SpaceWeatherRegion gml:id="uuid.c264db5c-3f0b-4444-ab5e-71f48a514644">
@@ -80,7 +79,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                     <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/HNH"/>
                 </iwxxm:SpaceWeatherRegion>
             </iwxxm:region>
-            
             <!-- HSH E18000 – W18000 ABV FL350 -->
             <iwxxm:region>
                 <iwxxm:SpaceWeatherRegion gml:id="uuid.00f9026a-845a-4472-acee-9ec5d7ba6839">
@@ -170,7 +168,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
     <!-- Remark -->
     <iwxxm:remarks>RADIATION LVL EXCEEDED 100 PCT OF BACKGROUND LVL AT FL350 AND ABV. THE CURRENT EVENT HAS PEAKED AND LVL SLW RTN TO BACKGROUND LVL. SEE WWW.SPACEWEATHERPROVIDER.WEB</iwxxm:remarks>
     
-    <iwxxm:nextAdvisoryEarliestTime nilReason="inapplicable"/>
-    <iwxxm:nextAdvisoryLatestTime nilReason="inapplicable"/>
+    <iwxxm:nextAdvisoryTime nilReason="http://codes.wmo.ont/common/nil/inapplicable"/>
     
 </iwxxm:SpaceWeatherAdvisory>
