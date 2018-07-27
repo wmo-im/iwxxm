@@ -280,19 +280,19 @@
          <sch:assert test="(if( (@status = 'AMENDMENT' or @status = 'CANCELLATION' or @status = 'CORRECTION') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:validTime) and exists(iwxxm:previousReportAerodrome) and exists(iwxxm:previousReportValidPeriod) ) else( true() ) )">TAF.TAF-4: An AMENDMENT, CANCELLATION or CORRECTION report should have the appropriate elements filled including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:validTime, iwxxm:previousReportAerodrome and iwxxm:previousReportValidPeriod should be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="SIGMET.SIGMET-4">
+      <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
+         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and exists(iwxxm:analysis//iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( empty(index-of(for $i in iwxxm:analysis return number(translate($i//iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','')) eq number(translate(iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')),false())) ) else( true() ) )">SIGMET.SIGMET-4: iwxxm:analysis//iwxxm:phenomenonTime must be equal to iwxxm:validPeriod//gml:beginPosition</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-6">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
          <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 ) then( (exists(iwxxm:forecastPositionAnalysis) and empty(iwxxm:analysis//iwxxm:directionOfMotion) and empty(iwxxm:analysis//iwxxm:speedOfMotion)) or (empty(iwxxm:forecastPositionAnalysis) and exists(iwxxm:analysis//iwxxm:directionOfMotion)) or (empty(iwxxm:forecastPositionAnalysis) and empty(iwxxm:analysis//iwxxm:directionOfMotion) and empty(iwxxm:analysis//iwxxm:speedOfMotion)) ) else( true() ) )">SIGMET.SIGMET-6: A report cannot have both iwxxm:forecastPositionAnalysis and iwxxm:analysis//iwxxm:directionOfMotion (with or without iwxxm:analysis//iwxxm:speedOfMotion) at the same time</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="SIGMET.SIGMET-4">
-      <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and iwxxm:analysis/iwxxm:SIGMETEvolvingConditionCollection/@timeIndicator = 'OBSERVATION' and exists(iwxxm:analysis/iwxxm:SIGMETEvolvingConditionCollection/iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( translate(iwxxm:analysis/iwxxm:SIGMETEvolvingConditionCollection/iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') eq translate(iwxxm:validPeriod/gml:TimePeriod/gml:startPosition,'-T:Z','') ) else( true() ) )">SIGMET.SIGMET-4: When iwxxm:SIGMETEvolvingConditionCollection/@timeIndicator = 'OBSERVATION', iwxxm:phenomenonTime must be less than or equal to iwxxm:validPeriod/gml:TimePeriod/gml:startPosition</sch:assert>
-      </sch:rule>
-   </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-5">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and iwxxm:analysis/iwxxm:SIGMETEvolvingConditionCollection/@timeIndicator= 'FORECAST' and exists(iwxxm:analysis/iwxxm:SIGMETEvolvingConditionCollection/iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( translate(iwxxm:analysis/iwxxm:SIGMETEvolvingConditionCollection/iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') eq translate(iwxxm:validPeriod/gml:TimePeriod/gml:endPosition,'-T:Z','') ) else( true() ) )">SIGMET.SIGMET-5: When iwxxm:SIGMETEvolvingConditionCollection/@timeIndicator = 'FORECAST', iwxxm:phenomenonTime must be equal to iwxxm:validPeriod/gml:TimePeriod/gml:endPosition</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and exists(iwxxm:forecastPositionAnalysis//iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( empty(index-of(for $i in iwxxm:forecastPositionAnalysis return number(translate($i//iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','')) eq number(translate(iwxxm:validPeriod/gml:TimePeriod/gml:endPosition,'-T:Z','')),false())) ) else( true() ) )">SIGMET.SIGMET-5: iwxxm:forecastPositionAnalysis//iwxxm:phenomenonTime must be less than or equal to iwxxm:validPeriod//endPosition</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-8">
@@ -435,19 +435,9 @@
          <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AirWxPhenomena.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">AIRMET iwxxm:phenomenon elements should be a member of http://codes.wmo.int/49-2/AirWxPhenomena</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AIRMET-6">
-      <sch:rule context="//iwxxm:AIRMET">
-         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 ) then( (exists(iwxxm:analysis/iwxxm:forecastPositionAnalysis) and empty(iwxxm:analysis//iwxxm:directionOfMotion) and empty(iwxxm:analysis//iwxxm:speedOfMotion)) or (empty(iwxxm:analysis/iwxxm:forecastPositionAnalysis) and exists(iwxxm:analysis//iwxxm:directionOfMotion)) ) else( true() ) )">AIRMET.AIRMET-6: A report cannot have both iwxxm:forecastPositionAnalysis and iwxxm:directionOfMotion (with or without iwxxm:speedOfMotion) at the same time</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="AIRMET.AIRMET-5">
-      <sch:rule context="//iwxxm:AIRMET">
-         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and iwxxm:analysis/iwxxm:AIRMETEvolvingConditionCollection/@timeIndicator='FORECAST' and exists(iwxxm:analysis/iwxxm:AIRMETEvolvingConditionCollection/iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( translate(iwxxm:analysis/iwxxm:AIRMETEvolvingConditionCollection/iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') eq translate(iwxxm:validPeriod/gml:TimePeriod/gml:endPosition,'-T:Z','') ) else( true() ) )">AIRMET.AIRMET-5: When iwxxm:AIRMETEvolvingConditionCollection/@timeIndicator = 'FORECAST', iwxxm:phenomenonTime must be equal to iwxxm:validPeriod/gml:TimePeriod/gml:endPosition</sch:assert>
-      </sch:rule>
-   </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-4">
       <sch:rule context="//iwxxm:AIRMET">
-         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and iwxxm:analysis/iwxxm:AIRMETEvolvingConditionCollection/@timeIndicator = 'OBSERVATION' and exists(iwxxm:analysis/iwxxm:AIRMETEvolvingConditionCollection/iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( translate(iwxxm:analysis/iwxxm:AIRMETEvolvingConditionCollection/iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') eq translate(iwxxm:validPeriod/gml:TimePeriod/gml:startPosition,'-T:Z','') ) else( true() ) )">AIRMET.AIRMET-4: When iwxxm:AIRMETEvolvingConditionCollection/@timeIndicator = 'OBSERVATION', iwxxm:phenomenonTime must be less than or equal to iwxxm:validPeriod/gml:TimePeriod/gml:startPosition</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and exists(iwxxm:analysis//iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( empty(index-of(for $i in iwxxm:analysis return number(translate($i//iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','')) eq number(translate(iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')),false())) ) else( true() ) )">AIRMET.AIRMET-4: iwxxm:analysis//iwxxm:phenomenonTime must be equal to iwxxm:validPeriod//gml:beginPosition</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-2">

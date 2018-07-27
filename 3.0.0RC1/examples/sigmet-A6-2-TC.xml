@@ -140,32 +140,7 @@
             <iwxxm:member>
                 <!-- TC CENTRE N2740 W07345 -->
                 <iwxxm:SIGMETPosition gml:id="uuid.338354de-7634-4fca-ac75-3675cb592284">
-                    <iwxxm:geometry>
-                        <aixm:AirspaceVolume gml:id="uuid.4ed35f91-7189-4b9c-baed-19b5cec0b4c1">
-                            <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.c76ff9fa-ec6b-48ed-8f26-ed37c47bbc38" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                    <gml:polygonPatches>
-                                        <gml:PolygonPatch>
-                                            <gml:exterior>
-                                                <gml:Ring>
-                                                    <gml:curveMember>
-                                                        <gml:Curve gml:id="uuid.0380d35a-1d35-46a2-bbc8-38190206bfe8">
-                                                            <gml:segments>
-                                                                <gml:CircleByCenterPoint numArc="1">
-                                                                    <gml:pos>27.6667 -73.75</gml:pos>
-                                                                    <gml:radius uom="[nmi_i]">0</gml:radius>
-                                                                </gml:CircleByCenterPoint>
-                                                            </gml:segments>
-                                                        </gml:Curve>
-                                                    </gml:curveMember>
-                                                </gml:Ring>
-                                            </gml:exterior>
-                                        </gml:PolygonPatch>
-                                    </gml:polygonPatches>
-                                </aixm:Surface>
-                            </aixm:horizontalProjection>
-                        </aixm:AirspaceVolume>
-                    </iwxxm:geometry>
+                    <iwxxm:geometry nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
                 </iwxxm:SIGMETPosition>
             </iwxxm:member>
             <iwxxm:tropicalCyclonePosition>
