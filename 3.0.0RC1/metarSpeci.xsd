@@ -43,19 +43,10 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The observation which resulted in the current meteorological conditions at an aerodrome</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="trendForecast" minOccurs="0" maxOccurs="3">
+					<element nillable="true" name="trendForecast" type="iwxxm:MeteorologicalAerodromeTrendForecastPropertyType" minOccurs="0" maxOccurs="3">
 						<annotation>
 							<documentation>The process that results in a trend forecast.  When no change is expected to occur during a forecast period ("NOSIG") this is indicated by a single missing trend forecast with a nil reason of noSignificantChange</documentation>
 						</annotation>
-						<complexType>
-							<complexContent>
-								<extension base="gml:AbstractMemberType">
-									<sequence>
-										<element ref="iwxxm:MeteorologicalAerodromeTrendForecast"></element>
-									</sequence>
-								</extension>
-							</complexContent>
-						</complexType>
 					</element>
 				</sequence>
 				<attribute use="required" name="status" type="iwxxm:MeteorologicalAerodromeReportStatusType">
