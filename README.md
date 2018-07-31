@@ -14,5 +14,8 @@ Unlike the traditional forms of the ICAO Annex III / WMO No. 49 products (referr
 or TAC), IWXXM is not intended to be directly used by pilots. IWXXM is designed to be consumed by software acting on
 behalf of pilots, such as display software.
 
+# Want to provide feedback or raise a question?
+Please provide feedback to or raise your question in Google group [cbs-tt-avxml@wmo.int](https://groups.google.com/a/wmo.int/forum/?hl=en&fromgroups#!forum/cbs-tt-avxml).
+
 # References
 The [IWXXM translation repository](https://github.com/wmo-im/iwxxm-translation) has resources related to Traditional Alphanumeric Code (TAC) to IWXXM translation, including equivalent TAC/IWXXM pairs and a list of translation software.
