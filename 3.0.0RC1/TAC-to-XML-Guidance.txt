@@ -7,7 +7,7 @@ This document provides guidance on how abbreviations and codes from the Traditio
 METAR/SPECI
 ==========================
 NIL report
-  NIL reports shall be represented as a status of "MISSING" and empty "observation" with nilReason set to "http://codes.wmo.int/nil/missing" 
+  NIL reports shall be represented as a status of "MISSING" on METAR/SPECI and TAF reports
 
 CAVOK - Cloud and visibility OK
   When CAVOK conditions apply, the appropriate Record type shall have "cloudAndVisibilityOK" set to true and visibility, runway visual range, weather, and cloud information shall be missing
@@ -73,7 +73,7 @@ Observed quantities with a nil reason
 TAF
 ==========================
 NIL report
-  NIL reports shall be represented as a status of "MISSING" and empty "baseForecast" with nilReason set to "http://codes.wmo.int/common/nil/missing"
+  NIL reports shall be represented as a status of "MISSING" on METAR/SPECI and TAF reports
 
 CAVOK - Cloud and visibility OK
   When CAVOK conditions apply, the appropriate Record type shall have "cloudAndVisibilityOK" set to true and visibility, runway visual range, weather, and cloud information shall be missing
@@ -136,10 +136,10 @@ Volcanic Ash Advisory
   When volcanic ash is not provided it shall be indicated with a "ashCloudExtent" with a nilReason of "withheld"
 
 'NIL' remarks
-  NIL remarks shall be indicated with nilReason of "inapplicable"
+  NIL remarks shall be indicated with an missing "remarks" element
   
 'NO FURTHER ADVISORIES'
-  A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "inapplicable"
+  A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "Inapplicable"
 
 ==========================
 Tropical Cyclone Advisory
