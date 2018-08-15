@@ -8,7 +8,7 @@
     xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
 
     gml:id="uuid.4324ada0-ddfc-4206-9689-3aa8b58649fd"
     permissibleUsage="OPERATIONAL"

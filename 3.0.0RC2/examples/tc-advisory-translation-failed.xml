@@ -12,7 +12,7 @@ INVALID INVALID INVALID
     xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
     gml:id="uuid.4a954e38-b132-4d3c-aaba-90dbd056d497" permissibleUsage="OPERATIONAL"
     translatedBulletinID="TTAAiiCCCYYGGgg"
     translatedBulletinReceptionTime="2014-05-15T15:29:00Z"
