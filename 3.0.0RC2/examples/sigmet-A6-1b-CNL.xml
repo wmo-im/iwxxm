@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    An example of a SIGMET.  Original SIGMET from ICAO Annex 3 Example A6-1b:
+
+      YUDD SIGMET 3 VALID 101345/101600 YUSO
+      YUDD SHANLON FIR/UIR CNL SIGMET 2 101200/101600
+-->
+<iwxxm:SIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC1/iwxxm.xsd"
+
+    gml:id="uuid.6fe37ba5-7ad5-471a-ac44-48ddefb2c23f"
+    permissibleUsage="OPERATIONAL"
+    status="CANCELLATION">
+
+    <!-- time at which the results of the observation were made available (issued) -->
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.877a0733-fafb-4826-9afc-005c89a9dd3b">
+            <gml:timePosition>2012-08-10T13:45:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
+    <iwxxm:issuingAirTrafficServicesUnit>
+        <aixm:Unit gml:id="uuid.e4f83cc7-2f15-441d-97dc-2ba9f3825a8e">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="uuid.a1333c4a-23d0-4966-97dc-1d8cadc24e72">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>YUDD FIC</aixm:name>
+                    <aixm:type>FIC</aixm:type>
+                    <aixm:designator>YUDD</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:issuingAirTrafficServicesUnit>
+
+    <iwxxm:originatingMeteorologicalWatchOffice>
+        <aixm:Unit gml:id="uuid.488a352b-2928-4514-a578-a1382d213b18">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="uuid.62d0a959-3e4d-4fa3-84b9-f7d1211810ea">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>YUSO MWO</aixm:name>
+                    <aixm:type>MWO</aixm:type>
+                    <aixm:designator>YUSO</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:originatingMeteorologicalWatchOffice>
+    
+    <iwxxm:issuingAirTrafficServicesRegion>
+        <aixm:Airspace gml:id="uuid.02abae65-6254-4682-9bf3-eb5638d3c80f">
+            <aixm:timeSlice>
+                <aixm:AirspaceTimeSlice gml:id="uuid.bba3b2e0-9bc9-4cf5-a3b8-55dc56cdd753">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:type>OTHER:FIR_UIR</aixm:type>
+                    <aixm:designator>YUDD</aixm:designator>
+                    <aixm:name>SHANLON FIR/UIR</aixm:name>
+                </aixm:AirspaceTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Airspace>
+    </iwxxm:issuingAirTrafficServicesRegion>
+
+    <iwxxm:sequenceNumber>3</iwxxm:sequenceNumber>
+  
+    <!-- Valid period for this report -->
+    <iwxxm:validPeriod>
+        <gml:TimePeriod gml:id="uuid.b1c68261-5b7d-4b39-9458-fbc92d8dc326">
+            <gml:beginPosition>2012-08-10T13:45:00Z</gml:beginPosition>
+            <gml:endPosition>2012-08-10T16:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:validPeriod>
+
+    <iwxxm:cancelledSequenceNumber>2</iwxxm:cancelledSequenceNumber>
+
+    <iwxxm:cancelledValidPeriod>
+        <gml:TimePeriod gml:id="uuid.ad79d14d-6bd9-46b6-aaf0-e99b2c85ccf9">
+            <gml:beginPosition>2012-08-10T12:00:00Z</gml:beginPosition>
+            <gml:endPosition>2012-08-10T16:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:cancelledValidPeriod>
+
+    <iwxxm:phenomenon nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
+
+    <iwxxm:analysis nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
+</iwxxm:SIGMET>
