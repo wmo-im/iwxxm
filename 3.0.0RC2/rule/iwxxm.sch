@@ -515,7 +515,6 @@
          <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-1: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime and iwxxm:issuingVolcanicAshAdvisoryCentre</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <!--
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherRegion.locationIndicator">
       <sch:rule context="//*[contains(name(),'SpaceWeatherRegion')]/iwxxm:locationIndicator">
          <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxLocation.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">SpaceWeatherRegion iwxxm:locationIndicator elements should be a member of http://codes.wmo.int/49-2/SpaceWxLocation</sch:assert>
@@ -526,7 +525,6 @@
          <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxPhenomena.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">SpaceWeatherAdvisory iwxxm:phenomenon elements should be a member of http://codes.wmo.int/49-2/SpaceWxPhenomena</sch:assert>
       </sch:rule>
    </sch:pattern>
-   -->
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherAdvisory-1">
       <sch:rule context="//iwxxm:SpaceWeatherAdvisory">
          <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingSpaceWeatherCentre) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherAdvisory-1: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime and iwxxm:issuingSpaceWeatherCentre</sch:assert>
