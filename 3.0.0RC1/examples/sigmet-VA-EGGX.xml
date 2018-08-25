@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 EGGX SIGMET 4 VALID 251600/252200 EGRR - 
-EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 1600Z SFC/FL550 N6000 W01150 - N5900 W01300 - N6000 W01600 - N6000 W01150 MOV S 60KT NC FCST 2200Z SFC/FL550 N6000 W01200 - N5800 W01400 - N6000 W01535 - N6000 W01200
+EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 1600Z SFC/FL550 N6000 W01150 - N5900 W01300 - N6000 W01600 - N6000 W01150 NC FCST 2200Z SFC/FL550 N6000 W01200 - N5800 W01400 - N6000 W01535 - N6000 W01200
 -->
-<!-- note: year and month of this SIGMET unknown; YYYY and MM used in place of actual values -->
+<!-- note: year and month of this SIGMET unknown; 2018 and 07 used in place of actual values -->
 <iwxxm:VolcanicAshSIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:metce="http://def.wmo.int/metce/2013"
@@ -68,8 +68,8 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
 
     <iwxxm:validPeriod>
         <gml:TimePeriod gml:id="uuid.099bfa3a-0fb2-4a79-87f5-076fa28e6711">
-            <gml:beginPosition>YYYY-MM-25T16:00:00Z</gml:beginPosition>
-            <gml:endPosition>YYYY-MM-25T22:00:00Z</gml:endPosition>
+            <gml:beginPosition>2018-07-25T16:00:00Z</gml:beginPosition>
+            <gml:endPosition>2018-07-25T22:00:00Z</gml:endPosition>
         </gml:TimePeriod>
     </iwxxm:validPeriod>
 
@@ -79,7 +79,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
         <iwxxm:VolcanicAshSIGMETEvolvingConditionCollection gml:id="uuid.fb90468d-60bb-4828-99ed-3ff730759ac3" timeIndicator="OBSERVATION" volcanoId="uuid.99646618-9ec7-47c0-8b50-daba5b6b1da9">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.0fff6dbb-ba23-4794-810e-d2b79c895053">
-                    <gml:timePosition>YYYY-MM-25T16:00:00Z</gml:timePosition>
+                    <gml:timePosition>2018-07-25T16:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:member>
@@ -114,8 +114,6 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                       </aixm:horizontalProjection>
                     </aixm:AirspaceVolume>
                   </iwxxm:geometry>
-                  <iwxxm:directionOfMotion uom="deg">180</iwxxm:directionOfMotion>
-                  <iwxxm:speedOfMotion uom="[kn_i]">60</iwxxm:speedOfMotion>
                 </iwxxm:SIGMETEvolvingCondition>
             </iwxxm:member>
         </iwxxm:VolcanicAshSIGMETEvolvingConditionCollection>
@@ -125,7 +123,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
         <iwxxm:VolcanicAshSIGMETPositionCollection gml:id="uuid.a76bad9a-9d0b-45ea-82ed-c5f697b9d68a" volcanoId="uuid.99646618-9ec7-47c0-8b50-daba5b6b1da9">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.8176a547-141d-471f-b12f-10b7338dadbe">
-                    <gml:timePosition>YYYY-MM-25T22:00:00Z</gml:timePosition>
+                    <gml:timePosition>2018-07-25T22:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:member>
