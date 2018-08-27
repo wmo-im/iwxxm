@@ -17,5 +17,8 @@ behalf of pilots, such as display software.
 # Want to provide feedback or raise a question?
 Please provide feedback to or raise your question in Google group [cbs-tt-avxml@wmo.int](https://groups.google.com/a/wmo.int/forum/?hl=en&fromgroups#!forum/cbs-tt-avxml).
 
-# References
+# Reference
+[IWXXM](https://wiswiki.wmo.int/tiki-index.php?page=IWXXM&structure=WIS+up) on WMO WIS Wiki.
+
+# See also
 The [IWXXM translation repository](https://github.com/wmo-im/iwxxm-translation) has resources related to Traditional Alphanumeric Code (TAC) to IWXXM translation, including equivalent TAC/IWXXM pairs and a list of translation software.
