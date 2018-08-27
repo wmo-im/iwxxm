@@ -20,6 +20,11 @@
          <sch:assert test="( if( @allRunways = 'true' ) then( empty(iwxxm:runway) ) else( true() ) )">METAR_SPECI.AerodromeRunwayState-1: When all runways are being reported upon, no specific runway should be reported</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="METAR_SPECI.AerodromeRunwayState-3">
+      <sch:rule context="//iwxxm:AerodromeRunwayState">
+         <sch:assert test="( if( @cleared = 'true' ) then( empty(iwxxm:depositType) and empty(iwxxm:contamination) and empty(iwxxm:depthOfDeposit) and empty(iwxxm:estimatedSurfaceFrictionOrBrakingAction) ) else( true() ) )">METAR_SPECI.AerodromeRunwayState-3: If contaminations have ceased to exist, then iwxxm:depositType, iwxxm:contamination, iwxxm:depthOfDeposit and iwxxm:estimatedSurfaceFrictionOrBrakingAction should be empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState-2">
       <sch:rule context="//iwxxm:AerodromeRunwayState">
          <sch:assert test="(if( exists(iwxxm:runway) ) then( empty(@allRunways) or (@allRunways = 'false') ) else( true() ) )">METAR_SPECI.AerodromeRunwayState-2: When a single Runway is reported upon, the allRunways flag should be missing or false</sch:assert>
@@ -70,9 +75,9 @@
          <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-1: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome and iwxxm:observationTime</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="METAR_SPECI.AerodromeSeaState.seaState">
-      <sch:rule context="//*[contains(name(),'AerodromeSeaState')]/iwxxm:seaState">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">AerodromeSeaState iwxxm:seaState elements should be a member of http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
+   <sch:pattern id="METAR_SPECI.AerodromeSeaCondition.seaState">
+      <sch:rule context="//*[contains(name(),'AerodromeSeaCondition')]/iwxxm:seaState">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">AerodromeSeaCondition iwxxm:seaState elements should be a member of http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState.depositType">
@@ -81,22 +86,22 @@
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaState-1">
-      <sch:rule context="//iwxxm:AerodromeSeaState">
+      <sch:rule context="//iwxxm:AerodromeSeaCondition">
          <sch:assert test="( if( exists(iwxxm:seaState) ) then( empty(iwxxm:significantWaveHeight) ) else( true() ) )">METAR_SPECI.AerodromeSeaState-1: If the sea state is set, significantWaveHeight is not reported</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaState-2">
-      <sch:rule context="//iwxxm:AerodromeSeaState">
+      <sch:rule context="//iwxxm:AerodromeSeaCondition">
          <sch:assert test="( if( exists(iwxxm:significantWaveHeight) ) then( empty(iwxxm:seaState) ) else( true() ) )">METAR_SPECI.AerodromeSeaState-2: If significantWaveHeight is reported, seaState should not be set</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaState-3">
-      <sch:rule context="//iwxxm:AerodromeSeaState">
+      <sch:rule context="//iwxxm:AerodromeSeaCondition">
          <sch:assert test="( if( exists(iwxxm:seaSurfaceTemperature) and not(iwxxm:seaSurfaceTemperature/@xsi:nil = 'true') ) then( iwxxm:seaSurfaceTemperature/@uom = 'Cel' ) else( true() ) )">METAR_SPECI.AerodromeSeaState-3: seaSurfaceTemperature shall be reported in degrees Celsius (Cel)</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaState-4">
-      <sch:rule context="//iwxxm:AerodromeSeaState">
+      <sch:rule context="//iwxxm:AerodromeSeaCondition">
          <sch:assert test="( if( exists(iwxxm:significantWaveHeight) and not(iwxxm:significantWaveHeight/@xsi:nil = 'true') ) then( iwxxm:significantWaveHeight/@uom = 'm' ) else( true() ) )">METAR_SPECI.AerodromeSeaState-4: significantWaveHeight shall be reported in metres (m)</sch:assert>
       </sch:rule>
    </sch:pattern>

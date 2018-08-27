@@ -1,6 +1,9 @@
 ====================================
 3.0.0RC2 - ??? 2018
 ====================================
++ Added attribute fromPreviousReport in metarSpeci.xsd to signify the condition identified by runway state code 
+     figure 99 (issue #101) 
+* Renamed iwxxm:seaState in metarSpeci.xsd to iwxxm:seaCondition (issue #106)
 
 ====================================
 3.0.0RC1 - July 2018

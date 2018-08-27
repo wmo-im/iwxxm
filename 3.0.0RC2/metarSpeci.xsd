@@ -294,10 +294,10 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 							</complexContent>
 						</complexType>
 					</element>
-					<element nillable="true" name="seaState" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="seaCondition" minOccurs="0" maxOccurs="1">
 						<complexType>
 							<complexContent>
-								<extension base="iwxxm:AerodromeSeaStatePropertyType">
+								<extension base="iwxxm:AerodromeSeaConditionPropertyType">
 									<attribute name="nilReason" type="gml:NilReasonType"/>
 								</extension>
 							</complexContent>
@@ -414,6 +414,11 @@ ICAO Annex 3 / WMO No. 49-2:
 Section 4.8.1.5, Table A3-2 "State of the runway"</documentation>
 			</annotation>
 		</attribute>
+		<attribute name="fromPreviousReport" type="boolean">
+			<annotation>
+				<documentation>When true, indicates a new runway state report is not available in time for dissemination of the METAR message and the previous runway state report is being repeated</documentation>
+			</annotation>
+		</attribute>
 	</complexType>
 	<complexType name="AerodromeRunwayStatePropertyType">
 		<sequence>
@@ -480,12 +485,12 @@ Section 4.3.6.6a</documentation>
 		</sequence>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	<element name="AerodromeSeaState" type="iwxxm:AerodromeSeaStateType" substitutionGroup="gml:AbstractObject">
+	<element name="AerodromeSeaCondition" type="iwxxm:AerodromeSeaConditionType" substitutionGroup="gml:AbstractObject">
 		<annotation>
 			<documentation>An aggregation of sea state conditions typically reported together at an aerodrome.  This includes information on sea-surface temperature and either the state of the sea or significant wave height from aeronautical meteorological stations established on offshore structures in support of helicopter operations</documentation>
 		</annotation>
 	</element>
-	<complexType name="AerodromeSeaStateType">
+	<complexType name="AerodromeSeaConditionType">
 		<sequence>
 			<element nillable="true" name="seaSurfaceTemperature" type="iwxxm:MeasureWithNilReasonType">
 				<annotation>
@@ -522,14 +527,14 @@ Table 3700</documentation>
 			</element>
 			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 				<annotation>
-					<documentation>Extension block for optional and/or additional parameters for element AerodromeSeaState</documentation>
+					<documentation>Extension block for optional and/or additional parameters for element AerodromeSeaCondition</documentation>
 				</annotation>
 			</element>
 		</sequence>
 	</complexType>
-	<complexType name="AerodromeSeaStatePropertyType">
+	<complexType name="AerodromeSeaConditionPropertyType">
 		<sequence>
-			<element ref="iwxxm:AerodromeSeaState"></element>
+			<element ref="iwxxm:AerodromeSeaCondition"></element>
 		</sequence>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
