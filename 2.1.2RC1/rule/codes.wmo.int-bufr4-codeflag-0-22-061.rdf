@@ -1,0 +1,145 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://codes.wmo.int/def/bufr4/"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  <ldp:Container rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061">
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/3">
+        <rdfs:label xml:lang="en">Slight</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >3</skos:notation>
+        <j.0:fxy>022061</j.0:fxy>
+        <skos:note xml:lang="en">0.5 - 1.25</skos:note>
+      </skos:Concept>
+    </skos:member>
+    <dct:publisher rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:55:16.09Z</dct:modified>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/2">
+        <rdfs:label xml:lang="en">Smooth (wavelets)</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >2</skos:notation>
+        <j.0:fxy>022061</j.0:fxy>
+        <skos:note xml:lang="en">0.1 - 0.5</skos:note>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://purl.org/linked-data/registry#Register"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/7">
+        <rdfs:label xml:lang="en">High</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >7</skos:notation>
+        <j.0:fxy>022061</j.0:fxy>
+        <skos:note xml:lang="en">6 - 9</skos:note>
+      </skos:Concept>
+    </skos:member>
+    <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/15">
+        <rdfs:label xml:lang="en">Missing value</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >15</skos:notation>
+        <j.0:fxy>022061</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/9">
+        <rdfs:label xml:lang="en">Phenomenal</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >9</skos:notation>
+        <j.0:fxy>022061</j.0:fxy>
+        <skos:note xml:lang="en">Over 14</skos:note>
+      </skos:Concept>
+    </skos:member>
+    <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/6">
+        <rdfs:label xml:lang="en">Very rough</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >6</skos:notation>
+        <j.0:fxy>022061</j.0:fxy>
+        <skos:note xml:lang="en">4 - 6</skos:note>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/1">
+        <rdfs:label xml:lang="en">Calm (rippled)</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</skos:notation>
+        <j.0:fxy>022061</j.0:fxy>
+        <skos:note xml:lang="en">0 - 0.1</skos:note>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/8">
+        <rdfs:label xml:lang="en">Very high</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >8</skos:notation>
+        <j.0:fxy>022061</j.0:fxy>
+        <skos:note xml:lang="en">9 - 14</skos:note>
+      </skos:Concept>
+    </skos:member>
+    <rdfs:label>State of the sea</rdfs:label>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/0">
+        <rdfs:label xml:lang="en">Calm (glassy)</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >0</skos:notation>
+        <j.0:fxy>022061</j.0:fxy>
+        <skos:note xml:lang="en">0</skos:note>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/5">
+        <rdfs:label xml:lang="en">Rough</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >5</skos:notation>
+        <j.0:fxy>022061</j.0:fxy>
+        <skos:note xml:lang="en">2.5 - 4</skos:note>
+      </skos:Concept>
+    </skos:member>
+    <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/4">
+        <rdfs:label xml:lang="en">Moderate</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >4</skos:notation>
+        <j.0:fxy>022061</j.0:fxy>
+        <skos:note xml:lang="en">1.25 - 2.5</skos:note>
+      </skos:Concept>
+    </skos:member>
+  </ldp:Container>
+</rdf:RDF>

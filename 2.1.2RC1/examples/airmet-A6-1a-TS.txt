@@ -1,0 +1,12 @@
+YUDD AIRMET 1 VALID 151520/151800 YUSO
+YUDD SHANLON FIR ISOL TS OBS
+N OF S50 TOP ABV FL100 STNR WKN
+
+The first AIRMET message issued by a fictitious YUDD flight information
+region by the fictitious YUSO meteorological watch office since 0001 UTC;
+the message is valid from 1520 UTC to 1800 UTC on the 15th of the month;
+isolated thunderstorm with a top above 100FL is expected north of 50 latitude
+remaining stationary and weakening
+
+(not an official interpretation from ICAO Annex 3 - created by 
+Aaron Braeckel on October 7, 2012)

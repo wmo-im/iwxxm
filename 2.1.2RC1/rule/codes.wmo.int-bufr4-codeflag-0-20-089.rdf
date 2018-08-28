@@ -1,0 +1,855 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://codes.wmo.int/def/bufr4/"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  <reg:Register rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089">
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/36">
+        <rdfs:label xml:lang="en">0.36</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >36</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/98">
+        <rdfs:label xml:lang="en">0.98</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >98</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/89">
+        <rdfs:label xml:lang="en">0.89</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >89</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/11">
+        <rdfs:label xml:lang="en">0.11</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >11</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/41">
+        <rdfs:label xml:lang="en">0.41</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >41</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <rdfs:label>Runway friction coefficient</rdfs:label>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/95">
+        <rdfs:label xml:lang="en">Braking action good</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >95</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/27">
+        <rdfs:label xml:lang="en">0.27</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >27</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/37">
+        <rdfs:label xml:lang="en">0.37</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >37</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/48">
+        <rdfs:label xml:lang="en">0.48</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >48</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/82">
+        <rdfs:label xml:lang="en">0.82</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >82</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/66">
+        <rdfs:label xml:lang="en">0.66</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >66</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/9">
+        <rdfs:label xml:lang="en">0.09</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >9</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/99">
+        <rdfs:label xml:lang="en">Unreliable</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >99</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/65">
+        <rdfs:label xml:lang="en">0.65</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >65</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/52">
+        <rdfs:label xml:lang="en">0.52</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >52</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/0">
+        <rdfs:label xml:lang="en">0.00</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >0</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/13">
+        <rdfs:label xml:lang="en">0.13</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >13</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/70">
+        <rdfs:label xml:lang="en">0.70</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >70</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/80">
+        <rdfs:label xml:lang="en">0.80</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >80</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/31">
+        <rdfs:label xml:lang="en">0.31</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >31</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/58">
+        <rdfs:label xml:lang="en">0.58</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >58</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/68">
+        <rdfs:label xml:lang="en">0.68</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >68</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/86">
+        <rdfs:label xml:lang="en">0.86</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >86</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/73">
+        <rdfs:label xml:lang="en">0.73</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >73</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/59">
+        <rdfs:label xml:lang="en">0.59</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >59</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/72">
+        <rdfs:label xml:lang="en">0.72</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >72</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/56">
+        <rdfs:label xml:lang="en">0.56</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >56</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/22">
+        <rdfs:label xml:lang="en">0.22</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >22</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/38">
+        <rdfs:label xml:lang="en">0.38</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >38</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/4">
+        <rdfs:label xml:lang="en">0.04</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >4</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/17">
+        <rdfs:label xml:lang="en">0.17</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >17</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/79">
+        <rdfs:label xml:lang="en">0.79</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >79</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/21">
+        <rdfs:label xml:lang="en">0.21</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >21</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/76">
+        <rdfs:label xml:lang="en">0.76</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >76</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/96">
+        <rdfs:label xml:lang="en">0.96</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >96</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/63">
+        <rdfs:label xml:lang="en">0.63</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >63</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/14">
+        <rdfs:label xml:lang="en">0.14</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >14</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/24">
+        <rdfs:label xml:lang="en">0.24</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >24</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/81">
+        <rdfs:label xml:lang="en">0.81</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >81</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/49">
+        <rdfs:label xml:lang="en">0.49</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >49</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/42">
+        <rdfs:label xml:lang="en">0.42</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >42</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/67">
+        <rdfs:label xml:lang="en">0.67</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >67</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/77">
+        <rdfs:label xml:lang="en">0.77</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >77</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/2">
+        <rdfs:label xml:lang="en">0.02</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >2</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/15">
+        <rdfs:label xml:lang="en">0.15</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >15</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/127">
+        <rdfs:label xml:lang="en">Missing, not reported and/or runway not operational</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >127</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/12">
+        <rdfs:label xml:lang="en">0.12</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >12</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/1">
+        <rdfs:label xml:lang="en">0.01</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/90">
+        <rdfs:label xml:lang="en">0.90</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >90</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/53">
+        <rdfs:label xml:lang="en">0.53</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >53</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/83">
+        <rdfs:label xml:lang="en">0.83</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >83</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/69">
+        <rdfs:label xml:lang="en">0.69</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >69</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/87">
+        <rdfs:label xml:lang="en">0.87</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >87</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/93">
+        <rdfs:label xml:lang="en">Braking action medium</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >93</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/74">
+        <rdfs:label xml:lang="en">0.74</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >74</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/84">
+        <rdfs:label xml:lang="en">0.84</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >84</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/35">
+        <rdfs:label xml:lang="en">0.35</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >35</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/46">
+        <rdfs:label xml:lang="en">0.46</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >46</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/18">
+        <rdfs:label xml:lang="en">0.18</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >18</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/28">
+        <rdfs:label xml:lang="en">0.28</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >28</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/32">
+        <rdfs:label xml:lang="en">0.32</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >32</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/6">
+        <rdfs:label xml:lang="en">0.06</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >6</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/19">
+        <rdfs:label xml:lang="en">0.19</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >19</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/91">
+        <rdfs:label xml:lang="en">Braking action poor</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >91</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/60">
+        <rdfs:label xml:lang="en">0.60</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >60</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/50">
+        <rdfs:label xml:lang="en">0.50</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >50</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/23">
+        <rdfs:label xml:lang="en">0.23</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >23</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/33">
+        <rdfs:label xml:lang="en">0.33</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >33</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/44">
+        <rdfs:label xml:lang="en">0.44</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >44</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:58.855Z</dct:modified>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/5">
+        <rdfs:label xml:lang="en">0.05</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >5</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/78">
+        <rdfs:label xml:lang="en">0.78</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >78</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/88">
+        <rdfs:label xml:lang="en">0.88</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >88</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/26">
+        <rdfs:label xml:lang="en">0.26</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >26</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/8">
+        <rdfs:label xml:lang="en">0.08</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >8</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/39">
+        <rdfs:label xml:lang="en">0.39</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >39</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/25">
+        <rdfs:label xml:lang="en">0.25</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >25</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/43">
+        <rdfs:label xml:lang="en">0.43</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >43</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/54">
+        <rdfs:label xml:lang="en">0.54</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >54</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/64">
+        <rdfs:label xml:lang="en">0.64</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >64</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/97">
+        <rdfs:label xml:lang="en">0.97</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >97</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/51">
+        <rdfs:label xml:lang="en">0.51</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >51</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/30">
+        <rdfs:label xml:lang="en">0.30</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >30</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/40">
+        <rdfs:label xml:lang="en">0.40</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >40</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/3">
+        <rdfs:label xml:lang="en">0.03</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >3</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/55">
+        <rdfs:label xml:lang="en">0.55</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >55</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/85">
+        <rdfs:label xml:lang="en">0.85</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >85</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/16">
+        <rdfs:label xml:lang="en">0.16</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >16</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/94">
+        <rdfs:label xml:lang="en">Braking action medium to good</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >94</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/34">
+        <rdfs:label xml:lang="en">0.34</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >34</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/61">
+        <rdfs:label xml:lang="en">0.61</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >61</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/71">
+        <rdfs:label xml:lang="en">0.71</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >71</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/57">
+        <rdfs:label xml:lang="en">0.57</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >57</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/47">
+        <rdfs:label xml:lang="en">0.47</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >47</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <dct:publisher rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/29">
+        <rdfs:label xml:lang="en">0.29</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >29</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/75">
+        <rdfs:label xml:lang="en">0.75</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >75</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/62">
+        <rdfs:label xml:lang="en">0.62</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >62</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/7">
+        <rdfs:label xml:lang="en">0.07</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >7</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/10">
+        <rdfs:label xml:lang="en">0.10</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >10</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/20">
+        <rdfs:label xml:lang="en">0.20</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >20</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/92">
+        <rdfs:label xml:lang="en">Braking action medium to poor</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >92</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-089/45">
+        <rdfs:label xml:lang="en">0.45</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >45</skos:notation>
+        <j.0:fxy>020089</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+  </reg:Register>
+</rdf:RDF>
