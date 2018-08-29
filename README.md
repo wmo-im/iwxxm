@@ -17,7 +17,7 @@ behalf of pilots, such as display software.
 # Want to provide feedback or raise a question?
 Please provide feedback to or raise your question in Google group [cbs-tt-avxml@wmo.int](https://groups.google.com/a/wmo.int/forum/?hl=en&fromgroups#!forum/cbs-tt-avxml).
 
-# Reference
+# References
 * [IWXXM on WMO WIS Wiki](https://wiswiki.wmo.int/tiki-index.php?page=IWXXM&structure=WIS+up)
 * [WMO No.306 Volume I.3: Manual on Codes. Part D - Representations derived from data models](https://wiswiki.wmo.int/tiki-index.php?page=ManualCodes3)
 * [ICAO Doc 10003: Manual on the Digital Exchange of Aeronautical Meteorological Information](https://store.icao.int/publications.html/manual-on-the-digital-exchange-of-aeronautical-meteorological-information-doc-10003-english-printed.html)
