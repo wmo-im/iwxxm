@@ -19,8 +19,8 @@ Please provide feedback to or raise your question in Google group [cbs-tt-avxml@
 
 # References
 * [IWXXM on WMO WIS Wiki](https://wiswiki.wmo.int/tiki-index.php?page=IWXXM&structure=WIS+up)
-* [WMO No.306 Volume I.3: Manual on Codes. Part D - Representations derived from data models](https://wiswiki.wmo.int/tiki-index.php?page=ManualCodes3)
-* [ICAO Doc 10003: Manual on the Digital Exchange of Aeronautical Meteorological Information](https://store.icao.int/publications.html/manual-on-the-digital-exchange-of-aeronautical-meteorological-information-doc-10003-english-printed.html)
+* [WMO No.306 Volume I.3, _Manual on Codes. Part D - Representations derived from data models_](https://wiswiki.wmo.int/tiki-index.php?page=ManualCodes3)
+* [ICAO Doc 10003, _Manual on the Digital Exchange of Aeronautical Meteorological Information_](https://store.icao.int/publications.html/manual-on-the-digital-exchange-of-aeronautical-meteorological-information-doc-10003-english-printed.html)
 
 # See also
 The [IWXXM translation repository](https://github.com/wmo-im/iwxxm-translation) has resources related to Traditional Alphanumeric Code (TAC) to IWXXM translation, including equivalent TAC/IWXXM pairs and a list of translation software.
