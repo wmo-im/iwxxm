@@ -61,7 +61,7 @@ Runway depth of deposit "//"
   When the runway depth of deposits is operationally insignificant or is not measurable this shall be indicated by a "depthOfDeposits" with a nilReason of either "http://codes.wmo.int/common/nil/notObservable" or "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
 
 Runway depth of deposit "99" (value from WMO code table 1079) 
-  When the runway depth of deposits is not reported due to runway or runways non-operational due to snow, slush, ice, large drifts or runway clearance this shall be indicated by a "depthOfDeposits" with a nilReason of "http://www.opengis.net/def/nil/OGC/0/unknown"
+  When the runway depth of deposits is not reported due to runway or runways non-operational due to snow, slush, ice, large drifts or runway clearance this shall be indicated by a "depthOfDeposits" with a nilReason of "http://codes.wmo.int/common/nil/unknown"
 
 Trend forecast BECMG without a specified time (TL, AT, FM)
   When a trend forecast is reported with a BECMG block without a specified time and the period commences at the beginning of the trend forecast period and ceases by the end of the trend forecast period this should be represented as a phenomenonTime with a nilReason of "http://codes.wmo.int/common/nil/missing".  Otherwise if the BECMG time is uncertain within the trend forecast period this should be represented as a phenomenonTime with a nilReason of "http://codes.wmo.int/common/nil/unknown"
