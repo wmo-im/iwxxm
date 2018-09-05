@@ -1,0 +1,166 @@
+﻿==========================
+Introduction
+==========================
+This document provides guidance on how abbreviations and codes from the Traditional Alphanumeric Codes (TAC) are represented in XML (IWXXM).
+
+==========================
+METAR/SPECI
+==========================
+NIL report
+  NIL reports shall be represented as a status of "MISSING" on METAR/SPECI and TAF reports
+
+CAVOK - Cloud and visibility OK
+  When CAVOK conditions apply, the appropriate Record type shall have "cloudAndVisibilityOK" set to true and visibility, runway visual range, weather, and cloud information shall be missing
+  
+CLRD - Runway contamination is cleared
+  When runway contamination has been cleared, AerodromeRunwayState shall have "cleared" set to true
+  
+NSC - No clouds of operational significance
+  When no cloud of operational significance is observed/forecast, and no restriction on vertical visibility and 'CAVOK' is not appropriate, "cloud" shall be reported with a nilReason of "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
+
+NCD - No clouds detected (by auto system)
+  When no clouds are detected by an automatic observing system, this shall be indicated by a "cloud" with a nilReason of "http://codes.wmo.int/common/nil/notDetectedByAutoSystem"
+
+NOSIG - No significant changes are forecast
+  When no change is expected to occur, this shall be indicated by a single "trendForecast" with a nilReason of "http://codes.wmo.int/common/nil/noSignificantChange"
+  
+NSW - No weather of operational significance
+  The expected end of occurrence of weather phenomena shall be indicated by a "forecastWeather" with a nilReason of "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
+
+R88 (runway designator for runway state)
+  When all runways are being indicated, the AerodromeRunwayState shall have "allRunways" set to true
+
+R99 (runway designator for runway state)
+  When a new runway state report is not available in time for dissemination of the METAR message, the previous runway state report will be repeated
+
+SNOCLO - Runways closed due to snow
+  When all runways are closed due to snow, this shall be indicated with a "runwayState" with a nilReason of "http://codes.wmo.int/bufr4/codeflag/0-20-085/1"
+
+Present weather "//"
+  When present weather cannot be observed by the automatic observing system due to a temporary failure of the system/sensor, "presentWeather" shall be reported with a nilReason of "http://codes.wmo.int/common/nil/notObservable"
+
+Vertical visibility "VV///" (METAR/SPECI observations)
+  When the sky is obscured and the value of the vertical visibility cannot be determined by the automatic observing system due to a temporary failure of the system/sensor, the "verticalVisibility shall be nil with a nilReason of "http://codes.wmo.int/common/nil/notObservable"
+
+Cloud amount and base "//////"
+  When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the cloud amount and the height of cloud base cannot be observed, this shall be indicated by a cloud "layer" with a nilReason of either "http://codes.wmo.int/common/nil/notObservable" if the value could not be observed due to a sensor or system failure, or "http://codes.wmo.int/common/nil/notDetectedByAutoSystem" if the automated system is working properly but did not observe any values
+
+Cloud amount "///015"
+  When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the cloud amount cannot be observed, this shall be indicated by a cloud "layer" with an "amount" with a nilReason of either "http://codes.wmo.int/common/nil/notObservable" if the value could not be observed due to a sensor or system failure, or "http://codes.wmo.int/common/nil/notDetectedByAutoSystem" if the automated system is working properly but did not observe any values
+
+Cloud base "BKN///"
+  When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the height of cloud base cannot be observed, this shall be indicated by a cloud "layer" with a "base" and a nilReason of either "http://codes.wmo.int/common/nil/notObservable" if the value could not be observed due to a sensor or system failure, or "http://codes.wmo.int/common/nil/notDetectedByAutoSystem" if the automated system is working properly but did not observe any values
+
+Cloud type "///"
+  When cloud type cannot be observed by an auto system due to sensor limitations "cloudType" shall be reported with a nilReason of "http://codes.wmo.int/common/nil/notObservable"
+ 
+Runway designator "R99"
+  When a new runway state report is not available in the time for dissemination of the METAR message, "fromPreviousReport" shall be "true" and "runway" shall be "nil" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
+ 
+Runway depth of deposit "//"
+  When the runway depth of deposits is operationally insignificant or is not measurable this shall be indicated by a "depthOfDeposits" with a nilReason of either "http://codes.wmo.int/common/nil/notObservable" or "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
+
+Runway depth of deposit "99" (value from WMO code table 1079) 
+  When the runway depth of deposits is not reported due to runway or runways non-operational due to snow, slush, ice, large drifts or runway clearance this shall be indicated by a "depthOfDeposits" with a nilReason of "http://codes.wmo.int/common/nil/unknown"
+
+Trend forecast BECMG without a specified time (TL, AT, FM)
+  When a trend forecast is reported with a BECMG block without a specified time and the period commences at the beginning of the trend forecast period and ceases by the end of the trend forecast period this should be represented as a phenomenonTime with a nilReason of "http://codes.wmo.int/common/nil/missing".  Otherwise if the BECMG time is uncertain within the trend forecast period this should be represented as a phenomenonTime with a nilReason of "http://codes.wmo.int/common/nil/unknown"
+
+Trend forecast TEMPO without a specified time (TL, AT, FM)
+  When a trend forecast is reported with a TEMPO block without a specified time and the period commences at the beginning of the trend forecast period and ceases by the end of the trend forecast period this should be represented as a phenomenonTime with a nilReason of "http://codes.wmo.int/common/nil/missing"
+
+Observed quantities with a nilReason
+  When observed measures or quantities (such as air temperature or prevailing visibility) can not be reported due to sensor failures, the XML element should have xsi:nil set to "true", the uom set to "N/A", and the nilReason set to "http://codes.wmo.int/common/nil/notObservable"
+  
+==========================
+TAF
+==========================
+NIL report
+  NIL reports shall be represented as a status of "MISSING" on METAR/SPECI and TAF reports
+
+CAVOK - Cloud and visibility OK
+  When CAVOK conditions apply, the appropriate Record type shall have "cloudAndVisibilityOK" set to true and visibility, runway visual range, weather, and cloud information shall be missing
+  
+NSC - No clouds of operational significance
+  When no cloud of operational significance is observed/forecast, and 'CAVOK' is not appropriate, "cloud" shall be reported with a nilReason of "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
+  
+NSW - No weather of operational significance
+  The expected end of occurrence of weather phenomena shall be indicated by a "weather" with a nilReason of "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
+
+Vertical visibility "VV///"
+  When the vertical visibility is not available for any reason, "verticalVisibility" shall be missing with no nilReason
+  
+==========================
+AIRMET and SIGMET
+==========================
+FLnnn, nnnnM, nnnnFT
+  When a single altitude for AIR/SIGMET conditions are specified, this shall be indicated with the same altitude value in both aixm:lowerLimit and aixm:upperLimit
+
+TOP [ABV or BLW] FLnnn
+  When an AIR/SIGMET top is specified without a lower limit, this shall be indicated with a aixm:lowerLimit with a nilReason of "http://codes.wmo.int/common/nil/missing"
+
+Nnn[nn] Wnnn[nn] or Nnn[nn] Ennn[nn] or Snn[nn] Wnnn[nn] or Snn[nn] Ennn[nn]
+  When an AIR/SIGMET position is reported at a single point the location shall be indicated as a gml:CircleByCenterPoint with a gml:radius of 0
+
+NO VA EXP - No volcanic ash expected
+  The expected end of occurrence of volcanic ash shall be indicated with a "VolcanicAshSIGMET/phenomenon" with a nilReason of "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
+
+==========================
+Volcanic Ash Advisory
+==========================
+'UNKNOWN' volcano name
+  An unknown volcano name shall be indicated with an "EruptingVolcano/name" of "UNKNOWN"
+  
+'UNNAMED' volcano name
+  An unnamed volcano shall be indicated with an "EruptingVolcano/name" of "UNNAMED"
+  
+'UNKNOWN' volcano location
+  An unknown volcano location shall be indicated with a "EruptingVolcano/position" with a nilReason of "http://codes.wmo.int/common/nil/unknown"
+  
+'UNKNOWN' aviation colour code
+  An unknown aviation colour code shall be indicated with a "colourCode" with a nilReason of "http://codes.wmo.int/common/nil/unknown"
+  
+'NOT GIVEN' aviation colour code
+  An aviation colour code that is not given shall be indicated with a "colourCode" with a nilReason of "http://codes.wmo.int/common/nil/withheld"
+
+'NIL' aviation colour code
+  A NIL aviation colour code shall be indicated with a "colourCode" with a nilReason of "http://codes.wmo.int/common/nil/missing"
+
+'VA NOT IDENTIFIABLE FM SATELLITE DATA'
+  Unidentifiable volcanic ash from satellite data shall be indicated with a "ashCloudExtent" with a nilReason of "http://codes.wmo.int/common/nil/unknown"
+  
+'NO VA EXP'
+  When no volcanic ash is expected it shall be indicated with a "ashCloudExtent" with a nilReason of "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
+  
+'NOT AVBL'
+  When volcanic ash is not available it shall be indicated with a "ashCloudExtent" with a nilReason of "http://codes.wmo.int/common/nil/missing"
+
+'NOT PROVIDED'
+  When volcanic ash is not provided it shall be indicated with a "ashCloudExtent" with a nilReason of "http://codes.wmo.int/common/nil/withheld"
+
+'NIL' remarks
+  NIL remarks shall be indicated with an missing "remarks" element
+  
+'NO FURTHER ADVISORIES'
+  A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/Inapplicable"
+
+==========================
+Tropical Cyclone Advisory
+==========================
+'UNNAMED' volcano name
+  An unnamed tropical cyclone shall be indicated with a "tropicalCycloneName" of "UNNAMED"
+
+'NIL' remarks
+  NIL remarks shall be indicated with an missing "remarks" element
+  
+'NO MSG EXP'
+  A NIL shall be indicated with "expectedNextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/Inapplicable"
+  
+==========================
+Space Weather Advisory
+==========================
+'NIL' remarks
+  NIL remarks shall be indicated with an missing "remarks" element
+  
+'NO FURTHER ADVISORIES'
+  A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/Inapplicable"

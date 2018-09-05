@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    An example of a AIRMET.  Original AIRMET from ICAO Annex 3 Example A6-1:
+    
+    YUDD AIRMET 1 VALID 151520/151800 YUSO – 
+    YUDD SHANLON FIR ISOL TS 
+    OBS N OF S50 TOP ABV FL100 STNR WKN -->
+<iwxxm:AIRMET xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
+    
+    permissibleUsage="OPERATIONAL"
+    gml:id="uuid.69a2497b-193c-47bf-a6bd-1cc71acbc8e5" status="NORMAL">
+    
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.6ffb87f7-6eef-4bae-b4f2-016e2951d7dd">
+            <gml:timePosition>2014-05-15T15:20:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
+    <iwxxm:issuingAirTrafficServicesUnit>
+        <aixm:Unit gml:id="uuid.1b54b36f-bc16-4111-abb6-05ff6aad744b">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="uuid.91cf4ebe-8687-432f-a1e1-aaf7ebc053b2">
+                <gml:validTime/>
+                <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                <aixm:name>YUDD FIC</aixm:name>
+                <aixm:type>FIC</aixm:type>
+                <aixm:designator>YUDD</aixm:designator>
+            </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:issuingAirTrafficServicesUnit>
+
+    <iwxxm:originatingMeteorologicalWatchOffice>
+        <aixm:Unit gml:id="uuid.30437923-6a83-4bc7-a07e-66e7419e50df">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="uuid.f8eb9604-6ddb-4553-9d9e-84548fb7af42">
+                  <gml:validTime/>
+                  <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                  <aixm:name>YUDD MWO</aixm:name>
+                  <aixm:type>MWO</aixm:type>
+                  <aixm:designator>YUDD</aixm:designator>
+                </aixm:UnitTimeSlice>
+          </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:originatingMeteorologicalWatchOffice>
+
+    <iwxxm:issuingAirTrafficServicesRegion>
+        <aixm:Airspace gml:id="uuid.09f5436c-cf2c-40ca-add5-c95a8f6875f9">
+              <aixm:timeSlice>
+                    <aixm:AirspaceTimeSlice gml:id="uuid.c62fe63e-792d-49e6-9f09-b6c2940d1591">
+                          <gml:validTime/>
+                          <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                          <aixm:type>FIR</aixm:type>
+                          <aixm:designator>YUCC</aixm:designator>
+                          <aixm:name>AMSWELL FIR</aixm:name>
+                        <!-- FIR boundary can be reported in an aixm:geometryComponent -->
+                    </aixm:AirspaceTimeSlice>
+              </aixm:timeSlice>
+        </aixm:Airspace>
+    </iwxxm:issuingAirTrafficServicesRegion>
+
+    <iwxxm:sequenceNumber>1</iwxxm:sequenceNumber>
+
+    <iwxxm:validPeriod>
+        <gml:TimePeriod gml:id="uuid.74b125c2-a4ad-4434-b3c0-f650eb57ce93">
+            <gml:beginPosition>2014-05-15T15:20:00</gml:beginPosition>
+            <gml:endPosition>2014-05-15T18:00:00</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:validPeriod>
+    
+    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/AirWxPhenomena/ISOL_TS"/>
+    
+    <!-- OBS N OF S50 TOP ABV FL100 STNR WKN -->
+    <iwxxm:analysis>
+        <!-- N OF S50 TOP ABV FL100 STNR WKN -->
+        <iwxxm:AIRMETEvolvingConditionCollection gml:id="uuid.d61fb5e7-b55e-462e-9e2b-0cb8dc366064" timeIndicator="OBSERVATION">
+		<iwxxm:phenomenonTime nilReason="http://codes.wmo.int/common/nil/missing"/>
+            <iwxxm:member>
+                <iwxxm:AIRMETEvolvingCondition gml:id="uuid.deeb1ae5-0094-4ec8-af92-aa7b3f156a3f" intensityChange="WEAKEN">
+                    <iwxxm:geometry>
+                        <aixm:AirspaceVolume gml:id="uuid.8ed71782-7c63-4ca5-9ed6-a31b788f64af">
+                            <aixm:lowerLimit uom="FL">100</aixm:lowerLimit>
+                            <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.626c2d10-d5ba-427e-a0c8-98949dd20a69" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:LinearRing>
+                                                    <!-- bounding polygon N of S50 clipped to edge of FIR -->
+                                                    <gml:posList>-50.0 50.0 -50.0 70.0 -40.0 70.0 -40.0 50.0 -50.0 50.0</gml:posList>
+                                                </gml:LinearRing>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:geometry>
+                    <iwxxm:geometryUpperLimitOperator>ABOVE</iwxxm:geometryUpperLimitOperator>
+                    <iwxxm:directionOfMotion xsi:nil="true" uom="N/A" nilReason="inapplicable"/>
+                    <iwxxm:speedOfMotion uom="[kn_i]">0</iwxxm:speedOfMotion>
+                </iwxxm:AIRMETEvolvingCondition>
+            </iwxxm:member>
+        </iwxxm:AIRMETEvolvingConditionCollection>
+    </iwxxm:analysis>
+</iwxxm:AIRMET>
