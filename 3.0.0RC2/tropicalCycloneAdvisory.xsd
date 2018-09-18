@@ -55,7 +55,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 When the remark is nil, it should be indicated by a missing remarks with a nil reason of 'inapplicable'</documentation>
 						</annotation>
 					</element>
-					<element name="expectedNextAdvisoryTime" type="gml:TimeInstantPropertyType">
+					<element name="nextAdvisoryTime" type="gml:TimeInstantPropertyType">
 						<annotation>
 							<documentation>The time at which the next advisory is expected to be issued.
 
@@ -64,7 +64,7 @@ Use attribute indeterminatePosition to element timePosition to indicate if the a
 When no subsequent advisory is expected to be issued it should be indicated by a missing expected advisory time with a nil reason of 'inapplicable'</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element TropicalCycloneAdvisory</documentation>
 						</annotation>
@@ -164,7 +164,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 							<documentation>The tropical cyclone position</documentation>
 						</annotation>
 					</element>
-					<element name="maximumSurfaceWindSpeed" type="gml:SpeedType">
+					<element name="meanMaxSurfaceWindSpeed" type="gml:SpeedType">
 						<annotation>
 							<documentation>The forecast maximum surface wind speed.  Maximum wind speeds shall be provided in either two units of measures: "m/s"or "[kn_i]" (knot).</documentation>
 						</annotation>
