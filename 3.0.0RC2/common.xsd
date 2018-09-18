@@ -93,7 +93,7 @@ Vertical visibility shall be reported either in meters ("m") or feet ("[ft_i]").
 						</annotation>
 					</element>
 					<element name="layer" type="iwxxm:CloudLayerPropertyType" minOccurs="0" maxOccurs="4"></element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element AerodromeCloudForecast</documentation>
 						</annotation>
@@ -200,7 +200,7 @@ Wind gusts shall be provided in either two units of measures: "m/s" or "[kn_i]" 
 When no operator is reported, wind gust speed is an exact value with identical semantics to other measured quantities.</documentation>
 				</annotation>
 			</element>
-			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element AerodromeSurfaceWindTrendForecast</documentation>
 				</annotation>
@@ -240,7 +240,7 @@ Measured cloud bases shall be reported in meters ("m") or feet ("[ft_i]").</docu
 					<documentation>The observed significant cloud types: cumulonimbus or towering cumulus</documentation>
 				</annotation>
 			</element>
-			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element CloudLayer</documentation>
 				</annotation>

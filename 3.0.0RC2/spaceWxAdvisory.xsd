@@ -64,7 +64,7 @@ Use attribute indeterminatePosition to element timePosition to indicate if the a
 When no subsequent advisory is expected to be issued it should be indicated by a missing expected advisory time with a nil reason of 'inapplicable'</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element SpaceWeatherAdvisory</documentation>
 						</annotation>
@@ -95,7 +95,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 						</annotation>
 					</element>
 					<element name="region" type="iwxxm:SpaceWeatherRegionPropertyType" minOccurs="1" maxOccurs="unbounded"></element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element SpaceWeatherAnalysis</documentation>
 						</annotation>
@@ -136,7 +136,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 							<documentation>The geographic area code, such as high northern latitudes</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element SpaceWeatherRegion</documentation>
 						</annotation>

@@ -129,7 +129,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 							<documentation>The mean maximum surface wind near the cyclone centre over 10 minutes.  Mean maximum wind speeds shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element TropicalCycloneObservedConditions</documentation>
 						</annotation>
@@ -169,7 +169,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 							<documentation>The forecast maximum surface wind speed.  Maximum wind speeds shall be provided in either two units of measures: "m/s"or "[kn_i]" (knot).</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element TropicalCycloneForecastConditions</documentation>
 						</annotation>

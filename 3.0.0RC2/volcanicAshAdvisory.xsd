@@ -71,7 +71,7 @@ Use attribute indeterminatePosition to element timePosition to indicate if the a
 When no subsequent advisory is expected to be issued it should be indicated by a missing expected advisory time with a nil reason of 'inapplicable'</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshAdvisory</documentation>
 						</annotation>
@@ -102,7 +102,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 						</annotation>
 					</element>
 					<element name="ashCloud" type="iwxxm:VolcanicAshCloudPropertyType" minOccurs="1" maxOccurs="unbounded"></element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshConditions</documentation>
 						</annotation>
@@ -172,7 +172,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 							<documentation>The lower limit vertical reference of wind conditions.  Only reported when volcanic ash is not identifiable from satellite data.</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshCloud</documentation>
 						</annotation>

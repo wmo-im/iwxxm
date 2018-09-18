@@ -137,7 +137,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The members of this collection</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element SIGMETEvolvingConditionCollection</documentation>
 						</annotation>
@@ -176,7 +176,7 @@ In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE 
 							<documentation>The geographic region affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in Annex 3: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element SIGMETPosition</documentation>
 						</annotation>
@@ -283,7 +283,7 @@ Each analysis has a single SIGMETEvolvingConditionCollection as its result.  </d
 							<documentation>The FIR to which volcanic ash has moved.  Reported only on SIGMET cancellation reports</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element SIGMET</documentation>
 						</annotation>
@@ -348,7 +348,7 @@ This element value is given in degrees from true North. Plane angle unit of meas
 speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]" (knots).</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element SIGMETEvolvingCondition</documentation>
 						</annotation>
@@ -443,7 +443,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 							<documentation>The members of this collection</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element SIGMETPositionCollection</documentation>
 						</annotation>

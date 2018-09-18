@@ -86,7 +86,7 @@ See ICAO Annex 3 / WMO No. 49-2 Table A3-2</documentation>
 		<complexContent>
 			<extension base="iwxxm:MeteorologicalAerodromeObservationReportType">
 				<sequence>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element SPECI</documentation>
 						</annotation>
@@ -117,7 +117,7 @@ See ICAO Annex 3 / WMO No. 49-2 Table A3-2</documentation>
 		<complexContent>
 			<extension base="iwxxm:MeteorologicalAerodromeObservationReportType">
 				<sequence>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element METAR</documentation>
 						</annotation>
@@ -176,7 +176,7 @@ When no operator is reported, prevailing visibility represents an exact value wi
 					<element name="surfaceWind" type="iwxxm:AerodromeSurfaceWindTrendForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
 					<element nillable="true" name="weather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3"></element>
 					<element nillable="true" name="cloud" type="iwxxm:AerodromeCloudForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element MeteorologicalAerodromeTrendForecast</documentation>
 						</annotation>
@@ -312,7 +312,7 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 							</complexContent>
 						</complexType>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element MeteorologicalAerodromeObservation</documentation>
 						</annotation>
@@ -393,7 +393,7 @@ WMO 306:
 Table 0366</documentation>
 				</annotation>
 			</element>
-			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element AerodromeRunwayState</documentation>
 				</annotation>
@@ -461,7 +461,7 @@ Section 4.3.6.6</documentation>
 To report a mean RVR of at least 2000 metres, mean RVR is reported as 2000 metres and the operator is reported as "above".  To report a mean RVR of less than 50 metres, mean RVR is reported as 50 metres and the operator is reported as "below".  When no operator is reported, mean RVR represents an exact value with identical semantics to other measured quantities</documentation>
 				</annotation>
 			</element>
-			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element AerodromeRunwayVisualRange</documentation>
 				</annotation>
@@ -525,7 +525,7 @@ WMO 306:
 Table 3700</documentation>
 				</annotation>
 			</element>
-			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element AerodromeSeaCondition</documentation>
 				</annotation>
@@ -550,7 +550,7 @@ Table 3700</documentation>
 					<documentation>The specific runway(s) affected by wind shear at this aerodrome. No specific runways are reported when all runways are affected by wind shear</documentation>
 				</annotation>
 			</element>
-			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element AerodromeWindShear</documentation>
 				</annotation>
@@ -598,7 +598,7 @@ When the sky is obscured and the value of the vertical visibility cannot be dete
 					</complexContent>
 				</complexType>
 			</element>
-			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element AerodromeCloud</documentation>
 				</annotation>
@@ -698,7 +698,7 @@ Section 4.1.5.2b</documentation>
 					</appinfo>
 				</annotation>
 			</element>
-			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element AerodromeSurfaceWind</documentation>
 				</annotation>
@@ -783,7 +783,7 @@ Direction of minimum visibility shall be given in degrees from true North. Plane
 					</appinfo>
 				</annotation>
 			</element>
-			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element AerodromeHorizontalVisibility</documentation>
 				</annotation>

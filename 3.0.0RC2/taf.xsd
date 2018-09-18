@@ -61,7 +61,7 @@ Prevailing conditions and forecast changes differ in that the prevailing conditi
 							<documentation>The valid time period for the previously amended and/or cancelled report</documentation>
 						</annotation>
 					</element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element TAF</documentation>
 						</annotation>
@@ -129,7 +129,7 @@ When no operator is reported, prevailing visibility represents an exact value wi
 					<element name="weather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3"></element>
 					<element name="cloud" type="iwxxm:AerodromeCloudForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
 					<element name="temperature" type="iwxxm:AerodromeAirTemperatureForecastPropertyType" minOccurs="0" maxOccurs="2"></element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element MeteorologicalAerodromeForecast</documentation>
 						</annotation>
@@ -206,7 +206,7 @@ ICAO Annex 3 / WMO No. 49-2:
 "TN"</documentation>
 				</annotation>
 			</element>
-			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element AerodromeAirTemperatureForecast</documentation>
 				</annotation>
