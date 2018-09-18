@@ -462,7 +462,7 @@
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneForecastConditions-1">
       <sch:rule context="//iwxxm:TropicalCycloneForecastConditions">
-         <sch:assert test="( if( exists(iwxxm:maximumSurfaceWindSpeed) and not(iwxxm:maximumSurfaceWindSpeed/@xsi:nil = 'true') ) then( (iwxxm:maximumSurfaceWindSpeed/@uom = 'm/s') or (iwxxm:maximumSurfaceWindSpeed/@uom = '[kn_i]') ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneForecastConditions-1: maximumSurfaceWindSpeed shall be reported in metres per second (m/s) or knots ([kn_i])</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:meanMaxSurfaceWindSpeed) and not(iwxxm:meanMaxSurfaceWindSpeed/@xsi:nil = 'true') ) then( (iwxxm:meanMaxSurfaceWindSpeed/@uom = 'm/s') or (iwxxm:meanMaxSurfaceWindSpeed/@uom = '[kn_i]') ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneForecastConditions-1: meanMaxSurfaceWindSpeed shall be reported in metres per second (m/s) or knots ([kn_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneAdvisory-1">
