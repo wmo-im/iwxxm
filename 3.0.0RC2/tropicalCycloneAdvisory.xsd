@@ -43,9 +43,9 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The observed conditions of the tropical cyclone</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="forecast" type="iwxxm:TropicalCycloneForecastConditionsPropertyType" minOccurs="4" maxOccurs="4">
+					<element nillable="true" name="forecast" type="iwxxm:TropicalCycloneForecastConditionsPropertyType" minOccurs="1" maxOccurs="unbounded">
 						<annotation>
-							<documentation>The forecast conditions of the tropical cyclone, one each for the 6 hour, 12 hour, 18 hour, and 24 hour forecast periods</documentation>
+							<documentation>The forecast conditions of the tropical cyclone at given time intervals.</documentation>
 						</annotation>
 					</element>
 					<element name="remarks" type="iwxxm:StringWithNilReasonType">
