@@ -20,8 +20,9 @@
             xmlns:iwxxm="http://icao.int/iwxxm/3.0"
             xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
             gml:id="uuid.ae3b123f-4fa1-447e-aa0e-5a950c8abff2"
+            reportStatus="NORMAL"
             permissibleUsage="OPERATIONAL"
-            status="MISSING">
+            isNilReport="true">
 
             <iwxxm:issueTime>
                 <gml:TimeInstant gml:id="uuid.b28ba3dd-6544-4d7b-9a1f-342c63b458b5">
@@ -43,7 +44,8 @@
                 </aixm:AirportHeliport>
             </iwxxm:aerodrome>
         
-	    <iwxxm:baseForecast nilReason="http://codes.wmo.int/common/nil/missing"/>
+ 	        <iwxxm:baseForecast nilReason="http://codes.wmo.int/common/nil/missing"/>
+
         </iwxxm:TAF>
 
     </collect:meteorologicalInformation>

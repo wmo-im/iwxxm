@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-    An example of a AIRMET.  Original AIRMET from ICAO Annex 3 Example A6-1:
+    An example of AIRMET.  Original AIRMET from ICAO Annex 3 Example A6-1:
     
-    YUDD AIRMET 1 VALID 151520/151800 YUSO – 
+    YUDD AIRMET 1 VALID 151520/151800 YUSO- 
     YUDD SHANLON FIR ISOL TS 
-    OBS N OF S50 TOP ABV FL100 STNR WKN -->
-<iwxxm:AIRMET xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:metce="http://def.wmo.int/metce/2013"
+    OBS N OF S50 TOP ABV FL100 STNR WKN
+-->
+<iwxxm:AIRMET 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
-    
-    permissibleUsage="OPERATIONAL"
-    gml:id="uuid.69a2497b-193c-47bf-a6bd-1cc71acbc8e5" status="NORMAL">
+    gml:id="uuid.69a2497b-193c-47bf-a6bd-1cc71acbc8e5"
+    reportStatus="NORMAL"
+    permissibleUsage="OPERATIONAL">
     
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.6ffb87f7-6eef-4bae-b4f2-016e2951d7dd">
@@ -78,13 +81,14 @@
     <iwxxm:analysis>
         <!-- N OF S50 TOP ABV FL100 STNR WKN -->
         <iwxxm:AIRMETEvolvingConditionCollection gml:id="uuid.d61fb5e7-b55e-462e-9e2b-0cb8dc366064" timeIndicator="OBSERVATION">
-		<iwxxm:phenomenonTime nilReason="http://codes.wmo.int/common/nil/missing"/>
+	    <iwxxm:phenomenonTime nilReason="http://codes.wmo.int/common/nil/missing"/>
             <iwxxm:member>
                 <iwxxm:AIRMETEvolvingCondition gml:id="uuid.deeb1ae5-0094-4ec8-af92-aa7b3f156a3f" intensityChange="WEAKEN">
                     <iwxxm:geometry>
                         <aixm:AirspaceVolume gml:id="uuid.8ed71782-7c63-4ca5-9ed6-a31b788f64af">
-                            <aixm:lowerLimit uom="FL">100</aixm:lowerLimit>
-                            <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+                        <aixm:upperLimit uom="FL">100</aixm:upperLimit>
+	                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+	                    <aixm:maximumLimit xsi:nil="true" nilReason="unknown"/>
                             <aixm:horizontalProjection>
                                 <aixm:Surface gml:id="uuid.626c2d10-d5ba-427e-a0c8-98949dd20a69" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:polygonPatches>
@@ -101,7 +105,6 @@
                             </aixm:horizontalProjection>
                         </aixm:AirspaceVolume>
                     </iwxxm:geometry>
-                    <iwxxm:geometryUpperLimitOperator>ABOVE</iwxxm:geometryUpperLimitOperator>
                     <iwxxm:directionOfMotion xsi:nil="true" uom="N/A" nilReason="inapplicable"/>
                     <iwxxm:speedOfMotion uom="[kn_i]">0</iwxxm:speedOfMotion>
                 </iwxxm:AIRMETEvolvingCondition>

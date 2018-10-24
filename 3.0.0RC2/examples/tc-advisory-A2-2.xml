@@ -24,12 +24,16 @@ RMK:                        NIL
 NXT MSG:                    20040925/2000Z
 
 -->
-<iwxxm:TropicalCycloneAdvisory xmlns:gml="http://www.opengis.net/gml/3.2"
+<iwxxm:TropicalCycloneAdvisory 
+   xmlns:gml="http://www.opengis.net/gml/3.2"
    xmlns:iwxxm="http://icao.int/iwxxm/3.0"
    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+   xmlns:metce="http://def.wmo.int/metce/2013"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
-   gml:id="uuid.217b27d6-fbc0-499b-b58e-4ee062c86cd4" permissibleUsage="OPERATIONAL">
+   gml:id="uuid.217b27d6-fbc0-499b-b58e-4ee062c86cd4" 
+   reportStatus="NORMAL"
+   permissibleUsage="OPERATIONAL">
 
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.d1858428-a96d-4825-aecd-07a929ab07d2">
@@ -50,7 +54,12 @@ NXT MSG:                    20040925/2000Z
         </aixm:Unit>
     </iwxxm:issuingTropicalCycloneAdvisoryCentre>
 
-    <iwxxm:tropicalCycloneName>GLORIA</iwxxm:tropicalCycloneName>
+    <iwxxm:tropicalCycloneName>
+        <metce:TropicalCyclone gml:id="uuid.d30accc0-1784-4081-ad70-937134018150">
+            <metce:name>Gloria</metce:name>
+        </metce:TropicalCyclone>
+    </iwxxm:tropicalCycloneName>
+    
     <iwxxm:advisoryNumber>01</iwxxm:advisoryNumber>
 
     <iwxxm:observation>
@@ -95,7 +104,7 @@ NXT MSG:                    20040925/2000Z
             <iwxxm:movementDirection uom="deg">315</iwxxm:movementDirection>
             <iwxxm:movementSpeed uom="km/h">20</iwxxm:movementSpeed>
             <iwxxm:centralPressure uom="hPa">965</iwxxm:centralPressure>
-            <iwxxm:meanMaxSurfaceWind uom="m/s">22</iwxxm:meanMaxSurfaceWind>
+            <iwxxm:maximumSurfaceWindSpeed uom="m/s">22</iwxxm:maximumSurfaceWindSpeed>
         </iwxxm:TropicalCycloneObservedConditions>
     </iwxxm:observation>
 
@@ -169,10 +178,10 @@ NXT MSG:                    20040925/2000Z
 
     <iwxxm:remarks nilReason="http://codes.wmo.int/common/nil/inappropriate"/>
 
-    <iwxxm:expectedNextAdvisoryTime>
+    <iwxxm:nextAdvisoryTime>
         <gml:TimeInstant gml:id="uuid.002b0056-d267-47b7-a9ef-4c7ca70aacd9">
             <gml:timePosition>2004-09-25T20:00:00Z</gml:timePosition>
         </gml:TimeInstant>
-    </iwxxm:expectedNextAdvisoryTime>
+    </iwxxm:nextAdvisoryTime>
 
 </iwxxm:TropicalCycloneAdvisory>

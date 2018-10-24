@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC2" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC2" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
-	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd"></import>
 	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.2/metce.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
@@ -30,17 +29,17 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The issuing VAAC</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="volcano" type="metce:EruptingVolcanoPropertyType">
+					<element name="volcano" type="metce:EruptingVolcanoPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The erupting volcano that is the source of volcanic ash</documentation>
 						</annotation>
 					</element>
-					<element name="advisoryNumber" type="iwxxm:StringWithNilReasonType">
+					<element name="advisoryNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Advisory number: year in full and message number (separate sequence for each volcano)</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="informationSource" type="iwxxm:StringWithNilReasonType">
+					<element name="informationSource" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Information source - described in free text</documentation>
 						</annotation>
@@ -50,19 +49,24 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The aviation colour code</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="analysis" type="iwxxm:VolcanicAshConditionsPropertyType" minOccurs="1" maxOccurs="unbounded">
+					<element name="observation" type="iwxxm:VolcanicAshObservedOrEstimatedConditionsPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The observed and estimated positions of volcanic ash clouds.  Each analysis represents an observed or 6/12/18 hour forecast of volcanic ash.</documentation>
+							<documentation>The observed (or estimated) conditions of volcanic ash clouds.</documentation>
 						</annotation>
 					</element>
-					<element name="remarks" type="iwxxm:StringWithNilReasonType">
+					<element name="forecast" type="iwxxm:VolcanicAshForecastConditionsPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The forecast conditions of volcanic ash clouds.</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Remarks, as necessary.
 
 When the remark is nil, it should be indicated by a missing remarks with a nil reason of 'inapplicable'</documentation>
 						</annotation>
 					</element>
-					<element name="nextAdvisoryTime" type="gml:TimeInstantPropertyType">
+					<element name="nextAdvisoryTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The time at which the next advisory will be issued
 
@@ -87,112 +91,259 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	<element name="VolcanicAshConditions" type="iwxxm:VolcanicAshConditionsType" substitutionGroup="gml:AbstractFeature">
+	<element name="VolcanicAshObservedOrEstimatedConditions" type="iwxxm:VolcanicAshObservedOrEstimatedConditionsType" substitutionGroup="gml:AbstractFeature">
 		<annotation>
-			<documentation>Conditions that indicate the presence of volcanic ash. </documentation>
+			<documentation>Observed (or estimated) conditions of volcanic ash clouds</documentation>
 		</annotation>
 	</element>
-	<complexType name="VolcanicAshConditionsType">
+	<complexType name="VolcanicAshObservedOrEstimatedConditionsType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
 						<annotation>
-							<documentation>The time at which meteorological phenomena occur</documentation>
+							<documentation>The day and time (in UTC) of observation (or estimation) of volcanic ash</documentation>
 						</annotation>
 					</element>
-					<element name="ashCloud" type="iwxxm:VolcanicAshCloudPropertyType" minOccurs="1" maxOccurs="unbounded"></element>
-					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+					<element name="wind" type="iwxxm:WindObservedOrEstimatedPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshConditions</documentation>
+							<documentation>Wind information to be provided when volcanic ash is not identifiable from satellite data.</documentation>
 						</annotation>
 					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="VolcanicAshConditionsPropertyType">
-		<sequence minOccurs="0">
-			<element ref="iwxxm:VolcanicAshConditions"></element>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
-	</complexType>
-	<element name="VolcanicAshCloud" type="iwxxm:VolcanicAshCloudType" substitutionGroup="gml:AbstractFeature">
-		<annotation>
-			<documentation>A volcanic ash cloud, including a horizontal and vertical extent, as well as the speed and direction of motion</documentation>
-		</annotation>
-	</element>
-	<complexType name="VolcanicAshCloudType">
-		<complexContent>
-			<extension base="gml:AbstractFeatureType">
-				<sequence>
-					<element nillable="true" name="ashCloudExtent" type="iwxxm:AirspaceVolumePropertyType">
+					<element nillable="true" name="ashCloud" type="iwxxm:VolcanicAshCloudObservedOrEstimatedPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>The horizontal and vertical extent of the ash cloud</documentation>
-						</annotation>
-					</element>
-					<element name="directionOfMotion" type="gml:AngleType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The direction of movement of the ash cloud.  Not included on estimated/forecast conditions.  Direction of movement of the ash cloud is moving to shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
-						</annotation>
-					</element>
-					<element name="speedOfMotion" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The speed of motion of the ash cloud.  Not included on estimated/forecast conditions.  Speed of movement of ash cloud shall be given in either "km/h" or "[kn_i]" (knot).</documentation>
-						</annotation>
-					</element>
-					<element name="windSpeed" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The wind speed.  Only reported when volcanic ash is not identifiable from satellite data.  If speed of motion of ash cloud is estimated from wind speed, unit of measure shall be given in "m/s" or "[kn_i]" (knot).</documentation>
-						</annotation>
-					</element>
-					<element name="windDirection" type="gml:AngleType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The wind direction.  Only reported when volcanic ash is not identifiable from satellite data, and not reported when winds are variable.  Direction of movement shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
-						</annotation>
-					</element>
-					<element name="windLowerLimit" type="gml:LengthType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The lower limits of wind conditions.  Only reported when volcanic ash is not identifiable from satellite data.</documentation>
-						</annotation>
-					</element>
-					<element name="windLowerLimitReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The lower limit vertical reference of wind conditions.  Only reported when volcanic ash is not identifiable from satellite data.</documentation>
-						</annotation>
-					</element>
-					<element name="windUpperLimit" type="gml:LengthType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The upper limits of wind conditions.  Only reported when volcanic ash is not identifiable from satellite data.</documentation>
-						</annotation>
-					</element>
-					<element name="windUpperLimitReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The lower limit vertical reference of wind conditions.  Only reported when volcanic ash is not identifiable from satellite data.</documentation>
+							<documentation>Information on the volcanic ash cloud.</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshCloud</documentation>
+							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshObservedOrEstimatedConditions</documentation>
 						</annotation>
 					</element>
 				</sequence>
-				<attribute name="variableWindDirection" type="boolean">
+				<attribute name="isEstimated" type="boolean">
 					<annotation>
-						<documentation>When true, indicates that the wind direction is variable.  Only reported when volcanic ash is not identifiable from satellite data.</documentation>
+						<documentation>Indicates whether the characteristics of the phenomenon is observed (empty or false) or estimated (true).</documentation>
+					</annotation>
+				</attribute>
+				<attribute use="required" name="status" type="iwxxm:VolcanicAshObservedOrEstimatedStatusType">
+					<annotation>
+						<documentation>Volcanic ash observation (or estimation) status.</documentation>
 					</annotation>
 				</attribute>
 			</extension>
 		</complexContent>
 	</complexType>
-	<complexType name="VolcanicAshCloudPropertyType">
+	<complexType name="VolcanicAshObservedOrEstimatedConditionsPropertyType">
 		<sequence minOccurs="0">
-			<element ref="iwxxm:VolcanicAshCloud"></element>
+			<element ref="iwxxm:VolcanicAshObservedOrEstimatedConditions"></element>
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
+	<element name="VolcanicAshForecastConditions" type="iwxxm:VolcanicAshForecastConditionsType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Forecast conditions of volcanic ash clouds</documentation>
+		</annotation>
+	</element>
+	<complexType name="VolcanicAshForecastConditionsType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
+						<annotation>
+							<documentation>The day and time (in UTC) of forecast of volcanic ash</documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="ashCloud" type="iwxxm:VolcanicAshCloudForecastPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Information on the volcanic ash cloud.</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshForecastConditions</documentation>
+						</annotation>
+					</element>
+				</sequence>
+				<attribute use="required" name="status" type="iwxxm:VolcanicAshCloudForecastStatusType">
+					<annotation>
+						<documentation>The status of volcanic ash cloud forecast.</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="VolcanicAshForecastConditionsPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:VolcanicAshForecastConditions"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="VolcanicAshCloudObservedOrEstimated" type="iwxxm:VolcanicAshCloudObservedOrEstimatedType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>An observed or estimated volcanic ash cloud, including a horizontal and vertical extent, as well as the speed and direction of motion</documentation>
+		</annotation>
+	</element>
+	<complexType name="VolcanicAshCloudObservedOrEstimatedType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element nillable="true" name="ashCloudExtent" type="iwxxm:AirspaceVolumePropertyType">
+						<annotation>
+							<documentation>The horizontal and vertical extent of the ash cloud.</documentation>
+						</annotation>
+					</element>
+					<element name="directionOfMotion" type="gml:AngleType">
+						<annotation>
+							<documentation>The direction of movement of the ash cloud.   Direction of movement of the ash cloud is moving to shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
+						</annotation>
+					</element>
+					<element name="speedOfMotion" type="gml:SpeedType">
+						<annotation>
+							<documentation>The speed of motion of the ash cloud.  Speed of movement of ash cloud shall be given in either "km/h" or "[kn_i]" (knot).</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshCloudObservedOrEstimated</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="VolcanicAshCloudObservedOrEstimatedPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:VolcanicAshCloudObservedOrEstimated"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="WindObservedOrEstimated" type="iwxxm:WindObservedOrEstimatedType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Wind information within a vertical layer to be provided when volcanic ash is not identifiable from satellite data.</documentation>
+		</annotation>
+	</element>
+	<complexType name="WindObservedOrEstimatedType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="verticalLayer" type="iwxxm:AirspaceLayerPropertyType">
+						<annotation>
+							<documentation>The vertical layer in terms of flight levels in which wind is provided.</documentation>
+						</annotation>
+					</element>
+					<element name="windDirection" type="gml:AngleType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Wind direction within the layer.  It shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
+						</annotation>
+					</element>
+					<element name="windSpeed" type="gml:SpeedType">
+						<annotation>
+							<documentation>Wind speed within the layer.  Unit of measure shall be given in "m/s" or "[kn_i]" (knot).</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element WindObservedOrEstimated</documentation>
+						</annotation>
+					</element>
+				</sequence>
+				<attribute use="required" name="variableWindDirection" type="boolean">
+					<annotation>
+						<documentation>When true, indicates that the wind direction is variable.  Wind direction should not be reported</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="WindObservedOrEstimatedPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:WindObservedOrEstimated"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="VolcanicAshCloudForecast" type="iwxxm:VolcanicAshCloudForecastType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>A forecast volcanic ash cloud, including a horizontal and vertical extent.</documentation>
+		</annotation>
+	</element>
+	<complexType name="VolcanicAshCloudForecastType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="ashCloudExtent" type="iwxxm:AirspaceVolumePropertyType">
+						<annotation>
+							<documentation>The horizontal and vertical extent of the ash cloud.</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshCloudForecast</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="VolcanicAshCloudForecastPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:VolcanicAshCloudForecast"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<simpleType name="VolcanicAshObservedOrEstimatedStatusType">
+		<annotation>
+			<documentation>Volcanic ash observation (or estimation) status</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="NOT_IDENTIFIABLE">
+				<annotation>
+					<documentation>Volcanic ash not identifiable from satellite data</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IDENTIFIABLE">
+				<annotation>
+					<documentation>Volcanic ash identifiable.</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="VolcanicAshCloudForecastStatusType">
+		<annotation>
+			<documentation>The volcanic ash cloud forecast status indicates the condition other than providing a valid forecast of the volcanic ash cloud.  These include:
+
+NO_VA_EXP: No volcanic ash is expected
+NOT_AVBL: Forecast is not available
+NOT_PROVIDED: Forecast is not provided</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="NOT_PROVIDED">
+				<annotation>
+					<documentation>Information is not provided.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NOT_AVAILABLE">
+				<annotation>
+					<documentation>Information is not available.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NO_VOLCANIC_ASH_EXPECTED">
+				<annotation>
+					<documentation>No volcanic ash is expected.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PROVIDED">
+				<annotation>
+					<documentation>Information is provided.</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
 	<complexType name="AviationColourCodeType">
 		<annotation>
 			<documentation>A CodeList representing the values for aviation colour codes specified in ICAO Annex 3 / WMO No. 49-2, such as RED, ORANGE, YELLOW, and GREEN</documentation>

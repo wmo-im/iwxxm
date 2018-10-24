@@ -3,15 +3,18 @@
     An example of a TAF.  Original TAF from ICAO Annex 3 Example A5-1:
     
       TAF YUDO 151800Z 1600/1618 13005MPS 9000 BKN020 BECMG 1606/1608 SCT015CB BKN020
-      TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020 FM161230 15004MPS 9999 BKN020 -->
-<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020 FM161230 15004MPS 9999 BKN020 
+-->
+<iwxxm:TAF 
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
-
     gml:id="uuid.d6a85870-f32e-4ea8-8502-c7d9be7e0144"
-    permissibleUsage="OPERATIONAL"
-    status="NORMAL">
+    reportStatus="NORMAL"
+    permissibleUsage="OPERATIONAL">
 
     <!-- The aerodrome to which this TAF applies -->
     <iwxxm:issueTime>
@@ -41,13 +44,13 @@
     </iwxxm:aerodrome>
 
     <!-- The time at which this TAF is intended to be used -->
-    <iwxxm:validTime>
+    <iwxxm:validPeriod>
         <!-- Original TAF: 1600/1618 -->
         <gml:TimePeriod gml:id="uuid.ed5d465f-51fb-4ecc-834a-2ee26bb1196f">
             <gml:beginPosition>2012-08-16T00:00:00Z</gml:beginPosition>
             <gml:endPosition>2012-08-16T18:00:00Z</gml:endPosition>
         </gml:TimePeriod>
-    </iwxxm:validTime>
+    </iwxxm:validPeriod>
 
     <iwxxm:baseForecast>
        <!-- Original TAF: 13005MPS 9000 BKN020 -->

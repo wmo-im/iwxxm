@@ -4,14 +4,17 @@
     resulting METAR (FM 15):
     METAR EDDF 120550Z 03015KT 1400 R07R/P2000N R07C/P2000N R07L/1900U SN DRSN BR VV/// M04/M04 Q1000 R07R/11//90 R07C/15//90 R07L/15//90 BECMG 4000 NSW
 -->
-<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/3.0"
+<iwxxm:METAR 
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
-    gml:id="uuid.96a5ba6a-47ce-4c10-bc56-355a32dcf22c" status="NORMAL" automatedStation="false" permissibleUsage="OPERATIONAL">
+    gml:id="uuid.96a5ba6a-47ce-4c10-bc56-355a32dcf22c" 
+    reportStatus="NORMAL" 
+    permissibleUsage="OPERATIONAL"
+    automatedStation="false" >
     
     <!-- the same as observationTime except for corrections/re-issuances --> 
     <iwxxm:issueTime>
@@ -90,8 +93,8 @@
                 <iwxxm:AerodromeCloud>
                   <iwxxm:verticalVisibility uom="N/A" xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/notObservable"/>
                 </iwxxm:AerodromeCloud>
-             </iwxxm:cloud>
-	     <iwxxm:runwayState>
+            </iwxxm:cloud>
+	        <iwxxm:runwayState>
                 <iwxxm:AerodromeRunwayState>
                     <iwxxm:runway>
                         <aixm:RunwayDirection  gml:id="uuid.f1ff030c-1e4c-40a5-be9a-fbb714369f7f">

@@ -1,9 +1,24 @@
 ====================================
-3.0.0RC2 - ??? 2018
+3.0.0RC2 - October 2018
 ====================================
-+ Added attribute fromPreviousReport in metarSpeci.xsd to signify the condition identified by runway state code 
-     figure 99 (issue #101) 
-* Renamed iwxxm:seaState in metarSpeci.xsd to iwxxm:seaCondition (issue #106)
+* Aligned element naming and ordering across different types of reports including TAF, SIGMET, TCA and VAA (issues #94
+     #121 and #127)
+* Modified the documentation for iwxxm:extremeClockwiseWindDirection and iwxxm:extremeCounterClockwiseWindDirection
+     in METAR and SPECI to clarify the relationship with their TAC counterparts (issue #123)
+* Modified TropicalCycloneSIGMET and VolcanicAshSIGMET and associated schematron rules to better align with cancellation
+     messages of their TAC counterparts (issue #122)
+* Fixed issues with regard to the placement of iwxxm:extension (issue #118)
+* Modified the documentation for attribute cloudAndVisibilityOK and iwxxm:windgustSpeed in METAR, SPECI and TAF and UML
+     association target role in all reports (Items 4, 5 and 8 in issue #115)
+* Renamed iwxxm:seaState in METAR and SPECI to iwxxm:seaCondition (issue #106)
+- Removed the redundant iwxxm:previousReportAerodrom from TAF (issue #104)
++ Added attribute fromPreviousReport in METAR and SPECI to signify the condition identified by runway state code figure 99
+     (issue #101)
+- Removed iwxxm:geometryLowerLimitOperator and iwxxm:geometryUpperLimitOperator from SIGMET and AIRMET, iwxxm:windLowerLimit,
+     iwxxm:windLowerLimitReference, iwxxm:windUpperLimit and iwxxm:windUpperLimitReference from VAA and
+     iwxxm:locationLowerLimitOperator from SWA, all of them could be represented by the upper and lower limits descriptions
+     in aixm:AirspaceVolume (issue #100)
+* Use entries in code list http://codes.wmo.int/common/nil for nilReason descriptions
 
 ====================================
 3.0.0RC1 - July 2018
@@ -29,7 +44,8 @@
     The snowClosure boolean was removed, and full aerodrome/all runways snow closure is now indicated with a nilReason of
     "http://codes.wmo.int/bufr4/codeflag/0-20-085/1" with a single runwayState element (issue #48)
 * AerodromeObservedClouds was renamed to AerodromeCloud for consistency with other portions of IWXXM (issue #81)
-* Added an iwxxm:AirspaceVolumePropertyType to allow for http://... nilReasons to be used with AirspaceVolume references (issue #94)
+* Added an iwxxm:AirspaceVolumePropertyType to allow for http://... nilReasons to be used with AirspaceVolume references 
+    (issue #94)
 + METAR/SPECI now have an optional timeIndicator which may be used to indicate FM/TL/AT explicitly (issue #7).
 * Enhanced documentation on TAF phenomenonTime to clarify the meaning with timeIndicators of BECOMING (issue #13).
 

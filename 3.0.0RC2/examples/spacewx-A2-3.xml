@@ -14,11 +14,16 @@ FCST SWX +24 HR:    09/0100Z NO SWX EXP
 RMK:                LOW LVL GEOMAGNETIC STORMING CAUSING INCREASED AURORAL ACT AND SUBSEQUENT MOD DEGRADATION OF GNSS AND HF COM AVBL IN THE AURORAL ZONE. THIS STORMING EXP TO SUBSIDE IN THE FCST PERIOD. SEE WWW.SPACEWEATHERPROVIDER.WEB 
 NXT ADVISORY:       NO FURTHER ADVISORIES
 -->
-<iwxxm:SpaceWeatherAdvisory xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" 
+<iwxxm:SpaceWeatherAdvisory 
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
-    gml:id="uuid.dea6234c-f57f-4ccf-be7a-bb00a0265af2" permissibleUsage="OPERATIONAL">
+    gml:id="uuid.dea6234c-f57f-4ccf-be7a-bb00a0265af2" 
+    reportStatus="NORMAL" 
+    permissibleUsage="OPERATIONAL">
     
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.161d2ad1-e945-4213-84a7-8f9c2c57540f">
@@ -40,6 +45,7 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
     </iwxxm:issuingSpaceWeatherCentre>
     
     <iwxxm:advisoryNumber>2016/2</iwxxm:advisoryNumber>
+
     <iwxxm:replacedAdvisoryNumber>2016/1</iwxxm:replacedAdvisoryNumber>
     
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/HF_COM_MOD"/>

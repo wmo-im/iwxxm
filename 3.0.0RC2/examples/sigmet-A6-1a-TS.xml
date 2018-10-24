@@ -5,15 +5,17 @@
       YUDD SIGMET 2 VALID 101200/101600 YUSO –
       YUDD SHANLON FIR/UIR OBSC TS FCST S OF N54 AND E OF W012 TOP FL390 MOV E 20KT WKN
 -->
-<iwxxm:SIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0"
-    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
-    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+<iwxxm:SIGMET 
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+    xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
-
     gml:id="uuid.8debfaca-7116-4b32-9378-b472ca64e823"
-    permissibleUsage="OPERATIONAL"
-    status="NORMAL">
+    reportStatus="NORMAL"
+    permissibleUsage="OPERATIONAL">
 
     <!-- time at which the results of the observation were made available (issued) -->
     <iwxxm:issueTime>

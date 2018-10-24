@@ -29,11 +29,17 @@ RMK:                        LATEST REP FM KVERT (0120Z) INDICATES ERUPTION HAS C
 NXT ADVISORY:               20080923/0730Z
 
 -->
-<iwxxm:VolcanicAshAdvisory xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
-   xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:metce="http://def.wmo.int/metce/2013"
-   xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<iwxxm:VolcanicAshAdvisory 
+   xmlns:xlink="http://www.w3.org/1999/xlink" 
+   xmlns:gml="http://www.opengis.net/gml/3.2"
+   xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
+   xmlns:metce="http://def.wmo.int/metce/2013"
+   xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
-   gml:id="uuid.fb4861a8-0438-4f17-b8a7-efc13de58dec" permissibleUsage="OPERATIONAL">
+   gml:id="uuid.fb4861a8-0438-4f17-b8a7-efc13de58dec" 
+   reportStatus="NORMAL" 
+   permissibleUsage="OPERATIONAL">
 
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.efc2bc1b-fb52-4d66-ad22-73fcb857e8a3">
@@ -68,11 +74,13 @@ NXT ADVISORY:               20080923/0730Z
     </iwxxm:volcano>
 
     <iwxxm:advisoryNumber>2008/4</iwxxm:advisoryNumber>
+
     <iwxxm:informationSource>MTSAT-1R KVERT KEMSD</iwxxm:informationSource>
+
     <iwxxm:colourCode xlink:href="http://codes.wmo.int/49-2/AviationColourCode/RED"/>
 
-    <iwxxm:analysis>
-        <iwxxm:VolcanicAshConditions gml:id="uuid.3182220e-b8ab-40f6-9be9-190b32b3d40e">
+    <iwxxm:observation>
+        <iwxxm:VolcanicAshObservedOrEstimatedConditions gml:id="uuid.3182220e-b8ab-40f6-9be9-190b32b3d40e" status="IDENTIFIABLE">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.d894fd2c-890f-4c36-81b2-ae8576765929">
                     <gml:timePosition>2008-09-23T01:00:00Z</gml:timePosition>
@@ -80,7 +88,7 @@ NXT ADVISORY:               20080923/0730Z
             </iwxxm:phenomenonTime>
             <!-- FL250/300 N5400 E15930 N5400 E16100 N5300 E15945 MOV SE 20KT -->
             <iwxxm:ashCloud>
-                <iwxxm:VolcanicAshCloud gml:id="uuid.4dd54d1a-9a18-4065-b9e9-a0f25ced8f17">
+                <iwxxm:VolcanicAshCloudObservedOrEstimated gml:id="uuid.4dd54d1a-9a18-4065-b9e9-a0f25ced8f17">
                     <iwxxm:ashCloudExtent nilReason="unknown">
                         <aixm:AirspaceVolume gml:id="uuid.ca49fe24-81a5-4591-9d59-df21ea49d252">
                             <aixm:upperLimit uom="FL">300</aixm:upperLimit>
@@ -104,11 +112,11 @@ NXT ADVISORY:               20080923/0730Z
                     </iwxxm:ashCloudExtent>
                     <iwxxm:directionOfMotion uom="deg">135</iwxxm:directionOfMotion>
                     <iwxxm:speedOfMotion uom="[kn_i]">20</iwxxm:speedOfMotion>
-                </iwxxm:VolcanicAshCloud>
+                </iwxxm:VolcanicAshCloudObservedOrEstimated>
             </iwxxm:ashCloud>
             <!-- SFC/FL200 N5130 E16130 N5130 E16230 N5230 E16230 N5230 E16130 MOV SE 15KT -->
             <iwxxm:ashCloud>
-                <iwxxm:VolcanicAshCloud gml:id="uuid.1f272bcf-ff35-45fe-9206-7963d574c752">
+                <iwxxm:VolcanicAshCloudObservedOrEstimated gml:id="uuid.1f272bcf-ff35-45fe-9206-7963d574c752">
                     <iwxxm:ashCloudExtent>
                         <aixm:AirspaceVolume gml:id="uuid.d8a40c1f-5026-47bc-b121-ba2cddbdae94">
                             <aixm:upperLimit uom="FL">200</aixm:upperLimit>
@@ -132,22 +140,22 @@ NXT ADVISORY:               20080923/0730Z
                     </iwxxm:ashCloudExtent>
                     <iwxxm:directionOfMotion uom="deg">135</iwxxm:directionOfMotion>
                     <iwxxm:speedOfMotion uom="[kn_i]">15</iwxxm:speedOfMotion>
-                </iwxxm:VolcanicAshCloud>
+                </iwxxm:VolcanicAshCloudObservedOrEstimated>
             </iwxxm:ashCloud>
-        </iwxxm:VolcanicAshConditions>
-    </iwxxm:analysis>
+        </iwxxm:VolcanicAshObservedOrEstimatedConditions>
+    </iwxxm:observation>
 
     <!-- 23/0700Z -->
-    <iwxxm:analysis>
+    <iwxxm:forecast>
         <!-- FL250/350 N5130 E16030 N5130 E16230 N5330 E16230 N5330 E16030 -->
-        <iwxxm:VolcanicAshConditions gml:id="uuid.55a27198-f4e9-4a97-8e9d-0af6185f1b43">
+        <iwxxm:VolcanicAshForecastConditions gml:id="uuid.55a27198-f4e9-4a97-8e9d-0af6185f1b43" status="PROVIDED">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.7d89ec7f-6266-47d0-8f97-af0cd0905e9a">
                     <gml:timePosition>2008-09-23T07:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:ashCloud>
-                <iwxxm:VolcanicAshCloud gml:id="uuid.b8b23d9c-2794-406f-8b8a-6eb5cde393fb">
+                <iwxxm:VolcanicAshCloudForecast gml:id="uuid.b8b23d9c-2794-406f-8b8a-6eb5cde393fb">
                     <iwxxm:ashCloudExtent>
                         <aixm:AirspaceVolume gml:id="uuid.841fe208-2b26-47f9-a053-a7838a2c334f">
                             <aixm:upperLimit uom="FL">350</aixm:upperLimit>
@@ -169,11 +177,11 @@ NXT ADVISORY:               20080923/0730Z
                             </aixm:horizontalProjection>
                         </aixm:AirspaceVolume>
                     </iwxxm:ashCloudExtent>
-                </iwxxm:VolcanicAshCloud>
+                </iwxxm:VolcanicAshCloudForecast>
             </iwxxm:ashCloud>
             <!-- SFC/FL180 N4830 E16330 N4830 E16630 N5130 E16630 N5130 E16330 -->
             <iwxxm:ashCloud>
-                <iwxxm:VolcanicAshCloud gml:id="uuid.29dff823-5132-42ea-bcda-6e94a6b64983">
+                <iwxxm:VolcanicAshCloudForecast gml:id="uuid.29dff823-5132-42ea-bcda-6e94a6b64983">
                     <iwxxm:ashCloudExtent>
                         <aixm:AirspaceVolume gml:id="uuid.d4653c15-dd4f-418e-997a-d0983e7a56ae">
                             <aixm:upperLimit uom="FL">180</aixm:upperLimit>
@@ -195,22 +203,22 @@ NXT ADVISORY:               20080923/0730Z
                             </aixm:horizontalProjection>
                         </aixm:AirspaceVolume>
                     </iwxxm:ashCloudExtent>
-                </iwxxm:VolcanicAshCloud>
+                </iwxxm:VolcanicAshCloudForecast>
             </iwxxm:ashCloud>
-        </iwxxm:VolcanicAshConditions>
-    </iwxxm:analysis>
+        </iwxxm:VolcanicAshForecastConditions>
+    </iwxxm:forecast>
 
     <!-- 23/1300Z -->
-    <iwxxm:analysis>
+    <iwxxm:forecast>
         <!-- SFC/FL270 N4830 E16130 Ð N4830 E16600 Ð N5300 E16600 Ð N5300 E16130  -->
-        <iwxxm:VolcanicAshConditions gml:id="uuid.6493c86f-6917-47f0-9749-19d656b1bd1f">
+        <iwxxm:VolcanicAshForecastConditions gml:id="uuid.6493c86f-6917-47f0-9749-19d656b1bd1f" status="PROVIDED">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.2e92686b-2a88-44e3-a1ef-fed2cdf71d76">
                     <gml:timePosition>2008-09-23T13:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:ashCloud>
-                <iwxxm:VolcanicAshCloud gml:id="uuid.bcc01180-95c0-4ac1-8f13-53bbbfa430b7">
+                <iwxxm:VolcanicAshCloudForecast gml:id="uuid.bcc01180-95c0-4ac1-8f13-53bbbfa430b7">
                     <iwxxm:ashCloudExtent>
                         <aixm:AirspaceVolume gml:id="uuid.c35ee5c2-f8bf-43cb-ba9b-24f10fce6678">
                             <aixm:upperLimit uom="FL">270</aixm:upperLimit>
@@ -232,22 +240,21 @@ NXT ADVISORY:               20080923/0730Z
                             </aixm:horizontalProjection>
                         </aixm:AirspaceVolume>
                     </iwxxm:ashCloudExtent>
-                </iwxxm:VolcanicAshCloud>
+                </iwxxm:VolcanicAshCloudForecast>
             </iwxxm:ashCloud>
-        </iwxxm:VolcanicAshConditions>
-    </iwxxm:analysis>
+        </iwxxm:VolcanicAshForecastConditions>
+    </iwxxm:forecast>
 
     <!-- 23/1900Z NO VA EXP -->
-    <iwxxm:analysis>
-        <iwxxm:VolcanicAshConditions gml:id="uuid.e453c86f-6912-47f0-9649-19d656b1bd1f">
+    <iwxxm:forecast>
+        <iwxxm:VolcanicAshForecastConditions gml:id="uuid.e453c86f-6912-47f0-9649-19d656b1bd1f" status="NO_VOLCANIC_ASH_EXPECTED">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.9b7632de-7591-4c3a-a876-99304e3d9d51">
                     <gml:timePosition>2008-09-23T19:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:ashCloud nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
-        </iwxxm:VolcanicAshConditions>
-    </iwxxm:analysis>
+        </iwxxm:VolcanicAshForecastConditions>
+    </iwxxm:forecast>
 
     <!-- Remark -->
     <iwxxm:remarks>LATEST REP FM KVERT (0120Z) INDICATES ERUPTION HAS CEASED.  TWO DISPERSING VA CLD ARE EVIDENT ON SATELLITE IMAGERY</iwxxm:remarks>
