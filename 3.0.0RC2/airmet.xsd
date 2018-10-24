@@ -26,7 +26,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 					</element>
 					<element name="member" type="iwxxm:AIRMETEvolvingConditionPropertyType" minOccurs="1" maxOccurs="unbounded">
 						<annotation>
-							<documentation>The members of this collection</documentation>
+							<documentation>The members of this collection.</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -71,17 +71,17 @@ The AIRMET report class represents the base AIRMET types that may be reported su
 							<documentation>The ATS unit serving the FIR or CTA to which the AIRMET refers.  ICAO Annex 3 / WMO No. 49-2: A6-1: "Location indicator of FIR/CTA"</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType">
+					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>MWO originating this report</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType">
+					<element name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The ATS region (FIR, UIR, CTA, or FIR/UIR)</documentation>
 						</annotation>
 					</element>
-					<element name="sequenceNumber" type="iwxxm:StringWithNilReasonType">
+					<element name="sequenceNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The sequence number of this message.  For example: "5", "A3", or "2"</documentation>
 						</annotation>
@@ -91,26 +91,26 @@ The AIRMET report class represents the base AIRMET types that may be reported su
 							<documentation>The valid period for the entire report, including all observations and forecast conditions.  Each observation/forecast phenomenon includes its own period of validity for described meteorological conditions, which is represented as the O&amp;M Observation validTime.</documentation>
 						</annotation>
 					</element>
-					<element name="cancelledSequenceNumber" type="string" minOccurs="0" maxOccurs="1">
+					<element name="cancelledReportSequenceNumber" type="string" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The cancelled AIRMET sequence number. Mandatory when this is a cancellation report, must be missing otherwise
+							<documentation>The sequence number of a previous AIRMET that is cancelled by this AIRMET.  Mandatory when this is a cancellation report, must be missing otherwise
 
 Examples:
 YUDD AIRMET 2 VALID ...
 YUDD AIRMET A3 VALID ...</documentation>
 						</annotation>
 					</element>
-					<element name="cancelledValidPeriod" type="gml:TimePeriodPropertyType" minOccurs="0" maxOccurs="1">
+					<element name="cancelledReportValidPeriod" type="gml:TimePeriodPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The valid period of a previous AIRMET that is cancelled by this AIRMET.  Mandatory when this is a cancellation report, must be missing otherwise</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="phenomenon" type="iwxxm:AeronauticalAreaWeatherPhenomenonType">
+					<element name="phenomenon" type="iwxxm:AeronauticalAreaWeatherPhenomenonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The reported phenomenon, such as thunderstorm, tropical cyclone, icing, mountain wave, etc.</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="analysis" type="iwxxm:AIRMETEvolvingConditionCollectionPropertyType" minOccurs="0" maxOccurs="1">
+					<element name="analysis" type="iwxxm:AIRMETEvolvingConditionCollectionPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>AIRMETs may include the same phenomenon covering more than one area within the FIR/UIR/CTA, as well as observed and forecast conditions for each of these reported areas.  AIRMETs may include a single set of observed and/or forecast conditions at a particular time, which is represented  as a single analysis with a single AIRMETEvolvingConditionCollection as its result.</documentation>
 						</annotation>
@@ -121,9 +121,9 @@ YUDD AIRMET A3 VALID ...</documentation>
 						</annotation>
 					</element>
 				</sequence>
-				<attribute use="required" name="status" type="iwxxm:AIRMETReportStatusType">
+				<attribute name="isCancelReport" type="boolean">
 					<annotation>
-						<documentation>The AIRMET report status - cancelled or normal</documentation>
+						<documentation>Indicates whether the report is a 'CANCELLATION' report (true) which cancels a previously issued report or not (false or empty).</documentation>
 					</annotation>
 				</attribute>
 			</extension>
@@ -150,20 +150,6 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
-						</annotation>
-					</element>
-					<element name="geometryLowerLimitOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The reported relational operator for the airspace geometry lower limit. When reported, this operator is reported in conjunction with the airspace geometry's lower limit.
-
-To report an airspace lower limit of below FL 300, airspace lower limit is reported as FL 300 and the operator is reported as "below".  When no operator is reported, the airspace lower limit represents an exact value with identical semantics to other measured quantities</documentation>
-						</annotation>
-					</element>
-					<element name="geometryUpperLimitOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The reported relational operator for the airspace geometry upper limit. When reported, this operator is reported in conjunction with the airspace geometry's upper limit.
-
-To report an airspace upper limit of above FL 300, airspace upper limit is reported as FL 300 and the operator is reported as "above".  When no operator is reported, the airspace upper limit represents an exact value with identical semantics to other measured quantities</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
@@ -261,23 +247,6 @@ Appendix 6 Section 2.1</documentation>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	<simpleType name="AIRMETReportStatusType">
-		<annotation>
-			<documentation>The status of an AIRMET report (e.g., a normal issuance, a cancellation of an earlier AIRMET)</documentation>
-		</annotation>
-		<restriction base="string">
-			<enumeration value="NORMAL">
-				<annotation>
-					<documentation>A normal AIRMET report (not a cancellation)</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="CANCELLATION">
-				<annotation>
-					<documentation>A cancellation of an earlier AIRMET report</documentation>
-				</annotation>
-			</enumeration>
-		</restriction>
-	</simpleType>
 	<simpleType name="AIRMETExpectedIntensityChangeType">
 		<annotation>
 			<documentation>Expected change in intensity for AIRMET phenomena.

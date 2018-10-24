@@ -24,6 +24,11 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The position of a tropical cyclone</documentation>
 						</annotation>
 					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element TropicalCycloneSIGMETEvolvingConditionCollection</documentation>
+						</annotation>
+					</element>
 				</sequence>
 				<attribute use="required" name="tropicalCycloneId" type="string">
 					<annotation>
@@ -52,6 +57,11 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 					<element name="tropicalCyclonePosition" type="gml:PointPropertyType">
 						<annotation>
 							<documentation>The position of a tropical cyclone</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element TropicalCycloneSIGMETPositionCollection</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -164,7 +174,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 
 TC TOP (ABV and BLW) conditions are represented by the vertical component of the geometry.  For example: CB TOP FL500 is represented as a missing lowerLimit and an upperLimit of 500FL.
 
-In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE FIR" from ICAO Annex 3 / WMO No. 49-2) the geometry should be an xlink to the sampled feature for this SIGMET.</documentation>
+In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE FIR" from ICAO Annex 3 / WMO No. 49-2), the geometry should be an xlink to the AirspaceVolume under geometryComponent of issuingAirTrafficServicesRegion.</documentation>
 		</annotation>
 	</element>
 	<complexType name="SIGMETPositionType">
@@ -223,17 +233,17 @@ ICAO Annex 3 / WMO No. 49-2:
 A6-1: "Location indicator of FIR/CTA"</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType">
+					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>MWO originating this report</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType">
+					<element name="issuingAirTrafficServicesRegion" type="iwxxm:AirspacePropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The ATS region (FIR, UIR, CTA, or FIR/UIR)</documentation>
 						</annotation>
 					</element>
-					<element name="sequenceNumber" type="iwxxm:StringWithNilReasonType">
+					<element name="sequenceNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The sequence number of this message.  For example: "5", "A3", or "2"</documentation>
 						</annotation>
@@ -245,28 +255,28 @@ A6-1: "Location indicator of FIR/CTA"</documentation>
 For example, an issued tropical cyclone SIGMET may be valid from 1600 UTC to 2200 UTC with an observed position at 1600 UTC and a forecast position of the centre of the tropical cyclone at 2200 UTC.  In this case the SIGMET validPeriod would be 1600 UTC to 2200 UTC, the analysis phenomenonTime would be 1600 UTC, and the forecastPositionAnalysis phenomenonTime would be 2200 UTC.</documentation>
 						</annotation>
 					</element>
-					<element name="cancelledSequenceNumber" type="string" minOccurs="0" maxOccurs="1">
+					<element name="cancelledReportSequenceNumber" type="string" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The cancelled SIGMET sequence number.  Mandatory when this is a cancellation report, must be missing otherwise
+							<documentation>The sequence number of a previous SIGMET that is cancelled by this SIGMET.  Mandatory when this is a cancellation report, must be missing otherwise
 
 Examples:
 YUDD SIGMET 2 VALID ...
 YUDD SIGMET A3 VALID ...</documentation>
 						</annotation>
 					</element>
-					<element name="cancelledValidPeriod" type="gml:TimePeriodPropertyType" minOccurs="0" maxOccurs="1">
+					<element name="cancelledReportValidPeriod" type="gml:TimePeriodPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The valid period of a previous SIGMET that is cancelled by this SIGMET.  Mandatory when this is a cancellation report, must be missing otherwise</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="phenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonType">
+					<element name="phenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The reported phenomenon, such as thunderstorm, tropical cyclone, icing, mountain wave, etc.
 
 The expected end of occurrence of volcanic ash ("NO VA EXP") is indicated with a missing SIGMET phenomenon with a nil reason of nothingOfOperationalSignificance</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="analysis" type="gml:AssociationRoleType" minOccurs="1" maxOccurs="2">
+					<element name="analysis" type="gml:AssociationRoleType" minOccurs="0" maxOccurs="2">
 						<annotation>
 							<documentation>A SIGMET report may include a phenomenon covering more than one area within the FIR/UIR/CTA.  This translates into observed and forecast conditions for each of these reported areas.  All combinations of observations and forecasts of meteorological conditions, including changing conditions, are represented by their own SIGMETEvolvingCondition.
 
@@ -278,20 +288,15 @@ Each analysis has a single SIGMETEvolvingConditionCollection as its result.  </d
 							<documentation>A forecast of the phenomenon at the end of the valid period.  This is modeled by SIGMETPosition for individual area of the phenomenon and aggregated into a single SIGMETPositionCollection as a result to forecastPositionAnalysis.</documentation>
 						</annotation>
 					</element>
-					<element name="volcanicAshMovedToFIR" type="iwxxm:AirspacePropertyType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The FIR to which volcanic ash has moved.  Reported only on SIGMET cancellation reports</documentation>
-						</annotation>
-					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element SIGMET</documentation>
 						</annotation>
 					</element>
 				</sequence>
-				<attribute use="required" name="status" type="iwxxm:SIGMETReportStatusType">
+				<attribute name="isCancelReport" type="boolean">
 					<annotation>
-						<documentation>The SIGMET report status - cancelled or normal</documentation>
+						<documentation>Indicates whether the report is a 'CANCELLATION' report (true) which cancels a previously issued report or not (false or empty).</documentation>
 					</annotation>
 				</attribute>
 			</extension>
@@ -308,7 +313,9 @@ Each analysis has a single SIGMETEvolvingConditionCollection as its result.  </d
 		<annotation>
 			<documentation>Conditions that indicate the presence of a specific SIGMET phenomenon such as volcanic ash or a thunderstorm, along with expected changes to the phenomenon such as intensity, speed, and direction.  These conditions are reported with OBS/FCST conditions on all SIGMET types.
 
-TC TOP (ABV and BLW) conditions are represented by the vertical component of the geometry.  For example: CB TOP FL500 is represented as a missing lowerLimit and an upperLimit of 500FL.</documentation>
+TC TOP (ABV and BLW) conditions are represented by the vertical component of the geometry.  For example: CB TOP FL500 is represented as a missing lowerLimit and an upperLimit of 500FL.
+
+In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE FIR" from ICAO Annex 3 / WMO No. 49-2), the geometry should be an xlink to the AirspaceVolume under geometryComponent of issuingAirTrafficServicesRegion.</documentation>
 		</annotation>
 	</element>
 	<complexType name="SIGMETEvolvingConditionType">
@@ -318,20 +325,6 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
-						</annotation>
-					</element>
-					<element name="geometryLowerLimitOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The reported relational operator for the airspace geometry lower limit. When reported, this operator is reported in conjunction with the airspace geometry's lower limit.
-
-To report an airspace lower limit of below FL 300, airspace lower limit is reported as FL 300 and the operator is reported as "below".  When no operator is reported, the airspace lower limit represents an exact value with identical semantics to other measured quantities</documentation>
-						</annotation>
-					</element>
-					<element name="geometryUpperLimitOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The reported relational operator for the airspace geometry upper limit. When reported, this operator is reported in conjunction with the airspace geometry's upper limit.
-
-To report an airspace upper limit of above FL 300, airspace upper limit is reported as FL 300 and the operator is reported as "above".  When no operator is reported, the airspace upper limit represents an exact value with identical semantics to other measured quantities</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
@@ -383,7 +376,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="tropicalCyclone" type="metce:TropicalCyclonePropertyType" minOccurs="1" maxOccurs="2">
+					<element name="tropicalCyclone" type="metce:TropicalCyclonePropertyType" minOccurs="0" maxOccurs="2">
 						<annotation>
 							<documentation>The tropical cyclone being reported in this SIGMET, required in all cases other than cancellations. When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclone is unnamed</documentation>
 						</annotation>
@@ -408,9 +401,14 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="eruptingVolcano" type="metce:VolcanoPropertyType" minOccurs="1" maxOccurs="2">
+					<element name="eruptingVolcano" type="metce:VolcanoPropertyType" minOccurs="0" maxOccurs="2">
 						<annotation>
 							<documentation>The volcano that is erupting - required in all cases other than cancellations</documentation>
+						</annotation>
+					</element>
+					<element name="volcanicAshMovedToFIR" type="iwxxm:AirspacePropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The FIR to which volcanic ash has moved.  Reported only on SIGMET cancellation reports</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -438,7 +436,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 							<documentation>The time at which meteorological phenomena occur</documentation>
 						</annotation>
 					</element>
-					<element name="member" type="iwxxm:SIGMETPositionPropertyType" minOccurs="1" maxOccurs="unbounded">
+					<element nillable="true" name="member" type="iwxxm:SIGMETPositionPropertyType" minOccurs="1" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The members of this collection</documentation>
 						</annotation>
@@ -479,23 +477,6 @@ See WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 20 028 'Expected change i
 			<enumeration value="INTENSIFY">
 				<annotation>
 					<documentation>Forecast to intensify (INTSF)</documentation>
-				</annotation>
-			</enumeration>
-		</restriction>
-	</simpleType>
-	<simpleType name="SIGMETReportStatusType">
-		<annotation>
-			<documentation>The status of a SIGMET report (e.g., a normal issuance, a cancellation of an earlier SIGMET)</documentation>
-		</annotation>
-		<restriction base="string">
-			<enumeration value="NORMAL">
-				<annotation>
-					<documentation>A normal SIGMET report (not a cancellation)</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="CANCELLATION">
-				<annotation>
-					<documentation>A cancellation of an earlier SIGMET report</documentation>
 				</annotation>
 			</enumeration>
 		</restriction>

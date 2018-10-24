@@ -16,6 +16,11 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence></sequence>
+				<attribute use="required" name="reportStatus" type="iwxxm:ReportStatusType">
+					<annotation>
+						<documentation>The issuance status of the report.</documentation>
+					</annotation>
+				</attribute>
 				<attribute use="required" name="permissibleUsage" type="iwxxm:PermissibleUsageType">
 					<annotation>
 						<documentation>The permissible usage of this report (operational or non-operational)</documentation>
@@ -92,7 +97,11 @@ Vertical visibility shall be reported either in meters ("m") or feet ("[ft_i]").
 							</appinfo>
 						</annotation>
 					</element>
-					<element name="layer" type="iwxxm:CloudLayerPropertyType" minOccurs="0" maxOccurs="4"></element>
+					<element name="layer" type="iwxxm:CloudLayerPropertyType" minOccurs="0" maxOccurs="4">
+						<annotation>
+							<documentation>Description of individual layer of cloud.</documentation>
+						</annotation>
+					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element AerodromeCloudForecast</documentation>
@@ -185,7 +194,7 @@ When no operator is reported, wind speed is an exact value with identical semant
 			</element>
 			<element name="windGustSpeed" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
 				<annotation>
-					<documentation>The forecast maximum speed of a gust.
+					<documentation>Forecast variations from the mean wind speed (gusts).
 
 Wind gusts shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
 					<appinfo>
@@ -253,6 +262,32 @@ Measured cloud bases shall be reported in meters ("m") or feet ("[ft_i]").</docu
 		</sequence>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
+	<simpleType name="ReportStatusType">
+		<annotation>
+			<documentation>This indicates the issuance status of the report, including:
+
+NORMAL: The report is issued for the first time
+AMENDMENT: The report is an amendment to a previously issued report
+CORRECTION: The report is a correction to a previously issued report</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="CORRECTION">
+				<annotation>
+					<documentation>The report is a correction to a previously issued report.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AMENDMENT">
+				<annotation>
+					<documentation>The report is an amendment to a previously issued report.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NORMAL">
+				<annotation>
+					<documentation>The first issuance of a report. </documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
 	<simpleType name="RelationalOperatorType">
 		<annotation>
 			<documentation>RelationalOperator defines the restricted set of operators that may be specified alongside numerical quantities in ICAO Annex 3/WMO No. 49.
@@ -308,59 +343,6 @@ For example, the "above" operator in conjunction with the reported quantity 10.6
 			</enumeration>
 		</restriction>
 	</simpleType>
-	<complexType name="UnitPropertyType">
-		<sequence minOccurs="0">
-			<element ref="aixm:Unit"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<complexType name="AirspacePropertyType">
-		<sequence minOccurs="0">
-			<element ref="aixm:Airspace"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<complexType name="AirspaceVolumePropertyType">
-		<sequence minOccurs="0">
-			<element ref="aixm:AirspaceVolume"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<complexType name="AirportHeliportPropertyType">
-		<sequence minOccurs="0">
-			<element ref="aixm:AirportHeliport"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<complexType name="RunwayPropertyType">
-		<sequence minOccurs="0">
-			<element ref="aixm:Runway"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<complexType name="RunwayDirectionPropertyType">
-		<sequence minOccurs="0">
-			<element ref="aixm:RunwayDirection"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<complexType name="AbstractTimeObjectPropertyType">
-		<sequence minOccurs="0">
-			<element ref="gml:AbstractTimeObject"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-	</complexType>
-	<complexType name="ExtensionType">
-		<sequence>
-			<any processContents="strict"/>
-		</sequence>
-	</complexType>
 	<simpleType name="TimeIndicatorType">
 		<annotation>
 			<documentation>Whether the information is observed and expected to continue, or forecast</documentation>
@@ -430,5 +412,65 @@ This CodeList is specifically defined for aviation purposes, as defined in WMO N
 		<complexContent>
 			<extension base="gml:ReferenceType"></extension>
 		</complexContent>
+	</complexType>
+	<complexType name="UnitPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aixm:Unit"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<complexType name="AirspacePropertyType">
+		<sequence minOccurs="0">
+			<element ref="aixm:Airspace"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<complexType name="AirspaceLayerPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aixm:AirspaceLayer"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<complexType name="AirspaceVolumePropertyType">
+		<sequence minOccurs="0">
+			<element ref="aixm:AirspaceVolume"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<complexType name="AirportHeliportPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aixm:AirportHeliport"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<complexType name="RunwayPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aixm:Runway"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<complexType name="RunwayDirectionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aixm:RunwayDirection"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<complexType name="AbstractTimeObjectPropertyType">
+		<sequence minOccurs="0">
+			<element ref="gml:AbstractTimeObject"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<complexType name="ExtensionType">
+		<sequence>
+			<any processContents="strict"/>
+		</sequence>
 	</complexType>
 </schema>

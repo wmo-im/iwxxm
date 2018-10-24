@@ -38,7 +38,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The time at which phenomena were observed.  This may differ from the times reported for forecast conditions</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="observation" type="iwxxm:MeteorologicalAerodromeObservationPropertyType">
+					<element nillable="true" name="observation" type="iwxxm:MeteorologicalAerodromeObservationPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The observation which resulted in the current meteorological conditions at an aerodrome</documentation>
 						</annotation>
@@ -49,9 +49,9 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 						</annotation>
 					</element>
 				</sequence>
-				<attribute use="required" name="status" type="iwxxm:MeteorologicalAerodromeReportStatusType">
+				<attribute name="isNilReport" type="boolean">
 					<annotation>
-						<documentation>The report status (e.g., normal, corrected)</documentation>
+						<documentation>Indicates whether the report is a 'Nil' report (true) or not (false or empty).</documentation>
 					</annotation>
 				</attribute>
 				<attribute name="automatedStation" type="boolean">
@@ -173,9 +173,21 @@ To report a prevailing visibility of at least 10000 meters, prevailing visibilit
 When no operator is reported, prevailing visibility represents an exact value with identical semantics to other measured quantities</documentation>
 						</annotation>
 					</element>
-					<element name="surfaceWind" type="iwxxm:AerodromeSurfaceWindTrendForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
-					<element nillable="true" name="weather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3"></element>
-					<element nillable="true" name="cloud" type="iwxxm:AerodromeCloudForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
+					<element name="surfaceWind" type="iwxxm:AerodromeSurfaceWindTrendForecastPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Forecast of surface wind.</documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="weather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3">
+						<annotation>
+							<documentation>Forecast of weather phenomena.</documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="cloud" type="iwxxm:AerodromeCloudForecastPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Forecast of cloud.</documentation>
+						</annotation>
+					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element MeteorologicalAerodromeTrendForecast</documentation>
@@ -189,9 +201,13 @@ When no operator is reported, prevailing visibility represents an exact value wi
 				</attribute>
 				<attribute name="cloudAndVisibilityOK" type="boolean">
 					<annotation>
-						<documentation>When true, indicates that the observed cloud ceiling, horizontal visibility, and weather conditions are of no operational significance.  See ICAO Annex 3 / WMO No. 49-2 Section 2.2. Also known as "CAVOK"
+						<documentation>When true, indicates that the following conditions occur simultaneously at the time of forecast (also know as "CAVOK"):
 
-When CAVOK conditions are observed, no other information on visibility, runway visual range, present weather, cloud amount, or cloud type is reported</documentation>
+a) visibility, 10km or more, and the lowest visibility is not reported
+b) no cloud of operational significance
+c) no weather of significance to aviation
+
+Information on visibility, runway visual range, present weather and cloud amount, cloud type and height of cloud base shall not be reported.  See ICAO Annex 3 / WMO No. 49-2 Section 2.2.</documentation>
 					</annotation>
 				</attribute>
 			</extension>
@@ -248,6 +264,9 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 						</annotation>
 					</element>
 					<element nillable="true" name="surfaceWind">
+						<annotation>
+							<documentation>Representative surface wind observations.</documentation>
+						</annotation>
 						<complexType>
 							<complexContent>
 								<extension base="iwxxm:AerodromeSurfaceWindPropertyType">
@@ -257,6 +276,9 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 						</complexType>
 					</element>
 					<element nillable="true" name="visibility" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Visibility reported as prevailing visibility or the lowest visibility as appropriate.</documentation>
+						</annotation>
 						<complexType>
 							<complexContent>
 								<extension base="iwxxm:AerodromeHorizontalVisibilityPropertyType">
@@ -266,6 +288,9 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 						</complexType>
 					</element>
 					<element nillable="true" name="rvr" minOccurs="0" maxOccurs="4">
+						<annotation>
+							<documentation>RVR conditions are required if horizontal visibility or RVR is less than 1500 meters, up to a maximum of four runways</documentation>
+						</annotation>
 						<complexType>
 							<complexContent>
 								<extension base="iwxxm:AerodromeRunwayVisualRangePropertyType">
@@ -274,8 +299,19 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 							</complexContent>
 						</complexType>
 					</element>
-					<element nillable="true" name="presentWeather" type="iwxxm:AerodromePresentWeatherType" minOccurs="0" maxOccurs="3"></element>
+					<element nillable="true" name="presentWeather" type="iwxxm:AerodromePresentWeatherType" minOccurs="0" maxOccurs="3">
+						<annotation>
+							<documentation>When observed, between one and three present weather conditions
+
+When present weather cannot be observed by the automatic observing system due to a temporary failure of the system/sensor ("//") the present weather is missing with a nil reason of notObservab</documentation>
+						</annotation>
+					</element>
 					<element nillable="true" name="cloud" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>When no clouds are detected by the automatic observing system, it should be indicated by a missing cloud group with a nil reason of notDetectedByAutoSystem ("NCD" from TAC).  
+
+When there are no clouds of operational significance and no restriction on vertical visibility and “CAVOK” is not appropriate ("NSC") it should be indicated by a missing cloud group with a nil reason of nothingOfOperationalSignificance</documentation>
+						</annotation>
 						<complexType>
 							<complexContent>
 								<extension base="iwxxm:AerodromeCloudPropertyType">
@@ -284,8 +320,15 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 							</complexContent>
 						</complexType>
 					</element>
-					<element nillable="true" name="recentWeather" type="iwxxm:AerodromeRecentWeatherType" minOccurs="0" maxOccurs="3"></element>
+					<element nillable="true" name="recentWeather" type="iwxxm:AerodromeRecentWeatherType" minOccurs="0" maxOccurs="3">
+						<annotation>
+							<documentation>Recent weather is one of the recent weather phenomena to be reported as supplementary information.</documentation>
+						</annotation>
+					</element>
 					<element nillable="true" name="windShear" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Wind shear is one of the recent weather phenomena to be reported as supplementary information.</documentation>
+						</annotation>
 						<complexType>
 							<complexContent>
 								<extension base="iwxxm:AerodromeWindShearPropertyType">
@@ -295,6 +338,9 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 						</complexType>
 					</element>
 					<element nillable="true" name="seaCondition" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Sea surface temperature and state of the sea or significant wave height are recent weather phenomena to be reported as supplementary information.</documentation>
+						</annotation>
 						<complexType>
 							<complexContent>
 								<extension base="iwxxm:AerodromeSeaConditionPropertyType">
@@ -304,6 +350,11 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 						</complexType>
 					</element>
 					<element nillable="true" name="runwayState" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>When runways are affected by snow, slush, or other contaminants, a runway state report for each runway in use is required.
+
+There is no maximum number of runway states that can be reported.  This may be changed in a future amendment.</documentation>
+						</annotation>
 						<complexType>
 							<complexContent>
 								<extension base="iwxxm:AerodromeRunwayStatePropertyType">
@@ -320,9 +371,13 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 				</sequence>
 				<attribute use="required" name="cloudAndVisibilityOK" type="boolean">
 					<annotation>
-						<documentation>When true, indicates that the observed cloud ceiling, horizontal visibility, and weather conditions are of no operational significance.  See ICAO Annex 3 / WMO No. 49-2 Section 2.2. Also known as "CAVOK"
+						<documentation>When true, indicates that the following conditions occur simultaneously at the time of observation (also know as "CAVOK"):
 
-When CAVOK conditions are observed, no other information on visibility, runway visual range, present weather, cloud amount, or cloud type is reported</documentation>
+a) visibility, 10km or more, and the lowest visibility is not reported
+b) no cloud of operational significance
+c) no weather of significance to aviation
+
+Information on visibility, runway visual range, present weather and cloud amount, cloud type and height of cloud base shall not be reported.  See ICAO Annex 3 / WMO No. 49-2 Section 2.2.</documentation>
 					</annotation>
 				</attribute>
 			</extension>
@@ -658,7 +713,7 @@ When no operator is reported, wind speed is an exact value with identical semant
 			</element>
 			<element nillable="true" name="windGustSpeed" type="iwxxm:VelocityWithNilReasonType" minOccurs="0" maxOccurs="1">
 				<annotation>
-					<documentation>The maximum wind speed observed over the past ten minutes
+					<documentation>Variations from the mean wind speed (gusts) during the past 10 minutes.
 
 ICAO Annex 3 / WMO No. 49-2:
 Section 4.1.5.2c
@@ -678,10 +733,12 @@ When no operator is reported, wind gust speed is an exact value with identical s
 			</element>
 			<element nillable="true" name="extremeClockwiseWindDirection" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
 				<annotation>
-					<documentation>The extreme clockwise direction from which the wind is blowing, inclusive.
+					<documentation>The extreme clockwise direction from which the wind has varied, inclusive.
+
+This corresponds to the dxdxdx part of the reported variation dndndnVdxdxdx in TAC.
 
 ICAO Annex 3 / WMO No. 49-2:
-Section 4.1.5.2b</documentation>
+Section 4.1.5.2b 1)</documentation>
 					<appinfo>
 						<quantity>http://codes.wmo.int/common/quantity-kind/windDirection</quantity>
 					</appinfo>
@@ -689,10 +746,12 @@ Section 4.1.5.2b</documentation>
 			</element>
 			<element nillable="true" name="extremeCounterClockwiseWindDirection" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
 				<annotation>
-					<documentation>The extreme counter-clockwise direction from which the wind is blowing, inclusive.
+					<documentation>The extreme counter-clockwise direction from which the wind has varied, inclusive.
+
+This corresponds to the dndndn part of the reported variation dndndnVdxdxdx in TAC.
 
 ICAO Annex 3 / WMO No. 49-2:
-Section 4.1.5.2b</documentation>
+Section 4.1.5.2b 1)</documentation>
 					<appinfo>
 						<quantity>http://codes.wmo.int/common/quantity-kind/windDirection</quantity>
 					</appinfo>
@@ -844,28 +903,6 @@ See WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 018 "Tendency of runway visua
 			<enumeration value="MISSING_VALUE">
 				<annotation>
 					<documentation>Missing value</documentation>
-				</annotation>
-			</enumeration>
-		</restriction>
-	</simpleType>
-	<simpleType name="MeteorologicalAerodromeReportStatusType">
-		<annotation>
-			<documentation>The report issuance status (e.g., a normal issuance, correction of an earlier report, etc.)</documentation>
-		</annotation>
-		<restriction base="string">
-			<enumeration value="NORMAL">
-				<annotation>
-					<documentation>Normal report status: not a correction of an earlier report</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="CORRECTION">
-				<annotation>
-					<documentation>A correction of an earlier report</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="MISSING">
-				<annotation>
-					<documentation>The report is missing ("NIL" from ICAO Annex 3 / WMO No. 49)</documentation>
 				</annotation>
 			</enumeration>
 		</restriction>

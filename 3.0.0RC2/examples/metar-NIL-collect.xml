@@ -6,11 +6,11 @@
       METAR YUDO 221630Z NIL
 -->
 <collect:MeteorologicalBulletin
-        xmlns:collect="http://def.wmo.int/collect/2014"
-        xmlns:gml="http://www.opengis.net/gml/3.2"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://def.wmo.int/collect/2014 http://schemas.wmo.int/collect/1.2/collect.xsd"
-        gml:id="uuid.6f353602-12a1-40a7-b6b5-3edb14c6241e">
+    xmlns:collect="http://def.wmo.int/collect/2014"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://def.wmo.int/collect/2014 http://schemas.wmo.int/collect/1.2/collect.xsd"
+    gml:id="uuid.6f353602-12a1-40a7-b6b5-3edb14c6241e">
 
     <collect:meteorologicalInformation>
 
@@ -21,7 +21,7 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0RC2/iwxxm.xsd"
             gml:id="uuid.15ff064a-6dc4-41e0-bafa-8ee78ed4dc25"
-            status="MISSING"
+            reportStatus="NORMAL"
             permissibleUsage="OPERATIONAL"
             automatedStation="false">
             
@@ -55,7 +55,7 @@
             </iwxxm:observationTime>
             
             <!-- NIL/missing reports do not have reported weather conditions -->
-	    <iwxxm:observation nilReason="http://codes.wmo.int/common/nil/missing"/>
+	        <iwxxm:observation nilReason="http://codes.wmo.int/common/nil/missing"/>
 
         </iwxxm:METAR>
 
