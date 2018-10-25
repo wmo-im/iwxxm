@@ -1,8 +1,8 @@
 ====================================
 3.0.0RC2 - October 2018
 ====================================
-* Aligned element naming and ordering across different types of reports including TAF, SIGMET, TCA and VAA (issues #94
-     #121 and #127)
+* Fixed representation of 'NO VA EXP', etc. in VAA and SIGMET (issues #94 and #127)
+* Aligned element naming and ordering across different types of reports including TAF, SIGMET, TCA and VAA (issue #121)
 * Modified the documentation for iwxxm:extremeClockwiseWindDirection and iwxxm:extremeCounterClockwiseWindDirection
      in METAR and SPECI to clarify the relationship with their TAC counterparts (issue #123)
 * Modified TropicalCycloneSIGMET and VolcanicAshSIGMET and associated schematron rules to better align with cancellation
