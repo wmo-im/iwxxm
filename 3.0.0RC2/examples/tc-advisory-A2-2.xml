@@ -56,11 +56,11 @@ NXT MSG:                    20040925/2000Z
 
     <iwxxm:tropicalCycloneName>
         <metce:TropicalCyclone gml:id="uuid.d30accc0-1784-4081-ad70-937134018150">
-            <metce:name>Gloria</metce:name>
+            <metce:name>GLORIA</metce:name>
         </metce:TropicalCyclone>
     </iwxxm:tropicalCycloneName>
     
-    <iwxxm:advisoryNumber>01</iwxxm:advisoryNumber>
+    <iwxxm:advisoryNumber>2004/13</iwxxm:advisoryNumber>
 
     <iwxxm:observation>
         <iwxxm:TropicalCycloneObservedConditions gml:id="uuid.78eddcd7-acfe-4649-b633-36189eaffc5d">
