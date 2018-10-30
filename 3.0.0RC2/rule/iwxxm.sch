@@ -22,7 +22,7 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState-3">
       <sch:rule context="//iwxxm:AerodromeRunwayState">
-         <sch:assert test="( if( @cleared = 'true' ) then( empty(iwxxm:depositType) and empty(iwxxm:contamination) and empty(iwxxm:depthOfDeposit) and empty(iwxxm:estimatedSurfaceFrictionOrBrakingAction) ) else( true() ) )">METAR_SPECI.AerodromeRunwayState-3: If contaminations have ceased to exist, then iwxxm:depositType, iwxxm:contamination, iwxxm:depthOfDeposit and iwxxm:estimatedSurfaceFrictionOrBrakingAction should be empty</sch:assert>
+         <sch:assert test="( if( @cleared = 'true' ) then( empty(iwxxm:depositType) and empty(iwxxm:contamination) and empty(iwxxm:depthOfDeposit) ) else( true() ) )">METAR_SPECI.AerodromeRunwayState-3: If contaminations have ceased to exist, then iwxxm:depositType, iwxxm:contamination and iwxxm:depthOfDeposit should be empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState-2">
