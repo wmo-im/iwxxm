@@ -12,7 +12,7 @@ The attribute "reportStatus" of a report shall be set to either "NORMAL", "AMEND
 METAR/SPECI
 ==========================
 NIL report
-  A NIL report shall be represented by setting attribute "isNilReport" true and making iwxxm:observation empty with a nilReason of "http://codes.wmo.int/common/nil/missing" 
+  A NIL report shall be represented by making iwxxm:observation empty with a nilReason of "http://codes.wmo.int/common/nil/missing" 
 
 CAVOK - Cloud and visibility OK
   When CAVOK conditions apply, the appropriate Record type shall have "cloudAndVisibilityOK" set to true and visibility, runway visual range, weather, and cloud information shall be absent
@@ -86,7 +86,7 @@ the wind which should be dxdxdx in the TAC report.  Similarly the corresponding 
 TAF
 ==========================
 NIL report
-  A NIL report shall be represented by setting attribute "isNilReport" true and making iwxxm:baseForecast empty with a nilReason of "http://codes.wmo.int/common/nil/missing" 
+  A NIL report shall be represented by making iwxxm:baseForecast empty with a nilReason of "http://codes.wmo.int/common/nil/missing" 
 
 CNL report
   A cancellation report shall be represented by setting attribute "isCancelReport" true, setting iwxxm:cancelledReportValidPeriod and making iwxxm:validPeriod, iwxxm:baseForecast and iwxxm:changeForecast empty. 

@@ -49,11 +49,6 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 						</annotation>
 					</element>
 				</sequence>
-				<attribute name="isNilReport" type="boolean">
-					<annotation>
-						<documentation>Indicates whether the report is a 'Nil' report (true) or not (false or empty).</documentation>
-					</annotation>
-				</attribute>
 				<attribute name="automatedStation" type="boolean">
 					<annotation>
 						<documentation>When true, this report was reported by an automated station.</documentation>
