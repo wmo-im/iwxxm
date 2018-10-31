@@ -67,7 +67,7 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-3">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
-         <sch:assert test="( if( @isNilReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and (empty(iwxxm:observation/*) and iwxxm:observation/@nilReason = 'http://codes.wmo.int/common/nil/missing') and empty(iwxxm:trendForecast) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-3: A 'Nil' report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime, iwxxm:observation (empty with nilReason) and iwxxm:trendForecast (missing)</sch:assert>
+         <sch:assert test="( if( (empty(iwxxm:observation/*) and iwxxm:observation/@nilReason = 'http://codes.wmo.int/common/nil/missing') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and empty(iwxxm:trendForecast) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-3: A 'Nil' report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime, iwxxm:observation (empty with nilReason) and iwxxm:trendForecast (missing)</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-2">
@@ -77,7 +77,7 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-4">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
-         <sch:assert test="( if( (empty(@isNilReport) or @isNilReport = 'false' ) and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and (exists(iwxxm:observation) and empty(iwxxm:observation/@nilReason)) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-4: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime and iwxxm:observation</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and exists(iwxxm:observation) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-4: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime and iwxxm:observation</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaCondition.seaState">
@@ -277,7 +277,7 @@
    </sch:pattern>
    <sch:pattern id="TAF.TAF-3">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="( if( @isNilReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and empty(iwxxm:validPeriod) and empty(iwxxm:cancelledReportValidPeriod) and (empty(iwxxm:baseForecast/*) and iwxxm:baseForecast/@nilReason = 'http://codes.wmo.int/common/nil/missing') and empty(iwxxm:changeForecast) ) else( true() ) )">TAF.TAF-3: A 'Nil' report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:validPeriod (missing), iwxxm:cancelledReportValidPeriod (missing), iwxxm:baseForecast (empty with nilReason) and iwxxm:changeForecast (missing)</sch:assert>
+         <sch:assert test="( if( (empty(iwxxm:baseForecast/*) and iwxxm:baseForecast/@nilReason = 'http://codes.wmo.int/common/nil/missing') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and empty(iwxxm:validPeriod) and empty(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:changeForecast) ) else( true() ) )">TAF.TAF-3: A 'Nil' report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:validPeriod (missing), iwxxm:cancelledReportValidPeriod (missing), iwxxm:baseForecast (empty with nilReason) and iwxxm:changeForecast (missing)</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF-2">
@@ -287,7 +287,7 @@
    </sch:pattern>
    <sch:pattern id="TAF.TAF-5">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="(if( ((empty(@isNilReport) or @isNilReport = 'false') and (empty(@isCancelReport) or @isCancelReport = 'false')) and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportValidPeriod) and (exists(iwxxm:baseForecast) and empty(iwxxm:baseForecast/@nilReason)) ) else( true() ) )">TAF.TAF-5: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:validPeriod, iwxxm:cancelledReportValidPeriod (missing) and iwxxm:baseForecast</sch:assert>
+         <sch:assert test="( if( (iwxxm:baseForecast/@nilReason != 'http://codes.wmo.int/common/nil/missing' and (empty(@isCancelReport) or @isCancelReport = 'false')) and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:baseForecast) ) else( true() ) )">TAF.TAF-5: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:validPeriod, iwxxm:cancelledReportValidPeriod (missing) and iwxxm:baseForecast</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF-1">

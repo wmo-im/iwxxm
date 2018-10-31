@@ -62,11 +62,6 @@ Prevailing conditions and forecast changes differ in that the prevailing conditi
 						</annotation>
 					</element>
 				</sequence>
-				<attribute name="isNilReport" type="boolean">
-					<annotation>
-						<documentation>Indicates whether the report is a 'Nil' report (true) or not (false or empty).</documentation>
-					</annotation>
-				</attribute>
 				<attribute name="isCancelReport" type="boolean">
 					<annotation>
 						<documentation>Indicates whether the report is a 'CANCELLATION' report (true) which cancels a previously issued report or not (false or empty).</documentation>
