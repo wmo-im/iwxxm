@@ -284,9 +284,15 @@ CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
 		<sequence>
 			<element name="upperLimit" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0"/>
 			<element name="upperLimitReference" type="aixm:CodeVerticalReferenceType" nillable="true" minOccurs="0"/>
+			<element name="maximumLimit" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0"/>
+			<element name="maximumLimitReference" type="aixm:CodeVerticalReferenceType" nillable="true" minOccurs="0"/>
 			<element name="lowerLimit" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0"/>
 			<element name="lowerLimitReference" type="aixm:CodeVerticalReferenceType" nillable="true" minOccurs="0"/>
+			<element name="minimumLimit" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0"/>
+			<element name="minimumLimitReference" type="aixm:CodeVerticalReferenceType" nillable="true" minOccurs="0"/>
+			<element name="width" type="aixm:ValDistanceType" nillable="true" minOccurs="0"/>
 			<element name="horizontalProjection" type="aixm:SurfacePropertyType" nillable="true" minOccurs="0" maxOccurs="1"/>
+			<element name="centreline" type="aixm:CurvePropertyType" nillable="true" minOccurs="0" maxOccurs="1"/>
 		</sequence>
 	</group>
 	<complexType name="AirspaceVolumePropertyType">
