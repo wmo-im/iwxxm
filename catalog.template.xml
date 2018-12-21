@@ -17,6 +17,7 @@
   <!-- AIXM 5 -->
   <rewriteSystem systemIdStartString="http://www.aixm.aero/gallery/content/public/schema/5.1_profiles/AIXM_WX/5.1a" rewritePrefix="externalSchema/aero/aixm/5.1_profiles/AIXM_WX/5.1a"/>
   <rewriteSystem systemIdStartString="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a" rewritePrefix="externalSchema/aero/aixm/5.1.1_profiles/AIXM_WX/5.1.1a"/>
+  <rewriteSystem systemIdStartString="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1b" rewritePrefix="externalSchema/aero/aixm/5.1.1_profiles/AIXM_WX/5.1.1b"/>
 
   <!-- W3C -->
   <rewriteSystem systemIdStartString="http://www.w3.org" rewritePrefix="externalSchema/org/w3c"/>
