@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.1" version="2.1.1" xmlns:iwxxm="http://icao.int/iwxxm/2.1" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
@@ -92,16 +92,8 @@ Vertical visibility shall be reported either in meters ("m") or feet ("[ft_i]").
 							</appinfo>
 						</annotation>
 					</element>
-					<element nillable="true" name="layer" minOccurs="0" maxOccurs="4">
-						<complexType>
-							<complexContent>
-								<extension base="iwxxm:CloudLayerPropertyType">
-									<attribute name="nilReason" type="gml:NilReasonType"/>
-								</extension>
-							</complexContent>
-						</complexType>
-					</element>
-					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+					<element name="layer" type="iwxxm:CloudLayerPropertyType" minOccurs="0" maxOccurs="4"></element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element AerodromeCloudForecast</documentation>
 						</annotation>
@@ -144,6 +136,18 @@ This extends AerodromeSurfaceWindTrendForecast to allow for a variable wind dire
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="StringWithNilReason" type="iwxxm:StringWithNilReasonType">
+		<annotation>
+			<documentation>A nillable string quantity.  References to this type may be nil and may include a nilReason</documentation>
+		</annotation>
+	</element>
+	<complexType name="StringWithNilReasonType">
+		<simpleContent>
+			<extension base="string">
+				<attribute name="nilReason" type="gml:NilReasonType"/>
+			</extension>
+		</simpleContent>
 	</complexType>
 	<element name="AerodromeSurfaceWindTrendForecast" type="iwxxm:AerodromeSurfaceWindTrendForecastType" substitutionGroup="gml:AbstractObject">
 		<annotation>
@@ -196,7 +200,7 @@ Wind gusts shall be provided in either two units of measures: "m/s" or "[kn_i]" 
 When no operator is reported, wind gust speed is an exact value with identical semantics to other measured quantities.</documentation>
 				</annotation>
 			</element>
-			<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element AerodromeSurfaceWindTrendForecast</documentation>
 				</annotation>
@@ -236,7 +240,7 @@ Measured cloud bases shall be reported in meters ("m") or feet ("[ft_i]").</docu
 					<documentation>The observed significant cloud types: cumulonimbus or towering cumulus</documentation>
 				</annotation>
 			</element>
-			<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 				<annotation>
 					<documentation>Extension block for optional and/or additional parameters for element CloudLayer</documentation>
 				</annotation>
@@ -318,6 +322,13 @@ For example, the "above" operator in conjunction with the reported quantity 10.6
 		<attributeGroup ref="gml:AssociationAttributeGroup"/>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
 	</complexType>
+	<complexType name="AirspaceVolumePropertyType">
+		<sequence minOccurs="0">
+			<element ref="aixm:AirspaceVolume"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
 	<complexType name="AirportHeliportPropertyType">
 		<sequence minOccurs="0">
 			<element ref="aixm:AirportHeliport"/>
@@ -338,6 +349,17 @@ For example, the "above" operator in conjunction with the reported quantity 10.6
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"/>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<complexType name="AbstractTimeObjectPropertyType">
+		<sequence minOccurs="0">
+			<element ref="gml:AbstractTimeObject"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<complexType name="ExtensionType">
+		<sequence>
+			<any processContents="strict"/>
+		</sequence>
 	</complexType>
 	<simpleType name="TimeIndicatorType">
 		<annotation>

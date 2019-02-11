@@ -1,4 +1,32 @@
 ====================================
+3.0.0RC1 - July 2018
+====================================
+* Restructured and simplified to remove the Observations and Measurements model (O&M) (issue #27)
+* Incorporated ICAO Annex 3 / WMO No. 49 changes (issue #49):
+    + Space Weather Advisory has been added as a new product
+    * Tropical Cyclone Advisory (TCA) sequence numbers are now of the form "2004/13" instead of simple numbers
+    - TCA observed movement speed can no longer be reported as "moving slowly", per the Annex change
+* Updated AIR/SIGMET structure to support TC and VA SIGMETs with multiple TCs/volcanoes, and to support the Amd 78
+    provisions for reporting both a TC location along with CB location and movement (#49)
+* All METAR/SPECI fields are now nillable in support of cases of observing system failures, such as a broken rain
+    gauge (issue #16)
+* All gml:ids are now UUIDs, and this is supported by Schematron rules.  This allows IWXXM message intermediaries to
+    re-assemble COLLECT advisories freely without requiring IWXXM message modifications en route (issue #31)
+* SIGMET sub-types (VA and TC) elements are now optional to allow cancellations to be reported along with the SIGMET
+    type (issue #18)
+* All Schematron files were combined into iwxxm.sch, including the WMO Codes Registry validation which were formerly in
+    iwxxm-collect-codelists.sch (issue #60)
+* Made a number of fields nillable to support the minimum set of required information for failed translation cases (issue #41)
++ Added issue times onto IWXXM messages in support of standalone IWXXM messages (without WMO or Collect headers) (issue #47)
+* Snow closure of all runways is now properly indicated, rather than being a snowClosure boolean on a single runway state.
+    The snowClosure boolean was removed, and full aerodrome/all runways snow closure is now indicated with a nilReason of
+    "http://codes.wmo.int/bufr4/codeflag/0-20-085/1" with a single runwayState element (issue #48)
+* AerodromeObservedClouds was renamed to AerodromeCloud for consistency with other portions of IWXXM (issue #81)
+* Added an iwxxm:AirspaceVolumePropertyType to allow for http://... nilReasons to be used with AirspaceVolume references (issue #94)
++ METAR/SPECI now have an optional timeIndicator which may be used to indicate FM/TL/AT explicitly (issue #7).
+* Enhanced documentation on TAF phenomenonTime to clarify the meaning with timeIndicators of BECOMING (issue #13).
+
+====================================
 2.1.1 - November 2017
 ====================================
 - Removed Schematron rules SIGMET.SEC3, SIGMET.SEC4, AIRMET.AEC9 and AIRMET.AEC10 to fix vertical extend encoding for 
@@ -9,7 +37,6 @@
 * Fixed minor issues in the examples and added bulletin examples with COLLECT
 * Added a new schematron file iwxxm-collect-codelist.sch for offline checking of codelist items for pre-implementation
     testing 
-* Entered into force 15 May 2018.
 
 ====================================
 2.1 - March 2017

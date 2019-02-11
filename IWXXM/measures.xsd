@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.1" version="2.1.1" xmlns:iwxxm="http://icao.int/iwxxm/2.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
 		<documentation>Common measured quantities used across multiple packages.
@@ -38,6 +38,30 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 	<complexType name="LengthWithNilReasonType">
 		<simpleContent>
 			<extension base="gml:LengthType">
+				<attribute name="nilReason" type="gml:NilReasonType"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<element name="MeasureWithNilReason" type="iwxxm:MeasureWithNilReasonType">
+		<annotation>
+			<documentation>A nillable Measure quantity.  Unlike the base measure, references to this type may be nil and may include a nilReason</documentation>
+		</annotation>
+	</element>
+	<complexType name="MeasureWithNilReasonType">
+		<simpleContent>
+			<extension base="gml:MeasureType">
+				<attribute name="nilReason" type="gml:NilReasonType"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<element name="VelocityWithNilReason" type="iwxxm:VelocityWithNilReasonType">
+		<annotation>
+			<documentation>A nillable Velocity quantity.  Unlike the base Velocity measure, references to this type may be nil and may include a nilReason</documentation>
+		</annotation>
+	</element>
+	<complexType name="VelocityWithNilReasonType">
+		<simpleContent>
+			<extension base="gml:SpeedType">
 				<attribute name="nilReason" type="gml:NilReasonType"/>
 			</extension>
 		</simpleContent>

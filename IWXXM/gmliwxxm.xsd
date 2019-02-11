@@ -8,7 +8,7 @@
         elementFormDefault="qualified"
         version="3.2.1.2">
    <annotation>
-      <documentation>GML Subset schema for gml:AbstractFeature,gml:AbstractFeatureType,gml:AngleType,gml:SpeedType,gml:LengthType,gml:AssociationAttributeGroup,gml:OwnershipAttributeGroup,gml:ReferenceType,gml:TimePeriodPropertyType,gml:AbstractGML,gml:AbstractGMLType,gml:AbstractObject,gml:NilReasonType,gml:MeasureType,gml:ScaleType,gml:TimeInstantPropertyType, written by gmlSubset.xslt.</documentation>
+      <documentation>GML Subset schema for gml:AbstractFeature,gml:AbstractFeatureType,gml:AssociationAttributeGroup,gml:OwnershipAttributeGroup,gml:TimeInstantPropertyType,gml:TimePeriodPropertyType,gml:SpeedType,gml:LengthType,gml:AngleType,gml:ReferenceType,gml:AbstractGML,gml:AbstractGMLType,gml:NilReasonType,gml:AbstractObject,gml:AbstractTimeObject,gml:MeasureType,gml:AbstractMemberType,gml:PointPropertyType, written by gmlSubset.xslt.</documentation>
    </annotation>
    <import namespace="http://www.w3.org/1999/xlink"
            schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
@@ -41,7 +41,7 @@ The value of the gml:location property describes the extent, position or relativ
 		    <sequence>
 			      <group ref="gml:StandardObjectProperties"/>
 		    </sequence>
-		    <attribute ref="gml:id" use="required"/>
+		    <attribute ref="gml:id"/>
 	  </complexType>
 <!-- ================================================= --><group name="StandardObjectProperties">
 		    <sequence>
@@ -427,94 +427,28 @@ The following rules shall be adhered to:
 			      <appinfo>deprecated</appinfo>
 		    </annotation>
 	  </element>
-<!-- ================================================= --><complexType name="AngleType">
-		    <simpleContent>
-			      <extension base="gml:MeasureType"/>
-		    </simpleContent>
-	  </complexType>
-<!-- ================================================= --><complexType name="MeasureType">
+<!-- ================================================= --><complexType name="TimeInstantPropertyType">
 		    <annotation>
-			      <documentation>gml:MeasureType supports recording an amount encoded as a value of XML Schema double, together with a units of measure indicated by an attribute uom, short for "units Of measure". The value of the uom attribute identifies a reference system for the amount, usually a ratio or interval scale.</documentation>
-		    </annotation>
-		    <simpleContent>
-			      <extension base="double">
-				        <attribute name="uom" type="gml:UomIdentifier" use="required"/>
-			      </extension>
-		    </simpleContent>
-	  </complexType>
-<!-- ================================================= --><simpleType name="UomIdentifier">
-		    <annotation>
-			      <documentation>The simple type gml:UomIdentifer defines the syntax and value space of the unit of measure identifier.</documentation>
-		    </annotation>
-		    <union memberTypes="gml:UomSymbol gml:UomURI"/>
-	  </simpleType>
-<!-- ================================================= --><simpleType name="UomSymbol">
-		    <annotation>
-			      <documentation>This type specifies a character string of length at least one, and restricted such that it must not contain any of the following characters: ":" (colon), " " (space), (newline), (carriage return), (tab). This allows values corresponding to familiar abbreviations, such as "kg", "m/s", etc. 
-It is recommended that the symbol be an identifier for a unit of measure as specified in the "Unified Code of Units of Measure" (UCUM) (http://aurora.regenstrief.org/UCUM). This provides a set of symbols and a grammar for constructing identifiers for units of measure that are unique, and may be easily entered with a keyboard supporting the limited character set known as 7-bit ASCII. ISO 2955 formerly provided a specification with this scope, but was withdrawn in 2001. UCUM largely follows ISO 2955 with modifications to remove ambiguities and other problems.</documentation>
-		    </annotation>
-		    <restriction base="string">
-			      <pattern value="[^: \n\r\t]+"/>
-		    </restriction>
-	  </simpleType>
-<!-- ================================================= --><simpleType name="UomURI">
-		    <annotation>
-			      <documentation>This type specifies a URI, restricted such that it must start with one of the following sequences: "#", "./", "../", or a string of characters followed by a ":". These patterns ensure that the most common URI forms are supported, including absolute and relative URIs and URIs that are simple fragment identifiers, but prohibits certain forms of relative URI that could be mistaken for unit of measure symbol . 
-NOTE	It is possible to re-write such a relative URI to conform to the restriction (e.g. "./m/s").
-In an instance document, on elements of type gml:MeasureType the mandatory uom attribute shall carry a value corresponding to either 
--	a conventional unit of measure symbol,
--	a link to a definition of a unit of measure that does not have a conventional symbol, or when it is desired to indicate a precise or variant definition.</documentation>
-		    </annotation>
-		    <restriction base="anyURI">
-			      <pattern value="([a-zA-Z][a-zA-Z0-9\-\+\.]*:|\.\./|\./|#).*"/>
-		    </restriction>
-	  </simpleType>
-<!-- ================================================= --><complexType name="SpeedType">
-		    <simpleContent>
-			      <extension base="gml:MeasureType"/>
-		    </simpleContent>
-	  </complexType>
-<!-- ================================================= --><complexType name="LengthType">
-		    <annotation>
-			      <documentation>This is a prototypical definition for a specific measure type defined as a vacuous extension (i.e. aliases) of gml:MeasureType. In this case, the content model supports the description of a length (or distance) quantity, with its units. The unit of measure referenced by uom shall be suitable for a length, such as metres or feet.</documentation>
-		    </annotation>
-		    <simpleContent>
-			      <extension base="gml:MeasureType"/>
-		    </simpleContent>
-	  </complexType>
-<!-- ================================================= --><complexType name="TimePeriodPropertyType">
-		    <annotation>
-			      <documentation>gml:TimePeriodPropertyType provides for associating a gml:TimePeriod with an object.</documentation>
+			      <documentation>gml:TimeInstantPropertyType provides for associating a gml:TimeInstant with an object.</documentation>
 		    </annotation>
 		    <sequence minOccurs="0">
-			      <element ref="gml:TimePeriod"/>
+			      <element ref="gml:TimeInstant"/>
 		    </sequence>
 		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
 		    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
 	  </complexType>
-<!-- ================================================= --><element name="TimePeriod"
-            type="gml:TimePeriodType"
+<!-- ================================================= --><element name="TimeInstant"
+            type="gml:TimeInstantType"
             substitutionGroup="gml:AbstractTimeGeometricPrimitive">
 		    <annotation>
-			      <documentation>gml:TimePeriod acts as a one-dimensional geometric primitive that represents an identifiable extent in time.
-The location in of a gml:TimePeriod is described by the temporal positions of the instants at which it begins and ends. The length of the period is equal to the temporal distance between the two bounding temporal positions. 
-Both beginning and end may be described in terms of their direct position using gml:TimePositionType which is an XML Schema simple content type, or by reference to an indentifiable time instant using gml:TimeInstantPropertyType.
-Alternatively a limit of a gml:TimePeriod may use the conventional GML property model to make a reference to a time instant described elsewhere, or a limit may be indicated as a direct position.</documentation>
+			      <documentation>gml:TimeInstant acts as a zero-dimensional geometric primitive that represents an identifiable position in time.</documentation>
 		    </annotation>
 	  </element>
-<!-- ================================================= --><complexType name="TimePeriodType">
+<!-- ================================================= --><complexType name="TimeInstantType" final="#all">
 		    <complexContent>
 			      <extension base="gml:AbstractTimeGeometricPrimitiveType">
 				        <sequence>
-					          <choice>
-						            <element name="beginPosition" type="gml:TimePositionType"/>
-						            <element name="begin" type="gml:TimeInstantPropertyType"/>
-					          </choice>
-					          <choice>
-						            <element name="endPosition" type="gml:TimePositionType"/>
-						            <element name="end" type="gml:TimeInstantPropertyType"/>
-					          </choice>
-					          <group ref="gml:timeLength" minOccurs="0"/>
+					          <element ref="gml:timePosition"/>
 				        </sequence>
 			      </extension>
 		    </complexContent>
@@ -597,6 +531,11 @@ Alternatively a limit of a gml:TimePeriod may use the conventional GML property 
 			      <documentation>gml:AbstractTimeObject acts as the head of a substitution group for all temporal primitives and complexes.</documentation>
 		    </annotation>
 	  </element>
+<!-- ================================================= --><element name="timePosition" type="gml:TimePositionType">
+		    <annotation>
+			      <documentation>This element is used directly as a property of gml:TimeInstant (see 15.2.2.3), and may also be used in application schemas.</documentation>
+		    </annotation>
+	  </element>
 <!-- ================================================= --><complexType name="TimePositionType" final="#all">
 		    <annotation>
 			      <documentation>The method for identifying a temporal position is specific to each temporal reference system.  gml:TimePositionType supports the description of temporal position according to the subtypes described in ISO 19108.
@@ -650,37 +589,6 @@ A value for indeterminatePosition may
 			      <enumeration value="unknown"/>
 		    </restriction>
 	  </simpleType>
-<!-- ================================================= --><complexType name="TimeInstantPropertyType">
-		    <annotation>
-			      <documentation>gml:TimeInstantPropertyType provides for associating a gml:TimeInstant with an object.</documentation>
-		    </annotation>
-		    <sequence minOccurs="0">
-			      <element ref="gml:TimeInstant"/>
-		    </sequence>
-		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-		    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	  </complexType>
-<!-- ================================================= --><element name="TimeInstant"
-            type="gml:TimeInstantType"
-            substitutionGroup="gml:AbstractTimeGeometricPrimitive">
-		    <annotation>
-			      <documentation>gml:TimeInstant acts as a zero-dimensional geometric primitive that represents an identifiable position in time.</documentation>
-		    </annotation>
-	  </element>
-<!-- ================================================= --><complexType name="TimeInstantType" final="#all">
-		    <complexContent>
-			      <extension base="gml:AbstractTimeGeometricPrimitiveType">
-				        <sequence>
-					          <element ref="gml:timePosition"/>
-				        </sequence>
-			      </extension>
-		    </complexContent>
-	  </complexType>
-<!-- ================================================= --><element name="timePosition" type="gml:TimePositionType">
-		    <annotation>
-			      <documentation>This element is used directly as a property of gml:TimeInstant (see 15.2.2.3), and may also be used in application schemas.</documentation>
-		    </annotation>
-	  </element>
 <!-- ================================================= --><element name="AbstractTimeGeometricPrimitive"
             type="gml:AbstractTimeGeometricPrimitiveType"
             abstract="true"
@@ -691,6 +599,43 @@ A temporal geometry shall be associated with a temporal reference system through
 The two geometric primitives in the temporal dimension are the instant and the period. GML components are defined to support these as follows.</documentation>
 		    </annotation>
 	  </element>
+<!-- ================================================= --><complexType name="TimePeriodPropertyType">
+		    <annotation>
+			      <documentation>gml:TimePeriodPropertyType provides for associating a gml:TimePeriod with an object.</documentation>
+		    </annotation>
+		    <sequence minOccurs="0">
+			      <element ref="gml:TimePeriod"/>
+		    </sequence>
+		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+		    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	  </complexType>
+<!-- ================================================= --><element name="TimePeriod"
+            type="gml:TimePeriodType"
+            substitutionGroup="gml:AbstractTimeGeometricPrimitive">
+		    <annotation>
+			      <documentation>gml:TimePeriod acts as a one-dimensional geometric primitive that represents an identifiable extent in time.
+The location in of a gml:TimePeriod is described by the temporal positions of the instants at which it begins and ends. The length of the period is equal to the temporal distance between the two bounding temporal positions. 
+Both beginning and end may be described in terms of their direct position using gml:TimePositionType which is an XML Schema simple content type, or by reference to an indentifiable time instant using gml:TimeInstantPropertyType.
+Alternatively a limit of a gml:TimePeriod may use the conventional GML property model to make a reference to a time instant described elsewhere, or a limit may be indicated as a direct position.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="TimePeriodType">
+		    <complexContent>
+			      <extension base="gml:AbstractTimeGeometricPrimitiveType">
+				        <sequence>
+					          <choice>
+						            <element name="beginPosition" type="gml:TimePositionType"/>
+						            <element name="begin" type="gml:TimeInstantPropertyType"/>
+					          </choice>
+					          <choice>
+						            <element name="endPosition" type="gml:TimePositionType"/>
+						            <element name="end" type="gml:TimeInstantPropertyType"/>
+					          </choice>
+					          <group ref="gml:timeLength" minOccurs="0"/>
+				        </sequence>
+			      </extension>
+		    </complexContent>
+	  </complexType>
 <!-- ================================================= --><group name="timeLength">
 		    <annotation>
 			      <documentation>The length of a time period.</documentation>
@@ -740,9 +685,114 @@ The value of the unit is either selected from the units for time intervals from 
 			      </simpleType>
 		    </union>
 	  </simpleType>
-<!-- ================================================= --><complexType name="ScaleType">
+<!-- ================================================= --><complexType name="SpeedType">
 		    <simpleContent>
 			      <extension base="gml:MeasureType"/>
 		    </simpleContent>
 	  </complexType>
+<!-- ================================================= --><complexType name="MeasureType">
+		    <annotation>
+			      <documentation>gml:MeasureType supports recording an amount encoded as a value of XML Schema double, together with a units of measure indicated by an attribute uom, short for "units Of measure". The value of the uom attribute identifies a reference system for the amount, usually a ratio or interval scale.</documentation>
+		    </annotation>
+		    <simpleContent>
+			      <extension base="double">
+				        <attribute name="uom" type="gml:UomIdentifier" use="required"/>
+			      </extension>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><simpleType name="UomIdentifier">
+		    <annotation>
+			      <documentation>The simple type gml:UomIdentifer defines the syntax and value space of the unit of measure identifier.</documentation>
+		    </annotation>
+		    <union memberTypes="gml:UomSymbol gml:UomURI"/>
+	  </simpleType>
+<!-- ================================================= --><simpleType name="UomSymbol">
+		    <annotation>
+			      <documentation>This type specifies a character string of length at least one, and restricted such that it must not contain any of the following characters: ":" (colon), " " (space), (newline), (carriage return), (tab). This allows values corresponding to familiar abbreviations, such as "kg", "m/s", etc. 
+It is recommended that the symbol be an identifier for a unit of measure as specified in the "Unified Code of Units of Measure" (UCUM) (http://aurora.regenstrief.org/UCUM). This provides a set of symbols and a grammar for constructing identifiers for units of measure that are unique, and may be easily entered with a keyboard supporting the limited character set known as 7-bit ASCII. ISO 2955 formerly provided a specification with this scope, but was withdrawn in 2001. UCUM largely follows ISO 2955 with modifications to remove ambiguities and other problems.</documentation>
+		    </annotation>
+		    <restriction base="string">
+			      <pattern value="[^: \n\r\t]+"/>
+		    </restriction>
+	  </simpleType>
+<!-- ================================================= --><simpleType name="UomURI">
+		    <annotation>
+			      <documentation>This type specifies a URI, restricted such that it must start with one of the following sequences: "#", "./", "../", or a string of characters followed by a ":". These patterns ensure that the most common URI forms are supported, including absolute and relative URIs and URIs that are simple fragment identifiers, but prohibits certain forms of relative URI that could be mistaken for unit of measure symbol . 
+NOTE	It is possible to re-write such a relative URI to conform to the restriction (e.g. "./m/s").
+In an instance document, on elements of type gml:MeasureType the mandatory uom attribute shall carry a value corresponding to either 
+-	a conventional unit of measure symbol,
+-	a link to a definition of a unit of measure that does not have a conventional symbol, or when it is desired to indicate a precise or variant definition.</documentation>
+		    </annotation>
+		    <restriction base="anyURI">
+			      <pattern value="([a-zA-Z][a-zA-Z0-9\-\+\.]*:|\.\./|\./|#).*"/>
+		    </restriction>
+	  </simpleType>
+<!-- ================================================= --><complexType name="LengthType">
+		    <annotation>
+			      <documentation>This is a prototypical definition for a specific measure type defined as a vacuous extension (i.e. aliases) of gml:MeasureType. In this case, the content model supports the description of a length (or distance) quantity, with its units. The unit of measure referenced by uom shall be suitable for a length, such as metres or feet.</documentation>
+		    </annotation>
+		    <simpleContent>
+			      <extension base="gml:MeasureType"/>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><complexType name="AngleType">
+		    <simpleContent>
+			      <extension base="gml:MeasureType"/>
+		    </simpleContent>
+	  </complexType>
+<!-- ================================================= --><complexType name="AbstractMemberType" abstract="true">
+		    <annotation>
+			      <documentation>To create a collection of GML Objects that are not all features, a property type shall be derived by extension from gml:AbstractMemberType.
+This abstract property type is intended to be used only in object types where software shall be able to identify that an instance of such an object type is to be interpreted as a collection of objects.
+By default, this abstract property type does not imply any ownership of the objects in the collection. The owns attribute of gml:OwnershipAttributeGroup may be used on a property element instance to assert ownership of an object in the collection. A collection shall not own an object already owned by another object.
+</documentation>
+		    </annotation>
+		    <sequence/>
+		    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	  </complexType>
+<!-- ================================================= --><complexType name="PointPropertyType">
+		    <annotation>
+			      <documentation>A property that has a point as its value domain may either be an appropriate geometry element encapsulated in an element of this type or an XLink reference to a remote geometry element (where remote includes geometry elements located elsewhere in the same document). Either the reference or the contained element shall be given, but neither both nor none.</documentation>
+		    </annotation>
+		    <sequence minOccurs="0">
+			      <element ref="gml:Point"/>
+		    </sequence>
+		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+		    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	  </complexType>
+<!-- ================================================= --><element name="Point"
+            type="gml:PointType"
+            substitutionGroup="gml:AbstractGeometricPrimitive">
+		    <annotation>
+			      <documentation>A Point is defined by a single coordinate tuple. The direct position of a point is specified by the pos element which is of type DirectPositionType.</documentation>
+		    </annotation>
+	  </element>
+<!-- ================================================= --><complexType name="PointType">
+		    <complexContent>
+			      <extension base="gml:AbstractGeometricPrimitiveType">
+				        <sequence>
+					          <choice>
+						            <element ref="gml:pos"/>
+						            <element ref="gml:coordinates"/>
+					          </choice>
+				        </sequence>
+			      </extension>
+		    </complexContent>
+	  </complexType>
+<!-- ================================================= --><complexType name="AbstractGeometricPrimitiveType" abstract="true">
+		    <annotation>
+			      <documentation>gml:AbstractGeometricPrimitiveType is the abstract root type of the geometric primitives. A geometric primitive is a geometric object that is not decomposed further into other primitives in the system. All primitives are oriented in the direction implied by the sequence of their coordinate tuples.</documentation>
+		    </annotation>
+		    <complexContent>
+			      <extension base="gml:AbstractGeometryType"/>
+		    </complexContent>
+	  </complexType>
+<!-- ================================================= --><element name="AbstractGeometricPrimitive"
+            type="gml:AbstractGeometricPrimitiveType"
+            abstract="true"
+            substitutionGroup="gml:AbstractGeometry">
+		    <annotation>
+			      <documentation>The AbstractGeometricPrimitive element is the abstract head of the substitution group for all (pre- and user-defined) geometric primitives.</documentation>
+		    </annotation>
+	  </element>
 </schema>
