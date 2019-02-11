@@ -14,5 +14,5 @@ weather.
 
 * Fictitious location
 
-Note.� In this example, the primary units �metre per second� and �metre� were used for wind speed and height of cloud base, respectively.
-However, in accordance with Annex 5, the corresponding non-SI alternative units �knot� and �foot� may be used instead.
+Note. In this example, the primary units metre per second and metre were used for wind speed and height of cloud base, respectively.
+However, in accordance with Annex 5, the corresponding non-SI alternative units knot and foot may be used instead.

@@ -2,17 +2,18 @@
 <!--
     An example of a METAR.  Original METAR from ICAO Annex 3 Example A3-1:
       METAR YUDO 221630Z 24004MPS 0600 R12/1000U DZ FG SCT010 OVC020 17/16 Q1018
-        BECMG TL1700 0800 FG BECMG AT1800 9999 NSW
+      BECMG TL1700 0800 FG BECMG AT1800 9999 NSW
 -->
-<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/2.0RC1" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0"
     xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1"
     xmlns:sf="http://www.opengis.net/sampling/2.0"
-    xmlns:saf="http://icao.int/saf/1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/1.1 http://schemas.wmo.int/iwxxm/1.1/iwxxm.xsd
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.1/metce.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2.0RC1 http://schemas.wmo.int/iwxxm/2.0RC1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.1/metce.xsd
+    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
 
     gml:id="metar-YUDO-20120822163000Z"
     status="NORMAL"
@@ -20,7 +21,7 @@
 
     <iwxxm:observation>
         <om:OM_Observation gml:id="obs-03839-20120824T12Z">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeObservation"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeObservation"/>
             <!-- time at which the observation actually occured -->
             <om:phenomenonTime>
                 <gml:TimeInstant gml:id="ti-201208221630Z">
@@ -45,17 +46,17 @@
                     <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
                     <sf:sampledFeature>
                         <!-- The aerodrome at which this observation took place -->
-                        <saf:Aerodrome gml:id="uuid.dd062d88-3e64-4a5d-bebd-89476db9ebea">
-                            <gml:identifier codeSpace="urn:uuid:">dd062d88-3e64-4a5d-bebd-89476db9ebea</gml:identifier>
-                            <saf:designator>YUDO</saf:designator>
-                            <saf:name>DONLON/INTERNATIONAL</saf:name>
-                            <saf:locationIndicatorICAO>YUDO</saf:locationIndicatorICAO>
-                            <saf:ARP>
-                                <gml:Point gml:id="pt52284-32035" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                    <gml:pos>12.34 -12.34</gml:pos>
-                                </gml:Point>
-                            </saf:ARP>
-                        </saf:Aerodrome>
+                        <aixm:AirportHeliport gml:id="aerodrome-YUDO">
+                          <aixm:timeSlice>
+                            <aixm:AirportHeliportTimeSlice gml:id="aerodrome-YUDO-ts">
+                              <gml:validTime/>
+                              <aixm:interpretation>BASELINE</aixm:interpretation>
+                              <aixm:designator>YUDO</aixm:designator>
+                              <aixm:name>DONLON/INTERNATIONAL</aixm:name>
+                              <aixm:locationIndicatorICAO>YUDO</aixm:locationIndicatorICAO>
+                            </aixm:AirportHeliportTimeSlice>
+                          </aixm:timeSlice>
+                        </aixm:AirportHeliport>
                     </sf:sampledFeature>
                     <sams:shape>
                         <!-- This is where the observation took place, assumed to be representative of the entire aerodrome -->
@@ -85,19 +86,15 @@
                     <iwxxm:rvr>
                         <iwxxm:AerodromeRunwayVisualRange pastTendency="UPWARD">
                             <iwxxm:runway>
-                                <saf:RunwayDirection gml:id="uuid.b1947d80-b7f7-11e2-9e96-0800200c9a66">
-                                    <gml:identifier codeSpace="urn:uuid:">b1947d80-b7f7-11e2-9e96-0800200c9a66</gml:identifier>
-                                    <saf:designator>12</saf:designator>
-                                    <saf:trueBearing uom="deg">118.23</saf:trueBearing>
-                                    <saf:elevationTDZ uom="m">20.5</saf:elevationTDZ>
-                                    <saf:usedRunway>
-                                        <saf:Runway gml:id="uuid.2f864fc0-b7f8-11e2-9e96-0800200c9a66">
-                                            <gml:identifier codeSpace="urn:uuid:">2f864fc0-b7f8-11e2-9e96-0800200c9a66</gml:identifier>
-                                            <saf:designator>12/30</saf:designator>
-                                            <saf:associatedAirportHeliport xlink:href="#uuid.dd062d88-3e64-4a5d-bebd-89476db9ebea"/>
-                                        </saf:Runway>
-                                    </saf:usedRunway>
-                                </saf:RunwayDirection>
+                                <aixm:RunwayDirection gml:id="YUDO-runwaydir-12">
+                                    <aixm:timeSlice>
+                                        <aixm:RunwayDirectionTimeSlice gml:id="YUDO-runwaydir-12-ts">
+                                            <gml:validTime/>
+                                            <aixm:interpretation>BASELINE</aixm:interpretation>
+                                            <aixm:designator>12</aixm:designator>
+                                        </aixm:RunwayDirectionTimeSlice>
+                                    </aixm:timeSlice>
+                                </aixm:RunwayDirection>
                             </iwxxm:runway>
                             <iwxxm:meanRVR uom="m">1000</iwxxm:meanRVR>
                         </iwxxm:AerodromeRunwayVisualRange>
@@ -109,13 +106,13 @@
                             <iwxxm:layer>
                                 <iwxxm:CloudLayer>
                                     <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/2"/>
-                                    <iwxxm:base uom="ft">1000</iwxxm:base>
+                                    <iwxxm:base uom="[ft_i]">1000</iwxxm:base>
                                 </iwxxm:CloudLayer>
                             </iwxxm:layer>
                             <iwxxm:layer>
                                 <iwxxm:CloudLayer>
                                     <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/4"/>
-                                    <iwxxm:base uom="ft">2000</iwxxm:base>
+                                    <iwxxm:base uom="[ft_i]">2000</iwxxm:base>
                                 </iwxxm:CloudLayer>
                             </iwxxm:layer>
                         </iwxxm:AerodromeObservedClouds>
@@ -126,7 +123,7 @@
     </iwxxm:observation>
     <iwxxm:trendForecast>
         <om:OM_Observation gml:id="trend-fcst-1">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeTrendForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeTrendForecast"/>
             <!-- time at which the forecast conditions actually occur -->
             <om:phenomenonTime>
                 <gml:TimePeriod gml:id="tp-201208221630Z-201208221700Z">
@@ -149,12 +146,12 @@
     </iwxxm:trendForecast>
     <iwxxm:trendForecast>
         <om:OM_Observation gml:id="trend-fcst-2">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeTrendForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeTrendForecast"/>
             <!-- time at which the forecast conditions actually occur -->
             <om:phenomenonTime>
-                <gml:TimePeriod gml:id="tp-201208221800Z-201208221900Z">
+                <gml:TimePeriod gml:id="tp-201208221800Z-201208221800Z">
                     <gml:beginPosition>2012-08-22T18:00:00Z</gml:beginPosition>
-                    <gml:endPosition>2012-08-22T19:00:00Z</gml:endPosition>
+                    <gml:endPosition>2012-08-22T18:00:00Z</gml:endPosition>
                 </gml:TimePeriod>
             </om:phenomenonTime>
             <!-- time at which the results of the observation were made available -->
@@ -164,7 +161,7 @@
             <om:featureOfInterest xlink:href="#sampling-point-03839"/>
             <om:result>
                 <iwxxm:MeteorologicalAerodromeTrendForecastRecord gml:id="trend-fcst-record-03839-201208221800Z-201208221900Z" changeIndicator="BECOMING" cloudAndVisibilityOK="false">
-                    <iwxxm:prevailingVisibility uom="km">10</iwxxm:prevailingVisibility>
+                    <iwxxm:prevailingVisibility uom="m">10000</iwxxm:prevailingVisibility>
                     <iwxxm:prevailingVisibilityOperator>ABOVE</iwxxm:prevailingVisibilityOperator>
                     <iwxxm:forecastWeather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
                 </iwxxm:MeteorologicalAerodromeTrendForecastRecord>

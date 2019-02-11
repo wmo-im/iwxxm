@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:gml="http://www.opengis.net/gml/3.2"
+<!-- TAF YUDO 160000Z 1606/1624 13005MPS 9000 BKN020 BECMG 1606/1608 SCT015CB BKN020
+  TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020 FM161230 15004MPS 9999 BKN020 -->
+<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/2.0RC1" xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:metce="http://def.wmo.int/metce/2013" xmlns:sf="http://www.opengis.net/sampling/2.0"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:saf="http://icao.int/saf/1.1"
-    xsi:schemaLocation="http://icao.int/iwxxm/1.1 http://schemas.wmo.int/iwxxm/1.1/iwxxm.xsd
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.1/metce.xsd"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1"
+    xsi:schemaLocation="http://icao.int/iwxxm/2.0RC1 http://schemas.wmo.int/iwxxm/2.0RC1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.1/metce.xsd
+    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
 
     gml:id="taf-YUDO-201208160000Z"
     status="NORMAL">
@@ -26,7 +29,7 @@
     </iwxxm:validTime>
     <iwxxm:baseForecast>
         <om:OM_Observation gml:id="bf-1">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeForecast"/>
             <!-- Base forecast phenomena occur throughout the valid period of the TAF -->
             <om:phenomenonTime xlink:href="#tp-201208160600-201208170000"/>
             <!-- resultTime is always the issueTime of the TAF -->
@@ -45,17 +48,17 @@
                     <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
                     <sf:sampledFeature>
                       <!-- The aerodrome at which this forecast takes place -->
-                      <saf:Aerodrome gml:id="uuid.dd062d88-3e64-4a5d-bebd-89476db9ebea">
-                        <gml:identifier codeSpace="urn:uuid:">dd062d88-3e64-4a5d-bebd-89476db9ebea</gml:identifier>
-                        <saf:designator>YUDO</saf:designator>
-                        <saf:name>DONLON/INTERNATIONAL</saf:name>
-                        <saf:locationIndicatorICAO>YUDO</saf:locationIndicatorICAO>
-                        <saf:ARP>
-                          <gml:Point gml:id="pt52284-32035" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                            <gml:pos>12.34 -12.34</gml:pos>
-                          </gml:Point>
-                        </saf:ARP>
-                      </saf:Aerodrome>
+                        <aixm:AirportHeliport gml:id="aerodrome-YUDO">
+                            <aixm:timeSlice>
+                                <aixm:AirportHeliportTimeSlice gml:id="aerodrome-YUDO-ts">
+                                    <gml:validTime/>
+                                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                                    <aixm:designator>YUDO</aixm:designator>
+                                    <aixm:name>DONLON/INTERNATIONAL</aixm:name>
+                                    <aixm:locationIndicatorICAO>YUDO</aixm:locationIndicatorICAO>
+                                </aixm:AirportHeliportTimeSlice>
+                            </aixm:timeSlice>
+                        </aixm:AirportHeliport>
                     </sf:sampledFeature>
                     <sams:shape>
                         <!-- This is where the forecast took place, this is assumed to be representative of the sampledFeature -->
@@ -68,7 +71,7 @@
             <om:result>
                 <!-- Original TAF: 13005MPS 9000 BKN020 -->
                 <iwxxm:MeteorologicalAerodromeForecastRecord gml:id="base-fcst-record" cloudAndVisibilityOK="false">
-                    <iwxxm:prevailingVisibility uom="km">9</iwxxm:prevailingVisibility>
+                    <iwxxm:prevailingVisibility uom="m">9000</iwxxm:prevailingVisibility>
                     <iwxxm:surfaceWind>
                         <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
                             <iwxxm:meanWindDirection uom="deg">130</iwxxm:meanWindDirection>
@@ -80,7 +83,7 @@
                             <iwxxm:layer>
                                 <iwxxm:CloudLayer>
                                     <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"/>
-                                    <iwxxm:base uom="m">600</iwxxm:base>
+                                    <iwxxm:base uom="[ft_i]">2000</iwxxm:base>
                                 </iwxxm:CloudLayer>
                             </iwxxm:layer>
                         </iwxxm:AerodromeCloudForecast>
@@ -92,7 +95,7 @@
     <!-- Original TAF: BECMG 1606/1608 SCT015CB BKN020 -->
     <iwxxm:changeForecast>
         <om:OM_Observation gml:id="cf-1">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeForecast"/>
             <om:phenomenonTime>
                 <gml:TimePeriod gml:id="tp-201208160600-201208160608">
                     <gml:beginPosition>2012-08-16T06:00:00Z</gml:beginPosition>
@@ -113,14 +116,14 @@
                             <iwxxm:layer>
                                 <iwxxm:CloudLayer>
                                     <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/2"/>
-                                    <iwxxm:base uom="m">450</iwxxm:base>
+                                    <iwxxm:base uom="[ft_i]">1500</iwxxm:base>
                                     <iwxxm:cloudType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-012/9"/>
                                 </iwxxm:CloudLayer>
                             </iwxxm:layer>
                             <iwxxm:layer>
                                 <iwxxm:CloudLayer>
                                     <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"/>
-                                    <iwxxm:base uom="m">600</iwxxm:base>
+                                    <iwxxm:base uom="[ft_i]">2000</iwxxm:base>
                                 </iwxxm:CloudLayer>
                             </iwxxm:layer>
                         </iwxxm:AerodromeCloudForecast>
@@ -132,7 +135,7 @@
     <!-- Original TAF: TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020 -->
     <iwxxm:changeForecast>
         <om:OM_Observation gml:id="bf-3">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeForecast"/>
             <om:phenomenonTime>
                 <gml:TimePeriod gml:id="tp-201208160800-201208161200">
                     <gml:beginPosition>2012-08-16T08:00:00Z</gml:beginPosition>
@@ -165,14 +168,14 @@
                             <iwxxm:layer>
                                 <iwxxm:CloudLayer>
                                     <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/2"/>
-                                    <iwxxm:base uom="m">300</iwxxm:base>
+                                    <iwxxm:base uom="[ft_i]">1000</iwxxm:base>
                                     <iwxxm:cloudType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-012/9"/>
                                 </iwxxm:CloudLayer>
                             </iwxxm:layer>
                             <iwxxm:layer>
                                 <iwxxm:CloudLayer>
                                     <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"/>
-                                    <iwxxm:base uom="m">600</iwxxm:base>
+                                    <iwxxm:base uom="[ft_i]">2000</iwxxm:base>
                                 </iwxxm:CloudLayer>
                             </iwxxm:layer>
                         </iwxxm:AerodromeCloudForecast>
@@ -184,7 +187,7 @@
     <!-- Original TAF: FM161230 15004MPS 9999 BKN020 -->
     <iwxxm:changeForecast>
         <om:OM_Observation gml:id="bf-4">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeForecast"/>
             <om:phenomenonTime>
                 <gml:TimePeriod gml:id="tp-201208161230-201208170000">
                     <gml:beginPosition>2012-08-16T12:30:00Z</gml:beginPosition>
@@ -200,7 +203,7 @@
             <om:featureOfInterest xlink:href="#sampling-point-03839"/>
             <om:result>
                 <iwxxm:MeteorologicalAerodromeForecastRecord gml:id="change-fcst-record-3" changeIndicator="FROM" cloudAndVisibilityOK="false">
-                    <iwxxm:prevailingVisibility uom="km">10</iwxxm:prevailingVisibility>
+                    <iwxxm:prevailingVisibility uom="m">10000</iwxxm:prevailingVisibility>
                     <iwxxm:prevailingVisibilityOperator>ABOVE</iwxxm:prevailingVisibilityOperator>
                     <iwxxm:surfaceWind>
                         <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
@@ -213,7 +216,7 @@
                             <iwxxm:layer>
                                 <iwxxm:CloudLayer>
                                     <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"/>
-                                    <iwxxm:base uom="m">600</iwxxm:base>
+                                    <iwxxm:base uom="[ft_i]">2000</iwxxm:base>
                                 </iwxxm:CloudLayer>
                             </iwxxm:layer>
                         </iwxxm:AerodromeCloudForecast>
