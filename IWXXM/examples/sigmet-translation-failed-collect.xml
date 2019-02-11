@@ -17,7 +17,7 @@
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1.1RC1/iwxxm.xsd
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1.1/iwxxm.xsd
                         http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
 			http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd
 			http://def.wmo.int/collect/2014 http://schemas.wmo.int/collect/1.2/collect.xsd"
@@ -81,6 +81,6 @@
 
     </collect:meteorologicalInformation>
 
-    <collect:bulletinIdentifier>A_LSYU31_C_YUSO_20120810100000.xml</collect:bulletinIdentifier>
+    <collect:bulletinIdentifier>A_LSYU31YUSO101000_C_YUSO_20120810100000.xml</collect:bulletinIdentifier>
 
 </collect:MeteorologicalBulletin>

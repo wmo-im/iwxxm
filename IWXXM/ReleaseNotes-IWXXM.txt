@@ -9,6 +9,7 @@
 * Fixed minor issues in the examples and added bulletin examples with COLLECT
 * Added a new schematron file iwxxm-collect-codelist.sch for offline checking of codelist items for pre-implementation
     testing 
+* Entered into force 15 May 2018.
 
 ====================================
 2.1 - March 2017
