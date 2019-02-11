@@ -5,13 +5,13 @@
       YUDD SIGMET 2 VALID 101200/101600 YUSO –
       YUDD SHANLON FIR/UIR OBSC TS FCST S OF N54 AND E OF W012 TOP FL390 MOV E 20KT WKN
 -->
-<iwxxm:SIGMET xmlns:iwxxm="http://icao.int/iwxxm/2.0"
+<iwxxm:SIGMET xmlns:iwxxm="http://icao.int/iwxxm/2.1"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:om="http://www.opengis.net/om/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0"
     xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
     http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
     http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
 
@@ -24,7 +24,7 @@
             <aixm:timeSlice>
                 <aixm:UnitTimeSlice gml:id="fic-YUDD-ts">
                     <gml:validTime/>
-                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                     <aixm:name>YUDD FIC</aixm:name>
                     <aixm:type>FIC</aixm:type>
                     <aixm:designator>YUDD</aixm:designator>
@@ -37,7 +37,7 @@
             <aixm:timeSlice>
                 <aixm:UnitTimeSlice gml:id="mwo-YUSO-ts">
                     <gml:validTime/>
-                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                     <aixm:name>YUSO MWO</aixm:name>
                     <aixm:type>MWO</aixm:type>
                     <aixm:designator>YUSO</aixm:designator>
@@ -62,7 +62,7 @@
     <!-- FCST S OF N54 AND E OF W012 TOP FL390 MOV E 20KT WKN -->
     <iwxxm:analysis>
         <om:OM_Observation gml:id="analysis1">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/SIGMETEvolvingConditionAnalysis"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETEvolvingConditionAnalysis"/>
             <!-- time of FCST conditions - if missing there is no FCST or OBS time -->
             <om:phenomenonTime nilReason="missing"/>
 
@@ -89,7 +89,7 @@
                             <aixm:timeSlice>
                                 <aixm:AirspaceTimeSlice gml:id="fir-YUDD-ts">
                                     <gml:validTime/>
-                                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                                     <aixm:type>OTHER:FIR_UIR</aixm:type>
                                     <aixm:designator>YUDD</aixm:designator>
                                     <aixm:name>SHANLON FIR/UIR</aixm:name>
@@ -102,34 +102,37 @@
                 </sams:SF_SpatialSamplingFeature>
             </om:featureOfInterest>
             <om:result>
-                <iwxxm:EvolvingMeteorologicalCondition gml:id="fcst1" intensityChange="WEAKEN" timeIndicator="FORECAST">
-                    <iwxxm:directionOfMotion uom="deg">90</iwxxm:directionOfMotion>
-                    <!-- This shape describes: S OF N54 AND E OF W012 TOP FL390 -->
-                    <iwxxm:geometry>
+                <iwxxm:SIGMETEvolvingConditionCollection gml:id="fcst1" timeIndicator="FORECAST">
+                  <iwxxm:member>
+                    <iwxxm:SIGMETEvolvingCondition gml:id="sec1" intensityChange="WEAKEN">
+                      <iwxxm:directionOfMotion uom="deg">90</iwxxm:directionOfMotion>
+                      <!-- This shape describes: S OF N54 AND E OF W012 TOP FL390 -->
+                      <iwxxm:geometry>
                         <aixm:AirspaceVolume gml:id="as1">
-                            <aixm:upperLimit uom="FL">390</aixm:upperLimit>
-                            <aixm:upperLimitReference>STD</aixm:upperLimitReference>
-                            <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="sfc1" uomLabels="deg deg" axisLabels="Lat Lon" 
-                                    srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                    <gml:polygonPatches>
-                                        <gml:PolygonPatch>
-                                            <gml:exterior>
-                                                <gml:LinearRing>
-                                                    <!-- bounding polygon clipped to edge of FIR @ 50N and 08W (in clockwise order) -->
-                                                    <gml:posList>
-                                                        54.0 -12.0 54.0 -8.0 50.0 -8.0 50.0 -12.0 54.0 -12.0
-                                                    </gml:posList>
-                                                </gml:LinearRing>
-                                            </gml:exterior>
-                                        </gml:PolygonPatch>
-                                    </gml:polygonPatches>
-                                </aixm:Surface>
-                            </aixm:horizontalProjection>
+                          <aixm:upperLimit uom="FL">390</aixm:upperLimit>
+                          <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                          <aixm:horizontalProjection>
+                            <aixm:Surface gml:id="sfc1" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                              <gml:polygonPatches>
+                                <gml:PolygonPatch>
+                                  <gml:exterior>
+                                    <gml:LinearRing>
+                                      <!-- bounding polygon clipped to edge of FIR @ 50N and 08W (in clockwise order) -->
+                                      <gml:posList>
+                                        54.0 -12.0 54.0 -8.0 50.0 -8.0 50.0 -12.0 54.0 -12.0
+                                      </gml:posList>
+                                    </gml:LinearRing>
+                                  </gml:exterior>
+                                </gml:PolygonPatch>
+                              </gml:polygonPatches>
+                            </aixm:Surface>
+                          </aixm:horizontalProjection>
                         </aixm:AirspaceVolume>
-                    </iwxxm:geometry>
-                    <iwxxm:speedOfMotion uom="[kn_i]">20</iwxxm:speedOfMotion>
-                </iwxxm:EvolvingMeteorologicalCondition>
+                      </iwxxm:geometry>
+                      <iwxxm:speedOfMotion uom="[kn_i]">20</iwxxm:speedOfMotion>
+                    </iwxxm:SIGMETEvolvingCondition>
+                  </iwxxm:member>
+                </iwxxm:SIGMETEvolvingConditionCollection>
             </om:result>
         </om:OM_Observation>
     </iwxxm:analysis>

@@ -30,12 +30,12 @@ NXT ADVISORY:               20080923/0730Z
 
 -->
 <iwxxm:VolcanicAshAdvisory xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:metce="http://def.wmo.int/metce/2013"
+  xmlns:iwxxm="http://icao.int/iwxxm/2.1" xmlns:metce="http://def.wmo.int/metce/2013"
   xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
   xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sam="http://www.opengis.net/sampling/2.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd
-  http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+  http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
   gml:id="ID000" permissibleUsage="OPERATIONAL">
 
   <iwxxm:issueTime>
@@ -54,7 +54,7 @@ NXT ADVISORY:               20080923/0730Z
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
-          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:interpretation>SNAPSHOT</aixm:interpretation>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ltTokyoVolcanicAshCentreUnit">
               <gml:beginPosition>2008-01-01T00:00:00Z</gml:beginPosition>
@@ -74,7 +74,7 @@ NXT ADVISORY:               20080923/0730Z
       <metce:name>KARYMSKY 1000-13</metce:name>
       <metce:position>
         <gml:Point gml:id="karymskyPt" srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
-            <gml:coordinates>54.03 159.27 1536</gml:coordinates>
+            <gml:pos>54.03 159.27 1536</gml:pos>
         </gml:Point>
       </metce:position>
       <metce:eruptionDate>2008-09-23T01:30:00Z</metce:eruptionDate>

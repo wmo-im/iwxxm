@@ -4,12 +4,12 @@
     
       TAF YUDO 151800Z 1600/1618 13005MPS 9000 BKN020 BECMG 1606/1608 SCT015CB BKN020
       TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020 FM161230 15004MPS 9999 BKN020 -->
-<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:gml="http://www.opengis.net/gml/3.2"
+<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/2.1" xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:metce="http://def.wmo.int/metce/2013" xmlns:sf="http://www.opengis.net/sampling/2.0"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-    xsi:schemaLocation="http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
     http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
     http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
 
@@ -33,7 +33,7 @@
     </iwxxm:validTime>
     <iwxxm:baseForecast>
         <om:OM_Observation gml:id="bf-1">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeForecast"/>
             <!-- Base forecast phenomena occur throughout the valid period of the TAF -->
             <om:phenomenonTime xlink:href="#tp-201208160000-201208161800"/>
             <!-- resultTime is always the issueTime of the TAF -->
@@ -56,7 +56,7 @@
                             <aixm:timeSlice>
                                 <aixm:AirportHeliportTimeSlice gml:id="aerodrome-YUDO-ts">
                                     <gml:validTime/>
-                                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                                     <aixm:designator>YUDO</aixm:designator>
                                     <aixm:name>DONLON/INTERNATIONAL</aixm:name>
                                     <aixm:locationIndicatorICAO>YUDO</aixm:locationIndicatorICAO>
@@ -99,7 +99,7 @@
     <!-- Original TAF: BECMG 1606/1608 SCT015CB BKN020 -->
     <iwxxm:changeForecast>
         <om:OM_Observation gml:id="cf-1">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeForecast"/>
             <om:phenomenonTime>
                 <gml:TimePeriod gml:id="tp-201208160600-201208160608">
                     <gml:beginPosition>2012-08-16T06:00:00Z</gml:beginPosition>
@@ -139,7 +139,7 @@
     <!-- Original TAF: TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020 -->
     <iwxxm:changeForecast>
         <om:OM_Observation gml:id="bf-3">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeForecast"/>
             <om:phenomenonTime>
                 <gml:TimePeriod gml:id="tp-201208160800-201208161200">
                     <gml:beginPosition>2012-08-16T08:00:00Z</gml:beginPosition>
@@ -191,7 +191,7 @@
     <!-- Original TAF: FM161230 15004MPS 9999 BKN020 -->
     <iwxxm:changeForecast>
         <om:OM_Observation gml:id="bf-4">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeForecast"/>
             <om:phenomenonTime>
                 <gml:TimePeriod gml:id="tp-201208161230-201208170000">
                     <gml:beginPosition>2012-08-16T12:30:00Z</gml:beginPosition>

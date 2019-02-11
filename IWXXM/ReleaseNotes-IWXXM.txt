@@ -1,4 +1,32 @@
 ====================================
+2.1 - March 2017
+====================================
+* Modified AIRMET and SIGMET to correctly handle complex cases where there are multiple OBS/FCST elements and forecast
+    position elements.  See http://bit.ly/2lZroAM for more information.
+    * AIRMET and SIGMET analysis results are now Collection types which may include up to two sets of conditions as
+      allowed by ICAO Annex 3 Amendment 77 Table A6-1A Note 27 on "AND" elements.  AIRMET and SIGMET XML elements were
+      renamed to be more consistent.  The OBS/FCST time indicator was moved to the Collection types, and all other
+      information may be repeated on EvolvingCondition types. EvolvingCondition types may now only have a single geometry
+        + New elements: SIGMETEvolvingConditionCollection and AIRMETEvolvingConditionCollection
+        * Renamed elements: (SIGMET) EvolvingMeteorologicalCondition -> SIGMETEvolvingCondition,
+          AIRMETEvolvingMeteorologicalCondition -> AIRMETEvolvingCondition, SIGMET MeteorologicalPosition -> SIGMETPosition,
+          SIGMET MeteorologicalPositionCollection -> SIGMETPositionCollection
+        * AIRMET and SIGMET analysis elements are now 0..1 and there must now be exactly one geometry element per member
+            element.  Multiple polygons for an OBS or FCST are represented as multiple member elements in the result
+* No significant change (NSC) is now represented on TAFs as a nil reason of "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance".
+  The TAF ForecastChangeIndicator "NO_SIGNIFICANT_CHANGES" has been removed and "changeForecast" references are now nillable
+* The TAC to XML Guidance document has been updated to be more internally consistent and readable
+* Added translation failed examples for each product and slightly improved SIGMET Schematron rules to properly support
+    these types of messages
+* Per AIXM developer feedback, all AIXM snippets now use the correct "SNAPSHOT" terminology for time slices instead of 
+    "BASELINE".  This required changes to a number of examples
+* The METAR LKKV example has been updated to include a wind shear section
+* Made relevant elements mentioned in TAC-to-XML-Guidance.txt nillable to allow the inclusion of nilReason as indicated
+    in the text
+* Corrected syntax errors in contraints METAR_SPECI.ASW6 and COMMON.ACF2
+* Fixed issues with regard to the placement and associated constraints of extension blocks
+
+====================================
 2.0 - August 2016
 ====================================
 + Added two new sets of metadata on all reports:

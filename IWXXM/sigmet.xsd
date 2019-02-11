@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.0" version="2.0" xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:om="http://www.opengis.net/om/2.0" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.1" version="2.1" xmlns:iwxxm="http://icao.int/iwxxm/2.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:om="http://www.opengis.net/om/2.0" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.2/metce.xsd"></import>
 	<import namespace="http://www.opengis.net/om/2.0" schemaLocation="http://schemas.opengis.net/om/2.0/observation.xsd"></import>
@@ -12,16 +12,47 @@ SIGMETs report the occurrence and/or expected occurrence of specified en-route w
 
 References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
-	<element name="MeteorologicalPosition" type="iwxxm:MeteorologicalPositionType" substitutionGroup="gml:AbstractFeature">
+	<element name="SIGMETEvolvingConditionCollection" type="iwxxm:SIGMETEvolvingConditionCollectionType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>A collection of SIGMETEvolvingConditions, each representing a location where SIGMET observed or forecast conditions exist.  All members of this collection are of type SIGMETEvolvingCondition.</documentation>
+		</annotation>
+	</element>
+	<complexType name="SIGMETEvolvingConditionCollectionType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="member" type="iwxxm:SIGMETEvolvingConditionPropertyType" minOccurs="1" maxOccurs="2"></element>
+					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element SIGMETEvolvingConditionCollection</documentation>
+						</annotation>
+					</element>
+				</sequence>
+				<attribute use="required" name="timeIndicator" type="iwxxm:TimeIndicatorType">
+					<annotation>
+						<documentation>Indication whether the information is observed and expected to continue, or forecast</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SIGMETEvolvingConditionCollectionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:SIGMETEvolvingConditionCollection"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="SIGMETPosition" type="iwxxm:SIGMETPositionType" substitutionGroup="gml:AbstractFeature">
 		<annotation>
 			<documentation>Conditions that indicate the presence of a specific SIGMET phenomenon such as volcanic ash or a thunderstorm.  Used to represent the forecast positions of SIGMET phenomena.
 
-TC TOP (ABV and BLW) conditions are represented by the vertical component of the geometry.  For example: CB TOP FL500 is represented as a missing lowerLimit and an upperLimit of 500FL. 
+TC TOP (ABV and BLW) conditions are represented by the vertical component of the geometry.  For example: CB TOP FL500 is represented as a missing lowerLimit and an upperLimit of 500FL.
 
 In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE FIR" from ICAO Annex 3 / WMO No. 49-2) the geometry should be an xlink to the sampled feature for this SIGMET.</documentation>
 		</annotation>
 	</element>
-	<complexType name="MeteorologicalPositionType">
+	<complexType name="SIGMETPositionType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
@@ -32,7 +63,7 @@ In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE 
 					</element>
 					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Extension block for optional and/or additional parameters</documentation>
+							<documentation>Extension block for optional and/or additional parameters for element SIGMETPosition</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -44,16 +75,16 @@ In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE 
 			</extension>
 		</complexContent>
 	</complexType>
-	<complexType name="MeteorologicalPositionPropertyType">
+	<complexType name="SIGMETPositionPropertyType">
 		<sequence minOccurs="0">
-			<element ref="iwxxm:MeteorologicalPosition"></element>
+			<element ref="iwxxm:SIGMETPosition"></element>
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
 	<element name="SIGMET" type="iwxxm:SIGMETType" substitutionGroup="iwxxm:Report">
 		<annotation>
-			<documentation>A SIGMET (significant meteorological) report. SIGMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena over time. 
+			<documentation>A SIGMET (significant meteorological) report. SIGMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena over time.
 
 The SIGMET report class represents the base SIGMET types that may be reported such as squall lines, thunderstorms, dust storms, turbulence, etc. Tropical cyclone and volcanic ash SIGMET reports are subclasses of SIGMET due to their ability to report additional information, including volcano/tropical cyclone identification and forecast position(s).
 
@@ -103,14 +134,14 @@ YUDD SIGMET A3 VALID ...</documentation>
 							<documentation>The valid period of a previous SIGMET that is cancelled by this SIGMET.  Mandatory when this is a cancellation report, must be missing otherwise</documentation>
 						</annotation>
 					</element>
-					<element name="phenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonType">
+					<element nillable="true" name="phenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonType">
 						<annotation>
 							<documentation>The reported phenomenon, such as thunderstorm, tropical cyclone, icing, mountain wave, etc.
 
 The expected end of occurrence of volcanic ash ("NO VA EXP") is indicated with a missing SIGMET phenomenon with a nil reason of nothingOfOperationalSignificance</documentation>
 						</annotation>
 					</element>
-					<element name="analysis" type="om:OM_ObservationPropertyType" minOccurs="0" maxOccurs="unbounded">
+					<element name="analysis" type="om:OM_ObservationPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>SIGMETs may include the same phenomenon covering more than one area within the FIR/UIR/CTA, as well as observed and forecast conditions for each of these reported areas.  All combinations of observations and forecasts of meteorological conditions, including changing conditions, are represented by their own SIGMETEvolvingMeteorologicalCondition.
 
@@ -129,7 +160,7 @@ Each analysis has a single EvolvingMeteorologicalCondition as its result.  </doc
 					</element>
 					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Extension block for optional and/or additional parameters</documentation>
+							<documentation>Extension block for optional and/or additional parameters for element SIGMET</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -148,18 +179,14 @@ Each analysis has a single EvolvingMeteorologicalCondition as its result.  </doc
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	<element name="EvolvingMeteorologicalCondition" type="iwxxm:EvolvingMeteorologicalConditionType" substitutionGroup="gml:AbstractFeature">
+	<element name="SIGMETEvolvingCondition" type="iwxxm:SIGMETEvolvingConditionType" substitutionGroup="gml:AbstractFeature">
 		<annotation>
 			<documentation>Conditions that indicate the presence of a specific SIGMET phenomenon such as volcanic ash or a thunderstorm, along with expected changes to the phenomenon such as intensity, speed, and direction.  These conditions are reported with OBS/FCST conditions on all SIGMET types.
 
-TC TOP (ABV and BLW) conditions are represented by the vertical component of the geometry.  For example: CB TOP FL500 is represented as a missing lowerLimit and an upperLimit of 500FL.  
-
-directionOfMotion element refers to the direction which the phenomenon is moving towards, .e.g, "moving to the east". directionOfMotion is given in degrees from true North. Plane angle unit of measure (uom) is "deg". 
-
-speedOfMotion can be provided in either two units of measures: "km/h" or "kn_i" (knots).</documentation>
+TC TOP (ABV and BLW) conditions are represented by the vertical component of the geometry.  For example: CB TOP FL500 is represented as a missing lowerLimit and an upperLimit of 500FL.</documentation>
 		</annotation>
 	</element>
-	<complexType name="EvolvingMeteorologicalConditionType">
+	<complexType name="SIGMETEvolvingConditionType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
@@ -170,21 +197,21 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "kn_i" 
 This element value is given in degrees from true North. Plane angle unit of measure (uom) is "deg". </documentation>
 						</annotation>
 					</element>
-					<element name="geometry" type="aixm:AirspaceVolumePropertyType" minOccurs="1" maxOccurs="unbounded">
+					<element name="geometry" type="aixm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
 						</annotation>
 					</element>
 					<element name="geometryLowerLimitOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The reported relational operator for the airspace geometry lower limit. When reported, this operator is reported in conjunction with the airspace geometry's lower limit. 
+							<documentation>The reported relational operator for the airspace geometry lower limit. When reported, this operator is reported in conjunction with the airspace geometry's lower limit.
 
 To report an airspace lower limit of below FL 300, airspace lower limit is reported as FL 300 and the operator is reported as "below".  When no operator is reported, the airspace lower limit represents an exact value with identical semantics to other measured quantities</documentation>
 						</annotation>
 					</element>
 					<element name="geometryUpperLimitOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The reported relational operator for the airspace geometry upper limit. When reported, this operator is reported in conjunction with the airspace geometry's upper limit. 
+							<documentation>The reported relational operator for the airspace geometry upper limit. When reported, this operator is reported in conjunction with the airspace geometry's upper limit.
 
 To report an airspace upper limit of above FL 300, airspace upper limit is reported as FL 300 and the operator is reported as "above".  When no operator is reported, the airspace upper limit represents an exact value with identical semantics to other measured quantities</documentation>
 						</annotation>
@@ -198,18 +225,13 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 					</element>
 					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Extension block for optional and/or additional parameters</documentation>
+							<documentation>Extension block for optional and/or additional parameters for element SIGMETEvolvingCondition</documentation>
 						</annotation>
 					</element>
 				</sequence>
 				<attribute name="intensityChange" type="iwxxm:ExpectedIntensityChangeType">
 					<annotation>
 						<documentation>The expected change in intensity for the reported meteorological condition (e.g., intensifying, weakening, or no change) determined at the time of SIGMET analysis based on the current state of the meteorological condition</documentation>
-					</annotation>
-				</attribute>
-				<attribute use="required" name="timeIndicator" type="iwxxm:TimeIndicatorType">
-					<annotation>
-						<documentation>Indication whether the information is observed and expected to continue, or forecast</documentation>
 					</annotation>
 				</attribute>
 				<attribute name="approximateLocation" type="boolean">
@@ -220,9 +242,9 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 			</extension>
 		</complexContent>
 	</complexType>
-	<complexType name="EvolvingMeteorologicalConditionPropertyType">
+	<complexType name="SIGMETEvolvingConditionPropertyType">
 		<sequence minOccurs="0">
-			<element ref="iwxxm:EvolvingMeteorologicalCondition"></element>
+			<element ref="iwxxm:SIGMETEvolvingCondition"></element>
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
@@ -238,14 +260,14 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 				<sequence>
 					<element name="tropicalCyclone" type="metce:TropicalCyclonePropertyType">
 						<annotation>
-							<documentation>The tropical cyclone being reported in this SIGMET.  
+							<documentation>The tropical cyclone being reported in this SIGMET.
 
 When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclone is unnamed</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Extension block for optional and/or additional parameters</documentation>
+							<documentation>Extension block for optional and/or additional parameters for element TropicalCycloneSIGMET</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -275,7 +297,7 @@ When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclo
 					</element>
 					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Extension block for optional and/or additional parameters</documentation>
+							<documentation>Extension block for optional and/or additional parameters for element VolcanicAshSIGMET</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -289,28 +311,28 @@ When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclo
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	<element name="MeteorologicalPositionCollection" type="iwxxm:MeteorologicalPositionCollectionType" substitutionGroup="gml:AbstractFeature">
+	<element name="SIGMETPositionCollection" type="iwxxm:SIGMETPositionCollectionType" substitutionGroup="gml:AbstractFeature">
 		<annotation>
-			<documentation>A collection of MeteorologicalPositions, each representing a location where meteorological conditions exist.  All members of this collection are of type MeteorologicalPosition.</documentation>
+			<documentation>A collection of SIGMETPositions, each representing a location where meteorological conditions exist.  All members of this collection are of type SIGMETPosition.</documentation>
 		</annotation>
 	</element>
-	<complexType name="MeteorologicalPositionCollectionType">
+	<complexType name="SIGMETPositionCollectionType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="member" type="iwxxm:MeteorologicalPositionPropertyType" minOccurs="0" maxOccurs="unbounded"></element>
+					<element name="member" type="iwxxm:SIGMETPositionPropertyType" minOccurs="1" maxOccurs="2"></element>
 					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Extension block for optional and/or additional parameters</documentation>
+							<documentation>Extension block for optional and/or additional parameters for element SIGMETPositionCollection</documentation>
 						</annotation>
 					</element>
 				</sequence>
 			</extension>
 		</complexContent>
 	</complexType>
-	<complexType name="MeteorologicalPositionCollectionPropertyType">
+	<complexType name="SIGMETPositionCollectionPropertyType">
 		<sequence minOccurs="0">
-			<element ref="iwxxm:MeteorologicalPositionCollection"></element>
+			<element ref="iwxxm:SIGMETPositionCollection"></element>
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>

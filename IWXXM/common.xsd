@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.0" version="2.0" xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
-	<include schemaLocation="measures.xsd"></include>
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.1" version="2.1" xmlns:iwxxm="http://icao.int/iwxxm/2.1" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
@@ -16,13 +15,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 	<complexType name="ReportType" abstract="true">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
-				<sequence>
-					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
-						<annotation>
-							<documentation>Extension block for optional and/or additional parameters</documentation>
-						</annotation>
-					</element>
-				</sequence>
+				<sequence></sequence>
 				<attribute use="required" name="permissibleUsage" type="iwxxm:PermissibleUsageType">
 					<annotation>
 						<documentation>The permissible usage of this report (operational or non-operational)</documentation>
@@ -80,7 +73,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 	</complexType>
 	<element name="AerodromeCloudForecast" type="iwxxm:AerodromeCloudForecastType" substitutionGroup="gml:AbstractGML">
 		<annotation>
-			<documentation>Forecast cloud conditions, including predicted vertical visibility and cloud layers.  
+			<documentation>Forecast cloud conditions, including predicted vertical visibility and cloud layers.
 
 A single vertical visibility may be reported, but cannot be reported with cloud layers.</documentation>
 		</annotation>
@@ -99,10 +92,18 @@ Vertical visibility shall be reported either in meters ("m") or feet ("[ft_i]").
 							</appinfo>
 						</annotation>
 					</element>
-					<element name="layer" type="iwxxm:CloudLayerPropertyType" minOccurs="0" maxOccurs="4"></element>
+					<element nillable="true" name="layer" minOccurs="0" maxOccurs="4">
+						<complexType>
+							<complexContent>
+								<extension base="iwxxm:CloudLayerPropertyType">
+									<attribute name="nilReason" type="gml:NilReasonType"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
 					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Extension block for optional and/or additional parameters</documentation>
+							<documentation>Extension block for optional and/or additional parameters for element AerodromeCloudForecast</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -118,7 +119,7 @@ Vertical visibility shall be reported either in meters ("m") or feet ("[ft_i]").
 	</complexType>
 	<element name="AerodromeSurfaceWindForecast" type="iwxxm:AerodromeSurfaceWindForecastType" substitutionGroup="iwxxm:AerodromeSurfaceWindTrendForecast">
 		<annotation>
-			<documentation>A forecast of wind conditions at an aerodrome.  
+			<documentation>A forecast of wind conditions at an aerodrome.
 
 Wind direction shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".  A true north wind is indicated with a direction of 360. Calm wind is indicated with a direction of 0. Wind speeds and gusts, if present, shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).
 
@@ -128,13 +129,7 @@ This extends AerodromeSurfaceWindTrendForecast to allow for a variable wind dire
 	<complexType name="AerodromeSurfaceWindForecastType">
 		<complexContent>
 			<extension base="iwxxm:AerodromeSurfaceWindTrendForecastType">
-				<sequence>
-					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
-						<annotation>
-							<documentation>Extension block for optional and/or additional parameters</documentation>
-						</annotation>
-					</element>
-				</sequence>
+				<sequence></sequence>
 				<attribute use="required" name="variableWindDirection" type="boolean">
 					<annotation>
 						<documentation>Indicates variable wind direction.  Cannot be reported with a mean wind direction</documentation>
@@ -179,7 +174,7 @@ Wind speeds shall be provided in either two units of measures: "m/s" or "[kn_i]"
 			</element>
 			<element name="meanWindSpeedOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
 				<annotation>
-					<documentation>Indication that the mean wind speed is above or below the reported value.  To report a wind speed of at least 49 meters per second, wind speed is reported as 49 meters per second and the operator is reported as "above".  
+					<documentation>Indication that the mean wind speed is above or below the reported value.  To report a wind speed of at least 49 meters per second, wind speed is reported as 49 meters per second and the operator is reported as "above".
 
 When no operator is reported, wind speed is an exact value with identical semantics to other measured quantities.</documentation>
 				</annotation>
@@ -196,9 +191,14 @@ Wind gusts shall be provided in either two units of measures: "m/s" or "[kn_i]" 
 			</element>
 			<element name="windGustSpeedOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
 				<annotation>
-					<documentation>Indication that the wind gust speed is above or below the reported value.  To report a wind gust speed of at least 49 meters per second, wind gust speed is reported as 49 meters per second and the operator is reported as "above".  
+					<documentation>Indication that the wind gust speed is above or below the reported value.  To report a wind gust speed of at least 49 meters per second, wind gust speed is reported as 49 meters per second and the operator is reported as "above".
 
 When no operator is reported, wind gust speed is an exact value with identical semantics to other measured quantities.</documentation>
+				</annotation>
+			</element>
+			<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Extension block for optional and/or additional parameters for element AerodromeSurfaceWindTrendForecast</documentation>
 				</annotation>
 			</element>
 		</sequence>
@@ -216,7 +216,7 @@ When no operator is reported, wind gust speed is an exact value with identical s
 	</element>
 	<complexType name="CloudLayerType">
 		<sequence>
-			<element name="amount" type="iwxxm:CloudAmountReportedAtAerodromeType">
+			<element nillable="true" name="amount" type="iwxxm:CloudAmountReportedAtAerodromeType">
 				<annotation>
 					<documentation>The observed cloud amount</documentation>
 				</annotation>
@@ -231,9 +231,14 @@ Measured cloud bases shall be reported in meters ("m") or feet ("[ft_i]").</docu
 					</appinfo>
 				</annotation>
 			</element>
-			<element name="cloudType" type="iwxxm:SigConvectiveCloudTypeType" minOccurs="0" maxOccurs="1">
+			<element nillable="true" name="cloudType" type="iwxxm:SigConvectiveCloudTypeType" minOccurs="0" maxOccurs="1">
 				<annotation>
 					<documentation>The observed significant cloud types: cumulonimbus or towering cumulus</documentation>
+				</annotation>
+			</element>
+			<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Extension block for optional and/or additional parameters for element CloudLayer</documentation>
 				</annotation>
 			</element>
 		</sequence>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
    <sch:title>Schematron validation</sch:title>
-   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/2.0"/>
+   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/2.1"/>
    <sch:ns prefix="sf" uri="http://www.opengis.net/sampling/2.0"/>
    <sch:ns prefix="sams" uri="http://www.opengis.net/samplingSpatial/2.0"/>
    <sch:ns prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
@@ -36,7 +36,7 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORep6">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
-         <sch:assert test="(empty(distinct-values(for $trend-forecast in .//iwxxm:trendForecast return((deep-equal(.//iwxxm:observation/om:OM_Observation/om:featureOfInterest//sf:sampledFeature,$trend-forecast/om:OM_Observation/om:featureOfInterest//sf:sampledFeature))or(concat('#', current()//iwxxm:observation/om:OM_Observation/om:featureOfInterest/sams:SF_SpatialSamplingFeature/@gml:id)=$trend-forecast/om:OM_Observation/om:featureOfInterest/@xlink:href)))[.=false()]))">METAR_SPECI.MAORep6: The sampled feature should be equal in observation and trendForecast</sch:assert>
+         <sch:assert test="(if(exists(.//iwxxm:trendForecast) and not((count(.//iwxxm:trendForecast) eq 1) and (.//iwxxm:trendForecast = ''))) then(empty(distinct-values(for $trend-forecast in .//iwxxm:trendForecast return((deep-equal(.//iwxxm:observation/om:OM_Observation/om:featureOfInterest//sf:sampledFeature,$trend-forecast/om:OM_Observation/om:featureOfInterest//sf:sampledFeature)) or (concat('#', current()//iwxxm:observation/om:OM_Observation/om:featureOfInterest/sams:SF_SpatialSamplingFeature/@gml:id)=$trend-forecast/om:OM_Observation/om:featureOfInterest/@xlink:href)))[.=false()])) else(true()))">METAR_SPECI.MAORep6: The sampled feature should be equal in observation and trendForecast</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORep3">
@@ -121,7 +121,7 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORec4">
       <sch:rule context="//iwxxm:MeteorologicalAerodromeObservationRecord">
-         <sch:assert test="(if( @cloudAndVisibilityOK eq 'true' ) then (empty(iwxxm:cloud)) else (true()))">METAR_SPECI.MAORec4: clouds should be absent when cloudAndVisibilityOK is true</sch:assert>
+         <sch:assert test="(if(@cloudAndVisibilityOK eq 'true' ) then (empty(iwxxm:cloud)) else (true()))">METAR_SPECI.MAORec4: clouds should be absent when cloudAndVisibilityOK is true</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MAORec3">
@@ -181,7 +181,7 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.ASW6">
       <sch:rule context="//iwxxm:AerodromeSurfaceWind">
-         <sch:assert test="(if(exists(iwxxm:meanWindSpeed) and (not(exists(iwxxm:meanWindSpeed/@xsi:nil)) or iwxxm:meanWindSpeed/@xsi:nil != 'true')) then ((iwxxm:meanWindSpeed/@uom = 'm/s') or (iwxxm:meanWindSpeed/@uom = '[kn_i]')) else true())">METAR_SPECI.ASW6: meanWindSpeed shall be reported in metres per second (m/s) or knots ([kt_i]).</sch:assert>
+         <sch:assert test="(if(exists(iwxxm:meanWindSpeed) and (not(exists(iwxxm:meanWindSpeed/@xsi:nil)) or iwxxm:meanWindSpeed/@xsi:nil != 'true')) then ((iwxxm:meanWindSpeed/@uom = 'm/s') or (iwxxm:meanWindSpeed/@uom = '[kn_i]')) else true())">METAR_SPECI.ASW6: meanWindSpeed shall be reported in metres per second (m/s) or knots ([kn_i]).</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.ASW2">
@@ -247,6 +247,11 @@
    <sch:pattern id="TAF.TAF1">
       <sch:rule context="//iwxxm:TAF">
          <sch:assert test="(if(//iwxxm:MeteorologicalAerodromeForecastRecord/@changeIndicator) then(empty(iwxxm:MeteorologicalAerodromeForecastRecord/iwxxm:temperature)) else(true()))">TAF.TAF1: Forecast conditions cannot include temperature information. They are otherwise identical to the prevailing conditions</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="TAF.TAF18">
+      <sch:rule context="//iwxxm:TAF">
+         <sch:assert test="(if(exists(iwxxm:baseForecast//om:result/iwxxm:MeteorologicalAerodromeForecastRecord)) then((exists(iwxxm:baseForecast//om:result/iwxxm:MeteorologicalAerodromeForecastRecord/iwxxm:surfaceWind)) and (exists(iwxxm:baseForecast//om:result/iwxxm:MeteorologicalAerodromeForecastRecord/iwxxm:cloud))) else(true()))">TAF.TAF18: surfaceWind and cloud are mandatory in a non-empty baseForecast</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF3">
@@ -341,7 +346,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET4">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if(@status ne 'CANCELLATION') then((exists(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/aixm:Airspace)) or (contains(string(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/@xlink:href), 'fir')) or (contains(string(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/@xlink:href), 'uir')) or (contains(string(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/@xlink:href), 'cta')) ) and ( if(exists(.//om:OM_Observation/om:featureOfInterest/@xlink:href)) then (concat( '#', current()//om:OM_Observation//sams:SF_SpatialSamplingFeature/@gml:id ) = .//om:OM_Observation/om:featureOfInterest/@xlink:href) else(true())) else(true()))">SIGMET.SIGMET4: Sampled feature in analysis and forecastPositionAnalysis must be an FIR, UIR, or CTA</sch:assert>
+         <sch:assert test="( if((@status ne 'CANCELLATION') and (not(@translationFailedTAC))) then((exists(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/aixm:Airspace)) or (contains(string(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/@xlink:href), 'fir')) or (contains(string(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/@xlink:href), 'uir')) or (contains(string(.//om:OM_Observation/om:featureOfInterest//sf:sampledFeature/@xlink:href), 'cta')) ) and ( if(exists(.//om:OM_Observation/om:featureOfInterest/@xlink:href)) then (concat( '#', current()//om:OM_Observation//sams:SF_SpatialSamplingFeature/@gml:id ) = .//om:OM_Observation/om:featureOfInterest/@xlink:href) else(true())) else(true()))">SIGMET.SIGMET4: Sampled feature in analysis and forecastPositionAnalysis must be an FIR, UIR, or CTA</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET7">
@@ -351,7 +356,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET3">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="(if(@status ne 'CANCELLATION') then(exists(//iwxxm:analysis/om:OM_Observation/om:result/iwxxm:EvolvingMeteorologicalCondition)) else(true()))">SIGMET.SIGMET3: OBS and FCST analyses must have a result type of EvolvingMeteorologicalCondition</sch:assert>
+         <sch:assert test="(if((@status ne 'CANCELLATION') and exists(//iwxxm:analysis/om:OM_Observation)) then(exists(//iwxxm:analysis/om:OM_Observation/om:result/iwxxm:SIGMETEvolvingConditionCollection)) else(true()))">SIGMET.SIGMET3: OBS and FCST analyses must have a result type of SIGMETEvolvingConditionCollection</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET8">
@@ -361,97 +366,107 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET5">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="(if((@status ne 'CANCELLATION') and exists(iwxxm:forecastPositionAnalysis)) then(not(exists(iwxxm:forecastPositionAnalysis//om:result/*[name() != 'iwxxm:MeteorologicalPositionCollection']))) else(true()))">SIGMET.SIGMET5: The result of a forecastPositionAnalysis should be a MeteorologicalPositionCollection</sch:assert>
+         <sch:assert test="(if((@status ne 'CANCELLATION') and exists(iwxxm:forecastPositionAnalysis)) then(not(exists(iwxxm:forecastPositionAnalysis//om:result/*[name() != 'iwxxm:SIGMETPositionCollection']))) else(true()))">SIGMET.SIGMET5: The result of a forecastPositionAnalysis should be a SIGMETPositionCollection</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="SIGMET.EMC1">
-      <sch:rule context="//iwxxm:EvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:directionOfMotion) and (not(exists(iwxxm:directionOfMotion/@xsi:nil)) or iwxxm:directionOfMotion/@xsi:nil != 'true')) then (iwxxm:directionOfMotion/@uom = 'deg') else true())">SIGMET.EMC1: directionOfMotion shall be reported in degrees (deg).</sch:assert>
+   <sch:pattern id="SIGMET.SEC1">
+      <sch:rule context="//iwxxm:SIGMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:directionOfMotion) and (not(exists(iwxxm:directionOfMotion/@xsi:nil)) or iwxxm:directionOfMotion/@xsi:nil != 'true')) then (iwxxm:directionOfMotion/@uom = 'deg') else true())">SIGMET.SEC1: directionOfMotion shall be reported in degrees (deg).</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="SIGMET.EMC5">
-      <sch:rule context="//iwxxm:EvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:geometryLowerLimitOperator)) then (iwxxm:geometryLowerLimitOperator = 'BELOW') else true())">SIGMET.EMC5: geometryLowerLimitOperator can either be NULL or BELOW.</sch:assert>
+   <sch:pattern id="SIGMET.SEC3">
+      <sch:rule context="//iwxxm:SIGMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:geometryLowerLimitOperator)) then (iwxxm:geometryLowerLimitOperator = 'BELOW') else true())">SIGMET.SEC3: geometryLowerLimitOperator can either be NULL or BELOW.</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="SIGMET.EMC6">
-      <sch:rule context="//iwxxm:EvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:geometryUpperLimitOperator)) then (iwxxm:geometryUpperLimitOperator = 'ABOVE') else true())">SIGMET.EMC6: geometryUpperLimitOperator can either be NULL or ABOVE</sch:assert>
+   <sch:pattern id="SIGMET.SEC4">
+      <sch:rule context="//iwxxm:SIGMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:geometryUpperLimitOperator)) then (iwxxm:geometryUpperLimitOperator = 'ABOVE') else true())">SIGMET.SEC4: geometryUpperLimitOperator can either be NULL or ABOVE</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="SIGMET.EMC2">
-      <sch:rule context="//iwxxm:EvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:speedOfMotion) and (not(exists(iwxxm:speedOfMotion/@xsi:nil)) or iwxxm:speedOfMotion/@xsi:nil != 'true')) then ((iwxxm:speedOfMotion/@uom = 'km/h') or (iwxxm:speedOfMotion/@uom = '[kn_i]')) else true())">SIGMET.EMC2: speedOfMotion shall be reported in kilometres per hour (km/h) or knots ([kn_i]).</sch:assert>
+   <sch:pattern id="SIGMET.SEC2">
+      <sch:rule context="//iwxxm:SIGMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:speedOfMotion) and (not(exists(iwxxm:speedOfMotion/@xsi:nil)) or iwxxm:speedOfMotion/@xsi:nil != 'true')) then ((iwxxm:speedOfMotion/@uom = 'km/h') or (iwxxm:speedOfMotion/@uom = '[kn_i]')) else true())">SIGMET.SEC2: speedOfMotion shall be reported in kilometres per hour (km/h) or knots ([kn_i]).</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="SIGMET.EMC4">
-      <sch:rule context="//iwxxm:EvolvingMeteorologicalCondition">
-         <sch:assert test="(if(@timeIndicator='FORECAST' and ../../om:phenomenonTime/gml:TimeInstant/gml:timePosition) then (translate(../../om:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') ge translate(../../../../iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')) else true())">SIGMET.EMC4: When SIGMET EvolvingMeteorologicalCondition timeIndicator is a forecast, the phenomenonTime must be later than or equal to the beginning of the validPeriod of the report.</sch:assert>
+   <sch:pattern id="SIGMET.SECC3">
+      <sch:rule context="//iwxxm:SIGMETEvolvingConditionCollection">
+         <sch:assert test="(if(exists(/iwxxm:SIGMET)) then(count(iwxxm:member) eq 1) else(true()))">SIGMET.SECC3: The number of SIGMETEvolvingConditionCollection member should be 1 for non-Tropical Cyclone/Volcanic Ash SIGMETs</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="SIGMET.EMC3">
-      <sch:rule context="//iwxxm:EvolvingMeteorologicalCondition">
-         <sch:assert test="(if(@timeIndicator='OBSERVATION' and ../../om:phenomenonTime/gml:TimeInstant/gml:timePosition) then (translate(../../om:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') le translate(../../../../iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')) else true())">SIGMET.EMC3: When SIGMET EvolvingMeteorologicalCondition timeIndicator is an observation, the phenomenonTime must be earlier than or equal to the beginning of the validPeriod of the report.</sch:assert>
+   <sch:pattern id="SIGMET.SECC2">
+      <sch:rule context="//iwxxm:SIGMETEvolvingConditionCollection">
+         <sch:assert test="(if(@timeIndicator='FORECAST' and ../../om:phenomenonTime/gml:TimeInstant/gml:timePosition) then (translate(../../om:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') ge translate(../../../../iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')) else(true()))">SIGMET.SECC2: When SIGMETEvolvingConditionCollection timeIndicator is a forecast, the phenomenonTime must be later than or equal to the beginning of the validPeriod of the report.</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC1">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:cloudBase) and (not(exists(iwxxm:cloudBase/@xsi:nil)) or iwxxm:cloudBase/@xsi:nil != 'true')) then ((iwxxm:cloudBase/@uom = 'm') or (iwxxm:cloudBase/@uom = '[ft_i]')) else true())">AIRMET.AEMC1: cloudBase shall be reported in metres (m) or feet ([ft_i]).</sch:assert>
+   <sch:pattern id="SIGMET.SECC1">
+      <sch:rule context="//iwxxm:SIGMETEvolvingConditionCollection">
+         <sch:assert test="(if(@timeIndicator='OBSERVATION' and ../../om:phenomenonTime/gml:TimeInstant/gml:timePosition) then (translate(../../om:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') le translate(../../../../iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')) else(true()))">SIGMET.SECC1: When SIGMETEvolvingConditionCollection timeIndicator is an observation, the phenomenonTime must be earlier than or equal to the beginning of the validPeriod of the report.</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC2">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:cloudTop) and (not(exists(iwxxm:cloudTop/@xsi:nil)) or iwxxm:cloudTop/@xsi:nil != 'true')) then ((iwxxm:cloudTop/@uom = 'm') or (iwxxm:cloudTop/@uom = '[ft_i]')) else true())">AIRMET.AEMC2: cloudTop shall be reported in metres (m) or feet ([ft_i]).</sch:assert>
+   <sch:pattern id="SIGMET.SPC1">
+      <sch:rule context="//iwxxm:SIGMETPositionCollection">
+         <sch:assert test="(if(exists(/iwxxm:SIGMET)) then(count(iwxxm:member) eq 1) else(true()))">SIGMET.SPC1: The number of SIGMETPositionCollection member should be 1 for non-Tropical Cyclone/Volcanic Ash SIGMETs</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC3">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:directionOfMotion) and (not(exists(iwxxm:directionOfMotion/@xsi:nil)) or iwxxm:directionOfMotion/@xsi:nil != 'true')) then (iwxxm:directionOfMotion/@uom = 'deg') else true())">AIRMET.AEMC3: directionOfMotion shall be reported in degrees (deg).</sch:assert>
+   <sch:pattern id="AIRMET.AECC2">
+      <sch:rule context="//iwxxm:AIRMETEvolvingConditionCollection">
+         <sch:assert test="(if(@timeIndicator='FORECAST' and ../../om:phenomenonTime/gml:TimeInstant/gml:timePosition) then (translate(../../om:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') ge translate(../../../../iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')) else true())">AIRMET.AECC2: When AIRMETEvolvingConditionCollection timeIndicator is a forecast, the phenomenonTime must be later than or equal to the beginning of the validPeriod of the report.</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC11">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:geometryLowerLimitOperator)) then (iwxxm:geometryLowerLimitOperator = 'BELOW') else true())">AIRMET.AEMC11: geometryLowerLimitOperator can either be NULL or BELOW.</sch:assert>
+   <sch:pattern id="AIRMET.AECC1">
+      <sch:rule context="//iwxxm:AIRMETEvolvingConditionCollection">
+         <sch:assert test="(if(@timeIndicator='OBSERVATION' and ../../om:phenomenonTime/gml:TimeInstant/gml:timePosition) then (translate(../../om:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') le translate(../../../../iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')) else true())">AIRMET.AECC1: When AIRMETEvolvingConditionCollection timeIndicator is an observation, the phenomenonTime must be earlier than or equal to the beginning of the validPeriod of the report.</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC12">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:geometryUpperLimitOperator)) then (iwxxm:geometryUpperLimitOperator = 'ABOVE') else true())">AIRMET.AEMC12: geometryUpperLimitOperator can either be NULL or ABOVE</sch:assert>
+   <sch:pattern id="AIRMET.AEC1">
+      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:cloudBase) and (not(exists(iwxxm:cloudBase/@xsi:nil)) or iwxxm:cloudBase/@xsi:nil != 'true')) then ((iwxxm:cloudBase/@uom = 'm') or (iwxxm:cloudBase/@uom = '[ft_i]')) else true())">AIRMET.AEC1: cloudBase shall be reported in metres (m) or feet ([ft_i]).</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC4">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:speedOfMotion) and (not(exists(iwxxm:speedOfMotion/@xsi:nil)) or iwxxm:speedOfMotion/@xsi:nil != 'true')) then ((iwxxm:speedOfMotion/@uom = 'km/h') or (iwxxm:speedOfMotion/@uom = '[kn_i]')) else true())">AIRMET.AEMC4: speedOfMotion shall be reported in kilometres per hour (km/h) or knots ([kn_i]).</sch:assert>
+   <sch:pattern id="AIRMET.AEC2">
+      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:cloudTop) and (not(exists(iwxxm:cloudTop/@xsi:nil)) or iwxxm:cloudTop/@xsi:nil != 'true')) then ((iwxxm:cloudTop/@uom = 'm') or (iwxxm:cloudTop/@uom = '[ft_i]')) else true())">AIRMET.AEC2: cloudTop shall be reported in metres (m) or feet ([ft_i]).</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC5">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:surfaceVisibility) and (not(exists(iwxxm:surfaceVisibility/@xsi:nil)) or iwxxm:surfaceVisibility/@xsi:nil != 'true')) then (iwxxm:surfaceVisibility/@uom = 'm') else true())">AIRMET.AEMC5: surfaceVisibility shall be reported in metres (m).</sch:assert>
+   <sch:pattern id="AIRMET.AEC3">
+      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:directionOfMotion) and (not(exists(iwxxm:directionOfMotion/@xsi:nil)) or iwxxm:directionOfMotion/@xsi:nil != 'true')) then (iwxxm:directionOfMotion/@uom = 'deg') else true())">AIRMET.AEC3: directionOfMotion shall be reported in degrees (deg).</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC9">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:surfaceWindDirection) and (not(exists(iwxxm:surfaceWindDirection/@xsi:nil)) or iwxxm:surfaceWindDirection/@xsi:nil != 'true')) then ((iwxxm:surfaceWindDirection/@uom = 'deg')) else true())">AIRMET.AEMC9: surfaceWindDirection shall be reported in the degrees unit of measure ('deg').</sch:assert>
+   <sch:pattern id="AIRMET.AEC9">
+      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:geometryLowerLimitOperator)) then (iwxxm:geometryLowerLimitOperator = 'BELOW') else true())">AIRMET.AEC9: geometryLowerLimitOperator can either be NULL or BELOW.</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC6">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:surfaceWindSpeed) and (not(exists(iwxxm:surfaceWindSpeed/@xsi:nil)) or iwxxm:surfaceWindSpeed/@xsi:nil != 'true')) then ((iwxxm:surfaceWindSpeed/@uom = 'm/s') or (iwxxm:surfaceWindSpeed/@uom = '[kn_i]')) else true())">AIRMET.AEMC6: surfaceWindSpeed shall be reported in metres per second (m/s) or knots ([kn_i]).</sch:assert>
+   <sch:pattern id="AIRMET.AEC10">
+      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:geometryUpperLimitOperator)) then (iwxxm:geometryUpperLimitOperator = 'ABOVE') else true())">AIRMET.AEC10: geometryUpperLimitOperator can either be NULL or ABOVE</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC10">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(exists(iwxxm:surfaceWindDirection) or exists(iwxxm:surfaceWindSpeed)) then (exists(iwxxm:surfaceWindDirection) and exists(iwxxm:surfaceWindSpeed)) else true())">AIRMET.AEMC10: surfaceWindDirection and surfaceWindSpeed must be reported together</sch:assert>
+   <sch:pattern id="AIRMET.AEC4">
+      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:speedOfMotion) and (not(exists(iwxxm:speedOfMotion/@xsi:nil)) or iwxxm:speedOfMotion/@xsi:nil != 'true')) then ((iwxxm:speedOfMotion/@uom = 'km/h') or (iwxxm:speedOfMotion/@uom = '[kn_i]')) else true())">AIRMET.AEC4: speedOfMotion shall be reported in kilometres per hour (km/h) or knots ([kn_i]).</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC8">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(@timeIndicator='FORECAST' and ../../om:phenomenonTime/gml:TimeInstant/gml:timePosition) then (translate(../../om:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') ge translate(../../../../iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')) else true())">AIRMET.AEMC8: When AIRMETEvolvingMeteorologicalCondition timeIndicator is a forecast, the phenomenonTime must be later than or equal to the beginning of the validPeriod of the report.</sch:assert>
+   <sch:pattern id="AIRMET.AEC5">
+      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:surfaceVisibility) and (not(exists(iwxxm:surfaceVisibility/@xsi:nil)) or iwxxm:surfaceVisibility/@xsi:nil != 'true')) then (iwxxm:surfaceVisibility/@uom = 'm') else true())">AIRMET.AEC5: surfaceVisibility shall be reported in metres (m).</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="AIRMET.AEMC7">
-      <sch:rule context="//iwxxm:AIRMETEvolvingMeteorologicalCondition">
-         <sch:assert test="(if(@timeIndicator='OBSERVATION' and ../../om:phenomenonTime/gml:TimeInstant/gml:timePosition) then (translate(../../om:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','') le translate(../../../../iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')) else true())">AIRMET.AEMC7: When AIRMETEvolvingMeteorologicalCondition timeIndicator is an observation, the phenomenonTime must be earlier than or equal to the beginning of the validPeriod of the report.</sch:assert>
+   <sch:pattern id="AIRMET.AEC7">
+      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:surfaceWindDirection) and (not(exists(iwxxm:surfaceWindDirection/@xsi:nil)) or iwxxm:surfaceWindDirection/@xsi:nil != 'true')) then ((iwxxm:surfaceWindDirection/@uom = 'deg')) else true())">AIRMET.AEC7: surfaceWindDirection shall be reported in the degrees unit of measure ('deg').</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="AIRMET.AEC6">
+      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:surfaceWindSpeed) and (not(exists(iwxxm:surfaceWindSpeed/@xsi:nil)) or iwxxm:surfaceWindSpeed/@xsi:nil != 'true')) then ((iwxxm:surfaceWindSpeed/@uom = 'm/s') or (iwxxm:surfaceWindSpeed/@uom = '[kn_i]')) else true())">AIRMET.AEC6: surfaceWindSpeed shall be reported in metres per second (m/s) or knots ([kn_i]).</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="AIRMET.AEC8">
+      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
+         <sch:assert test="(if(exists(iwxxm:surfaceWindDirection) or exists(iwxxm:surfaceWindSpeed)) then (exists(iwxxm:surfaceWindDirection) and exists(iwxxm:surfaceWindSpeed)) else true())">AIRMET.AEC8: surfaceWindDirection and surfaceWindSpeed must be reported together</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET5">
@@ -476,7 +491,7 @@
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET1">
       <sch:rule context="//iwxxm:AIRMET">
-         <sch:assert test="(if((@status ne 'CANCELLATION') and exists(//iwxxm:analysis)) then(not(exists(//iwxxm:analysis//om:result/*[name() != 'iwxxm:AIRMETEvolvingMeteorologicalCondition']))) else(true()))">AIRMET.AIRMET1: OBS and FCST classifications must have a result type of AIRMETEvolvingMeteorologicalCondition</sch:assert>
+         <sch:assert test="(if((@status ne 'CANCELLATION') and exists(//iwxxm:analysis/om:OM_Observation)) then(exists(//iwxxm:analysis/om:OM_Observation/om:result/iwxxm:AIRMETEvolvingConditionCollection)) else(true()))">AIRMET.AIRMET1: OBS and FCST classifications must have a result type of AIRMETEvolvingConditionCollection</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TCA.TCFC1">
@@ -586,7 +601,7 @@
    </sch:pattern>
    <sch:pattern id="COMMON.ACF2">
       <sch:rule context="//iwxxm:AerodromeCloudForecast">
-         <sch:assert test="(if(exists(iwxxm:verticalVisibility) and (not(exists(iwxxm:verticalVisibility/xsi:nil)) or iwxxm:verticalVisibility/xsi:nil != 'true')) then ((iwxxm:verticalVisibility/@uom = 'm') or (iwxxm:verticalVisibility/@uom = '[ft_i]')) else true())">COMMON.ACF2: verticalVisibility shall be reported in metres (m) or feet ([ft_i]).</sch:assert>
+         <sch:assert test="(if(exists(iwxxm:verticalVisibility) and (not(exists(iwxxm:verticalVisibility/@xsi:nil)) or iwxxm:verticalVisibility/xsi:nil != 'true')) then ((iwxxm:verticalVisibility/@uom = 'm') or (iwxxm:verticalVisibility/@uom = '[ft_i]')) else true())">COMMON.ACF2: verticalVisibility shall be reported in metres (m) or feet ([ft_i]).</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="COMMON.ASWF1">
@@ -607,6 +622,11 @@
    <sch:pattern id="COMMON.ASWTF3">
       <sch:rule context="//iwxxm:AerodromeSurfaceWindTrendForecast|//iwxxm:AerodromeSurfaceWindForecast">
          <sch:assert test="(if(exists(iwxxm:windGustSpeed) and (not(exists(iwxxm:windGustSpeed/@xsi:nil)) or iwxxm:windGustSpeed/@xsi:nil != 'true')) then ((iwxxm:windGustSpeed/@uom = 'm/s') or (iwxxm:windGustSpeed/@uom = '[kn_i]')) else true())">COMMON.ASWTF3: windGustSpeed shall be reported in metres per second (m/s) or knots ([kn_i]).</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="IWXXM.ExtensionAlwaysLast">
+      <sch:rule context="//iwxxm:extension">
+         <sch:assert test="following-sibling::*[1][self::iwxxm:extension] or not(following-sibling::*)">IWXXM.ExtensionAlwaysLast: Extension elements should be the last elements in their parents</sch:assert>
       </sch:rule>
    </sch:pattern>
 </sch:schema>

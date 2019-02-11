@@ -3,14 +3,14 @@
     An example of a NIL METAR:
       METAR YUDO 221630Z NIL
 -->
-<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/2.1" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0"
     xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:sf="http://www.opengis.net/sampling/2.0"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
     http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
     http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
 
@@ -21,7 +21,7 @@
 
     <iwxxm:observation>
         <om:OM_Observation gml:id="obs-03839-20120824T12Z">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/MeteorologicalAerodromeObservation"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeObservation"/>
             <!-- time at which the missing report was found to be missing -->
             <om:phenomenonTime>
                 <gml:TimeInstant gml:id="ti-201208221630Z">
@@ -50,7 +50,7 @@
                             <aixm:timeSlice>
                                 <aixm:AirportHeliportTimeSlice gml:id="aerodrome-YUDO-ts">
                                     <gml:validTime/>
-                                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                                     <aixm:designator>YUDO</aixm:designator>
                                     <aixm:name>DONLON/INTERNATIONAL</aixm:name>
                                     <aixm:locationIndicatorICAO>YUDO</aixm:locationIndicatorICAO>

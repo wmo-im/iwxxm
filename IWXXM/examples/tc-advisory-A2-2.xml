@@ -24,12 +24,12 @@ NXT MSG:                    20040925/2000Z
 
 -->
 <iwxxm:TropicalCycloneAdvisory xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:metce="http://def.wmo.int/metce/2013"
+  xmlns:iwxxm="http://icao.int/iwxxm/2.1" xmlns:metce="http://def.wmo.int/metce/2013"
   xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
   xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sam="http://www.opengis.net/sampling/2.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd
-  http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+  http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
   gml:id="ID000" permissibleUsage="OPERATIONAL">
 
   <iwxxm:issueTime>
@@ -48,7 +48,7 @@ NXT MSG:                    20040925/2000Z
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
-          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:interpretation>SNAPSHOT</aixm:interpretation>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ltTCACUnit">
               <gml:beginPosition>2004-01-01T00:00:00Z</gml:beginPosition>
@@ -231,9 +231,6 @@ NXT MSG:                    20040925/2000Z
           </om:result>
       </om:OM_Observation>
   </iwxxm:forecast>
-
-  <!-- Remark -->
-  <iwxxm:remarks></iwxxm:remarks>
 
   <iwxxm:expectedNextAdvisoryTime>
     <gml:TimeInstant gml:id="ti23">

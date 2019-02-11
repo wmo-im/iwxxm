@@ -4,11 +4,11 @@
     
       TAF AMD YUDO 161500Z 1600/1618 CNL
 -->
-<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:gml="http://www.opengis.net/gml/3.2"
+<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/2.1" xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd"
 
     gml:id="taf-YUDO-20120816150000Z"
     permissibleUsage="OPERATIONAL"
@@ -34,7 +34,7 @@
             <aixm:timeSlice>
                 <aixm:AirportHeliportTimeSlice gml:id="aerodrome-YUDO-ts">
                     <gml:validTime/>
-                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                     <aixm:designator>YUDO</aixm:designator>
                     <aixm:name>DONLON/INTERNATIONAL</aixm:name>
                     <aixm:locationIndicatorICAO>YUDO</aixm:locationIndicatorICAO>

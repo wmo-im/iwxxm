@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.0" version="2.0" xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.1" version="2.1" xmlns:iwxxm="http://icao.int/iwxxm/2.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://www.opengis.net/om/2.0" schemaLocation="http://schemas.opengis.net/om/2.0/observation.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
-		<documentation>TAF reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.  
+		<documentation>TAF reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
 
 An Aerodrome Forecast (TAF) report is a routine forecast of meteorological conditions at an aerodrome intended for distribution.  TAF reports include base forecast conditions, and modifications to those conditions throughout the valid period.
 
@@ -59,13 +59,13 @@ Prevailing conditions and forecast changes differ in that the prevailing conditi
 					</element>
 					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Extension block for optional and/or additional parameters</documentation>
+							<documentation>Extension block for optional and/or additional parameters for element TAF</documentation>
 						</annotation>
 					</element>
 				</sequence>
 				<attribute use="required" name="status" type="iwxxm:TAFReportStatusType">
 					<annotation>
-						<documentation>The status of this report, including amended, cancelled, normal, or corrected.  
+						<documentation>The status of this report, including amended, cancelled, normal, or corrected.
 
 Missing reports indicate that a report was not issued from the responsible reporting party as expected.  Missing reports are typically issued by third parties that were expecting a report.</documentation>
 					</annotation>
@@ -84,7 +84,7 @@ Missing reports indicate that a report was not issued from the responsible repor
 		<annotation>
 			<documentation>A specialized Record type containing meteorological conditions forecast at an aerodrome.  This class is also related but not identical to MeteorologicalAerodromeTrendForecastRecord, which is reported on a METAR/SPECI - conditions reported in trend forecasts in METAR/SPECI differ from forecast groups in a TAF.
 
-When no clouds of operational significance or no weather of operational significance is predicted, the nothingOfOperationalSignificance nilReason should be used for the cloud or presentWeather association.  
+When no clouds of operational significance or no weather of operational significance is predicted, the nothingOfOperationalSignificance nilReason should be used for the cloud or presentWeather association.
 
 Note that the TAC representations for "FM", "TL", and "AT" are represented by the phenomenonTime on the change forecast (MeteorologicalAerodromeForecast):
     FM and TL - a phenomenonTime with a TimePeriod (start is FM and end is TL)
@@ -111,7 +111,7 @@ Prevailing horizontal visibility shall be reported in meters ("m").</documentati
 						<annotation>
 							<documentation>The reported relational operator for the prevailing horizontal visibility.  When reported, this operator is reported in conjunction with prevailing visibility.
 
-To report a prevailing visibility of at least 10000 meters, prevailing visibility is reported as 10000 meters and the operator is reported as "above".  
+To report a prevailing visibility of at least 10000 meters, prevailing visibility is reported as 10000 meters and the operator is reported as "above".
 
 When no operator is reported, prevailing visibility represents an exact value with identical semantics to other measured quantities</documentation>
 						</annotation>
@@ -122,7 +122,7 @@ When no operator is reported, prevailing visibility represents an exact value wi
 					<element name="temperature" type="iwxxm:AerodromeAirTemperatureForecastPropertyType" minOccurs="0" maxOccurs="2"></element>
 					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Extension block for optional and/or additional parameters</documentation>
+							<documentation>Extension block for optional and/or additional parameters for element MeteorologicalAerodromeForecastRecord</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -195,6 +195,11 @@ ICAO Annex 3 / WMO No. 49-2:
 
 ICAO Annex 3 / WMO No. 49-2:
 "TN"</documentation>
+				</annotation>
+			</element>
+			<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Extension block for optional and/or additional parameters for element AerodromeAirTemperatureForecast</documentation>
 				</annotation>
 			</element>
 		</sequence>
