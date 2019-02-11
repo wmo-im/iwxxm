@@ -3,15 +3,15 @@
     An example of a NIL METAR:
       METAR YUDO 160000Z NIL
 -->
-<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0"
     xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:sf="http://www.opengis.net/sampling/2.0"
-    xmlns:saf="http://icao.int/saf/1.0"
+    xmlns:saf="http://icao.int/saf/1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/1.0 http://schemas.wmo.int/iwxxm/1.0/iwxxm.xsd
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.0/metce.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/1.1 http://schemas.wmo.int/iwxxm/1.1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.1/metce.xsd"
 
     gml:id="taf-YUDO-201208160000Z"
     status="MISSING">
@@ -24,7 +24,7 @@
 
     <iwxxm:baseForecast>
         <om:OM_Observation gml:id="bf">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeBaseForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeBaseForecast"/>
             <!-- time at which the missing report was found to be missing -->
             <om:phenomenonTime xlink:href="#ti-201208221600Z"/>
             <!-- time at which the results are made available -->

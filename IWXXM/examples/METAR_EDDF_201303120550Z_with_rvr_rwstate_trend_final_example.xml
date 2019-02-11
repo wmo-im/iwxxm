@@ -4,21 +4,21 @@
     resulting METAR (FM 15):
     METAR EDDF 120550Z 03015KT 1400 R07R/P2000N R07C/P2000N R07L/1900U SN DRSN BR VV/// M04/M04 Q1000 R07L/11//90 R07C/15//90 R07R/15//90 BECMG 4000 NSW=
 -->
-<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/1.0" 
+<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/1.1" 
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2" 
     xmlns:om="http://www.opengis.net/om/2.0"
     xmlns:metce="http://def.wmo.int/metce/2013" 
-    xmlns:saf="http://icao.int/saf/1.0" 
+    xmlns:saf="http://icao.int/saf/1.1" 
     xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:sam="http://www.opengis.net/sampling/2.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/1.0 http://schemas.wmo.int/iwxxm/1.0/iwxxm.xsd
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.0/metce.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/1.1 http://schemas.wmo.int/iwxxm/1.1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.1/metce.xsd"
     gml:id="metar-EDDF-20130312T055000Z" status="NORMAL" automatedStation="false">
     <iwxxm:observation>
         <om:OM_Observation gml:id="obs-EDDF-20130312T055000Z">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeObservation"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeObservation"/>
             <om:phenomenonTime>
                 <gml:TimeInstant gml:id="ti-20130312T055000Z">
                     <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>
@@ -192,7 +192,7 @@
     </iwxxm:observation>
     <iwxxm:trendForecast>
         <om:OM_Observation gml:id="trend-fcst-1">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeTrendForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeTrendForecast"/>
             <om:phenomenonTime>
                 <gml:TimePeriod gml:id="tp-201303120550Z-201303120750Z">
                     <gml:beginPosition>2013-03-12T05:50:00Z</gml:beginPosition>

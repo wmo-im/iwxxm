@@ -6,8 +6,8 @@ SFC/FL550 N OF N6100 W01000 – N5900 W01300 – N6100 W01900 MOV S 60KT NC VA C
 FCST 2200Z SFC/FL550 N OF N6100 W01100 – N5800 W01400 – N6100 W01600=
 -->
 <!-- note: year and month of this SIGMET unknown; YYYY and MM used in place of actual values -->
-<iwxxm:VolcanicAshSIGMET xmlns:iwxxm="http://icao.int/iwxxm/1.0"
-    xmlns:saf="http://icao.int/saf/1.0"
+<iwxxm:VolcanicAshSIGMET xmlns:iwxxm="http://icao.int/iwxxm/1.1"
+    xmlns:saf="http://icao.int/saf/1.1"
     xmlns:metce="http://def.wmo.int/metce/2013" 
     xmlns:om="http://www.opengis.net/om/2.0"
     xmlns:sam="http://www.opengis.net/sampling/2.0"
@@ -18,8 +18,8 @@ FCST 2200Z SFC/FL550 N OF N6100 W01100 – N5800 W01400 – N6100 W01600=
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://icao.int/iwxxm/1.0 http://schemas.wmo.int/iwxxm/1.0/iwxxm.xsd
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.0/metce.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/1.1 http://schemas.wmo.int/iwxxm/1.1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.1/metce.xsd"
     gml:id="va-sigmet-EGXX-YYYYMM25T160000Z"
     status="NORMAL">
     <iwxxm:issuingAirTrafficServicesUnit>
@@ -48,7 +48,7 @@ FCST 2200Z SFC/FL550 N OF N6100 W01100 – N5800 W01400 – N6100 W01600=
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
     <iwxxm:analysis>
         <om:OM_Observation gml:id="va-position-and-motion-EGXX-YYYYMM25T16Z">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETEvolvingConditionAnalysis"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/SIGMETEvolvingConditionAnalysis"/>
             <om:phenomenonTime>
                 <gml:TimeInstant gml:id="ti-25T16Z">
                     <gml:timePosition>YYYY-MM-25T16:00:00Z</gml:timePosition>
@@ -74,7 +74,7 @@ FCST 2200Z SFC/FL550 N OF N6100 W01100 – N5800 W01400 – N6100 W01600=
                             <gml:identifier codeSpace="urn:uuid:">37a7f1d0-b731-11e2-9e96-0800200c9a66</gml:identifier>
                             <saf:type>FIR</saf:type>
                             <saf:designator>EGXX</saf:designator>
-                            <saf:name>SHANWICK OCEANIC FLIGHT INFORMATION REGION</saf:name>
+                            <saf:name>SHANWICK OCEANIC FIR</saf:name>
                             <saf:geometryComponent>
                                 <saf:AirspaceVolume gml:id="av-SHANWICK_OCA">
                                     <!-- note that upper limit and lower limit of the airspace volume are excluded - 
@@ -146,7 +146,7 @@ FCST 2200Z SFC/FL550 N OF N6100 W01100 – N5800 W01400 – N6100 W01600=
     </iwxxm:analysis>
     <iwxxm:forecastPositionAnalysis>
         <om:OM_Observation gml:id="va-forecast-position-EGXX-YYYYMM25T22Z">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETPositionAnalysis"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/SIGMETPositionAnalysis"/>
             <om:phenomenonTime>
                 <gml:TimeInstant gml:id="ti-25T22Z">
                     <gml:timePosition>YYYY-MM-25T22:00:00Z</gml:timePosition>

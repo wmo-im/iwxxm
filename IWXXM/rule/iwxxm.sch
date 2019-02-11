@@ -1,7 +1,7 @@
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
    <sch:title>Schematron validation</sch:title>
-   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/1.0"></sch:ns>
-   <sch:ns prefix="saf" uri="http://icao.int/saf/1.0"></sch:ns>
+   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/1.1"></sch:ns>
+   <sch:ns prefix="saf" uri="http://icao.int/saf/1.1"></sch:ns>
    <sch:ns prefix="sam" uri="http://www.opengis.net/sampling/2.0"></sch:ns>
    <sch:ns prefix="sams" uri="http://www.opengis.net/samplingSpatial/2.0"></sch:ns>
    <sch:ns prefix="xlink" uri="http://www.w3.org/1999/xlink"></sch:ns>

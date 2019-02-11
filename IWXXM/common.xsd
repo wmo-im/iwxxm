@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.0" xmlns:saf="http://icao.int/saf/1.0" targetNamespace="http://icao.int/iwxxm/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:saf="http://icao.int/saf/1.1" targetNamespace="http://icao.int/iwxxm/1.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1">
    <annotation>
       <documentation>References to WMO and ICAO Technical Regulations within this XML schema shall have
          no formal status and are for information purposes only. Where there are differences
@@ -11,8 +11,8 @@
       </documentation>
       <appinfo>
          <sch:title xmlns:sch="http://purl.oclc.org/dsdl/schematron">Schematron validation</sch:title>
-         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="iwxxm" uri="http://icao.int/iwxxm/1.0"/>
-         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="saf" uri="http://icao.int/saf/1.0"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="iwxxm" uri="http://icao.int/iwxxm/1.1"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="saf" uri="http://icao.int/saf/1.1"/>
          <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="sam" uri="http://www.opengis.net/sampling/2.0"/>
          <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="sams" uri="http://www.opengis.net/samplingSpatial/2.0"/>
          <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
@@ -21,7 +21,7 @@
       </appinfo>
    </annotation>
    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-   <import namespace="http://icao.int/saf/1.0" schemaLocation="http://schemas.wmo.int/saf/1.0/saf.xsd"/>
+   <import namespace="http://icao.int/saf/1.1" schemaLocation="http://schemas.wmo.int/saf/1.1/saf.xsd"/>
    <include schemaLocation="iwxxm.xsd"/>
    <element name="AerodromeCloudForecast" substitutionGroup="gml:AbstractGML" type="iwxxm:AerodromeCloudForecastType">
       <annotation>
@@ -38,12 +38,12 @@
                <element maxOccurs="1" minOccurs="0" name="verticalVisibility" type="gml:LengthType">
                   <annotation>
                      <appinfo>
-                        <quantity>http://codes.wmo.int/common/c-15/ae/verticalVisibility</quantity>
+                        <quantity>http://codes.wmo.int/common/quantity-kind/verticalVisibility</quantity>
                      </appinfo>
                      <documentation>The vertical visibility.  Vertical visibility is defined as the vertical visual range
                         into an obscuring medium.
                         
-                        quantity: http://codes.wmo.int/common/c-15/ae/verticalVisibility
+                        quantity: http://codes.wmo.int/common/quantity-kind/verticalVisibility
                      </documentation>
                   </annotation>
                </element>
@@ -97,12 +97,12 @@
          <element name="base" nillable="true" type="saf:DistanceWithNilReasonType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/me/heightOfBaseOfCloud</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/heightOfBaseOfCloud</quantity>
                </appinfo>
                <documentation>For a given cloud or cloud layer, height of the lowest level in the atmosphere at
                   which the air contains a perceptible quantity of cloud particles.
                   
-                  quantity: http://codes.wmo.int/common/c-15/me/heightOfBaseOfCloud
+		  quantity: http://codes.wmo.int/common/quantity-kind/heightOfBaseOfCloud
                </documentation>
             </annotation>
          </element>
@@ -129,30 +129,30 @@
          <element maxOccurs="1" minOccurs="0" name="meanWindDirection" type="gml:AngleType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/me/windDirection</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/windDirection</quantity>
                </appinfo>
                <documentation>The forecast average wind direction from which wind is blowing
-                  quantity: http://codes.wmo.int/common/c-15/me/windDirection
+                  quantity: http://codes.wmo.int/common/quantity-kind/windDirection
                </documentation>
             </annotation>
          </element>
          <element name="meanWindSpeed" type="gml:SpeedType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/me/windSpeed</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/windSpeed</quantity>
                </appinfo>
                <documentation>The forecast average wind speed
-                  quantity: http://codes.wmo.int/common/c-15/me/windSpeed
+                  quantity: http://codes.wmo.int/common/quantity-kind/windSpeed
                </documentation>
             </annotation>
          </element>
          <element maxOccurs="1" minOccurs="0" name="windGustSpeed" type="gml:SpeedType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/me/maximumWindGustSpeed</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/maximumWindGustSpeed</quantity>
                </appinfo>
                <documentation>The forecast maximum speed of a gust.
-                  quantity: http://codes.wmo.int/common/c-15/me/maximumWindGustSpeed
+                  quantity: http://codes.wmo.int/common/quantity-kind/maximumWindGustSpeed
                </documentation>
             </annotation>
          </element>

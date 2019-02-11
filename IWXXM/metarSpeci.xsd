@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.0" xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:metce="http://def.wmo.int/metce/2013" targetNamespace="http://icao.int/iwxxm/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.1" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:metce="http://def.wmo.int/metce/2013" targetNamespace="http://icao.int/iwxxm/1.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1">
    <annotation>
       <documentation>References to WMO and ICAO Technical Regulations within this XML schema shall have
          no formal status and are for information purposes only. Where there are differences
@@ -18,8 +18,8 @@
       </documentation>
       <appinfo>
          <sch:title xmlns:sch="http://purl.oclc.org/dsdl/schematron">Schematron validation</sch:title>
-         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="iwxxm" uri="http://icao.int/iwxxm/1.0"/>
-         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="saf" uri="http://icao.int/saf/1.0"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="iwxxm" uri="http://icao.int/iwxxm/1.1"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="saf" uri="http://icao.int/saf/1.1"/>
          <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="sam" uri="http://www.opengis.net/sampling/2.0"/>
          <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="sams" uri="http://www.opengis.net/samplingSpatial/2.0"/>
          <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
@@ -28,9 +28,9 @@
       </appinfo>
    </annotation>
    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-   <import namespace="http://icao.int/saf/1.0" schemaLocation="http://schemas.wmo.int/saf/1.0/saf.xsd"/>
+   <import namespace="http://icao.int/saf/1.1" schemaLocation="http://schemas.wmo.int/saf/1.1/saf.xsd"/>
    <import namespace="http://www.opengis.net/om/2.0" schemaLocation="http://schemas.opengis.net/om/2.0/observation.xsd"/>
-   <import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.0/metce.xsd"/>
+   <import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.1/metce.xsd"/>
    <import namespace="http://www.opengis.net/samplingSpatial/2.0" schemaLocation="http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"/>
    <include schemaLocation="iwxxm.xsd"/>
    <element name="MeteorologicalAerodromeObservationReport" substitutionGroup="gml:AbstractFeature" type="iwxxm:MeteorologicalAerodromeObservationReportType">
@@ -222,10 +222,10 @@
                <element maxOccurs="1" minOccurs="0" name="prevailingVisibility" type="gml:LengthType">
                   <annotation>
                      <appinfo>
-                        <quantity>http://codes.wmo.int/common/c-15/ae/prevailingHorizontalVisibility</quantity>
+			     <quantity>http://codes.wmo.int/common/quantity-kind/aeronauticalPrevailingHorizontalVisibility</quantity>
                      </appinfo>
                      <documentation>The prevailing horizontal visibility reported in a trend forecast
-                        quantity: http://codes.wmo.int/common/c-15/ae/prevailingHorizontalVisibility
+			     quantity: http://codes.wmo.int/common/quantity-kind/aeronauticalPrevailingHorizontalVisibility
                      </documentation>
                   </annotation>
                </element>
@@ -312,32 +312,32 @@
                <element name="airTemperature" type="gml:MeasureType">
                   <annotation>
                      <appinfo>
-                        <quantity>http://codes.wmo.int/common/c-15/me/airTemperature</quantity>
+                        <quantity>http://codes.wmo.int/common/quantity-kind/airTemperature</quantity>
                      </appinfo>
                      <documentation>The observed air temperature.  This is the temperature indicated by a thermometer
                         exposed to the air in a place sheltered from direct solar radiation.
                         
-                        quantity: http://codes.wmo.int/common/c-15/me/airTemperature
+                        quantity: http://codes.wmo.int/common/quantity-kind/airTemperature
                      </documentation>
                   </annotation>
                </element>
                <element name="dewpointTemperature" type="gml:MeasureType">
                   <annotation>
                      <appinfo>
-                        <quantity>http://codes.wmo.int/common/c-15/me/dewPointTemperature</quantity>
+                        <quantity>http://codes.wmo.int/common/quantity-kind/dewPointTemperature</quantity>
                      </appinfo>
                      <documentation>The observed dew point temperature.  This is the temperature to which a given air
                         parcel must be cooled at constant pressure and constant water vapor content in order
                         for saturation to occur.
                         
-                        quantity: http://codes.wmo.int/common/c-15/me/dewPointTemperature
+                        quantity: http://codes.wmo.int/common/quantity-kind/dewPointTemperature
                      </documentation>
                   </annotation>
                </element>
                <element name="qnh" type="gml:MeasureType">
                   <annotation>
                      <appinfo>
-                        <quantity>http://codes.wmo.int/common/c-15/me/altimeterSettingQnh</quantity>
+                        <quantity>http://codes.wmo.int/common/quantity-kind/altimeterSettingQnh</quantity>
                      </appinfo>
                      <documentation>The observed QNH altimeter setting.  Altitude setting (also known as QNH) is defined
                         as barometric pressure adjusted to sea level. It is a pressure setting used by pilots,
@@ -345,7 +345,7 @@
                         setting which, when set on an aircraft's altimeter, will cause the altimeter to read
                         altitude above mean sea level within a certain defined region.
                         
-                        quantity: http://codes.wmo.int/common/c-15/me/altimeterSettingQnh
+                        quantity: http://codes.wmo.int/common/quantity-kind/altimeterSettingQnh
                      </documentation>
                   </annotation>
                </element>
@@ -424,7 +424,7 @@
          <element maxOccurs="1" minOccurs="0" name="contamination" type="iwxxm:RunwayContaminationType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/ae/runwayContamination</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/runwayContaminationCoverage</quantity>
                </appinfo>
                <documentation>Proportion of runway surface that is contaminated - usually expressed as a percentage
                   of the total runway area.  WMO reporting procedures require that contamination is
@@ -432,30 +432,30 @@
                   26% and 50%; and - more than 50%.   See WMO No. 306: - WMO Code table 0519 - BUFR
                   Code table 0 20 087
                   
-                  quantity: http://codes.wmo.int/common/c-15/ae/runwayContamination
+                  quantity: http://codes.wmo.int/common/quantity-kind/runwayContaminationCoverage
                </documentation>
             </annotation>
          </element>
          <element maxOccurs="1" minOccurs="0" name="depthOfDeposit" type="gml:LengthType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/ae/depthOfRunwayDeposit</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/depthOfRunwayDeposit</quantity>
                </appinfo>
                <documentation>Depth of deposit on the surface of the runway.  See WMO No. 306 WMO Code table 1079.
-                  quantity: http://codes.wmo.int/common/c-15/ae/depthOfRunwayDeposit
+                  quantity: http://codes.wmo.int/common/quantity-kind/depthOfRunwayDeposit
                </documentation>
             </annotation>
          </element>
          <element maxOccurs="1" minOccurs="0" name="estimatedSurfaceFriction" type="gml:ScaleType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/ae/runwayFrictionCoefficient</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/runwayFrictionCoefficient</quantity>
                </appinfo>
                <documentation>The estimated surface friction for the affected runway.  Between 0.0 and 0.9.    When
                   braking conditions are not reported and/or the runway is not operational estimatedSurfaceFriction
                   will not be reported.  WMO 306: Table 0366
                   
-                  quantity: http://codes.wmo.int/common/c-15/ae/runwayFrictionCoefficient
+                  quantity: http://codes.wmo.int/common/quantity-kind/runwayFrictionCoefficient
                </documentation>
             </annotation>
          </element>
@@ -488,7 +488,7 @@
          <element name="meanRVR" type="gml:LengthType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/ae/runwayVisualRangeRvr</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/runwayVisualRangeRvr</quantity>
                </appinfo>
                <documentation>The mean recent runway visual range value observed. This mean represents the 10 minute
                   average for observed RVR except when the 10-minute period immediately preceding the
@@ -497,7 +497,7 @@
                   a mean RVR of at least 2000 meters, mean RVR is reported as 2000 meters and the operator
                   is reported as "above"  Annex 3: Table A3-2 "RVR/RVR" Section 4.3.6.6
                   
-                  quantity: http://codes.wmo.int/common/c-15/ae/runwayVisualRangeRvr
+                  quantity: http://codes.wmo.int/common/quantity-kind/runwayVisualRangeRvr
                </documentation>
             </annotation>
          </element>
@@ -555,7 +555,7 @@
          <element name="seaSurfaceTemperature" type="gml:MeasureType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/oc/seaSurfaceTemperature</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/seaSurfaceTemperature</quantity>
                </appinfo>
                <documentation>The sea-surface temperature observed by aeronautical meteorological stations established
                   on offshore structures in support of helicopter operations.  The term sea surface
@@ -563,7 +563,7 @@
                   ocean as opposed to the skin temperature, which is the temperature of the upper few
                   centimeters.  ICAO Annex 3 / WMO No. 49-2: Section 4.8.1.5a
                   
-                  quantity: http://codes.wmo.int/common/c-15/oc/seaSurfaceTemperature
+                  quantity: http://codes.wmo.int/common/quantity-kind/seaSurfaceTemperature
                </documentation>
             </annotation>
          </element>
@@ -648,7 +648,7 @@
          <element maxOccurs="1" minOccurs="0" name="verticalVisibility" nillable="true" type="saf:LengthWithNilReasonType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/ae/verticalVisibility</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/verticalVisibility</quantity>
                </appinfo>
                <documentation>The reported vertical visibility.  Vertical visibility is defined as the vertical
                   visual range into an obscuring medium.  Note: vertical visibility is only reported
@@ -658,7 +658,7 @@
                   automatic observing system due to a temporary failure of the system/sensor ("VV///")
                   the vertical visibility is missing with a nil reason of notObservable
                   
-                  quantity: http://codes.wmo.int/common/c-15/ae/verticalVisibility
+                  quantity: http://codes.wmo.int/common/quantity-kind/verticalVisibility
                </documentation>
             </annotation>
          </element>
@@ -705,60 +705,60 @@
          <element maxOccurs="1" minOccurs="0" name="meanWindDirection" type="gml:AngleType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/me/windDirection</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/windDirection</quantity>
                </appinfo>
                <documentation>The observed average wind direction from which the wind is blowing over the past ten
                   minutes.  Not reported when winds are variable
                   
-                  quantity: http://codes.wmo.int/common/c-15/me/windDirection
+                  quantity: http://codes.wmo.int/common/quantity-kind/windDirection
                </documentation>
             </annotation>
          </element>
          <element name="meanWindSpeed" type="gml:SpeedType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/me/windSpeed</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/windSpeed</quantity>
                </appinfo>
                <documentation>The average observed wind speed over the past ten minutes  ICAO Annex 3 / WMO No.
                   49-2: Section 4.1.5.2a
                   
-                  quantity: http://codes.wmo.int/common/c-15/me/windSpeed
+                  quantity: http://codes.wmo.int/common/quantity-kind/windSpeed
                </documentation>
             </annotation>
          </element>
          <element maxOccurs="1" minOccurs="0" name="windGust" type="gml:SpeedType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/me/maximumWindGustSpeed</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/maximumWindGustSpeed</quantity>
                </appinfo>
                <documentation>The maximum wind speed observed over the past ten minutes  ICAO Annex 3 / WMO No.
                   49-2: Section 4.1.5.2c
                   
-                  quantity: http://codes.wmo.int/common/c-15/me/maximumWindGustSpeed
+                  quantity: http://codes.wmo.int/common/quantity-kind/maximumWindGustSpeed
                </documentation>
             </annotation>
          </element>
          <element maxOccurs="1" minOccurs="0" name="extremeClockwiseWindDirection" type="gml:AngleType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/me/windDirection</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/windDirection</quantity>
                </appinfo>
                <documentation>The extreme clockwise direction from which the wind is blowing, inclusive.  ICAO Annex
                   3 / WMO No. 49-2: Section 4.1.5.2b
                   
-                  quantity: http://codes.wmo.int/common/c-15/me/windDirection
+                  quantity: http://codes.wmo.int/common/quantity-kind/windDirection
                </documentation>
             </annotation>
          </element>
          <element maxOccurs="1" minOccurs="0" name="extremeCounterClockwiseWindDirection" type="gml:AngleType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/me/windDirection</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/windDirection</quantity>
                </appinfo>
                <documentation>The extreme counter-clockwise direction from which the wind is blowing, inclusive.
                   ICAO Annex 3 / WMO No. 49-2: Section 4.1.5.2b
                   
-                  quantity: http://codes.wmo.int/common/c-15/me/windDirection
+                  quantity: http://codes.wmo.int/common/quantity-kind/windDirection
                </documentation>
             </annotation>
          </element>
@@ -783,7 +783,7 @@
          <element name="prevailingVisibility" type="gml:LengthType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/ae/prevailingHorizontalVisibility</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/aeronauticalPrevailingHorizontalVisibility</quantity>
                </appinfo>
                <documentation>The reported prevailing horizontal visibility at the surface that is representative
                   of the aerodrome.  The greatest visibility value, observed in accordance with the
@@ -796,7 +796,7 @@
                   prevailing visibility operator is reported as "above".  ICAO Annex 3 / WMO No. 49-2:
                   Section 4.2.4.4b
                   
-                  quantity: http://codes.wmo.int/common/c-15/ae/prevailingHorizontalVisibility
+                  quantity: http://codes.wmo.int/common/quantity-kind/aeronauticalPrevailingHorizontalVisibility
                </documentation>
             </annotation>
          </element>
@@ -814,7 +814,7 @@
          <element maxOccurs="1" minOccurs="0" name="minimumVisibility" type="gml:LengthType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/ae/minimumHorizontalVisibility</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/aeronauticalVisibility</quantity>
                </appinfo>
                <documentation>The minimum observed visibility.  ICAO Annex 3 / WMO No. 49-2 Section 4.2.4.4a: "When
                   the visibility is not the same in different directions and a) when the lowest visibility
@@ -828,21 +828,21 @@
                   be determined, only the lowest visibility should be reported, with no indication of
                   direction."
                   
-                  quantity: http://codes.wmo.int/common/c-15/ae/minimumHorizontalVisibility
+                  quantity: http://codes.wmo.int/common/quantity-kind/aeronauticalVisibility
                </documentation>
             </annotation>
          </element>
          <element maxOccurs="1" minOccurs="0" name="minimumVisibilityDirection" type="gml:AngleType">
             <annotation>
                <appinfo>
-                  <quantity>http://codes.wmo.int/common/c-15/ae/minimumVisibilityDirection</quantity>
+                  <quantity>http://codes.wmo.int/common/quantity-kind/aerodromeMinimumVisibilityDirection</quantity>
                </appinfo>
                <documentation>The direction of the minimum visibility relative to the reporting station.  This is
                   optional in cases where minimum visibility is reported but the visibility is fluctuating
                   rapidly.  Minimum visibility is reported in cardinal and inter-cardinal directions
                   (N, NE, E, SE, S, SW, W, and NW)
                   
-                  quantity: http://codes.wmo.int/common/c-15/ae/minimumVisibilityDirection
+                  quantity: http://codes.wmo.int/common/quantity-kind/aerodromeMinimumVisibilityDirection
                </documentation>
             </annotation>
          </element>

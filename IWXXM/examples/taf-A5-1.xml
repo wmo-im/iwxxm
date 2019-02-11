@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/1.0" xmlns:gml="http://www.opengis.net/gml/3.2"
+<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:metce="http://def.wmo.int/metce/2013" xmlns:sf="http://www.opengis.net/sampling/2.0"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:saf="http://icao.int/saf/1.0"
-    xsi:schemaLocation="http://icao.int/iwxxm/1.0 http://schemas.wmo.int/iwxxm/1.0/iwxxm.xsd
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.0/metce.xsd"
+    xmlns:saf="http://icao.int/saf/1.1"
+    xsi:schemaLocation="http://icao.int/iwxxm/1.1 http://schemas.wmo.int/iwxxm/1.1/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.1/metce.xsd"
 
     gml:id="taf-YUDO-201208160000Z"
     status="NORMAL">
@@ -26,7 +26,7 @@
     </iwxxm:validTime>
     <iwxxm:baseForecast>
         <om:OM_Observation gml:id="bf-1">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeForecast"/>
             <!-- Base forecast phenomena occur throughout the valid period of the TAF -->
             <om:phenomenonTime xlink:href="#tp-201208160600-201208170000"/>
             <!-- resultTime is always the issueTime of the TAF -->
@@ -92,7 +92,7 @@
     <!-- Original TAF: BECMG 1606/1608 SCT015CB BKN020 -->
     <iwxxm:changeForecast>
         <om:OM_Observation gml:id="cf-1">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeForecast"/>
             <om:phenomenonTime>
                 <gml:TimePeriod gml:id="tp-201208160600-201208160608">
                     <gml:beginPosition>2012-08-16T06:00:00Z</gml:beginPosition>
@@ -132,7 +132,7 @@
     <!-- Original TAF: TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020 -->
     <iwxxm:changeForecast>
         <om:OM_Observation gml:id="bf-3">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeForecast"/>
             <om:phenomenonTime>
                 <gml:TimePeriod gml:id="tp-201208160800-201208161200">
                     <gml:beginPosition>2012-08-16T08:00:00Z</gml:beginPosition>
@@ -184,7 +184,7 @@
     <!-- Original TAF: FM161230 15004MPS 9999 BKN020 -->
     <iwxxm:changeForecast>
         <om:OM_Observation gml:id="bf-4">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeForecast"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.1/MeteorologicalAerodromeForecast"/>
             <om:phenomenonTime>
                 <gml:TimePeriod gml:id="tp-201208161230-201208170000">
                     <gml:beginPosition>2012-08-16T12:30:00Z</gml:beginPosition>
