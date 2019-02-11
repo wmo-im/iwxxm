@@ -8,7 +8,7 @@
         elementFormDefault="qualified"
         version="3.2.1.2">
    <annotation>
-      <documentation>GML Subset schema for gml:AbstractFeature,gml:AbstractFeatureType,gml:AssociationAttributeGroup,gml:OwnershipAttributeGroup,gml:TimeInstantPropertyType,gml:TimePeriodPropertyType,gml:SpeedType,gml:LengthType,gml:AngleType,gml:ReferenceType,gml:AbstractGML,gml:AbstractGMLType,gml:NilReasonType,gml:AbstractObject,gml:AbstractTimeObject,gml:MeasureType,gml:AbstractMemberType,gml:PointPropertyType, written by gmlSubset.xslt.</documentation>
+      <documentation>GML Subset schema for gml:AbstractFeature,gml:AbstractFeatureType,gml:AssociationAttributeGroup,gml:OwnershipAttributeGroup,gml:TimeInstantPropertyType,gml:TimePeriodPropertyType,gml:SpeedType,gml:LengthType,gml:AngleType,gml:ReferenceType,gml:AbstractGML,gml:AbstractGMLType,gml:NilReasonType,gml:AbstractObject,gml:AbstractTimeObject,gml:MeasureType,gml:PointPropertyType,gml:AssociationRoleType, written by gmlSubset.xslt.</documentation>
    </annotation>
    <import namespace="http://www.w3.org/1999/xlink"
            schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
@@ -740,16 +740,6 @@ In an instance document, on elements of type gml:MeasureType the mandatory uom a
 			      <extension base="gml:MeasureType"/>
 		    </simpleContent>
 	  </complexType>
-<!-- ================================================= --><complexType name="AbstractMemberType" abstract="true">
-		    <annotation>
-			      <documentation>To create a collection of GML Objects that are not all features, a property type shall be derived by extension from gml:AbstractMemberType.
-This abstract property type is intended to be used only in object types where software shall be able to identify that an instance of such an object type is to be interpreted as a collection of objects.
-By default, this abstract property type does not imply any ownership of the objects in the collection. The owns attribute of gml:OwnershipAttributeGroup may be used on a property element instance to assert ownership of an object in the collection. A collection shall not own an object already owned by another object.
-</documentation>
-		    </annotation>
-		    <sequence/>
-		    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	  </complexType>
 <!-- ================================================= --><complexType name="PointPropertyType">
 		    <annotation>
 			      <documentation>A property that has a point as its value domain may either be an appropriate geometry element encapsulated in an element of this type or an XLink reference to a remote geometry element (where remote includes geometry elements located elsewhere in the same document). Either the reference or the contained element shall be given, but neither both nor none.</documentation>
@@ -795,4 +785,11 @@ By default, this abstract property type does not imply any ownership of the obje
 			      <documentation>The AbstractGeometricPrimitive element is the abstract head of the substitution group for all (pre- and user-defined) geometric primitives.</documentation>
 		    </annotation>
 	  </element>
+<!-- ================================================= --><complexType name="AssociationRoleType">
+		    <sequence minOccurs="0">
+			      <any namespace="##any"/>
+		    </sequence>
+		    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+		    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+	  </complexType>
 </schema>

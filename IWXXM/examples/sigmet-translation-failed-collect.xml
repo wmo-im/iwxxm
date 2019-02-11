@@ -21,15 +21,15 @@
             xmlns:iwxxm="http://icao.int/iwxxm/3.0"
             xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0/iwxxm.xsd"
             gml:id="uuid.636569b5-6b9b-4ed7-aa60-ad373a9e372b"
+            reportStatus="NORMAL"
             permissibleUsage="OPERATIONAL"
             translatedBulletinID="WSYU31 YUSO 101000"
             translatedBulletinReceptionTime="2012-08-10T10:05:00Z"
             translationCentreDesignator="YUZZ"
             translationCentreName="Fictional translation centre"
             translationTime="2012-08-10T10:05:00Z"
-            translationFailedTAC="YUDD SIGMET 2 VALID 101200/101600 YUSO -
-                                  YUDD SHANLON FIR INVALID TS"
-            status="NORMAL">
+            translationFailedTAC="YUDD SIGMET 2 VALID 101200/101600 YUSO-
+                                  YUDD SHANLON FIR INVALID TS">
         
             <iwxxm:issueTime>
                 <gml:TimeInstant gml:id="uuid.5599e948-f719-4fc2-85fc-20ad96644250">
@@ -50,12 +50,6 @@
                 </aixm:timeSlice>
               </aixm:Unit>
             </iwxxm:issuingAirTrafficServicesUnit>
-
-	    <iwxxm:originatingMeteorologicalWatchOffice nilReason="http://codes.wmo.int/common/nil/missing"/>
-            
-	    <iwxxm:issuingAirTrafficServicesRegion nilReason="http://codes.wmo.int/common/nil/missing"/>
-            
-	    <iwxxm:sequenceNumber nilReason="http://codes.wmo.int/common/nil/missing"/>
             
             <iwxxm:validPeriod>
                 <gml:TimePeriod gml:id="uuid.2635a879-81e5-4ac0-994f-b46050ba5e83">
@@ -63,10 +57,6 @@
                     <gml:endPosition>2012-08-10T16:00:00Z</gml:endPosition>
                 </gml:TimePeriod>
             </iwxxm:validPeriod>
-        
-	    <iwxxm:phenomenon nilReason="http://codes.wmo.int/common/nil/missing"/>
-        
-	    <iwxxm:analysis nilReason="http://codes.wmo.int/common/nil/missing"/>
         
         </iwxxm:SIGMET>
 

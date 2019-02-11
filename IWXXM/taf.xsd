@@ -36,9 +36,14 @@ Prevailing conditions and forecast changes differ in that the prevailing conditi
 							<documentation>The aerodrome location for this report</documentation>
 						</annotation>
 					</element>
-					<element name="validTime" type="gml:TimePeriodPropertyType" minOccurs="0" maxOccurs="1">
+					<element name="validPeriod" type="gml:TimePeriodPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The time frame at which this report is valid.  All forecast elements should be valid within this period</documentation>
+						</annotation>
+					</element>
+					<element name="cancelledReportValidPeriod" type="gml:TimePeriodPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The valid time period for the previously cancelled report</documentation>
 						</annotation>
 					</element>
 					<element name="baseForecast" type="iwxxm:MeteorologicalAerodromeForecastPropertyType" minOccurs="0" maxOccurs="1">
@@ -51,27 +56,15 @@ Prevailing conditions and forecast changes differ in that the prevailing conditi
 							<documentation>Forecast that modifies the base forecast.  While there is no maximum number of forecasts, this should normally not exceed five in number. &lt;b&gt;&lt;u&gt; &lt;/u&gt;&lt;/b&gt;ICAO Annex 3 / WMO No. 49-2: Section 1.5: "The number of change and probability groups should be kept to a minimum and should not normally exceed five groups".</documentation>
 						</annotation>
 					</element>
-					<element name="previousReportAerodrome" type="iwxxm:AirportHeliportPropertyType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The aerodrome of the previously-issued report being amended or cancelled</documentation>
-						</annotation>
-					</element>
-					<element name="previousReportValidPeriod" type="gml:TimePeriodPropertyType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The valid time period for the previously amended and/or cancelled report</documentation>
-						</annotation>
-					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element TAF</documentation>
 						</annotation>
 					</element>
 				</sequence>
-				<attribute use="required" name="status" type="iwxxm:TAFReportStatusType">
+				<attribute name="isCancelReport" type="boolean">
 					<annotation>
-						<documentation>The status of this report, including amended, cancelled, normal, or corrected.
-
-Missing reports indicate that a report was not issued from the responsible reporting party as expected.  Missing reports are typically issued by third parties that were expecting a report.</documentation>
+						<documentation>Indicates whether the report is a 'CANCELLATION' report (true) which cancels a previously issued report or not (false or empty).</documentation>
 					</annotation>
 				</attribute>
 			</extension>
@@ -125,10 +118,26 @@ To report a prevailing visibility of at least 10000 meters, prevailing visibilit
 When no operator is reported, prevailing visibility represents an exact value with identical semantics to other measured quantities</documentation>
 						</annotation>
 					</element>
-					<element name="surfaceWind" type="iwxxm:AerodromeSurfaceWindForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
-					<element name="weather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3"></element>
-					<element name="cloud" type="iwxxm:AerodromeCloudForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
-					<element name="temperature" type="iwxxm:AerodromeAirTemperatureForecastPropertyType" minOccurs="0" maxOccurs="2"></element>
+					<element name="surfaceWind" type="iwxxm:AerodromeSurfaceWindForecastPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Forecast of surface wind.</documentation>
+						</annotation>
+					</element>
+					<element name="weather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3">
+						<annotation>
+							<documentation>Forecast of weather phenomena.</documentation>
+						</annotation>
+					</element>
+					<element name="cloud" type="iwxxm:AerodromeCloudForecastPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Forecast of cloud.</documentation>
+						</annotation>
+					</element>
+					<element name="temperature" type="iwxxm:AerodromeAirTemperatureForecastPropertyType" minOccurs="0" maxOccurs="2">
+						<annotation>
+							<documentation>Forecast of temperature.</documentation>
+						</annotation>
+					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element MeteorologicalAerodromeForecast</documentation>
@@ -144,9 +153,13 @@ A change indicator is required for all MeteorologicalAerodromeForecasts exceptin
 				</attribute>
 				<attribute use="required" name="cloudAndVisibilityOK" type="boolean">
 					<annotation>
-						<documentation>When true, indicates that the observed cloud ceiling, horizontal visibility, and weather conditions are of no operational significance.  See ICAO Annex 3 / WMO No. 49-2 Section 2.2. Also known as "CAVOK"
+						<documentation>When true, indicates that the following conditions occur simultaneously at the time of forecast (also know as "CAVOK"):
 
-When CAVOK conditions are observed, no other information on visibility, runway visual range, present weather, cloud amount, or cloud type is reported</documentation>
+a) visibility, 10km or more, and the lowest visibility is not reported
+b) no cloud of operational significance
+c) no weather of significance to aviation
+
+Information on visibility, runway visual range, present weather and cloud amount, cloud type and height of cloud base shall not be reported.  See ICAO Annex 3 / WMO No. 49-2 Section 2.2.</documentation>
 					</annotation>
 				</attribute>
 			</extension>
@@ -284,38 +297,6 @@ ICAO Annex 3 / WMO No. 49-2:
 
 ICAO Annex 3 / WMO No. 49-2:
 "PROB40 TEMPO"</documentation>
-				</annotation>
-			</enumeration>
-		</restriction>
-	</simpleType>
-	<simpleType name="TAFReportStatusType">
-		<annotation>
-			<documentation>The report status for a TAF report (e.g., a normal issuance, an amendment of an earlier report, a cancellation of an earlier report)</documentation>
-		</annotation>
-		<restriction base="string">
-			<enumeration value="NORMAL">
-				<annotation>
-					<documentation>An normal issuance of a TAF</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="AMENDMENT">
-				<annotation>
-					<documentation>An amendment of an earlier TAF</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="CANCELLATION">
-				<annotation>
-					<documentation>A cancellation of an earlier TAF</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="CORRECTION">
-				<annotation>
-					<documentation>A correction of an earlier TAF</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="MISSING">
-				<annotation>
-					<documentation>The report is missing ("NIL" from ICAO Annex 3 / WMO No. 49)</documentation>
 				</annotation>
 			</enumeration>
 		</restriction>

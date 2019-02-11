@@ -5,15 +5,18 @@
       YUDD SIGMET 3 VALID 101345/101600 YUSO
       YUDD SHANLON FIR/UIR CNL SIGMET 2 101200/101600
 -->
-<iwxxm:SIGMET xmlns:iwxxm="http://icao.int/iwxxm/3.0"
-    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
-    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+<iwxxm:SIGMET 
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+    xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0/iwxxm.xsd"
-
     gml:id="uuid.6fe37ba5-7ad5-471a-ac44-48ddefb2c23f"
+    reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL"
-    status="CANCELLATION">
+    isCancelReport="true">
 
     <!-- time at which the results of the observation were made available (issued) -->
     <iwxxm:issueTime>
@@ -74,16 +77,13 @@
         </gml:TimePeriod>
     </iwxxm:validPeriod>
 
-    <iwxxm:cancelledSequenceNumber>2</iwxxm:cancelledSequenceNumber>
+    <iwxxm:cancelledReportSequenceNumber>2</iwxxm:cancelledReportSequenceNumber>
 
-    <iwxxm:cancelledValidPeriod>
+    <iwxxm:cancelledReportValidPeriod>
         <gml:TimePeriod gml:id="uuid.ad79d14d-6bd9-46b6-aaf0-e99b2c85ccf9">
             <gml:beginPosition>2012-08-10T12:00:00Z</gml:beginPosition>
             <gml:endPosition>2012-08-10T16:00:00Z</gml:endPosition>
         </gml:TimePeriod>
-    </iwxxm:cancelledValidPeriod>
+    </iwxxm:cancelledReportValidPeriod>
 
-    <iwxxm:phenomenon nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
-
-    <iwxxm:analysis nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
 </iwxxm:SIGMET>

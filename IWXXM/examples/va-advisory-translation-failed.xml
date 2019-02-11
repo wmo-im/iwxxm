@@ -11,12 +11,16 @@ PSN:                        N5403 E15927
 INVALID INVALID INVALID
 
 -->
-<iwxxm:VolcanicAshAdvisory xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
-     xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:metce="http://def.wmo.int/metce/2013"
+<iwxxm:VolcanicAshAdvisory 
+     xmlns:xlink="http://www.w3.org/1999/xlink" 
+     xmlns:gml="http://www.opengis.net/gml/3.2"
+     xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
+     xmlns:metce="http://def.wmo.int/metce/2013"
      xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0/iwxxm.xsd"
      gml:id="uuid.074f61f2-3775-4e8b-b60c-17b238d60566" permissibleUsage="OPERATIONAL"
+     reportStatus="NORMAL"
      translatedBulletinID="TTAAiiCCCYYGGgg"
      translatedBulletinReceptionTime="2014-05-15T15:29:00Z"
      translationCentreDesignator="YUZZ"
@@ -49,17 +53,5 @@ INVALID INVALID INVALID">
         </aixm:timeSlice>
       </aixm:Unit>
     </iwxxm:issuingVolcanicAshAdvisoryCentre>
-
-    <iwxxm:volcano nilReason="http://codes.wmo.int/common/nil/missing"/>
-
-    <iwxxm:advisoryNumber nilReason="http://codes.wmo.int/common/nil/missing"/>
-
-    <iwxxm:informationSource nilReason="http://codes.wmo.int/common/nil/missing"/>
-
-    <iwxxm:analysis nilReason="http://codes.wmo.int/common/nil/missing"/>
-
-    <iwxxm:remarks nilReason="http://codes.wmo.int/common/nil/missing"/>
-
-    <iwxxm:nextAdvisoryTime nilReason="http://codes.wmo.int/common/nil/missing"/>
-
+ 
 </iwxxm:VolcanicAshAdvisory>

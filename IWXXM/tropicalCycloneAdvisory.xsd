@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
+	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.2/metce.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
 		<documentation>Tropical Cyclone Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
@@ -28,34 +29,34 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The issuing TCAC</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="tropicalCycloneName" type="iwxxm:StringWithNilReasonType">
+					<element name="tropicalCycloneName" type="metce:TropicalCyclonePropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The tropical cyclone name.  If the tropical cyclone is unnamed, 'NN' may be used</documentation>
 						</annotation>
 					</element>
-					<element name="advisoryNumber" type="iwxxm:StringWithNilReasonType">
+					<element name="advisoryNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Advisory number: year in full and message number (separate sequence for each cyclone)</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="observation" type="iwxxm:TropicalCycloneObservedConditionsPropertyType">
+					<element name="observation" type="iwxxm:TropicalCycloneObservedConditionsPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The observed conditions of the tropical cyclone</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="forecast" type="iwxxm:TropicalCycloneForecastConditionsPropertyType" minOccurs="4" maxOccurs="4">
+					<element name="forecast" type="iwxxm:TropicalCycloneForecastConditionsPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>The forecast conditions of the tropical cyclone, one each for the 6 hour, 12 hour, 18 hour, and 24 hour forecast periods</documentation>
+							<documentation>The forecast conditions of the tropical cyclone at given time intervals.</documentation>
 						</annotation>
 					</element>
-					<element name="remarks" type="iwxxm:StringWithNilReasonType">
+					<element name="remarks" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Remarks, as necessary.
 
 When the remark is nil, it should be indicated by a missing remarks with a nil reason of 'inapplicable'</documentation>
 						</annotation>
 					</element>
-					<element name="expectedNextAdvisoryTime" type="gml:TimeInstantPropertyType">
+					<element name="nextAdvisoryTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The time at which the next advisory is expected to be issued.
 
@@ -124,9 +125,9 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 							<documentation>The central pressure of the tropical cyclone.  Central pressure of cyclone shall be provided in hectoPascals (hPa).</documentation>
 						</annotation>
 					</element>
-					<element name="meanMaxSurfaceWind" type="gml:SpeedType">
+					<element name="maximumSurfaceWindSpeed" type="gml:SpeedType">
 						<annotation>
-							<documentation>The mean maximum surface wind near the cyclone centre over 10 minutes.  Mean maximum wind speeds shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
+							<documentation>The maximum 10-minute mean surface wind speed near the centre of the tropical cyclone which shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -166,7 +167,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 					</element>
 					<element name="maximumSurfaceWindSpeed" type="gml:SpeedType">
 						<annotation>
-							<documentation>The forecast maximum surface wind speed.  Maximum wind speeds shall be provided in either two units of measures: "m/s"or "[kn_i]" (knot).</documentation>
+							<documentation>The maximum 10-minute mean surface wind speed near the centre of the tropical cyclone which shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">

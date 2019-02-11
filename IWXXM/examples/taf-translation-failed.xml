@@ -4,20 +4,21 @@
     
       TAF YUDO 151800Z 1600/1618 INVALID
 -->
-<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2"
+<iwxxm:TAF 
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
+    xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0/iwxxm.xsd"
-
     gml:id="uuid.fa3ce106-f401-4670-ae50-cdf76bf68912"
+    reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL"
     translatedBulletinID="TTAAiiCCCYYGGgg"
     translatedBulletinReceptionTime="2014-05-15T15:29:00Z"
     translationCentreDesignator="YUZZ"
     translationCentreName="Fictional translation centre"
     translationTime="2014-05-15T15:30:00Z"
-    translationFailedTAC="TAF YUDO 151800Z 1600/1618 INVALID"
-    status="NORMAL">
+    translationFailedTAC="TAF YUDO 151800Z 1600/1618 INVALID">
 
     <iwxxm:issueTime>
         <!-- Original TAF: 151800Z -->
@@ -41,14 +42,12 @@
     </iwxxm:aerodrome>
 
     <!-- The time at which this TAF is intended to be used -->
-    <iwxxm:validTime>
+    <iwxxm:validPeriod>
         <!-- Original TAF: 1600/1618 -->
         <gml:TimePeriod gml:id="uuid.e1352c79-926c-4493-9046-bba70cf8c578">
             <gml:beginPosition>2012-08-16T00:00:00Z</gml:beginPosition>
             <gml:endPosition>2012-08-16T18:00:00Z</gml:endPosition>
         </gml:TimePeriod>
-    </iwxxm:validTime>
-
-    <iwxxm:baseForecast nilReason="http://codes.wmo.int/common/nil/missing"/>
+    </iwxxm:validPeriod>
 
 </iwxxm:TAF>

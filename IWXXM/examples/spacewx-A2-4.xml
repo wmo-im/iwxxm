@@ -15,11 +15,16 @@ FCST SWX +24 HR: 	09/0100Z NO SWX EXP
 RMK:                RADIATION LVL EXCEEDED 100 PCT OF BACKGROUND LVL AT FL340 AND ABV. THE CURRENT EVENT HAS PEAKED AND LVL SLW RTN TO BACKGROUND LVL. SEE WWW.SPACEWEATHERPROVIDER.WEB 
 NXT ADVISORY:       NO FURTHER ADVISORIES
 -->
-<iwxxm:SpaceWeatherAdvisory xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" 
+<iwxxm:SpaceWeatherAdvisory 
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0/iwxxm.xsd"
-    gml:id="uuid.dea6234c-f57f-4ccf-be7a-bb00a0265af2" permissibleUsage="OPERATIONAL">
+    gml:id="uuid.dea6234c-f57f-4ccf-be7a-bb00a0265af2" 
+    reportStatus="NORMAL"
+    permissibleUsage="OPERATIONAL">
     
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.161d2ad1-e945-4213-84a7-8f9c2c57540f">
@@ -41,6 +46,7 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
     </iwxxm:issuingSpaceWeatherCentre>
     
     <iwxxm:advisoryNumber>2016/2</iwxxm:advisoryNumber>
+
     <iwxxm:replacedAdvisoryNumber>2016/1</iwxxm:replacedAdvisoryNumber>
     
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/RADIATION_MOD"/>
@@ -58,8 +64,9 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                 <iwxxm:SpaceWeatherRegion gml:id="uuid.c264db5c-3f0b-4444-ab5e-71f48a514644">
                     <iwxxm:location>
                         <aixm:AirspaceVolume gml:id="uuid.7138f8d1-9854-46cb-a1b1-9d96c5cee46f">
-                            <aixm:lowerLimit uom="FL">350</aixm:lowerLimit>
-                            <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+                            <aixm:upperLimit uom="FL">350</aixm:upperLimit>
+			                <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+			                <aixm:maximumLimit xsi:nil="true" nilReason="unknown"/>
                             <aixm:horizontalProjection>
                                 <aixm:Surface gml:id="uuid.3b00652b-4bed-4655-959c-1c9efd431cac">
                                     <gml:patches>
@@ -75,7 +82,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                             </aixm:horizontalProjection>
                         </aixm:AirspaceVolume>
                     </iwxxm:location>
-                    <iwxxm:locationLowerLimitOperator>ABOVE</iwxxm:locationLowerLimitOperator>
                     <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/HNH"/>
                 </iwxxm:SpaceWeatherRegion>
             </iwxxm:region>
@@ -84,8 +90,9 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                 <iwxxm:SpaceWeatherRegion gml:id="uuid.00f9026a-845a-4472-acee-9ec5d7ba6839">
                     <iwxxm:location>
                         <aixm:AirspaceVolume gml:id="uuid.a9793439-2c58-462f-b60f-7f39c1e7b3a5">
-                            <aixm:lowerLimit uom="FL">350</aixm:lowerLimit>
-                            <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+                            <aixm:upperLimit uom="FL">350</aixm:upperLimit>
+		            	    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+			                <aixm:maximumLimit xsi:nil="true" nilReason="unknown"/>
                             <aixm:horizontalProjection>
                                 <aixm:Surface gml:id="uuid.6c5257ec-6c9d-4427-9b6e-cd2870adc557">
                                     <gml:patches>
@@ -101,7 +108,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                             </aixm:horizontalProjection>
                         </aixm:AirspaceVolume>
                     </iwxxm:location>
-                    <iwxxm:locationLowerLimitOperator>ABOVE</iwxxm:locationLowerLimitOperator>
                     <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/HSH"/>
                 </iwxxm:SpaceWeatherRegion>
             </iwxxm:region>

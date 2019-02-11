@@ -5,17 +5,19 @@
       METAR YUDO 221630Z 24004MPS 0600 R12/1000U DZ FG SCT010 OVC020 17/16 Q1018
       BECMG TL1700 0800 FG BECMG AT1800 9999 NSW
 -->
-<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+<iwxxm:METAR 
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0/iwxxm.xsd"
     gml:id="uuid.510df5de-fefb-4406-bafd-faab35333ec0"
+    reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL"
-    status="NORMAL"
     automatedStation="false">
 
-    <!-- the same as observationTime except for corrections/re-issuances --> 
+    <!-- the same as observationTime except for corrections --> 
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
             <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
