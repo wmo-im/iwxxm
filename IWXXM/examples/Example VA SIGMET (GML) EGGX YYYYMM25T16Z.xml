@@ -6,9 +6,9 @@ SFC/FL550 N OF N6100 W01000 – N5900 W01300 – N6100 W01900 MOV S 60KT NC VA C
 FCST 2200Z SFC/FL550 N OF N6100 W01100 – N5800 W01400 – N6100 W01600=
 -->
 <!-- note: year and month of this SIGMET unknown; YYYY and MM used in place of actual values -->
-<iwxxm:VolcanicAshSIGMET xmlns:iwxxm="http://icao.int/iwxxm/1.0RC1"
-    xmlns:saf="http://icao.int/saf/1.0RC1"
-    xmlns:metce="http://data.wmo.int/def/metce/1.0RC1" 
+<iwxxm:VolcanicAshSIGMET xmlns:iwxxm="http://icao.int/iwxxm/1.0RC2"
+    xmlns:saf="http://icao.int/saf/1.0RC2"
+    xmlns:metce="http://def.wmo.int/metce/2013" 
     xmlns:om="http://www.opengis.net/om/2.0"
     xmlns:sam="http://www.opengis.net/sampling/2.0"
     xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
@@ -18,125 +18,190 @@ FCST 2200Z SFC/FL550 N OF N6100 W01100 – N5800 W01400 – N6100 W01600=
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://icao.int/iwxxm/1.0RC1 http://schemas.wmo.int/iwxxm/1.0RC1/iwxxm.xsd
-    http://data.wmo.int/def/metce/1.0RC1 http://schemas.wmo.int/metce/1.0RC1/metce.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/1.0RC2 http://schemas.wmo.int/iwxxm/1.0RC2/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.0RC2/metce.xsd"
     gml:id="va-sigmet-EGXX-YYYYMM25T160000Z"
     status="NORMAL">
+    <iwxxm:issuingAirTrafficServicesUnit>
+        <saf:Unit gml:id="uuid.51cd8be0-b72e-11e2-9e96-0800200c9a66">
+            <gml:identifier codeSpace="urn:uuid:">51cd8be0-b72e-11e2-9e96-0800200c9a66</gml:identifier>
+            <saf:name>SHANWICK OCEANIC AREA CONTROL CENTRE</saf:name>
+            <saf:type>ATCC</saf:type>
+            <saf:designator>EGXX</saf:designator>
+        </saf:Unit>
+    </iwxxm:issuingAirTrafficServicesUnit>
+    <iwxxm:originatingMeteorologicalWatchOffice>
+        <saf:Unit gml:id="uuid.7abf6b40-b72e-11e2-9e96-0800200c9a66">
+            <gml:identifier codeSpace="urn:uuid:">7abf6b40-b72e-11e2-9e96-0800200c9a66</gml:identifier>
+            <saf:name>UK METEOROLOGICAL OFFICE - EXETER</saf:name>
+            <saf:type>MWO</saf:type>
+            <saf:designator>EGRR</saf:designator>
+        </saf:Unit>
+    </iwxxm:originatingMeteorologicalWatchOffice>
+    <iwxxm:sequenceNumber>4</iwxxm:sequenceNumber>
+    <iwxxm:validPeriod>
+        <gml:TimePeriod gml:id="tp-25T16Z-25T22Z">
+            <gml:beginPosition>YYYY-MM-25T16:00:00Z</gml:beginPosition>
+            <gml:endPosition>YYYY-MM-25T22:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:validPeriod>
+    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA" xlink:title="Volcanic Ash"/>
     <iwxxm:analysis>
         <om:OM_Observation gml:id="va-position-and-motion-EGXX-YYYYMM25T16Z">
-            <om:type 
-                xlink:href="http://data.wmo.int/def/observationType/iwxxm/1.0RC1/SIGMETEvolvingConditionAnalysis" 
-                xlink:title="SIGMETEvolvingConditionAnalysis"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETEvolvingConditionAnalysis"/>
             <om:phenomenonTime>
-                <gml:TimeInstant gml:id="time-instant-25T16Z">
+                <gml:TimeInstant gml:id="ti-25T16Z">
                     <gml:timePosition>YYYY-MM-25T16:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </om:phenomenonTime>
-            <om:resultTime xlink:href="#time-instant-25T16Z"/>
-            <om:validTime>
-                <gml:TimePeriod gml:id="time-period-25T16Z-25T22Z">
-                    <gml:beginPosition>YYYY-MM-25T16:00:00Z</gml:beginPosition>
-                    <gml:endPosition>YYYY-MM-25T22:00:00Z</gml:endPosition>
-                </gml:TimePeriod>
-            </om:validTime>
+            <om:resultTime xlink:href="#ti-25T16Z"/>
+            <om:validTime xlink:href="#tp-25T16Z-25T22Z"/>
             <om:procedure>
-                <metce:Process gml:id="va-sigmet-position-and-motion-analysis">
-                    <!-- authoritative documentation reference and title TBC -->
-                    <metce:documentationRef
-                        xlink:href="http://wis.wmo.int/procedure=Sigmet"
-                        xlink:title="WMO No. 49 Volume 2 Meteorological Service for International Air Navigation [C.3.1.]7 SIGMET AND AIRMET INFORMATION, AERODROME WARNINGS AND WIND SHEAR WARNINGS AND ALERTS"/>
+                <metce:Process gml:id="p-49-2-va-sigmet">
+                    <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation 
+                                     [C.3.1.]7 SIGMET AND AIRMET INFORMATION, AERODROME WARNINGS AND WIND SHEAR 
+                                     WARNINGS AND ALERTS
+                    </gml:description>
                 </metce:Process>
             </om:procedure>
-            <om:observedProperty 
-                xlink:href="http://data.wmo.int/def/observableProperty/sigmet/evolvingConditionAnalysis"
-                xlink:title="Observed position and motion for significant weather phenomenon"/>
+            <om:observedProperty
+                xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"
+                xlink:title="Volcanic ash"/>
             <om:featureOfInterest>
-                <sams:SF_SpatialSamplingFeature gml:id="sampling-surface-SHANWICK_OCA">
-                    <sam:type 
-                        xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface" 
-                        xlink:title="SF_SamplingSurface"/>
-                    <!-- Shanwick Oceanic Flight Information Region -->
-                    <sam:sampledFeature 
-                        xlink:href="http://icao.int/def/fir/SHANWICK_OCA" 
-                        xlink:title="Shanwick Oceanic"/>
-                    <sams:shape>
-                        <gml:Polygon gml:id="boundary_geometry-SHANWICK_OCA" 
-                            axisLabels="Lat Lon" 
-                            srsDimension="2"
-                            srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                            <gml:exterior>
-                                <gml:LinearRing>
-                                    <!-- SHANWICK FIR boundary (positions defined based on reference to map so possibly incorrect) -->
-                                    <gml:posList>60.0 -30.0 60.0 -10.0 54.0 -10.0 53.0 -15.0 51.0 -15.0 51.0 -8.0 45.0 -8.0 45.0 -30.0</gml:posList>
-                                </gml:LinearRing>
-                            </gml:exterior>
-                        </gml:Polygon>
-                    </sams:shape>
+                <sams:SF_SpatialSamplingFeature gml:id="ss-SHANWICK_OCA">
+                    <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
+                    <sam:sampledFeature>
+                        <saf:Airspace gml:id="uuid.37a7f1d0-b731-11e2-9e96-0800200c9a66">
+                            <gml:identifier codeSpace="urn:uuid:">37a7f1d0-b731-11e2-9e96-0800200c9a66</gml:identifier>
+                            <saf:type>FIR</saf:type>
+                            <saf:designator>EGXX</saf:designator>
+                            <saf:name>SHANWICK OCEANIC FLIGHT INFORMATION REGION</saf:name>
+                            <saf:geometryComponent>
+                                <saf:AirspaceVolume gml:id="av-SHANWICK_OCA">
+                                    <!-- note that upper limit and lower limit of the airspace volume are excluded - 
+                                         implying that the volume extends from ground/sea surface to upper limit of aeronautical operations -->
+                                    <saf:horizontalProjection>
+                                        <gml:Polygon gml:id="boundary-geometry-SHANWICK_OCA"
+                                            uomLabels="deg deg"
+                                            axisLabels="Lat Lon" 
+                                            srsDimension="2"
+                                            srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                            <gml:exterior>
+                                                <gml:LinearRing>
+                                                    <!-- SHANWICK FIR boundary (positions defined based on reference to map so possibly incorrect) -->
+                                                    <gml:posList>
+                                                        60.0 -30.0 
+                                                        60.0 -10.0 
+                                                        54.0 -10.0 
+                                                        53.0 -15.0 
+                                                        51.0 -15.0 
+                                                        51.0 -8.0 
+                                                        45.0 -8.0 
+                                                        45.0 -30.0 
+                                                        60.0 -30.0
+                                                    </gml:posList>
+                                                </gml:LinearRing>
+                                            </gml:exterior>
+                                        </gml:Polygon>
+                                    </saf:horizontalProjection>
+                                </saf:AirspaceVolume>
+                            </saf:geometryComponent>
+                        </saf:Airspace>
+                    </sam:sampledFeature>
+                    <sams:shape xlink:href="#boundary-geometry-SHANWICK_OCA"/>
                 </sams:SF_SpatialSamplingFeature>
             </om:featureOfInterest>
             <om:result>
-                <iwxxm:EvolvingMeteorologicalCondition gml:id="va-obs-EGXX-YYYYMM25T16Z" intensityChange="NO_CHANGE">
-                    <!-- note: UCUM provides on 'plane angle' [deg]. Annex 3 requires use of 'degrees true'. WMO will provide an authoritative reference -->
-                    <iwxxm:directionOfMotion uom="http://data.wmo.int/def/uom/degrees-true">180</iwxxm:directionOfMotion>
+                <iwxxm:EvolvingMeteorologicalCondition gml:id="emc-va-obs-EGXX-YYYYMM25T16Z" intensityChange="NO_CHANGE">
+                    <iwxxm:directionOfMotion uom="deg">180</iwxxm:directionOfMotion>
                     <iwxxm:geometry>
-                        <!-- note: the geometry of the volcanic ash cloud is described as a 2.5-dimensional object; horizontal projection
-                            plus (optional) lowerLimit and upperLimit describing the vertical extent. A missing lowerLimit indicates that
-                            the phenomenon extends to the surface, whilst a missing upperLimit indicates that it extends above the range
-                            of aeronautical operations -->
-                        <saf:AirspaceSolid gml:id="va-geometry-EGXX-YYYYMM25T16Z">
+                        <saf:AirspaceVolume gml:id="av-va-obs-position-EGXX-YYYYMM25T16Z">
+                            <!-- omitted lower-limit implies that the volcanic ash cloud extends to ground/sea surface -->
+                            <saf:upperLimit uom="[ft_i]">55000</saf:upperLimit>
+                            <saf:upperLimitReference>STD</saf:upperLimitReference>
                             <saf:horizontalProjection>
-                                <gml:Polygon gml:id="volcanic-ash-cloud-polygon-EGXX-YYYYMM25T16Z" 
+                                <gml:Polygon gml:id="polygon-va-obs-position-EGXX-YYYYMM25T16Z"
+                                    uomLabels="deg deg"
                                     axisLabels="Lat Lon" 
                                     srsDimension="2"
                                     srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:exterior>
                                         <gml:LinearRing>
                                             <!-- bounding polygon clipped to edge of FIR @ 60N -->
-                                            <gml:posList>60.0 -11.5 59.0 -13.0 60.0 -16.0</gml:posList>
+                                            <gml:posList>
+                                                60.0 -11.5 
+                                                59.0 -13.0 
+                                                60.0 -16.0 
+                                                60.0 -11.5
+                                            </gml:posList>
                                         </gml:LinearRing>
                                     </gml:exterior>
                                 </gml:Polygon>
                             </saf:horizontalProjection>
-                            <!-- note: lowerLimit is excluded as this feature extends down to the surface -->
-                            <!-- note: unit of measure is "foot" (ft). The Unified Code for Units of Measure (UCUM @ http://unitsofmeasure.org)
-                                specifies the symbol for "foot" as "[ft_i]". However, square-brackets "[" and "]" are not permitted as normal
-                                characters within a URI and are thus encoded as "%5B" and "%5D" respectively.
-                            -->
-                            <saf:upperLimit uom="http://opengis.net/def/uom/UCUM/0/%5Bft_i%5D">55000</saf:upperLimit>
-                        </saf:AirspaceSolid>
+                        </saf:AirspaceVolume>
                     </iwxxm:geometry>
-                    <iwxxm:speedOfMotion uom="http://opengis.net/def/uom/UCUM/0/knot">60</iwxxm:speedOfMotion>
+                    <iwxxm:speedOfMotion uom="knot">60</iwxxm:speedOfMotion>
                 </iwxxm:EvolvingMeteorologicalCondition>
             </om:result>
         </om:OM_Observation>
     </iwxxm:analysis>
-    <!-- EGGX Area Control Centre -->
-    <iwxxm:issuingAirTrafficServicesUnit 
-        xlink:href="http://icao.int/id/acc/EGGX" 
-        xlink:title="Shanwick Oceanic"/>
-    <!-- EGRR Meteorological Watch Office -->
-    <iwxxm:originatingMeteorologicalWatchOffice 
-        xlink:href="http://icao.int/id/mwo/EGRR" 
-        xlink:title="UK Meteorological Office - Exeter"/>
-    <!-- note: the <CodeList> class "AeronauticalSignificantWeatherPhenomenon" specifies tagged value "vocabulary" as 
-        "http://data.wmo.int/def/49-2/SigWxPhenomena". This code-list contains the sub-set of terms from BUFR Code-table 
-        0 08 011 "Meteorological feature" (http://data.wmo.int/def/bufr4/0-08-011) that describe meteorological phenomena
-        that are considered _significant_ to aeronautical operations as defined in ICAO Annex 3.
-    
-    <iwxxm:phenomenon xlink:href="http://data.wmo.int/def/bufr4/codeflag/0-08-011/17" xlink:title="Volcano"/>
-    -->
-    <!-- note: the <CodeList> class "AeronauticalSignificantWeatherPhenomenon" specifies tagged value "vocabulary" as 
-        "http://data.wmo.int/def/49-2/SigWxPhenomena". This code-list contains the set of terms listed in 
-        WMO No. 49 C.3.1. sub-clause 1.1.4.
-    -->
-    <iwxxm:phenomenon xlink:href="http://data.wmo.int/def/49-2/SigWxPhenomena/VA" xlink:title="Volcanic Ash"/>
-    <iwxxm:sequenceNumber>4</iwxxm:sequenceNumber>
-    <iwxxm:validPeriod xlink:href="#time-period-25T16Z-25T22Z"/>
+    <iwxxm:forecastPositionAnalysis>
+        <om:OM_Observation gml:id="va-forecast-position-EGXX-YYYYMM25T22Z">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETPositionAnalysis"/>
+            <om:phenomenonTime>
+                <gml:TimeInstant gml:id="ti-25T22Z">
+                    <gml:timePosition>YYYY-MM-25T22:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:phenomenonTime>
+            <om:resultTime xlink:href="#ti-25T16Z"/>
+            <om:validTime xlink:href="#tp-25T16Z-25T22Z"/>
+            <om:procedure xlink:href="#p-49-2-va-sigmet"/>
+            <om:observedProperty
+                xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"
+                xlink:title="Volcanic ash"/>
+            <om:featureOfInterest xlink:href="#ss-SHANWICK_OCA"/>
+            <om:result>
+                <iwxxm:MeteorologicalPositionCollection gml:id="mpc-EGXX-YYYYMM25T16Z">
+                    <iwxxm:member>
+                        <iwxxm:MeteorologicalPosition gml:id="mp-va-fcst-EGXX-YYYYMM25T16Z">
+                            <iwxxm:geometry>
+                                <saf:AirspaceVolume gml:id="av-va-fcst-position-EGXX-YYYYMM25T22Z">
+                                    <!-- omitted lower-limit implies that the volcanic ash cloud extends to ground/sea surface -->
+                                    <saf:upperLimit uom="[ft_i]">55000</saf:upperLimit>
+                                    <saf:upperLimitReference>STD</saf:upperLimitReference>
+                                    <saf:horizontalProjection>
+                                        <gml:Polygon gml:id="polygon-va-fcst-position-EGXX-YYYYMM25T22Z"
+                                            uomLabels="deg deg"
+                                            axisLabels="Lat Lon" 
+                                            srsDimension="2"
+                                            srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                            <gml:exterior>
+                                                <gml:LinearRing>
+                                                    <!-- bounding polygon clipped to edge of FIR @ 60N -->
+                                                    <gml:posList>
+                                                        60.0 -12.0 
+                                                        58.0 -14.0 
+                                                        60.0 -15.35 
+                                                        60.0 -12.0
+                                                    </gml:posList>
+                                                </gml:LinearRing>
+                                            </gml:exterior>
+                                        </gml:Polygon>
+                                    </saf:horizontalProjection>
+                                </saf:AirspaceVolume>
+                            </iwxxm:geometry>
+                        </iwxxm:MeteorologicalPosition>
+                    </iwxxm:member>
+                </iwxxm:MeteorologicalPositionCollection>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:forecastPositionAnalysis>
     <iwxxm:eruptingVolcano>
-        <metce:Volcano gml:id="volcano-MT-HEKLA">
+        <metce:Volcano gml:id="v-MT-HEKLA">
             <metce:name>MT HEKLA</metce:name>
             <metce:position>
-                <gml:Point gml:id="point-MT-HEKLA" 
+                <gml:Point gml:id="ref-point-MT-HEKLA"
+                    uomLabels="deg deg"
                     axisLabels="Lat Lon" 
                     srsDimension="2"
                     srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
@@ -145,58 +210,4 @@ FCST 2200Z SFC/FL550 N OF N6100 W01100 – N5800 W01400 – N6100 W01600=
             </metce:position>
         </metce:Volcano>
     </iwxxm:eruptingVolcano>
-    <iwxxm:forecastPositionAnalysis>
-        <om:OM_Observation gml:id="va-position-EGXX-YYYYMM25T22Z">
-             <om:type 
-                 xlink:href="http://data.wmo.int/def/observationType/iwxxm/1.0RC1/SIGMETPositionAnalysis" 
-                 xlink:title="SIGMETPositionAnalysis"/>
-            <om:phenomenonTime>
-                <gml:TimeInstant gml:id="time-instant-25T22Z">
-                    <gml:timePosition>YYYY-MM-25T22:00:00Z</gml:timePosition>
-                </gml:TimeInstant>
-            </om:phenomenonTime>
-            <om:resultTime xlink:href="#time-instant-25T16Z"/>
-            <om:validTime xlink:href="#time-period-25T16Z-25T22Z"/>
-            <om:procedure>
-                <metce:Process gml:id="va-sigmet-position-forecast">
-                    <!-- authoritative documentation reference and title TBC -->
-                    <metce:documentationRef
-                        xlink:href="http://wis.wmo.int/procedure=Sigmet"
-                        xlink:title="WMO No. 49 Volume 2 Meteorological Service for International Air Navigation Appendix 6 TECHNICAL SPECIFICATIONS RELATED TO SIGMET AND AIRMET INFORMATION, AERODROME WARNINGS AND WIND SHEAR WARNINGS AND ALERTS"/>
-                </metce:Process>
-            </om:procedure>
-            <om:observedProperty 
-                xlink:href="http://data.wmo.int/def/observableProperty/sigmet/positionAnalysis"
-                xlink:title="Observed position and motion for significant weather phenomenon"/>
-            <om:featureOfInterest xlink:href="#sampling-surface-SHANWICK_OCA"/>
-            <om:result>
-                <iwxxm:MeteorologicalPositionCollection gml:id="collection-EGXX-YYYYMM25T16Z">
-                    <iwxxm:member>
-                        <iwxxm:MeteorologicalPosition gml:id="va-fcst-EGXX-YYYYMM25T16Z">
-                            <iwxxm:geometry>
-                                <saf:AirspaceSolid gml:id="va-geometry-EGXX-YYYYMM25T22Z">
-                                    <saf:horizontalProjection>
-                                        <gml:Polygon gml:id="volcanic-ash-cloud-polygon-EGXX-YYYYMM25T22Z" 
-                                            axisLabels="Lat Lon" 
-                                            srsDimension="2"
-                                            srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                            <gml:exterior>
-                                                <gml:LinearRing>
-                                                    <!-- bounding polygon clipped to edge of FIR @ 60N -->
-                                                    <gml:posList>60.0 -12.0 58.0 -14.0 60.0 -15.35</gml:posList>
-                                                </gml:LinearRing>
-                                            </gml:exterior>
-                                        </gml:Polygon>
-                                    </saf:horizontalProjection>
-                                    <!-- note: this is an alternative method of specifying the unit of measure "foot"; in this case
-                                        the unit of measure is _assumed_ to be specified in the Unified Code for Units of Measure (UCUM) -->
-                                    <saf:upperLimit uom="[ft_i]">55000</saf:upperLimit>
-                                </saf:AirspaceSolid>
-                            </iwxxm:geometry>
-                        </iwxxm:MeteorologicalPosition>
-                    </iwxxm:member>
-                </iwxxm:MeteorologicalPositionCollection>
-            </om:result>
-        </om:OM_Observation>
-    </iwxxm:forecastPositionAnalysis>
 </iwxxm:VolcanicAshSIGMET>
