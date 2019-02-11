@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    An example of a TAF.  Original TAF from ICAO Annex 3 Example A5-2:
-      TAF AMD YUDO 161500Z 1606/1624 CNL
+    An example of a TAF.  Original TAF from ICAO Annex 3 Amd 77 Example A5-2:
+    
+      TAF AMD YUDO 161500Z 1600/1618 CNL
 -->
-<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/2.0RC1" xmlns:gml="http://www.opengis.net/gml/3.2"
+<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:aixm="http://www.aixm.aero/schema/5.1"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2.0RC1 http://schemas.wmo.int/iwxxm/2.0RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd"
 
     gml:id="taf-YUDO-20120816150000Z"
+    permissibleUsage="OPERATIONAL"
     status="CANCELLATION">
 
     <iwxxm:issueTime>
@@ -44,8 +46,8 @@
     <!-- The valid time period of a previous report that is cancelled, amended or corrected by this report -->
     <iwxxm:previousReportValidPeriod>
         <gml:TimePeriod gml:id="tp-201208160600-201208170000">
-            <gml:beginPosition>2012-08-16T06:00:00Z</gml:beginPosition>
-            <gml:endPosition>2012-08-17T00:00:00Z</gml:endPosition>
+            <gml:beginPosition>2012-08-16T00:00:00Z</gml:beginPosition>
+            <gml:endPosition>2012-08-16T18:00:00Z</gml:endPosition>
         </gml:TimePeriod>
     </iwxxm:previousReportValidPeriod>
 

@@ -6,14 +6,15 @@
     YUDD SHANLON FIR ISOL TS 
     OBS N OF S50 TOP ABV FL100 STNR WKN -->
 <iwxxm:AIRMET xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:iwxxm="http://icao.int/iwxxm/2.0RC1" xmlns:metce="http://def.wmo.int/metce/2013"
-    xmlns:message="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" 
+    xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
     xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sam="http://www.opengis.net/sampling/2.0" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://www.aixm.aero/schema/5.1 http://www.aixm.aero/gallery/content/public/schema/5.1_profiles/AIXM_WX/5.1a/AIXM_Features.xsd 
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.1/metce.xsd 
-    http://icao.int/iwxxm/2.0RC1 http://schemas.wmo.int/iwxxm/2.0RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd 
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd 
+    http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd"
     
+    permissibleUsage="OPERATIONAL"
     gml:id="airmet-YUDD-201405151520Z" status="NORMAL">
     
     <iwxxm:issuingAirTrafficServicesUnit>
@@ -59,18 +60,18 @@
             <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/2.0/AIRMETEvolvingConditionAnalysis"/>
             <!-- time of observed conditions -->
             <om:phenomenonTime>
-                <gml:TimeInstant gml:id="ti-20120825T1600Z">
-                    <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
+                <gml:TimeInstant gml:id="ti-20140515T1500Z">
+                    <gml:timePosition>2014-05-15T15:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </om:phenomenonTime>
             <!-- time at which the results of the observation were made available -->
             <om:resultTime>
-                <gml:TimeInstant gml:id="ti-201208251600Z">
-                    <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
+                <gml:TimeInstant gml:id="ti-20140515T1520Z">
+                    <gml:timePosition>2014-05-15T15:20:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </om:resultTime>
             <!-- The valid period for this observation is the period of the entire AIRMET -->
-            <om:validTime xlink:href="#tp-20120825T1600Z-20120825T2200Z"/>
+            <om:validTime xlink:href="#tp1"/>
             <om:procedure>
                 <metce:Process gml:id="p-49-2-airmet">
                     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO AIRMET INFORMATION</gml:description>
@@ -85,7 +86,7 @@
                         <aixm:Airspace gml:id="uuid.15c2c2ba-c5f2-47b5-9ada-1964d51b82c0">
                           <aixm:timeSlice>
                             <aixm:AirspaceTimeSlice gml:id="ats3">
-                              <gml:validTime xlink:href="#ti-201208251600Z"/>
+                              <gml:validTime/>
                               <aixm:interpretation>BASELINE</aixm:interpretation>
                               <aixm:type>FIR</aixm:type>
                               <aixm:designator>YUCC</aixm:designator>
@@ -120,12 +121,13 @@
                           </aixm:timeSlice>
                         </aixm:Airspace>
                     </sam:sampledFeature>
-                    <sams:shape xlink:href="#sfc001"/>
+                    <!-- FIR boundary - not typically reported -->
+                    <sams:shape nilReason="withheld"/>
                 </sams:SF_SpatialSamplingFeature>
             </om:featureOfInterest>
             <om:result>
                 <!-- OBS AT 1600Z N2706 W07306 CB TOP FL500 WI 150NM OF CENTRE MOV NW 10KT NC -->
-                <iwxxm:AIRMETEvolvingMeteorologicalCondition gml:id="tc-obs-N2706" intensityChange="NO_CHANGE">
+                <iwxxm:AIRMETEvolvingMeteorologicalCondition gml:id="tc-obs-N2706" timeIndicator="OBSERVATION" intensityChange="NO_CHANGE">
                     <iwxxm:directionOfMotion uom="deg">315</iwxxm:directionOfMotion>
                     <!-- This shape describes:
                         N2706 W07306 CB TOP FL500 WI 150NM OF CENTRE i.e., a 150NM radius around -73.06 (lon), 27.06 (lat) -->
@@ -142,7 +144,7 @@
                                                         <gml:Curve gml:id="curve01">
                                                             <gml:segments>
                                                                 <gml:CircleByCenterPoint numArc="1">
-                                                                    <gml:pos>27.06 -73.06</gml:pos>
+                                                                    <gml:pos>27.1 -73.1</gml:pos>
                                                                     <gml:radius uom="n.mi">150</gml:radius>
                                                                 </gml:CircleByCenterPoint>
                                                             </gml:segments>
@@ -161,5 +163,4 @@
             </om:result>
         </om:OM_Observation>
     </iwxxm:analysis>
-    
 </iwxxm:AIRMET>

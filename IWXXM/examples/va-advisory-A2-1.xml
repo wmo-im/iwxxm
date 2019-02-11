@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- A volcanic ash advisory.  Original VA Advisory from ICAO Annex 3 Example A2-1:
-    
+<!-- A volcanic ash advisory.  Original VA Advisory from ICAO Annex 3 Amd 77 Example A2-1:
+
 FVFE01 RJTD 230130
 VA ADVISORY
 
-DTG:                        20080923/0130Z 
+DTG:                        20080923/0130Z
 VAAC:                       TOKYO
 VOLCANO:                    KARYMSKY 1000-13
 PSN:                        N5403 E15927
@@ -19,7 +19,7 @@ OBS VA CLD:                 FL250/300 N5400 E15930 N5400 E16100 N5300 E15945 MOV
                             SFC/FL200 N5130 E16130 N5130 E16230 N5230 E16230 N5230 E16130
                             MOV SE 15KT
 FCST VA CLD +6 HR:          23/0700Z FL250/350 N5130 E16030 N5130 E16230 N5330 E16230 N5330
-                            E16030 SFC/FL180 N4830 E16330 N4830 E16630 N5130 E16630 N5130 
+                            E16030 SFC/FL180 N4830 E16330 N4830 E16630 N5130 E16630 N5130
                             E16330
 FCST VA CLD +12 HR:         23/1300Z SFC/FL270 N4830 E16130 N4830 E16600 N5300 E16600 N5300
                             E16130
@@ -30,21 +30,22 @@ NXT ADVISORY:               20080923/0730Z
 
 -->
 <iwxxm:VolcanicAshAdvisory xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:iwxxm="http://icao.int/iwxxm/2.0RC1" xmlns:metce="http://def.wmo.int/metce/2013"
-  xmlns:message="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" 
-  xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sam="http://www.opengis.net/sampling/2.0" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.aixm.aero/schema/5.1 http://www.aixm.aero/gallery/content/public/schema/5.1_profiles/AIXM_WX/5.1a/AIXM_Features.xsd
-  http://icao.int/iwxxm/2.0RC1 http://schemas.wmo.int/iwxxm/2.0RC1/iwxxm.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd" gml:id="ID000">
-    
+  xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:metce="http://def.wmo.int/metce/2013"
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sam="http://www.opengis.net/sampling/2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd
+  http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+  gml:id="ID000" permissibleUsage="OPERATIONAL">
+
   <iwxxm:issueTime>
       <gml:TimeInstant gml:id="ti-200809230130">
           <gml:timePosition>2008-09-23T01:30:00Z</gml:timePosition>
       </gml:TimeInstant>
   </iwxxm:issueTime>
-    
+
   <iwxxm:issuingVolcanicAshAdvisoryCentre>
-    <aixm:Unit gml:id="urn.uuid.c1bbe653-e5b1-4bfe-b510-3ada3272305a">
+    <aixm:Unit gml:id="vaac-TOKYO">
       <aixm:timeSlice>
         <aixm:UnitTimeSlice gml:id="uTTokyoVolcanicAshCentreUnit">
           <gml:validTime>
@@ -66,7 +67,7 @@ NXT ADVISORY:               20080923/0730Z
       </aixm:timeSlice>
     </aixm:Unit>
   </iwxxm:issuingVolcanicAshAdvisoryCentre>
-  
+
   <iwxxm:volcano>
     <metce:EruptingVolcano gml:id="karymsky">
       <gml:description>FL300 REPORTED</gml:description>
@@ -79,11 +80,11 @@ NXT ADVISORY:               20080923/0730Z
       <metce:eruptionDate>2008-09-23T01:30:00Z</metce:eruptionDate>
     </metce:EruptingVolcano>
   </iwxxm:volcano>
-  
+
   <iwxxm:advisoryNumber>2008/4</iwxxm:advisoryNumber>
   <iwxxm:informationSource>MTSAT-1R KVERT KEMSD</iwxxm:informationSource>
   <iwxxm:colourCode xlink:href="http://codes.wmo.int/49-2/AviationColourCode/RED"/>
-  
+
   <iwxxm:analysis>
     <om:OM_Observation gml:id="karymskyVAAObs">
       <om:phenomenonTime>
@@ -106,22 +107,9 @@ NXT ADVISORY:               20080923/0730Z
       <om:featureOfInterest>
           <sams:SF_SpatialSamplingFeature gml:id="ssf1">
               <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
-              <sam:sampledFeature xlink:href="urn.uuid.c1bbe653-e5b1-4bfe-b510-3ada3272305a"/>
-              <sams:shape>
-                  <!-- Tokyo VAAC boundary -->
-                  <aixm:Surface gml:id="tvbavs" srsName="http://www.opengis.net/def/crs/EPSG/0/4326" srsDimension="2">
-                      <gml:patches>
-                          <gml:PolygonPatch>
-                              <gml:exterior>
-                                  <gml:LinearRing>
-                                      <!-- Approximate boundary -->
-                                      <gml:coordinates>60 90 60 177 50 158 43 165 25 165 25 155 20 155 20 130 10 130 10 100 20 130 20 90 60 90</gml:coordinates>
-                                  </gml:LinearRing>
-                              </gml:exterior>
-                          </gml:PolygonPatch>
-                      </gml:patches>
-                  </aixm:Surface>
-              </sams:shape>
+              <sam:sampledFeature xlink:href="#vaac-TOKYO"/>
+              <!-- VAAC boundary - not typically reported -->
+              <sams:shape nilReason="withheld"/>
           </sams:SF_SpatialSamplingFeature>
       </om:featureOfInterest>
       <om:result>
@@ -141,7 +129,7 @@ NXT ADVISORY:               20080923/0730Z
                                     <gml:PolygonPatch>
                                         <gml:exterior>
                                             <gml:LinearRing>
-                                                <gml:posList>54.00 159.30 54.00 161.00 53.00 159.45 54.00 159.30</gml:posList>
+                                                <gml:posList>54.00 159.50 54.00 161.00 53.00 159.75 54.00 159.50</gml:posList>
                                             </gml:LinearRing>
                                         </gml:exterior>
                                     </gml:PolygonPatch>
@@ -169,7 +157,7 @@ NXT ADVISORY:               20080923/0730Z
                         <gml:PolygonPatch>
                           <gml:exterior>
                             <gml:LinearRing>
-                              <gml:posList>51.30 161.30 51.30 162.30 52.30 162.30 52.30 161.30 51.30 161.30</gml:posList>
+                              <gml:posList>51.50 161.50 51.50 162.50 52.50 162.50 52.50 161.50 51.50 161.50</gml:posList>
                             </gml:LinearRing>
                           </gml:exterior>
                         </gml:PolygonPatch>
@@ -186,7 +174,7 @@ NXT ADVISORY:               20080923/0730Z
       </om:result>
     </om:OM_Observation>
   </iwxxm:analysis>
-  
+
   <!-- 23/0700Z -->
   <iwxxm:analysis>
     <om:OM_Observation gml:id="karymskyVAA6hr">
@@ -202,7 +190,7 @@ NXT ADVISORY:               20080923/0730Z
       <om:featureOfInterest xlink:href="#ssf1"/>
       <om:result>
         <iwxxm:VolcanicAshConditions gml:id="vaCond3">
-          <!-- FL250/350 N5130 E16030 Ð N5130 E16230 Ð N5330 E16230 Ð N5330 E16030 -->
+          <!-- FL250/350 N5130 E16030 N5130 E16230 N5330 E16230 N5330 E16030 -->
           <iwxxm:ashCloud>
             <iwxxm:VolcanicAshCloud gml:id="vac3">
               <iwxxm:ashCloudExtent>
@@ -217,7 +205,7 @@ NXT ADVISORY:               20080923/0730Z
                         <gml:PolygonPatch>
                           <gml:exterior>
                             <gml:LinearRing>
-                              <gml:posList>51.30 160.30 51.30 162.30 53.30 162.30 53.30 160.30 51.30 160.30</gml:posList>
+                              <gml:posList>51.50 160.50 51.50 162.50 53.50 162.50 53.50 160.50 51.50 160.50</gml:posList>
                             </gml:LinearRing>
                           </gml:exterior>
                         </gml:PolygonPatch>
@@ -228,7 +216,7 @@ NXT ADVISORY:               20080923/0730Z
               </iwxxm:ashCloudExtent>
             </iwxxm:VolcanicAshCloud>
           </iwxxm:ashCloud>
-          <!-- SFC/FL180 N4830 E16330 Ð N4830 E16630 Ð N5130 E16630 Ð N5130 E16330 -->
+          <!-- SFC/FL180 N4830 E16330 N4830 E16630 N5130 E16630 N5130 E16330 -->
           <iwxxm:ashCloud>
             <iwxxm:VolcanicAshCloud gml:id="vac4">
               <iwxxm:ashCloudExtent>
@@ -243,7 +231,7 @@ NXT ADVISORY:               20080923/0730Z
                         <gml:PolygonPatch>
                           <gml:exterior>
                             <gml:LinearRing>
-                              <gml:posList>48.30 163.30 48.30 166.30 51.30 166.30 51.30 163.30 48.30 163.30</gml:posList>
+                              <gml:posList>48.50 163.50 48.50 166.50 51.50 166.50 51.50 163.50 48.50 163.50</gml:posList>
                             </gml:LinearRing>
                           </gml:exterior>
                         </gml:PolygonPatch>
@@ -258,7 +246,7 @@ NXT ADVISORY:               20080923/0730Z
       </om:result>
     </om:OM_Observation>
   </iwxxm:analysis>
-  
+
   <!-- 23/1300Z -->
   <iwxxm:analysis>
     <om:OM_Observation gml:id="karymskyVAA12hr">
@@ -289,7 +277,7 @@ NXT ADVISORY:               20080923/0730Z
                         <gml:PolygonPatch>
                           <gml:exterior>
                             <gml:LinearRing>
-                              <gml:posList>48.30 161.30 48.30 166.00 53.00 166.00 53.00 161.30 48.30 161.30</gml:posList>
+                              <gml:posList>48.50 161.50 48.50 166.00 53.00 166.00 53.00 161.50 48.50 161.50</gml:posList>
                             </gml:LinearRing>
                           </gml:exterior>
                         </gml:PolygonPatch>
@@ -304,18 +292,31 @@ NXT ADVISORY:               20080923/0730Z
       </om:result>
     </om:OM_Observation>
   </iwxxm:analysis>
-  
+
   <!-- 23/1900Z NO VA EXP -->
-  <iwxxm:analysis nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
-  
+  <iwxxm:analysis>
+      <om:OM_Observation gml:id="karymskyVAA18hr">
+          <om:phenomenonTime>
+              <gml:TimeInstant gml:id="t4">
+                  <gml:timePosition>2008-09-23T19:00:00Z</gml:timePosition>
+              </gml:TimeInstant>
+          </om:phenomenonTime>
+          <om:resultTime xlink:href="#ti-2"/>
+          <om:procedure xlink:href="#p-49-2"/>
+          <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/VAAdvisory"/>
+          <om:featureOfInterest xlink:href="#ssf1"/>
+          <om:result nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+      </om:OM_Observation>
+  </iwxxm:analysis>
+
   <!-- Remark -->
   <iwxxm:remarks>LATEST REP FM KVERT (0120Z) INDICATES ERUPTION HAS CEASED.  TWO DISPERSING VA CLD ARE EVIDENT ON SATELLITE IMAGERY</iwxxm:remarks>
-  
+
   <iwxxm:nextAdvisoryEarliestTime>
     <gml:TimeInstant gml:id="ti23">
       <gml:timePosition>2008-09-23T07:30:00Z</gml:timePosition>
     </gml:TimeInstant>
   </iwxxm:nextAdvisoryEarliestTime>
   <iwxxm:nextAdvisoryLatestTime xlink:href="#ti23"/>
-  
+
 </iwxxm:VolcanicAshAdvisory>

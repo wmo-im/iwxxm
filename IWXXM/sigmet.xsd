@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.0RC1" version="2.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2.0RC1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.0" version="2.0" xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:om="http://www.opengis.net/om/2.0" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
-	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.1/metce.xsd"></import>
+	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.2/metce.xsd"></import>
 	<import namespace="http://www.opengis.net/om/2.0" schemaLocation="http://schemas.opengis.net/om/2.0/observation.xsd"></import>
+	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
 		<documentation>SIGMET reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
@@ -24,12 +25,22 @@ In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE 
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
+					<element name="geometry" type="aixm:AirspaceVolumePropertyType">
 						<annotation>
 							<documentation>The geographic region affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in Annex 3: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
 						</annotation>
 					</element>
+					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters</documentation>
+						</annotation>
+					</element>
 				</sequence>
+				<attribute name="approximateLocation" type="boolean">
+					<annotation>
+						<documentation>Indicator of whether the location of phenomena is approximate. If not reported locations are not approximate</documentation>
+					</annotation>
+				</attribute>
 			</extension>
 		</complexContent>
 	</complexType>
@@ -40,7 +51,7 @@ In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE 
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	<element name="SIGMET" type="iwxxm:SIGMETType" substitutionGroup="gml:AbstractFeature">
+	<element name="SIGMET" type="iwxxm:SIGMETType" substitutionGroup="iwxxm:Report">
 		<annotation>
 			<documentation>A SIGMET (significant meteorological) report. SIGMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena over time. 
 
@@ -51,7 +62,7 @@ SIGMETs may report either observed or forecast hazardous conditions. Additionall
 	</element>
 	<complexType name="SIGMETType">
 		<complexContent>
-			<extension base="gml:AbstractFeatureType">
+			<extension base="iwxxm:ReportType">
 				<sequence>
 					<element name="issuingAirTrafficServicesUnit" type="iwxxm:UnitPropertyType">
 						<annotation>
@@ -106,8 +117,27 @@ The expected end of occurrence of volcanic ash ("NO VA EXP") is indicated with a
 Each analysis has a single EvolvingMeteorologicalCondition as its result.  </documentation>
 						</annotation>
 					</element>
+					<element name="forecastPositionAnalysis" type="om:OM_ObservationPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>One or more forecast positions at the end of the valid period - one for each phenomenon area within an FIR.  These are modeled as a single OM_Observation sub-type with a feature collection result due to the shared time and other observation metadata for all forecast positions.</documentation>
+						</annotation>
+					</element>
+					<element name="volcanicAshMovedToFIR" type="iwxxm:AirspacePropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The FIR to which volcanic ash has moved.  Reported only on SIGMET cancellation reports</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters</documentation>
+						</annotation>
+					</element>
 				</sequence>
-				<attribute use="required" name="status" type="iwxxm:SIGMETReportStatusType"></attribute>
+				<attribute use="required" name="status" type="iwxxm:SIGMETReportStatusType">
+					<annotation>
+						<documentation>The SIGMET report status - cancelled or normal</documentation>
+					</annotation>
+				</attribute>
 			</extension>
 		</complexContent>
 	</complexType>
@@ -126,27 +156,37 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 
 directionOfMotion element refers to the direction which the phenomenon is moving towards, .e.g, "moving to the east". directionOfMotion is given in degrees from true North. Plane angle unit of measure (uom) is "deg". 
 
-speedOfMotion can be provided in either two units of measures: "km/h" or "kn_i" (knots).
-
-
-Design note:
-This class is no longer a subclass of MeteorologicalPosition. This change was made to ensure that there is no confusion between the two classes when results from different OM_Observation types are populated.  Constraints could be used to ensure a specific superclass but not its subclasses are valid, but this would disallow the use of sub-classes of this type for other purposes such as regional extension</documentation>
+speedOfMotion can be provided in either two units of measures: "km/h" or "kn_i" (knots).</documentation>
 		</annotation>
 	</element>
 	<complexType name="EvolvingMeteorologicalConditionType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="directionOfMotion" type="gml:AngleType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>This element refers to the expected direction of movement which the phenomenon is moving towards, .e.g, "moving east". When no movement is expected, this is a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason and the speedOfMotion will be 0.
 
 This element value is given in degrees from true North. Plane angle unit of measure (uom) is "deg". </documentation>
 						</annotation>
 					</element>
-					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
+					<element name="geometry" type="aixm:AirspaceVolumePropertyType" minOccurs="1" maxOccurs="unbounded">
 						<annotation>
-							<documentation>The expected geographic region affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
+							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
+						</annotation>
+					</element>
+					<element name="geometryLowerLimitOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The reported relational operator for the airspace geometry lower limit. When reported, this operator is reported in conjunction with the airspace geometry's lower limit. 
+
+To report an airspace lower limit of below FL 300, airspace lower limit is reported as FL 300 and the operator is reported as "below".  When no operator is reported, the airspace lower limit represents an exact value with identical semantics to other measured quantities</documentation>
+						</annotation>
+					</element>
+					<element name="geometryUpperLimitOperator" type="iwxxm:RelationalOperatorType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The reported relational operator for the airspace geometry upper limit. When reported, this operator is reported in conjunction with the airspace geometry's upper limit. 
+
+To report an airspace upper limit of above FL 300, airspace upper limit is reported as FL 300 and the operator is reported as "above".  When no operator is reported, the airspace upper limit represents an exact value with identical semantics to other measured quantities</documentation>
 						</annotation>
 					</element>
 					<element name="speedOfMotion" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
@@ -156,8 +196,27 @@ This element value is given in degrees from true North. Plane angle unit of meas
 speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]" (knots).</documentation>
 						</annotation>
 					</element>
+					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters</documentation>
+						</annotation>
+					</element>
 				</sequence>
-				<attribute use="required" name="intensityChange" type="iwxxm:ExpectedIntensityChangeType"></attribute>
+				<attribute name="intensityChange" type="iwxxm:ExpectedIntensityChangeType">
+					<annotation>
+						<documentation>The expected change in intensity for the reported meteorological condition (e.g., intensifying, weakening, or no change) determined at the time of SIGMET analysis based on the current state of the meteorological condition</documentation>
+					</annotation>
+				</attribute>
+				<attribute use="required" name="timeIndicator" type="iwxxm:TimeIndicatorType">
+					<annotation>
+						<documentation>Indication whether the information is observed and expected to continue, or forecast</documentation>
+					</annotation>
+				</attribute>
+				<attribute name="approximateLocation" type="boolean">
+					<annotation>
+						<documentation>Indicator of whether the location of phenomena is approximate. If not reported locations are not approximate</documentation>
+					</annotation>
+				</attribute>
 			</extension>
 		</complexContent>
 	</complexType>
@@ -177,14 +236,16 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="forecastPositionAnalysis" type="om:OM_ObservationPropertyType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>One or more forecast positions at the end of the valid period - one for each phenomenon area within an FIR.  These are modeled as a single OM_Observation sub-type with a feature collection result due to the shared time and other observation metadata for all forecast positions.</documentation>
-						</annotation>
-					</element>
 					<element name="tropicalCyclone" type="metce:TropicalCyclonePropertyType">
 						<annotation>
-							<documentation>The tropical cyclone being reported in this SIGMET</documentation>
+							<documentation>The tropical cyclone being reported in this SIGMET.  
+
+When reporting the tropical cyclone name, 'NN' may be used if the tropical cyclone is unnamed</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -207,14 +268,14 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="forecastPositionAnalysis" type="om:OM_ObservationPropertyType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>One or more forecast positions at the end of the valid period - one for each phenomenon area within an FIR.  These are modeled as a single OM_Observation sub-type with a feature collection result due to the shared time and other observation metadata for all forecast positions.</documentation>
-						</annotation>
-					</element>
 					<element name="eruptingVolcano" type="metce:VolcanoPropertyType">
 						<annotation>
 							<documentation>The volcano that is erupting</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -238,6 +299,11 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<element name="member" type="iwxxm:MeteorologicalPositionPropertyType" minOccurs="0" maxOccurs="unbounded"></element>
+					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters</documentation>
+						</annotation>
+					</element>
 				</sequence>
 			</extension>
 		</complexContent>

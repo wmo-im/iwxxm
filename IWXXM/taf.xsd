@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.0RC1" version="2.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2.0RC1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2.0" version="2.0" xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://www.opengis.net/om/2.0" schemaLocation="http://schemas.opengis.net/om/2.0/observation.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
@@ -10,7 +10,7 @@ An Aerodrome Forecast (TAF) report is a routine forecast of meteorological condi
 
 References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
-	<element name="TAF" type="iwxxm:TAFType" substitutionGroup="gml:AbstractFeature">
+	<element name="TAF" type="iwxxm:TAFType" substitutionGroup="iwxxm:Report">
 		<annotation>
 			<documentation>An Aerodrome Forecast (TAF) report is a routine aerodrome forecast intended for distribution beyond an aerodrome.  TAF reports report base forecast conditions, and modifications to those conditions throughout the valid period.
 
@@ -25,7 +25,7 @@ Prevailing conditions and forecast changes differ in that the prevailing conditi
 	</element>
 	<complexType name="TAFType">
 		<complexContent>
-			<extension base="gml:AbstractFeatureType">
+			<extension base="iwxxm:ReportType">
 				<sequence>
 					<element name="issueTime" type="gml:TimeInstantPropertyType">
 						<annotation>
@@ -57,8 +57,19 @@ Prevailing conditions and forecast changes differ in that the prevailing conditi
 							<documentation>The valid time period for the previously amended and/or cancelled report</documentation>
 						</annotation>
 					</element>
+					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters</documentation>
+						</annotation>
+					</element>
 				</sequence>
-				<attribute use="required" name="status" type="iwxxm:TAFReportStatusType"></attribute>
+				<attribute use="required" name="status" type="iwxxm:TAFReportStatusType">
+					<annotation>
+						<documentation>The status of this report, including amended, cancelled, normal, or corrected.  
+
+Missing reports indicate that a report was not issued from the responsible reporting party as expected.  Missing reports are typically issued by third parties that were expecting a report.</documentation>
+					</annotation>
+				</attribute>
 			</extension>
 		</complexContent>
 	</complexType>
@@ -109,9 +120,26 @@ When no operator is reported, prevailing visibility represents an exact value wi
 					<element name="weather" type="iwxxm:AerodromeForecastWeatherType" minOccurs="0" maxOccurs="3"></element>
 					<element name="cloud" type="iwxxm:AerodromeCloudForecastPropertyType" minOccurs="0" maxOccurs="1"></element>
 					<element name="temperature" type="iwxxm:AerodromeAirTemperatureForecastPropertyType" minOccurs="0" maxOccurs="2"></element>
+					<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters</documentation>
+						</annotation>
+					</element>
 				</sequence>
-				<attribute name="changeIndicator" type="iwxxm:AerodromeForecastChangeIndicatorType"></attribute>
-				<attribute use="required" name="cloudAndVisibilityOK" type="boolean"></attribute>
+				<attribute name="changeIndicator" type="iwxxm:AerodromeForecastChangeIndicatorType">
+					<annotation>
+						<documentation>The type of change being reported (FROM, BECOMING,  TEMPORARY, etc.).
+
+A change indicator is required for all MeteorologicalAerodromeForecastRecords excepting reported base conditions.</documentation>
+					</annotation>
+				</attribute>
+				<attribute use="required" name="cloudAndVisibilityOK" type="boolean">
+					<annotation>
+						<documentation>When true, indicates that the observed cloud ceiling, horizontal visibility, and weather conditions are of no operational significance.  See ICAO Annex 3 / WMO No. 49-2 Section 2.2. Also known as "CAVOK"
+
+When CAVOK conditions are observed, no other information on visibility, runway visual range, present weather, cloud amount, or cloud type is reported</documentation>
+					</annotation>
+				</attribute>
 			</extension>
 		</complexContent>
 	</complexType>
@@ -185,10 +213,7 @@ Note that the TAC representations for "FM", "TL", and "AT" are represented by th
     FM and TL - a phenomenonTime with a TimePeriod (start is FM and end is TL)
     TL - a phenomenonTime with a TimePeriod (start is beginning of forecast validity and end is TL)
     FM - a phenomenonTime with a TimePeriod (start is FM and end is end of forecast validity)
-    AT - a phenomenonTime with a TimeInstant
-
-Design note:
-These values represent the operationally-representable types, but are not very general-purpose.  Especially with temporary conditions and probability it might be better to turn these into a "probability" property and constraints could be applied to the value to match operational constraints</documentation>
+    AT - a phenomenonTime with a TimeInstant</documentation>
 		</annotation>
 		<restriction base="string">
 			<enumeration value="BECOMING">

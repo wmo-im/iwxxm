@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    An example of a SIGMET.  Original SIGMET from ICAO Annex 3 Example A6-1b:
+    An example of a SIGMET.  Original SIGMET from ICAO Annex 3 Amd 77 Example A6-1b:
 
       YUDD SIGMET 3 VALID 101345/101600 YUSO
       YUDD SHANLON FIR/UIR CNL SIGMET 2 101200/101600
 -->
-<iwxxm:SIGMET xmlns:iwxxm="http://icao.int/iwxxm/2.0RC1"
-    xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:metce="http://def.wmo.int/metce/2013"
+<iwxxm:SIGMET xmlns:iwxxm="http://icao.int/iwxxm/2.0"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:om="http://www.opengis.net/om/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0"
     xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2.0RC1 http://schemas.wmo.int/iwxxm/2.0RC1/iwxxm.xsd
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.1/metce.xsd
+    xsi:schemaLocation="http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
     http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
 
     gml:id="sigmet-YUDD-201208101345Z"
+    permissibleUsage="OPERATIONAL"
     status="CANCELLATION">
 
     <iwxxm:issuingAirTrafficServicesUnit>
@@ -76,7 +77,7 @@
                     <gml:timePosition>2012-08-10T13:45:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </om:resultTime>
-            <om:validTime xlink:href="#tp-20120825T1600Z-20120825T2200Z"/>
+            <om:validTime xlink:href="#tp-20120810T1345Z-20120810T1600Z"/>
             <om:procedure>
                 <metce:Process gml:id="p-49-2-sigmet">
                     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO SIGMET INFORMATION</gml:description>
@@ -99,7 +100,8 @@
                             </aixm:timeSlice>
                         </aixm:Airspace>
                     </sf:sampledFeature>
-                    <sams:shape xlink:href="#sfc001"/>
+                    <!-- FIR boundary - not typically reported -->
+                    <sams:shape nilReason="withheld"/>
                 </sams:SF_SpatialSamplingFeature>
             </om:featureOfInterest>
             <om:result nilReason="inapplicable"/>

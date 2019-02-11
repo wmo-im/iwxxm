@@ -54,7 +54,7 @@ Vertical visibility "VV///" (METAR/SPECI observations)
   system due to a temporary failure of the system/sensor, the vertical visibility shall be missing with a nil reason of
   http://codes.wmo.int/common/nil/notObservable
 
-Cloud amount and height "//////"
+Cloud amount and base "//////"
   When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the
   cloud amount and the height of cloud base cannot be observed, this shall be indicated by a missing cloud layer
   with a nil reason of either http://codes.wmo.int/common/nil/notObservable if the value could not be observed due to
@@ -68,7 +68,7 @@ Cloud amount "///015"
   a sensor or system failure, or http://codes.wmo.int/common/nil/notDetectedByAutoSystem if the automated system is
   working properly but did not observe any values
 
-Cloud height "BKN///"
+Cloud base "BKN///"
   When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the height of
   cloud base cannot be observed, this shall be indicated by a CloudLayer with a missing "base" with a nil reason
   of either http://codes.wmo.int/common/nil/notObservable if the value could not be observed due to

@@ -1,10 +1,10 @@
-TAF YUDO 160000Z 1606/1624 13005MPS 9000 BKN020
+TAF YUDO 151800Z 1600/1618 13005MPS 9000 BKN020
 BECMG 1606/1608 SCT015CB BKN020
 TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020
 FM161230 15004MPS 9999 BKN020
 
 
-TAF for Donlon/International* issued on the 16th of the month at 0000 UTC valid from 0600 UTC to 2400 UTC
+TAF for Donlon/International* issued on the 15th of the month at 1800 UTC valid from 0000 UTC to 1800 UTC 
 on the 16th of the month; surface wind direction 130 degrees; wind speed 5 metres per second; visibility
 9 kilometres, broken cloud at 600 metres; becoming between 0600 UTC and 0800 UTC on the 16th of the month,
 scattered cumulonimbus cloud at 450 metres and broken cloud at 600 metres; temporarily between 0800 UTC and
