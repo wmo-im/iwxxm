@@ -6,14 +6,14 @@
       YUCC AMSWELL FIR TC GLORIA OBS AT 1600Z N2706 W07306 CB TOP FL500 WI 150NM OF CENTRE MOV NW 10KT NC
       FCST 2200Z TC CENTRE N2740 W07345
 -->
-<iwxxm:TropicalCycloneSIGMET xmlns:iwxxm="http://icao.int/iwxxm/1.0RC2"
-    xmlns:saf="http://icao.int/saf/1.0RC2" xmlns:metce="http://def.wmo.int/metce/2013"
+<iwxxm:TropicalCycloneSIGMET xmlns:iwxxm="http://icao.int/iwxxm/1.0"
+    xmlns:saf="http://icao.int/saf/1.0" xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:om="http://www.opengis.net/om/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0"
     xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/1.0RC2 http://schemas.wmo.int/iwxxm/1.0RC2/iwxxm.xsd
-    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.0RC2/metce.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/1.0 http://schemas.wmo.int/iwxxm/1.0/iwxxm.xsd
+    http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.0/metce.xsd"
 
     gml:id="sigmet-YUCC-20120825160000Z"
     status="NORMAL">
@@ -56,12 +56,12 @@
     </iwxxm:validPeriod>
 
     <!-- The significant meteorological phenomenon are listed in WMO No. 49 C.3.1. sub-clause 1.1.4 -->
-    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/TC" xlink:title="Tropical Cyclone"/>
+    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/TC"/>
 
     <!-- OBS AT 1600Z -->
     <iwxxm:analysis>
         <om:OM_Observation gml:id="analysis-20120825T1600Z">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETEvolvingConditionAnalysis" xlink:title="SIGMET Evolving Condition Analysis"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETEvolvingConditionAnalysis"/>
             <!-- time of observed conditions -->
             <om:phenomenonTime>
                 <gml:TimeInstant gml:id="ti-20120825T1600Z">
@@ -81,11 +81,11 @@
                     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO SIGMET INFORMATION</gml:description>
                 </metce:Process>
             </om:procedure>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionAnalysis" xlink:title="SIGMET Evolving Condition Properties"/>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionAnalysis"/>
             <!-- featureOfInterest type and shape MUST refer to an SF_SamplingSurface -->
             <om:featureOfInterest>
                 <sams:SF_SpatialSamplingFeature gml:id="sampling-surface-Amswell">
-                    <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface" xlink:title="SF_SamplingSurface"/>
+                    <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
                     <sf:sampledFeature>
                         <saf:Airspace gml:id="uuid.15c2c2ba-c5f2-47b5-9ada-1964d51b82c0">
                             <gml:identifier codeSpace="urn:uuid:">15c2c2ba-c5f2-47b5-9ada-1964d51b82c0</gml:identifier>
@@ -161,7 +161,7 @@
     <!-- FCST 2200Z TC CENTRE N2740 W07345 -->
     <iwxxm:forecastPositionAnalysis>
         <om:OM_Observation gml:id="analysis-20120825T1600Z2">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETPositionAnalysis" xlink:title="SIGMET Position Analysis"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETPositionAnalysis"/>
             <!-- time of forecast conditions -->
             <om:phenomenonTime>
                 <gml:TimeInstant gml:id="ti-20120825T1600Z2">
@@ -176,8 +176,8 @@
             </om:resultTime>
             <!-- The valid period for this observation is the period of the entire SIGMET -->
             <om:validTime xlink:href="#tp-20120825T1600Z-20120825T2200Z"/>
-            <om:procedure xlink:href="#p-49-2-sigmet" xlink:title="WMO 49-2 SIGMET"/>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/sigmet/positionAnalysis" xlink:title="SIGMET Position Forecast Properties"/>
+            <om:procedure xlink:href="#p-49-2-sigmet"/>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/sigmet/positionAnalysis"/>
             <om:featureOfInterest xlink:href="#sampling-surface-Amswell"/>
             <om:result>
                 <iwxxm:MeteorologicalPositionCollection gml:id="position-collection-result-2">

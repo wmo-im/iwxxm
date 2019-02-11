@@ -1,7 +1,7 @@
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
    <sch:title>Schematron validation</sch:title>
-   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/1.0RC2"></sch:ns>
-   <sch:ns prefix="saf" uri="http://icao.int/saf/1.0RC2"></sch:ns>
+   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/1.0"></sch:ns>
+   <sch:ns prefix="saf" uri="http://icao.int/saf/1.0"></sch:ns>
    <sch:ns prefix="sam" uri="http://www.opengis.net/sampling/2.0"></sch:ns>
    <sch:ns prefix="sams" uri="http://www.opengis.net/samplingSpatial/2.0"></sch:ns>
    <sch:ns prefix="xlink" uri="http://www.w3.org/1999/xlink"></sch:ns>
@@ -190,6 +190,16 @@
          </sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="AerodromeRecentWeather1">
+      <sch:rule context="//iwxxm:recentWeather">
+         <sch:assert test="(exists(doc(@xlink:href)/ok))">AerodromeRecentWeather: link tag should be named ok</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="AerodromePresentWeather1">
+      <sch:rule context="//iwxxm:presentWeather">
+         <sch:assert test="(exists(doc(@xlink:href)/ok))">AerodromePresentWeather: link tag should be named ok</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="TAF1">
       <sch:rule context="//iwxxm:TAF">
          <sch:assert test="(if(//iwxxm:MeteorologicalAerodromeForecastRecord/@changeIndicator) then(empty(iwxxm:MeteorologicalAerodromeForecastRecord/iwxxm:temperature)) else(true()))">TAF: Forecast conditions cannot include temperature information. They are otherwise
@@ -261,8 +271,8 @@
    </sch:pattern>
    <sch:pattern id="MeteorologicalAerodromeForecastRecord1">
       <sch:rule context="//iwxxm:MeteorologicalAerodromeForecastRecord">
-         <sch:assert test="(if(@cloudAndVisibilityOK = 'true') then empty(iwxxm:prevailingHorizontalVisibility) else true())">MeteorologicalAerodromeForecastRecord: Should not report prevailingHorizontalVisibility
-            when cloudAndVisibilityOK is true
+         <sch:assert test="(if(@cloudAndVisibilityOK = 'true') then empty(iwxxm:prevailingVisibility) else true())">MeteorologicalAerodromeForecastRecord: Should not report prevailingVisibility when
+            cloudAndVisibilityOK is true
          </sch:assert>
       </sch:rule>
    </sch:pattern>
@@ -278,46 +288,6 @@
          <sch:assert test="(if(@cloudAndVisibilityOK = 'true') then empty(iwxxm:weather) else true())">MeteorologicalAerodromeForecastRecord: Should not report weather when cloudAndVisibilityOK
             is true
          </sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="SIGMET1">
-      <sch:rule context="//iwxxm:SIGMET">
-         <sch:assert test="(if(@status ne 'CANCELLATION') then(exists(//iwxxm:analysis/om:OM_Observation/om:result/iwxxm:EvolvingMeteorologicalCondition)) else(true()))">SIGMET: OBS and FCST classifications must have a result type of EvolvingMeteorologicalCondition</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="SIGMET2">
-      <sch:rule context="//iwxxm:SIGMET">
-         <sch:assert test="(if(@status = 'CANCELLATION') then exists(iwxxm:analysis//om:result/@nilReason) else(true()))">SIGMET: A canceled SIGMET should not have an analysis</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="SIGMET3">
-      <sch:rule context="//iwxxm:SIGMET">
-         <sch:assert test="(if(@status = 'NORMAL') then ((exists(iwxxm:analysis)) and (empty(iwxxm:analysis//om:result/@nilReason))) else(true()))">SIGMET: There must be at least one analysis when a SIGMET does not have canceled status</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="SIGMET4">
-      <sch:rule context="//iwxxm:SIGMET">
-         <sch:assert test="(if(@status ne 'CANCELLATION') then(exists(iwxxm:forecastPositionAnalysis/om:OM_Observation/om:result/iwxxm:MeteorologicalPositionCollection//iwxxm:MeteorologicalPosition)) else(true()))">SIGMET: MeteorologicalPosition must be member of MeteorologicalPositionCollection</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="SIGMET5">
-      <sch:rule context="//iwxxm:SIGMET">
-         <sch:assert test="( if(@status ne 'CANCELLATION') then((exists(//om:OM_Observation/om:featureOfInterest//sam:sampledFeature/saf:Airspace)) or (contains(string(//om:OM_Observation/om:featureOfInterest//sam:sampledFeature/@xlink:href), 'fir')) or (contains(string(//om:OM_Observation/om:featureOfInterest//sam:sampledFeature/@xlink:href), 'uir')) or (contains(string(//om:OM_Observation/om:featureOfInterest//sam:sampledFeature/@xlink:href), 'cta')) )  and  ( if(exists(//om:OM_Observation/om:featureOfInterest/@xlink:href)) then (concat( '#', //om:OM_Observation//sams:SF_SpatialSamplingFeature/@gml:id ) = //om:OM_Observation/om:featureOfInterest/@xlink:href) else(true())) else(true()))">SIGMETEvolvingConditionAnalysis: Sampled feature must be an FIR, UIR, or CTA</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="SIGMET6">
-      <sch:rule context="//iwxxm:SIGMET//iwxxm:analysis/om:OM_Observation">
-         <sch:assert test="(if(empty(om:result/@nilReason)) then(exists(om:result/iwxxm:EvolvingMeteorologicalCondition)) else(true()))">SIGMETEvolvingConditionAnalysis: Result must be a single EvolvingMeteorologicalPosition</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="SIGMET7">
-      <sch:rule context="//iwxxm:SIGMET">
-         <sch:assert test="( if(@status ne 'CANCELLATION') then((exists(//om:OM_Observation/om:featureOfInterest//sam:sampledFeature/saf:Airspace)) or (contains(string(//om:OM_Observation/om:featureOfInterest//sam:sampledFeature/@xlink:href), 'fir')) or (contains(string(//om:OM_Observation/om:featureOfInterest//sam:sampledFeature/@xlink:href), 'uir')) or (contains(string(//om:OM_Observation/om:featureOfInterest//sam:sampledFeature/@xlink:href), 'cta')) )  and  ( if(exists(//om:OM_Observation/om:featureOfInterest/@xlink:href)) then (concat( '#', //om:OM_Observation//sams:SF_SpatialSamplingFeature/@gml:id ) = //om:OM_Observation/om:featureOfInterest/@xlink:href) else(true())) else(true()))">SIGMETPositionAnalysis: Sampled feature must be an FIR, UIR, or CTA</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="SIGMET8">
-      <sch:rule context="//iwxxm:SIGMET//iwxxm:forecastPositionAnalysis/om:OM_Observation">
-         <sch:assert test="(if(empty(om:result/@nilReason)) then(exists(om:result/iwxxm:MeteorologicalPositionCollection)) else(true()))">SIGMETPositionAnalysis: result must be MeteorologicalPositionCollection</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshSIGMET1">
