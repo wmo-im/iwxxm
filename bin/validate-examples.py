@@ -23,14 +23,16 @@ def main():
     # only validate the latest version and examples.  Older versions had a number of issues that have already been fixed
     # and there is little point in running tests against them
     with open('LATEST_VERSION') as fhandle:
-        devVersion=fhandle.read().strip()
+        LV = fhandle.read().strip()
+        devVersion = LV.split('\n')[1]
+        valVersion = LV.split('\n')[0]
 
     # iwxxmDirs = [os.path.join(cwd, f) for f in os.listdir(cwd)
     #            if os.path.isdir(os.path.join(cwd, f)) and not f.startswith('1.') and os.path.isdir( os.path.join(os.path.join(cwd,f),'examples') )]
     iwxxmDirs = [os.path.join(cwd,devVersion)]
     returnCode=0
     for dir in iwxxmDirs:
-        result = validate_dir(dir)
+        result = validate_dir(dir, valVersion)
         if result > 0:
             print "========= Validation FAILED on %s =========" % dir
             returnCode = result
@@ -40,17 +42,17 @@ def main():
     if returnCode != 0:
         sys.exit( returnCode )
 
-def validate_dir(dir):
+def validate_dir(dir, vver):
     catalogTemplate='catalog.template.xml'
     iwxxmDir=os.path.split(dir)[1]
-    iwxxmVersion = iwxxmDir[:3]
+    iwxxmVersion = vver
     thisCatalogFile=catalogTemplate.replace('template',iwxxmDir)
 
     # replace ${IWXXM_VERSION} and ${IWXXM_VERSION_DIR} with appropriate values in the catalog.xml file
     with open( catalogTemplate ) as templateFhandle:
         with open( thisCatalogFile, 'w' ) as catalogFhandle:
             catalogText=templateFhandle.read()
-            catalogText=catalogText.replace("${IWXXM_VERSION}", iwxxmDir)
+            catalogText=catalogText.replace("${IWXXM_VERSION}", iwxxmVersion)
             catalogText=catalogText.replace("${IWXXM_VERSION_DIR}", iwxxmDir)
             catalogFhandle.write(catalogText)
 
