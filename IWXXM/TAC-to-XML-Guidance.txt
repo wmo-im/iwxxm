@@ -79,8 +79,17 @@ Vertical visibility "VV///"
   When the vertical visibility is not available for any reason, "verticalVisibility" shall be missing with no nil reason
   
 ==========================
-SIGMET
+AIRMET and SIGMET
 ==========================
+FLnnn, nnnnM, nnnnFT
+  When a single altitude for AIR/SIGMET conditions are specified, this shall be indicated with the same altitude value in both aixm:lowerLimit and aixm:upperLimit
+
+TOP [ABV or BLW] FLnnn
+  When an AIR/SIGMET top is specified without a lower limit, this shall be indicated with a nil aixm:lowerLimit with a nilReason of "missing"
+
+Nnn[nn] Wnnn[nn] or Nnn[nn] Ennn[nn] or Snn[nn] Wnnn[nn] or Snn[nn] Ennn[nn]
+  When an AIR/SIGMET position is reported at a single point the location shall be indicated as a gml:CircleByCenterPoint with a gml:radius of 0
+
 NO VA EXP - No volcanic ash expected
   The expected end of occurrence of volcanic ash shall be indicated with a nil "VolcanicAshSIGMET/phenomenon" and a nil reason of "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
 

@@ -12,7 +12,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd 
     http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd 
-    http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd"
+    http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1.1RC1/iwxxm.xsd"
     
     permissibleUsage="OPERATIONAL"
     gml:id="airmet-YUDD-201405151520Z" status="NORMAL">
@@ -58,7 +58,7 @@
     <!-- OBS N OF S50 TOP ABV FL100 STNR WKN -->
     <iwxxm:analysis>
         <om:OM_Observation gml:id="analysis">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/AIRMETEvolvingConditionAnalysis"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/AIRMETEvolvingConditionCollectionAnalysis"/>
             <!-- time of observed conditions -->
             <om:phenomenonTime nilReason="missing"/>
             
@@ -75,7 +75,7 @@
                     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 6-1 TECHNICAL SPECIFICATIONS RELATED TO AIRMET INFORMATION</gml:description>
                 </metce:Process>
             </om:procedure>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/AIRMETEvolvingConditionAnalysis"/>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/AIRMETEvolvingConditionCollectionAnalysis"/>
             <!-- featureOfInterest type and shape MUST refer to an SF_SamplingSurface -->
             <om:featureOfInterest>
                 <sams:SF_SpatialSamplingFeature gml:id="sampling-surface-Amswell">

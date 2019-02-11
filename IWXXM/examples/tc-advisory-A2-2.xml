@@ -29,7 +29,7 @@ NXT MSG:                    20040925/2000Z
   xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sam="http://www.opengis.net/sampling/2.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd
-  http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
+  http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1.1RC1/iwxxm.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
   gml:id="ID000" permissibleUsage="OPERATIONAL">
 
   <iwxxm:issueTime>
@@ -42,19 +42,8 @@ NXT MSG:                    20040925/2000Z
     <aixm:Unit gml:id="tcac-YUFO">
       <aixm:timeSlice>
         <aixm:UnitTimeSlice gml:id="uTTCACUnit">
-          <gml:validTime>
-            <gml:TimePeriod gml:id="vtTCACUnit">
-              <gml:beginPosition>2004-01-01T00:00:00Z</gml:beginPosition>
-              <gml:endPosition indeterminatePosition="unknown"/>
-            </gml:TimePeriod>
-          </gml:validTime>
+          <gml:validTime/>
           <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-          <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ltTCACUnit">
-              <gml:beginPosition>2004-01-01T00:00:00Z</gml:beginPosition>
-              <gml:endPosition indeterminatePosition="unknown"/>
-            </gml:TimePeriod>
-          </aixm:featureLifetime>
           <aixm:type>OTHER:TCAC</aixm:type>
           <aixm:designator>YUFO</aixm:designator>
         </aixm:UnitTimeSlice>
@@ -79,7 +68,7 @@ NXT MSG:                    20040925/2000Z
           <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 2 Tropical cyclone advisory information</gml:description>
         </metce:Process>
       </om:procedure>
-      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TCAdvisory"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TropicalCycloneObservedConditions"/>
       <om:featureOfInterest>
           <sams:SF_SpatialSamplingFeature gml:id="obs1-feature">
               <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
@@ -115,7 +104,7 @@ NXT MSG:                    20040925/2000Z
       <!-- time at which the results of the observation were made available -->
       <om:resultTime xlink:href="#ti-200409251600"/>
       <om:procedure xlink:href="#p-49-2"/>
-      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TCAdvisory"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TropicalCycloneForecastConditions"/>
       <om:featureOfInterest>
           <sams:SF_SpatialSamplingFeature gml:id="fcst1-feature">
               <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
@@ -147,7 +136,7 @@ NXT MSG:                    20040925/2000Z
           <!-- time at which the results of the observation were made available -->
           <om:resultTime xlink:href="#ti-200409251600"/>
           <om:procedure xlink:href="#p-49-2"/>
-          <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TCAdvisory"/>
+          <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TropicalCycloneForecastConditions"/>
           <om:featureOfInterest>
               <sams:SF_SpatialSamplingFeature gml:id="fcst2-feature">
                   <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
@@ -179,7 +168,7 @@ NXT MSG:                    20040925/2000Z
           <!-- time at which the results of the observation were made available -->
           <om:resultTime xlink:href="#ti-200409251600"/>
           <om:procedure xlink:href="#p-49-2"/>
-          <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TCAdvisory"/>
+          <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TropicalCycloneForecastConditions"/>
           <om:featureOfInterest>
               <sams:SF_SpatialSamplingFeature gml:id="fcst3-feature">
                   <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
@@ -211,7 +200,7 @@ NXT MSG:                    20040925/2000Z
           <!-- time at which the results of the observation were made available -->
           <om:resultTime xlink:href="#ti-200409251600"/>
           <om:procedure xlink:href="#p-49-2"/>
-          <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TCAdvisory"/>
+          <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/TropicalCycloneForecastConditions"/>
           <om:featureOfInterest>
               <sams:SF_SpatialSamplingFeature gml:id="fcst4-feature">
                   <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>

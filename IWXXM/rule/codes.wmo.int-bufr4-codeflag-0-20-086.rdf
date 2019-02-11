@@ -1,0 +1,138 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://codes.wmo.int/def/bufr4/"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  <ldp:Container rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086">
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086/7">
+        <rdfs:label xml:lang="en">Ice</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >7</skos:notation>
+        <j.0:fxy>020086</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://purl.org/linked-data/registry#Register"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:57.683Z</dct:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086/8">
+        <rdfs:label xml:lang="en">Compacted or rolled snow</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >8</skos:notation>
+        <j.0:fxy>020086</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086/1">
+        <rdfs:label xml:lang="en">Damp</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</skos:notation>
+        <j.0:fxy>020086</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086/2">
+        <rdfs:label xml:lang="en">Wet with water patches</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >2</skos:notation>
+        <j.0:fxy>020086</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <rdfs:label>Runway deposits</rdfs:label>
+    <dct:publisher rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+    <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086/0">
+        <rdfs:label xml:lang="en">Clear and dry</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >0</skos:notation>
+        <j.0:fxy>020086</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086/5">
+        <rdfs:label xml:lang="en">Wet snow</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >5</skos:notation>
+        <j.0:fxy>020086</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086/6">
+        <dct:description xml:lang="en">Snow or ice on the ground that has been reduced to a soft watery mixture by rain, warm temperature, and/or chemical treatment.</dct:description>
+        <dct:description xml:lang="fr">Neige ou de glace sur le sol qui a été réduite à un doux mélange aqueux par la pluie, la température chaude et / ou le traitement chimique.</dct:description>
+        <rdfs:label xml:lang="en">Slush</rdfs:label>
+        <rdfs:label xml:lang="fr">Neige fondante</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >6</skos:notation>
+        <j.0:fxy>020086</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086/15">
+        <rdfs:label xml:lang="en">Missing or not reported (e.g. due to runway clearance in progress)</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >15</skos:notation>
+        <j.0:fxy>020086</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086/3">
+        <rdfs:label xml:lang="en">Rime and frost covered (depth normally less than 1 mm)</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >3</skos:notation>
+        <j.0:fxy>020086</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086/4">
+        <rdfs:label xml:lang="en">Dry snow</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >4</skos:notation>
+        <j.0:fxy>020086</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-086/9">
+        <rdfs:label xml:lang="en">Frozen ruts or ridges</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >9</skos:notation>
+        <j.0:fxy>020086</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
+  </ldp:Container>
+</rdf:RDF>

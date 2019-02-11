@@ -615,4 +615,121 @@
          <sch:assert test="following-sibling::*[1][self::iwxxm:extension] or not(following-sibling::*)">IWXXM.ExtensionAlwaysLast: Extension elements should be the last elements in their parents</sch:assert>
       </sch:rule>
    </sch:pattern>
+  <!-- Rules to enforce WMO Code List constraints are below this line -->
+  <sch:ns prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+  <sch:ns prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
+  <sch:ns prefix="reg" uri="http://purl.org/linked-data/registry#"/>
+
+  <sch:let name="dSigWxPhenomena" value="document('codes.wmo.int-49-2-SigWxPhenomena.rdf')" />
+  <sch:let name="dWeatherCausingVisibilityReduction" value="document('codes.wmo.int-49-2-WeatherCausingVisibilityReduction.rdf')" />
+  <sch:let name="dAerodromePresentOrForecastWeather" value="document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')" />
+  <sch:let name="d020089" value="document('codes.wmo.int-bufr4-codeflag-0-20-089.rdf')" />
+  <sch:let name="dAerodromeRecentWeather" value="document('codes.wmo.int-49-2-AerodromeRecentWeather.rdf')" />
+  <sch:let name="dCloudAmountReportedAtAerodrome" value="document('codes.wmo.int-49-2-CloudAmountReportedAtAerodrome.rdf')" />
+  <sch:let name="d020086" value="document('codes.wmo.int-bufr4-codeflag-0-20-086.rdf')" />
+  <sch:let name="dAviationColourCode" value="document('codes.wmo.int-49-2-AviationColourCode.rdf')" />
+  <sch:let name="dSigConvectiveCloudType" value="document('codes.wmo.int-49-2-SigConvectiveCloudType.rdf')" />
+  <sch:let name="d020087" value="document('codes.wmo.int-bufr4-codeflag-0-20-087.rdf')" />
+  <sch:let name="dAirWxPhenomena" value="document('codes.wmo.int-49-2-AirWxPhenomena.rdf')" />
+  <sch:let name="d022061" value="document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')" />
+
+  <sch:pattern id="phenomenon-dSigWxPhenomena-test">
+    <sch:rule context="//*[contains(name(),'SIGMET')]/iwxxm:phenomenon">
+      <sch:assert test="@xlink:href = $dSigWxPhenomena/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        SIGMET iwxxm:phenomenon elements should be a member of http://codes.wmo.int/49-2/SigWxPhenomena
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="surfaceVisibilityCause-dWeatherCausingVisibilityReduction-test">
+    <sch:rule context="//*[contains(name(),'AIRMETEvolvingCondition')]/iwxxm:surfaceVisibilityCause">
+      <sch:assert test="@xlink:href = $dWeatherCausingVisibilityReduction/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        AIRMETEvolvingCondition iwxxm:surfaceVisibilityCause elements should be a member of http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="forecastWeather-dAerodromePresentOrForecastWeather-test">
+    <sch:rule context="//*[contains(name(),'MeteorologicalAerodromeTrendForecastRecord')]/iwxxm:forecastWeather">
+      <sch:assert test="@xlink:href = $dAerodromePresentOrForecastWeather/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        MeteorologicalAerodromeTrendForecastRecord iwxxm:forecastWeather elements should be a member of http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="weather-dAerodromePresentOrForecastWeather-test">
+    <sch:rule context="//*[contains(name(),'MeteorologicalAerodromeForecastRecord')]/iwxxm:weather">
+      <sch:assert test="@xlink:href = $dAerodromePresentOrForecastWeather/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        MeteorologicalAerodromeForecastRecord iwxxm:weather elements should be a member of http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="estimatedSurfaceFrictionOrBrakingAction-d020089-test">
+    <sch:rule context="//*[contains(name(),'AerodromeRunwayState')]/iwxxm:estimatedSurfaceFrictionOrBrakingAction">
+      <sch:assert test="@xlink:href = $d020089/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        AerodromeRunwayState iwxxm:estimatedSurfaceFrictionOrBrakingAction elements should be a member of http://codes.wmo.int/bufr4/codeflag/0-20-089
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="recentWeather-dAerodromeRecentWeather-test">
+    <sch:rule context="//*[contains(name(),'MeteorologicalAerodromeObservationRecord')]/iwxxm:recentWeather">
+      <sch:assert test="@xlink:href = $dAerodromeRecentWeather/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        MeteorologicalAerodromeObservationRecord iwxxm:recentWeather elements should be a member of http://codes.wmo.int/49-2/AerodromeRecentWeather
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="amount-dCloudAmountReportedAtAerodrome-test">
+    <sch:rule context="//*[contains(name(),'CloudLayer')]/iwxxm:amount">
+      <sch:assert test="@xlink:href = $dCloudAmountReportedAtAerodrome/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        CloudLayer iwxxm:amount elements should be a member of http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="depositType-d020086-test">
+    <sch:rule context="//*[contains(name(),'AerodromeRunwayState')]/iwxxm:depositType">
+      <sch:assert test="@xlink:href = $d020086/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        AerodromeRunwayState iwxxm:depositType elements should be a member of http://codes.wmo.int/bufr4/codeflag/0-20-086
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="colourCode-dAviationColourCode-test">
+    <sch:rule context="//*[contains(name(),'VolcanicAshAdvisory')]/iwxxm:colourCode">
+      <sch:assert test="@xlink:href = $dAviationColourCode/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        VolcanicAshAdvisory iwxxm:colourCode elements should be a member of http://codes.wmo.int/49-2/AviationColourCode
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="cloudType-dSigConvectiveCloudType-test">
+    <sch:rule context="//*[contains(name(),'CloudLayer')]/iwxxm:cloudType">
+      <sch:assert test="@xlink:href = $dSigConvectiveCloudType/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        CloudLayer iwxxm:cloudType elements should be a member of http://codes.wmo.int/49-2/SigConvectiveCloudType
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="contamination-d020087-test">
+    <sch:rule context="//*[contains(name(),'AerodromeRunwayState')]/iwxxm:contamination">
+      <sch:assert test="@xlink:href = $d020087/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        AerodromeRunwayState iwxxm:contamination elements should be a member of http://codes.wmo.int/bufr4/codeflag/0-20-087
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="presentWeather-dAerodromePresentOrForecastWeather-test">
+    <sch:rule context="//*[contains(name(),'MeteorologicalAerodromeObservationRecord')]/iwxxm:presentWeather">
+      <sch:assert test="@xlink:href = $dAerodromePresentOrForecastWeather/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        MeteorologicalAerodromeObservationRecord iwxxm:presentWeather elements should be a member of http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="phenomenon-dAirWxPhenomena-test">
+    <sch:rule context="//*[contains(name(),'AIRMET')]/iwxxm:phenomenon">
+      <sch:assert test="@xlink:href = $dAirWxPhenomena/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        AIRMET iwxxm:phenomenon elements should be a member of http://codes.wmo.int/49-2/AirWxPhenomena
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="seaState-d022061-test">
+    <sch:rule context="//*[contains(name(),'AerodromeSeaState')]/iwxxm:seaState">
+      <sch:assert test="@xlink:href = $d022061/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason" >
+        AerodromeSeaState iwxxm:seaState elements should be a member of http://codes.wmo.int/bufr4/codeflag/0-22-061
+      </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+
 </sch:schema>

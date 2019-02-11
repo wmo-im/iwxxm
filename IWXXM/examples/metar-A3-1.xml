@@ -12,7 +12,7 @@
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:sf="http://www.opengis.net/sampling/2.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1.1RC1/iwxxm.xsd
     http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
     http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
 
@@ -24,18 +24,14 @@
     <iwxxm:observation>
         <om:OM_Observation gml:id="obs-03839-20120824T12Z">
             <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeObservation"/>
-            <!-- time at which the observation actually occured -->
+            <!-- time at which the observation actually occured (same as issueTime) -->
             <om:phenomenonTime>
                 <gml:TimeInstant gml:id="ti-201208221630Z">
                     <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </om:phenomenonTime>
-            <!-- time at which the results of the observation were made available (10-minutes later) -->
-            <om:resultTime>
-                <gml:TimeInstant gml:id="ti-201208221640Z">
-                    <gml:timePosition>2012-08-22T16:40:00Z</gml:timePosition>
-                </gml:TimeInstant>
-            </om:resultTime>
+	    <!-- time at which the results of the observation are made available -->
+	    <om:resultTime xlink:href="#ti-201208221630Z"/>
             <om:procedure>
                 <metce:Process gml:id="p-49-2-metar">
                     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 3 TECHNICAL SPECIFICATIONS RELATED TO METEOROLOGICAL OBSERVATIONS AND REPORTS</gml:description>
@@ -134,7 +130,7 @@
                 </gml:TimePeriod>
             </om:phenomenonTime>
             <!-- time at which the results of the observation were made available -->
-            <om:resultTime xlink:href="#ti-201208221640Z"/>
+            <om:resultTime xlink:href="#ti-201208221630Z"/>
             <om:procedure xlink:href="#p-49-2-metar"/>
             <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeTrendForecast"/>
             <om:featureOfInterest xlink:href="#sampling-point-03839"/>
@@ -157,7 +153,7 @@
                 </gml:TimePeriod>
             </om:phenomenonTime>
             <!-- time at which the results of the observation were made available -->
-            <om:resultTime xlink:href="#ti-201208221640Z"/>
+            <om:resultTime xlink:href="#ti-201208221630Z"/>
             <om:procedure xlink:href="#p-49-2-metar"/>
             <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeTrendForecast"/>
             <om:featureOfInterest xlink:href="#sampling-point-03839"/>

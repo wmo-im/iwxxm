@@ -14,7 +14,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1/iwxxm.xsd
+    xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1.1RC1/iwxxm.xsd
     http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd
     http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"
     gml:id="va-sigmet-EGGX-YYYYMM25T160000Z"
@@ -56,7 +56,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
     <iwxxm:analysis>
         <om:OM_Observation gml:id="va-position-and-motion-EGGX-YYYYMM25T16Z">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETEvolvingConditionAnalysis"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETEvolvingConditionCollectionAnalysis"/>
             <om:phenomenonTime>
                 <gml:TimeInstant gml:id="ti-25T16Z">
                     <gml:timePosition>YYYY-MM-25T16:00:00Z</gml:timePosition>
@@ -69,7 +69,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation [C.3.1.]7 SIGMET AND AIRMET INFORMATION, AERODROME WARNINGS AND WIND SHEAR WARNINGS AND ALERTS</gml:description>
                 </metce:Process>
             </om:procedure>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETEvolvingConditionCollectionAnalysis"/>
             <om:featureOfInterest>
                 <sams:SF_SpatialSamplingFeature gml:id="ss-SHANWICK_OCA">
                     <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface"/>
@@ -134,7 +134,7 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
     </iwxxm:analysis>
     <iwxxm:forecastPositionAnalysis>
         <om:OM_Observation gml:id="va-forecast-position-EGGX-YYYYMM25T22Z">
-            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETPositionAnalysis"/>
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/SIGMETPositionCollectionAnalysis"/>
             <om:phenomenonTime>
                 <gml:TimeInstant gml:id="ti-25T22Z">
                     <gml:timePosition>YYYY-MM-25T22:00:00Z</gml:timePosition>
@@ -142,8 +142,8 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
             </om:phenomenonTime>
             <om:resultTime xlink:href="#ti-25T16Z"/>
             <om:validTime xlink:href="#tp-25T16Z-25T22Z"/>
-            <om:procedure xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETPositionAnalysis"/>
-            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
+            <om:procedure xlink:href="#p-49-2-va-sigmet"/>
+            <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/SIGMETPositionCollectionAnalysis"/>
             <om:featureOfInterest xlink:href="#ss-SHANWICK_OCA"/>
             <om:result>
                 <iwxxm:SIGMETPositionCollection gml:id="mpc-EGGX-YYYYMM25T16Z">
