@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A tropical cyclone advisory which failed translation:
+  
+TC ADVISORY
+
+DTG:                        20040925/1600Z
+TCAC:                       YUFO
+TC:                         GLORIA
+INVALID INVALID INVALID
+-->
+<iwxxm:TropicalCycloneAdvisory 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
+    xmlns:metce="http://def.wmo.int/metce/2013"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0/iwxxm.xsd"
+    gml:id="uuid.4a954e38-b132-4d3c-aaba-90dbd056d497" 
+    reportStatus="NORMAL"
+    permissibleUsage="OPERATIONAL"
+    translatedBulletinID="TTAAiiCCCYYGGgg"
+    translatedBulletinReceptionTime="2014-05-15T15:29:00Z"
+    translationCentreDesignator="YUZZ"
+    translationCentreName="Fictional translation centre"
+    translationTime="2014-05-15T15:30:00Z"
+    translationFailedTAC="TC ADVISORY
+    
+    DTG:                        20040925/1600Z
+    TCAC:                       YUFO
+    TC:                         GLORIA
+    INVALID INVALID INVALID">
+
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.3ea6b416-595b-4eb0-ad4c-3879fa5726d2">
+            <gml:timePosition>2004-09-25T16:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+
+    <iwxxm:issuingTropicalCycloneAdvisoryCentre>
+        <aixm:Unit gml:id="uuid.cf31d51c-7cac-4541-9183-5b295f56ae99">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="uuid.11e05972-5994-43f9-ab66-307b6d22fe89">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:type>OTHER:TCAC</aixm:type>
+                    <aixm:designator>YUFO</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:issuingTropicalCycloneAdvisoryCentre>
+
+</iwxxm:TropicalCycloneAdvisory>

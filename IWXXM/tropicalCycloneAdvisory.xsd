@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
+	<include schemaLocation="common.xsd"></include>
+	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.2/metce.xsd"></import>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
+	<annotation>
+		<documentation>Tropical Cyclone Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
+
+Tropical Cyclone Advisories (TCA) report the occurrence and/or expected occurrence of tropical cyclone phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.
+
+References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
+	</annotation>
+	<element name="TropicalCycloneAdvisory" type="iwxxm:TropicalCycloneAdvisoryType" substitutionGroup="iwxxm:Report">
+		<annotation>
+			<documentation>An advisory of tropical cyclone conditions of significance to aviation as represented in ICAO Annex 3 / WMO No. 49-2.  Tropical cyclone advisories are issued by tropical cyclone advisory centres (TCACs)</documentation>
+		</annotation>
+	</element>
+	<complexType name="TropicalCycloneAdvisoryType">
+		<complexContent>
+			<extension base="iwxxm:ReportType">
+				<sequence>
+					<element name="issueTime" type="gml:TimeInstantPropertyType">
+						<annotation>
+							<documentation>The time at which this advisory was issued</documentation>
+						</annotation>
+					</element>
+					<element name="issuingTropicalCycloneAdvisoryCentre" type="iwxxm:UnitPropertyType">
+						<annotation>
+							<documentation>The issuing TCAC</documentation>
+						</annotation>
+					</element>
+					<element name="tropicalCycloneName" type="metce:TropicalCyclonePropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The tropical cyclone name.  If the tropical cyclone is unnamed, 'NN' may be used</documentation>
+						</annotation>
+					</element>
+					<element name="advisoryNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Advisory number: year in full and message number (separate sequence for each cyclone)</documentation>
+						</annotation>
+					</element>
+					<element name="observation" type="iwxxm:TropicalCycloneObservedConditionsPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The observed conditions of the tropical cyclone</documentation>
+						</annotation>
+					</element>
+					<element name="forecast" type="iwxxm:TropicalCycloneForecastConditionsPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The forecast conditions of the tropical cyclone at given time intervals.</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Remarks, as necessary.
+
+When the remark is nil, it should be indicated by a missing remarks with a nil reason of 'inapplicable'</documentation>
+						</annotation>
+					</element>
+					<element name="nextAdvisoryTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The time at which the next advisory is expected to be issued.
+
+Use attribute indeterminatePosition to element timePosition to indicate if the actual temporal position is before or after the specified value.
+
+When no subsequent advisory is expected to be issued it should be indicated by a missing expected advisory time with a nil reason of 'inapplicable'</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element TropicalCycloneAdvisory</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TropicalCycloneAdvisoryPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:TropicalCycloneAdvisory"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="TropicalCycloneObservedConditions" type="iwxxm:TropicalCycloneObservedConditionsType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Observed conditions of a tropical cyclone </documentation>
+		</annotation>
+	</element>
+	<complexType name="TropicalCycloneObservedConditionsType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
+						<annotation>
+							<documentation>The time at which meteorological phenomena occur</documentation>
+						</annotation>
+					</element>
+					<element name="tropicalCyclonePosition" type="gml:PointPropertyType">
+						<annotation>
+							<documentation>The tropical cyclone position</documentation>
+						</annotation>
+					</element>
+					<element name="cumulonimbusCloudLocation" type="iwxxm:AirspaceVolumePropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Location of cumulonimbus cloud</documentation>
+						</annotation>
+					</element>
+					<element name="movement" type="iwxxm:TropicalCycloneMovementType">
+						<annotation>
+							<documentation>The movement observed for the tropical cyclone</documentation>
+						</annotation>
+					</element>
+					<element name="movementDirection" type="gml:AngleType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The movement direction observed.  Only reported when the tropical cyclone is moving at least 6 km/hour or 3 knots. Direction of movement shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
+						</annotation>
+					</element>
+					<element name="movementSpeed" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The movement speed observed.  Only reported when the tropical cyclone is moving at least 6 km/hour or 3 knots.  Speed of movement shall be provided in either two units of measures: "km/h" or "[kn_i]" (knot).</documentation>
+						</annotation>
+					</element>
+					<element name="centralPressure" type="gml:MeasureType">
+						<annotation>
+							<documentation>The central pressure of the tropical cyclone.  Central pressure of cyclone shall be provided in hectoPascals (hPa).</documentation>
+						</annotation>
+					</element>
+					<element name="maximumSurfaceWindSpeed" type="gml:SpeedType">
+						<annotation>
+							<documentation>The maximum 10-minute mean surface wind speed near the centre of the tropical cyclone which shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element TropicalCycloneObservedConditions</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TropicalCycloneObservedConditionsPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:TropicalCycloneObservedConditions"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="TropicalCycloneForecastConditions" type="iwxxm:TropicalCycloneForecastConditionsType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Forecast conditions of a tropical cyclone </documentation>
+		</annotation>
+	</element>
+	<complexType name="TropicalCycloneForecastConditionsType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
+						<annotation>
+							<documentation>The time at which meteorological phenomena occur</documentation>
+						</annotation>
+					</element>
+					<element name="tropicalCyclonePosition" type="gml:PointPropertyType">
+						<annotation>
+							<documentation>The tropical cyclone position</documentation>
+						</annotation>
+					</element>
+					<element name="maximumSurfaceWindSpeed" type="gml:SpeedType">
+						<annotation>
+							<documentation>The maximum 10-minute mean surface wind speed near the centre of the tropical cyclone which shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element TropicalCycloneForecastConditions</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TropicalCycloneForecastConditionsPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:TropicalCycloneForecastConditions"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<simpleType name="TropicalCycloneMovementType">
+		<annotation>
+			<documentation>The movement type for a tropical cyclone, either MOVING or STATIONARY</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="MOVING">
+				<annotation>
+					<documentation>The tropical cyclone is moving and will be reported with the associated movement speed and direction</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="STATIONARY">
+				<annotation>
+					<documentation>The tropical cyclone is stationary (&lt; 2 km/h or 1 kt) and will not have a reported movement speed or direction</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+</schema>

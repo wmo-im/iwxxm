@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A tropical cyclone advisory.  Original TC Advisory from ICAO Annex 3 Example A2-2:
+
+TC ADVISORY
+
+DTG:                        20040925/1900Z
+TCAC:                       YUFO
+TC:                         GLORIA
+ADVISORY NR:                2004/13
+OBS PSN:                    25/1800Z N2706 W07306
+CB:                         WI 250NM OF TC CENTRE
+MOV:                        NW 20KMH
+C:                          965HPA
+MAX WIND:                   22MPS
+FCST PSN +6 HR:             25/2200Z N2748 W07350
+FCST MAX WIND +6 HR:        22MPS
+FCST PSN +12 HR:            26/0400Z N2830 W07430
+FCST MAX WIND +12 HR:       22MPS
+FCST PSN +18 HR:            26/1000Z N2852 W07500
+FCST MAX WIND +18 HR:       21MPS
+FCST PSN +24 HR:            26/1600Z N2912 W07530
+FCST MAX WIND +24 HR:       20MPS
+RMK:                        NIL
+NXT MSG:                    20040925/2000Z
+
+-->
+<iwxxm:TropicalCycloneAdvisory 
+   xmlns:gml="http://www.opengis.net/gml/3.2"
+   xmlns:iwxxm="http://icao.int/iwxxm/3.0"
+   xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+   xmlns:metce="http://def.wmo.int/metce/2013"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0/iwxxm.xsd"
+   gml:id="uuid.217b27d6-fbc0-499b-b58e-4ee062c86cd4" 
+   reportStatus="NORMAL"
+   permissibleUsage="OPERATIONAL">
+
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.d1858428-a96d-4825-aecd-07a929ab07d2">
+            <gml:timePosition>2004-09-25T16:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+
+    <iwxxm:issuingTropicalCycloneAdvisoryCentre>
+        <aixm:Unit gml:id="uuid.f4fdc1cc-6bfa-4f4c-9ea9-df5e2c2bd762">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="uuid.42cdad72-4180-4cfe-afe9-f743f87088ef">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:type>OTHER:TCAC</aixm:type>
+                    <aixm:designator>YUFO</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:issuingTropicalCycloneAdvisoryCentre>
+
+    <iwxxm:tropicalCycloneName>
+        <metce:TropicalCyclone gml:id="uuid.d30accc0-1784-4081-ad70-937134018150">
+            <metce:name>GLORIA</metce:name>
+        </metce:TropicalCyclone>
+    </iwxxm:tropicalCycloneName>
+    
+    <iwxxm:advisoryNumber>2004/13</iwxxm:advisoryNumber>
+
+    <iwxxm:observation>
+        <iwxxm:TropicalCycloneObservedConditions gml:id="uuid.78eddcd7-acfe-4649-b633-36189eaffc5d">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.023a036d-6945-492b-b9e5-30bf5df83179">
+                    <gml:timePosition>2004-09-25T16:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:tropicalCyclonePosition>
+                <gml:Point gml:id="uuid.8b4b12ed-461a-4716-8191-6cf41ad77471" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <gml:pos>27.1 -73.1</gml:pos>
+                </gml:Point>
+            </iwxxm:tropicalCyclonePosition>
+            <iwxxm:cumulonimbusCloudLocation>
+                <aixm:AirspaceVolume gml:id="uuid.d4938cc8-c129-4cd7-bda5-588c434ef996">
+                    <aixm:horizontalProjection>
+                        <aixm:Surface gml:id="uuid.62695824-f234-4618-b459-90bb795cde9a" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                            <gml:polygonPatches>
+                                <gml:PolygonPatch>
+                                    <gml:exterior>
+                                        <gml:Ring>
+                                            <gml:curveMember>
+                                                <gml:Curve gml:id="uuid.b7fa4047-2e78-431c-ba95-3fdf6343e3b5">
+                                                    <gml:segments>
+                                                        <gml:CircleByCenterPoint numArc="1">
+                                                            <gml:pos>27.1 -73.1</gml:pos>
+                                                            <gml:radius uom="[nmi_i]">250</gml:radius>
+                                                        </gml:CircleByCenterPoint>
+                                                    </gml:segments>
+                                                </gml:Curve>
+                                            </gml:curveMember>
+                                        </gml:Ring>
+                                    </gml:exterior>
+                                </gml:PolygonPatch>
+                            </gml:polygonPatches>
+                        </aixm:Surface>
+                    </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+            </iwxxm:cumulonimbusCloudLocation>
+            <iwxxm:movement>MOVING</iwxxm:movement>
+            <iwxxm:movementDirection uom="deg">315</iwxxm:movementDirection>
+            <iwxxm:movementSpeed uom="km/h">20</iwxxm:movementSpeed>
+            <iwxxm:centralPressure uom="hPa">965</iwxxm:centralPressure>
+            <iwxxm:maximumSurfaceWindSpeed uom="m/s">22</iwxxm:maximumSurfaceWindSpeed>
+        </iwxxm:TropicalCycloneObservedConditions>
+    </iwxxm:observation>
+
+    <!-- 6-hour forecast at 25/2200Z -->
+    <iwxxm:forecast>
+        <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.75adc697-201c-485d-8356-1845ad46ae77">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.6b115305-4200-4053-8ddb-0d036f907b69">
+                    <gml:timePosition>2004-09-25T22:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:tropicalCyclonePosition>
+                <gml:Point gml:id="uuid.e91ca02c-3625-4cdb-928c-d7979d45f2bc" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <gml:pos>27.8 -73.83333</gml:pos>
+                </gml:Point>
+            </iwxxm:tropicalCyclonePosition>
+            <iwxxm:maximumSurfaceWindSpeed uom="m/s">22</iwxxm:maximumSurfaceWindSpeed>
+        </iwxxm:TropicalCycloneForecastConditions>
+    </iwxxm:forecast>
+
+    <!-- 12 hour forecast at 26/0400Z -->
+    <iwxxm:forecast>
+        <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.13515111-4e81-4b60-85a7-eedc2b5f874f">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.b7991033-e147-4b77-8589-226c8eea39d4">
+                    <gml:timePosition>2004-09-26T04:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:tropicalCyclonePosition>
+                <gml:Point gml:id="uuid.2e386620-5d45-4b7d-b171-4013f10f5ddc" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <gml:pos>28.5 -74.5</gml:pos>
+                </gml:Point>
+            </iwxxm:tropicalCyclonePosition>
+            <iwxxm:maximumSurfaceWindSpeed uom="m/s">22</iwxxm:maximumSurfaceWindSpeed>
+        </iwxxm:TropicalCycloneForecastConditions>
+    </iwxxm:forecast>
+
+    <!-- 18-hour forecast -->
+    <iwxxm:forecast>
+        <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.6c9b5a04-8be5-4a3e-8cb8-590e6a67d159">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.a747f059-2d07-4ba7-9317-c7e7eddc5adf">
+                    <gml:timePosition>2004-09-26T10:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:tropicalCyclonePosition>
+                <gml:Point gml:id="uuid.6dc4b702-ea53-4dc0-a261-ff8931bc84db" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <gml:pos>28.86667 -75.00</gml:pos>
+                </gml:Point>
+            </iwxxm:tropicalCyclonePosition>
+            <iwxxm:maximumSurfaceWindSpeed uom="m/s">21</iwxxm:maximumSurfaceWindSpeed>
+        </iwxxm:TropicalCycloneForecastConditions>
+    </iwxxm:forecast>
+
+    <!-- 24-hour forecast -->
+    <iwxxm:forecast>
+        <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.708829ef-4ca3-4229-b57c-5f1c937c3b2b">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.3d372d30-0a48-4d4b-9f9b-a27bbd764890">
+                    <gml:timePosition>2004-09-26T16:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:tropicalCyclonePosition>
+                <gml:Point gml:id="uuid.d26643a3-1106-4003-9978-558cdbef0e78" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <gml:pos>29.2 -75.5</gml:pos>
+	    </gml:Point>
+            </iwxxm:tropicalCyclonePosition>
+            <iwxxm:maximumSurfaceWindSpeed uom="m/s">20</iwxxm:maximumSurfaceWindSpeed>
+        </iwxxm:TropicalCycloneForecastConditions>
+    </iwxxm:forecast>
+
+    <iwxxm:remarks nilReason="http://codes.wmo.int/common/nil/inappropriate"/>
+
+    <iwxxm:nextAdvisoryTime>
+        <gml:TimeInstant gml:id="uuid.002b0056-d267-47b7-a9ef-4c7ca70aacd9">
+            <gml:timePosition>2004-09-25T20:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:nextAdvisoryTime>
+
+</iwxxm:TropicalCycloneAdvisory>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+	<include schemaLocation="measures.xsd"></include>
+	<include schemaLocation="common.xsd"></include>
+	<include schemaLocation="spaceWxAdvisory.xsd"></include>
+	<include schemaLocation="volcanicAshAdvisory.xsd"></include>
+	<include schemaLocation="tropicalCycloneAdvisory.xsd"></include>
+	<include schemaLocation="airmet.xsd"></include>
+	<include schemaLocation="sigmet.xsd"></include>
+	<include schemaLocation="taf.xsd"></include>
+	<include schemaLocation="metarSpeci.xsd"></include>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
+	<annotation>
+		<documentation>The ICAO Meteorological Information Exchange Model (IWXXM) package, including METAR, SPECI, TAF, and other reports as defined in ICAO Annex 3.  IWXXM reports are essential operational meteorology products used to enable safe and efficient air travel worldwide.
+
+The report types in this package include METAR, SPECI, TAF, SIGMET, AIRMET, Volcanic Ash Advisory (VAA), Tropical Cyclone Advisory (TCA), and Space Weather Advisory.
+
+This package builds upon the ISO 19100 family (ISO TC211) and WMO standard meteorological modeling constructs. Additionally, the constructs in this application schema refer to a number of aviation constructs such Runway and Airspace from AIXM.  The full relationship of this package with external dependencies are shown in the 'Package Dependencies' diagram.
+
+Not all of the reports types from Annex 3 are currently represented, this may be expanded in a future version.
+
+References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence.  Technical Regulations may impose requirements that are not described in this schema.</documentation>
+		<appinfo>
+			<gml:gmlProfileSchema>gmliwxxm.xsd</gml:gmlProfileSchema>
+		</appinfo>
+	</annotation>
+</schema>

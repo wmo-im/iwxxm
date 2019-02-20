@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A space weather advisory.  Original SWXC Advisory from ICAO Annex 3 Amd 77 Example A2-5:
+    
+SWX ADVISORY
+DTG:                20161108/0100Z 
+SWXC:               DONLON
+ADVISORY NR:        2016/1
+SWX EFFECT:         HF COM SEV
+OBS SWX:            08/0100Z DAYLIGHT SIDE
+FCST SWX +6 HR: 	08/0700Z DAYLIGHT SIDE
+FCST SWX +12 HR: 	08/1300Z DAYLIGHT SIDE
+FCST SWX +18 HR: 	08/1900Z DAYLIGHT SIDE
+FCST SWX +24 HR: 	09/0100Z DAYLIGHT SIDE
+RMK:                PERIODIC HF COM ABSORPTION OBS AND LIKELY TO CONT IN THE NEAR TERM. CMPL AND PERIODIC LOSS OF HF ON THE SUNLIT SIDE OF THE EARTH EXP. CONT HF COM DEGRADATION LIKELY OVER THE NXT 7 DAYS. SEE WWW.SPACEWEATHERPROVIDER.WEB 
+NXT ADVISORY:       20161108/0700Z
+-->
+<iwxxm:SpaceWeatherAdvisory 
+    xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0/iwxxm.xsd"
+    gml:id="uuid.dea6234c-f57f-4ccf-be7a-bb00a0265af2" 
+    reportStatus="NORMAL" 
+    permissibleUsage="OPERATIONAL">
+    
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.161d2ad1-e945-4213-84a7-8f9c2c57540f">
+            <gml:timePosition>2016-11-08T00:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    
+    <iwxxm:issuingSpaceWeatherCentre>
+        <aixm:Unit gml:id="uuid.c6a51258-7c8c-4ef9-beda-fbe7e3601f30">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="uuid.64f29fac-154b-4484-a49d-7c8816e4840c">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>DONLON</aixm:name>
+                    <aixm:type>OTHER:SWXC</aixm:type>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:issuingSpaceWeatherCentre>
+    
+    <iwxxm:advisoryNumber>2016/2</iwxxm:advisoryNumber>
+
+    <iwxxm:replacedAdvisoryNumber>2016/1</iwxxm:replacedAdvisoryNumber>
+    
+    <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/HF_COM_SEV"/>
+    
+    <!-- 08/0100Z DAYLIGHT SIDE -->
+    <iwxxm:analysis>
+        <iwxxm:SpaceWeatherAnalysis gml:id="uuid.e10181fb-ff0a-40cf-865c-bb209fc49b90" timeIndicator="OBSERVATION">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.c0710916-7571-400d-91cc-9c55aea01e94">
+                    <gml:timePosition>2016-11-08T01:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:region>
+                <iwxxm:SpaceWeatherRegion gml:id="uuid.c264db5c-3f0b-4444-ab5e-71f48a514644">
+                    <iwxxm:location>
+                        <aixm:AirspaceVolume gml:id="uuid.7138f8d1-9854-46cb-a1b1-9d96c5cee46f">
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.3b00652b-4bed-4655-959c-1c9efd431cac" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:Ring>
+                                                    <gml:curveMember>
+                                                        <gml:Curve gml:id="uuid.b7fa4047-2e78-431c-ba95-3fdf6343e3b5">
+                                                            <gml:segments>
+                                                                <gml:CircleByCenterPoint numArc="1">
+                                                                    <!-- Lat, lon subsolar point @ 2016-11-08T01Z -->
+                                                                    <gml:pos>-16.6392 160.9368</gml:pos>
+                                                                    <!-- Calculated using Earth circumference of 21639 nautical miles -->
+                                                                    <gml:radius uom="[nmi_i]">5409.75</gml:radius>
+                                                                </gml:CircleByCenterPoint>
+                                                            </gml:segments>
+                                                        </gml:Curve>
+                                                    </gml:curveMember>
+                                                </gml:Ring>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:location>
+                    <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/DAYLIGHT_SIDE"/>
+                </iwxxm:SpaceWeatherRegion>
+            </iwxxm:region>
+        </iwxxm:SpaceWeatherAnalysis>
+    </iwxxm:analysis>
+    
+    <!-- 08/0700Z DAYLIGHT SIDE -->
+    <iwxxm:analysis>
+        <iwxxm:SpaceWeatherAnalysis gml:id="uuid.96cfc825-3f5d-40f0-b9bd-46d790ee9f50" timeIndicator="FORECAST">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.bcfff471-386e-45ab-888d-9099bf6e2e29">
+                    <gml:timePosition>2016-11-08T07:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:region>
+                <iwxxm:SpaceWeatherRegion gml:id="uuid.11eeee60-0e55-4d09-84c9-b15ef0660437">
+                    <iwxxm:location>
+                        <aixm:AirspaceVolume gml:id="uuid.f0361bc9-3f9b-4418-9983-294395f54c7b">
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.19e4face-a4cf-4cc7-9331-4d032938e28e" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:Ring>
+                                                    <gml:curveMember>
+                                                        <gml:Curve gml:id="uuid.bcf98ca2-0fb0-44b9-880d-7f45a284d1b3">
+                                                            <gml:segments>
+                                                                <gml:CircleByCenterPoint numArc="1">
+                                                                    <!-- Lat, lon subsolar point -->
+                                                                    <gml:pos>-16.7114 70.9413</gml:pos>
+                                                                    <gml:radius uom="[nmi_i]">5409.75</gml:radius>
+                                                                </gml:CircleByCenterPoint>
+                                                            </gml:segments>
+                                                        </gml:Curve>
+                                                    </gml:curveMember>
+                                                </gml:Ring>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:location>
+                    <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/DAYLIGHT_SIDE"/>
+                </iwxxm:SpaceWeatherRegion>
+            </iwxxm:region>
+        </iwxxm:SpaceWeatherAnalysis>
+    </iwxxm:analysis>
+    
+    <!-- 08/1300Z DAYLIGHT SIDE -->
+    <iwxxm:analysis>
+        <iwxxm:SpaceWeatherAnalysis gml:id="uuid.8fc8a55b-e730-4d84-bb44-6e7b7dc3dd32" timeIndicator="FORECAST">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.6797ba22-7b7b-4f40-9f2d-f58265a0ddf0">
+                    <gml:timePosition>2016-11-08T13:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:region>
+                <iwxxm:SpaceWeatherRegion gml:id="uuid.6b2fec6b-959e-4c77-915b-daf713dfe375">
+                    <iwxxm:location>
+                        <aixm:AirspaceVolume gml:id="uuid.6dccaa55-f454-4269-a680-4173c386757f">
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.24ec6d9d-454a-4a53-be18-d3ff93a1a53a" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:Ring>
+                                                    <gml:curveMember>
+                                                        <gml:Curve gml:id="uuid.08beec58-aeb2-4601-a2d7-c663296c4878">
+                                                            <gml:segments>
+                                                                <gml:CircleByCenterPoint numArc="1">
+                                                                    <!-- Lat, lon subsolar point -->
+                                                                    <gml:pos>-16.7832 -19.0539</gml:pos>
+                                                                    <gml:radius uom="[nmi_i]">5409.75</gml:radius>
+                                                                </gml:CircleByCenterPoint>
+                                                            </gml:segments>
+                                                        </gml:Curve>
+                                                    </gml:curveMember>
+                                                </gml:Ring>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:location>
+                    <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/DAYLIGHT_SIDE"/>
+                </iwxxm:SpaceWeatherRegion>
+            </iwxxm:region>
+        </iwxxm:SpaceWeatherAnalysis>
+    </iwxxm:analysis>
+    
+    <!-- 08/1900Z DAYLIGHT SIDE -->
+    <iwxxm:analysis>
+        <iwxxm:SpaceWeatherAnalysis gml:id="uuid.6a1f263b-5aeb-4002-af1b-9c3ef2812f8d"  timeIndicator="FORECAST">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.447d235b-ac6f-4a0b-b658-76c9e782d76c">
+                    <gml:timePosition>2016-11-08T19:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:region>
+                <iwxxm:SpaceWeatherRegion gml:id="uuid.13f4ede2-2848-4e05-a2ca-815b58debb0a">
+                    <iwxxm:location>
+                        <aixm:AirspaceVolume gml:id="uuid.731cc905-f97d-436c-bb63-a6023c27aa50">
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.e1e0500b-1251-40a7-a829-d09412ba1870" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:Ring>
+                                                    <gml:curveMember>
+                                                        <gml:Curve gml:id="uuid.616326dd-cc30-4420-b334-832b64a67578">
+                                                            <gml:segments>
+                                                                <gml:CircleByCenterPoint numArc="1">
+                                                                    <!-- Lat, lon subsolar point -->
+                                                                    <gml:pos>-16.8548 -109.0489</gml:pos>
+                                                                    <gml:radius uom="[nmi_i]">5409.75</gml:radius>
+                                                                </gml:CircleByCenterPoint>
+                                                            </gml:segments>
+                                                        </gml:Curve>
+                                                    </gml:curveMember>
+                                                </gml:Ring>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:location>
+                    <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/DAYLIGHT_SIDE"/>
+                </iwxxm:SpaceWeatherRegion>
+            </iwxxm:region>
+        </iwxxm:SpaceWeatherAnalysis>
+    </iwxxm:analysis>
+    
+    <!-- 09/0100Z DAYLIGHT SIDE -->
+    <iwxxm:analysis>
+        <iwxxm:SpaceWeatherAnalysis gml:id="uuid.ba259410-18a3-4074-92e5-1fd09dccedd4" timeIndicator="FORECAST">
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.1b741865-7044-4d45-a841-792a704b610c">
+                    <gml:timePosition>2016-11-09T01:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:region>
+                <iwxxm:SpaceWeatherRegion gml:id="uuid.921ac167-2ef8-4c76-b4b7-7d38a4d790a0">
+                    <iwxxm:location>
+                        <aixm:AirspaceVolume gml:id="uuid.574a57b5-3c5a-47eb-8cd1-4895a90e291c">
+                            <aixm:horizontalProjection>
+                                <aixm:Surface gml:id="uuid.b5c530f6-212a-4cb1-a5ea-17f30e79f31e" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:polygonPatches>
+                                        <gml:PolygonPatch>
+                                            <gml:exterior>
+                                                <gml:Ring>
+                                                    <gml:curveMember>
+                                                        <gml:Curve gml:id="uuid.e0025db0-7a34-49da-a66c-17757d9e1a45">
+                                                            <gml:segments>
+                                                                <gml:CircleByCenterPoint numArc="1">
+                                                                    <!-- Lat, lon subsolar point -->
+                                                                    <gml:pos>-16.9261 160.9563</gml:pos>
+                                                                    <gml:radius uom="[nmi_i]">5409.75</gml:radius>
+                                                                </gml:CircleByCenterPoint>
+                                                            </gml:segments>
+                                                        </gml:Curve>
+                                                    </gml:curveMember>
+                                                </gml:Ring>
+                                            </gml:exterior>
+                                        </gml:PolygonPatch>
+                                    </gml:polygonPatches>
+                                </aixm:Surface>
+                            </aixm:horizontalProjection>
+                        </aixm:AirspaceVolume>
+                    </iwxxm:location>
+                    <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/DAYLIGHT_SIDE"/>
+                </iwxxm:SpaceWeatherRegion>
+            </iwxxm:region>
+        </iwxxm:SpaceWeatherAnalysis>
+    </iwxxm:analysis>
+    
+    <!-- Remark -->
+    <iwxxm:remarks>PERIODIC HF COM ABSORPTION OBS AND LIKELY TO CONT IN THE NEAR TERM. CMPL AND PERIODIC LOSS OF HF ON THE SUNLIT SIDE OF THE EARTH EXP. CONT HF COM DEGRADATION LIKELY OVER THE NXT 7 DAYS. SEE WWW.SPACEWEATHERPROVIDER.WEB</iwxxm:remarks>
+    
+    <iwxxm:nextAdvisoryTime>
+        <gml:TimeInstant gml:id="uuid.ff02e4b5-e54c-4ec3-b34c-842229274727">
+            <gml:timePosition>2016-11-08T07:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:nextAdvisoryTime>
+    
+</iwxxm:SpaceWeatherAdvisory>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0.0" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+	<include schemaLocation="common.xsd"></include>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
+	<annotation>
+		<documentation>Space Weather Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
+
+Space Weather Advisories report the occurrence and/or expected occurrence of space weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These phenomena are reported as impacted regions of airspace.
+
+References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
+	</annotation>
+	<element name="SpaceWeatherAdvisory" type="iwxxm:SpaceWeatherAdvisoryType" substitutionGroup="iwxxm:Report">
+		<annotation>
+			<documentation>An advisory of space weather conditions of significance to aviation as represented in ICAO Annex 3 / WMO No. 49-2.  Volcanic ash advisories are issued by space weather centres (SWXCs)</documentation>
+		</annotation>
+	</element>
+	<complexType name="SpaceWeatherAdvisoryType">
+		<complexContent>
+			<extension base="iwxxm:ReportType">
+				<sequence>
+					<element name="issueTime" type="gml:TimeInstantPropertyType">
+						<annotation>
+							<documentation>The time at which this report was issued</documentation>
+						</annotation>
+					</element>
+					<element name="issuingSpaceWeatherCentre" type="iwxxm:UnitPropertyType">
+						<annotation>
+							<documentation>The issuing space weather centre (SWXC)</documentation>
+						</annotation>
+					</element>
+					<element name="advisoryNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Advisory number: four digit year and unique message number.  Example "2018/1"</documentation>
+						</annotation>
+					</element>
+					<element name="replacedAdvisoryNumber" type="string" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The number of the advisory being replaced.  Example "2018/1"</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenon" type="iwxxm:SpaceWeatherPhenomenaType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>The space weather phenomenon, such as radiation or satellite communication</documentation>
+						</annotation>
+					</element>
+					<element name="analysis" type="iwxxm:SpaceWeatherAnalysisPropertyType" minOccurs="0" maxOccurs="5">
+						<annotation>
+							<documentation>Observed and forecast space weather information.  Analyses should be reported in the order in which they occur, starting with the initial observed/forecast conditions and proceeding through each subsequent forecast to the end of the period</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Remarks, as necessary.
+
+When the remark is nil, it should be indicated by a missing remarks with a nil reason of 'inapplicable'</documentation>
+						</annotation>
+					</element>
+					<element name="nextAdvisoryTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The time at which the next advisory will be issued
+
+Use attribute indeterminatePosition to element timePosition to indicate if the actual temporal position is before or after the specified value.
+
+When no subsequent advisory is expected to be issued it should be indicated by a missing expected advisory time with a nil reason of 'inapplicable'</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element SpaceWeatherAdvisory</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SpaceWeatherAdvisoryPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:SpaceWeatherAdvisory"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="SpaceWeatherAnalysis" type="iwxxm:SpaceWeatherAnalysisType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Observed or forecast space weather phenomena</documentation>
+		</annotation>
+	</element>
+	<complexType name="SpaceWeatherAnalysisType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
+						<annotation>
+							<documentation>The time at which meteorological phenomena occur</documentation>
+						</annotation>
+					</element>
+					<element name="region" type="iwxxm:SpaceWeatherRegionPropertyType" minOccurs="1" maxOccurs="unbounded"></element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element SpaceWeatherAnalysis</documentation>
+						</annotation>
+					</element>
+				</sequence>
+				<attribute use="required" name="timeIndicator" type="iwxxm:TimeIndicatorType">
+					<annotation>
+						<documentation>Indicator of observed or forecast conditions</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SpaceWeatherAnalysisPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:SpaceWeatherAnalysis"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="SpaceWeatherRegion" type="iwxxm:SpaceWeatherRegionType" substitutionGroup="gml:AbstractFeature"></element>
+	<complexType name="SpaceWeatherRegionType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="location" type="iwxxm:AirspaceVolumePropertyType">
+						<annotation>
+							<documentation>The geographic location at which space weather phenomena occur</documentation>
+						</annotation>
+					</element>
+					<element name="locationIndicator" type="iwxxm:SpaceWeatherLocationType">
+						<annotation>
+							<documentation>The geographic area code, such as high northern latitudes</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element SpaceWeatherRegion</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SpaceWeatherRegionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:SpaceWeatherRegion"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<complexType name="SpaceWeatherLocationType">
+		<annotation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/49-2/SpaceWxLocation</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SpaceWeatherPhenomenaType">
+		<annotation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/49-2/SpaceWxPhenomena</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
+</schema>
