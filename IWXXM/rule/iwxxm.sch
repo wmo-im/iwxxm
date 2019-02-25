@@ -272,7 +272,7 @@
    </sch:pattern>
    <sch:pattern id="TAF.TAF-4">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and empty(iwxxm:validPeriod) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:baseForecast) and empty(iwxxm:changeForecast) ) else( true() ) )">TAF.TAF-4: A CANCELLATION report should have the appropriate elements filled including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:validPeriod (empty), iwxxm:cancelledReportValidPeriod, iwxxm:baseForecast (missing) and iwxxm:changeForecast (missing)</sch:assert>
+        <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:validPeriod) and empty(iwxxm:baseForecast) and empty(iwxxm:changeForecast) ) else( true() ) )">TAF.TAF-4: A CANCELLATION report should have the appropriate elements filled including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:cancelledReportValidPeriod. Elements iwxxm:validPeriod, iwxxm:baseForecast and iwxxm:changeForecast are absent</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF-3">
@@ -337,7 +337,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-3">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and exists(iwxxm:cancelledReportSequenceNumber) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:phenomenon) and empty(iwxxm:analysis) ) else( true() ) )">SIGMET.SIGMET-3: A 'CANCELLATION' report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod, iwxxm:phenomenon (missing) and iwxxm:analysis (missing)</sch:assert>
+         <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and exists(iwxxm:cancelledReportSequenceNumber) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:phenomenon) and empty(iwxxm:analysis) ) else( true() ) )">SIGMET.SIGMET-3: A 'CANCELLATION' report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod. Elements iwxxm:phenomenon and iwxxm:analysis shall be absent.</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-2">
@@ -347,7 +347,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-4">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )">SIGMET.SIGMET-4: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber (missing), iwxxm:cancelledReportValidPeriod (missing), iwxxm:phenomenon and iwxxm:analysis</sch:assert>
+        <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )">SIGMET.SIGMET-4: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:phenomenon and iwxxm:analysis. Elements iwxxm:cancelledReportSequenceNumber and iwxxm:cancelledReportValidPeriod shall be absent</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET.phenomenon">
@@ -372,7 +372,7 @@
    </sch:pattern>
    <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMET-1">
       <sch:rule context="//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( empty(iwxxm:tropicalCyclone) ) else( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMET-1: In a 'CANCELLATION' report iwxxm:TropicalCyclone should be empty</sch:assert>
+         <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( empty(iwxxm:tropicalCyclone) ) else( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMET-1: In a 'CANCELLATION' report iwxxm:TropicalCyclone shall be absent</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMET-2">
@@ -392,7 +392,7 @@
    </sch:pattern>
    <sch:pattern id="VolcanicAshSIGMET.VolcanicAshSIGMET-1">
       <sch:rule context="//iwxxm:VolcanicAshSIGMET">
-         <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( empty(iwxxm:eruptingVolcano) ) else( true() ) )">VolcanicAshSIGMET.VolcanicAshSIGMET-1: In a 'CANCELLATION' report iwxxm:eruptingVolcano should be empty</sch:assert>
+         <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( empty(iwxxm:eruptingVolcano) ) else( true() ) )">VolcanicAshSIGMET.VolcanicAshSIGMET-1: In a 'CANCELLATION' report iwxxm:eruptingVolcano shall be absent</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshSIGMET.VolcanicAshSIGMET-2">
@@ -477,7 +477,7 @@
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-3">
       <sch:rule context="//iwxxm:AIRMET">
-         <sch:assert test="( if( @isCancelReport= 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and exists(iwxxm:cancelledReportSequenceNumber) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:phenomenon) and empty(iwxxm:analysis) ) else( true() ) )">AIRMET.AIRMET-3: A 'CANCELLATION' report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod, iwxxm:phenomenon (missing) and iwxxm:analysis (missing)</sch:assert>
+         <sch:assert test="( if( @isCancelReport= 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and exists(iwxxm:cancelledReportSequenceNumber) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:phenomenon) and empty(iwxxm:analysis) ) else( true() ) )">AIRMET.AIRMET-3: A 'CANCELLATION' report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod. Elements iwxxm:phenomenon and iwxxm:analysis shall be absent</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-2">
@@ -487,7 +487,7 @@
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-4">
       <sch:rule context="//iwxxm:AIRMET">
-         <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )">AIRMET.AIRMET-4: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber (missing), iwxxm:cancelledReportValidPeriod (missing), iwxxm:phenomenon and iwxxm:analysis</sch:assert>
+        <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )">AIRMET.AIRMET-4: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:phenomenon and iwxxm:analysis. Elements iwxxm:cancelledReportSequenceNumber and iwxxm:cancelledReportValidPeriod shall be absent</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneForecastConditions-1">
