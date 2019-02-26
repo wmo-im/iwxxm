@@ -89,7 +89,7 @@ NIL report
   A NIL report shall be represented by making iwxxm:baseForecast empty with a nilReason of "http://codes.wmo.int/common/nil/missing" 
 
 CNL report
-  A cancellation report shall be represented by setting attribute "isCancelReport" true, setting iwxxm:cancelledReportValidPeriod and making iwxxm:validPeriod, iwxxm:baseForecast and iwxxm:changeForecast empty. 
+  A cancellation report shall be represented by setting attribute "isCancelReport" true, setting iwxxm:cancelledReportValidPeriod and elements iwxxm:validPeriod, iwxxm:baseForecast and iwxxm:changeForecast are absent. 
 
 CAVOK - Cloud and visibility OK
   When CAVOK conditions apply, the appropriate Record type shall have "cloudAndVisibilityOK" set to true and visibility, runway visual range, weather, and cloud information shall be missing
@@ -121,7 +121,7 @@ TOP BLW FLnn
 AIRMET and SIGMET
 ==========================
 CNL report
-  A cancellation report shall be represented by setting attribute "isCancelReport" true, setting iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod and making iwxxm:phenomenon and iwxxm:analysis empty. 
+  A cancellation report shall be represented by setting attribute "isCancelReport" true, setting iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod. Elements iwxxm:phenomenon and iwxxm:analysis shall be absent. 
 
 Nnn[nn] Wnnn[nn] or Nnn[nn] Ennn[nn] or Snn[nn] Wnnn[nn] or Snn[nn] Ennn[nn]
   When an AIR/SIGMET position is reported at a single point the location shall be indicated as a gml:CircleByCenterPoint with a gml:radius of 0
