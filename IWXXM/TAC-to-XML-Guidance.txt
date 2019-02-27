@@ -36,8 +36,7 @@ R88 (runway designator for runway state)
   When all runways are being indicated, the AerodromeRunwayState shall have attribute "allRunways" set to true
 
 R99 (runway designator for runway state)
-  When a new runway state report is not available in time for dissemination of the METAR message, attribute "fromPreviousReport" shall be set to true and runway nilReason set
-to "http://codes.wmo.int/common/nil/inapplicable"
+  When a new runway state report is not available in time for dissemination of the METAR message, attribute "fromPreviousReport" shall be set to true and runway nilReason set to "http://codes.wmo.int/common/nil/inapplicable"
 
 SNOCLO - Runways closed due to snow
   When all runways are closed due to snow, this shall be indicated with a "runwayState" with a nilReason of "http://codes.wmo.int/bufr4/codeflag/0-20-085/1"
@@ -49,10 +48,13 @@ Vertical visibility "VV///" (METAR/SPECI observations)
   When the sky is obscured and the value of the vertical visibility cannot be determined by the automatic observing system due to a temporary failure of the system/sensor, the "verticalVisibility shall be nil with a nilReason of "http://codes.wmo.int/common/nil/notObservable"
 
 Cloud amount and base "//////"
-  When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the cloud amount and the height of cloud base cannot be observed, this shall be indicated by a cloud "layer" with a nilReason of either "http://codes.wmo.int/common/nil/notObservable" if the value could not be observed due to a sensor or system failure, or "http://codes.wmo.int/common/nil/notDetectedByAutoSystem" if the automated system is working properly but did not observe any values
+  When the cloud amount and the height of cloud base cannot be observed, this shall be indicated by a cloud "layer" with a nilReason of either "http://codes.wmo.int/common/nil/notObservable" if the value could not be observed due to a sensor or system failure, or "http://codes.wmo.int/common/nil/notDetectedByAutoSystem" if the automated system is working properly but did not observe any values
+
+Cloud amount and base "//////CB" or "//////TCU"
+  When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the cloud amount and the height of cloud base cannot be observed, this shall be indicated by "CloudLayer" having "amount" and "base" with a nilReason of either "http://codes.wmo.int/common/nil/notObservable" if the values could not be observed due to a sensor or system failure, or "http://codes.wmo.int/common/nil/notDetectedByAutoSystem" if the automated system is working properly but did not observe any values
 
 Cloud amount "///015"
-  When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the cloud amount cannot be observed, this shall be indicated by a cloud "layer" with an "amount" with a nilReason of either "http://codes.wmo.int/common/nil/notObservable" if the value could not be observed due to a sensor or system failure, or "http://codes.wmo.int/common/nil/notDetectedByAutoSystem" if the automated system is working properly but did not observe any values
+  When clouds are detected by the automatic observing system and the cloud amount cannot be observed, this shall be indicated by a cloud "layer" with an "amount" with a nilReason of either "http://codes.wmo.int/common/nil/notObservable" if the value could not be observed due to a sensor or system failure, or "http://codes.wmo.int/common/nil/notDetectedByAutoSystem" if the automated system is working properly but did not observe any values
 
 Cloud base "BKN///"
   When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the height of cloud base cannot be observed, this shall be indicated by a cloud "layer" with a "base" and a nilReason of either "http://codes.wmo.int/common/nil/notObservable" if the value could not be observed due to a sensor or system failure, or "http://codes.wmo.int/common/nil/notDetectedByAutoSystem" if the automated system is working properly but did not observe any values
@@ -79,8 +81,7 @@ Observed quantities with a nilReason
   When observed measures or quantities (such as air temperature or prevailing visibility) can not be reported due to sensor failures, the XML element should have xsi:nil set to "true", the uom set to "N/A", and the nilReason set to "http://codes.wmo.int/common/nil/notObservable"
 
 Variations from mean wind direction
-  In TAC the observed two extreme directions between which the wind has varied shall be given for dndndnVdxdxdx in clockwise order.  Care should be taken that "extremeClockwiseWindDirection" refers to the extreme clockwise direction from
-the wind which should be dxdxdx in the TAC report.  Similarly the corresponding part for "extremeCounterClockwiseWindDirection" is dndndn.
+  In TAC the observed two extreme directions between which the wind has varied shall be given for dndndnVdxdxdx in clockwise order.  Care should be taken that "extremeClockwiseWindDirection" refers to the extreme clockwise direction from the wind which should be dxdxdx in the TAC report.  Similarly the corresponding part for "extremeCounterClockwiseWindDirection" is dndndn.
   
 ==========================
 TAF
@@ -110,12 +111,10 @@ FLnnn, nnnnM, nnnnFT
   When a single altitude for a condition is specified, this shall be indicated with the same altitude value in both aixm:lowerLimit and aixm:upperLimit
 
 TOP ABV FLnnn
-  When a condition top is specified without a upper limit, this shall be indicated with aixm:upperLimit set to "nnn" and aixm:maximumLimit set with nilReason
-  of "unknown" and xsi:nil set to true
+  When a condition top is specified without a upper limit, this shall be indicated with aixm:upperLimit set to "nnn" and aixm:maximumLimit set with nilReason of "unknown" and xsi:nil set to true
 
 TOP BLW FLnn
-  When a condition top is specified with upper limit, but actual top height is unknown, this shall be indicated with aixm:upperLimit nilReason set to "unknown"
-  and and xsi:nil set to true. aixm:maximumLimit shall be set with value of "nnn"
+  When a condition top is specified with upper limit, but actual top height is unknown, this shall be indicated with aixm:upperLimit nilReason set to "unknown" and and xsi:nil set to true. aixm:maximumLimit shall be set with value of "nnn"
 
 ==========================
 AIRMET and SIGMET
