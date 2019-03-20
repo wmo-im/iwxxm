@@ -3,3 +3,5 @@
 *.xpr
 **/.DS_Store
 *.pyc
+catalog.IWXXM.xml
+IWXXM/rule/codes.wmo.int-*
