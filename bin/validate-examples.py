@@ -13,12 +13,16 @@ Written against Python 2.7
 """
 import sys, os
 import checkGMLFiles
+import codeListsToSchematron as codeLists
 
 def main():
     cwd = os.getcwd()
     if not os.path.isfile( os.path.join( cwd, 'README.md' ) ):
         print "This script must be run from the root directory of the repository, usually 'iwxxm', which contains README.md"
         sys.exit(1)
+
+    # obtain codes registry content
+    codeLists.run('IWXXM', 'IWXXM/rule/')
 
     # only validate the latest version and examples.  Older versions had a number of issues that have already been fixed
     # and there is little point in running tests against them
@@ -27,8 +31,6 @@ def main():
         devVersion = LV.split('\n')[1]
         valVersion = LV.split('\n')[0]
 
-    # iwxxmDirs = [os.path.join(cwd, f) for f in os.listdir(cwd)
-    #            if os.path.isdir(os.path.join(cwd, f)) and not f.startswith('1.') and os.path.isdir( os.path.join(os.path.join(cwd,f),'examples') )]
     iwxxmDirs = [os.path.join(cwd,devVersion)]
     returnCode=0
     for dir in iwxxmDirs:

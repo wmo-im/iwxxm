@@ -4,4 +4,7 @@ python:
 
 sudo: false
 install: /bin/true
-script: python bin/validate-examples.py
+script:
+ - pip install lxml
+ - pip install requests
+ - python bin/validate-examples.py
