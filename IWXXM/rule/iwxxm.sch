@@ -695,4 +695,10 @@
          <sch:assert test="following-sibling::*[1][self::iwxxm:extension] or not(following-sibling::*)">IWXXM.ExtensionAlwaysLast: Extension elements should be the last elements in their parents</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="ARP-SRS-tests">
+      <sch:rule context="//aixm:AirportHeliportTimeSlice/aixm:ARP/aixm:ElevatedPoint/gml:pos">
+         <sch:assert test="ancestor-or-self::node()[@srsDimension='2']">srsDimension for ARP shall be set to 2</sch:assert>
+         <sch:assert test="ancestor-or-self::node()[@srsName = document('allowedSRSs.xml')//allowedSRSnames/ARP/srsName]">srsName not in ARP allowed list</sch:assert>
+      </sch:rule>
+   </sch:pattern>
 </sch:schema>
