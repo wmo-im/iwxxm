@@ -10,7 +10,7 @@
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0.0/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0/iwxxm.xsd"
     gml:id="uuid.96a5ba6a-47ce-4c10-bc56-355a32dcf22c" 
     reportStatus="NORMAL" 
     permissibleUsage="OPERATIONAL"
@@ -34,8 +34,8 @@
                     <aixm:name>FRANKFURT AM MAIN INTERNATIONAL</aixm:name>
                     <aixm:locationIndicatorICAO>EDDF</aixm:locationIndicatorICAO>
                     <aixm:ARP>
-                        <aixm:ElevatedPoint gml:id="uuid.68f896c8-6889-4b5b-8d79-1f1216ceb72f" srsDimension="3" srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
-                            <gml:pos>50.0464 8.5986 112</gml:pos>
+                        <aixm:ElevatedPoint gml:id="uuid.68f196c8-6889-4b5b-8d79-1f1216ceb72f" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                            <gml:pos>50.0464 8.5986</gml:pos>
                         </aixm:ElevatedPoint>
                     </aixm:ARP>
                 </aixm:AirportHeliportTimeSlice>
