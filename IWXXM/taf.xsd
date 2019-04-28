@@ -53,7 +53,7 @@ Prevailing conditions and forecast changes differ in that the prevailing conditi
 					</element>
 					<element name="changeForecast" type="iwxxm:MeteorologicalAerodromeForecastPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Forecast that modifies the base forecast.  While there is no maximum number of forecasts, this should normally not exceed five in number. &lt;b&gt;&lt;u&gt; &lt;/u&gt;&lt;/b&gt;ICAO Annex 3 / WMO No. 49-2: Section 1.5: "The number of change and probability groups should be kept to a minimum and should not normally exceed five groups".</documentation>
+							<documentation>Forecast that modifies the base forecast.  While there is no maximum number of forecasts, this should normally not exceed five in number. ICAO Annex 3 / WMO No. 49-2: Section 1.5: "The number of change and probability groups should be kept to a minimum and should not normally exceed five groups".</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">

@@ -2,7 +2,7 @@
 <!--
     An example of a SIGMET.  Original SIGMET from ICAO Annex 3 Example A6-2:
 
-      YUCC SIGMET 3 VALID 251600/252200 YUDO -
+      YUCC SIGMET 3 VALID 251600/252200 YUDO-
       YUCC AMSWELL FIR TC GLORIA PSN N2706 W07306 CB OBS AT 1600Z WI 250NM OF TC CENTRE TOP FL500 NC
       FCST AT 2200Z TC CENTRE PSN N2740 W07345
 -->
@@ -100,7 +100,7 @@
                             <aixm:upperLimit uom="FL">500</aixm:upperLimit>
                             <aixm:upperLimitReference>STD</aixm:upperLimitReference>
                             <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.62695824-f234-4618-b459-90bb795cde9a" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                <aixm:Surface gml:id="uuid.62695824-f234-4618-b459-90bb795cde9a" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:polygonPatches>
                                         <gml:PolygonPatch>
                                             <gml:exterior>
@@ -126,7 +126,7 @@
                 </iwxxm:SIGMETEvolvingCondition>
             </iwxxm:member>
             <iwxxm:tropicalCyclonePosition>
-                <gml:Point gml:id="uuid.e84be2a6-cb1e-4905-b70a-6958c3cea1e3">
+                <gml:Point gml:id="uuid.e84be2a6-cb1e-4905-b70a-6958c3cea1e3" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:pos>27.10 -73.10</gml:pos>
                 </gml:Point>
             </iwxxm:tropicalCyclonePosition>
@@ -149,7 +149,7 @@
                 </iwxxm:SIGMETPosition>
             </iwxxm:member>
             <iwxxm:tropicalCyclonePosition>
-                <gml:Point gml:id="uuid.1e0ca159-77e7-4d85-8ace-44aadf52f9af">
+                <gml:Point gml:id="uuid.1e0ca159-77e7-4d85-8ace-44aadf52f9af" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:pos>27.6667 -73.75</gml:pos>
                 </gml:Point>
             </iwxxm:tropicalCyclonePosition>

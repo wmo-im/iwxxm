@@ -7,6 +7,7 @@
    <sch:ns prefix="gml" uri="http://www.opengis.net/gml/3.2"/>
    <sch:ns prefix="aixm" uri="http://www.aixm.aero/schema/5.1.1"/>
    <sch:ns prefix="collect" uri="http://def.wmo.int/collect/2014"/>
+   <sch:ns prefix="metce" uri="http://def.wmo.int/metce/2013"/>
    <sch:ns prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
    <sch:ns prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
    <sch:ns prefix="reg" uri="http://purl.org/linked-data/registry#"/>
@@ -43,6 +44,11 @@
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-1">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
          <sch:assert test="( @reportStatus != 'AMENDMENT' )">METAR_SPECI.MeteorologicalAerodromeObservationReport-1: A METAR or SPECI report cannot have a reportStatus of 'AMENDMENT'</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-9">
+      <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
+         <sch:assert test="( if( exists(iwxxm:aerodrome//aixm:ARP) ) then( iwxxm:aerodrome//aixm:ARP//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-9: If a geometry is defined for iwxxm:aerodrome//aixm:AIP by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-7">
@@ -255,6 +261,11 @@
          <sch:assert test="( if( exists(iwxxm:minimumTemperature) and not(iwxxm:minimumTemperature/@xsi:nil = 'true') ) then( iwxxm:minimumTemperature/@uom = 'Cel' ) else( true() ) )">TAF.AerodromeAirTemperatureForecast-2: minimumTemperature shall be reported in degrees Celsius (Cel)</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="TAF.TAF-9">
+      <sch:rule context="//iwxxm:TAF">
+         <sch:assert test="( if( exists(iwxxm:aerodrome//aixm:ARP) ) then( iwxxm:aerodrome//aixm:ARP//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">TAF.TAF-9: If a geometry is defined for iwxxm:aerodrome//aixm:AIP by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="TAF.TAF-6">
       <sch:rule context="//iwxxm:TAF">
          <sch:assert test="( if( exists(iwxxm:baseForecast/*) ) then( empty(iwxxm:baseForecast/iwxxm:MeteorologicalAerodromeForecast/@changeIndicator) ) else( true() ) )">TAF.TAF-6: A non-empty iwxxm:baseForecast should not have @changeIndicator</sch:assert>
@@ -272,7 +283,7 @@
    </sch:pattern>
    <sch:pattern id="TAF.TAF-4">
       <sch:rule context="//iwxxm:TAF">
-        <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:validPeriod) and empty(iwxxm:baseForecast) and empty(iwxxm:changeForecast) ) else( true() ) )">TAF.TAF-4: A CANCELLATION report should have the appropriate elements filled including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:cancelledReportValidPeriod. Elements iwxxm:validPeriod, iwxxm:baseForecast and iwxxm:changeForecast are absent</sch:assert>
+         <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and empty(iwxxm:validPeriod) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:baseForecast) and empty(iwxxm:changeForecast) ) else( true() ) )">TAF.TAF-4: A CANCELLATION report should have the appropriate elements filled including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:cancelledReportValidPeriod. Elements iwxxm:validPeriod, iwxxm:baseForecast and iwxxm:changeForecast are absent</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF-3">
@@ -295,6 +306,11 @@
          <sch:assert test="( not((@isNilReport = 'true') and (@isCancelReport = 'true')) )">TAF.TAF-1: Attributes isNilReport and isCancelReport cannot be true at the same time</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="SIGMET.SIGMETPosition-1">
+      <sch:rule context="//iwxxm:SIGMETPosition">
+         <sch:assert test="( if( exists(iwxxm:geometry/*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:geometry//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">SIGMET.SIGMETPosition-1: If a geometry of iwxxm:geometry is defined by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-1">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
          <sch:assert test="( @reportStatus != 'AMENDMENT' and @reportStatus != 'CORRECTION' )">SIGMET.SIGMET-1: A SIGMET report cannot have a reportStatus of 'AMENDMENT' or 'CORRECTION'</sch:assert>
@@ -303,6 +319,11 @@
    <sch:pattern id="SIGMET.SIGMET-5">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
          <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and exists(iwxxm:analysis//iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( empty(index-of(for $i in iwxxm:analysis return number(translate($i//iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','')) eq number(translate(iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')),false())) ) else( true() ) )">SIGMET.SIGMET-5: iwxxm:analysis//iwxxm:phenomenonTime must be equal to iwxxm:validPeriod//gml:beginPosition</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="SIGMET.SIGMET-12">
+      <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
+         <sch:assert test="( if( exists(iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent) ) then( iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">SIGMET.SIGMET-12: If a geometry is defined for iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-7">
@@ -337,7 +358,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-3">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and exists(iwxxm:cancelledReportSequenceNumber) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:phenomenon) and empty(iwxxm:analysis) ) else( true() ) )">SIGMET.SIGMET-3: A 'CANCELLATION' report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod. Elements iwxxm:phenomenon and iwxxm:analysis shall be absent.</sch:assert>
+         <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and exists(iwxxm:cancelledReportSequenceNumber) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:phenomenon) and empty(iwxxm:analysis) ) else( true() ) )">SIGMET.SIGMET-3: A 'CANCELLATION' report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod. Elements iwxxm:phenomenon and iwxxm:analysis shall be absent</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-2">
@@ -347,12 +368,17 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-4">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-        <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )">SIGMET.SIGMET-4: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:phenomenon and iwxxm:analysis. Elements iwxxm:cancelledReportSequenceNumber and iwxxm:cancelledReportValidPeriod shall be absent</sch:assert>
+         <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )">SIGMET.SIGMET-4: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:phenomenon and iwxxm:analysis. Elements iwxxm:cancelledReportSequenceNumber and iwxxm:cancelledReportValidPeriod shall be absent</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET.phenomenon">
       <sch:rule context="//*[contains(name(),'SIGMET')]/iwxxm:phenomenon">
          <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigWxPhenomena.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">SIGMET iwxxm:phenomenon elements should be a member of http://codes.wmo.int/49-2/SigWxPhenomena</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="SIGMET.SIGMETEvolvingCondition-4">
+      <sch:rule context="//iwxxm:SIGMETEvolvingCondition">
+         <sch:assert test="( if( exists(iwxxm:geometry//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:geometry//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">SIGMET.SIGMETEvolvingCondition-4: If a geometry of iwxxm:geometry is defined by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMETEvolvingCondition-2">
@@ -390,6 +416,16 @@
          <sch:assert test="( if( local-name( . ) = 'TropicalCycloneSIGMET' and exists(iwxxm:forecastPositionAnalysis/*) ) then( exists(iwxxm:forecastPositionAnalysis/iwxxm:TropicalCycloneSIGMETPositionCollection) and empty(iwxxm:forecastPositionAnalysis/*[name() != 'iwxxm:TropicalCycloneSIGMETPositionCollection']) ) else( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMET-4: In a TC SIGMET report the child elements of iwxxm:forecastPositionAnalysis should be TropicalCycloneSIGMETPositionCollection and TropicalCycloneSIGMETPosition</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="VolcanicAshSIGMET.VolcanicAshSIGMET-6">
+      <sch:rule context="//iwxxm:VolcanicAshSIGMET">
+         <sch:assert test="( if( exists(iwxxm:eruptingVolcano//metce:position) ) then( iwxxm:eruptingVolcano//metce:position//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">VolcanicAshSIGMET.VolcanicAshSIGMET-6: If a geometry is defined for iwxxm:eruptingVolcano//metce:position by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="VolcanicAshSIGMET.VolcanicAshSIGMET-7">
+      <sch:rule context="//iwxxm:VolcanicAshSIGMET">
+         <sch:assert test="( if( exists(iwxxm:volcanicAshMovedToFIR//aixm:geometryComponent) ) then( iwxxm:volcanicAshMovedToFIR//aixm:geometryComponent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">VolcanicAshSIGMET.VolcanicAshSIGMET-7: If a geometry is defined for iwxxm:volcanicAshMovedToFIR//aixm:geometryComponent by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="VolcanicAshSIGMET.VolcanicAshSIGMET-1">
       <sch:rule context="//iwxxm:VolcanicAshSIGMET">
          <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( empty(iwxxm:eruptingVolcano) ) else( true() ) )">VolcanicAshSIGMET.VolcanicAshSIGMET-1: In a 'CANCELLATION' report iwxxm:eruptingVolcano shall be absent</sch:assert>
@@ -415,6 +451,16 @@
          <sch:assert test="( if( local-name( . ) = 'VolcanicAshSIGMET' and exists(iwxxm:forecastPositionAnalysis/*) ) then( exists(iwxxm:forecastPositionAnalysis/iwxxm:VolcanicAshSIGMETPositionCollection) and empty(iwxxm:forecastPositionAnalysis/*[name() != 'iwxxm:VolcanicAshSIGMETPositionCollection']) ) else( true() ) )">VolcanicAshSIGMET.VolcanicAshSIGMET-5: In a VA SIGMET report the child elements of iwxxm:forecastPositionAnalysis should be VolcanicAshSIGMETPositionCollection</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMETEvolvoingConditionCollection-1">
+      <sch:rule context="//iwxxm:TropicalCycloneSIGMETEvolvingConditionCollection">
+         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMETEvolvoingConditionCollection-1: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMETPositionCollection-1">
+      <sch:rule context="//iwxxm:TropicalCycloneSIGMETPositionCollection">
+         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else ( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMETPositionCollection-1: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="AIRMET.AIRMETEvolvingCondition.surfaceVisibilityCause">
       <sch:rule context="//*[contains(name(),'AIRMETEvolvingCondition')]/iwxxm:surfaceVisibilityCause">
          <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-WeatherCausingVisibilityReduction.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">AIRMETEvolvingCondition iwxxm:surfaceVisibilityCause elements should be a member of http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction</sch:assert>
@@ -428,6 +474,11 @@
    <sch:pattern id="AIRMET.AIRMETEvolvingCondition-2">
       <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
          <sch:assert test="( if( exists(iwxxm:cloudTop) and not(iwxxm:cloudTop/@xsi:nil = 'true') ) then( (iwxxm:cloudTop/@uom = 'm') or (iwxxm:cloudTop/@uom = '[ft_i]') ) else( true() ) )">AIRMET.AIRMETEvolvingCondition-2: cloudTop shall be reported in metres (m) or feet ([ft_i])</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="AIRMET.AIRMETEvolvingCondition-9">
+      <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
+         <sch:assert test="( if( exists(iwxxm:geometry//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:geometry//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">AIRMET.AIRMETEvolvingCondition-9: If a geometry of iwxxm:geometry is defined by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMETEvolvingCondition-3">
@@ -475,6 +526,11 @@
          <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and exists(iwxxm:analysis//iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( empty(index-of(for $i in iwxxm:analysis return number(translate($i//iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,'-T:Z','')) eq number(translate(iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,'-T:Z','')),false())) ) else( true() ) )">AIRMET.AIRMET-5: iwxxm:analysis//iwxxm:phenomenonTime must be equal to iwxxm:validPeriod//gml:beginPosition</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="AIRMET.AIRMET-6">
+      <sch:rule context="//iwxxm:AIRMET">
+         <sch:assert test="( if( exists(iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent) ) then( iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">AIRMET.AIRMET-6: If a geometry is defined for iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-3">
       <sch:rule context="//iwxxm:AIRMET">
          <sch:assert test="( if( @isCancelReport= 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and exists(iwxxm:cancelledReportSequenceNumber) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:phenomenon) and empty(iwxxm:analysis) ) else( true() ) )">AIRMET.AIRMET-3: A 'CANCELLATION' report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod. Elements iwxxm:phenomenon and iwxxm:analysis shall be absent</sch:assert>
@@ -487,7 +543,12 @@
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-4">
       <sch:rule context="//iwxxm:AIRMET">
-        <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )">AIRMET.AIRMET-4: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:phenomenon and iwxxm:analysis. Elements iwxxm:cancelledReportSequenceNumber and iwxxm:cancelledReportValidPeriod shall be absent</sch:assert>
+         <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )">AIRMET.AIRMET-4: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:phenomenon and iwxxm:analysis. Elements iwxxm:cancelledReportSequenceNumber and iwxxm:cancelledReportValidPeriod shall be absent</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneForecastConditions-2">
+      <sch:rule context="//iwxxm:TropicalCycloneForecastConditions">
+         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneForecastConditions-2: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneForecastConditions-1">
@@ -510,6 +571,16 @@
          <sch:assert test="( if( exists(iwxxm:centralPressure) and not(iwxxm:centralPressure/@xsi:nil = 'true') ) then( iwxxm:centralPressure/@uom = 'hPa' ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneObservedConditions-1: centralPressure shall be reported in hectopascals (hPa)</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneObservedConditions-6">
+      <sch:rule context="//iwxxm:TropicalCycloneObservedConditions">
+         <sch:assert test="( if( exists(iwxxm:cumulonimbusCloudLocation//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:cumulonimbusCloudLocation//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneObservedConditions-6: If a geometry of iwxxm:cumulonimbusCloudLocation is defined by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneObservedConditions-5">
+      <sch:rule context="//iwxxm:TropicalCycloneObservedConditions">
+         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneObservedConditions-5: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneObservedConditions-2">
       <sch:rule context="//iwxxm:TropicalCycloneObservedConditions">
          <sch:assert test="( if( exists(iwxxm:maximumSurfaceWindSpeed) and not(iwxxm:maximumSurfaceWindSpeed/@xsi:nil = 'true') ) then( (iwxxm:maximumSurfaceWindSpeed/@uom = 'm/s') or (iwxxm:maximumSurfaceWindSpeed/@uom = '[kn_i]') ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneObservedConditions-2: maximumSurfaceWindSpeed shall be reported in metres per second (m/s) or knots ([kn_i])</sch:assert>
@@ -523,6 +594,11 @@
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneObservedConditions-4">
       <sch:rule context="//iwxxm:TropicalCycloneObservedConditions">
          <sch:assert test="( if( exists(iwxxm:movementSpeed) and not(iwxxm:movementSpeed/@xsi:nil = 'true') ) then( (iwxxm:movementSpeed/@uom = 'km/h') or (iwxxm:movementSpeed/@uom = '[kn_i]') ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneObservedConditions-4: movementSpeed shall be reported in kilometres per hour (km/h) or knots ([kn_i])</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="VolcanicAshAdvisory.VolcanicAshCloudObservedOrEstimated-3">
+      <sch:rule context="//iwxxm:VolcanicAshCloudObservedOrEstimated">
+         <sch:assert test="( if( exists(iwxxm:ashCloudExtent//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:ashCloudExtent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshCloudObservedOrEstimated-3: If a geometry of iwxxm:ashCloudExtent is defined by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshCloud-1">
@@ -540,6 +616,11 @@
          <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AviationColourCode.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">VolcanicAshAdvisory iwxxm:colourCode elements should be a member of http://codes.wmo.int/49-2/AviationColourCode</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-3">
+      <sch:rule context="//iwxxm:VolcanicAshAdvisory">
+         <sch:assert test="( if( exists(iwxxm:volcano//metce:position) ) then( iwxxm:volcano//metce:position//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-3: If a geometry is defined for iwxxm:volcano//metce:position by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-1">
       <sch:rule context="//iwxxm:VolcanicAshAdvisory">
          <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-1: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime and iwxxm:issuingVolcanicAshAdvisoryCentre</sch:assert>
@@ -547,7 +628,7 @@
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-2">
       <sch:rule context="//iwxxm:VolcanicAshAdvisory">
-         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-2: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:summitElevation) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-2: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:summitElevation, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.WindConditions-3">
@@ -575,6 +656,11 @@
          <sch:assert test="( if( @status = 'PROVIDED' ) then( count(iwxxm:ashCloud) ge 1 ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshForecastConditions-1: When @status is equal to 'PROVIDED', iwxxm:ashCloud must exist</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="VolcanicAshAdvisory.VolcanicAshCloudForecast-1">
+      <sch:rule context="//iwxxm:VolcanicAshCloudForecast">
+         <sch:assert test="( if( exists(iwxxm:ashCloudExtent//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:ashCloudExtent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshCloudForecast-1: If a geometry of iwxxm:ashCloudExtent is defined by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshObservedOrEstimatedConditions-1">
       <sch:rule context="//iwxxm:VolcanicAshObservedOrEstimatedConditions">
          <sch:assert test="( if( @status = 'IDENTIFIABLE' ) then( (count(iwxxm:ashCloud) ge 1) and empty(iwxxm:windConditions) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshObservedOrEstimatedConditions-1: When @status is equal to 'IDENTIFIABLE', iwxxm:ashCloud must exists and iwxxm:windConditions must be empty</sch:assert>
@@ -593,6 +679,11 @@
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherAdvisory.phenomenon">
       <sch:rule context="//*[contains(name(),'SpaceWeatherAdvisory')]/iwxxm:phenomenon">
          <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxPhenomena.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">SpaceWeatherAdvisory iwxxm:phenomenon elements should be a member of http://codes.wmo.int/49-2/SpaceWxPhenomena</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherRegion-1">
+      <sch:rule context="//iwxxm:SpaceWeatherRegion">
+         <sch:assert test="( if( exists(iwxxm:location//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:location//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherRegion-1: If a geometry of iwxxm:location is defined by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherAdvisory-1">
@@ -625,69 +716,69 @@
          <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-CloudAmountReportedAtAerodrome.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">CloudLayer iwxxm:amount elements should be a member of http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.CloudLayer-1">
+   <sch:pattern id="Common.CloudLayer-1">
       <sch:rule context="//iwxxm:CloudLayer">
-         <sch:assert test="( if( exists(iwxxm:base) and not(iwxxm:base/@xsi:nil = 'true') ) then( (iwxxm:base/@uom = 'm') or (iwxxm:base/@uom = '[ft_i]') ) else( true() ) )">COMMON.CloudLayer-1: base shall be reported in metres (m) or feet ([ft_i])</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:base) and not(iwxxm:base/@xsi:nil = 'true') ) then( (iwxxm:base/@uom = 'm') or (iwxxm:base/@uom = '[ft_i]') ) else( true() ) )">Common.CloudLayer-1: base shall be reported in metres (m) or feet ([ft_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.Report-5">
+   <sch:pattern id="Common.Report-5">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( //@gml:id[not(matches(.,'uuid\.[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}'))] ) then( false() ) else( true() ) )">COMMON.Report-5: All gml:ids in IWXXM reports must be prefixed with 'uuid.' and must be UUID version 4</sch:assert>
+         <sch:assert test="( if( //@gml:id[not(matches(.,'uuid\.[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}'))] ) then( false() ) else( true() ) )">Common.Report-5: All gml:ids in IWXXM reports must be prefixed with 'uuid.' and must be UUID version 4</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.Report-4">
+   <sch:pattern id="Common.Report-4">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( exists(//iwxxm:extension) ) then( sum(//iwxxm:extension/.//text()/string-length(.) ) +sum( //iwxxm:extension/.//element()/( (string-length( name() ) * 2 ) + 5 ) ) +sum( //iwxxm:extension/.//@*/( 1 + string-length(name()) + 3 + string-length(.) ) ) +sum( //iwxxm:extension/.//comment()/( string-length( . ) + 7 )) lt 5000 ) else( true() ) )">COMMON.Report-4: Total size of extension content must not exceed 5000 characters per report</sch:assert>
+         <sch:assert test="( if( exists(//iwxxm:extension) ) then( sum(//iwxxm:extension/.//text()/string-length(.) ) +sum( //iwxxm:extension/.//element()/( (string-length( name() ) * 2 ) + 5 ) ) +sum( //iwxxm:extension/.//@*/( 1 + string-length(name()) + 3 + string-length(.) ) ) +sum( //iwxxm:extension/.//comment()/( string-length( . ) + 7 )) lt 5000 ) else( true() ) )">Common.Report-4: Total size of extension content must not exceed 5000 characters per report</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.Report-1">
+   <sch:pattern id="Common.Report-1">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( @permissibleUsage = 'NON-OPERATIONAL' ) then( exists(@permissibleUsageReason) ) else( true() ) )">COMMON.Report-1: Non-operational reports must include a permissibleUsageReason</sch:assert>
+         <sch:assert test="( if( @permissibleUsage = 'NON-OPERATIONAL' ) then( exists(@permissibleUsageReason) ) else( true() ) )">Common.Report-1: Non-operational reports must include a permissibleUsageReason</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.Report-2">
+   <sch:pattern id="Common.Report-2">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( @permissibleUsage ='OPERATIONAL') then( empty(@permissibleUsageReason) ) else( true() ) )">COMMON.Report-2: Operational reports should not include a permissibleUsageReason</sch:assert>
+         <sch:assert test="( if( @permissibleUsage ='OPERATIONAL') then( empty(@permissibleUsageReason) ) else( true() ) )">Common.Report-2: Operational reports should not include a permissibleUsageReason</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.Report-3">
+   <sch:pattern id="Common.Report-3">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( exists(@translatedBulletinID) or exists(@translatedBulletinReceptionTime) or exists(@translationCentreDesignator) or exists(@translationCentreName) or exists(@translationTime) or exists(@translationFailedTAC)) then( exists(@translatedBulletinID) and exists(@translatedBulletinReceptionTime) and exists(@translationCentreDesignator) and exists(@translationCentreName) and exists(@translationTime) ) else( true() ) )">COMMON.Report-3: Translated reports must include @translatedBulletinID, @translatedBulletinReceptionTime, @translationCentreDesignator, @translationCentreName, @translationTime and optionally @translationFailedTAC if translation failed</sch:assert>
+         <sch:assert test="( if( exists(@translatedBulletinID) or exists(@translatedBulletinReceptionTime) or exists(@translationCentreDesignator) or exists(@translationCentreName) or exists(@translationTime) or exists(@translationFailedTAC)) then( exists(@translatedBulletinID) and exists(@translatedBulletinReceptionTime) and exists(@translationCentreDesignator) and exists(@translationCentreName) and exists(@translationTime) ) else( true() ) )">Common.Report-3: Translated reports must include @translatedBulletinID, @translatedBulletinReceptionTime, @translationCentreDesignator, @translationCentreName, @translationTime and optionally @translationFailedTAC if translation failed</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.AerodromeCloudForecast-2">
+   <sch:pattern id="Common.AerodromeCloudForecast-2">
       <sch:rule context="//iwxxm:AerodromeCloudForecast">
-         <sch:assert test="(if( exists(iwxxm:layer) ) then( empty(iwxxm:verticalVisibility) ) else( true() ) )">COMMON.AerodromeCloudForecast-2: If cloud layers are reported vertical visibility should be empty</sch:assert>
+         <sch:assert test="(if( exists(iwxxm:layer) ) then( empty(iwxxm:verticalVisibility) ) else( true() ) )">Common.AerodromeCloudForecast-2: If cloud layers are reported vertical visibility should be empty</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.AerodromeCloudForecast-1">
+   <sch:pattern id="Common.AerodromeCloudForecast-1">
       <sch:rule context="//iwxxm:AerodromeCloudForecast">
-         <sch:assert test="(if( exists(iwxxm:verticalVisibility) ) then( empty(iwxxm:layer) ) else( true() ) )">COMMON.AerodromeCloudForecast-1: If vertical visibility is reported cloud layers should be empty</sch:assert>
+         <sch:assert test="(if( exists(iwxxm:verticalVisibility) ) then( empty(iwxxm:layer) ) else( true() ) )">Common.AerodromeCloudForecast-1: If vertical visibility is reported cloud layers should be empty</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.AerodromeCloudForecast-3">
+   <sch:pattern id="Common.AerodromeCloudForecast-3">
       <sch:rule context="//iwxxm:AerodromeCloudForecast">
-         <sch:assert test="( if( exists(iwxxm:verticalVisibility) and not(iwxxm:verticalVisibility/@xsi:nil = 'true') ) then( (iwxxm:verticalVisibility/@uom = 'm') or (iwxxm:verticalVisibility/@uom = '[ft_i]') ) else( true() ) )">COMMON.AerodromeCloudForecast-3: verticalVisibility shall be reported in metres (m) or feet ([ft_i])</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:verticalVisibility) and not(iwxxm:verticalVisibility/@xsi:nil = 'true') ) then( (iwxxm:verticalVisibility/@uom = 'm') or (iwxxm:verticalVisibility/@uom = '[ft_i]') ) else( true() ) )">Common.AerodromeCloudForecast-3: verticalVisibility shall be reported in metres (m) or feet ([ft_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.AerodromeSurfaceWindForecast-1">
+   <sch:pattern id="Common.AerodromeSurfaceWindForecast-1">
       <sch:rule context="//iwxxm:AerodromeSurfaceWindForecast">
-         <sch:assert test="( if( @variableDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )">COMMON.AerodromeSurfaceWindForecast-1: Wind direction is not reported when variable winds are indicated</sch:assert>
+         <sch:assert test="( if( @variableDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )">Common.AerodromeSurfaceWindForecast-1: Wind direction is not reported when variable winds are indicated</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.AerodromeSurfaceWindTrendForecast-1">
+   <sch:pattern id="Common.AerodromeSurfaceWindTrendForecast-1">
       <sch:rule context="//iwxxm:AerodromeSurfaceWindTrendForecast|//iwxxm:AerodromeSurfaceWindForecast">
-         <sch:assert test="( if( exists(iwxxm:meanWindDirection) and not(iwxxm:meanWindDirection/@xsi:nil = 'true') ) then( iwxxm:meanWindDirection/@uom = 'deg' ) else( true() ) )">COMMON.AerodromeSurfaceWindTrendForecast-1: meanWindDirection shall be reported in degrees (deg)</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:meanWindDirection) and not(iwxxm:meanWindDirection/@xsi:nil = 'true') ) then( iwxxm:meanWindDirection/@uom = 'deg' ) else( true() ) )">Common.AerodromeSurfaceWindTrendForecast-1: meanWindDirection shall be reported in degrees (deg)</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.AerodromeSurfaceWindTrendForecast-2">
+   <sch:pattern id="Common.AerodromeSurfaceWindTrendForecast-2">
       <sch:rule context="//iwxxm:AerodromeSurfaceWindTrendForecast|//iwxxm:AerodromeSurfaceWindForecast">
-         <sch:assert test="( if( exists(iwxxm:meanWindSpeed) and not(iwxxm:meanWindSpeed/@xsi:nil = 'true') ) then( (iwxxm:meanWindSpeed/@uom = 'm/s') or (iwxxm:meanWindSpeed/@uom = '[kn_i]') ) else( true() ) )">COMMON.AerodromeSurfaceWindTrendForecast-2: meanWindSpeed shall be reported in metres per second (m/s) or knots ([kn_i])</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:meanWindSpeed) and not(iwxxm:meanWindSpeed/@xsi:nil = 'true') ) then( (iwxxm:meanWindSpeed/@uom = 'm/s') or (iwxxm:meanWindSpeed/@uom = '[kn_i]') ) else( true() ) )">Common.AerodromeSurfaceWindTrendForecast-2: meanWindSpeed shall be reported in metres per second (m/s) or knots ([kn_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="COMMON.AerodromeSurfaceWindTrendForecast-3">
+   <sch:pattern id="Common.AerodromeSurfaceWindTrendForecast-3">
       <sch:rule context="//iwxxm:AerodromeSurfaceWindTrendForecast|//iwxxm:AerodromeSurfaceWindForecast">
-         <sch:assert test="( if( exists(iwxxm:windGustSpeed) and not(iwxxm:windGustSpeed/@xsi:nil = 'true') ) then( (iwxxm:windGustSpeed/@uom = 'm/s') or (iwxxm:windGustSpeed/@uom = '[kn_i]') ) else( true() ) )">COMMON.AerodromeSurfaceWindTrendForecast-3: windGustSpeed shall be reported in metres per second (m/s) or knots ([kn_i])</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:windGustSpeed) and not(iwxxm:windGustSpeed/@xsi:nil = 'true') ) then( (iwxxm:windGustSpeed/@uom = 'm/s') or (iwxxm:windGustSpeed/@uom = '[kn_i]') ) else( true() ) )">Common.AerodromeSurfaceWindTrendForecast-3: windGustSpeed shall be reported in metres per second (m/s) or knots ([kn_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="IWXXM.ExtensionAlwaysLast">

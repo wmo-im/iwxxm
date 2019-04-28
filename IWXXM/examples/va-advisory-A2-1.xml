@@ -62,22 +62,27 @@ NXT ADVISORY:               20080923/0730Z
 
     <iwxxm:volcano>
         <metce:EruptingVolcano gml:id="uuid.1b9ee023-c87d-4fa0-bf9b-bb1c7215286c">
-            <gml:description>FL300 REPORTED</gml:description>
             <metce:name>KARYMSKY 1000-13</metce:name>
             <metce:position>
-                <gml:Point gml:id="uuid.687c6e95-460a-4397-a602-ea8483acc3fc" srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
-                    <gml:pos>54.03 159.27 1536</gml:pos>
+                <gml:Point gml:id="uuid.687c6e95-460a-4397-a602-ea8483acc3fc" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <gml:pos>54.03 159.27</gml:pos>
                 </gml:Point>
             </metce:position>
             <metce:eruptionDate>2008-09-23T01:30:00Z</metce:eruptionDate>
         </metce:EruptingVolcano>
     </iwxxm:volcano>
 
+    <iwxxm:stateOrRegion>RUSSIA</iwxxm:stateOrRegion>
+
+    <iwxxm:summitElevation uom="m">1536</iwxxm:summitElevation>
+
     <iwxxm:advisoryNumber>2008/4</iwxxm:advisoryNumber>
 
     <iwxxm:informationSource>MTSAT-1R KVERT KEMSD</iwxxm:informationSource>
 
     <iwxxm:colourCode xlink:href="http://codes.wmo.int/49-2/AviationColourCode/RED"/>
+
+    <iwxxm:eruptionDetails>FL300 REPORTED</iwxxm:eruptionDetails>
 
     <iwxxm:observation>
         <iwxxm:VolcanicAshObservedOrEstimatedConditions gml:id="uuid.3182220e-b8ab-40f6-9be9-190b32b3d40e" status="IDENTIFIABLE">
@@ -96,7 +101,7 @@ NXT ADVISORY:               20080923/0730Z
                             <aixm:lowerLimit uom="FL">250</aixm:lowerLimit>
                             <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
                             <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.c81a85cc-61d9-4250-b9bb-fe4e9dcd3f29">
+                                <aixm:Surface gml:id="uuid.c81a85cc-61d9-4250-b9bb-fe4e9dcd3f29" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:patches>
                                         <gml:PolygonPatch>
                                             <gml:exterior>
@@ -124,7 +129,7 @@ NXT ADVISORY:               20080923/0730Z
                             <aixm:lowerLimit>GND</aixm:lowerLimit>
                             <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
                             <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.5d5747e4-da0c-4b2e-8a18-7c2d6c72d76c">
+                                <aixm:Surface gml:id="uuid.5d5747e4-da0c-4b2e-8a18-7c2d6c72d76c" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:patches>
                                         <gml:PolygonPatch>
                                             <gml:exterior>
@@ -163,7 +168,7 @@ NXT ADVISORY:               20080923/0730Z
                             <aixm:lowerLimit uom="FL">250</aixm:lowerLimit>
                             <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
                             <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.ac2ae755-d6cc-480c-87ae-08bba04e3025">
+                                <aixm:Surface gml:id="uuid.ac2ae755-d6cc-480c-87ae-08bba04e3025" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:patches>
                                         <gml:PolygonPatch>
                                             <gml:exterior>
@@ -189,7 +194,7 @@ NXT ADVISORY:               20080923/0730Z
                             <aixm:lowerLimit>GND</aixm:lowerLimit>
                             <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
                             <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.4228e3dc-5384-41ce-a89b-ef2f5fe22470">
+                                <aixm:Surface gml:id="uuid.4228e3dc-5384-41ce-a89b-ef2f5fe22470" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:patches>
                                         <gml:PolygonPatch>
                                             <gml:exterior>
@@ -226,7 +231,7 @@ NXT ADVISORY:               20080923/0730Z
                             <aixm:lowerLimit>GND</aixm:lowerLimit>
                             <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
                             <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.216a05ac-926a-43aa-b5d2-ae740a6e7b37">
+                                <aixm:Surface gml:id="uuid.216a05ac-926a-43aa-b5d2-ae740a6e7b37" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:patches>
                                         <gml:PolygonPatch>
                                             <gml:exterior>

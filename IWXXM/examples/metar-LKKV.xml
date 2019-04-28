@@ -50,7 +50,7 @@
             </iwxxm:surfaceWind>
 	        <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/VCSH"/>
             <iwxxm:recentWeather xlink:href="http://codes.wmo.int/306/4678/TS"/>
-	        <!-- WS R18C -->
+            <!-- WS R18C -->
             <iwxxm:windShear>
                 <iwxxm:AerodromeWindShear>
                     <iwxxm:runway>
@@ -66,7 +66,7 @@
                     </iwxxm:runway>
                 </iwxxm:AerodromeWindShear>
             </iwxxm:windShear>
-	        <iwxxm:runwayState>
+            <iwxxm:runwayState>
                 <iwxxm:AerodromeRunwayState>
                     <iwxxm:runway>
                       <aixm:RunwayDirection gml:id="uuid.4ce3040f-69a1-4703-8a21-78a33c14ddce">

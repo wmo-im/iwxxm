@@ -34,6 +34,18 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The erupting volcano that is the source of volcanic ash</documentation>
 						</annotation>
 					</element>
+					<element name="stateOrRegion" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>State, or region if ash is not reported over a State</documentation>
+						</annotation>
+					</element>
+					<element name="summitElevation" type="iwxxm:LengthWithNilReasonType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Elevation of a summit.
+
+Summit elevation shall be reported either in meters ("m") or feet ("[ft_i]").</documentation>
+						</annotation>
+					</element>
 					<element name="advisoryNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Advisory number: year in full and message number (separate sequence for each volcano)</documentation>
@@ -47,6 +59,11 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 					<element nillable="true" name="colourCode" type="iwxxm:AviationColourCodeType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The aviation colour code</documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="eruptionDetails" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Eruption details (excluding date/time of eruption(s)).</documentation>
 						</annotation>
 					</element>
 					<element name="observation" type="iwxxm:VolcanicAshObservedOrEstimatedConditionsPropertyType" minOccurs="0" maxOccurs="1">

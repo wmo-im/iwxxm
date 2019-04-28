@@ -6,10 +6,10 @@ SWXC:               DONLON
 ADVISORY NR:        2016/2
 SWX EFFECT:         HF COM MOD AND GNSS MOD 
 NR RPLC :           2016/1
-OBS SWX:            08/0100Z HNH HSH E18000 – W18000 
-FCST SWX +6 HR:     08/0700Z HNH HSH E18000 – W18000
-FCST SWX +12 HR:    08/1300Z HNH HSH E18000 – W18000
-FCST SWX +18 HR:    08/1900Z HNH HSH E18000 – W18000
+OBS SWX:            08/0100Z HNH HSH E18000 - W18000 
+FCST SWX +6 HR:     08/0700Z HNH HSH E18000 - W18000
+FCST SWX +12 HR:    08/1300Z HNH HSH E18000 - W18000
+FCST SWX +18 HR:    08/1900Z HNH HSH E18000 - W18000
 FCST SWX +24 HR:    09/0100Z NO SWX EXP
 RMK:                LOW LVL GEOMAGNETIC STORMING CAUSING INCREASED AURORAL ACT AND SUBSEQUENT MOD DEGRADATION OF GNSS AND HF COM AVBL IN THE AURORAL ZONE. THIS STORMING EXP TO SUBSIDE IN THE FCST PERIOD. SEE WWW.SPACEWEATHERPROVIDER.WEB 
 NXT ADVISORY:       NO FURTHER ADVISORIES
@@ -51,7 +51,7 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/HF_COM_MOD"/>
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/GNSS_MOD"/>
     
-    <!-- 20161108/0100Z HNH HSH E18000 – W18000 -->
+    <!-- 20161108/0100Z HNH HSH E18000 - W18000 -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.e10181fb-ff0a-40cf-865c-bb209fc49b90" timeIndicator="OBSERVATION">
             <iwxxm:phenomenonTime>
@@ -65,7 +65,7 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                     <iwxxm:location>
                         <aixm:AirspaceVolume gml:id="uuid.7138f8d1-9854-46cb-a1b1-9d96c5cee46f">
                             <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.3b00652b-4bed-4655-959c-1c9efd431cac">
+                                <aixm:Surface gml:id="uuid.3b00652b-4bed-4655-959c-1c9efd431cac" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:patches>
                                         <gml:PolygonPatch>
                                             <gml:exterior>
@@ -88,7 +88,7 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                     <iwxxm:location>
                         <aixm:AirspaceVolume gml:id="uuid.e5094671-591f-47ec-9a34-277287d876b4">
                             <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.3ecfcac7-006e-4279-9798-c21abf12d648">
+                                <aixm:Surface gml:id="uuid.3ecfcac7-006e-4279-9798-c21abf12d648" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:patches>
                                         <gml:PolygonPatch>
                                             <gml:exterior>
@@ -108,7 +108,7 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- 20121108/0700Z HNH HSH E18000 – W18000 -->
+    <!-- 20121108/0700Z HNH HSH E18000 - W18000 -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.96cfc825-3f5d-40f0-b9bd-46d790ee9f50" timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
@@ -123,7 +123,7 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- 20161108/1300Z HNH HSH E18000 – W18000 -->
+    <!-- 20161108/1300Z HNH HSH E18000 - W18000 -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.8fc8a55b-e730-4d84-bb44-6e7b7dc3dd32" timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
@@ -138,7 +138,7 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- 20161108/1900Z HNH HSH E18000 – W18000 -->
+    <!-- 20161108/1900Z HNH HSH E18000 - W18000 -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.6a1f263b-5aeb-4002-af1b-9c3ef2812f8d"  timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
