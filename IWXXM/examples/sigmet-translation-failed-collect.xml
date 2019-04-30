@@ -3,7 +3,7 @@
     An example of a WS SIGMET which failed translation.  This is an example modified to report 'INVALID TS', which is an invalid SIGMET:
 
     WSYU31 YUSO 101000
-    YUDD SIGMET 2 VALID 101200/101600 YUSO -
+    YUDD SIGMET 2 VALID 101200/101600 YUSO-
     YUDD SHANLON FIR INVALID TS
 -->
 <collect:MeteorologicalBulletin
