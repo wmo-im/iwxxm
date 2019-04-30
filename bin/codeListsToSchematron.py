@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-Search all IWXXM schemas for vocabulary/codelist entries, download each entry to RDF format, then create
-Schematron rules that checks that each element's xlink:href is a member of the corresponding codelist
+Search all IWXXM schemas for vocabulary/codelist entries and download each entry in RDF format.
+For use with iwxxm.sch which has schematron rules derived from the IWXXM UML model that ensure
+a codelist element's xlink:href is a member of the corresponding codelist.
 
 Written using Python 2.7
 """

@@ -8,6 +8,8 @@ All reports
 ==========================
 The attribute "reportStatus" of a report shall be set to either "NORMAL", "AMENDMENT" or "CORRECTION" to reflect its status.  Note that some of the statuses do not apply in certain reports.
 
+A Coordinate Reference System (CRS) shall be specified in geometries defined in all reports and is constrained to 2 dimensional horizontal CRS.  Attribute srsName shall be defined accordingly with srsDimension set to "2" and non-empty axisLabels set approprately with the CRS used.
+
 ==========================
 METAR/SPECI
 ==========================
@@ -72,13 +74,13 @@ Runway depth of deposit "99" (value from WMO code table 1079)
   When the runway depth of deposits is not reported due to runway or runways non-operational due to snow, slush, ice, large drifts or runway clearance this shall be indicated by a "depthOfDeposits" with a nilReason of "http://codes.wmo.int/common/nil/unknown"
 
 Trend forecast BECMG without a specified time (TL, AT, FM)
-  When a trend forecast is reported with a BECMG block without a specified time and the period commences at the beginning of the trend forecast period and ceases by the end of the trend forecast period this should be represented as a phenomenonTime with a nilReason of "http://codes.wmo.int/common/nil/missing".  Otherwise if the BECMG time is uncertain within the trend forecast period this should be represented as a phenomenonTime with a nilReason of "http://codes.wmo.int/common/nil/unknown"
+  When a trend forecast is reported with a BECMG block without a specified time and the period commences at the beginning of the trend forecast period and ceases by the end of the trend forecast period this shall be represented as a phenomenonTime with a nilReason of "http://codes.wmo.int/common/nil/missing".  Otherwise if the BECMG time is uncertain within the trend forecast period this shall be represented as a phenomenonTime with a nilReason of "http://codes.wmo.int/common/nil/unknown"
 
 Trend forecast TEMPO without a specified time (TL, AT, FM)
-  When a trend forecast is reported with a TEMPO block without a specified time and the period commences at the beginning of the trend forecast period and ceases by the end of the trend forecast period this should be represented as a phenomenonTime with a nilReason of "http://codes.wmo.int/common/nil/missing"
+  When a trend forecast is reported with a TEMPO block without a specified time and the period commences at the beginning of the trend forecast period and ceases by the end of the trend forecast period this shall be represented as a phenomenonTime with a nilReason of "http://codes.wmo.int/common/nil/missing"
 
 Observed quantities with a nilReason
-  When observed measures or quantities (such as air temperature or prevailing visibility) can not be reported due to sensor failures, the XML element should have xsi:nil set to "true", the uom set to "N/A", and the nilReason set to "http://codes.wmo.int/common/nil/notObservable"
+  When observed measures or quantities (such as air temperature or prevailing visibility) can not be reported due to sensor failures, the XML element shall have xsi:nil set to "true", the uom set to "N/A", and the nilReason set to "http://codes.wmo.int/common/nil/notObservable"
 
 Variations from mean wind direction
   In TAC the observed two extreme directions between which the wind has varied shall be given for dndndnVdxdxdx in clockwise order.  Care should be taken that "extremeClockwiseWindDirection" refers to the extreme clockwise direction from the wind which should be dxdxdx in the TAC report.  Similarly the corresponding part for "extremeCounterClockwiseWindDirection" is dndndn.
@@ -148,6 +150,12 @@ Volcanic Ash Advisory
 
 'NIL' aviation colour code
   A NIL aviation colour code shall be indicated with a "colourCode" with a nilReason of "http://codes.wmo.int/common/nil/missing"
+
+'UNKNOWN' eruption details
+  An unknown eruption details shall be indicated with a "eruptionDetails" with a nilReason of "http://codes.wmo.int/common/nil/unknown"
+
+Eruption details
+  Date/time of eruption(s) shall be included in "volcano" and the rest in "eruptionDetails"
 
 'VA NOT IDENTIFIABLE FM SATELLITE DATA'
   Element "status" under "VolcanicAshObservedOrEstimatedConditions" shall be set to "NOT_IDENTIFIABLE" to reflect this sitution.  Set it to "IDENTIFIABLE" otherwise
