@@ -2,7 +2,7 @@
 <!--
     An example of a SIGMET.  Original SIGMET from ICAO Annex 3 Example A6-1a:
     
-      YUDD SIGMET 2 VALID 101200/101600 YUSO –
+      YUDD SIGMET 2 VALID 101200/101600 YUSO-
       YUDD SHANLON FIR/UIR OBSC TS FCST S OF N54 AND E OF W012 TOP FL390 MOV E 20KT WKN
 -->
 <iwxxm:SIGMET 
@@ -60,7 +60,7 @@
                     <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                     <aixm:type>OTHER:FIR_UIR</aixm:type>
                     <aixm:designator>YUDD</aixm:designator>
-                    <aixm:name>SHANLON FIR/UIR</aixm:name>
+		    <aixm:name>SHANLON FIR/UIR</aixm:name>
                     <!-- FIR boundary can be reported in an aixm:geometryComponent -->
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
@@ -93,7 +93,7 @@
                             <aixm:upperLimit uom="FL">390</aixm:upperLimit>
                             <aixm:upperLimitReference>STD</aixm:upperLimitReference>
                             <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.e20caa4b-2b93-4d28-9b14-e04196314999" uomLabels="deg deg" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                <aixm:Surface gml:id="uuid.e20caa4b-2b93-4d28-9b14-e04196314999" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                                     <gml:polygonPatches>
                                         <gml:PolygonPatch>
                                             <gml:exterior>

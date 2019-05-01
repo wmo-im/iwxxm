@@ -70,14 +70,14 @@ NXT MSG:                    20040925/2000Z
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:tropicalCyclonePosition>
-                <gml:Point gml:id="uuid.8b4b12ed-461a-4716-8191-6cf41ad77471" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                <gml:Point gml:id="uuid.8b4b12ed-461a-4716-8191-6cf41ad77471" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:pos>27.1 -73.1</gml:pos>
                 </gml:Point>
             </iwxxm:tropicalCyclonePosition>
             <iwxxm:cumulonimbusCloudLocation>
                 <aixm:AirspaceVolume gml:id="uuid.d4938cc8-c129-4cd7-bda5-588c434ef996">
                     <aixm:horizontalProjection>
-                        <aixm:Surface gml:id="uuid.62695824-f234-4618-b459-90bb795cde9a" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                        <aixm:Surface gml:id="uuid.62695824-f234-4618-b459-90bb795cde9a" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                             <gml:polygonPatches>
                                 <gml:PolygonPatch>
                                     <gml:exterior>
@@ -117,7 +117,7 @@ NXT MSG:                    20040925/2000Z
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:tropicalCyclonePosition>
-                <gml:Point gml:id="uuid.e91ca02c-3625-4cdb-928c-d7979d45f2bc" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                <gml:Point gml:id="uuid.e91ca02c-3625-4cdb-928c-d7979d45f2bc" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:pos>27.8 -73.83333</gml:pos>
                 </gml:Point>
             </iwxxm:tropicalCyclonePosition>
@@ -134,7 +134,7 @@ NXT MSG:                    20040925/2000Z
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:tropicalCyclonePosition>
-                <gml:Point gml:id="uuid.2e386620-5d45-4b7d-b171-4013f10f5ddc" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                <gml:Point gml:id="uuid.2e386620-5d45-4b7d-b171-4013f10f5ddc" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:pos>28.5 -74.5</gml:pos>
                 </gml:Point>
             </iwxxm:tropicalCyclonePosition>
@@ -151,7 +151,7 @@ NXT MSG:                    20040925/2000Z
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:tropicalCyclonePosition>
-                <gml:Point gml:id="uuid.6dc4b702-ea53-4dc0-a261-ff8931bc84db" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                <gml:Point gml:id="uuid.6dc4b702-ea53-4dc0-a261-ff8931bc84db" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:pos>28.86667 -75.00</gml:pos>
                 </gml:Point>
             </iwxxm:tropicalCyclonePosition>
@@ -168,7 +168,7 @@ NXT MSG:                    20040925/2000Z
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:tropicalCyclonePosition>
-                <gml:Point gml:id="uuid.d26643a3-1106-4003-9978-558cdbef0e78" axisLabels="Lat Lon" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                <gml:Point gml:id="uuid.d26643a3-1106-4003-9978-558cdbef0e78" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:pos>29.2 -75.5</gml:pos>
 	    </gml:Point>
             </iwxxm:tropicalCyclonePosition>
