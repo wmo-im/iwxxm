@@ -48,7 +48,7 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-9">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
-         <sch:assert test="( if( exists(iwxxm:aerodrome//aixm:ARP) ) then( iwxxm:aerodrome//aixm:ARP//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-9: If a geometry is defined for iwxxm:aerodrome//aixm:AIP with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:aerodrome//aixm:ARP) ) then( empty(index-of( iwxxm:aerodrome//aixm:ARP//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-9: If a geometry is defined for iwxxm:aerodrome//aixm:AIP with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-7">
@@ -263,7 +263,7 @@
    </sch:pattern>
    <sch:pattern id="TAF.TAF-9">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="( if( exists(iwxxm:aerodrome//aixm:ARP) ) then( iwxxm:aerodrome//aixm:ARP//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">TAF.TAF-9: If a geometry is defined for iwxxm:aerodrome//aixm:AIP with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:aerodrome//aixm:ARP) ) then( empty(index-of(iwxxm:aerodrome//aixm:ARP//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">TAF.TAF-9: If a geometry is defined for iwxxm:aerodrome//aixm:AIP with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF-6">
@@ -308,7 +308,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMETPosition-1">
       <sch:rule context="//iwxxm:SIGMETPosition">
-         <sch:assert test="( if( exists(iwxxm:geometry/*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:geometry//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">SIGMET.SIGMETPosition-1: If a geometry of iwxxm:geometry is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:geometry/*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( empty(index-of(iwxxm:geometry//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">SIGMET.SIGMETPosition-1: If a geometry of iwxxm:geometry is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-1">
@@ -323,7 +323,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-12">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if( exists(iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent) ) then( iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">SIGMET.SIGMET-12: If a geometry is defined for iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent) ) then( empty(index-of(iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">SIGMET.SIGMET-12: If a geometry is defined for iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-7">
@@ -378,7 +378,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMETEvolvingCondition-4">
       <sch:rule context="//iwxxm:SIGMETEvolvingCondition">
-         <sch:assert test="( if( exists(iwxxm:geometry//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:geometry//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">SIGMET.SIGMETEvolvingCondition-4: If a geometry of iwxxm:geometry is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:geometry//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( empty(index-of(iwxxm:geometry//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">SIGMET.SIGMETEvolvingCondition-4: If a geometry of iwxxm:geometry is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMETEvolvingCondition-2">
@@ -453,12 +453,12 @@
    </sch:pattern>
    <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMETEvolvoingConditionCollection-1">
       <sch:rule context="//iwxxm:TropicalCycloneSIGMETEvolvingConditionCollection">
-         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMETEvolvoingConditionCollection-1: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( empty(index-of(iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMETEvolvoingConditionCollection-1: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMETPositionCollection-1">
       <sch:rule context="//iwxxm:TropicalCycloneSIGMETPositionCollection">
-         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else ( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMETPositionCollection-1: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( empty(index-of(iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else ( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMETPositionCollection-1: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMETEvolvingCondition.surfaceVisibilityCause">
@@ -478,7 +478,7 @@
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMETEvolvingCondition-9">
       <sch:rule context="//iwxxm:AIRMETEvolvingCondition">
-         <sch:assert test="( if( exists(iwxxm:geometry//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:geometry//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">AIRMET.AIRMETEvolvingCondition-9: If a geometry of iwxxm:geometry is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:geometry//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( empty(index-of(iwxxm:geometry//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">AIRMET.AIRMETEvolvingCondition-9: If a geometry of iwxxm:geometry is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMETEvolvingCondition-3">
@@ -528,7 +528,7 @@
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-6">
       <sch:rule context="//iwxxm:AIRMET">
-         <sch:assert test="( if( exists(iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent) ) then( iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">AIRMET.AIRMET-6: If a geometry is defined for iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent) ) then( empty(index-of(iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">AIRMET.AIRMET-6: If a geometry is defined for iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-3">
@@ -548,7 +548,7 @@
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneForecastConditions-2">
       <sch:rule context="//iwxxm:TropicalCycloneForecastConditions">
-         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneForecastConditions-2: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( empty(index-of(iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneForecastConditions-2: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneForecastConditions-1">
@@ -573,12 +573,12 @@
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneObservedConditions-6">
       <sch:rule context="//iwxxm:TropicalCycloneObservedConditions">
-         <sch:assert test="( if( exists(iwxxm:cumulonimbusCloudLocation//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:cumulonimbusCloudLocation//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneObservedConditions-6: If a geometry of iwxxm:cumulonimbusCloudLocation is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:cumulonimbusCloudLocation//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( empty(index-of(iwxxm:cumulonimbusCloudLocation//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneObservedConditions-6: If a geometry of iwxxm:cumulonimbusCloudLocation is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneObservedConditions-5">
       <sch:rule context="//iwxxm:TropicalCycloneObservedConditions">
-         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneObservedConditions-5: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( empty(index-of(iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )5">TropicalCycloneAdvisory.TropicalCycloneObservedConditions-5: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneObservedConditions-2">
@@ -598,7 +598,7 @@
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshCloudObservedOrEstimated-3">
       <sch:rule context="//iwxxm:VolcanicAshCloudObservedOrEstimated">
-         <sch:assert test="( if( exists(iwxxm:ashCloudExtent//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:ashCloudExtent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshCloudObservedOrEstimated-3: If a geometry of iwxxm:ashCloudExtent is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:ashCloudExtent//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( empty(index-of(iwxxm:ashCloudExtent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshCloudObservedOrEstimated-3: If a geometry of iwxxm:ashCloudExtent is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshCloud-1">
@@ -618,7 +618,7 @@
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-3">
       <sch:rule context="//iwxxm:VolcanicAshAdvisory">
-         <sch:assert test="( if( exists(iwxxm:volcano//metce:position) ) then( iwxxm:volcano//metce:position//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-3: If a geometry is defined for iwxxm:volcano//metce:position with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:volcano//metce:position) ) then( empty(index-of(iwxxm:volcano//metce:position//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-3: If a geometry is defined for iwxxm:volcano//metce:position with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-1">
@@ -658,7 +658,7 @@
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshCloudForecast-1">
       <sch:rule context="//iwxxm:VolcanicAshCloudForecast">
-         <sch:assert test="( if( exists(iwxxm:ashCloudExtent//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:ashCloudExtent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshCloudForecast-1: If a geometry of iwxxm:ashCloudExtent is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:ashCloudExtent//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( empty(index-of(iwxxm:ashCloudExtent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshCloudForecast-1: If a geometry of iwxxm:ashCloudExtent is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshObservedOrEstimatedConditions-1">
@@ -683,7 +683,7 @@
    </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherRegion-1">
       <sch:rule context="//iwxxm:SpaceWeatherRegion">
-         <sch:assert test="( if( exists(iwxxm:location//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( iwxxm:location//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherRegion-1: If a geometry of iwxxm:location is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:location//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( empty(index-of(iwxxm:location//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherRegion-1: If a geometry of iwxxm:location is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherAdvisory-1">
