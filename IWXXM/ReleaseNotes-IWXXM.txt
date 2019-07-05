@@ -1,7 +1,13 @@
 =========================================
+3.0.0 New release candidate or finalized release 
+=========================================
+* Made schematron rule COLLECT.MB1 in iwxxm.sch less restrictive to allow different versions of IWXXM reports in a single collective
+  (issue #162)
+
+=========================================
 3.0.0 Release Candidate 3 - April 2019
 =========================================
-+ Fixed Volcanic Ash Advisory deficiencies (issue #153)
+* Fixed Volcanic Ash Advisory deficiencies (issue #153)
 + Added schematron rules in all reports to contrain the use of 2 dimensional coordinate systems that are compatible with WGS84 in
   spatial objects (issue #140)
 * Revised TAC-to-XML-Guidance.txt to improve readability
