@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    An example of a collective with multiple versions of METAR report
+-->
+<collect:MeteorologicalBulletin
+    xmlns:collect="http://def.wmo.int/collect/2014"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://def.wmo.int/collect/2014 http://schemas.wmo.int/collect/1.2/collect.xsd"
+    gml:id="uuid.6f353602-12a1-40a7-b6b5-3edb14c6241e">
+
+    <collect:meteorologicalInformation>
+
+        <iwxxm:METAR
+            xmlns:iwxxm="http://icao.int/iwxxm/3.0"
+            xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+            xmlns:gml="http://www.opengis.net/gml/3.2"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0/iwxxm.xsd"
+            gml:id="uuid.15ff064a-6dc4-41e0-bafa-8ee78ed4dc25"
+            reportStatus="NORMAL"
+            permissibleUsage="OPERATIONAL"
+            automatedStation="false">
+
+            <!-- the same as observationTime except for corrections/re-issuances -->
+            <iwxxm:issueTime>
+                <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+                    <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:issueTime>
+
+            <iwxxm:aerodrome>
+                <!-- The aerodrome at which this observation took place -->
+                <aixm:AirportHeliport gml:id="uuid.2cb49495-cbc5-4bc8-aaf6-334fd9268391">
+                    <aixm:timeSlice>
+                        <aixm:AirportHeliportTimeSlice gml:id="uuid.1c046a98-8714-4038-b5fc-46c97bac0f4f">
+                            <gml:validTime/>
+                            <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                            <aixm:designator>YUDO</aixm:designator>
+                            <aixm:name>DONLON/INTERNATIONAL</aixm:name>
+                            <aixm:locationIndicatorICAO>YUDO</aixm:locationIndicatorICAO>
+                        </aixm:AirportHeliportTimeSlice>
+                    </aixm:timeSlice>
+                </aixm:AirportHeliport>
+            </iwxxm:aerodrome>
+
+            <!-- time at which the observation occurred -->
+            <iwxxm:observationTime>
+                <gml:TimeInstant gml:id="uuid.63a9f14f-f5bd-4b7f-a5b4-df85ecad4c32">
+                    <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:observationTime>
+
+            <!-- NIL/missing reports do not have reported weather conditions -->
+            <iwxxm:observation nilReason="http://codes.wmo.int/common/nil/missing"/>
+
+        </iwxxm:METAR>
+
+    </collect:meteorologicalInformation>
+
+    <collect:meteorologicalInformation>
+      
+        <iwxxm:METAR
+            xmlns:iwxxm="http://icao.int/iwxxm/2.1"
+            xmlns:gml="http://www.opengis.net/gml/3.2"
+            xmlns:om="http://www.opengis.net/om/2.0"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:metce="http://def.wmo.int/metce/2013"
+            xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+            xmlns:sf="http://www.opengis.net/sampling/2.0"
+            xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:collect="http://def.wmo.int/collect/2014" xsi:schemaLocation="http://icao.int/iwxxm/2.1 http://schemas.wmo.int/iwxxm/2.1.1/iwxxm.xsd  http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd  http://www.opengis.net/om/2.0 http://schemas.opengis.net/om/2.0/observation.xsd  http://www.opengis.net/sampling/2.0 http://schemas.opengis.net/sampling/2.0/samplingFeature.xsd  http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd  http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd" gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8631d" permissibleUsage="OPERATIONAL" translatedBulletinID="SATH31VTCT150200" translatedBulletinReceptionTime="2019-06-15T01:59:25Z" translationCentreDesignator="VTBS" translationCentreName="BANGKOK" translationTime="2019-06-15T01:59:25Z" status="NORMAL" automatedStation="false">
+
+            <!-- METAR VTCT 150200Z 19007KT 9999 FEW025 29/24 Q1008 NOSIG= -->
+            <iwxxm:observation>
+                <om:OM_Observation gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8631e">
+                    <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeObservation" xlink:title="Aerodrome Observation" />
+
+		    <!-- time at which the observation actually occured -->
+                    <om:phenomenonTime>
+                        <gml:TimeInstant gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8631f">
+                            <gml:timePosition>2019-06-15T02:00:00Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:phenomenonTime>
+
+		    <!-- time at which the results of the observation were made available (up to 10 minutes later) -->
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8631c">
+                            <gml:timePosition>2019-06-15T01:59:00Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+
+		    <om:procedure>
+                        <metce:Process gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8631b">
+                            <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 3 TECHNICAL SPECIFICATIONS RELATED TO METEOROLOGICAL OBSERVATIONS AND REPORTS</gml:description>
+                        </metce:Process>
+                    </om:procedure>
+
+		    <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeObservation" />
+
+		    <om:featureOfInterest>
+                        <!-- featureOfInterest type and shape must refer to a point -->
+                        <sams:SF_SpatialSamplingFeature gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8631a">
+                            <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint" />
+                            <sf:sampledFeature>
+    
+                                <!-- The aerodrome at which this observation took place -->
+                                <aixm:AirportHeliport gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8632d">
+                                    <aixm:timeSlice>
+                                        <aixm:AirportHeliportTimeSlice gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8633d">
+                                            <gml:validTime />
+                                            <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                            <aixm:designator>VTCT</aixm:designator>
+                                            <aixm:name>CHIANG RAI INTL APT, THAILAND</aixm:name>
+                                            <aixm:locationIndicatorICAO>VTCT</aixm:locationIndicatorICAO>
+                                        </aixm:AirportHeliportTimeSlice>
+                                    </aixm:timeSlice>
+                                </aixm:AirportHeliport>
+                            </sf:sampledFeature>
+                            <sams:shape>
+                                <!-- This is where the observation took place, assumed to be representative of the entire aerodrome -->
+                                <gml:Point gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8634d" uomLabels="deg deg m" axisLabels="Lat Lon Altitude" srsDimension="3" srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
+                                    <gml:pos>19.9666 99.8833 390</gml:pos>
+                                </gml:Point>
+                            </sams:shape>
+                        </sams:SF_SpatialSamplingFeature>
+                    </om:featureOfInterest>
+
+                    <!-- The result of the observation -->
+                    <om:result>
+                        <iwxxm:MeteorologicalAerodromeObservationRecord gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8635d" cloudAndVisibilityOK="false">
+                            <iwxxm:airTemperature uom="Cel">29.0</iwxxm:airTemperature>
+                            <iwxxm:dewpointTemperature uom="Cel">24.0</iwxxm:dewpointTemperature>
+                            <iwxxm:qnh uom="hPa">1008</iwxxm:qnh>
+                            <iwxxm:surfaceWind>
+                                <iwxxm:AerodromeSurfaceWind variableWindDirection="false">
+                                    <iwxxm:meanWindDirection uom="deg">190</iwxxm:meanWindDirection>
+                                    <iwxxm:meanWindSpeed uom="[kn_i]">7.0</iwxxm:meanWindSpeed>
+                                </iwxxm:AerodromeSurfaceWind>
+                            </iwxxm:surfaceWind>
+                            <iwxxm:visibility>
+                                <iwxxm:AerodromeHorizontalVisibility>
+                                    <iwxxm:prevailingVisibility uom="m">10000</iwxxm:prevailingVisibility>
+                                    <iwxxm:prevailingVisibilityOperator>ABOVE</iwxxm:prevailingVisibilityOperator>
+                                </iwxxm:AerodromeHorizontalVisibility>
+                            </iwxxm:visibility>
+                            <iwxxm:cloud>
+                                <iwxxm:AerodromeObservedClouds>
+                                    <iwxxm:layer>
+                                        <iwxxm:CloudLayer>
+                                            <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/1" xlink:title="Few" />
+                                            <iwxxm:base uom="[ft_i]">2500</iwxxm:base>
+                                        </iwxxm:CloudLayer>
+                                    </iwxxm:layer>
+                                </iwxxm:AerodromeObservedClouds>
+                            </iwxxm:cloud>
+                        </iwxxm:MeteorologicalAerodromeObservationRecord>
+                    </om:result>
+
+                </om:OM_Observation>
+            </iwxxm:observation>
+
+            <iwxxm:trendForecast>
+                <om:OM_Observation gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8636d">
+                    <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/iwxxm/2.1/MeteorologicalAerodromeTrendForecast" />
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="uuid.6f2142a1-1dfe-413e-bfe6-a19e35f8637d">
+                            <gml:beginPosition>2019-06-15T02:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2019-06-15T04:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime xlink:href="#to-VTCT01-20190615020000Z" />
+                    <om:procedure xlink:href="#p-49-2-VTCT-10200-metar" />
+                    <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeTrendForecast" />
+                    <om:featureOfInterest xlink:href="#sampling-point-VTCT0200" />
+                    <om:result nilReason="http://codes.wmo.int/common/nil/noSignificantChange" />
+                </om:OM_Observation>
+            </iwxxm:trendForecast>
+
+        </iwxxm:METAR>
+
+    </collect:meteorologicalInformation>
+
+    <collect:bulletinIdentifier>A_LAYU31YUDO221630_C_YUDO_20120822163000.xml</collect:bulletinIdentifier>
+
+</collect:MeteorologicalBulletin>
