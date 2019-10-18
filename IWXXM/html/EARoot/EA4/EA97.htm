@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("", " : "))</script>  : Public   Note</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">2/16/2016 10:02:24 AM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">2/16/2016 10:02:24 AM</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">braeckel</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Difficulty:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj06" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Priority:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Multiplicity:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{EA4D301D-34A8-45c6-8018-E18812F8D885}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA92.htm">Context Diagram: AIRMET</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Examples of weather phenomena:&lt;br/&gt;&#160;&#160;&#160; - Widespread mean surface wind (SFC WSPD nn[n]MPS)&lt;br/&gt;&#160;&#160;&#160; - Surface visibility (SFC VIS nnnnM (mm))&lt;br/&gt;&#160;&#160;&#160; - Isolated thunderstorms (ISOL TS)&lt;br/&gt;&#160;&#160;&#160; - Occasional thunderstorms (OCNL TS)&lt;br/&gt;&#160;&#160;&#160; - Isolated thunderstorms with hail (ISOL TSGR)&lt;br/&gt;&#160;&#160;&#160; - Occasional thunderstorms with hail (OCNL TSGR)&lt;br/&gt;&#160;&#160;&#160; - Mountain obscuration (MT OBSC)&lt;br/&gt;&#160;&#160;&#160; - Broken cloud (BKN CLD)&lt;br/&gt;&#160;&#160;&#160; - Overcast cloud (OVC CLD)&lt;br/&gt;&#160;&#160;&#160; - Isolated cumulonimbus cloud (ISOL CB)&lt;br/&gt;&#160;&#160;&#160; - Occasional cumulonimbus cloud (OCNL CB)&lt;br/&gt;&#160;&#160;&#160; - Frequent cumulonimbus cloud (FRQ CB)&lt;br/&gt;&#160;&#160;&#160; - Isolated towering cumulus cloud (ISOL TCU)&lt;br/&gt;&#160;&#160;&#160; - Occasional towering cumulus cloud (OCNL TCU)&lt;br/&gt;&#160;&#160;&#160; - Frequent towering cumulus cloud (FRQ TCU)&lt;br/&gt;&#160;&#160;&#160; - Moderate icing (MOD ICE)&lt;br/&gt;&#160;&#160;&#160; - Moderate turbulence (MOD TURB)&lt;br/&gt;&#160;&#160;&#160; - Moderate mountain wave (MOD MTW)&lt;br/&gt;</div>
+
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

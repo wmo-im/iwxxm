@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Context Diagram: METAR/SPECI Observation</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA18.png" usemap="#EA18" border="0" />
+
+<MAP NAME="EA18">
+<area shape="rect" coords="311,594,634,718" href="EA45.htm" target="_self">
+<area shape="rect" coords="1077,906,1193,1004" href="EA49.htm" target="_self">
+<area shape="rect" coords="734,773,900,843" href="EA56.htm" target="_self">
+<area shape="rect" coords="171,465,337,535" href="EA51.htm" target="_self">
+<area shape="rect" coords="1162,512,1462,675" href="EA43.htm" target="_self">
+<area shape="rect" coords="10,292,364,416" href="EA44.htm" target="_self">
+<area shape="rect" coords="351,782,593,907" href="../EA8/EA177.htm" target="_self">
+<area shape="rect" coords="1002,719,1272,854" href="EA42.htm" target="_self">
+<area shape="rect" coords="1167,308,1462,472" href="EA47.htm" target="_self">
+<area shape="rect" coords="1071,10,1641,277" href="EA46.htm" target="_self">
+<area shape="rect" coords="237,32,650,247" href="EA41.htm" target="_self">
+<area shape="rect" coords="536,335,948,514" href="EA40.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Context Diagram: METAR/SPECI Observation : Class diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/2/2012 2:38:08 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/30/2018 8:57:33 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">braeckel</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{ECC0A1AD-8782-4651-ABBF-0F29D67FFF77}</td>
+		</tr>
+	</table>
+	
+</div>
+ 
+</body>
+</html>
