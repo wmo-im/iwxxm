@@ -105,8 +105,6 @@
                             </aixm:horizontalProjection>
                         </aixm:AirspaceVolume>
                     </iwxxm:geometry>
-                    <iwxxm:directionOfMotion xsi:nil="true" uom="N/A" nilReason="inapplicable"/>
-                    <iwxxm:speedOfMotion uom="[kn_i]">0</iwxxm:speedOfMotion>
                 </iwxxm:AIRMETEvolvingCondition>
             </iwxxm:member>
         </iwxxm:AIRMETEvolvingConditionCollection>
