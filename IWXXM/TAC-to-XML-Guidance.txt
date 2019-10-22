@@ -109,6 +109,9 @@ NSW - No weather of operational significance
 Vertical visibility "VV///"
   When the vertical visibility is not available for any reason, "verticalVisibility" shall be missing with no nilReason
   
+Maximum and minimum temperature forecasts - TXnn/nnnnZ TNnn/nnnnZ
+  As indicated in Annex 3 these shall be given in pairs.  If more than one pair of temperatures are provided and only one maximum or minimum is anticipated one may consider repeating this in both groups.
+  
 ==========================
 aixm:AirspaceVolume
 ==========================
@@ -133,7 +136,8 @@ Nnn[nn] Wnnn[nn] or Nnn[nn] Ennn[nn] or Snn[nn] Wnnn[nn] or Snn[nn] Ennn[nn]
 NO VA EXP - No volcanic ash expected
   The expected end of occurrence of volcanic ash shall be indicated with an empty "member" under "VolcanicAshSIGMETPositionCollection" with a nilReason of "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
 
-Stationary phenomenon shall be denoted with both iwxxm:directionOfMotion and iwxxm:speedOfMotion absent
+Movement or expected movement - STNR
+  Stationary phenomenon shall be denoted with both iwxxm:directionOfMotion and iwxxm:speedOfMotion absent
 
 ==========================
 Volcanic Ash Advisory
