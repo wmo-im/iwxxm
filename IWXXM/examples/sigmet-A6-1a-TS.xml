@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    An example of a SIGMET.  Original SIGMET from ICAO Annex 3 Example A6-1a:
-    
-      YUDD SIGMET 2 VALID 101200/101600 YUSO-
-      YUDD SHANLON FIR/UIR OBSC TS FCST S OF N54 AND E OF W012 TOP FL390 MOV E 20KT WKN
--->
 <iwxxm:SIGMET 
     xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
@@ -17,7 +11,6 @@
     reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL">
 
-    <!-- time at which the results of the observation were made available (issued) -->
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.7754148a-7769-4adc-93fc-d591bf19c715">
             <gml:timePosition>2012-08-10T12:00:00Z</gml:timePosition>
@@ -61,7 +54,6 @@
                     <aixm:type>OTHER:FIR_UIR</aixm:type>
                     <aixm:designator>YUDD</aixm:designator>
 		    <aixm:name>SHANLON FIR/UIR</aixm:name>
-                    <!-- FIR boundary can be reported in an aixm:geometryComponent -->
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
         </aixm:Airspace>
@@ -69,7 +61,6 @@
 
     <iwxxm:sequenceNumber>2</iwxxm:sequenceNumber>
 
-    <!-- Valid period for this report -->
     <iwxxm:validPeriod>
         <gml:TimePeriod gml:id="uuid.18e9591a-b3f0-4927-b723-b4f66d7c386f">
             <gml:beginPosition>2012-08-10T12:00:00Z</gml:beginPosition>
@@ -77,17 +68,13 @@
         </gml:TimePeriod>
     </iwxxm:validPeriod>
 
-    <!-- The significant meteorological phenomenon are listed in WMO No. 49 C.3.1. sub-clause 1.1.4 -->
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/OBSC_TS"/>
 
-    <!-- FCST S OF N54 AND E OF W012 TOP FL390 MOV E 20KT WKN -->
     <iwxxm:analysis>
         <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.06446fea-1935-4101-b3e8-74f286a9b74d" timeIndicator="FORECAST">
-            <!-- time of FCST conditions - if missing there is no FCST or OBS time -->
 	    <iwxxm:phenomenonTime nilReason="http://codes.wmo.int/common/nil/missing"/>
             <iwxxm:member>
                 <iwxxm:SIGMETEvolvingCondition gml:id="uuid.10f68782-703d-43a6-a4e5-af27469edc6e" intensityChange="WEAKEN">
-                    <!-- This shape describes: S OF N54 AND E OF W012 TOP FL390 -->
                     <iwxxm:geometry>
                         <aixm:AirspaceVolume gml:id="uuid.d4938cc8-c129-4cd7-bda5-588c434ef996">
                             <aixm:upperLimit uom="FL">390</aixm:upperLimit>
@@ -98,7 +85,6 @@
                                         <gml:PolygonPatch>
                                             <gml:exterior>
                                                 <gml:LinearRing>
-                                                    <!-- bounding polygon clipped to edge of FIR @ 50N and 08W (in clockwise order) -->
                                                     <gml:posList>
                                                         54.0 -12.0 54.0 -8.0 50.0 -8.0 50.0 -12.0 54.0 -12.0
                                                     </gml:posList>

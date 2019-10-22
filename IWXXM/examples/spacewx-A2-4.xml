@@ -1,20 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- A space weather advisory.  Original SWXC Advisory from ICAO Annex 3 Amd 77 Example A2-4:
-
-SWX ADVISORY
-DTG:                20161108/0000Z 
-SWXC:               DONLON
-ADVISORY NR:        2016/2
-SWX EFFECT:         RADIATION MOD
-NR RPLC :           2016/1
-OBS SWX:            08/0100Z HNH HSH E18000 - W18000 ABV FL340
-FCST SWX +6 HR:     08/0700Z HNH HSH E18000 - W18000 ABV FL340
-FCST SWX +12 HR:    08/1300Z HNH HSH E18000 - W18000 ABV FL340
-FCST SWX +18 HR:    08/1900Z HNH HSH E18000 - W18000 ABV FL340 
-FCST SWX +24 HR:    09/0100Z NO SWX EXP
-RMK:                RADIATION LVL EXCEEDED 100 PCT OF BACKGROUND LVL AT FL340 AND ABV. THE CURRENT EVENT HAS PEAKED AND LVL SLW RTN TO BACKGROUND LVL. SEE WWW.SPACEWEATHERPROVIDER.WEB 
-NXT ADVISORY:       NO FURTHER ADVISORIES
--->
 <iwxxm:SpaceWeatherAdvisory 
     xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
@@ -51,7 +35,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
     
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/RADIATION_MOD"/>
     
-    <!-- 20161108/0100Z HNH HSH E18000 - W18000 ABV FL350 -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.e10181fb-ff0a-40cf-865c-bb209fc49b90" timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
@@ -59,7 +42,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                     <gml:timePosition>2016-11-08T01:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <!-- HNH E18000 - W18000 ABV FL350 -->
             <iwxxm:region>
                 <iwxxm:SpaceWeatherRegion gml:id="uuid.c264db5c-3f0b-4444-ab5e-71f48a514644">
                     <iwxxm:location>
@@ -85,7 +67,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                     <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/HNH"/>
                 </iwxxm:SpaceWeatherRegion>
             </iwxxm:region>
-            <!-- HSH E18000 - W18000 ABV FL350 -->
             <iwxxm:region>
                 <iwxxm:SpaceWeatherRegion gml:id="uuid.00f9026a-845a-4472-acee-9ec5d7ba6839">
                     <iwxxm:location>
@@ -114,7 +95,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- 20121108/0700Z HNH HSH E18000 - W18000 ABV FL350 -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.96cfc825-3f5d-40f0-b9bd-46d790ee9f50" timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
@@ -122,14 +102,11 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                     <gml:timePosition>2016-11-08T07:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <!-- HNH E18000 - W18000 ABV FL350 - region unchanged -->
             <iwxxm:region xlink:href="#uuid.c264db5c-3f0b-4444-ab5e-71f48a514644"/>
-            <!-- HSH E18000 - W18000 ABV FL350 - region unchanged -->
             <iwxxm:region xlink:href="#uuid.00f9026a-845a-4472-acee-9ec5d7ba6839"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- 20161108/1300Z HNH HSH E18000 - W18000 ABV FL350 -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.8fc8a55b-e730-4d84-bb44-6e7b7dc3dd32" timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
@@ -137,14 +114,11 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                     <gml:timePosition>2016-11-08T13:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <!-- HNH E18000 - W18000 ABV FL350 - region unchanged -->
             <iwxxm:region xlink:href="#uuid.c264db5c-3f0b-4444-ab5e-71f48a514644"/>
-            <!-- HSH E18000 - W18000 ABV FL350 - region unchanged -->
             <iwxxm:region xlink:href="#uuid.00f9026a-845a-4472-acee-9ec5d7ba6839"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- 20161108/1900Z HNH HSH E18000 - W18000 ABV FL350 -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.6a1f263b-5aeb-4002-af1b-9c3ef2812f8d"  timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
@@ -152,14 +126,11 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
                     <gml:timePosition>2016-11-08T19:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <!-- HNH E18000 - W18000 ABV FL350 - region unchanged -->
             <iwxxm:region xlink:href="#uuid.c264db5c-3f0b-4444-ab5e-71f48a514644"/>
-            <!-- HSH E18000 - W18000 ABV FL350 - region unchanged -->
             <iwxxm:region xlink:href="#uuid.00f9026a-845a-4472-acee-9ec5d7ba6839"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- 20161109/0100Z NO SWX EXP -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.ba259410-18a3-4074-92e5-1fd09dccedd4" timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
@@ -171,7 +142,6 @@ NXT ADVISORY:       NO FURTHER ADVISORIES
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- Remark -->
     <iwxxm:remarks>RADIATION LVL EXCEEDED 100 PCT OF BACKGROUND LVL AT FL350 AND ABV. THE CURRENT EVENT HAS PEAKED AND LVL SLW RTN TO BACKGROUND LVL. SEE WWW.SPACEWEATHERPROVIDER.WEB</iwxxm:remarks>
     
     <iwxxm:nextAdvisoryTime nilReason="http://codes.wmo.ont/common/nil/inapplicable"/>

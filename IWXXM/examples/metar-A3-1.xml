@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    An example of a METAR.  Original METAR from ICAO Annex 3 Example A3-1:
-    
-      METAR YUDO 221630Z 24004MPS 0600 R12/1000U DZ FG SCT010 OVC020 17/16 Q1018
-      BECMG TL1700 0800 FG BECMG AT1800 9999 NSW
--->
 <iwxxm:METAR 
     xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -17,14 +11,12 @@
     permissibleUsage="OPERATIONAL"
     automatedStation="false">
 
-    <!-- the same as observationTime except for corrections --> 
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
             <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
         </gml:TimeInstant>
     </iwxxm:issueTime>
 
-    <!-- The aerodrome at which this observation took place -->
     <iwxxm:aerodrome>
         <aixm:AirportHeliport gml:id="uuid.143d63d9-15f5-442e-9bdc-1f3db93fb619">
             <aixm:timeSlice>
@@ -46,7 +38,6 @@
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
 
-    <!-- time at which the METAR phenomena were observed -->
     <iwxxm:observationTime>
         <gml:TimeInstant gml:id="uuid.85802aab-b4e5-4c4b-9303-10a02064e243">
             <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
@@ -108,7 +99,6 @@
 
     <iwxxm:trendForecast>
         <iwxxm:MeteorologicalAerodromeTrendForecast gml:id="uuid.46584004-93bf-4638-a8be-86a61bc85e0f" changeIndicator="BECOMING">
-            <!-- time at which the forecast conditions actually occur -->
             <iwxxm:phenomenonTime>
                 <gml:TimePeriod gml:id="uuid.819b0c7a-133f-4029-b1d9-451be77e3c5f">
                     <gml:beginPosition>2012-08-22T16:30:00Z</gml:beginPosition>
@@ -123,7 +113,6 @@
 
     <iwxxm:trendForecast>
         <iwxxm:MeteorologicalAerodromeTrendForecast gml:id="uuid.be66f283-6aae-4a84-bc84-3831c9b2e7ef" changeIndicator="BECOMING">
-            <!-- time at which the forecast conditions actually occur -->
             <iwxxm:phenomenonTime>
                 <gml:TimePeriod gml:id="uuid.d4d26581-aea9-4caf-abb3-0304faac191b">
                     <gml:beginPosition>2012-08-22T18:00:00Z</gml:beginPosition>

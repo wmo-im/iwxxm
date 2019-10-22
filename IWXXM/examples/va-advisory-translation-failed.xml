@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- A volcanic ash advisory that failed translation
-
-FVFE01 RJTD 230130
-VA ADVISORY
-
-DTG:                        20080923/0130Z
-VAAC:                       TOKYO
-VOLCANO:                    KARYMSKY 1000-13
-PSN:                        N5403 E15927
-INVALID INVALID INVALID
-
--->
 <iwxxm:VolcanicAshAdvisory 
      xmlns:xlink="http://www.w3.org/1999/xlink" 
      xmlns:gml="http://www.opengis.net/gml/3.2"

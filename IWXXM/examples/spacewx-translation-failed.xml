@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- An invalid space weather advisory that failed translation.
-    
-SWX ADVISORY
-DTG:                20161108/0100Z 
-SWXC:               DONLON
-ADVISORY NR:        2016/1
-INVALID INVALID INVALID
--->
 <iwxxm:SpaceWeatherAdvisory 
     xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"

@@ -1,19 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- A space weather advisory.  Original SWXC Advisory from ICAO Annex 3 Amd 77 Example A2-5:
-    
-SWX ADVISORY
-DTG:                20161108/0100Z 
-SWXC:               DONLON
-ADVISORY NR:        2016/1
-SWX EFFECT:         HF COM SEV
-OBS SWX:            08/0100Z DAYLIGHT SIDE
-FCST SWX +6 HR:     08/0700Z DAYLIGHT SIDE
-FCST SWX +12 HR:    08/1300Z DAYLIGHT SIDE
-FCST SWX +18 HR:    08/1900Z DAYLIGHT SIDE
-FCST SWX +24 HR:    09/0100Z DAYLIGHT SIDE
-RMK:                PERIODIC HF COM ABSORPTION OBS AND LIKELY TO CONT IN THE NEAR TERM. CMPL AND PERIODIC LOSS OF HF ON THE SUNLIT SIDE OF THE EARTH EXP. CONT HF COM DEGRADATION LIKELY OVER THE NXT 7 DAYS. SEE WWW.SPACEWEATHERPROVIDER.WEB 
-NXT ADVISORY:       20161108/0700Z
--->
 <iwxxm:SpaceWeatherAdvisory 
     xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
@@ -50,7 +35,6 @@ NXT ADVISORY:       20161108/0700Z
     
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SpaceWxPhenomena/HF_COM_SEV"/>
     
-    <!-- 08/0100Z DAYLIGHT SIDE -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.e10181fb-ff0a-40cf-865c-bb209fc49b90" timeIndicator="OBSERVATION">
             <iwxxm:phenomenonTime>
@@ -74,7 +58,6 @@ NXT ADVISORY:       20161108/0700Z
                                                                 <gml:CircleByCenterPoint numArc="1">
                                                                     <!-- Lat, lon subsolar point @ 2016-11-08T01Z -->
                                                                     <gml:pos>-16.6392 160.9368</gml:pos>
-                                                                    <!-- Calculated using Earth circumference of 21639 nautical miles -->
                                                                     <gml:radius uom="[nmi_i]">5409.75</gml:radius>
                                                                 </gml:CircleByCenterPoint>
                                                             </gml:segments>
@@ -94,7 +77,6 @@ NXT ADVISORY:       20161108/0700Z
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- 08/0700Z DAYLIGHT SIDE -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.96cfc825-3f5d-40f0-b9bd-46d790ee9f50" timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
@@ -137,7 +119,6 @@ NXT ADVISORY:       20161108/0700Z
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- 08/1300Z DAYLIGHT SIDE -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.8fc8a55b-e730-4d84-bb44-6e7b7dc3dd32" timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
@@ -159,7 +140,6 @@ NXT ADVISORY:       20161108/0700Z
                                                         <gml:Curve gml:id="uuid.08beec58-aeb2-4601-a2d7-c663296c4878">
                                                             <gml:segments>
                                                                 <gml:CircleByCenterPoint numArc="1">
-                                                                    <!-- Lat, lon subsolar point -->
                                                                     <gml:pos>-16.7832 -19.0539</gml:pos>
                                                                     <gml:radius uom="[nmi_i]">5409.75</gml:radius>
                                                                 </gml:CircleByCenterPoint>
@@ -180,7 +160,6 @@ NXT ADVISORY:       20161108/0700Z
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- 08/1900Z DAYLIGHT SIDE -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.6a1f263b-5aeb-4002-af1b-9c3ef2812f8d"  timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
@@ -202,7 +181,6 @@ NXT ADVISORY:       20161108/0700Z
                                                         <gml:Curve gml:id="uuid.616326dd-cc30-4420-b334-832b64a67578">
                                                             <gml:segments>
                                                                 <gml:CircleByCenterPoint numArc="1">
-                                                                    <!-- Lat, lon subsolar point -->
                                                                     <gml:pos>-16.8548 -109.0489</gml:pos>
                                                                     <gml:radius uom="[nmi_i]">5409.75</gml:radius>
                                                                 </gml:CircleByCenterPoint>
@@ -223,7 +201,6 @@ NXT ADVISORY:       20161108/0700Z
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- 09/0100Z DAYLIGHT SIDE -->
     <iwxxm:analysis>
         <iwxxm:SpaceWeatherAnalysis gml:id="uuid.ba259410-18a3-4074-92e5-1fd09dccedd4" timeIndicator="FORECAST">
             <iwxxm:phenomenonTime>
@@ -266,7 +243,6 @@ NXT ADVISORY:       20161108/0700Z
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
-    <!-- Remark -->
     <iwxxm:remarks>PERIODIC HF COM ABSORPTION OBS AND LIKELY TO CONT IN THE NEAR TERM. CMPL AND PERIODIC LOSS OF HF ON THE SUNLIT SIDE OF THE EARTH EXP. CONT HF COM DEGRADATION LIKELY OVER THE NXT 7 DAYS. SEE WWW.SPACEWEATHERPROVIDER.WEB</iwxxm:remarks>
     
     <iwxxm:nextAdvisoryTime>

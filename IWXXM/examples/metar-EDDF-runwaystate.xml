@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    An example of a METAR EDDF from 2013-03-12T05:50:00Z
-    resulting METAR (FM 15):
-    METAR EDDF 120550Z 03015KT 1400 R07R/P2000N R07C/P2000N R07L/1900U SN DRSN BR VV/// M04/M04 Q1000 R07R/11//90 R07C/15//90 R07L/15//90 BECMG 4000 NSW
--->
 <iwxxm:METAR 
     xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -16,7 +11,6 @@
     permissibleUsage="OPERATIONAL"
     automatedStation="false" >
     
-    <!-- the same as observationTime except for corrections/re-issuances --> 
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
             <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>
@@ -24,7 +18,6 @@
     </iwxxm:issueTime>
     
     <iwxxm:aerodrome>
-        <!-- The aerodrome at which this observation took place -->
         <aixm:AirportHeliport gml:id="uuid.124c4e83-3137-450e-aab3-3259d92282fd">
             <aixm:timeSlice>
                 <aixm:AirportHeliportTimeSlice gml:id="uuid.7287c97c-321e-42df-8e50-d6068c6e12b0">

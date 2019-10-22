@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    An example of a NIL TAF (which can be used independently) packaged into a bulletin:
-
-      FTYU31 YUDO 160000
-      TAF YUDO 160000Z NIL
--->
 <collect:MeteorologicalBulletin
     xmlns:collect="http://def.wmo.int/collect/2014"	
     xmlns:gml="http://www.opengis.net/gml/3.2"

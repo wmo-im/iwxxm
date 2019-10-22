@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-EGGX SIGMET 4 VALID 251600/252200 EGRR - 
-EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 1600Z SFC/FL550 N6000 W01150 - N5900 W01300 - N6000 W01600 - N6000 W01150 NC FCST 2200Z SFC/FL550 N6000 W01200 - N5800 W01400 - N6000 W01535 - N6000 W01200
--->
-<!-- note: year and month of this SIGMET unknown; 2018 and 07 used in place of actual values -->
 <iwxxm:VolcanicAshSIGMET 
     xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
@@ -59,7 +54,6 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                     <aixm:type>FIR</aixm:type>
                     <aixm:designator>EGGX</aixm:designator>
                     <aixm:name>SHANWICK OCEANIC FIR</aixm:name>
-                    <!-- FIR boundary can be reported in an aixm:geometryComponent -->
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
         </aixm:Airspace>
@@ -87,7 +81,6 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                 <iwxxm:SIGMETEvolvingCondition gml:id="uuid.b3f301d8-e8b4-4d24-91b1-78f52672edcb" intensityChange="NO_CHANGE">
                     <iwxxm:geometry>
                         <aixm:AirspaceVolume gml:id="uuid.6a77deae-62d5-43c0-99df-c40a6ddf4e3f">
-                            <!-- omitted lower-limit implies that the volcanic ash cloud extends to ground/sea surface -->
                             <aixm:upperLimit uom="FL">550</aixm:upperLimit>
                             <aixm:upperLimitReference>STD</aixm:upperLimitReference>
                             <aixm:horizontalProjection>
@@ -96,7 +89,6 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                                         <gml:PolygonPatch>
                                             <gml:exterior>
                                                 <gml:LinearRing>
-                                                    <!-- bounding polygon clipped to edge of FIR @ 60N -->
                                                     <gml:posList>
                                                         60.0 -11.5
                                                         59.0 -13.0
@@ -133,7 +125,6 @@ EGGX SHANWICK OCEANIC FIR VA ERUPTION MT HEKLA PSN N6359 W01940 VA CLD OBS AT 16
                                         <gml:PolygonPatch>
                                             <gml:exterior>
                                                 <gml:LinearRing>
-                                                    <!-- bounding polygon clipped to edge of FIR @ 60N -->
                                                     <gml:posList>
                                                         60.0 -12.0
                                                         58.0 -14.0
