@@ -76,9 +76,9 @@
                 <iwxxm:AerodromeCloud>
                     <iwxxm:layer>
                         <iwxxm:CloudLayer>
-                            <iwxxm:amount xlink:href="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/BKN"/>
+                            <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"/>
                             <iwxxm:base uom="[ft_i]">500</iwxxm:base>
-                            <iwxxm:cloudType xlink:href="http://codes.wmo.int/49-2/SigConvectiveCloudType/CB"/>
+                            <iwxxm:cloudType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-012/9"/>
                         </iwxxm:CloudLayer>
                     </iwxxm:layer>
                 </iwxxm:AerodromeCloud>
