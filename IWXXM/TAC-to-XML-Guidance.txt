@@ -190,8 +190,8 @@ Tropical Cyclone Advisory
 'NO MSG EXP'
   A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
 
-Missing mandatory item
-  If any mandatory item(s) in the iwxxm:TropicalCycloneForecastCondition element is (are) not provided, then the parent iwxxm:forecast element shall have nilReason set to 'http://codes.wmo.int/common/nil/nothingOfOperationalSignificance'
+Tropical cyclone forecast to dissipate
+  If a tropical cyclone is forecast to dissipate at the first forecast instance iwxxm:forecast element shall be nil with nilReason set to 'http://codes.wmo.int/common/nil/nothingOfOperationalSignificance'.  If the tropical cyclone is expected to dissipate after the first forecast instance, the rest of the iwxxm:forecast elements should be omitted.
 
 ==========================
 Space Weather Advisory
