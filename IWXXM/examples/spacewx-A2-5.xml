@@ -56,7 +56,6 @@
                                                         <gml:Curve gml:id="uuid.b7fa4047-2e78-431c-ba95-3fdf6343e3b5">
                                                             <gml:segments>
                                                                 <gml:CircleByCenterPoint numArc="1">
-                                                                    <!-- Lat, lon subsolar point @ 2016-11-08T01Z -->
                                                                     <gml:pos>-16.6392 160.9368</gml:pos>
                                                                     <gml:radius uom="[nmi_i]">5409.75</gml:radius>
                                                                 </gml:CircleByCenterPoint>
@@ -98,7 +97,6 @@
                                                         <gml:Curve gml:id="uuid.bcf98ca2-0fb0-44b9-880d-7f45a284d1b3">
                                                             <gml:segments>
                                                                 <gml:CircleByCenterPoint numArc="1">
-                                                                    <!-- Lat, lon subsolar point -->
                                                                     <gml:pos>-16.7114 70.9413</gml:pos>
                                                                     <gml:radius uom="[nmi_i]">5409.75</gml:radius>
                                                                 </gml:CircleByCenterPoint>
@@ -222,7 +220,6 @@
                                                         <gml:Curve gml:id="uuid.e0025db0-7a34-49da-a66c-17757d9e1a45">
                                                             <gml:segments>
                                                                 <gml:CircleByCenterPoint numArc="1">
-                                                                    <!-- Lat, lon subsolar point -->
                                                                     <gml:pos>-16.9261 160.9563</gml:pos>
                                                                     <gml:radius uom="[nmi_i]">5409.75</gml:radius>
                                                                 </gml:CircleByCenterPoint>

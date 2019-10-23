@@ -83,7 +83,6 @@
         </iwxxm:TropicalCycloneObservedConditions>
     </iwxxm:observation>
 
-    <!-- 6-hour forecast at 25/2200Z -->
     <iwxxm:forecast>
         <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.75adc697-201c-485d-8356-1845ad46ae77">
             <iwxxm:phenomenonTime>
@@ -100,7 +99,6 @@
         </iwxxm:TropicalCycloneForecastConditions>
     </iwxxm:forecast>
 
-    <!-- 12 hour forecast at 26/0400Z -->
     <iwxxm:forecast>
         <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.13515111-4e81-4b60-85a7-eedc2b5f874f">
             <iwxxm:phenomenonTime>
@@ -117,7 +115,6 @@
         </iwxxm:TropicalCycloneForecastConditions>
     </iwxxm:forecast>
 
-    <!-- 18-hour forecast -->
     <iwxxm:forecast>
         <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.6c9b5a04-8be5-4a3e-8cb8-590e6a67d159">
             <iwxxm:phenomenonTime>
@@ -134,7 +131,6 @@
         </iwxxm:TropicalCycloneForecastConditions>
     </iwxxm:forecast>
 
-    <!-- 24-hour forecast -->
     <iwxxm:forecast>
         <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.708829ef-4ca3-4229-b57c-5f1c937c3b2b">
             <iwxxm:phenomenonTime>
