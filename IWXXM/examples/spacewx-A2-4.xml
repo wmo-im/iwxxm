@@ -144,6 +144,6 @@
     
     <iwxxm:remarks>RADIATION LVL EXCEEDED 100 PCT OF BACKGROUND LVL AT FL350 AND ABV. THE CURRENT EVENT HAS PEAKED AND LVL SLW RTN TO BACKGROUND LVL. SEE WWW.SPACEWEATHERPROVIDER.WEB</iwxxm:remarks>
     
-    <iwxxm:nextAdvisoryTime nilReason="http://codes.wmo.ont/common/nil/inapplicable"/>
+    <iwxxm:nextAdvisoryTime nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
     
 </iwxxm:SpaceWeatherAdvisory>

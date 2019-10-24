@@ -63,7 +63,7 @@
             </iwxxm:phenomenonTime>
             <iwxxm:ashCloud>
                 <iwxxm:VolcanicAshCloudObservedOrEstimated gml:id="uuid.4dd54d1a-9a18-4065-b9e9-a0f25ced8f17">
-                    <iwxxm:ashCloudExtent nilReason="unknown">
+                    <iwxxm:ashCloudExtent>
                         <aixm:AirspaceVolume gml:id="uuid.ca49fe24-81a5-4591-9d59-df21ea49d252">
                             <aixm:upperLimit uom="FL">300</aixm:upperLimit>
                             <aixm:upperLimitReference>STD</aixm:upperLimitReference>

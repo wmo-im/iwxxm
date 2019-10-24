@@ -147,7 +147,7 @@
         </iwxxm:TropicalCycloneForecastConditions>
     </iwxxm:forecast>
 
-    <iwxxm:remarks nilReason="http://codes.wmo.int/common/nil/inappropriate"/>
+    <iwxxm:remarks nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
 
     <iwxxm:nextAdvisoryTime>
         <gml:TimeInstant gml:id="uuid.002b0056-d267-47b7-a9ef-4c7ca70aacd9">

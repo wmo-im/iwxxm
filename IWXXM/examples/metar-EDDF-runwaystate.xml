@@ -151,7 +151,7 @@
 
     <iwxxm:trendForecast>
         <iwxxm:MeteorologicalAerodromeTrendForecast gml:id="uuid.83222aab-9e5f-4296-a7f5-3d7e2af4ae45" changeIndicator="BECOMING" cloudAndVisibilityOK="false">
-            <iwxxm:phenomenonTime nilReason="unknown"/>
+            <iwxxm:phenomenonTime nilReason="http://codes.wmo.int/common/nil/unknown"/>
             <iwxxm:prevailingVisibility uom="m">4000</iwxxm:prevailingVisibility>
             <iwxxm:weather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:MeteorologicalAerodromeTrendForecast>

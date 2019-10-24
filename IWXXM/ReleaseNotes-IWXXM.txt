@@ -1,7 +1,16 @@
 =========================================
+3.0.0 Release Candidate 4 - October 2019 
+=========================================
+* Fixed WMO Code Registry mistakes, enabled schematron rules for checking nilReason codes, and revised examples failing
+  validation (issues #155 and #175)
+* Revised TAC-to-XML-Guidance.txt to introduce addtional guidances (issue #183)
+* Extracted TACs from examples and put them into separate files to reduce the likelihood that real messages will include TAC
+  in a comment, or include wrong TAC as a result of following examples published by WMO (issue #170)
+
+=========================================
 3.0.0 Release Candidate 3 - April 2019
 =========================================
-+ Fixed Volcanic Ash Advisory deficiencies (issue #153)
+* Fixed Volcanic Ash Advisory deficiencies (issue #153)
 + Added schematron rules in all reports to contrain the use of 2 dimensional coordinate systems that are compatible with WGS84 in
   spatial objects (issue #140)
 * Revised TAC-to-XML-Guidance.txt to improve readability
