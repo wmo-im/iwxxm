@@ -8,7 +8,6 @@
     xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0/iwxxm.xsd"
     gml:id="uuid.ce3b61b9-d360-4da1-83b9-67e668406869" reportStatus="NORMAL" automatedStation="false" permissibleUsage="OPERATIONAL">
     
-    <!-- the same as observationTime except for corrections/re-issuances --> 
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
             <gml:timePosition>2007-07-25T12:00:00Z</gml:timePosition>
@@ -16,7 +15,6 @@
     </iwxxm:issueTime>
     
     <iwxxm:aerodrome>
-        <!-- The aerodrome at which this observation took place -->
         <aixm:AirportHeliport gml:id="uuid.249725b7-1d1f-4431-8ff0-bbbe65c5f5c0">
             <aixm:timeSlice>
                 <aixm:AirportHeliportTimeSlice gml:id="uuid.c69cbe8a-81da-4ddc-a4a8-995e052327d2">
@@ -25,7 +23,6 @@
                     <aixm:designator>LKKV</aixm:designator>
                     <aixm:name>KARLOVY VARY INTERNATIONAL</aixm:name>
                     <aixm:locationIndicatorICAO>LKKV</aixm:locationIndicatorICAO>
-                    <!-- ARP not known by issuer -->
                 </aixm:AirportHeliportTimeSlice>
             </aixm:timeSlice>
         </aixm:AirportHeliport>
@@ -50,7 +47,6 @@
             </iwxxm:surfaceWind>
 	        <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/VCSH"/>
             <iwxxm:recentWeather xlink:href="http://codes.wmo.int/306/4678/TS"/>
-            <!-- WS R18C -->
             <iwxxm:windShear>
                 <iwxxm:AerodromeWindShear>
                     <iwxxm:runway>

@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    An example of a NIL METAR (which can be used independently) packaged into a bulletin:
-
-      SAYU31 YUDO 221630
-      METAR YUDO 221630Z NIL
--->
 <collect:MeteorologicalBulletin
     xmlns:collect="http://def.wmo.int/collect/2014"
     xmlns:gml="http://www.opengis.net/gml/3.2"
@@ -25,7 +19,6 @@
             permissibleUsage="OPERATIONAL"
             automatedStation="false">
             
-            <!-- the same as observationTime except for corrections/re-issuances --> 
             <iwxxm:issueTime>
                 <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
                     <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
@@ -33,7 +26,6 @@
             </iwxxm:issueTime>
 
             <iwxxm:aerodrome>
-                <!-- The aerodrome at which this observation took place -->
                 <aixm:AirportHeliport gml:id="uuid.2cb49495-cbc5-4bc8-aaf6-334fd9268391">
                     <aixm:timeSlice>
                         <aixm:AirportHeliportTimeSlice gml:id="uuid.1c046a98-8714-4038-b5fc-46c97bac0f4f">
@@ -47,14 +39,12 @@
                 </aixm:AirportHeliport>
             </iwxxm:aerodrome>
 
-            <!-- time at which the observation occurred -->
             <iwxxm:observationTime>
                 <gml:TimeInstant gml:id="uuid.63a9f14f-f5bd-4b7f-a5b4-df85ecad4c32">
                     <gml:timePosition>2012-08-22T16:30:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:observationTime>
             
-            <!-- NIL/missing reports do not have reported weather conditions -->
             <iwxxm:observation nilReason="http://codes.wmo.int/common/nil/missing"/>
 
         </iwxxm:METAR>

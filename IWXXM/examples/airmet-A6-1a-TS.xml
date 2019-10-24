@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-    An example of AIRMET.  Original AIRMET from ICAO Annex 3 Example A6-1:
-    
-    YUDD AIRMET 1 VALID 151520/151800 YUSO- 
-    YUDD SHANLON FIR ISOL TS 
-    OBS N OF S50 TOP ABV FL100 STNR WKN
--->
 <iwxxm:AIRMET 
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
@@ -60,7 +53,6 @@
                           <aixm:type>FIR</aixm:type>
                           <aixm:designator>YUCC</aixm:designator>
                           <aixm:name>AMSWELL FIR</aixm:name>
-                          <!-- FIR boundary can be reported in an aixm:geometryComponent -->
                     </aixm:AirspaceTimeSlice>
               </aixm:timeSlice>
         </aixm:Airspace>
@@ -77,9 +69,7 @@
     
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/AirWxPhenomena/ISOL_TS"/>
     
-    <!-- OBS N OF S50 TOP ABV FL100 STNR WKN -->
     <iwxxm:analysis>
-        <!-- N OF S50 TOP ABV FL100 STNR WKN -->
         <iwxxm:AIRMETEvolvingConditionCollection gml:id="uuid.d61fb5e7-b55e-462e-9e2b-0cb8dc366064" timeIndicator="OBSERVATION">
 	    <iwxxm:phenomenonTime nilReason="http://codes.wmo.int/common/nil/missing"/>
             <iwxxm:member>
@@ -95,7 +85,6 @@
                                         <gml:PolygonPatch>
                                             <gml:exterior>
                                                 <gml:LinearRing>
-                                                    <!-- bounding polygon N of S50 clipped to edge of FIR -->
                                                     <gml:posList>-50.0 50.0 -50.0 70.0 -40.0 70.0 -40.0 50.0 -50.0 50.0</gml:posList>
                                                 </gml:LinearRing>
                                             </gml:exterior>

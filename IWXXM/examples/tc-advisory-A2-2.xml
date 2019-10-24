@@ -1,29 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- A tropical cyclone advisory.  Original TC Advisory from ICAO Annex 3 Example A2-2:
-
-TC ADVISORY
-
-DTG:                        20040925/1900Z
-TCAC:                       YUFO
-TC:                         GLORIA
-ADVISORY NR:                2004/13
-OBS PSN:                    25/1800Z N2706 W07306
-CB:                         WI 250NM OF TC CENTRE
-MOV:                        NW 20KMH
-C:                          965HPA
-MAX WIND:                   22MPS
-FCST PSN +6 HR:             25/2200Z N2748 W07350
-FCST MAX WIND +6 HR:        22MPS
-FCST PSN +12 HR:            26/0400Z N2830 W07430
-FCST MAX WIND +12 HR:       22MPS
-FCST PSN +18 HR:            26/1000Z N2852 W07500
-FCST MAX WIND +18 HR:       21MPS
-FCST PSN +24 HR:            26/1600Z N2912 W07530
-FCST MAX WIND +24 HR:       20MPS
-RMK:                        NIL
-NXT MSG:                    20040925/2000Z
-
--->
 <iwxxm:TropicalCycloneAdvisory 
    xmlns:gml="http://www.opengis.net/gml/3.2"
    xmlns:iwxxm="http://icao.int/iwxxm/3.0"
@@ -108,7 +83,6 @@ NXT MSG:                    20040925/2000Z
         </iwxxm:TropicalCycloneObservedConditions>
     </iwxxm:observation>
 
-    <!-- 6-hour forecast at 25/2200Z -->
     <iwxxm:forecast>
         <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.75adc697-201c-485d-8356-1845ad46ae77">
             <iwxxm:phenomenonTime>
@@ -125,7 +99,6 @@ NXT MSG:                    20040925/2000Z
         </iwxxm:TropicalCycloneForecastConditions>
     </iwxxm:forecast>
 
-    <!-- 12 hour forecast at 26/0400Z -->
     <iwxxm:forecast>
         <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.13515111-4e81-4b60-85a7-eedc2b5f874f">
             <iwxxm:phenomenonTime>
@@ -142,7 +115,6 @@ NXT MSG:                    20040925/2000Z
         </iwxxm:TropicalCycloneForecastConditions>
     </iwxxm:forecast>
 
-    <!-- 18-hour forecast -->
     <iwxxm:forecast>
         <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.6c9b5a04-8be5-4a3e-8cb8-590e6a67d159">
             <iwxxm:phenomenonTime>
@@ -159,7 +131,6 @@ NXT MSG:                    20040925/2000Z
         </iwxxm:TropicalCycloneForecastConditions>
     </iwxxm:forecast>
 
-    <!-- 24-hour forecast -->
     <iwxxm:forecast>
         <iwxxm:TropicalCycloneForecastConditions gml:id="uuid.708829ef-4ca3-4229-b57c-5f1c937c3b2b">
             <iwxxm:phenomenonTime>

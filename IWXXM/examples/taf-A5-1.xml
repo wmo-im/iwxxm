@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    An example of a TAF.  Original TAF from ICAO Annex 3 Example A5-1:
-    
-      TAF YUDO 151800Z 1600/1618 13005MPS 9000 BKN020 BECMG 1606/1608 SCT015CB BKN020
-      TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020 FM161230 15004MPS 9999 BKN020 
--->
 <iwxxm:TAF 
     xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
     xmlns:gml="http://www.opengis.net/gml/3.2"
@@ -16,9 +10,7 @@
     reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL">
 
-    <!-- The aerodrome to which this TAF applies -->
     <iwxxm:issueTime>
-        <!-- Original TAF: 151800Z -->
         <gml:TimeInstant gml:id="uuid.0c02ab83-22e8-4a66-b115-35544e7078f1">
             <gml:timePosition>2012-08-15T18:00:00Z</gml:timePosition>
         </gml:TimeInstant>
@@ -45,9 +37,7 @@
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
 
-    <!-- The time at which this TAF is intended to be used -->
     <iwxxm:validPeriod>
-        <!-- Original TAF: 1600/1618 -->
         <gml:TimePeriod gml:id="uuid.ed5d465f-51fb-4ecc-834a-2ee26bb1196f">
             <gml:beginPosition>2012-08-16T00:00:00Z</gml:beginPosition>
             <gml:endPosition>2012-08-16T18:00:00Z</gml:endPosition>
@@ -55,11 +45,8 @@
     </iwxxm:validPeriod>
 
     <iwxxm:baseForecast>
-       <!-- Original TAF: 13005MPS 9000 BKN020 -->
         <iwxxm:MeteorologicalAerodromeForecast gml:id="uuid.13048235-8f8a-4587-a6be-e8ce99f4525c" cloudAndVisibilityOK="false">
-            <!-- Base forecast phenomena occur throughout the valid period of the TAF -->
             <iwxxm:phenomenonTime xlink:href="#uuid.ed5d465f-51fb-4ecc-834a-2ee26bb1196f"/>
-            <!-- base forecast conditions are valid throughout the TAF valid period -->
             <iwxxm:prevailingVisibility uom="m">9000</iwxxm:prevailingVisibility>
             <iwxxm:surfaceWind>
                 <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
@@ -80,7 +67,6 @@
         </iwxxm:MeteorologicalAerodromeForecast>
     </iwxxm:baseForecast>
 
-    <!-- Original TAF: BECMG 1606/1608 SCT015CB BKN020 -->
     <iwxxm:changeForecast>
         <iwxxm:MeteorologicalAerodromeForecast gml:id="uuid.fe2635c8-3994-4423-b79f-123593fa2b55" changeIndicator="BECOMING" cloudAndVisibilityOK="false">
             <iwxxm:phenomenonTime>
@@ -109,7 +95,6 @@
         </iwxxm:MeteorologicalAerodromeForecast>
     </iwxxm:changeForecast>
 
-    <!-- Original TAF: TEMPO 1608/1612 17006G12MPS 1000 TSRA SCT010CB BKN020 -->
     <iwxxm:changeForecast>
         <iwxxm:MeteorologicalAerodromeForecast gml:id="uuid.8985ba4e-f6f0-4dc2-8dd7-2cbf86a64056" changeIndicator="TEMPORARY_FLUCTUATIONS" cloudAndVisibilityOK="false">
             <iwxxm:phenomenonTime>
@@ -119,7 +104,6 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             <iwxxm:prevailingVisibility uom="m">1000</iwxxm:prevailingVisibility>
-            <!-- Original TAF: 17006G12MPS -->
             <iwxxm:surfaceWind>
                 <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
                     <iwxxm:meanWindDirection uom="deg">170</iwxxm:meanWindDirection>
@@ -127,10 +111,8 @@
                     <iwxxm:windGustSpeed uom="m/s">12</iwxxm:windGustSpeed>
                 </iwxxm:AerodromeSurfaceWindForecast>
             </iwxxm:surfaceWind>
-            <!-- Original TAF: TSRA -->
             <iwxxm:weather xlink:href="http://codes.wmo.int/306/4678/TSRA"/>
             <iwxxm:cloud>
-                <!-- Original TAF: SCT010CB BKN020 -->
                 <iwxxm:AerodromeCloudForecast gml:id="uuid.5d76e06c-220d-4491-83e8-439108891615">
                     <iwxxm:layer>
                         <iwxxm:CloudLayer>
@@ -150,7 +132,6 @@
         </iwxxm:MeteorologicalAerodromeForecast>
     </iwxxm:changeForecast>
 
-    <!-- Original TAF: FM161230 15004MPS 9999 BKN020 -->
     <iwxxm:changeForecast>
         <iwxxm:MeteorologicalAerodromeForecast gml:id="uuid.aeadfb00-4cfa-46b5-af21-1e79e4b6b1b5" changeIndicator="FROM" cloudAndVisibilityOK="false">
             <iwxxm:phenomenonTime>

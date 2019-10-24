@@ -1,13 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- A tropical cyclone advisory which failed translation:
-  
-TC ADVISORY
-
-DTG:                        20040925/1600Z
-TCAC:                       YUFO
-TC:                         GLORIA
-INVALID INVALID INVALID
--->
 <iwxxm:TropicalCycloneAdvisory 
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:gml="http://www.opengis.net/gml/3.2"

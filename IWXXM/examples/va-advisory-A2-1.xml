@@ -1,34 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- A volcanic ash advisory.  Original VA Advisory from ICAO Annex 3 Example A2-1:
-
-FVFE01 RJTD 230130
-VA ADVISORY
-
-DTG:                        20080923/0130Z
-VAAC:                       TOKYO
-VOLCANO:                    KARYMSKY 1000-13
-PSN:                        N5403 E15927
-AREA:                       RUSSIA
-SUMMIT ELEV:                1536M
-ADVISORY NR:                2008/4
-INFO SOURCE:                MTSAT-1R KVERT KEMSD
-AVIATION COLOUR CODE:       RED
-ERUPTION DETAILS:           ERUPTION AT 20080923/0000Z FL300 REPORTED
-OBS VA DTG:                 23/0100Z
-OBS VA CLD:                 FL250/300 N5400 E15930 N5400 E16100 N5300 E15945 MOV SE 20KT
-                            SFC/FL200 N5130 E16130 N5130 E16230 N5230 E16230 N5230 E16130
-                            MOV SE 15KT
-FCST VA CLD +6 HR:          23/0700Z FL250/350 N5130 E16030 N5130 E16230 N5330 E16230 N5330
-                            E16030 SFC/FL180 N4830 E16330 N4830 E16630 N5130 E16630 N5130
-                            E16330
-FCST VA CLD +12 HR:         23/1300Z SFC/FL270 N4830 E16130 N4830 E16600 N5300 E16600 N5300
-                            E16130
-FCST VA CLD +18 HR:         23/1900Z NO VA EXP
-RMK:                        LATEST REP FM KVERT (0120Z) INDICATES ERUPTION HAS CEASED.
-                            TWO DISPERSING VA CLD ARE EVIDENT ON SATELLITE IMAGERY
-NXT ADVISORY:               20080923/0730Z
-
--->
 <iwxxm:VolcanicAshAdvisory 
    xmlns:xlink="http://www.w3.org/1999/xlink" 
    xmlns:gml="http://www.opengis.net/gml/3.2"
@@ -91,7 +61,6 @@ NXT ADVISORY:               20080923/0730Z
                     <gml:timePosition>2008-09-23T01:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <!-- FL250/300 N5400 E15930 N5400 E16100 N5300 E15945 MOV SE 20KT -->
             <iwxxm:ashCloud>
                 <iwxxm:VolcanicAshCloudObservedOrEstimated gml:id="uuid.4dd54d1a-9a18-4065-b9e9-a0f25ced8f17">
                     <iwxxm:ashCloudExtent nilReason="unknown">
@@ -119,7 +88,6 @@ NXT ADVISORY:               20080923/0730Z
                     <iwxxm:speedOfMotion uom="[kn_i]">20</iwxxm:speedOfMotion>
                 </iwxxm:VolcanicAshCloudObservedOrEstimated>
             </iwxxm:ashCloud>
-            <!-- SFC/FL200 N5130 E16130 N5130 E16230 N5230 E16230 N5230 E16130 MOV SE 15KT -->
             <iwxxm:ashCloud>
                 <iwxxm:VolcanicAshCloudObservedOrEstimated gml:id="uuid.1f272bcf-ff35-45fe-9206-7963d574c752">
                     <iwxxm:ashCloudExtent>
@@ -150,9 +118,7 @@ NXT ADVISORY:               20080923/0730Z
         </iwxxm:VolcanicAshObservedOrEstimatedConditions>
     </iwxxm:observation>
 
-    <!-- 23/0700Z -->
     <iwxxm:forecast>
-        <!-- FL250/350 N5130 E16030 N5130 E16230 N5330 E16230 N5330 E16030 -->
         <iwxxm:VolcanicAshForecastConditions gml:id="uuid.55a27198-f4e9-4a97-8e9d-0af6185f1b43" status="PROVIDED">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.7d89ec7f-6266-47d0-8f97-af0cd0905e9a">
@@ -184,7 +150,6 @@ NXT ADVISORY:               20080923/0730Z
                     </iwxxm:ashCloudExtent>
                 </iwxxm:VolcanicAshCloudForecast>
             </iwxxm:ashCloud>
-            <!-- SFC/FL180 N4830 E16330 N4830 E16630 N5130 E16630 N5130 E16330 -->
             <iwxxm:ashCloud>
                 <iwxxm:VolcanicAshCloudForecast gml:id="uuid.29dff823-5132-42ea-bcda-6e94a6b64983">
                     <iwxxm:ashCloudExtent>
@@ -213,9 +178,7 @@ NXT ADVISORY:               20080923/0730Z
         </iwxxm:VolcanicAshForecastConditions>
     </iwxxm:forecast>
 
-    <!-- 23/1300Z -->
     <iwxxm:forecast>
-        <!-- SFC/FL270 N4830 E16130 Ð N4830 E16600 Ð N5300 E16600 Ð N5300 E16130  -->
         <iwxxm:VolcanicAshForecastConditions gml:id="uuid.6493c86f-6917-47f0-9749-19d656b1bd1f" status="PROVIDED">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.2e92686b-2a88-44e3-a1ef-fed2cdf71d76">
@@ -250,7 +213,6 @@ NXT ADVISORY:               20080923/0730Z
         </iwxxm:VolcanicAshForecastConditions>
     </iwxxm:forecast>
 
-    <!-- 23/1900Z NO VA EXP -->
     <iwxxm:forecast>
         <iwxxm:VolcanicAshForecastConditions gml:id="uuid.e453c86f-6912-47f0-9649-19d656b1bd1f" status="NO_VOLCANIC_ASH_EXPECTED">
             <iwxxm:phenomenonTime>
@@ -261,7 +223,6 @@ NXT ADVISORY:               20080923/0730Z
         </iwxxm:VolcanicAshForecastConditions>
     </iwxxm:forecast>
 
-    <!-- Remark -->
     <iwxxm:remarks>LATEST REP FM KVERT (0120Z) INDICATES ERUPTION HAS CEASED.  TWO DISPERSING VA CLD ARE EVIDENT ON SATELLITE IMAGERY</iwxxm:remarks>
 
     <iwxxm:nextAdvisoryTime>

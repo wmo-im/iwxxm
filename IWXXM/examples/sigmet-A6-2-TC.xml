@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    An example of a SIGMET.  Original SIGMET from ICAO Annex 3 Example A6-2:
-
-      YUCC SIGMET 3 VALID 251600/252200 YUDO-
-      YUCC AMSWELL FIR TC GLORIA PSN N2706 W07306 CB OBS AT 1600Z WI 250NM OF TC CENTRE TOP FL500 NC
-      FCST AT 2200Z TC CENTRE PSN N2740 W07345
--->
 <iwxxm:TropicalCycloneSIGMET 
     xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
@@ -18,7 +11,6 @@
     reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL">
 
-    <!-- time at which the results of the observation were made available (issued) -->
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.f598d1e0-8e2d-4af1-a4ee-83d04b37f19e">
             <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
@@ -62,7 +54,6 @@
                     <aixm:type>FIR</aixm:type>
                     <aixm:designator>YUCC</aixm:designator>
                     <aixm:name>AMSWELL FIR</aixm:name>
-                    <!-- FIR boundary can be reported in an aixm:geometryComponent -->
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
         </aixm:Airspace>
@@ -70,7 +61,6 @@
 
     <iwxxm:sequenceNumber>3</iwxxm:sequenceNumber>
 
-    <!-- Valid period for this report -->
     <iwxxm:validPeriod>
         <gml:TimePeriod gml:id="uuid.d26ff125-63ea-4cd8-b2cf-75629b9ecbe3">
             <gml:beginPosition>2012-08-25T16:00:00Z</gml:beginPosition>
@@ -78,14 +68,10 @@
         </gml:TimePeriod>
     </iwxxm:validPeriod>
 
-    <!-- The significant meteorological phenomenon are listed in WMO No. 49 C.3.1. sub-clause 1.1.4 -->
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/TC"/>
 
-    <!-- OBS AT 1600Z -->
     <iwxxm:analysis>
-        <!-- CB OBS AT 1600Z WI 250NM OF TC CENTRE TOP FL500 NC -->
         <iwxxm:TropicalCycloneSIGMETEvolvingConditionCollection gml:id="uuid.89147e42-7ce0-493e-b81d-6ba6a989e8a1" timeIndicator="OBSERVATION" tropicalCycloneId="uuid.c529d539-2fa9-428d-937a-867e50056f16">
-            <!-- time of observed conditions -->
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.2f6d2369-b614-4522-8c76-bc44d770ce5e">
                     <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
@@ -93,8 +79,6 @@
             </iwxxm:phenomenonTime>
             <iwxxm:member>
                 <iwxxm:SIGMETEvolvingCondition gml:id="uuid.c0a23437-9eb7-4e6b-82f2-6fbd5757440c" intensityChange="NO_CHANGE">
-                    <!-- This shape describes:
-                        N2706 W07306 CB TOP FL500 WI 150NM OF CENTRE i.e., a 150NM radius around -73.10 (lon), 27.10 (lat) -->
                     <iwxxm:geometry>
                         <aixm:AirspaceVolume gml:id="uuid.08077323-fbd5-4e04-a787-fccff0543f0a">
                             <aixm:upperLimit uom="FL">500</aixm:upperLimit>
@@ -133,17 +117,14 @@
         </iwxxm:TropicalCycloneSIGMETEvolvingConditionCollection>
     </iwxxm:analysis>
 
-    <!-- FCST AT 2200Z TC CENTRE PSN N2740 W07345 -->
     <iwxxm:forecastPositionAnalysis>
         <iwxxm:TropicalCycloneSIGMETPositionCollection gml:id="uuid.59824907-bcbe-476d-8151-8743e4a1b7db" tropicalCycloneId="uuid.c529d539-2fa9-428d-937a-867e50056f16">
-            <!-- time of forecast conditions -->
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.aab0df0d-6ee9-4ff8-82b2-06a2a42ab0a9">
                     <gml:timePosition>2012-08-25T22:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:member>
-                <!-- TC CENTRE N2740 W07345 -->
                 <iwxxm:SIGMETPosition gml:id="uuid.338354de-7634-4fca-ac75-3675cb592284">
                     <iwxxm:geometry nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
                 </iwxxm:SIGMETPosition>

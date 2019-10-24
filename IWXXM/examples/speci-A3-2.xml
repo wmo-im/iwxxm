@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    An example of a SPECI.  Original SPECI from ICAO Annex 3 Example A3-2:
-    
-      SPECI YUDO 151115Z 05025G37KT 3000 1200NE+TSRA BKN005CB 25/22 Q1008 TEMPO TL1200 0600
-        BECMG AT1200 8000 NSW NSC
--->
 <iwxxm:SPECI 
     xmlns:iwxxm="http://icao.int/iwxxm/3.0" 
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -17,7 +11,6 @@
     permissibleUsage="OPERATIONAL"
     automatedStation="false">
     
-    <!-- the same as observationTime except for corrections --> 
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
             <gml:timePosition>2012-08-15T11:15:00Z</gml:timePosition>
@@ -25,7 +18,6 @@
     </iwxxm:issueTime>
     
     <iwxxm:aerodrome>
-        <!-- The aerodrome at which this observation took place -->
         <aixm:AirportHeliport gml:id="uuid.84a7fdc6-ff14-470c-a4b4-587688f02049">
             <aixm:timeSlice>
                 <aixm:AirportHeliportTimeSlice gml:id="uuid.fa9959d1-8c30-4b1e-b854-bc0fcaed64b9">
@@ -100,7 +92,6 @@
 
     <iwxxm:trendForecast>
         <iwxxm:MeteorologicalAerodromeTrendForecast gml:id="uuid.d3071042-2012-48c7-9e4e-df49ffc8a3b9" changeIndicator="BECOMING" cloudAndVisibilityOK="false">
-            <!-- time at which the forecast conditions actually occur -->
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.9c559e62-d2f6-47df-b8cf-4b85b966d362">
                     <gml:timePosition>2012-08-15T12:00:00Z</gml:timePosition>
