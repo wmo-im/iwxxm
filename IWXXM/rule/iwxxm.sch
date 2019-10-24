@@ -781,6 +781,11 @@
          <sch:assert test="( if( exists(iwxxm:windGustSpeed) and not(iwxxm:windGustSpeed/@xsi:nil = 'true') ) then( (iwxxm:windGustSpeed/@uom = 'm/s') or (iwxxm:windGustSpeed/@uom = '[kn_i]') ) else( true() ) )">Common.AerodromeSurfaceWindTrendForecast-3: windGustSpeed shall be reported in metres per second (m/s) or knots ([kn_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="IWXXM.nilReasonCheck">
+      <sch:rule context="//iwxxm:*">
+         <sch:assert test="( if( exists(@nilReason) ) then( @nilReason = document('codes.wmo.int-common-nil.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] ) else( true() ) )">IWXXM.nilReasonCheck: nilReason attributes should be a member of http://codes.wmo.int/common/nil</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="IWXXM.ExtensionAlwaysLast">
       <sch:rule context="//iwxxm:extension">
          <sch:assert test="following-sibling::*[1][self::iwxxm:extension] or not(following-sibling::*)">IWXXM.ExtensionAlwaysLast: Extension elements should be the last elements in their parents</sch:assert>
