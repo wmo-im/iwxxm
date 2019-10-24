@@ -82,13 +82,13 @@
                 <iwxxm:AerodromeCloud>
                     <iwxxm:layer>
                         <iwxxm:CloudLayer>
-                            <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/2"/>
+                            <iwxxm:amount xlink:href="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/SCT"/>
                             <iwxxm:base uom="[ft_i]">1000</iwxxm:base>
                         </iwxxm:CloudLayer>
                     </iwxxm:layer>
                     <iwxxm:layer>
                         <iwxxm:CloudLayer>
-                            <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/4"/>
+                            <iwxxm:amount xlink:href="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/OVC"/>
                             <iwxxm:base uom="[ft_i]">2000</iwxxm:base>
                         </iwxxm:CloudLayer>
                     </iwxxm:layer>
