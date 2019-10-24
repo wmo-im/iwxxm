@@ -85,6 +85,9 @@ Observed quantities with a nilReason
 Variations from mean wind direction
   In TAC the observed two extreme directions between which the wind has varied shall be given for dndndnVdxdxdx in clockwise order.  Care should be taken that "extremeClockwiseWindDirection" refers to the extreme clockwise direction from the wind which should be dxdxdx in the TAC report.  Similarly the corresponding part for "extremeCounterClockwiseWindDirection" is dndndn.
   
+Missing Runway Visual Range
+  If the aerodrome is not equipped with RVR sensors and prevailing horizontal visibility is below 1500 metres, iwxxm:rvr shall be empty with nilReason of "http://codes.wmo.int/common/nil/missing" and xsi:nil attribute set to "true". If the aerodrome is equipped with RVR sensors but are inoperative and prevailing horizontal visibility is below 1500 metres, iwxxm:rvr shall be empty with nilReason of "http://codes.wmo.int/common/nil/notObservable" and xsi:nil attribute set to "true".
+
 ==========================
 TAF
 ==========================
@@ -105,6 +108,9 @@ NSW - No weather of operational significance
 
 Vertical visibility "VV///"
   When the vertical visibility is not available for any reason, "verticalVisibility" shall be missing with no nilReason
+  
+Maximum and minimum temperature forecasts - TXnn/nnnnZ TNnn/nnnnZ
+  As indicated in Annex 3 these shall be given in pairs.  If more than one pair of temperatures are provided and only one maximum or minimum is anticipated one may consider repeating this in both groups.
   
 ==========================
 aixm:AirspaceVolume
@@ -129,6 +135,9 @@ Nnn[nn] Wnnn[nn] or Nnn[nn] Ennn[nn] or Snn[nn] Wnnn[nn] or Snn[nn] Ennn[nn]
 
 NO VA EXP - No volcanic ash expected
   The expected end of occurrence of volcanic ash shall be indicated with an empty "member" under "VolcanicAshSIGMETPositionCollection" with a nilReason of "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
+
+Movement or expected movement - STNR
+  Stationary phenomenon shall be denoted with both iwxxm:directionOfMotion and iwxxm:speedOfMotion absent
 
 ==========================
 Volcanic Ash Advisory
@@ -180,7 +189,10 @@ Tropical Cyclone Advisory
   
 'NO MSG EXP'
   A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
-  
+
+Tropical cyclone forecast to dissipate
+  If a tropical cyclone is expected to dissipate the respective iwxxm:forecast element(s) shall be nil with nilReason set to 'http://codes.wmo.int/common/nil/nothingOfOperationalSignificance'.
+
 ==========================
 Space Weather Advisory
 ==========================
