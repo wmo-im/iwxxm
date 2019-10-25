@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--====================================================================-->
 <!--AIXM 5.1.1 (weather profile v5.1.1b)-->
 <!--This AIXM profile is developed for the weather domain, and -->
@@ -6,10 +6,10 @@
 <!--  AirportHeliport, Airspace, AirspaceVolume, AirspaceLayer, Runway, RunwayDirection, and Unit -->
 <!--www.aixm.aero-->
 <!--Originally Released:  November 2018-->
-<!--Weather Profile Released:  2019-->
+<!--Weather Profile Released: 2019-->
 <!--====================================================================-->
 <!--
-		Copyright (c) 2018, EUROCONTROL & FAA
+		Copyright (c) 2019, EUROCONTROL & FAA
 		=====================================
 		All rights reserved.
 		Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -421,6 +421,7 @@ CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
 	<group name="ElevatedPointPropertyGroup">
 		<sequence>
 			<element name="elevation" type="aixm:ValDistanceVerticalType" nillable="true" minOccurs="0"/>
+			<element name="verticalDatum" type="aixm:CodeVerticalDatumType" nillable="true" minOccurs="0"/>
 			<element name="verticalAccuracy" type="aixm:ValDistanceType" nillable="true" minOccurs="0"/>
 		</sequence>
 	</group>
