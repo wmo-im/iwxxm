@@ -65,16 +65,23 @@ def run(schemaPath, outputDir):
                 typeToCodeList[complexTypeName]=codeListPath
 
                 # Download the RDF representation of this vocabulary
-                headers = {"Accept": "application/rdf+xml"}
-                print '\tDownloading %s in RDF format' % codeListPath
+                download_codelist(codeListPath, outputDir)
+    # Also download http://codes.wmo.int/common/nil for nilReason instances, not referenced by an xsd
+    # see https://github.com/wmo-im/iwxxm/issues/193
+    download_codelist('http://codes.wmo.int/common/nil', outputDir)
+    
+def download_codelist(codeListPath, outputDir):
+    '''Download the RDF representation of this vocabulary'''
+    headers = {"Accept": "application/rdf+xml"}
+    print '\tDownloading %s in RDF format' % codeListPath
 
-                r = requests.get(codeListPath, headers=headers)
-                localCodeListFile=os.path.join(outputDir,parseLocalCodeListFile(codeListPath))
-                if r.status_code == 200:
-                    with open(localCodeListFile, 'w') as fhandle:
-                        fhandle.write(r.text.encode('utf-8'))
-                else:
-                    print 'ERROR: Could not load code list at %s!' % codeListPath
+    r = requests.get(codeListPath, headers=headers)
+    localCodeListFile=os.path.join(outputDir,parseLocalCodeListFile(codeListPath))
+    if r.status_code == 200:
+        with open(localCodeListFile, 'w') as fhandle:
+            fhandle.write(r.text.encode('utf-8'))
+    else:
+        print 'ERROR: Could not load code list at %s!' % codeListPath
 
 
 def parseLocalCodeListFile(codeListHttpPath):
