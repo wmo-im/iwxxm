@@ -1,4 +1,9 @@
 =========================================
+3.0.0 - 7 November 2019 
+=========================================
+Publishing of finalised release
+
+=========================================
 3.0.0 Release Candidate 4 - October 2019 
 =========================================
 * Fixed WMO Code Registry mistakes, enabled schematron rules for checking nilReason codes, and revised examples failing
