@@ -2,7 +2,7 @@
 /documentation export-ignore
 /externalSchema export-ignore
 /IWXXM/XMI export-ignore
-.* export-ignore
-*.xml export-ignore
-*.md export-ignore
-LATEST_VERSION export-ignore
+/.* export-ignore
+/*.xml export-ignore
+/*.md export-ignore
+/LATEST_VERSION export-ignore
