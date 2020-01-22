@@ -1,4 +1,12 @@
 =========================================
+3.0.0 Development version 
+=========================================
+* Fixed the issue regarding schematron rule COMMON.REPORT-4 counting length of extension across reports instead of within a
+  report (issue #197)
+* Fixed the issue regarding schematron rule COLLECT.MB1 being overly restrictive (issue #162)
+* Corrected the Volcanic Ash Advisory TAC message A2-1 in the examples
+
+=========================================
 3.0.0 - 7 November 2019 
 =========================================
 Publishing of finalised release
