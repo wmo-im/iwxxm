@@ -13,7 +13,7 @@
    <sch:ns prefix="reg" uri="http://purl.org/linked-data/registry#"/>
    <sch:pattern id="COLLECT.MB1">
       <sch:rule context="//collect:MeteorologicalBulletin">
-         <sch:assert test="count(distinct-values(for $item in //collect:meteorologicalInformation/child::node() return(node-name($item))))eq 1">COLLECT.MB1: All meteorologicalInformation instances in MeteorologicalBulletin must be of the same type</sch:assert>
+         <sch:assert test="count(distinct-values(for $item in //collect:meteorologicalInformation/child::* return(local-name($item))))eq 1">COLLECT.MB1: All meteorologicalInformation instances in MeteorologicalBulletin must be of the same type</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState-1">

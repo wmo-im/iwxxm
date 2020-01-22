@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">12/26/2018 12:59:50 AM</td>
+			<td class="ObjectDetailsValue">12/16/2019 1:22:14 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -799,7 +799,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints601" onclick="parent.toggleDiv('detailsDIVConstraints601','DetailsImageConstraints601')" />Details:
 							<div id="detailsDIVConstraints601" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: Common.Report-4&lt;br/&gt;Description: Total size of extension content must not exceed 5000 characters per report&lt;br/&gt;Assertion: ( if( exists(//iwxxm:extension) ) then( sum(//iwxxm:extension/.//text()/string-length(.) ) +sum( //iwxxm:extension/.//element()/( (string-length( name() ) * 2 ) + 5 ) ) +sum( //iwxxm:extension/.//@*/( 1 + string-length(name()) + 3 + string-length(.) ) ) +sum( //iwxxm:extension/.//comment()/( string-length( . ) + 7 )) lt 5000 ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: Common.Report-4&lt;br/&gt;Description: Total size of extension content must not exceed 5000 characters per report&lt;br/&gt;Assertion: ( if( exists(.//iwxxm:extension) ) then( sum(.//iwxxm:extension/.//text()/string-length(.) ) +sum(.//iwxxm:extension/.//element()/( (string-length( name() ) * 2 ) + 5 ) ) +sum(.//iwxxm:extension/.//@*/( 1 + string-length(name()) + 3 + string-length(.) ) ) +sum(.//iwxxm:extension/.//comment()/( string-length( . ) + 7 )) lt 5000 ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
