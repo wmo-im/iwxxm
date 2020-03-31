@@ -196,6 +196,9 @@ Tropical cyclone forecast to dissipate
 ==========================
 Space Weather Advisory
 ==========================
+'DAYLIGHT SIDE'
+  DAYLIGHT SIDE shall be indicated with <gml:CircleByCenterPoint> with <gml:pos> set to the latitude and longitude of the sub-solar point at the observed or forecast time (UTC), <gml:radius> shall be of sufficient length to circumscribe the sun-lit portion of the Earth, approximately 10200 km.
+
 'NIL' remarks
   NIL remarks shall be indicated with "remarks" nilReason set to "http://codes.wmo.int/common/nil/missing"
   
