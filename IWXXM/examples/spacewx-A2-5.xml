@@ -57,7 +57,7 @@
                                                             <gml:segments>
                                                                 <gml:CircleByCenterPoint numArc="1">
                                                                     <gml:pos>-16.64 160.94</gml:pos>
-                                                                    <gml:radius uom="km">10200</gml:radius>
+                                                                    <gml:radius uom="km">10100</gml:radius>
                                                                 </gml:CircleByCenterPoint>
                                                             </gml:segments>
                                                         </gml:Curve>
@@ -98,7 +98,7 @@
                                                             <gml:segments>
                                                                 <gml:CircleByCenterPoint numArc="1">
                                                                     <gml:pos>-16.71 70.94</gml:pos>
-                                                                    <gml:radius uom="km">10200</gml:radius>
+                                                                    <gml:radius uom="km">10100</gml:radius>
                                                                 </gml:CircleByCenterPoint>
                                                             </gml:segments>
                                                         </gml:Curve>
@@ -139,7 +139,7 @@
                                                             <gml:segments>
                                                                 <gml:CircleByCenterPoint numArc="1">
                                                                     <gml:pos>-16.78 -19.05</gml:pos>
-                                                                    <gml:radius uom="km">10200</gml:radius>
+                                                                    <gml:radius uom="km">10100</gml:radius>
                                                                 </gml:CircleByCenterPoint>
                                                             </gml:segments>
                                                         </gml:Curve>
@@ -180,7 +180,7 @@
                                                             <gml:segments>
                                                                 <gml:CircleByCenterPoint numArc="1">
                                                                     <gml:pos>-16.86 -109.05</gml:pos>
-                                                                    <gml:radius uom="km">10200</gml:radius>
+                                                                    <gml:radius uom="km">10100</gml:radius>
                                                                 </gml:CircleByCenterPoint>
                                                             </gml:segments>
                                                         </gml:Curve>
@@ -221,7 +221,7 @@
                                                             <gml:segments>
                                                                 <gml:CircleByCenterPoint numArc="1">
                                                                     <gml:pos>-16.93 160.96</gml:pos>
-                                                                    <gml:radius uom="km">10200</gml:radius>
+                                                                    <gml:radius uom="km">10100</gml:radius>
                                                                 </gml:CircleByCenterPoint>
                                                             </gml:segments>
                                                         </gml:Curve>
