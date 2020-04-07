@@ -1,52 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<iwxxm:METAR 
-    xmlns:iwxxm="http://icao.int/iwxxm/3.0"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0/iwxxm.xsd"
-    gml:id="uuid.96a5ba6a-47ce-4c10-bc56-355a32dcf22c" 
-    reportStatus="NORMAL" 
-    permissibleUsage="OPERATIONAL"
-    automatedStation="false" >
+<?xml version='1.0' encoding='UTF-8'?>
+<iwxxm:METAR automatedStation="false" gml:id="uuid.db6e50c2-dc0f-4ca9-81f9-a6b8cc5d9f1e"
+    permissibleUsage="OPERATIONAL" reportStatus="NORMAL" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/3.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 https://schemas.wmo.int/iwxxm/3.0/iwxxm.xsd">
     
     <iwxxm:issueTime>
-        <gml:TimeInstant gml:id="uuid.e5460ae4-98a4-48fa-bbfc-21799896f1f2">
+        <gml:TimeInstant gml:id="uuid.ea606522-cf50-4874-adc3-83cc85b12b1c">
             <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>
         </gml:TimeInstant>
     </iwxxm:issueTime>
     
     <iwxxm:aerodrome>
-        <aixm:AirportHeliport gml:id="uuid.124c4e83-3137-450e-aab3-3259d92282fd">
+        <aixm:AirportHeliport gml:id="uuid.75c0be2b-600a-4530-a595-7a7494a09ff7">
             <aixm:timeSlice>
-                <aixm:AirportHeliportTimeSlice gml:id="uuid.7287c97c-321e-42df-8e50-d6068c6e12b0">
+                <aixm:AirportHeliportTimeSlice gml:id="uuid.0b1a5cc8-e8de-4572-b356-f64edee542df">
                     <gml:validTime/>
                     <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                     <aixm:designator>EDDF</aixm:designator>
                     <aixm:name>FRANKFURT AM MAIN INTERNATIONAL</aixm:name>
                     <aixm:locationIndicatorICAO>EDDF</aixm:locationIndicatorICAO>
                     <aixm:ARP>
-                        <aixm:ElevatedPoint gml:id="uuid.68f196c8-6889-4b5b-8d79-1f1216ceb72f" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-			    <gml:pos>50.0464 8.5986</gml:pos>
+                        <aixm:ElevatedPoint axisLabels="Lat Long"
+                            gml:id="uuid.7e308d55-3419-4169-8861-2a88af3b90ac" srsDimension="2"
+                            srsName="https://www.opengis.net/def/crs/EPSG/0/4326">
+                            <gml:pos>50.0464 8.5986</gml:pos>
                             <aixm:elevation uom="M">110</aixm:elevation>
-                            <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
-			</aixm:ElevatedPoint>
+                            <aixm:verticalDatum>EGM_96</aixm:verticalDatum>                            
+                        </aixm:ElevatedPoint>
                     </aixm:ARP>
                 </aixm:AirportHeliportTimeSlice>
             </aixm:timeSlice>
         </aixm:AirportHeliport>
     </iwxxm:aerodrome>
     
-    <iwxxm:observationTime>
-        <gml:TimeInstant gml:id="uuid.064bf483-439b-4e40-91b8-8aadd0638d92">
-            <gml:timePosition>2013-03-12T05:50:00Z</gml:timePosition>
-        </gml:TimeInstant>
-    </iwxxm:observationTime>
+    <iwxxm:observationTime xlink:href="#uuid.ea606522-cf50-4874-adc3-83cc85b12b1c"/>
     
     <iwxxm:observation>
-        <iwxxm:MeteorologicalAerodromeObservation cloudAndVisibilityOK="false"
-            gml:id="uuid.5980a075-9a27-4da7-b657-8c8f7032f24c">
+        <iwxxm:MeteorologicalAerodromeObservation cloudAndVisibilityOK="false" gml:id="uuid.2a2e1661-ef66-4ac6-b8aa-4c6c19049ad1">
             <iwxxm:airTemperature uom="Cel">-4</iwxxm:airTemperature>
             <iwxxm:dewpointTemperature uom="Cel">-4</iwxxm:dewpointTemperature>
             <iwxxm:qnh uom="hPa">1000</iwxxm:qnh>
@@ -63,21 +54,51 @@
             </iwxxm:visibility>
             <iwxxm:rvr>
                 <iwxxm:AerodromeRunwayVisualRange pastTendency="NO_CHANGE">
-                    <iwxxm:runway xlink:href="#uuid.f1ff030c-1e4c-40a5-be9a-fbb714369f7f" />
+                    <iwxxm:runway>
+                        <aixm:RunwayDirection gml:id="uuid.0dba9513-c9e7-43ff-9f12-f62a8c4b9495">
+                            <aixm:timeSlice>
+                                <aixm:RunwayDirectionTimeSlice gml:id="uuid.fec8ed70-2f3e-4900-8a48-3224008ebdb5">
+                                    <gml:validTime/>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                    <aixm:designator>07R</aixm:designator>
+                                </aixm:RunwayDirectionTimeSlice>
+                            </aixm:timeSlice>
+                        </aixm:RunwayDirection>
+                    </iwxxm:runway>
                     <iwxxm:meanRVR uom="m">2000</iwxxm:meanRVR>
                     <iwxxm:meanRVROperator>ABOVE</iwxxm:meanRVROperator>
                 </iwxxm:AerodromeRunwayVisualRange>
             </iwxxm:rvr>
             <iwxxm:rvr>
                 <iwxxm:AerodromeRunwayVisualRange pastTendency="NO_CHANGE">
-                    <iwxxm:runway xlink:href="#uuid.46f64d66-03fb-4469-85a2-ab712aa8a7ff" />
+                    <iwxxm:runway>
+                        <aixm:RunwayDirection gml:id="uuid.b9c98d32-f1d2-4f7e-a9d1-198c1fb92d34">
+                            <aixm:timeSlice>
+                                <aixm:RunwayDirectionTimeSlice gml:id="uuid.fa8878bb-6227-431a-919a-4a4f8d0f0867">
+                                    <gml:validTime/>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                    <aixm:designator>07C</aixm:designator>
+                                </aixm:RunwayDirectionTimeSlice>
+                            </aixm:timeSlice>
+                        </aixm:RunwayDirection>
+                    </iwxxm:runway>
                     <iwxxm:meanRVR uom="m">2000</iwxxm:meanRVR>
                     <iwxxm:meanRVROperator>ABOVE</iwxxm:meanRVROperator>
                 </iwxxm:AerodromeRunwayVisualRange>
             </iwxxm:rvr>
             <iwxxm:rvr>
                 <iwxxm:AerodromeRunwayVisualRange pastTendency="UPWARD">
-                    <iwxxm:runway xlink:href="#uuid.fa34a796-e0d1-409d-a544-90d6787d46ca" />
+                    <iwxxm:runway>
+                        <aixm:RunwayDirection gml:id="uuid.89a31aad-e811-426f-ad63-e9c6f8aa7f2c">
+                            <aixm:timeSlice>
+                                <aixm:RunwayDirectionTimeSlice gml:id="uuid.acab14f6-06ee-4d38-a7ac-68183e5ceccc">
+                                    <gml:validTime/>
+                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                                    <aixm:designator>07L</aixm:designator>
+                                </aixm:RunwayDirectionTimeSlice>
+                            </aixm:timeSlice>
+                        </aixm:RunwayDirection>
+                    </iwxxm:runway>
                     <iwxxm:meanRVR uom="m">1900</iwxxm:meanRVR>
                 </iwxxm:AerodromeRunwayVisualRange>
             </iwxxm:rvr>
@@ -86,75 +107,45 @@
             <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/BR"/>
             <iwxxm:cloud>
                 <iwxxm:AerodromeCloud>
-                  <iwxxm:verticalVisibility uom="N/A" xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/notObservable"/>
+                    <iwxxm:verticalVisibility nilReason="http://codes.wmo.int/common/nil/notObservable" uom="N/A" xsi:nil="true"/>
                 </iwxxm:AerodromeCloud>
             </iwxxm:cloud>
-	        <iwxxm:runwayState>
-                <iwxxm:AerodromeRunwayState>
-                    <iwxxm:runway>
-                        <aixm:RunwayDirection  gml:id="uuid.f1ff030c-1e4c-40a5-be9a-fbb714369f7f">
-                            <aixm:timeSlice>
-                                <aixm:RunwayDirectionTimeSlice gml:id="uuid.0c695aa2-df15-421d-a616-ca510b356098">
-                                    <gml:validTime/>
-                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                                    <aixm:designator>07R</aixm:designator>
-                                    <aixm:trueBearing>70</aixm:trueBearing>
-                                </aixm:RunwayDirectionTimeSlice>
-                            </aixm:timeSlice>
-                        </aixm:RunwayDirection>
-                    </iwxxm:runway>
+            <iwxxm:runwayState>
+                <iwxxm:AerodromeRunwayState allRunways="false">
+                    <iwxxm:runway xlink:href="#uuid.0dba9513-c9e7-43ff-9f12-f62a8c4b9495"/>
                     <iwxxm:depositType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-086/1"/>
                     <iwxxm:contamination xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-087/1"/>
+                    <iwxxm:depthOfDeposit nilReason="http://codes.wmo.int/common/nil/notObservable" uom="N/A" xsi:nil="true"/>
                     <iwxxm:estimatedSurfaceFrictionOrBrakingAction xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-089/90"/>
                 </iwxxm:AerodromeRunwayState>
             </iwxxm:runwayState>
             <iwxxm:runwayState>
-                <iwxxm:AerodromeRunwayState>
-                    <iwxxm:runway>
-                        <aixm:RunwayDirection  gml:id="uuid.46f64d66-03fb-4469-85a2-ab712aa8a7ff">
-                            <aixm:timeSlice>
-                                <aixm:RunwayDirectionTimeSlice gml:id="uuid.26b44940-55b0-4f4f-805c-3b40af52694e">
-                                    <gml:validTime/>
-                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                                    <aixm:designator>07C</aixm:designator>
-                                    <aixm:trueBearing>70</aixm:trueBearing>
-                                </aixm:RunwayDirectionTimeSlice>
-                            </aixm:timeSlice>
-                        </aixm:RunwayDirection>
-                    </iwxxm:runway>
+                <iwxxm:AerodromeRunwayState allRunways="false">
+                    <iwxxm:runway xlink:href="#uuid.b9c98d32-f1d2-4f7e-a9d1-198c1fb92d34"/>
                     <iwxxm:depositType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-086/1"/>
                     <iwxxm:contamination xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-087/5"/>
+                    <iwxxm:depthOfDeposit nilReason="http://codes.wmo.int/common/nil/notObservable" uom="N/A" xsi:nil="true"/>
                     <iwxxm:estimatedSurfaceFrictionOrBrakingAction xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-089/90"/>
                 </iwxxm:AerodromeRunwayState>
             </iwxxm:runwayState>
             <iwxxm:runwayState>
-                <iwxxm:AerodromeRunwayState>
-                    <iwxxm:runway>
-                        <aixm:RunwayDirection  gml:id="uuid.fa34a796-e0d1-409d-a544-90d6787d46ca">
-                            <aixm:timeSlice>
-                                <aixm:RunwayDirectionTimeSlice gml:id="uuid.6c4abb3b-e4a0-48e0-a058-314c3f2ef3e6">
-                                    <gml:validTime/>
-                                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                                    <aixm:designator>07L</aixm:designator>
-                                    <aixm:trueBearing>70</aixm:trueBearing>
-                                </aixm:RunwayDirectionTimeSlice>
-                            </aixm:timeSlice>
-                        </aixm:RunwayDirection>
-                    </iwxxm:runway>
+                <iwxxm:AerodromeRunwayState allRunways="false">
+                    <iwxxm:runway xlink:href="#uuid.89a31aad-e811-426f-ad63-e9c6f8aa7f2c"/>
                     <iwxxm:depositType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-086/1"/>
                     <iwxxm:contamination xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-087/5"/>
+                    <iwxxm:depthOfDeposit nilReason="http://codes.wmo.int/common/nil/notObservable" uom="N/A" xsi:nil="true"/>
                     <iwxxm:estimatedSurfaceFrictionOrBrakingAction xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-089/90"/>
                 </iwxxm:AerodromeRunwayState>
             </iwxxm:runwayState>
         </iwxxm:MeteorologicalAerodromeObservation>
     </iwxxm:observation>
-
+    
     <iwxxm:trendForecast>
-        <iwxxm:MeteorologicalAerodromeTrendForecast gml:id="uuid.83222aab-9e5f-4296-a7f5-3d7e2af4ae45" changeIndicator="BECOMING" cloudAndVisibilityOK="false">
+        <iwxxm:MeteorologicalAerodromeTrendForecast changeIndicator="BECOMING" cloudAndVisibilityOK="false"
+            gml:id="uuid.455e9d92-5725-4e46-9463-637f0cac8b3f">
             <iwxxm:phenomenonTime nilReason="http://codes.wmo.int/common/nil/unknown"/>
             <iwxxm:prevailingVisibility uom="m">4000</iwxxm:prevailingVisibility>
-            <iwxxm:weather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:weather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance" xsi:nil="true"/>
         </iwxxm:MeteorologicalAerodromeTrendForecast>
     </iwxxm:trendForecast>
-
 </iwxxm:METAR>
