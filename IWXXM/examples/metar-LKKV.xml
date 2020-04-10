@@ -3,7 +3,7 @@
     permissibleUsage="OPERATIONAL" reportStatus="NORMAL" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0 https://schemas.wmo.int/iwxxm/3.0/iwxxm.xsd">
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0/iwxxm.xsd">
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.8053a919-45e1-4f22-9654-5c74032f4b64">
             <gml:timePosition>2007-07-25T12:00:00Z</gml:timePosition>
@@ -22,7 +22,7 @@
                     <aixm:ARP>
                         <aixm:ElevatedPoint axisLabels="Lat Long"
                             gml:id="uuid.8f22ff89-a47e-4eae-87c4-8ad604e3f57f" srsDimension="2"
-                            srsName="https://www.opengis.net/def/crs/EPSG/0/4326">
+                            srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                             <gml:pos>50.20 12.90</gml:pos>
                         </aixm:ElevatedPoint>
                     </aixm:ARP>

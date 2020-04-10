@@ -3,7 +3,7 @@
     permissibleUsage="OPERATIONAL" reportStatus="NORMAL" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/3.0"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/3.0 https://schemas.wmo.int/iwxxm/3.0/iwxxm.xsd">
+    xsi:schemaLocation="http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0/iwxxm.xsd">
     
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.ea606522-cf50-4874-adc3-83cc85b12b1c">
@@ -23,7 +23,7 @@
                     <aixm:ARP>
                         <aixm:ElevatedPoint axisLabels="Lat Long"
                             gml:id="uuid.7e308d55-3419-4169-8861-2a88af3b90ac" srsDimension="2"
-                            srsName="https://www.opengis.net/def/crs/EPSG/0/4326">
+                            srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                             <gml:pos>50.0464 8.5986</gml:pos>
                             <aixm:elevation uom="M">110</aixm:elevation>
                             <aixm:verticalDatum>EGM_96</aixm:verticalDatum>                            
