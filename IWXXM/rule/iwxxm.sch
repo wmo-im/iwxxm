@@ -73,17 +73,17 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-3">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
-         <sch:assert test="( if( (empty(iwxxm:observation/*) and iwxxm:observation/@nilReason = 'http://codes.wmo.int/common/nil/missing') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and empty(iwxxm:trendForecast) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-3: A 'Nil' report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime, iwxxm:observation (empty with nilReason) and iwxxm:trendForecast (missing)</sch:assert>
+         <sch:assert test="( if( (empty(iwxxm:observation/*) and iwxxm:observation/@nilReason = 'http://codes.wmo.int/common/nil/missing') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and empty(iwxxm:trendForecast) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-3: A 'Nil' report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime, iwxxm:observation (empty with nilReason) and iwxxm:trendForecast (missing)</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-2">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
-         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-2: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome and iwxxm:observationTime</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-2: A report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome and iwxxm:observationTime</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-4">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI">
-         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and exists(iwxxm:observation) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-4: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime and iwxxm:observation</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and exists(iwxxm:observation) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-4: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime and iwxxm:observation</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaCondition.seaState">
@@ -363,12 +363,12 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-2">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:validPeriod) ) else( true() ) )">SIGMET.SIGMET-2: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit and iwxxm:validPeriod</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:validPeriod) ) else( true() ) )">SIGMET.SIGMET-2: A report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit and iwxxm:validPeriod</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-4">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )">SIGMET.SIGMET-4: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:phenomenon and iwxxm:analysis. Elements iwxxm:cancelledReportSequenceNumber and iwxxm:cancelledReportValidPeriod shall be absent</sch:assert>
+         <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )">SIGMET.SIGMET-4: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:phenomenon and iwxxm:analysis. Elements iwxxm:cancelledReportSequenceNumber and iwxxm:cancelledReportValidPeriod shall be absent</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET.phenomenon">
@@ -533,12 +533,12 @@
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-3">
       <sch:rule context="//iwxxm:AIRMET">
-         <sch:assert test="( if( @isCancelReport= 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and exists(iwxxm:cancelledReportSequenceNumber) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:phenomenon) and empty(iwxxm:analysis) ) else( true() ) )">AIRMET.AIRMET-3: A 'CANCELLATION' report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod. Elements iwxxm:phenomenon and iwxxm:analysis shall be absent</sch:assert>
+         <sch:assert test="( if( @isCancelReport= 'true' and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and exists(iwxxm:cancelledReportSequenceNumber) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:phenomenon) and empty(iwxxm:analysis) ) else( true() ) )">AIRMET.AIRMET-3: A 'CANCELLATION' report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod. Elements iwxxm:phenomenon and iwxxm:analysis shall be absent</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-2">
       <sch:rule context="//iwxxm:AIRMET">
-         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:validPeriod) ) else( true() ) )">AIRMET.AIRMET-2: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit and iwxxm:validPeriod</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:validPeriod) ) else( true() ) )">AIRMET.AIRMET-2: A report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit and iwxxm:validPeriod</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-4">
@@ -558,12 +558,17 @@
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneAdvisory-1">
       <sch:rule context="//iwxxm:TropicalCycloneAdvisory">
-         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingTropicalCycloneAdvisoryCentre) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneAdvisory-1: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime and iwxxm:issuingTropicalCycloneAdvisoryCentre</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingTropicalCycloneAdvisoryCentre) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneAdvisory-1: A report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime and iwxxm:issuingTropicalCycloneAdvisoryCentre</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneAdvisory-2">
       <sch:rule context="//iwxxm:TropicalCycloneAdvisory">
-         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingTropicalCycloneAdvisoryCentre) and exists(iwxxm:tropicalCycloneName) and exists(iwxxm:advisoryNumber) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneAdvisory-2: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingTropicalCycloneAdvisoryCentre, iwxxm:tropicalCycloneName, iwxxm:advisoryNumber, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and @permissibleUsage = 'OPERATIONAL' ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingTropicalCycloneAdvisoryCentre) and exists(iwxxm:tropicalCycloneName) and exists(iwxxm:advisoryNumber) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneAdvisory-2: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingTropicalCycloneAdvisoryCentre, iwxxm:tropicalCycloneName, iwxxm:advisoryNumber, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneAdvisory-3">
+      <sch:rule context="//iwxxm:TropicalCycloneAdvisory">
+         <sch:assert test="( if( @permissibleUsage = 'NON-OPERATIONAL' and @permissibleUsageReason = 'EXERCISE' ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingTropicalCycloneAdvisoryCentre) and exists(iwxxm:tropicalCycloneName) and exists(iwxxm:advisoryNumber) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">TropicalCycloneAdvisory.TropicalCycloneAdvisory-2: An exercise report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingTropicalCycloneAdvisoryCentre, iwxxm:tropicalCycloneName, iwxxm:advisoryNumber, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneAdvisory.TropicalCycloneObservedConditions-1">
@@ -616,19 +621,24 @@
          <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AviationColourCode.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">VolcanicAshAdvisory iwxxm:colourCode elements should be a member of http://codes.wmo.int/49-2/AviationColourCode</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-1">
+      <sch:rule context="//iwxxm:VolcanicAshAdvisory">
+         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-1: A report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime and iwxxm:issuingVolcanicAshAdvisoryCentre</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-2">
+      <sch:rule context="//iwxxm:VolcanicAshAdvisory">
+         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and @permissibleUsage = 'OPERATIONAL') then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:summitElevation) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-2: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:summitElevation, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-3">
       <sch:rule context="//iwxxm:VolcanicAshAdvisory">
          <sch:assert test="( if( exists(iwxxm:volcano//metce:position) ) then( empty(index-of(iwxxm:volcano//metce:position//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-3: If a geometry is defined for iwxxm:volcano//metce:position with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-1">
+   <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-4">
       <sch:rule context="//iwxxm:VolcanicAshAdvisory">
-         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-1: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime and iwxxm:issuingVolcanicAshAdvisoryCentre</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-2">
-      <sch:rule context="//iwxxm:VolcanicAshAdvisory">
-         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:summitElevation) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-2: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:summitElevation, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
+         <sch:assert test="( if( @permissibleUsage = 'NON-OPERATIONAL' and @permissibleUsageReason = 'EXERCISE' ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:summitElevation) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-2: An exercise report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:summitElevation, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.WindConditions-3">
@@ -688,12 +698,17 @@
    </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherAdvisory-1">
       <sch:rule context="//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingSpaceWeatherCentre) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherAdvisory-1: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime and iwxxm:issuingSpaceWeatherCentre</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingSpaceWeatherCentre) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherAdvisory-1: A report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime and iwxxm:issuingSpaceWeatherCentre</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherAdvisory-2">
       <sch:rule context="//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingSpaceWeatherCentre) and exists(iwxxm:advisoryNumber) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherAdvisory-2: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingSpaceWeatherCentre, iwxxm:advisoryNumber, iwxxm:phenomenon, iwxxm:analysis, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
+         <sch:assert test="( if( string-length(@translationFailedTAC) eq 0 and @permissibleUsage = 'OPERATIONAL') then( exists(iwxxm:issueTime) and exists(iwxxm:issuingSpaceWeatherCentre) and exists(iwxxm:advisoryNumber) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherAdvisory-2: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingSpaceWeatherCentre, iwxxm:advisoryNumber, iwxxm:phenomenon, iwxxm:analysis, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherAdvisory-3">
+      <sch:rule context="//iwxxm:SpaceWeatherAdvisory">
+         <sch:assert test="( if( @permissibleUsage = 'NON-OPERATIONAL' and @permissibleUsageReason = 'EXERCISE') then( exists(iwxxm:issueTime) and exists(iwxxm:issuingSpaceWeatherCentre) and exists(iwxxm:advisoryNumber) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherAdvisory-3: An EXERCISE report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingSpaceWeatherCentre, iwxxm:advisoryNumber, iwxxm:phenomenon, iwxxm:analysis, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeTrendForecast.weather">
