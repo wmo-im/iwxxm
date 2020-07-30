@@ -1,11 +1,22 @@
 =========================================
-3.0.0 Development version 
+3.0.1 Release Candidate 1 - TBC
 =========================================
+* Aligned Space Weather Advisory examples A2-3, A2-4 and A2-5 with those in Amendment 78 to ICAO Annex 3 (issue #227)
+* Fixed METAR_SPECI.MeteorologicalAerodromeObservationReport-5, 6, 7 and 8 which cannot handle nilReason(s) in multiple cloud
+  layers (issue #226)
+* Fixed schematron rules in all sub-packages on integrity check of OPERATIONAL and NON-OPERATIONAL reports (issue #220)
+* Amended TAC-to-XML_Guidance.txt to better describe the case when only polygons are given in a Space Weather Advisory (issue
+  #217)
+* Fixed VolcanicAshSIGMET.VolcanicAshSIGMET-6 which cannot handle two volcanoes in a single report (issue #213)
+* Fixed the issue regarding hardwired namespace prefix in schematron rules, including SIGMET.SIGMET-8 and 9,
+  TropicalCycloneSIGMET.TropicalCycloneSIGMET-3 and 4, and VolcanicAshSIGMET.VolcanicAshSIGMET-4 and 5 (issue #210)
+* Fixed incorrect comparison between phenomenonTime and validPeriod in SIGMET.SIGMET-5, SIGMET.SIGMET-6 and AIRMET.AIRMET-5
+  (issue #208)
+* Corrected errors in sample TAC messages including the Volcanic Ash SIGMET from EGGX (issue #201) and the Volcanic Ash Advisory
+  TAC message A2-1
 * Fixed the issue regarding schematron rule COMMON.REPORT-4 counting length of extension across reports instead of within a
   report (issue #197)
 * Fixed the issue regarding schematron rule COLLECT.MB1 being overly restrictive (issue #162)
-* Corrected errors in sample TAC messages including the Volcanic Ash SIGMET from EGGX (issue #201) and the Volcanic Ash Advisory
-  TAC message A2-1
 
 =========================================
 3.0.0 - 7 November 2019 

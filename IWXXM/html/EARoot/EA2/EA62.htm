@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">5/5/2019 12:24:22 AM</td>
+			<td class="ObjectDetailsValue">7/29/2020 10:43:21 AM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -587,7 +587,7 @@ function nameClassifier(name, separator)
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">Mandatory items in a report that failed translation</td>
+					<td width="80%" class="TableRow">Mandatory items in a non-operational report or a report that failed translation</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -595,7 +595,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints213" onclick="parent.toggleDiv('detailsDIVConstraints213','DetailsImageConstraints213')" />Details:
 							<div id="detailsDIVConstraints213" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: TAF.TAF-2&lt;br/&gt;Description: A report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome and iwxxm:validPeriod&lt;br/&gt;Assertion: ( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:validPeriod) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: TAF.TAF-2&lt;br/&gt;Description: A non-operational report or a report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome and iwxxm:validPeriod&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) gt 0) or (@permissibleUsage = &#39;NON-OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:validPeriod) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -610,7 +610,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints214" onclick="parent.toggleDiv('detailsDIVConstraints214','DetailsImageConstraints214')" />Details:
 							<div id="detailsDIVConstraints214" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: TAF.TAF-3&lt;br/&gt;Description: A &#39;Nil&#39; report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:validPeriod (missing), iwxxm:cancelledReportValidPeriod (missing), iwxxm:baseForecast (empty with nilReason) and iwxxm:changeForecast (missing)&lt;br/&gt;Assertion: ( if( (empty(iwxxm:baseForecast/*) and iwxxm:baseForecast/@nilReason = &#39;http://codes.wmo.int/common/nil/missing&#39;) and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and empty(iwxxm:validPeriod) and empty(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:changeForecast) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: TAF.TAF-3&lt;br/&gt;Description: A &#39;Nil&#39; report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:validPeriod (missing), iwxxm:cancelledReportValidPeriod (missing), iwxxm:baseForecast (empty with nilReason) and iwxxm:changeForecast (missing)&lt;br/&gt;Assertion: ( if( empty(iwxxm:baseForecast/*) and (iwxxm:baseForecast/@nilReason = &#39;http://codes.wmo.int/common/nil/missing&#39;) and (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;)&#160; ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and empty(iwxxm:validPeriod) and empty(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:changeForecast) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -625,7 +625,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints215" onclick="parent.toggleDiv('detailsDIVConstraints215','DetailsImageConstraints215')" />Details:
 							<div id="detailsDIVConstraints215" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: TAF.TAF-4&lt;br/&gt;Description: A CANCELLATION report should have the appropriate elements filled including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:cancelledReportValidPeriod. Elements iwxxm:validPeriod, iwxxm:baseForecast and iwxxm:changeForecast are absent&lt;br/&gt;Assertion: ( if( @isCancelReport = &#39;true&#39; and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and empty(iwxxm:validPeriod) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:baseForecast) and empty(iwxxm:changeForecast) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: TAF.TAF-4&lt;br/&gt;Description: A CANCELLATION report should have the appropriate elements filled including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:cancelledReportValidPeriod. Elements iwxxm:validPeriod, iwxxm:baseForecast and iwxxm:changeForecast are absent&lt;br/&gt;Assertion: ( if( (@isCancelReport = &#39;true&#39;) and (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and empty(iwxxm:validPeriod) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:baseForecast) and empty(iwxxm:changeForecast) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -640,7 +640,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints216" onclick="parent.toggleDiv('detailsDIVConstraints216','DetailsImageConstraints216')" />Details:
 							<div id="detailsDIVConstraints216" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: TAF.TAF-5&lt;br/&gt;Description: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:validPeriod, iwxxm:cancelledReportValidPeriod (missing) and iwxxm:baseForecast&lt;br/&gt;Assertion: ( if( (iwxxm:baseForecast/@nilReason != &#39;http://codes.wmo.int/common/nil/missing&#39; and (empty(@isCancelReport) or @isCancelReport = &#39;false&#39;)) and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:baseForecast) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: TAF.TAF-5&lt;br/&gt;Description: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:validPeriod, iwxxm:cancelledReportValidPeriod (missing) and iwxxm:baseForecast&lt;br/&gt;Assertion: ( if( (iwxxm:baseForecast/@nilReason != &#39;http://codes.wmo.int/common/nil/missing&#39; and (empty(@isCancelReport) or @isCancelReport = &#39;false&#39;)) and (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:baseForecast) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>

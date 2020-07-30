@@ -206,37 +206,7 @@
                     <gml:timePosition>2016-11-09T01:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:region>
-                <iwxxm:SpaceWeatherRegion gml:id="uuid.921ac167-2ef8-4c76-b4b7-7d38a4d790a0">
-                    <iwxxm:location>
-                        <aixm:AirspaceVolume gml:id="uuid.574a57b5-3c5a-47eb-8cd1-4895a90e291c">
-                            <aixm:horizontalProjection>
-                                <aixm:Surface gml:id="uuid.b5c530f6-212a-4cb1-a5ea-17f30e79f31e" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                    <gml:polygonPatches>
-                                        <gml:PolygonPatch>
-                                            <gml:exterior>
-                                                <gml:Ring>
-                                                    <gml:curveMember>
-                                                        <gml:Curve gml:id="uuid.e0025db0-7a34-49da-a66c-17757d9e1a45">
-                                                            <gml:segments>
-                                                                <gml:CircleByCenterPoint numArc="1">
-                                                                    <gml:pos>-16.93 160.96</gml:pos>
-                                                                    <gml:radius uom="km">10100</gml:radius>
-                                                                </gml:CircleByCenterPoint>
-                                                            </gml:segments>
-                                                        </gml:Curve>
-                                                    </gml:curveMember>
-                                                </gml:Ring>
-                                            </gml:exterior>
-                                        </gml:PolygonPatch>
-                                    </gml:polygonPatches>
-                                </aixm:Surface>
-                            </aixm:horizontalProjection>
-                        </aixm:AirspaceVolume>
-                    </iwxxm:location>
-                    <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/DAYLIGHT_SIDE"/>
-                </iwxxm:SpaceWeatherRegion>
-            </iwxxm:region>
+            <iwxxm:region nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
