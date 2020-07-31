@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">5/5/2019 1:38:34 AM</td>
+			<td class="ObjectDetailsValue">7/29/2020 7:23:22 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -529,7 +529,7 @@ function nameClassifier(name, separator)
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">Mandatory items in a report that failed translation</td>
+					<td width="80%" class="TableRow">Mandatory items in a report that is non-operational or failed translation</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -537,7 +537,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints45" onclick="parent.toggleDiv('detailsDIVConstraints45','DetailsImageConstraints45')" />Details:
 							<div id="detailsDIVConstraints45" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-2&lt;br/&gt;Description: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome and iwxxm:observationTime&lt;br/&gt;Assertion: ( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-2&lt;br/&gt;Description: A non-operational report or a report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome and iwxxm:observationTime&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) gt 0) or (@permissibleUsage = &#39;NON-OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -552,7 +552,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints46" onclick="parent.toggleDiv('detailsDIVConstraints46','DetailsImageConstraints46')" />Details:
 							<div id="detailsDIVConstraints46" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-3&lt;br/&gt;Description: A &#39;Nil&#39; report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime, iwxxm:observation (empty with nilReason) and iwxxm:trendForecast (missing)&lt;br/&gt;Assertion: ( if( (empty(iwxxm:observation/*) and iwxxm:observation/@nilReason = &#39;http://codes.wmo.int/common/nil/missing&#39;) and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and empty(iwxxm:trendForecast) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-3&lt;br/&gt;Description: A &#39;Nil&#39; report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime, iwxxm:observation (empty with nilReason) and iwxxm:trendForecast (missing)&lt;br/&gt;Assertion: ( if( empty(iwxxm:observation/*) and (iwxxm:observation/@nilReason = &#39;http://codes.wmo.int/common/nil/missing&#39;) and (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and empty(iwxxm:trendForecast) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -567,7 +567,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints47" onclick="parent.toggleDiv('detailsDIVConstraints47','DetailsImageConstraints47')" />Details:
 							<div id="detailsDIVConstraints47" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-4&lt;br/&gt;Description: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime and iwxxm:observation&lt;br/&gt;Assertion: ( if( string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and exists(iwxxm:observation) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-4&lt;br/&gt;Description: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime and iwxxm:observation&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and exists(iwxxm:observation) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -582,7 +582,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints48" onclick="parent.toggleDiv('detailsDIVConstraints48','DetailsImageConstraints48')" />Details:
 							<div id="detailsDIVConstraints48" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-5&lt;br/&gt;Description: When no clouds are detected by an automated station, this report must be an automated station report&lt;br/&gt;Assertion: ( if( empty(iwxxm:observation//iwxxm:cloud/*) and ends-with(iwxxm:observation//iwxxm:cloud/@nilReason, &#39;notDetectedByAutoSystem&#39;) ) then( @automatedStation = &#39;true&#39; ) else( true() ))&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-5&lt;br/&gt;Description: When no clouds are detected by an automated station, this report must be an automated station report&lt;br/&gt;Assertion: ( if( empty(iwxxm:observation//iwxxm:cloud/*) and (iwxxm:observation//iwxxm:cloud/@nilReason = &#39;http://codes.wmo.int/common/nil/notDetectedByAutoSystem&#39;) ) then( @automatedStation = &#39;true&#39; ) else( true() ))&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -597,7 +597,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints49" onclick="parent.toggleDiv('detailsDIVConstraints49','DetailsImageConstraints49')" />Details:
 							<div id="detailsDIVConstraints49" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-6&lt;br/&gt;Description: When both cloud amount and base are not detected by an automated station, this report must be an automated station report&lt;br/&gt;Assertion: ( if( empty(iwxxm:observation//iwxxm:cloud//iwxxm:layer/*) and ends-with(iwxxm:observation//iwxxm:cloud//iwxxm:layer/@nilReason, &#39;notDetectedByAutoSystem&#39;) ) then( @automatedStation = &#39;true&#39; ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-6&lt;br/&gt;Description: When both cloud amount and base are not detected by an automated station, this report must be an automated station report&lt;br/&gt;Assertion: ( if( empty(iwxxm:observation//iwxxm:cloud//iwxxm:layer/*) and (iwxxm:observation//iwxxm:cloud//iwxxm:layer/@nilReason = &#39;http://codes.wmo.int/common/nil/notDetectedByAutoSystem&#39;) ) then( @automatedStation = &#39;true&#39; ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -612,7 +612,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints50" onclick="parent.toggleDiv('detailsDIVConstraints50','DetailsImageConstraints50')" />Details:
 							<div id="detailsDIVConstraints50" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-7&lt;br/&gt;Description: When cloud amount is not detected by an automated station, this report must be an automated station report&lt;br/&gt;Assertion: ( if( empty(iwxxm:observation//iwxxm:cloud//iwxxm:layer//iwxxm:amount/*) and ends-with(iwxxm:observation//iwxxm:cloud//iwxxm:layer//iwxxm:amount/@nilReason, &#39;notDetectedByAutoSystem&#39;) ) then( @automatedStation = &#39;true&#39; ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-7&lt;br/&gt;Description: When cloud amount is not detected by an automated station, this report must be an automated station report&lt;br/&gt;Assertion: ( if( empty(iwxxm:observation//iwxxm:cloud//iwxxm:layer//iwxxm:amount/*) and (iwxxm:observation//iwxxm:cloud//iwxxm:layer//iwxxm:amount/@nilReason = &#39;http://codes.wmo.int/common/nil/notDetectedByAutoSystem&#39;) ) then( @automatedStation = &#39;true&#39; ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -627,7 +627,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints51" onclick="parent.toggleDiv('detailsDIVConstraints51','DetailsImageConstraints51')" />Details:
 							<div id="detailsDIVConstraints51" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-8&lt;br/&gt;Description: When cloud base is not detected by an automated station, this report must be an automated station report&lt;br/&gt;Assertion: ( if( empty(iwxxm:observation//iwxxm:cloud//iwxxm:layer//iwxxm:base/*) and ends-with(iwxxm:observation//iwxxm:cloud//iwxxm:layer//iwxxm:base/@nilReason, &#39;notDetectedByAutoSystem&#39;) ) then( @automatedStation = &#39;true&#39; ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.MeteorologicalAerodromeObservationReport-8&lt;br/&gt;Description: When cloud base is not detected by an automated station, this report must be an automated station report&lt;br/&gt;Assertion: ( if( empty(iwxxm:observation//iwxxm:cloud//iwxxm:layer//iwxxm:base/*) and (iwxxm:observation//iwxxm:cloud//iwxxm:layer//iwxxm:base/@nilReason = &#39;http://codes.wmo.int/common/nil/notDetectedByAutoSystem&#39;) ) then( @automatedStation = &#39;true&#39; ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>

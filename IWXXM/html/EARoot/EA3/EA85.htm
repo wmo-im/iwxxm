@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">5/5/2019 12:26:14 AM</td>
+			<td class="ObjectDetailsValue">7/30/2020 2:51:28 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -877,7 +877,7 @@ function nameClassifier(name, separator)
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">Mandatory items in a report that failed translation</td>
+					<td width="80%" class="TableRow">Mandatory items in a non-operational report and a report that failed translation</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -885,7 +885,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints303" onclick="parent.toggleDiv('detailsDIVConstraints303','DetailsImageConstraints303')" />Details:
 							<div id="detailsDIVConstraints303" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-2&lt;br/&gt;Description: A report that failed translation should have as a minimum appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit and iwxxm:validPeriod&lt;br/&gt;Assertion: ( if( string-length(@translationFailedTAC) gt 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:validPeriod) ) else( true() ) )&lt;br/&gt;&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-2&lt;br/&gt;Description: A non-operational report or a report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit and iwxxm:validPeriod&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) gt 0) or (@permissibleUsage = &#39;NON-OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:validPeriod) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -900,7 +900,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints304" onclick="parent.toggleDiv('detailsDIVConstraints304','DetailsImageConstraints304')" />Details:
 							<div id="detailsDIVConstraints304" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-3&lt;br/&gt;Description: A &#39;CANCELLATION&#39; report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod. Elements iwxxm:phenomenon and iwxxm:analysis shall be absent&lt;br/&gt;Assertion: ( if( @isCancelReport = &#39;true&#39; and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and exists(iwxxm:cancelledReportSequenceNumber) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:phenomenon) and empty(iwxxm:analysis) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-3&lt;br/&gt;Description: A &#39;CANCELLATION&#39; report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:cancelledReportSequenceNumber, iwxxm:cancelledReportValidPeriod. Elements iwxxm:phenomenon and iwxxm:analysis shall be absent&lt;br/&gt;Assertion: ( if( (@isCancelReport = &#39;true&#39;) and (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and exists(iwxxm:cancelledReportSequenceNumber) and exists(iwxxm:cancelledReportValidPeriod) and empty(iwxxm:phenomenon) and empty(iwxxm:analysis) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -915,14 +915,14 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints305" onclick="parent.toggleDiv('detailsDIVConstraints305','DetailsImageConstraints305')" />Details:
 							<div id="detailsDIVConstraints305" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-4&lt;br/&gt;Description: An ordinary report should have appropriately filled elements including Iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:phenomenon and iwxxm:analysis. Elements iwxxm:cancelledReportSequenceNumber and iwxxm:cancelledReportValidPeriod shall be absent&lt;br/&gt;Assertion: ( if( (empty(@isCancelReport) or @isCancelReport = &#39;false&#39;) and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-4&lt;br/&gt;Description: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:phenomenon and iwxxm:analysis. Elements iwxxm:cancelledReportSequenceNumber and iwxxm:cancelledReportValidPeriod shall be absent&lt;br/&gt;Assertion: ( if( (empty(@isCancelReport) or @isCancelReport = &#39;false&#39;) and (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">analysis//phenomenonTime must be equal to validPeriod//beginPosition</td>
+					<td width="80%" class="TableRow">analysis//phenomenonTime of an observed phenomenon must be less than or equal to validPeriod//beginPosition</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -930,14 +930,14 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints306" onclick="parent.toggleDiv('detailsDIVConstraints306','DetailsImageConstraints306')" />Details:
 							<div id="detailsDIVConstraints306" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-5&lt;br/&gt;Description: iwxxm:analysis//iwxxm:phenomenonTime must be equal to iwxxm:validPeriod//gml:beginPosition&lt;br/&gt;Assertion: ( if( string-length(@translationFailedTAC) eq 0 and exists(iwxxm:analysis//iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( empty(index-of(for $i in iwxxm:analysis return number(translate($i//iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,&#39;-T:Z&#39;,&#39;&#39;)) eq number(translate(iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,&#39;-T:Z&#39;,&#39;&#39;)),false())) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-5a&lt;br/&gt;Description: iwxxm:analysis//iwxxm:phenomenonTime of an observed phenomenon must be less than or equal to iwxxm:validPeriod//gml:beginPosition&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) and (iwxxm:analysis/iwxxm:*/@timeIndicator = &#39;OBSERVATION&#39;) and exists(iwxxm:analysis//iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( empty(index-of(for $i in iwxxm:analysis return number(translate($i//iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,&#39;-T:Z&#39;,&#39;&#39;)) le number(translate(iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,&#39;-T:Z&#39;,&#39;&#39;)),false())) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">forecastPositionAnalysis//phenomenonTime must be less than or equal to validPeriod//endPosition</td>
+					<td width="80%" class="TableRow">analysis//phenomenonTime of a forecast phenomenon must be greater than or equal to validPeriod//beginPosition</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -945,7 +945,22 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints307" onclick="parent.toggleDiv('detailsDIVConstraints307','DetailsImageConstraints307')" />Details:
 							<div id="detailsDIVConstraints307" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-6&lt;br/&gt;Description: iwxxm:forecastPositionAnalysis//iwxxm:phenomenonTime must be less than or equal to iwxxm:validPeriod//endPosition&lt;br/&gt;Assertion: ( if( string-length(@translationFailedTAC) eq 0 and exists(iwxxm:forecastPositionAnalysis//iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( empty(index-of(for $i in iwxxm:forecastPositionAnalysis return number(translate($i//iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,&#39;-T:Z&#39;,&#39;&#39;)) eq number(translate(iwxxm:validPeriod/gml:TimePeriod/gml:endPosition,&#39;-T:Z&#39;,&#39;&#39;)),false())) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-5b&lt;br/&gt;Description: iwxxm:analysis//iwxxm:phenomenonTime of a forecast phenomenon must be greater than or equal to iwxxm:validPeriod//gml:beginPosition&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;)&#160; and (iwxxm:analysis/iwxxm:*/@timeIndicator = &#39;FORECAST&#39;) and exists(iwxxm:analysis//iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( empty(index-of(for $i in iwxxm:analysis return number(translate($i//iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,&#39;-T:Z&#39;,&#39;&#39;)) ge number(translate(iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,&#39;-T:Z&#39;,&#39;&#39;)),false())) ) else( true() ) )&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">forecastPositionAnalysis//phenomenonTime must be within validPeriod//beginPosition and validPeriod//endPosition</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints308" onclick="parent.toggleDiv('detailsDIVConstraints308','DetailsImageConstraints308')" />Details:
+							<div id="detailsDIVConstraints308" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-6&lt;br/&gt;Description: iwxxm:forecastPositionAnalysis//iwxxm:phenomenonTime must be within iwxxm:validPeriod//gml:beginPosition and iwxxm:validPeriod//gml:endPosition&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) and exists(iwxxm:forecastPositionAnalysis//iwxxm:phenomenonTime/*) and exists(iwxxm:validPeriod/*) ) then( empty(index-of(for $i in iwxxm:forecastPositionAnalysis return ((number(translate($i//iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,&#39;-T:Z&#39;,&#39;&#39;)) ge number(translate(iwxxm:validPeriod/gml:TimePeriod/gml:beginPosition,&#39;-T:Z&#39;,&#39;&#39;))) and (number(translate($i//iwxxm:phenomenonTime/gml:TimeInstant/gml:timePosition,&#39;-T:Z&#39;,&#39;&#39;)) le number(translate(iwxxm:validPeriod/gml:TimePeriod/gml:endPosition,&#39;-T:Z&#39;,&#39;&#39;)))),false())) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -958,9 +973,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints308" onclick="parent.toggleDiv('detailsDIVConstraints308','DetailsImageConstraints308')" />Details:
-							<div id="detailsDIVConstraints308" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-7&lt;br/&gt;Description: A report cannot have both iwxxm:forecastPositionAnalysis and iwxxm:analysis//iwxxm:directionOfMotion (with or without iwxxm:analysis//iwxxm:speedOfMotion) at the same time&lt;br/&gt;Assertion: ( if( string-length(@translationFailedTAC) eq 0 ) then( (exists(iwxxm:forecastPositionAnalysis) and empty(iwxxm:analysis//iwxxm:directionOfMotion) and empty(iwxxm:analysis//iwxxm:speedOfMotion)) or (empty(iwxxm:forecastPositionAnalysis) and exists(iwxxm:analysis//iwxxm:directionOfMotion)) or (empty(iwxxm:forecastPositionAnalysis) and empty(iwxxm:analysis//iwxxm:directionOfMotion) and empty(iwxxm:analysis//iwxxm:speedOfMotion)) ) else( true() ) )&lt;br/&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints309" onclick="parent.toggleDiv('detailsDIVConstraints309','DetailsImageConstraints309')" />Details:
+							<div id="detailsDIVConstraints309" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-7&lt;br/&gt;Description: A report cannot have both iwxxm:forecastPositionAnalysis and iwxxm:analysis//iwxxm:directionOfMotion (with or without iwxxm:analysis//iwxxm:speedOfMotion) at the same time&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) ) then( (exists(iwxxm:forecastPositionAnalysis) and empty(iwxxm:analysis//iwxxm:directionOfMotion) and empty(iwxxm:analysis//iwxxm:speedOfMotion)) or (empty(iwxxm:forecastPositionAnalysis) and exists(iwxxm:analysis//iwxxm:directionOfMotion)) or (empty(iwxxm:forecastPositionAnalysis) and empty(iwxxm:analysis//iwxxm:directionOfMotion) and empty(iwxxm:analysis//iwxxm:speedOfMotion)) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -973,9 +988,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints309" onclick="parent.toggleDiv('detailsDIVConstraints309','DetailsImageConstraints309')" />Details:
-							<div id="detailsDIVConstraints309" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-8&lt;br/&gt;Description:&#160; In a SIGMET report the child element of iwxxm:analysis should be SIGMETEvolvingConditionCollection&lt;br/&gt;Assertion: ( if( local-name( . ) = &#39;SIGMET&#39; and exists(iwxxm:analysis/*) ) then( exists(iwxxm:analysis/iwxxm:SIGMETEvolvingConditionCollection) and empty(iwxxm:analysis/*[name() != &#39;iwxxm:SIGMETEvolvingConditionCollection&#39;]) ) else( true() ) )&lt;br/&gt;&lt;br/&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints310" onclick="parent.toggleDiv('detailsDIVConstraints310','DetailsImageConstraints310')" />Details:
+							<div id="detailsDIVConstraints310" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-8&lt;br/&gt;Description:&#160; In a SIGMET report the child element of iwxxm:analysis should be SIGMETEvolvingConditionCollection&lt;br/&gt;Assertion: ( if( local-name( . ) = &#39;SIGMET&#39; and exists(iwxxm:analysis/*) ) then( exists(iwxxm:analysis/iwxxm:SIGMETEvolvingConditionCollection) and empty(iwxxm:analysis/*[local-name() != &#39;SIGMETEvolvingConditionCollection&#39;]) ) else( true() ) )&lt;br/&gt;&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -988,9 +1003,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints310" onclick="parent.toggleDiv('detailsDIVConstraints310','DetailsImageConstraints310')" />Details:
-							<div id="detailsDIVConstraints310" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-9&lt;br/&gt;Description:&#160; In a SIGMET report the child element of iwxxm:forecastPositionAnalysis should be SIGMETPositionCollection&lt;br/&gt;Assertion: ( if( local-name( . ) = &#39;SIGMET&#39; and exists(iwxxm:forecastPositionAnalysis) ) then( exists(iwxxm:forecastPositionAnalysis/iwxxm:SIGMETPositionCollection) and empty(iwxxm:forecastPositionAnalysis/*[name() != &#39;iwxxm:SIGMETPositionCollection&#39;]) ) else( true() ) )&lt;br/&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints311" onclick="parent.toggleDiv('detailsDIVConstraints311','DetailsImageConstraints311')" />Details:
+							<div id="detailsDIVConstraints311" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-9&lt;br/&gt;Description:&#160; In a SIGMET report the child element of iwxxm:forecastPositionAnalysis should be SIGMETPositionCollection&lt;br/&gt;Assertion: ( if( local-name( . ) = &#39;SIGMET&#39; and exists(iwxxm:forecastPositionAnalysis) ) then( exists(iwxxm:forecastPositionAnalysis/iwxxm:SIGMETPositionCollection) and empty(iwxxm:forecastPositionAnalysis/*[local-name() != &#39;SIGMETPositionCollection&#39;]) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
@@ -1003,8 +1018,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints311" onclick="parent.toggleDiv('detailsDIVConstraints311','DetailsImageConstraints311')" />Details:
-							<div id="detailsDIVConstraints311" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints312" onclick="parent.toggleDiv('detailsDIVConstraints312','DetailsImageConstraints312')" />Details:
+							<div id="detailsDIVConstraints312" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-10&lt;br/&gt;Description:&#160; In a SIGMET report there should be one iwxxm:analysis at most&lt;br/&gt;Assertion: ( if( local-name( . ) = &#39;SIGMET&#39; and exists(iwxxm:analysis/*) ) then( count(iwxxm:analysis) eq 1 ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
@@ -1018,8 +1033,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints312" onclick="parent.toggleDiv('detailsDIVConstraints312','DetailsImageConstraints312')" />Details:
-							<div id="detailsDIVConstraints312" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints313" onclick="parent.toggleDiv('detailsDIVConstraints313','DetailsImageConstraints313')" />Details:
+							<div id="detailsDIVConstraints313" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-11&lt;br/&gt;Description:&#160; In a SIGMET report there should be one iwxxm:forecastPositionAnalysis at most&lt;br/&gt;Assertion: ( if( local-name( . ) = &#39;SIGMET&#39; and exists(iwxxm:forecastPositionAnalysis) ) then( count(iwxxm:forecastPositionAnalysis) eq 1 ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
@@ -1033,8 +1048,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints313" onclick="parent.toggleDiv('detailsDIVConstraints313','DetailsImageConstraints313')" />Details:
-							<div id="detailsDIVConstraints313" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints314" onclick="parent.toggleDiv('detailsDIVConstraints314','DetailsImageConstraints314')" />Details:
+							<div id="detailsDIVConstraints314" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMET-12&lt;br/&gt;Description: If a geometry is defined for iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty&lt;br/&gt;Assertion: ( if( exists(iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent) ) then( empty(index-of(iwxxm:issuingAirTrafficServicesRegion//aixm:geometryComponent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension=&#39;2&#39; and exists(@axisLabels)), false())) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
