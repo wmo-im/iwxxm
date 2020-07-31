@@ -1,5 +1,5 @@
 =========================================
-3.0.1 Release Candidate 1 - TBC
+3.0-dev
 =========================================
 * Aligned Space Weather Advisory examples A2-3, A2-4 and A2-5 with those in Amendment 78 to ICAO Annex 3 (issue #227)
 * Fixed METAR_SPECI.MeteorologicalAerodromeObservationReport-5, 6, 7 and 8 which cannot handle nilReason(s) in multiple cloud
