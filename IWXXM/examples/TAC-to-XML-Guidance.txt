@@ -173,7 +173,7 @@ Eruption details
   Element "status" under "VolcanicAshForecastConditions" shall be set accordingly.  Set it to "PROVIDED" otherwise
 
 'NIL' remarks
-  NIL remarks shall be indicated with "remarks" nilReason set to "http://codes.wmo.int/common/nil/missing"
+  NIL remarks shall be indicated with "remarks" nilReason set to "http://codes.wmo.int/common/nil/inapplicable"
   
 'NO FURTHER ADVISORIES'
   A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
@@ -185,7 +185,7 @@ Tropical Cyclone Advisory
   An unnamed tropical cyclone shall be indicated with a "tropicalCycloneName" of "UNNAMED"
 
 'NIL' remarks
-  NIL remarks shall be indicated with "remarks" nilReason set to "http://codes.wmo.int/common/nil/missing"
+  NIL remarks shall be indicated with "remarks" nilReason set to "http://codes.wmo.int/common/nil/inapplicable"
   
 'NO MSG EXP'
   A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
@@ -209,7 +209,7 @@ No location descriptions provided
   If forecast is NO SWX EXP this shall be indicated with "region" nilReason set to "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
 
 'NIL' remarks
-  NIL remarks shall be indicated with "remarks" nilReason set to "http://codes.wmo.int/common/nil/missing"
+  NIL remarks shall be indicated with "remarks" nilReason set to "http://codes.wmo.int/common/nil/inapplicable"
   
 'NO FURTHER ADVISORIES'
   A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
