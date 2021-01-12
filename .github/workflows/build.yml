@@ -2,11 +2,7 @@
 
 name: build
 
-on:
-  push:
-    branches: [ master, issue#239 ]
-  pull_request:
-    branches: [ master, issue#239 ]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -14,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['2.7','3.8']
+        python-version: ['3.8']
 
     steps:
     - uses: actions/checkout@v2
