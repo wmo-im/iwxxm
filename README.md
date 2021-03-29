@@ -10,7 +10,7 @@ IWXXM includes XML/GML-based representations for products standardized in Intern
 Unlike the traditional forms of the ICAO Annex III / WMO No. 49 products (referred to as Traditional Alphanumeric Codes, or TAC), IWXXM is not intended to be directly used by pilots. IWXXM is designed to be consumed by software acting on behalf of pilots, such as display software.
 
 # Want to provide feedback or raise a question?
-Please provide feedback to or raise your question in Google group [cbs-tt-avxml@wmo.int](https://groups.google.com/a/wmo.int/forum/?hl=en&fromgroups#!forum/cbs-tt-avxml).
+Please provide feedback to or raise your question by sending an email to blchoy.hko@gmail.com and wis@wmo.int with IWXMM in the subject. 
 
 # References
 * IWXXM on WMO Community Platform
