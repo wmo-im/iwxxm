@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0-dev" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2021-2" version="3.1.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2021-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+	<include schemaLocation="iwxxm.xsd"></include>
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
@@ -42,7 +43,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The observation which resulted in the current meteorological conditions at an aerodrome</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="trendForecast" type="iwxxm:MeteorologicalAerodromeTrendForecastPropertyType" minOccurs="0" maxOccurs="3">
+					<element nillable="true" name="trendForecast" type="iwxxm:MeteorologicalAerodromeTrendForecastPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>The process that results in a trend forecast.  When no change is expected to occur during a forecast period ("NOSIG") this is indicated by a single missing trend forecast with a nil reason of noSignificantChange</documentation>
 						</annotation>
@@ -297,7 +298,7 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 						<annotation>
 							<documentation>When observed, between one and three present weather conditions
 
-When present weather cannot be observed by the automatic observing system due to a temporary failure of the system/sensor ("//") the present weather is missing with a nil reason of notObservab</documentation>
+When present weather cannot be observed by the automatic observing system due to a temporary failure of the system/sensor ("//") the present weather is missing with a nil reason of notObservable</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="cloud" minOccurs="0" maxOccurs="1">
@@ -347,7 +348,9 @@ When there are no clouds of operational significance and no restriction on verti
 						<annotation>
 							<documentation>When runways are affected by snow, slush, or other contaminants, a runway state report for each runway in use is required.
 
-There is no maximum number of runway states that can be reported.  This may be changed in a future amendment.</documentation>
+There is no maximum number of runway states that can be reported.  This may be changed in a future amendment.
+
+When all runways are closed due to snow, this shall be indicated with a "runwayState" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"</documentation>
 						</annotation>
 						<complexType>
 							<complexContent>
@@ -928,6 +931,7 @@ See WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 018 "Tendency of runway visua
 			</enumeration>
 		</restriction>
 	</simpleType>
+	<element name="AerodromeRecentWeather" type="iwxxm:AerodromeRecentWeatherType"></element>
 	<complexType name="AerodromeRecentWeatherType">
 		<annotation>
 			<documentation>Weather phenomenon of operational significance to aviation observed during the period since the last routine report, or last hour, whichever is shorter, but not at the time of observation.
@@ -944,6 +948,7 @@ This CodeList is specifically defined for aviation purposes as defined in WMO No
 			<extension base="gml:ReferenceType"></extension>
 		</complexContent>
 	</complexType>
+	<element name="SeaSurfaceState" type="iwxxm:SeaSurfaceStateType"></element>
 	<complexType name="SeaSurfaceStateType">
 		<annotation>
 			<documentation>Categorical assessment of sea surface state (or other large open body of water) based on height of waves.
@@ -970,6 +975,7 @@ See WMO No. 306 Vol I.1 code table 3700 "State of the sea" and WMO No. 306 Vol I
 			<extension base="gml:ReferenceType"></extension>
 		</complexContent>
 	</complexType>
+	<element name="RunwayDeposits" type="iwxxm:RunwayDepositsType"></element>
 	<complexType name="RunwayDepositsType">
 		<annotation>
 			<documentation>Type of deposit on a runway.
@@ -984,6 +990,7 @@ See WMO No. 306 Vol I.1 code table 0919 and WMO No. 306 Vol I.2 FM 94 BUFR code 
 			<extension base="gml:ReferenceType"></extension>
 		</complexContent>
 	</complexType>
+	<element name="RunwayContamination" type="iwxxm:RunwayContaminationType"></element>
 	<complexType name="RunwayContaminationType">
 		<annotation>
 			<documentation>Extent of runway surface that is contaminated (covered)</documentation>
@@ -996,6 +1003,7 @@ See WMO No. 306 Vol I.1 code table 0919 and WMO No. 306 Vol I.2 FM 94 BUFR code 
 			<extension base="gml:ReferenceType"></extension>
 		</complexContent>
 	</complexType>
+	<element name="RunwayFrictionCoefficient" type="iwxxm:RunwayFrictionCoefficientType"></element>
 	<complexType name="RunwayFrictionCoefficientType">
 		<annotation>
 			<documentation>Extent of runway surface that is contaminated (covered)</documentation>
@@ -1008,6 +1016,7 @@ See WMO No. 306 Vol I.1 code table 0919 and WMO No. 306 Vol I.2 FM 94 BUFR code 
 			<extension base="gml:ReferenceType"></extension>
 		</complexContent>
 	</complexType>
+	<element name="AerodromePresentWeather" type="iwxxm:AerodromePresentWeatherType"></element>
 	<complexType name="AerodromePresentWeatherType">
 		<annotation>
 			<documentation>The present weather observed at, or in near vicinity of, an aerodrome.

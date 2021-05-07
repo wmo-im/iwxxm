@@ -41,7 +41,7 @@ R99 (runway designator for runway state)
   When a new runway state report is not available in time for dissemination of the METAR message, attribute "fromPreviousReport" shall be set to true and runway nilReason set to "http://codes.wmo.int/common/nil/inapplicable"
 
 SNOCLO - Runways closed due to snow
-  When all runways are closed due to snow, this shall be indicated with a "runwayState" with a nilReason of "http://codes.wmo.int/bufr4/codeflag/0-20-085/1"
+  When all runways are closed due to snow, this shall be indicated with a "runwayState" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
 
 Present weather "//"
   When present weather cannot be observed by the automatic observing system due to a temporary failure of the system/sensor, "presentWeather" shall be reported with a nilReason of "http://codes.wmo.int/common/nil/notObservable"
@@ -137,7 +137,7 @@ NO VA EXP - No volcanic ash expected
   The expected end of occurrence of volcanic ash shall be indicated with an empty "member" under "VolcanicAshSIGMETPositionCollection" with a nilReason of "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
 
 Movement or expected movement - STNR
-  Stationary phenomenon shall be denoted with both iwxxm:directionOfMotion and iwxxm:speedOfMotion absent
+  Stationary phenomenon shall be denoted with an empty iwxxm:directionOfMotion with nilReason "http://codes.wmo.int/common/nil/inapplicable" and iwxxm:speedOfMotion of 0.
 
 ==========================
 Volcanic Ash Advisory
@@ -149,19 +149,25 @@ Volcanic Ash Advisory
   An unnamed volcano shall be indicated with an "EruptingVolcano/name" of "UNNAMED"
   
 'UNKNOWN' volcano location
-  An unknown volcano location shall be indicated with a "EruptingVolcano/position" with a nilReason of "http://codes.wmo.int/common/nil/unknown"
-  
+  An unknown volcano location shall be indicated with an empty "EruptingVolcano/position" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
+
+'UNKNOWN' State or region
+  An unknown State or region shall be indicated with an empty "stateOrRegion" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
+
+'UNKNOWN' summit elevation
+  An unknown summit elevation shall be indicated with an empty "elevation" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
+
 'UNKNOWN' aviation colour code
-  An unknown aviation colour code shall be indicated with a "colourCode" with a nilReason of "http://codes.wmo.int/common/nil/unknown"
+  An unknown aviation colour code shall be indicated with an empty "colourCode" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
   
 'NOT GIVEN' aviation colour code
-  An aviation colour code that is not given shall be indicated with a "colourCode" with a nilReason of "http://codes.wmo.int/common/nil/withheld"
+  An aviation colour code that is not given shall be indicated with an empty "colourCode" and a nilReason of "http://codes.wmo.int/common/nil/withheld"
 
 'NIL' aviation colour code
-  A NIL aviation colour code shall be indicated with a "colourCode" with a nilReason of "http://codes.wmo.int/common/nil/missing"
+  A NIL aviation colour code shall be indicated in "colourCode" with a nilReason of "http://codes.wmo.int/common/nil/missing"
 
 'UNKNOWN' eruption details
-  An unknown eruption details shall be indicated with a "eruptionDetails" with a nilReason of "http://codes.wmo.int/common/nil/unknown"
+  An unknown eruption details shall be indicated with an empty "eruptionDetails" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
 
 Eruption details
   Date/time of eruption(s) shall be included in "volcano" and the rest in "eruptionDetails"
@@ -173,10 +179,10 @@ Eruption details
   Element "status" under "VolcanicAshForecastConditions" shall be set accordingly.  Set it to "PROVIDED" otherwise
 
 'NIL' remarks
-  NIL remarks shall be indicated with "remarks" nilReason set to "http://codes.wmo.int/common/nil/inapplicable"
+  NIL remarks shall be indicated in "remarks" with nilReason set to "http://codes.wmo.int/common/nil/inapplicable"
   
 'NO FURTHER ADVISORIES'
-  A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
+  A NIL shall be indicated in "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
 
 ==========================
 Tropical Cyclone Advisory
@@ -184,14 +190,20 @@ Tropical Cyclone Advisory
 'UNNAMED' tropical cyclone name
   An unnamed tropical cyclone shall be indicated with a "tropicalCycloneName" of "UNNAMED"
 
+'NIL' observed CB cloud
+  Nil observed CB cloud shall be indicated in "cumulonimbusCloudLocation" with nilReason set to "http://codes.wmo.int/common/nil/missing"
+
 'NIL' remarks
-  NIL remarks shall be indicated with "remarks" nilReason set to "http://codes.wmo.int/common/nil/inapplicable"
+  NIL remarks shall be indicated in "remarks" with nilReason set to "http://codes.wmo.int/common/nil/inapplicable"
   
 'NO MSG EXP'
-  A NIL shall be indicated with "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
+  A NIL shall be indicated in "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
 
-Tropical cyclone forecast to dissipate
-  If a tropical cyclone is expected to dissipate the respective iwxxm:forecast element(s) shall be nil with nilReason set to 'http://codes.wmo.int/common/nil/nothingOfOperationalSignificance'.
+Forecast "maximumSurfaceWindSpeed" is less than 34 knots
+  A NIL shall be indicated in "maximumSurfaceWindSpeed" with nilReason set to 'http://codes.wmo.int/common/nil/nothingOfOperationalSignificance'
+
+Target is forecast to no longer categorize as a tropical cyclone
+  A NIL shall be indicated in "tropicalCyclonePosition" with nilReason set to 'http://codes.wmo.int/common/nil/inappropriate'
 
 ==========================
 Space Weather Advisory

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0-dev" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2021-2" version="3.0.1RC1" xmlns:iwxxm="http://icao.int/iwxxm/2021-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
+	<include schemaLocation="iwxxm.xsd"></include>
 	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.2/metce.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
@@ -243,7 +244,7 @@ A6-1: "Location indicator of FIR/CTA"</documentation>
 							<documentation>The ATS region (FIR, UIR, CTA, or FIR/UIR)</documentation>
 						</annotation>
 					</element>
-					<element name="sequenceNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="sequenceNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The sequence number of this message.  For example: "5", "A3", or "2"</documentation>
 						</annotation>
@@ -329,14 +330,14 @@ In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE 
 					</element>
 					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>This element refers to the expected direction of movement which the phenomenon is moving towards, .e.g, "moving east". When no movement is expected, this is a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason and the speedOfMotion will be 0.
+							<documentation>This element refers to the expected direction of movement which the phenomenon is moving towards, .e.g, "moving east". When no movement is expected, this is a http://codes.wmo.int/common/nil/inapplicable nilReason and the speedOfMotion will be 0.
 
 This element value is given in degrees from true North. Plane angle unit of measure (uom) is "deg". </documentation>
 						</annotation>
 					</element>
 					<element name="speedOfMotion" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The expected speed of movement of a meteorological condition. When no movement is expected, this will have a value of 0 and directionOfMotion will have a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason.
+							<documentation>The expected speed of movement of a meteorological condition. When no movement is expected, this will have a value of 0 and directionOfMotion will have a http://codes.wmo.int/common/nil/inapplicable nilReason.
 
 speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]" (knots).</documentation>
 						</annotation>
@@ -347,7 +348,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 						</annotation>
 					</element>
 				</sequence>
-				<attribute name="intensityChange" type="iwxxm:ExpectedIntensityChangeType">
+				<attribute name="intensityChange" type="iwxxm:SIGMETExpectedIntensityChangeType">
 					<annotation>
 						<documentation>The expected change in intensity for the reported meteorological condition (e.g., intensifying, weakening, or no change) determined at the time of SIGMET analysis based on the current state of the meteorological condition</documentation>
 					</annotation>
@@ -457,7 +458,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	<simpleType name="ExpectedIntensityChangeType">
+	<simpleType name="SIGMETExpectedIntensityChangeType">
 		<annotation>
 			<documentation>Expected change in intensity for (significant) meteorological phenomena.
 
@@ -481,6 +482,7 @@ See WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 20 028 'Expected change i
 			</enumeration>
 		</restriction>
 	</simpleType>
+	<element name="AeronauticalSignificantWeatherPhenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonType"></element>
 	<complexType name="AeronauticalSignificantWeatherPhenomenonType">
 		<annotation>
 			<documentation>Weather phenomenon of significance to aviation operations; used in SIGMET and AIRMET reports. The set of permitted options are defined in ICAO Annex 3 / WMO No. 49-2 C.3.1 sub-clause 1.1.4</documentation>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2021-2" version="1.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2021-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
+	<include schemaLocation="iwxxm.xsd"></include>
+	<include schemaLocation="metFeature.xsd"></include>
+	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd"></import>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
+	<annotation>
+		<documentation>This package defines a collective and selected meteorological objects for the World Area Forecast System (WAFS) to deliver forecasts of significant en-route weather phenomena as Significant Weather (SIGWX) forecasts.  
+
+Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those week-typed properties.</documentation>
+	</annotation>
+	<element name="WAFSSignificantWeatherForecast" type="iwxxm:WAFSSignificantWeatherForecastType" substitutionGroup="iwxxm:MeteorologicalFeatureCollection">
+		<annotation>
+			<documentation>Forecasts of significant en-route weather phenomena provided by the World Area Forecast System (WAFS).
+
+See ICAO Annex 3 / WMO No. 49-2 for details.</documentation>
+		</annotation>
+	</element>
+	<complexType name="WAFSSignificantWeatherForecastType">
+		<complexContent>
+			<extension base="iwxxm:MeteorologicalFeatureCollectionType">
+				<sequence>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element WAFSSignificantWeatherForecast</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="WAFSSignificantWeatherForecastPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:WAFSSignificantWeatherForecast"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="WAFSJetStreamWindSymbol" type="iwxxm:WAFSJetStreamWindSymbolType" substitutionGroup="gml:AbstractGML">
+		<annotation>
+			<documentation>Child element of iwxxm:phenomenonProperty when the parent iwxxm:MeteorologicalFeature is being used to represent a WAFS Jet Stream Wind Symbol.
+
+Describes the horizontal wind speed and direction at the point and optionally the elevation of the 80kt isotach below and above the maximum wind speed level if available.</documentation>
+		</annotation>
+	</element>
+	<complexType name="WAFSJetStreamWindSymbolType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element name="location" type="iwxxm:ElevatedPointPropertyType">
+						<annotation>
+							<documentation>Position of the wind symbol.</documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="windSpeed" type="iwxxm:VelocityWithNilReasonType">
+						<annotation>
+							<documentation>Horizontal wind speed at the indicated position.
+
+Wind speeds shall be provided in unit of measurer "m/s" (meters per second).</documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="IsotachUpperElevation" type="iwxxm:ValDistanceVerticalType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The vertical distance of the 80 knot isotach above the jet stream measured from Mean Sea Level (MSL).</documentation>
+						</annotation>
+					</element>
+					<element name="IsotachUpperVerticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating the reference for a vertical distance. Two series of values exist: 1) real distance: from GND, from the MSL, from the WGS-84 ellipsoid; 2) distance based on a difference of pressures, according to the standard atmosphere. </documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="IsotachLowerElevation" type="iwxxm:ValDistanceVerticalType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The vertical distance of the 80 knot isotach below the jet stream measured from Mean Sea Level (MSL).</documentation>
+						</annotation>
+					</element>
+					<element name="IsotachLowerVerticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating the reference for a vertical distance. Two series of values exist: 1) real distance: from GND, from the MSL, from the WGS-84 ellipsoid; 2) distance based on a difference of pressures, according to the standard atmosphere. </documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="WAFSJetStreamWindSymbolPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:WAFSJetStreamWindSymbol"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="Volcano" type="iwxxm:VolcanoType" substitutionGroup="gml:AbstractGML">
+		<annotation>
+			<documentation>A volcano</documentation>
+		</annotation>
+	</element>
+	<complexType name="VolcanoType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element nillable="true" name="name" type="iwxxm:StringWithNilReasonType">
+						<annotation>
+							<documentation>Name of the volcano.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="VolcanoPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:Volcano"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="TropicalCyclone" type="iwxxm:TropicalCycloneType" substitutionGroup="gml:AbstractGML">
+		<annotation>
+			<documentation>A tropical cyclone.</documentation>
+		</annotation>
+	</element>
+	<complexType name="TropicalCycloneType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element nillable="true" name="name" type="iwxxm:StringWithNilReasonType">
+						<annotation>
+							<documentation>Name of the tropical cyclone.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TropicalCyclonePropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:TropicalCyclone"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="RadiationIncident" type="iwxxm:RadiationIncidentType" substitutionGroup="gml:AbstractGML">
+		<annotation>
+			<documentation>A radiation incident characterised by the location name and incident time.</documentation>
+		</annotation>
+	</element>
+	<complexType name="RadiationIncidentType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element nillable="true" name="siteName" type="iwxxm:StringWithNilReasonType">
+						<annotation>
+							<documentation>Incident location.</documentation>
+						</annotation>
+					</element>
+					<element name="incidentTime" type="gml:TimeInstantPropertyType">
+						<annotation>
+							<documentation>Incident time.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="RadiationIncidentPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:RadiationIncident"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="WorldAreaForecastCentre" type="iwxxm:WorldAreaForecastCentreType"/>
+	<simpleType name="WorldAreaForecastCentreType">
+		<annotation>
+			<documentation>WorldAreaForecastCentre identifies the institution that creates the report.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="Washington">
+				<annotation>
+					<documentation>The World Area Forecast Centre (WAFC) operated by the National Oceanic and Atmospheric Administration (NOAA) in the USA.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="London">
+				<annotation>
+					<documentation>The World Area Forecast Centre (WAFC) operated by the UK Met Office.</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<element name="DegreeOfTurbulence" type="iwxxm:DegreeOfTurbulenceType"></element>
+	<complexType name="DegreeOfTurbulenceType">
+		<annotation>
+			<documentation>Degree of turbulence.
+
+See WMO No. 306 Vol I.2 FM 94 BUFR code table 0 11 030 "Extended Degree of Turbulence".</documentation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-11-030</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
+	<element name="CloudDistribution" type="iwxxm:CloudDistributionType"></element>
+	<complexType name="CloudDistributionType">
+		<annotation>
+			<documentation>Cloud distribution.
+
+See WMO No. 306 Vol I.2 FM 94 BUFR code table 0 20 008 "Cloud Distribution for Aviation".</documentation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-20-008</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
+	<element name="CloudType" type="iwxxm:CloudTypeType"></element>
+	<complexType name="CloudTypeType">
+		<annotation>
+			<documentation>Cloud type.
+
+See WMO No. 306 Vol I.2 FM 94 BUFR code table 0 20 012 "Cloud Type".</documentation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-20-012</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
+</schema>

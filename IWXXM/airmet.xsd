@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0-dev" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2021-2" version="3.1.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2021-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
+	<include schemaLocation="iwxxm.xsd"></include>
 	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
@@ -81,7 +82,7 @@ The AIRMET report class represents the base AIRMET types that may be reported su
 							<documentation>The ATS region (FIR, UIR, CTA, or FIR/UIR)</documentation>
 						</annotation>
 					</element>
-					<element name="sequenceNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="sequenceNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The sequence number of this message.  For example: "5", "A3", or "2"</documentation>
 						</annotation>
@@ -154,12 +155,12 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 					</element>
 					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The expected direction of movement of a meteorological condition. When no movement is expected, this is a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason and the speedOfMotion will be 0.  Direction of motion to shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
+							<documentation>The expected direction of movement of a meteorological condition. When no movement is expected, this is a http://codes.wmo.int/common/nil/inapplicable nilReason and the speedOfMotion will be 0.  Direction of motion to shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
 						</annotation>
 					</element>
 					<element name="speedOfMotion" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The expected speed of movement of a meteorological condition. When no movement is expected, this will have a value of 0 and directionOfMotion will have a http://www.opengis.net/def/nil/OGC/0/inapplicable nilReason. Speed of movement shall be given in either "km/h" or "[kn_i]" (knot).</documentation>
+							<documentation>The expected speed of movement of a meteorological condition. When no movement is expected, this will have a value of 0 and directionOfMotion will have a http://codes.wmo.int/common/nil/inapplicable nilReason. Speed of movement shall be given in either "km/h" or "[kn_i]" (knot).</documentation>
 						</annotation>
 					</element>
 					<element name="cloudBase" type="gml:LengthType" minOccurs="0" maxOccurs="1">
@@ -190,6 +191,11 @@ Cloud base and top may differ from but should be within the AIRMET base and top 
 					<element name="cloudTopReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The reference surface used for the value of the cloud base. For example, Mean Sea Level, Ground, standard pressure,  etc..</documentation>
+						</annotation>
+					</element>
+					<element name="cloudTopAbove" type="boolean" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Indicates whether the cloud top is above the reported values.</documentation>
 						</annotation>
 					</element>
 					<element name="surfaceVisibility" type="gml:LengthType" minOccurs="0" maxOccurs="1">
@@ -271,6 +277,7 @@ See WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 20 028 'Expected change i
 			</enumeration>
 		</restriction>
 	</simpleType>
+	<element name="AeronauticalAreaWeatherPhenomenon" type="iwxxm:AeronauticalAreaWeatherPhenomenonType"></element>
 	<complexType name="AeronauticalAreaWeatherPhenomenonType">
 		<annotation>
 			<documentation>Weather phenomenon of significance to aviation operations; used in AIRMET reports. The set of permitted options are defined in ICAO Annex 3 / WMO No. 49-2 C.3.1 sub-clause 1.1.4</documentation>
@@ -283,6 +290,7 @@ See WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 20 028 'Expected change i
 			<extension base="gml:ReferenceType"></extension>
 		</complexContent>
 	</complexType>
+	<element name="WeatherCausingVisibilityReduction" type="iwxxm:WeatherCausingVisibilityReductionType"></element>
 	<complexType name="WeatherCausingVisibilityReductionType">
 		<annotation>
 			<documentation>A weather condition reducing visibility, such as dust, rain or volcanic ash.

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2021-2" version="1.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2021-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
+	<include schemaLocation="iwxxm.xsd"></include>
+	<include schemaLocation="common.xsd"></include>
+	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd"></import>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
+	<annotation>
+		<documentation>This package provides basic features for describing meteorological and related phenomena specialised for the aviation domain.
+
+Feature types defined in this package, in addition to the strong-typed approach usually employed in GML encoding pattern, also apply virtual-typed pattern in those areas where it is more convenient to define properties from a controlled source.
+
+For ease of maintenance the controlled source are a set of constraints defined together with the Class diagrams used to generate the XML/GML application schemas of IWXXM.  Scripts will be used to extract constraints from the Class diagrams and generate Schematron rules to enforce conformance to the information model.</documentation>
+	</annotation>
+	<element name="MeteorologicalFeatureCollection" type="iwxxm:MeteorologicalFeatureCollectionType" substitutionGroup="iwxxm:BasicReport">
+		<annotation>
+			<documentation>A collective for meteorological features.</documentation>
+		</annotation>
+	</element>
+	<complexType name="MeteorologicalFeatureCollectionType">
+		<complexContent>
+			<extension base="iwxxm:BasicReportType">
+				<sequence>
+					<element name="boundingPeriod" type="gml:TimePeriodPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The period covering all of the phenomena mentioned in the collective.</documentation>
+						</annotation>
+					</element>
+					<element name="boundingVolume" type="iwxxm:ElevatedEnvelopePropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The volume containing all of the phenomena mentioned in the collective during the bounding period.</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenaList" type="iwxxm:MeteorologicalPhenomenonType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>List of meteorological phenomena involved in the collection.</documentation>
+						</annotation>
+					</element>
+					<element name="issueTime" type="gml:TimeInstantPropertyType">
+						<annotation>
+							<documentation>The time the collective is issued.</documentation>
+						</annotation>
+					</element>
+					<element name="originatingCentre" type="gml:AssociationRoleType">
+						<annotation>
+							<documentation>Institution that creates the reports.</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenonCategory" type="iwxxm:WMOCategoryCodeType">
+						<annotation>
+							<documentation>The category of the meteorological phenomenon which is either weatherObservations or weatherForecasts.</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenonBaseTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The data time of the forecast, usually provided to identify different sets of numerical weather prediction product.
+
+To be used in conjunction with iwxxm:phenomenonTime when iwxxm:phenomenonCategory="weatherForecasts" 
+
+If this element is not inherited from the encapsulating iwxxm:MeteorologicalFeatureCollection this element shall be present.</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The time instant or period during which the indicated meteorological phenomenon occurred or is expected to occur.
+
+When iwxxm:phenomenonCategory="weatherObservations" it is the observation time of the phenomenon.
+
+When iwxxm:phenomenonCategory="weatherForecasts" it is the forecast time of the phenomenon.</documentation>
+						</annotation>
+					</element>
+					<element name="feature" type="iwxxm:MeteorologicalFeaturePropertyType" minOccurs="1" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Meteorological feature(s) of the collection.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="MeteorologicalFeatureCollectionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:MeteorologicalFeatureCollection"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="MeteorologicalFeature" type="iwxxm:MeteorologicalFeatureType" substitutionGroup="gml:AbstractGML">
+		<annotation>
+			<documentation>Basic feature for describing a meteorological and related phenomenon.</documentation>
+		</annotation>
+	</element>
+	<complexType name="MeteorologicalFeatureType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element name="issueTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The time the report is issued.
+
+If this element is not inherited from the encapsulating iwxxm:MeteorologicalFeatureCollection this element shall be present.</documentation>
+						</annotation>
+					</element>
+					<element name="originatingCentre" type="gml:AssociationRoleType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Institution that creates the reports.
+
+If this element is not inherited from the encapsulating iwxxm:MeteorologicalFeatureCollection this element shall be present.</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenonCategory" type="iwxxm:WMOCategoryCodeType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The category of the meteorological phenomenon which is either weatherObservations or weatherForecasts.
+
+If this element is not inherited from the encapsulating iwxxm:MeteorologicalFeatureCollection this element shall be present.</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenonBaseTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The data time of the forecast, usually provided to identify different sets of numerical weather prediction product.
+
+To be used in conjunction with iwxxm:phenomenonTime when iwxxm:phenomenonCategory="weatherForecasts" 
+
+If this element is not inherited from the encapsulating iwxxm:MeteorologicalFeatureCollection this element shall be present.</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>The time instant or period during which the indicated meteorological phenomenon occurred or is expected to occur.
+
+When iwxxm:phenomenonCategory="weatherObservations" it is the observation time of the phenomenon.
+
+When iwxxm:phenomenonCategory="weatherForecasts" it is the forecast time of the phenomenon.
+
+If this element is not inherited from the encapsulating iwxxm:MeteorologicalFeatureCollection this element shall be present.</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenon" type="iwxxm:MeteorologicalPhenomenonType">
+						<annotation>
+							<documentation>The meteorological phenomenon mentioned in the report.</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenonGeometry" type="gml:AssociationRoleType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Geometry of the meteorological phenomenon.
+
+The actual featureType to be used in describing the geometry shall be constraint by iwxxm:phenomenonCategory and iwxxm:phenomenon.</documentation>
+						</annotation>
+					</element>
+					<element name="phenomenonProperty" type="gml:AssociationRoleType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Properties of the meteorological phenomenon.
+
+The actual featureType to be used in describing the properties shall be constraint by iwxxm:phenomenonCategory and iwxxm:phenomenon.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="MeteorologicalFeaturePropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:MeteorologicalFeature"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="ElevatedEnvelope" type="iwxxm:ElevatedEnvelopeType" substitutionGroup="gml:Envelope">
+		<annotation>
+			<documentation>Describes a 3 dimensional envelope in terms of a horizontal area and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain. </documentation>
+		</annotation>
+	</element>
+	<complexType name="ElevatedEnvelopeType">
+		<complexContent>
+			<extension base="gml:EnvelopeType">
+				<sequence>
+					<element nillable="true" name="upperElevation" type="iwxxm:ValDistanceVerticalType">
+						<annotation>
+							<documentation>The vertical distance of the upper surface measured from Mean Sea Level (MSL).</documentation>
+						</annotation>
+					</element>
+					<element name="upperVerticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating the reference for a vertical distance. Two series of values exist: 1) real distance: from GND, from the MSL, from the WGS-84 ellipsoid; 2) distance based on a difference of pressures, according to the standard atmosphere. </documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="lowerElevation" type="iwxxm:ValDistanceVerticalType">
+						<annotation>
+							<documentation>The vertical distance of the lower surface measured from Mean Sea Level (MSL).</documentation>
+						</annotation>
+					</element>
+					<element name="lowerVerticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating the reference for a vertical distance. Two series of values exist: 1) real distance: from GND, from the MSL, from the WGS-84 ellipsoid; 2) distance based on a difference of pressures, according to the standard atmosphere. </documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ElevatedEnvelopePropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:ElevatedEnvelope"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="ElevatedLevel" type="iwxxm:ElevatedLevelType" substitutionGroup="gml:AbstractGeometricPrimitive">
+		<annotation>
+			<documentation>Describes a vertical level in terms of an elevation which can be expressed in metrics commonly used in the aviation domain. </documentation>
+		</annotation>
+	</element>
+	<complexType name="ElevatedLevelType">
+		<complexContent>
+			<extension base="gml:AbstractGeometricPrimitiveType">
+				<sequence>
+					<element name="elevation" type="iwxxm:ValDistanceVerticalType">
+						<annotation>
+							<documentation>The vertical distance of the curve measured from Mean Sea Level (MSL).</documentation>
+						</annotation>
+					</element>
+					<element name="verticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating the reference for a vertical distance. Two series of values exist: 1) real distance: from GND, from the MSL, from the WGS-84 ellipsoid; 2) distance based on a difference of pressures, according to the standard atmosphere.</documentation>
+						</annotation>
+					</element>
+					<element name="interpretation" type="aixm:CodeValueInterpretationBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating how a value needs to be interpreted when used as a filter or condition. For example: above the value or below the value. </documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ElevatedLevelPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:ElevatedLevel"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="ElevatedPoint" type="iwxxm:ElevatedPointType" substitutionGroup="gml:Point">
+		<annotation>
+			<documentation>Describes a 3 dimensional point in terms of a horizontal position and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain. </documentation>
+		</annotation>
+	</element>
+	<complexType name="ElevatedPointType">
+		<complexContent>
+			<extension base="gml:PointType">
+				<sequence>
+					<element nillable="true" name="elevation" type="iwxxm:ValDistanceVerticalType">
+						<annotation>
+							<documentation>The vertical distance of the point measured from Mean Sea Level (MSL).</documentation>
+						</annotation>
+					</element>
+					<element name="verticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating the reference for a vertical distance. Two series of values exist: 1) real distance: from GND, from the MSL, from the WGS-84 ellipsoid; 2) distance based on a difference of pressures, according to the standard atmosphere. </documentation>
+						</annotation>
+					</element>
+					<element name="interpretation" type="aixm:CodeValueInterpretationBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating how a value needs to be interpreted when used as a filter or condition. For example: above the value or below the value. </documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ElevatedPointPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:ElevatedPoint"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="ElevatedCurve" type="iwxxm:ElevatedCurveType" substitutionGroup="gml:Curve">
+		<annotation>
+			<documentation>Describes a horizontal curve in 3 dimensional space in terms of its horizontal position and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain. </documentation>
+		</annotation>
+	</element>
+	<complexType name="ElevatedCurveType">
+		<complexContent>
+			<extension base="gml:CurveType">
+				<sequence>
+					<element nillable="true" name="elevation" type="iwxxm:ValDistanceVerticalType">
+						<annotation>
+							<documentation>The vertical distance of the curve measured from Mean Sea Level (MSL).</documentation>
+						</annotation>
+					</element>
+					<element name="verticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating the reference for a vertical distance. Two series of values exist: 1) real distance: from GND, from the MSL, from the WGS-84 ellipsoid; 2) distance based on a difference of pressures, according to the standard atmosphere.</documentation>
+						</annotation>
+					</element>
+					<element name="interpretation" type="aixm:CodeValueInterpretationBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating how a value needs to be interpreted when used as a filter or condition. For example: above the value or below the value. </documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ElevatedCurvePropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:ElevatedCurve"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="ElevatedSurface" type="iwxxm:ElevatedSurfaceType" substitutionGroup="gml:Surface">
+		<annotation>
+			<documentation>Describes a horizontal surface in 3 dimensional space in terms of its horizontal position and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain. </documentation>
+		</annotation>
+	</element>
+	<complexType name="ElevatedSurfaceType">
+		<complexContent>
+			<extension base="gml:SurfaceType">
+				<sequence>
+					<element nillable="true" name="elevation" type="iwxxm:ValDistanceVerticalType">
+						<annotation>
+							<documentation>The vertical distance of the surface measured from Mean Sea Level (MSL).</documentation>
+						</annotation>
+					</element>
+					<element name="verticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating the reference for a vertical distance. Two series of values exist: 1) real distance: from GND, from the MSL, from the WGS-84 ellipsoid; 2) distance based on a difference of pressures, according to the standard atmosphere. </documentation>
+						</annotation>
+					</element>
+					<element name="interpretation" type="aixm:CodeValueInterpretationBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating how a value needs to be interpreted when used as a filter or condition. For example: above the value or below the value.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ElevatedSurfacePropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:ElevatedSurface"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="ElevatedVolume" type="iwxxm:ElevatedVolumeType" substitutionGroup="gml:Surface">
+		<annotation>
+			<documentation>Describes a 3 dimensional volume in terms of a horizontal area and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain. </documentation>
+		</annotation>
+	</element>
+	<complexType name="ElevatedVolumeType">
+		<complexContent>
+			<extension base="gml:SurfaceType">
+				<sequence>
+					<element nillable="true" name="upperElevation" type="iwxxm:ValDistanceVerticalType">
+						<annotation>
+							<documentation>The vertical distance of the upper surface measured from Mean Sea Level (MSL).</documentation>
+						</annotation>
+					</element>
+					<element name="upperVerticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating the reference for a vertical distance. Two series of values exist: 1) real distance: from GND, from the MSL, from the WGS-84 ellipsoid; 2) distance based on a difference of pressures, according to the standard atmosphere.</documentation>
+						</annotation>
+					</element>
+					<element name="upperInterpretation" type="aixm:CodeValueInterpretationBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating how a value needs to be interpreted when used as a filter or condition. For example: above the value or below the value. </documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="lowerElevation" type="iwxxm:ValDistanceVerticalType">
+						<annotation>
+							<documentation>The vertical distance of the lower surface measured from Mean Sea Level (MSL).</documentation>
+						</annotation>
+					</element>
+					<element name="lowerVerticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating the reference for a vertical distance. Two series of values exist: 1) real distance: from GND, from the MSL, from the WGS-84 ellipsoid; 2) distance based on a difference of pressures, according to the standard atmosphere.</documentation>
+						</annotation>
+					</element>
+					<element name="lowerInterpretation" type="aixm:CodeValueInterpretationBaseType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>A code indicating how a value needs to be interpreted when used as a filter or condition. For example: above the value or below the value. </documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ElevatedVolumePropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:ElevatedVolume"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<simpleType name="WMOCategoryCodeType">
+		<annotation>
+			<documentation>Additional topic categories for WMO community.
+
+The full list is in Table 16. WMO_CategoryCode &lt;&lt;CodeList&gt;&gt; in WMO Core Metadata Profile version 1.3 Specification Part 2 - Abstract Test Suite, Data Dictionary and Code Lists.
+
+Only weatherObservations and weatherForecasts are being used in this enumeration.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="weatherObservations">
+				<annotation>
+					<documentation>Weather Observations</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="weatherForecasts">
+				<annotation>
+					<documentation>Weather Forecasts.</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<element name="MeteorologicalPhenomenon" type="iwxxm:MeteorologicalPhenomenonType"></element>
+	<complexType name="MeteorologicalPhenomenonType">
+		<annotation>
+			<documentation>MeteorologicalFeatures identifies the indicated meteorological phenomenon.
+
+This CodeList is specifically defined for aviation purposes.  It is a superset to the definitions defined in WMO No. 306 Vol I.2 FM 94 BUFR code table 0 08 011 "Meteorological feature".</documentation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/49-2/MeteorologicalFeature</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
+</schema>

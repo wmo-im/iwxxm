@@ -9,7 +9,7 @@
    <sch:ns prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
    <sch:ns prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
    <sch:ns prefix="reg" uri="http://purl.org/linked-data/registry#"/>
-   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/3.0"/>
+   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/2021-2"/>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState-1">
       <sch:rule context="//iwxxm:AerodromeRunwayState">
          <sch:assert test="( if( @allRunways = 'true' ) then( empty(iwxxm:runway) ) else( true() ) )">METAR_SPECI.AerodromeRunwayState-1: When all runways are being reported upon, no specific runway should be reported</sch:assert>
@@ -30,9 +30,14 @@
          <sch:assert test="( if( exists(iwxxm:meanRVR) and not(iwxxm:meanRVR/@xsi:nil = 'true') ) then( iwxxm:meanRVR/@uom = 'm' ) else( true() ) )">METAR_SPECI.AerodromeRunwayVisualRange-1: meanRVR shall be reported in metres (m)</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="METAR_SPECI.AerodromeRecentWeather">
+      <sch:rule context="//iwxxm:AerodromeRecentWeather">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromeRecentWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AerodromeRecentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromeRecentWeather</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservation.recentWeather">
       <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation/iwxxm:recentWeather">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromeRecentWeather.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">MeteorologicalAerodromeObservation/iwxxm:recentWeather elements should be a member of http://codes.wmo.int/49-2/AerodromeRecentWeather</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromeRecentWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalAerodromeObservation/iwxxm:recentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromeRecentWeather</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-1">
@@ -80,14 +85,24 @@
          <sch:assert test="( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = 'OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:observationTime) and exists(iwxxm:observation) ) else( true() ) )">METAR_SPECI.MeteorologicalAerodromeObservationReport-4: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome, iwxxm:observationTime and iwxxm:observation</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="METAR_SPECI.SeaSurfaceState">
+      <sch:rule context="//iwxxm:SeaSurfaceState">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SeaSurfaceState should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaCondition.seaState">
       <sch:rule context="//iwxxm:AerodromeSeaCondition/iwxxm:seaState">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">AerodromeSeaCondition/iwxxm:seaState elements should be a member of http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AerodromeSeaCondition/iwxxm:seaState should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="METAR_SPECI.RunwayDeposits">
+      <sch:rule context="//iwxxm:RunwayDeposits">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-086.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:RunwayDeposits should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-086</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState.depositType">
       <sch:rule context="//iwxxm:AerodromeRunwayState/iwxxm:depositType">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-086.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">AerodromeRunwayState/iwxxm:depositType elements should be a member of http://codes.wmo.int/bufr4/codeflag/0-20-086</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-086.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AerodromeRunwayState/iwxxm:depositType should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-086</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaState-1">
@@ -120,9 +135,14 @@
          <sch:assert test="( if( exists(iwxxm:runway) ) then( empty(@allRunways) or (@allRunways = 'false') ) else( true() ) )">METAR_SPECI.AerodromeWindShear-2: When a single Runway is reported upon, the allRunways flag should be missing or false</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="METAR_SPECI.RunwayContamination">
+      <sch:rule context="//iwxxm:RunwayContamination">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-087.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:RunwayContamination should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-087</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState.contamination">
       <sch:rule context="//iwxxm:AerodromeRunwayState/iwxxm:contamination">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-087.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">AerodromeRunwayState/iwxxm:contamination elements should be a member of http://codes.wmo.int/bufr4/codeflag/0-20-087</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-087.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AerodromeRunwayState/iwxxm:contamination should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-087</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeTrendForecast-1">
@@ -210,14 +230,24 @@
          <sch:assert test="( if( exists(iwxxm:windGustSpeed) and not(iwxxm:windGustSpeed/@xsi:nil = 'true') ) then( (iwxxm:windGustSpeed/@uom = 'm/s') or (iwxxm:windGustSpeed/@uom = '[kn_i]') ) else( true() ) )">METAR_SPECI.AerodromeSurfaceWind-7: windGustSpeed shall be reported in metres per second (m/s) or knots ([kn_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="METAR_SPECI.AerodromePresentWeather">
+      <sch:rule context="//iwxxm:AerodromePresentWeather">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AerodromePresentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservation.presentWeather">
       <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation/iwxxm:presentWeather">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">MeteorologicalAerodromeObservation/iwxxm:presentWeather elements should be a member of http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalAerodromeObservation/iwxxm:presentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="METAR_SPECI.RunwayFrictionCoefficient">
+      <sch:rule context="//iwxxm:RunwayFrictionCoefficient">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-089.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:RunwayFrictionCoefficient should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-089</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState.estimatedSurfaceFrictionOrBrakingAction">
       <sch:rule context="//iwxxm:AerodromeRunwayState/iwxxm:estimatedSurfaceFrictionOrBrakingAction">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-089.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">AerodromeRunwayState/iwxxm:estimatedSurfaceFrictionOrBrakingAction elements should be a member of http://codes.wmo.int/bufr4/codeflag/0-20-089</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-089.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AerodromeRunwayState/iwxxm:estimatedSurfaceFrictionOrBrakingAction should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-089</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeHorizontalVisibility-1">
@@ -272,7 +302,7 @@
    </sch:pattern>
    <sch:pattern id="TAF.TAF-8">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="( if( exists(iwxxm:baseForecast/*) and not(iwxxm:baseForecast/iwxxm:MeteorologicalAerodromeForecast/@cloudAndVisibilityOK = 'true') ) then( exists(iwxxm:baseForecast/iwxxm:MeteorologicalAerodromeForecast/iwxxm:prevailingVisibility) and exists(iwxxm:baseForecast/iwxxm:MeteorologicalAerodromeForecast/iwxxm:cloud) ) else( true() ) )">TAF.TAF-8: In a non-empty iwxxm:baseForecast when @cloudAndVisibilityOK is false iwxxm:prevailingVisibility and iwxxm:cloud are mandatory</sch:assert>
+         <sch:assert test="( if( exists(iwxxm:baseForecast/*) and not(iwxxm:baseForecast/iwxxm:MeteorologicalAerodromeForecast/@cloudAndVisibilityOK = 'true') ) then( exists(iwxxm:baseForecast/iwxxm:MeteorologicalAerodromeForecast/iwxxm:prevailingVisibility) and exists(iwxxm:baseForecast/iwxxm:MeteorologicalAerodromeForecast/iwxxm:cloud) ) else( true() ) )">TAF.TAF-8: In a non-empty iwxxm:baseForecast when @cloudAndVisibilityOK is false or empty iwxxm:prevailingVisibility and iwxxm:cloud are mandatory</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF-4">
@@ -370,9 +400,14 @@
          <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = 'OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingAirTrafficServicesUnit) and exists(iwxxm:originatingMeteorologicalWatchOffice) and exists(iwxxm:issuingAirTrafficServicesRegion) and exists(iwxxm:sequenceNumber) and exists(iwxxm:validPeriod) and empty(iwxxm:cancelledReportSequenceNumber) and empty(iwxxm:cancelledReportValidPeriod) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) ) else( true() ) )">SIGMET.SIGMET-4: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingAirTrafficServicesUnit, iwxxm:originatingMeteorologicalWatchOffice, iwxxm:issuingAirTrafficServicesRegion, iwxxm:sequenceNumber, iwxxm:validPeriod, iwxxm:phenomenon and iwxxm:analysis. Elements iwxxm:cancelledReportSequenceNumber and iwxxm:cancelledReportValidPeriod shall be absent</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="SIGMET.AeronauticalSignificantWeatherPhenomenon">
+      <sch:rule context="//iwxxm:AeronauticalSignificantWeatherPhenomenon">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AeronauticalSignificantWeatherPhenomenon should be a member of code list http://codes.wmo.int/49-2/SigWxPhenomena</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET.phenomenon">
-      <sch:rule context="//iwxxm:SIGMET/iwxxm:phenomenon">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigWxPhenomena.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">SIGMET/iwxxm:phenomenon elements should be a member of http://codes.wmo.int/49-2/SigWxPhenomena</sch:assert>
+      <sch:rule context="//iwxxm:SIGMET/iwxxm:phenomenon|//iwxxm:VolcanicAshSIGMET/iwxxm:phenomenon|//iwxxm:TropicalCycloneSIGMET/iwxxm:phenomenon">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SIGMET/iwxxm:phenomenon, iwxxm:VolcanicAshSIGMET/iwxxm:phenomenon, iwxxm:TropicalCycloneSIGMET/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/SigWxPhenomena</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMETEvolvingCondition-4">
@@ -460,9 +495,14 @@
          <sch:assert test="( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( empty(index-of(iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else ( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMETPositionCollection-1: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="AIRMET.WeatherCausingVisibilityReduction">
+      <sch:rule context="//iwxxm:WeatherCausingVisibilityReduction">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-WeatherCausingVisibilityReduction.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:WeatherCausingVisibilityReduction should be a member of code list http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="AIRMET.AIRMETEvolvingCondition.surfaceVisibilityCause">
       <sch:rule context="//iwxxm:AIRMETEvolvingCondition/iwxxm:surfaceVisibilityCause">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-WeatherCausingVisibilityReduction.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">AIRMETEvolvingCondition/iwxxm:surfaceVisibilityCause elements should be a member of http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-WeatherCausingVisibilityReduction.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AIRMETEvolvingCondition/iwxxm:surfaceVisibilityCause should be a member of code list http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMETEvolvingCondition-1">
@@ -510,9 +550,14 @@
          <sch:assert test="( if( exists(iwxxm:surfaceWindSpeed) and not(iwxxm:surfaceWindSpeed/@xsi:nil = 'true') ) then( (iwxxm:surfaceWindSpeed/@uom = 'm/s') or (iwxxm:surfaceWindSpeed/@uom = '[kn_i]') ) else( true() ) )">AIRMET.AIRMETEvolvingCondition-6: surfaceWindSpeed shall be reported in metres per second (m/s) or knots ([kn_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="AIRMET.AeronauticalAreaWeatherPhenomenon">
+      <sch:rule context="//iwxxm:AeronauticalAreaWeatherPhenomenon">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AirWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AeronauticalAreaWeatherPhenomenon should be a member of code list http://codes.wmo.int/49-2/AirWxPhenomena</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET.phenomenon">
       <sch:rule context="//iwxxm:AIRMET/iwxxm:phenomenon">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AirWxPhenomena.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">AIRMET/iwxxm:phenomenon elements should be a member of http://codes.wmo.int/49-2/AirWxPhenomena</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AirWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AIRMET/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/AirWxPhenomena</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-1">
@@ -615,9 +660,14 @@
          <sch:assert test="( if( exists(iwxxm:speedOfMotion) and not(iwxxm:speedOfMotion/@xsi:nil = 'true') ) then( (iwxxm:speedOfMotion/@uom = 'km/h') or (iwxxm:speedOfMotion/@uom = '[kn_i]') ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshCloud-2: speedOfMotion shall be reported in kilometres per hour (km/h) or knots ([kn_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="VolcanicAshAdvisory.AviationColourCode">
+      <sch:rule context="//iwxxm:AviationColourCode">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AviationColourCode.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AviationColourCode should be a member of code list http://codes.wmo.int/49-2/AviationColourCode</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory.colourCode">
       <sch:rule context="//iwxxm:VolcanicAshAdvisory/iwxxm:colourCode">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AviationColourCode.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">VolcanicAshAdvisory/iwxxm:colourCode elements should be a member of http://codes.wmo.int/49-2/AviationColourCode</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AviationColourCode.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:VolcanicAshAdvisory/iwxxm:colourCode should be a member of code list http://codes.wmo.int/49-2/AviationColourCode</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-3">
@@ -675,14 +725,24 @@
          <sch:assert test="( if( @status = 'NOT IDENTIFIABLE') then( empty(iwxxm:ashCloud) and exists(iwxxm:windConditions) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshObservedOrEstimatedConditions-2: When @status is equal to 'NOT IDENTIFIABLE', iwxxm:ashCloud must be empty and iwxxm:windConditions shall not be empty</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherLocation">
+      <sch:rule context="//iwxxm:SpaceWeatherLocation">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxLocation.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SpaceWeatherLocation should be a member of code list http://codes.wmo.int/49-2/SpaceWxLocation</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherRegion.locationIndicator">
       <sch:rule context="//iwxxm:SpaceWeatherRegion/iwxxm:locationIndicator">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxLocation.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">SpaceWeatherRegion/iwxxm:locationIndicator elements should be a member of http://codes.wmo.int/49-2/SpaceWxLocation</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxLocation.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SpaceWeatherRegion/iwxxm:locationIndicator should be a member of code list http://codes.wmo.int/49-2/SpaceWxLocation</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherPhenomena">
+      <sch:rule context="//iwxxm:SpaceWeatherPhenomena">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SpaceWeatherPhenomena should be a member of code list http://codes.wmo.int/49-2/SpaceWxPhenomena</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherAdvisory.phenomenon">
       <sch:rule context="//iwxxm:SpaceWeatherAdvisory/iwxxm:phenomenon">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxPhenomena.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">SpaceWeatherAdvisory/iwxxm:phenomenon elements should be a member of http://codes.wmo.int/49-2/SpaceWxPhenomena</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SpaceWeatherAdvisory/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/SpaceWxPhenomena</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherRegion-1">
@@ -700,24 +760,99 @@
          <sch:assert test="( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = 'OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingSpaceWeatherCentre) and exists(iwxxm:advisoryNumber) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherAdvisory-2: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingSpaceWeatherCentre, iwxxm:advisoryNumber, iwxxm:phenomenon, iwxxm:analysis, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="WAFSSignificantWeatherForecast.CloudDistribution">
+      <sch:rule context="//iwxxm:CloudDistribution">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-008.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:CloudDistribution should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-008</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="WAFSSignificantWeatherForecast.CloudType">
+      <sch:rule context="//iwxxm:CloudType">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-012.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:CloudType should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-012</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="WAFSSignificantWeatherForecast.DegreeOfTurbulence">
+      <sch:rule context="//iwxxm:DegreeOfTurbulence">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-11-030.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:DegreeOfTurbulence should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-11-030</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-3">
+      <sch:rule context="//iwxxm:WAFSSignificantWeatherForecast">
+         <sch:assert test="( exists(iwxxm:originatingCentre/iwxxm:WorldAreaForecastCentre) )">WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-3: iwxxm:originatingCentre must have a child element of iwxxm:WorldAreaForecastCentre</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-2">
+      <sch:rule context="//iwxxm:WAFSSignificantWeatherForecast">
+         <sch:assert test="( exists(iwxxm:phenomenonBaseTime) )">WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-2: iwxxm:phenomenonBaseTime is mandatory</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-1">
+      <sch:rule context="//iwxxm:WAFSSignificantWeatherForecast">
+         <sch:assert test="( iwxxm:phenomenonCategory = 'weatherForecasts' )">WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-1: iwxxm:phenomenonCategory shall be equal to 'weatherForecasts'.</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="MeteorologicalFeature.MeteorologicalFeature-1">
+      <sch:rule context="//iwxxm:MeteorologicalFeature">
+         <sch:assert test="( exists(gml:identifier) )">MeteorologicalFeature.MeteorologicalFeature-1: gml:identifier is mandatory</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="MeteorologicalFeature.MeteorologicalFeature-2">
+      <sch:rule context="//iwxxm:MeteorologicalFeature">
+         <sch:assert test="( if( name(..) != 'iwxxm:feature' ) then( exists(iwxxm:issueTime) and exists(iwxxm:originatingCentre) and exists(iwxxm:phenomenonCategory) and exists(iwxxm:phenomenonTime) ) else( true() ) )">MeteorologicalFeature.MeteorologicalFeature-2: Mandatory elements when the parent node is not iwxxm:MeteorologicalFeatureCollection</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="MeteorologicalFeature.MeteorologicalPhenomenon">
+      <sch:rule context="//iwxxm:MeteorologicalPhenomenon">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalPhenomenon should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="MeteorologicalFeature.MeteorologicalFeature.phenomenon">
+      <sch:rule context="//iwxxm:MeteorologicalFeature/iwxxm:phenomenon">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalFeature/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="MeteorologicalFeature.MeteorologicalFeatureCollection.phenomenaList">
+      <sch:rule context="//iwxxm:MeteorologicalFeatureCollection/iwxxm:phenomenaList|//iwxxm:WAFSSignificantWeatherForecast/iwxxm:phenomenaList">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalFeatureCollection/iwxxm:phenomenaList, iwxxm:WAFSSignificantWeatherForecast/iwxxm:phenomenaList should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="MeteorologicalFeature.MeteorologicalFeatureCollection-1">
+      <sch:rule context="//iwxxm:MeteorologicalFeatureCollection|//iwxxm:WAFSSignificantWeatherForecast">
+         <sch:assert test="( exists(gml:identifier) )">MeteorologicalFeature.MeteorologicalFeatureCollection-1: gml:identifier is mandatory</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="Common.AerodromeForecastWeather">
+      <sch:rule context="//iwxxm:AerodromeForecastWeather">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AerodromeForecastWeather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeTrendForecast.weather">
       <sch:rule context="//iwxxm:MeteorologicalAerodromeTrendForecast/iwxxm:weather">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">MeteorologicalAerodromeTrendForecast/iwxxm:weather elements should be a member of http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalAerodromeTrendForecast/iwxxm:weather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.MeteorologicalAerodromeForecast.weather">
       <sch:rule context="//iwxxm:MeteorologicalAerodromeForecast/iwxxm:weather">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">MeteorologicalAerodromeForecast/iwxxm:weather elements should be a member of http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalAerodromeForecast/iwxxm:weather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="Common.SigConvectiveCloudType">
+      <sch:rule context="//iwxxm:SigConvectiveCloudType">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigConvectiveCloudType.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SigConvectiveCloudType should be a member of code list http://codes.wmo.int/49-2/SigConvectiveCloudType</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.CloudLayer.cloudType">
       <sch:rule context="//iwxxm:CloudLayer/iwxxm:cloudType">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigConvectiveCloudType.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">CloudLayer/iwxxm:cloudType elements should be a member of http://codes.wmo.int/49-2/SigConvectiveCloudType</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigConvectiveCloudType.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:CloudLayer/iwxxm:cloudType should be a member of code list http://codes.wmo.int/49-2/SigConvectiveCloudType</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="Common.CloudAmountReportedAtAerodrome">
+      <sch:rule context="//iwxxm:CloudAmountReportedAtAerodrome">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-CloudAmountReportedAtAerodrome.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:CloudAmountReportedAtAerodrome should be a member of code list http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.CloudLayer.amount">
       <sch:rule context="//iwxxm:CloudLayer/iwxxm:amount">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-CloudAmountReportedAtAerodrome.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] or @nilReason">CloudLayer/iwxxm:amount elements should be a member of http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-CloudAmountReportedAtAerodrome.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:CloudLayer/iwxxm:amount should be a member of code list http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.CloudLayer-1">
@@ -725,29 +860,29 @@
          <sch:assert test="( if( exists(iwxxm:base) and not(iwxxm:base/@xsi:nil = 'true') ) then( (iwxxm:base/@uom = 'm') or (iwxxm:base/@uom = '[ft_i]') ) else( true() ) )">Common.CloudLayer-1: base shall be reported in metres (m) or feet ([ft_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="Common.Report-5">
+   <sch:pattern id="Common.Report-2">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( //@gml:id[not(matches(.,'uuid\.[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}'))] ) then( false() ) else( true() ) )">Common.Report-5: All gml:ids in IWXXM reports must be prefixed with 'uuid.' and must be UUID version 4</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="Common.Report-4">
-      <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( exists(.//iwxxm:extension) ) then( sum(.//iwxxm:extension/.//text()/string-length(.) ) +sum(.//iwxxm:extension/.//element()/( (string-length( name() ) * 2 ) + 5 ) ) +sum(.//iwxxm:extension/.//@*/( 1 + string-length(name()) + 3 + string-length(.) ) ) +sum(.//iwxxm:extension/.//comment()/( string-length( . ) + 7 )) lt 5000 ) else( true() ) )">Common.Report-4: Total size of extension content must not exceed 5000 characters per report</sch:assert>
+         <sch:assert test="( if( exists(.//iwxxm:extension) ) then( sum(.//iwxxm:extension/.//text()/string-length(.) ) +sum(.//iwxxm:extension/.//element()/( (string-length( name() ) * 2 ) + 5 ) ) +sum(.//iwxxm:extension/.//@*/( 1 + string-length(name()) + 3 + string-length(.) ) ) +sum(.//iwxxm:extension/.//comment()/( string-length( . ) + 7 )) lt 5000 ) else( true() ) )">Common.Report-2: Total size of extension content must not exceed 5000 characters per report</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.Report-1">
       <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( @permissibleUsage = 'NON-OPERATIONAL' ) then( exists(@permissibleUsageReason) ) else( true() ) )">Common.Report-1: Non-operational reports must include a permissibleUsageReason</sch:assert>
+         <sch:assert test="( if( exists(@translatedBulletinID) or exists(@translatedBulletinReceptionTime) or exists(@translationCentreDesignator) or exists(@translationCentreName) or exists(@translationTime) or exists(@translationFailedTAC)) then( exists(@translatedBulletinID) and exists(@translatedBulletinReceptionTime) and exists(@translationCentreDesignator) and exists(@translationCentreName) and exists(@translationTime) ) else( true() ) )">Common.Report-1: Translated reports must include @translatedBulletinID, @translatedBulletinReceptionTime, @translationCentreDesignator, @translationCentreName, @translationTime and optionally @translationFailedTAC if translation failed</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="Common.Report-2">
-      <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( @permissibleUsage ='OPERATIONAL') then( empty(@permissibleUsageReason) ) else( true() ) )">Common.Report-2: Operational reports should not include a permissibleUsageReason</sch:assert>
+   <sch:pattern id="Common.BasicReport-3">
+      <sch:rule context="//iwxxm:MeteorologicalFeatureCollection|//iwxxm:WAFSSignificantWeatherForecast|//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
+         <sch:assert test="( if( //@gml:id[not(matches(.,'uuid\.[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}'))] ) then( false() ) else( true() ) )">Common.BasicReport-3: All gml:ids in IWXXM reports must be prefixed with 'uuid.' and must be UUID version 4</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="Common.Report-3">
-      <sch:rule context="//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( exists(@translatedBulletinID) or exists(@translatedBulletinReceptionTime) or exists(@translationCentreDesignator) or exists(@translationCentreName) or exists(@translationTime) or exists(@translationFailedTAC)) then( exists(@translatedBulletinID) and exists(@translatedBulletinReceptionTime) and exists(@translationCentreDesignator) and exists(@translationCentreName) and exists(@translationTime) ) else( true() ) )">Common.Report-3: Translated reports must include @translatedBulletinID, @translatedBulletinReceptionTime, @translationCentreDesignator, @translationCentreName, @translationTime and optionally @translationFailedTAC if translation failed</sch:assert>
+   <sch:pattern id="Common.BasicReport-1">
+      <sch:rule context="//iwxxm:MeteorologicalFeatureCollection|//iwxxm:WAFSSignificantWeatherForecast|//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
+         <sch:assert test="( if( @permissibleUsage = 'NON-OPERATIONAL' ) then( exists(@permissibleUsageReason) ) else( true() ) )">Common.BasicReport-1: Non-operational reports must include a permissibleUsageReason</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="Common.BasicReport-2">
+      <sch:rule context="//iwxxm:MeteorologicalFeatureCollection|//iwxxm:WAFSSignificantWeatherForecast|//iwxxm:METAR|//iwxxm:SPECI|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory">
+         <sch:assert test="( if( @permissibleUsage ='OPERATIONAL') then( empty(@permissibleUsageReason) ) else( true() ) )">Common.BasicReport-2: Operational reports should not include a permissibleUsageReason</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.AerodromeCloudForecast-2">
