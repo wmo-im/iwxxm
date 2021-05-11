@@ -284,7 +284,7 @@
                 </gml:Point>
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
-                <iwxxm:Volcano>
+                <iwxxm:Volcano gml:id="uuid.a38b0640-2bb7-48f3-abdd-4700e149e75d">
                     <iwxxm:name>ETNA</iwxxm:name>
                 </iwxxm:Volcano>
             </iwxxm:phenomenonProperty>
@@ -316,7 +316,7 @@
                 </gml:Point>
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
-                <iwxxm:TropicalCyclone>
+                <iwxxm:TropicalCyclone gml:id="uuid.5b7c3070-9c24-406d-ba34-f15c0d373a77">
                     <iwxxm:name>FRED</iwxxm:name>
                 </iwxxm:TropicalCyclone>
             </iwxxm:phenomenonProperty>
@@ -334,7 +334,7 @@
                 </gml:Point>
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
-                <iwxxm:RadiationIncident>
+                <iwxxm:RadiationIncident gml:id="uuid.1603b181-af47-41b2-9388-352420ca6ad1">
                     <iwxxm:siteName nilReason="http://codes.wmo.int/common/nil/missing"/>
                     <iwxxm:incidentTime nilReason="http://codes.wmo.int/common/nil/missing"/>
                 </iwxxm:RadiationIncident>

@@ -1,0 +1,780 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://codes.wmo.int/def/bufr4/"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_5">
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.532Z</dct:dateSubmitted>
+    <reg:register>
+      <reg:Register rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030">
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/15">
+            <rdfs:label xml:lang="en">Light, isolated moderate</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >15</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/12">
+            <rdfs:label xml:lang="en">Extreme, in clear air</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >12</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:versionInfo>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/0">
+            <rdfs:label xml:lang="en">Nil</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >0</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">in cloud</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+        >2014-09-03T09:54:26.451Z</dct:modified>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/22">
+            <rdfs:label xml:lang="en">Severe, occasional extreme</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >22</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/1">
+            <rdfs:label xml:lang="en">Light</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">in cloud</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/13">
+            <rdfs:label xml:lang="en">Extreme, in cloud</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >13</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/19">
+            <rdfs:label xml:lang="en">Moderate, occasional severe</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >19</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/23">
+            <rdfs:label xml:lang="en">Severe, frequently extreme</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >23</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/8">
+            <rdfs:label xml:lang="en">Nil</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >8</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">cloud/clear air not specified</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/18">
+            <rdfs:label xml:lang="en">Moderate, isolated severe</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >18</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/14">
+            <rdfs:label xml:lang="en">Extreme, cloud/clear air not specified</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >14</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/9">
+            <rdfs:label xml:lang="en">Light</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >9</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">cloud/clear air not specified</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/11">
+            <rdfs:label xml:lang="en">Severe</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >11</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">cloud/clear air not specified</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/4">
+            <rdfs:label xml:lang="en">Nil</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >4</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">in clear air</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/10">
+            <rdfs:label xml:lang="en">Moderate</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >10</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">cloud/clear air not specified</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/16">
+            <rdfs:label xml:lang="en">Light, occasional moderate</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >16</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/6">
+            <rdfs:label xml:lang="en">Moderate</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >6</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">in clear air</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/5">
+            <rdfs:label xml:lang="en">Light</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >5</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">in clear air</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/7">
+            <rdfs:label xml:lang="en">Severe</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >7</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">in clear air</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/2">
+            <rdfs:label xml:lang="en">Moderate</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >2</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">in cloud</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/20">
+            <rdfs:label xml:lang="en">Moderate, frequently severe</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >20</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/3">
+            <rdfs:label xml:lang="en">Severe</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >3</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+            <skos:note xml:lang="en">in cloud</skos:note>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/17">
+            <rdfs:label xml:lang="en">Light, frequently moderate</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >17</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/21">
+            <rdfs:label xml:lang="en">Severe, isolated extreme</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >21</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+        <rdfs:label>Extended degree of turbulence</rdfs:label>
+        <dct:publisher rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+        <skos:member>
+          <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/63">
+            <rdfs:label xml:lang="en">Missing value</rdfs:label>
+            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >63</skos:notation>
+            <j.0:fxy>011030</j.0:fxy>
+          </skos:Concept>
+        </skos:member>
+      </reg:Register>
+    </reg:register>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/5"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_5:1#graph"/>
+    </reg:definition>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">Light</rdfs:label>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >5</reg:notation>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_19">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <rdfs:label xml:lang="en">Moderate, occasional severe</rdfs:label>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.483Z</dct:dateSubmitted>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/19"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_19:1#graph"/>
+    </reg:definition>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >19</reg:notation>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_22">
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.471Z</dct:dateSubmitted>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/22"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_22:1#graph"/>
+    </reg:definition>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >22</reg:notation>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">Severe, occasional extreme</rdfs:label>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_10">
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >10</reg:notation>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label xml:lang="en">Moderate</rdfs:label>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/10"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_10:1#graph"/>
+    </reg:definition>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.516Z</dct:dateSubmitted>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_4">
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.512Z</dct:dateSubmitted>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/4"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_4:1#graph"/>
+    </reg:definition>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >4</reg:notation>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label xml:lang="en">Nil</rdfs:label>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/_0-11-030">
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label>Extended degree of turbulence</rdfs:label>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+      <reg:entityVersion rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030:1"/>
+    </reg:definition>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.45Z</dct:dateSubmitted>
+    <reg:notation>0-11-030</reg:notation>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:itemClass rdf:resource="http://purl.org/linked-data/registry#Register"/>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_63">
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.561Z</dct:dateSubmitted>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >63</reg:notation>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label xml:lang="en">Missing value</rdfs:label>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/63"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_63:1#graph"/>
+    </reg:definition>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_23">
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.487Z</dct:dateSubmitted>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >23</reg:notation>
+    <rdfs:label xml:lang="en">Severe, frequently extreme</rdfs:label>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/23"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_23:1#graph"/>
+    </reg:definition>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_11">
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >11</reg:notation>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/11"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_11:1#graph"/>
+    </reg:definition>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">Severe</rdfs:label>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.508Z</dct:dateSubmitted>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_3">
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/3"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_3:1#graph"/>
+    </reg:definition>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >3</reg:notation>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.549Z</dct:dateSubmitted>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <rdfs:label xml:lang="en">Severe</rdfs:label>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_12">
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >12</reg:notation>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.463Z</dct:dateSubmitted>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/12"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_12:1#graph"/>
+    </reg:definition>
+    <rdfs:label xml:lang="en">Extreme, in clear air</rdfs:label>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_2">
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/2"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_2:1#graph"/>
+    </reg:definition>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >2</reg:notation>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">Moderate</rdfs:label>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.541Z</dct:dateSubmitted>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_13">
+    <rdfs:label xml:lang="en">Extreme, in cloud</rdfs:label>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/13"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_13:1#graph"/>
+    </reg:definition>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >13</reg:notation>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.479Z</dct:dateSubmitted>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_9">
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <rdfs:label xml:lang="en">Light</rdfs:label>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.503Z</dct:dateSubmitted>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/9"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_9:1#graph"/>
+    </reg:definition>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >9</reg:notation>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_1">
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.475Z</dct:dateSubmitted>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/1"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_1:1#graph"/>
+    </reg:definition>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</reg:notation>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label xml:lang="en">Light</rdfs:label>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_14">
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >14</reg:notation>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <rdfs:label xml:lang="en">Extreme, cloud/clear air not specified</rdfs:label>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/14"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_14:1#graph"/>
+    </reg:definition>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.499Z</dct:dateSubmitted>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_8">
+    <rdfs:label xml:lang="en">Nil</rdfs:label>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/8"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_8:1#graph"/>
+    </reg:definition>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.491Z</dct:dateSubmitted>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >8</reg:notation>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_0">
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <rdfs:label xml:lang="en">Nil</rdfs:label>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/0"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_0:1#graph"/>
+    </reg:definition>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >0</reg:notation>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.467Z</dct:dateSubmitted>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_15">
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/15"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_15:1#graph"/>
+    </reg:definition>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >15</reg:notation>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <rdfs:label xml:lang="en">Light, isolated moderate</rdfs:label>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.459Z</dct:dateSubmitted>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_7">
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >7</reg:notation>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <rdfs:label xml:lang="en">Severe</rdfs:label>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.537Z</dct:dateSubmitted>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/7"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_7:1#graph"/>
+    </reg:definition>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_20">
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >20</reg:notation>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/20"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_20:1#graph"/>
+    </reg:definition>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label xml:lang="en">Moderate, frequently severe</rdfs:label>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.545Z</dct:dateSubmitted>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_16">
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.52Z</dct:dateSubmitted>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >16</reg:notation>
+    <rdfs:label xml:lang="en">Light, occasional moderate</rdfs:label>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/16"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_16:1#graph"/>
+    </reg:definition>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_6">
+    <rdfs:label xml:lang="en">Moderate</rdfs:label>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >6</reg:notation>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.525Z</dct:dateSubmitted>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/6"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_6:1#graph"/>
+    </reg:definition>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_18">
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >18</reg:notation>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.495Z</dct:dateSubmitted>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/18"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_18:1#graph"/>
+    </reg:definition>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <rdfs:label xml:lang="en">Moderate, isolated severe</rdfs:label>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_21">
+    <rdfs:label xml:lang="en">Severe, isolated extreme</rdfs:label>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >21</reg:notation>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.557Z</dct:dateSubmitted>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/21"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_21:1#graph"/>
+    </reg:definition>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </reg:RegisterItem>
+  <reg:RegisterItem rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/_17">
+    <reg:submitter rdf:parseType="Resource">
+      <foaf:name>marqh (admin)</foaf:name>
+      <foaf:openid rdf:resource="https://profiles.google.com/100578379482821123729"/>
+    </reg:submitter>
+    <reg:status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <reg:definition rdf:parseType="Resource">
+      <reg:entity rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/17"/>
+      <reg:sourceGraph rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030/_17:1#graph"/>
+    </reg:definition>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:54:26.553Z</dct:dateSubmitted>
+    <rdfs:label xml:lang="en">Light, frequently moderate</rdfs:label>
+    <reg:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >17</reg:notation>
+    <reg:itemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <reg:register rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-11-030"/>
+  </reg:RegisterItem>
+</rdf:RDF>

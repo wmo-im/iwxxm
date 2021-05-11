@@ -1,0 +1,127 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  <ldp:Container rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome">
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/FRQ">
+        <dct:description xml:lang="en">Frequent. Applicable only to cumulonimbus (CB).</dct:description>
+        <rdfs:label xml:lang="en">Frequent</rdfs:label>
+        <skos:notation>FRQ</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-008/12"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/OCNL">
+        <dct:description xml:lang="en">Occasional. Applicable only to cumulonimbus (CB).</dct:description>
+        <rdfs:label xml:lang="en">Occasional</rdfs:label>
+        <skos:notation>OCNL</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-008/10"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/SKC">
+        <dct:description xml:lang="en">Sky clear (0 oktas).</dct:description>
+        <rdfs:label xml:lang="en">Sky clear</rdfs:label>
+        <skos:notation>SKC</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-008/0"/>
+      </skos:Concept>
+    </skos:member>
+    <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >11</owl:versionInfo>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/SCT">
+        <dct:description xml:lang="en">Scattered (3 - 4 oktas).</dct:description>
+        <rdfs:label xml:lang="en">Scattered</rdfs:label>
+        <skos:notation>SCT</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-008/2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/ISOL">
+        <dct:description xml:lang="en">Isolated. Applicable only to cumulonimbus (CB).</dct:description>
+        <rdfs:label xml:lang="en">Isolated</rdfs:label>
+        <skos:notation>ISOL</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-008/8"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/EMBD">
+        <dct:description xml:lang="en">Embedded. Applicable only to cumulonimbus (CB).</dct:description>
+        <rdfs:label xml:lang="en">Embedded</rdfs:label>
+        <skos:notation>EMBD</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-008/16"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:notation>D-8</skos:notation>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/LYR">
+        <dct:description xml:lang="en">Layers. Applicable only to cumulonimbus (CB).</dct:description>
+        <rdfs:label xml:lang="en">Layers</rdfs:label>
+        <skos:notation>LYR</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-008/14"/>
+      </skos:Concept>
+    </skos:member>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2019-10-24T10:48:29.014Z</dct:modified>
+    <rdf:type rdf:resource="http://purl.org/linked-data/registry#Register"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/FEW">
+        <dct:description xml:lang="en">Few (1 - 2 oktas).</dct:description>
+        <rdfs:label xml:lang="en">Few</rdfs:label>
+        <skos:notation>FEW</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-008/1"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/BKN">
+        <dct:description xml:lang="en">Broken (5 - 7 oktas).</dct:description>
+        <rdfs:label xml:lang="en">Broken</rdfs:label>
+        <skos:notation>BKN</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"/>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
+    <rdfs:label>Code Table D-8: Cloud amount reported at aerodrome</rdfs:label>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/OVC">
+        <dct:description xml:lang="en">Overcast (8 oktas).</dct:description>
+        <rdfs:label xml:lang="en">Overcast</rdfs:label>
+        <skos:notation>OVC</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-008/4"/>
+      </skos:Concept>
+    </skos:member>
+    <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+    <dct:description xml:lang="en">The items within this code table are the cloud amount categories of operational significance for aviation as specified in Technical Regulations, Volume II (WMO-No. 49): Meteorological Services for International Air Navigation. This code table contains a subset of the cloud amount categories defined in Part B FM 94 BUFR Code Table 0 20 008.</dct:description>
+  </ldp:Container>
+</rdf:RDF>
