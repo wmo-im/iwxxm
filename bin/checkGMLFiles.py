@@ -17,13 +17,16 @@ import os
 import os.path
 import getopt
 import re
-import urllib2
+try:
+    import urllib.request as urlRequest
+except ImportError:
+    import urllib2 as urlRequest
 
 def print_usage():
-    print "Usage: checkGMLFiles.py <dir_with_xml_files>"
-    print "Options:"
-    print "   -h | --help                       : Print usage and exit"
-    print " "
+    print("Usage: checkGMLFiles.py <dir_with_xml_files>")
+    print("Options:")
+    print("   -h | --help                       : Print usage and exit")
+    print(" ")
     return
 
 def check_files(dir):
@@ -34,7 +37,7 @@ def check_files(dir):
     xmlDocs = [ f for f in os.listdir(dir)
                 if os.path.isfile(os.path.join(dir,f)) and f.endswith( '.xml' ) ]
 
-    print "Found %d XML files in %s" % (len(xmlDocs), dir)
+    print("Found %d XML files in %s" % (len(xmlDocs), dir))
 
     gmlIdRE = re.compile(r"""( \s+(?P<attr_name>gml:id)=\"(?P<attr_value>.*?)\" )""", re.VERBOSE|re.DOTALL)
     xlinkHrefRE = re.compile(r"""( \s+(?P<attr_name>xlink:href)=\"(?P<attr_value>.*?)\" )""", re.VERBOSE|re.DOTALL)
@@ -49,7 +52,7 @@ def check_files(dir):
     for exampleFile in xmlDocs:
         exampleFile = dir+'/'+exampleFile
         exampleFile = exampleFile.replace( '//', '/' )
-        print "Checking %s" % exampleFile
+        print("Checking %s" % exampleFile)
         #read each line
         with open(exampleFile) as f:
             lines = f.readlines()
@@ -72,11 +75,11 @@ def check_files(dir):
                     xlinkTarget = m.groupdict().get('attr_value')
                     if not xlinkTarget.startswith( 'http' ):
                         if not xlinkTarget.startswith( '#' ):
-                            print "\tERROR: line %d: xlink:href is not prefixed with a '#' sign" % (lineNum)
+                            print("\tERROR: line %d: xlink:href is not prefixed with a '#' sign" % (lineNum))
                             returnCode = 1
 
                         if not gmlIds.get(xlinkTarget[1:]):
-                            print "\tERROR: line %d: xlink:href to '%s' does not refer to a valid gml:id" % (lineNum,xlinkTarget)
+                            print("\tERROR: line %d: xlink:href to '%s' does not refer to a valid gml:id" % (lineNum,xlinkTarget))
                             returnCode = 1
 
                     #check that HTTP paths resolve
@@ -86,20 +89,20 @@ def check_files(dir):
                             # see if this XLink matches any of the ignore rules
                             for ignoredXLinkUrlRE in ignoredXLinkUrlREs:
                                 if ignoredXLinkUrlRE.search( xlinkTarget ):
-                                    print "\tIgnoring %s (matches the ignore list)" % xlinkTarget
+                                    print("\tIgnoring %s (matches the ignore list)" % xlinkTarget)
                                     checked = False
 
                             if checked:
-                                print "\tRESOLVING xlink:href %s" % xlinkTarget
-                                response = urllib2.urlopen(xlinkTarget)
+                                print("\tRESOLVING xlink:href %s" % xlinkTarget)
+                                response = urlRequest.urlopen(xlinkTarget)
                                 code = response.getcode()
-                                content = response.read()
+                                content = response.read().decode('UTF-8')
                                 # a 2xx response code is acceptable
                                 if( code < 200 or code >= 300 or "404" in content ):
-                                    print "\tERROR: line %d: xlink:href to '%s' does not resolve to a valid URL" % (lineNum, xlinkTarget)
+                                    print("\tERROR: line %d: xlink:href to '%s' does not resolve to a valid URL" % (lineNum, xlinkTarget))
                                     returnCode = 1
                                 else:
-                                    print "\tSUCCESSFULLY resolved %s" % xlinkTarget
+                                    print("\tSUCCESSFULLY resolved %s" % xlinkTarget)
 
                                 checkedXLinkTargets[xlinkTarget] = xlinkTarget
                                 response.close()
