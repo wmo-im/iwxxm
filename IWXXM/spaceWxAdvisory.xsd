@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0-dev" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2021-2" version="3.0.1RC1" xmlns:iwxxm="http://icao.int/iwxxm/2021-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
@@ -28,7 +28,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The issuing space weather centre (SWXC)</documentation>
 						</annotation>
 					</element>
-					<element name="advisoryNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="advisoryNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Advisory number: four digit year and unique message number.  Example "2018/1"</documentation>
 						</annotation>
@@ -48,7 +48,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>Observed and forecast space weather information.  Analyses should be reported in the order in which they occur, starting with the initial observed/forecast conditions and proceeding through each subsequent forecast to the end of the period</documentation>
 						</annotation>
 					</element>
-					<element name="remarks" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="remarks" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Remarks, as necessary.
 
@@ -147,6 +147,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
+	<element name="SpaceWeatherLocation" type="iwxxm:SpaceWeatherLocationType"></element>
 	<complexType name="SpaceWeatherLocationType">
 		<annotation>
 			<appinfo>
@@ -158,6 +159,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 			<extension base="gml:ReferenceType"></extension>
 		</complexContent>
 	</complexType>
+	<element name="SpaceWeatherPhenomena" type="iwxxm:SpaceWeatherPhenomenaType"></element>
 	<complexType name="SpaceWeatherPhenomenaType">
 		<annotation>
 			<appinfo>

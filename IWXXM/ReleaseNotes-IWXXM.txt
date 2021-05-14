@@ -1,5 +1,49 @@
 =========================================
-3.0-dev
+2021-2RC1 - May 2021
+=========================================
+Package METAR/SPECI (Version 3.1.0RC1)
+  * Fixed the issue of unnecessarily restricting the maximum number of iwxxm:trendForecast to 3
+  * Fixed the issue regarding the recommended nilReason for SNOCLO cannot pass Schematron validation (issue #203)
+  * Updated the code list for iwxxm:AerodromePresentOrForecastWeather
+Package TAF (Version 3.0.1RC1)
+  * Made attribute cloudAndVisibilityOK in MeteorologicalAerodromeForecast in TAF optional (issue #233)
+Package SIGMET (Version 3.0.1RC1)
+  * Allowed the use of xsi:nil="true" of some elements for a consistent representation of nil information (issue #241)
+  * Revised the notes in iwxxm:directionOfMotion and iwxxm:speedOfMotion
+  * Updated the content of TAC-to-XML-Guidance.txt (issues #107)
+Package AIRMET (Version 3.1.0RC1)
+  * Fixed the issue regarding AIRMET is unable to represent phenomenon CLD nnn/[ABV][n]nnnM (issue #206)
+  * Allowed the use of xsi:nil="true" of some elements for a consistent representation of nil information (issue #241)
+  * Revised the notes in iwxxm:directionOfMotion and iwxxm:speedOfMotion
+  * Updated the content of TAC-to-XML-Guidance.txt (issues #107)
+Package Tropical Cyclone Advisory (Version 3.1.0RC1)
+  * Changes involving Amendments 79 and 80 to ICAO Annex 3
+    + Added iwxxm:intensityChange to indicate changes of maximum surface wind speed at the time of observation
+  * Made iwxxm:tropicalCyclonePosition and iwxxm:maximumSurfaceWindSpeed in the forecast part of the Tropical Cyclone
+    Advisory nillable (issue #166)
+  * Allowed the use of xsi:nil="true" of some elements for a consistent representation of nil information (issue #241)
+  * Revised the notes in iwxxm:movementDirection and iwxxm:movementSpeed (issue #244)
+  * Updated the content of TAC-to-XML-Guidance.txt (issues #107)
+Package Volcanic Ash Advisory (Version 3.1.0RC1)
+  * Changes involving Amendments 79 and 80 to ICAO Annex 3
+    * Modified iwxxm:summitElevation to allow the reporting of unknown elevation
+  * Allowed the use of xsi:nil="true" of some elements for a consistent representation of nil information (issue #241)
+  * Updated the content of TAC-to-XML-Guidance.txt (issues #107)
+Package Space Weather Advisory (Version 3.0.1RC1)
+  * Allowed the use of xsi:nil="true" of some elements for a consistent representation of nil information (issue #241)
+  * Updated the content of TAC-to-XML-Guidance.txt (issues #107)
+  * Updated the code list for iwxxm:SpaceWeatherLocation
+Package WAFS Significant Weather Forecast (Version 1.0.0RC1)
+  * Introduced WAFS Significant Weather Forecast based on Package Meteorological Feature
+Package Meteorological Feature (Version 1.0.0RC1)
+  * Introduced Weather Object (WxObject) and associated featuresPackage Common (Version 3.1.0RC1)
+  * Modified iwxxm:ReportType for the introduction of Package Meteorological Feature
+Package Common (Version 3.1.0RC1)
+  * Modified iwxxm:ReportType for the introduction of Package Meteorological Feature 
+Package Measures (Version 3.0.0)
+
+=========================================
+3.0-dev - Not published
 =========================================
 * Aligned Space Weather Advisory examples A2-3, A2-4 and A2-5 with those in Amendment 78 to ICAO Annex 3 (issue #227)
 * Fixed METAR_SPECI.MeteorologicalAerodromeObservationReport-5, 6, 7 and 8 which cannot handle nilReason(s) in multiple cloud

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0-dev" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2021-2" version="3.0.1RC1" xmlns:iwxxm="http://icao.int/iwxxm/2021-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
@@ -151,7 +151,7 @@ When no operator is reported, prevailing visibility represents an exact value wi
 A change indicator is required for all MeteorologicalAerodromeForecasts excepting reported base conditions.</documentation>
 					</annotation>
 				</attribute>
-				<attribute use="required" name="cloudAndVisibilityOK" type="boolean">
+				<attribute name="cloudAndVisibilityOK" type="boolean">
 					<annotation>
 						<documentation>When true, indicates that the following conditions occur simultaneously at the time of forecast (also know as "CAVOK"):
 

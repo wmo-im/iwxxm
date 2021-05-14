@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Volcanic Ash Advisory::VolcanicAshCloudForecastStatus</title>
+<title>Volcanic Ash Advisory::WindObservedOrEstimated</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("VolcanicAshCloudForecastStatus", " : "))</script>  : Public  &lt;&lt;enumeration&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("WindObservedOrEstimated", " : "))</script>  : Public  &lt;&lt;featureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">10/18/2018 1:17:34 AM</td>
+			<td width="85%" class="ObjectDetailsValue">10/17/2018 9:55:42 PM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">10/19/2018 9:55:17 AM</td>
+			<td class="ObjectDetailsValue">8/2/2020 2:22:54 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -63,7 +63,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj03" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
-			<td class="ObjectDetailsValue">Proposed</td>
+			<td class="ObjectDetailsValue">Implemented</td>
 		</tr>
 		<tr id="proj04" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
@@ -87,18 +87,21 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{273C1542-9939-48d2-ACA5-500FC80F29BD}</td>
+			<td class="ObjectDetailsValue">{8B447F20-C4D3-49eb-980E-69FEF8358B29}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA123.htm">Context Diagram: Volcanic Ash Forecast Conditions</a></td>
+			<td class="ObjectDetailsValue"><a href="EA124.htm">Context Diagram: Volcanic Ash Observed Conditions</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The volcanic ash cloud forecast status indicates the condition other than providing a valid forecast of the volcanic ash cloud.&#160; These include:&lt;br/&gt;&lt;br/&gt;NO_VA_EXP: No volcanic ash is expected&lt;br/&gt;NOT_AVBL: Forecast is not available&lt;br/&gt;NOT_PROVIDED: Forecast is not provided&lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">Wind information within a vertical layer to be provided when volcanic ash is not identifiable from satellite data.&lt;br/&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 		</ul>
 <div class="ItemBody" id="AttributesTable">
 	<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -107,56 +110,56 @@ function nameClassifier(name, separator)
 		</tr>
 						<tr>
 				<td width="100%" class="TableRow">
-					<i>Public </i><br /><strong>&nbsp;&nbsp;PROVIDED</strong>
+					<i>Public AirspaceLayer</i><br /><strong>&nbsp;&nbsp;verticalLayer</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes540')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes540" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes532')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes532" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes540_00" style="display: none;">
+						<tr id="DetailsImageAttributes532_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes540_01" style="display: none;">
+						<tr id="DetailsImageAttributes532_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes540_02" style="display: none;">
+						<tr id="DetailsImageAttributes532_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td>&lt;&lt;enum&gt;&gt;</td>
+							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes540_03" style="display: none;">
+						<tr id="DetailsImageAttributes532_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes540_04" style="display: none;">
+						<tr id="DetailsImageAttributes532_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes540_05" style="display: none;">
+						<tr id="DetailsImageAttributes532_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes540_06" style="display: none;">
+						<tr id="DetailsImageAttributes532_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes540_07" style="display: none;">
+							<tr id="DetailsImageAttributes532_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
 					</table>
 					
-					
+					sequenceNumber=1<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			Information is provided.&lt;br/&gt;
+			The vertical layer in terms of flight levels in which wind is provided.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -165,56 +168,56 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public </i><br /><strong>&nbsp;&nbsp;NO_VOLCANIC_ASH_EXPECTED</strong>
+					<i>Public Angle</i><br /><strong>&nbsp;&nbsp;windDirection</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes541')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes541" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes533')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes533" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes541_00" style="display: none;">
+						<tr id="DetailsImageAttributes533_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes541_01" style="display: none;">
+						<tr id="DetailsImageAttributes533_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes541_02" style="display: none;">
+						<tr id="DetailsImageAttributes533_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td>&lt;&lt;enum&gt;&gt;</td>
+							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes541_03" style="display: none;">
+						<tr id="DetailsImageAttributes533_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes541_04" style="display: none;">
+						<tr id="DetailsImageAttributes533_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
-							<td></td>
+							<td>Range:0 to 1</td>
 						</tr>
-						<tr id="DetailsImageAttributes541_05" style="display: none;">
+						<tr id="DetailsImageAttributes533_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes541_06" style="display: none;">
+						<tr id="DetailsImageAttributes533_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes541_07" style="display: none;">
+							<tr id="DetailsImageAttributes533_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
 					</table>
 					
-					
+					sequenceNumber=2<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			No volcanic ash is expected.&lt;br/&gt;
+			Wind direction within the layer.&#160; It shall be given in degrees from true North. Plane angle unit of measure (uom) is &quot;deg&quot;.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -223,56 +226,56 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public </i><br /><strong>&nbsp;&nbsp;NOT_AVAILABLE</strong>
+					<i>Public Velocity</i><br /><strong>&nbsp;&nbsp;windSpeed</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes542')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes542" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes534')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes534" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes542_00" style="display: none;">
+						<tr id="DetailsImageAttributes534_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes542_01" style="display: none;">
+						<tr id="DetailsImageAttributes534_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes542_02" style="display: none;">
+						<tr id="DetailsImageAttributes534_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td>&lt;&lt;enum&gt;&gt;</td>
+							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes542_03" style="display: none;">
+						<tr id="DetailsImageAttributes534_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes542_04" style="display: none;">
+						<tr id="DetailsImageAttributes534_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes542_05" style="display: none;">
+						<tr id="DetailsImageAttributes534_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes542_06" style="display: none;">
+						<tr id="DetailsImageAttributes534_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes542_07" style="display: none;">
+							<tr id="DetailsImageAttributes534_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
 					</table>
 					
-					
+					sequenceNumber=3<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			Information is not available.&lt;br/&gt;
+			Wind speed within the layer.&#160; Unit of measure shall be given in &quot;m/s&quot; or &quot;[kn_i]&quot; (knot).&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -281,56 +284,56 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public </i><br /><strong>&nbsp;&nbsp;NOT_PROVIDED</strong>
+					<i>Public Boolean</i><br /><strong>&nbsp;&nbsp;variableWindDirection</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes543')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes543" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes535')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes535" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes543_00" style="display: none;">
+						<tr id="DetailsImageAttributes535_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes543_01" style="display: none;">
+						<tr id="DetailsImageAttributes535_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes543_02" style="display: none;">
+						<tr id="DetailsImageAttributes535_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td>&lt;&lt;enum&gt;&gt;</td>
+							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes543_03" style="display: none;">
+						<tr id="DetailsImageAttributes535_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes543_04" style="display: none;">
+						<tr id="DetailsImageAttributes535_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes543_05" style="display: none;">
+						<tr id="DetailsImageAttributes535_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes543_06" style="display: none;">
+						<tr id="DetailsImageAttributes535_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes543_07" style="display: none;">
+							<tr id="DetailsImageAttributes535_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
 					</table>
 					
-					
+					xsdAsAttribute=true<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			Information is not provided.&lt;br/&gt;
+			When true, indicates that the wind direction is variable.&#160; Wind direction should not be reported&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -340,6 +343,141 @@ function nameClassifier(name, separator)
 			</tr>
 	</table>
 </div>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA133.htm">«featureType» VolcanicAshObservedOrEstimatedConditions</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> wind<br />
+						Wind information to be provided when volcanic ash is not identifiable from satellite data.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink536" onclick="parent.toggleDiv('detailsDIVLink536','DetailsImageLink536')" />Details:
+							<div id="detailsDIVLink536" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+<div class="ItemBody" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="50%" class="TableHeading">Tag</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">byValuePropertyType</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario537" onclick="parent.toggleDiv('detailsDIVScenario537','DetailsImageScenario537')" />Details:
+						<div id="detailsDIVScenario537" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Creates a property type that requires its instance to be encoded inline (applies to ISO 19136:2007 encoding rule).<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">isCollection</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario538" onclick="parent.toggleDiv('detailsDIVScenario538','DetailsImageScenario538')" />Details:
+						<div id="detailsDIVScenario538" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the type as an objection collection.<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">noPropertyType</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario539" onclick="parent.toggleDiv('detailsDIVScenario539','DetailsImageScenario539')" />Details:
+						<div id="detailsDIVScenario539" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Suppresses creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">windDirection/@uom = "deg"</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints540" onclick="parent.toggleDiv('detailsDIVConstraints540','DetailsImageConstraints540')" />Details:
+							<div id="detailsDIVConstraints540" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshAdvisory.WindConditions-1&lt;br/&gt;Description: windDirection shall be reported in degrees (deg)&lt;br/&gt;Assertion: ( if( exists(iwxxm:windDirection) and&#160; not(iwxxm:windDirection/@xsi:nil = &#39;true&#39;) ) then( iwxxm:windDirection/@uom = &#39;deg&#39; ) else( true() ) )&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">windSpeed/@uom = "m/s" or windSpeed/@uom = "[kn_i]")</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints541" onclick="parent.toggleDiv('detailsDIVConstraints541','DetailsImageConstraints541')" />Details:
+							<div id="detailsDIVConstraints541" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshAdvisory.WindConditions-2&lt;br/&gt;Description: windSpeed shall be reported in metres per second (m/s) or knots ([kn_i])&lt;br/&gt;Assertion: ( if( exists(iwxxm:windSpeed) and not(iwxxm:windSpeed/@xsi:nil = &#39;true&#39;) ) then( (iwxxm:windSpeed/@uom = &#39;m/s&#39;) or (iwxxm:windSpeed/@uom = &#39;[kn_i]&#39;) ) else( true() ) )&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">if( variableWindDirection = 'true' ) then( empty(windDirection) )</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints542" onclick="parent.toggleDiv('detailsDIVConstraints542','DetailsImageConstraints542')" />Details:
+							<div id="detailsDIVConstraints542" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshAdvisory.WindConditions-3&lt;br/&gt;Description: When iwxxm:variableWindDirection is true, iwxxm:windDirection must be empty&lt;br/&gt;Assertion: ( if( iwxxm:variableWindDirection = &#39;true&#39; ) then( empty(iwxxm:windDirection) ) else( true() ) )&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
 	</div>
 <div class="pageFooter"></div>
  

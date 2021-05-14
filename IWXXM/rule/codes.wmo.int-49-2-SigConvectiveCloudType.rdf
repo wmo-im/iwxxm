@@ -1,0 +1,63 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  <ldp:Container rdf:about="http://codes.wmo.int/49-2/SigConvectiveCloudType">
+    <rdfs:label>Code Table D-9: Significant convective cloud type</rdfs:label>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2019-10-24T10:48:05.101Z</dct:modified>
+    <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigConvectiveCloudType/TCU">
+        <dct:description xml:lang="en">Towering cumulus</dct:description>
+        <rdfs:label xml:lang="en">Towering cumulus</rdfs:label>
+        <skos:notation>TCU</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-012/32"/>
+      </skos:Concept>
+    </skos:member>
+    <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigConvectiveCloudType/CB">
+        <dct:description xml:lang="en">Cumulonimbus</dct:description>
+        <rdfs:label xml:lang="en">Cumulonimbus</rdfs:label>
+        <skos:notation>CB</skos:notation>
+        <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-012/9"/>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://purl.org/linked-data/registry#Register"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >3</owl:versionInfo>
+    <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
+    <dct:description xml:lang="en">The items within this code table are the cloud types of operational significance for aviation as specified in Technical Regulations, Volume II (WMO-No. 49): Meteorological Services for International Air Navigation. This code table contains a subset of the cloud types defined in Part B FM 94 BUFR Code Table 0 20 012.</dct:description>
+    <skos:notation>D-9</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+  </ldp:Container>
+</rdf:RDF>

@@ -1,0 +1,125 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  <reg:Register rdf:about="http://codes.wmo.int/common/nil">
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/common/nil/withheld">
+        <dct:description xml:lang="en">The value is not divulged.</dct:description>
+        <rdfs:label xml:lang="en">Withheld</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/doc/gml#clause-8.2.3.1"/>
+        <dc:source xml:lang="en">ISO 19136:2007 'Geographic information - Geography Markup Language' sub-clause 8.2.3.1</dc:source>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/common/nil/inapplicable">
+        <dct:description xml:lang="en">There is no value.</dct:description>
+        <rdfs:label xml:lang="en">Inapplicable</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/doc/gml#clause-8.2.3.1"/>
+        <dc:source xml:lang="en">ISO 19136:2007 'Geographic information - Geography Markup Language' sub-clause 8.2.3.1</dc:source>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/common/nil/AboveDetectionRange">
+        <dct:description xml:lang="en">The value was above the detection range of the instrument used to estimate it.</dct:description>
+        <rdfs:label xml:lang="en">Above detection range</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <reg:containedItemClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/common/nil/template">
+        <dct:description xml:lang="en">The value will be available later.</dct:description>
+        <rdfs:label xml:lang="en">Template</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/doc/gml#clause-8.2.3.1"/>
+        <dc:source xml:lang="en">ISO 19136:2007 'Geographic information - Geography Markup Language' sub-clause 8.2.3.1</dc:source>
+      </skos:Concept>
+    </skos:member>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:52:34.941Z</dct:modified>
+    <dct:description xml:lang="en">Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. Terms are drawn from authorities in addition to WMO including ISO/TC 211 (from ISO 19136:2007 Geography markup language clause 8.2.3.1; published on their behalf by the Open Geospatial Consortium).</dct:description>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/common/nil/notDetectedByAutoSystem">
+        <dct:description xml:lang="en">The automated observing system did not detect a value (e.g. no cloud detected 'NCD').</dct:description>
+        <rdfs:label xml:lang="en">Nothing detected by automated system</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:notation>D-1</skos:notation>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/common/nil/notObservable">
+        <dct:description xml:lang="en">A system failure, sensor failure, or sensor obstruction, prevented the intended observation of the value.</dct:description>
+        <rdfs:label xml:lang="en">Not observable</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >12</owl:versionInfo>
+    <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
+    <rdfs:label>Code Table D-1: Nil reasons</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance">
+        <dct:description xml:lang="en">Nothing was observed or forecast of operational significance (e.g. nil significant cloud 'NSC', nil significant weather 'NSW').</dct:description>
+        <rdfs:label xml:lang="en">Nothing of operational signficance</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/common/nil/BelowDetectionRange">
+        <dct:description xml:lang="en">The value was below the detection range of the instrument used to estimate it.</dct:description>
+        <rdfs:label xml:lang="en">Below detection range</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/common/nil/missing">
+        <dct:description xml:lang="en">The correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist.</dct:description>
+        <rdfs:label xml:lang="en">Missing</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/doc/gml#clause-8.2.3.1"/>
+        <dc:source xml:lang="en">ISO 19136:2007 'Geographic information - Geography Markup Language' sub-clause 8.2.3.1</dc:source>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/common/nil/noSignificantChange">
+        <dct:description xml:lang="en">No significant change is expected to occur.</dct:description>
+        <rdfs:label xml:lang="en">No significant change</rdfs:label>
+        <skos:altLabel>NOSIG</skos:altLabel>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/common/nil/unknown">
+        <dct:description xml:lang="en">The correct value is not known to, and not computable by, the sender of this data. However, a correct value probably exists.</dct:description>
+        <rdfs:label xml:lang="en">Unknown</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/doc/gml#clause-8.2.3.1"/>
+        <dc:source xml:lang="en">ISO 19136:2007 'Geographic information - Geography Markup Language' sub-clause 8.2.3.1</dc:source>
+      </skos:Concept>
+    </skos:member>
+  </reg:Register>
+</rdf:RDF>

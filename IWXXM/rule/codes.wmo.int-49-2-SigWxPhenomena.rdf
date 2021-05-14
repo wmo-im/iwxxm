@@ -1,0 +1,132 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  <reg:Register rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena">
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/RDOACT_CLD">
+        <rdfs:label xml:lang="en">Radioactive cloud</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
+    <rdfs:label>Code Table D-10: Significant Weather Phenomena</rdfs:label>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SEV_TURB">
+        <rdfs:label xml:lang="en">Severe turbulence</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SEV_MTW">
+        <rdfs:label xml:lang="en">Severe mountain wave</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SEV_ICE_FZRA">
+        <rdfs:label xml:lang="en">Severe airframe icing from freezing rain</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/OBSC_TSGR">
+        <rdfs:label xml:lang="en">Obscured thunderstorm with hail</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/TC">
+        <rdfs:label xml:lang="en">Tropical cyclone</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >2</owl:versionInfo>
+    <dct:description xml:lang="en">The items within this code table are the types of weather phenomena of significance to aeronautical operations – as used in SIGMET and AIRMET reports and specified in Technical Regulations, Volume II (WMO-No. 49), Part II, Appendix 6, [C.3.1.] 1.1.4. </dct:description>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SQL_TS">
+        <rdfs:label xml:lang="en">Squall line</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SQL_TSGR">
+        <rdfs:label xml:lang="en">Squall line with hail</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/FRQ_TS">
+        <rdfs:label xml:lang="en">Frequent thunderstorm</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:52:41.384Z</dct:modified>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/OBSC_TS">
+        <rdfs:label xml:lang="en">Obscured thunderstorm</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/VA">
+        <rdfs:label xml:lang="en">Volcanic ash</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/FRQ_TSGR">
+        <rdfs:label xml:lang="en">Frequent thunderstorm with hail</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/HVY_DS">
+        <rdfs:label xml:lang="en">Heavy dust storm</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SEV_ICE">
+        <rdfs:label xml:lang="en">Severe airframe icing</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/HVY_SS">
+        <rdfs:label xml:lang="en">Heavy sand storm</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/EMBD_TSGR">
+        <rdfs:label xml:lang="en">Embedded thunderstorm with hail</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/EMBD_TS">
+        <rdfs:label xml:lang="en">Embedded thunderstorm</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:notation>D-10</skos:notation>
+  </reg:Register>
+</rdf:RDF>

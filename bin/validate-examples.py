@@ -18,7 +18,7 @@ import codeListsToSchematron as codeLists
 def main():
     cwd = os.getcwd()
     if not os.path.isfile( os.path.join( cwd, 'README.md' ) ):
-        print "This script must be run from the root directory of the repository, usually 'iwxxm', which contains README.md"
+        print("This script must be run from the root directory of the repository, usually 'iwxxm', which contains README.md")
         sys.exit(1)
 
     # obtain codes registry content
@@ -36,10 +36,10 @@ def main():
     for dir in iwxxmDirs:
         result = validate_dir(dir, valVersion)
         if result > 0:
-            print "========= Validation FAILED on %s =========" % dir
+            print("========= Validation FAILED on %s =========" % dir)
             returnCode = result
         else:
-            print "========= Validation SUCCESSFUL on %s =========" % dir
+            print("========= Validation SUCCESSFUL on %s =========" % dir)
 
     if returnCode != 0:
         sys.exit( returnCode )
@@ -58,23 +58,23 @@ def validate_dir(dir, vver):
             catalogText=catalogText.replace("${IWXXM_VERSION_DIR}", iwxxmDir)
             catalogFhandle.write(catalogText)
 
-    print 'Validating %s against XML Schema and Schematron' % dir
+    print('Validating %s against XML Schema and Schematron' % dir)
     examplesDir = os.path.join(dir,'examples')
     validationResult = os.system( 'bin/crux-1.3-all.jar -c %s -s %s/rule/iwxxm.sch %s/*.xml' % (thisCatalogFile,dir,examplesDir) )
     if validationResult > 0:
-        print 'FAILED validation.  Continuing...'
+        print('FAILED validation.  Continuing...')
     else:
-        print 'SUCCESSFUL validation'
+        print('SUCCESSFUL validation')
 
     # remove the modified catalog file
     os.remove(thisCatalogFile)
 
-    print 'CHECKING GML correctness on %s' % dir
+    print('CHECKING GML correctness on %s' % dir)
     checkResult = checkGMLFiles.check_files(examplesDir)
     if checkResult > 0:
-        print 'CHECKING GML correctness finished, some files are not correct!!!'
+        print('CHECKING GML correctness finished, some files are not correct!!!')
     else:
-        print 'CHECKING GML correctness finished successfuly'
+        print('CHECKING GML correctness finished successfuly')
 
     # this can return status codes of 256, which is an undefined value sometimes interpreted as 0.  Force it to a valid value
     if validationResult != 0:

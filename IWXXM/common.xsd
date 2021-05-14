@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/3.0" version="3.0-dev" xmlns:iwxxm="http://icao.int/iwxxm/3.0" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2021-2" version="3.1.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2021-2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
@@ -7,12 +7,12 @@
 
 References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
-	<element name="Report" type="iwxxm:ReportType" substitutionGroup="gml:AbstractFeature" abstract="true">
+	<element name="BasicReport" type="iwxxm:BasicReportType" substitutionGroup="gml:AbstractFeature" abstract="true">
 		<annotation>
-			<documentation>The base type for all reports, including information that is common across all report types</documentation>
+			<documentation>The base type for all reports, including information that is common across all report types.</documentation>
 		</annotation>
 	</element>
-	<complexType name="ReportType" abstract="true">
+	<complexType name="BasicReportType" abstract="true">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence></sequence>
@@ -23,19 +23,38 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 				</attribute>
 				<attribute use="required" name="permissibleUsage" type="iwxxm:PermissibleUsageType">
 					<annotation>
-						<documentation>The permissible usage of this report (operational or non-operational)</documentation>
+						<documentation>The permissible usage of this report (OPERATIONAL or NON-OPERATIONAL).</documentation>
 					</annotation>
 				</attribute>
 				<attribute name="permissibleUsageReason" type="iwxxm:PermissibleUsageReasonType">
 					<annotation>
-						<documentation>The permissible usage reason of this report. Only populated when the permissible usage is non-operational</documentation>
+						<documentation>The permissible usage reason of this report. Only populated when the permissible usage is NON-OPERATIONAL.</documentation>
 					</annotation>
 				</attribute>
 				<attribute name="permissibleUsageSupplementary" type="string">
 					<annotation>
-						<documentation>Additional human-readable descriptive information regarding the permissible usage.  Only populated when the permissible usage is non-operational</documentation>
+						<documentation>Additional human-readable descriptive information regarding the permissible usage.  Only populated when the permissible usage is NON-OPERATIONAL.</documentation>
 					</annotation>
 				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BasicReportPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:BasicReport"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="Report" type="iwxxm:ReportType" substitutionGroup="iwxxm:BasicReport" abstract="true">
+		<annotation>
+			<documentation>The fundamental type for all legacy reports in Annex 3.</documentation>
+		</annotation>
+	</element>
+	<complexType name="ReportType" abstract="true">
+		<complexContent>
+			<extension base="iwxxm:BasicReportType">
+				<sequence></sequence>
 				<attribute name="translatedBulletinID" type="string">
 					<annotation>
 						<documentation>The TAC bulletin ID that was translated, of the form 'TTAAiiCCCYYGGgg'</documentation>
@@ -360,6 +379,7 @@ For example, the "above" operator in conjunction with the reported quantity 10.6
 			</enumeration>
 		</restriction>
 	</simpleType>
+	<element name="AerodromeForecastWeather" type="iwxxm:AerodromeForecastWeatherType"></element>
 	<complexType name="AerodromeForecastWeatherType">
 		<annotation>
 			<documentation>AerodromeForecastWeather enables the forecast weather at an aerodrome to be reported.
@@ -376,6 +396,7 @@ This CodeList is specifically defined for aviation purposes as defined in WMO No
 			<extension base="gml:ReferenceType"></extension>
 		</complexContent>
 	</complexType>
+	<element name="SigConvectiveCloudType" type="iwxxm:SigConvectiveCloudTypeType"></element>
 	<complexType name="SigConvectiveCloudTypeType">
 		<annotation>
 			<documentation>Genus of cloud of operational significance to aviation: significant convective clouds only.
@@ -393,6 +414,7 @@ This CodeList is specifically defined for aviation purposes, as defined in WMO N
 			<extension base="gml:ReferenceType"></extension>
 		</complexContent>
 	</complexType>
+	<element name="CloudAmountReportedAtAerodrome" type="iwxxm:CloudAmountReportedAtAerodromeType"></element>
 	<complexType name="CloudAmountReportedAtAerodromeType">
 		<annotation>
 			<documentation>Amount of cloud - assessed by category:
@@ -461,6 +483,14 @@ This CodeList is specifically defined for aviation purposes, as defined in WMO N
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"/>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<complexType name="ValDistanceVerticalType">
+		<simpleContent>
+			<extension base="aixm:ValDistanceVerticalBaseType">
+				<attribute name="uom" type="aixm:UomDistanceVerticalType"/>
+				<attribute name="nilReason" type="gml:NilReasonType"/>
+			</extension>
+		</simpleContent>
 	</complexType>
 	<complexType name="AbstractTimeObjectPropertyType">
 		<sequence minOccurs="0">

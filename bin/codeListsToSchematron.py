@@ -19,7 +19,7 @@ import requests
 def main():
 
     if len( sys.argv ) < 3:
-        print "Usage: codeListsToSchematron.py [schema dir] [output dir]"
+        print("Usage: codeListsToSchematron.py [schema dir] [output dir]")
         sys.exit(1)
 
     schemaPath = sys.argv[1]
@@ -32,13 +32,13 @@ def run(schemaPath, outputDir):
         os.mkdir(outputDir)
 
     if not os.path.isdir(schemaPath) or not os.path.isdir(outputDir):
-        print 'ERROR: %s and %s must be existing directories' % (schemaPath, outputDir)
+        print('ERROR: %s and %s must be existing directories' % (schemaPath, outputDir))
         sys.exit(1)
 
     ns = {'xs': 'http://www.w3.org/2001/XMLSchema'}
     sn = {}
     # insert all values as keys as well so the lookups can go both ways
-    for key, value in ns.iteritems():
+    for key, value in ns.items():
         sn[value]=key
     ns.update(sn)
 
@@ -51,7 +51,7 @@ def run(schemaPath, outputDir):
     # we walk through the XSD files twice because XSD Types are imported and used in other XSD files which means
     # we need to search all files for elements corresponding to XSD Types
     for xsdFile in xsdfiles:
-        print 'Parsing %s for vocabularies/code lists' % xsdFile
+        print('Parsing %s for vocabularies/code lists' % xsdFile)
         tree = etree.parse(xsdFile)
         root = tree.getroot()
         # for complexType in root.findall( '//{http://www.w3.org/2001/XMLSchema}complexType[annotation/appinfo/vocabulary]' ):
@@ -69,20 +69,25 @@ def run(schemaPath, outputDir):
     # Also download http://codes.wmo.int/common/nil for nilReason instances, not referenced by an xsd
     # see https://github.com/wmo-im/iwxxm/issues/193
     download_codelist('http://codes.wmo.int/common/nil', outputDir)
-    
+
 def download_codelist(codeListPath, outputDir):
-    '''Download the RDF representation of this vocabulary'''
-    headers = {"Accept": "application/rdf+xml"}
-    print '\tDownloading %s in RDF format' % codeListPath
-
-    r = requests.get(codeListPath, headers=headers)
-    localCodeListFile=os.path.join(outputDir,parseLocalCodeListFile(codeListPath))
-    if r.status_code == 200:
-        with open(localCodeListFile, 'w') as fhandle:
-            fhandle.write(r.text.encode('utf-8'))
+    # Exit if the RDF representation of this volcabulary exists
+    localCodeListFile = os.path.join(outputDir,parseLocalCodeListFile(codeListPath))
+    if os.path.isfile(localCodeListFile):
+        print('RDF file exists. Skipping.')
     else:
-        print 'ERROR: Could not load code list at %s!' % codeListPath
-
+        # Download the RDF representation of this vocabulary
+        headers = {"Accept": "application/rdf+xml"}
+        print('\tDownloading %s in RDF format' % codeListPath)
+        r = requests.get(codeListPath, headers=headers)
+        if r.status_code == 200:
+            with open(localCodeListFile, 'w') as fhandle:
+                try:
+                    fhandle.write(r.text)
+                except UnicodeEncodeError:
+                    fhandle.write(r.text.encode('utf-8'))
+        else:
+            print('ERROR: Could not load code list at %s!' % codeListPath)
 
 def parseLocalCodeListFile(codeListHttpPath):
     filename = codeListHttpPath.replace('http://', '').replace('/','-')  # remove slashes and 'http://'

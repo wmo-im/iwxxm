@@ -1,0 +1,93 @@
+<rdf:RDF
+    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
+    xmlns:reg="http://purl.org/linked-data/registry#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:ui="http://purl.org/linked-data/registry-ui#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
+    xmlns:api="http://purl.org/linked-data/api/vocab#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:version="http://purl.org/linked-data/version#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:qudt-unit="http://qudt.org/vocab/unit#">
+  <reg:Register rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation">
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/EQN">
+        <dct:description xml:lang="en">Equatorial latitudes northern hemisphere (30\u00B0N - 0\u00B0N)</dct:description>
+        <rdfs:label xml:lang="en">Equatorial latitudes northern hemisphere (30\u00B0N - 0\u00B0N)</rdfs:label>
+        <skos:notation>EQN</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/MNH">
+        <dct:description xml:lang="en">Middle northern hemisphere (60\u00B0N - 30\u00B0N)</dct:description>
+        <rdfs:label xml:lang="en">Middle northern hemisphere (60\u00B0N - 30\u00B0N)</rdfs:label>
+        <skos:notation>MNH</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <dct:description xml:lang="en">The items within this code table are the locations of space weather phenomena of significance to aeronautical operations</dct:description>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/DAYLIGHT_SIDE">
+        <dct:description xml:lang="en">Daylight Side</dct:description>
+        <rdfs:label xml:lang="en">Daylight Side</rdfs:label>
+        <skos:notation>DAYLIGHT_SIDE</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <rdfs:label xml:lang="en">Space Wx Location</rdfs:label>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/EQS">
+        <dct:description xml:lang="en">Equatorial latitudes southern hemisphere (0\u00B0S - 30\u00B0S)</dct:description>
+        <rdfs:label xml:lang="en">Equatorial latitudes southern hemisphere (0\u00B0S - 30\u00B0S)</rdfs:label>
+        <skos:notation>EQS</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/MSH">
+        <dct:description xml:lang="en">Middle latitudes southern hemisphere (30\u00B0S - 60\u00B0S)</dct:description>
+        <rdfs:label xml:lang="en">Middle latitudes southern hemisphere (30\u00B0S - 60\u00B0S)</rdfs:label>
+        <skos:notation>MSH</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2018-07-05T08:00:33.421Z</dct:modified>
+    <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</owl:versionInfo>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/HSH">
+        <dct:description xml:lang="en">High latitudes southern hemisphere (60\u00B0S - 90\u00B0S)</dct:description>
+        <rdfs:label xml:lang="en">High latitudes southern hemisphere (60\u00B0S - 90\u00B0S)</rdfs:label>
+        <skos:notation>HSH</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/HNH">
+        <dct:description xml:lang="en">High northern hemisphere (90\u00B0N - 60\u00B0N)</dct:description>
+        <rdfs:label xml:lang="en">High northern hemisphere (90\u00B0N - 60\u00B0N)</rdfs:label>
+        <skos:notation>HNH</skos:notation>
+      </skos:Concept>
+    </skos:member>
+  </reg:Register>
+</rdf:RDF>
