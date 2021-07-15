@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">7/15/2021 3:32:43 PM</td>
+			<td class="ObjectDetailsValue">7/16/2021 12:24:44 AM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -373,7 +373,7 @@ function nameClassifier(name, separator)
 					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">tropicalCyclonePosition shall and only be present in a TropicalCycloneSIGMET</td>
+					<td width="80%" class="TableRow">tropicalCyclonePosition shall only be present in analysisCollection of TropicalCycloneSIGMET</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -381,7 +381,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints272" onclick="parent.toggleDiv('detailsDIVConstraints272','DetailsImageConstraints272')" />Details:
 							<div id="detailsDIVConstraints272" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMETEvolvingConditionCollection-1&lt;br/&gt;Description: iwxxm:tropicalCyclonePosition shall and only be present in a TropicalCycloneSIGMET&lt;br/&gt;Assertion: ( (exists(/iwxxm:TropicalCycloneSIGMET) and (count(.) = count(iwxxm:tropicalCyclonePosition)) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMETEvolvingConditionCollection-1&lt;br/&gt;Description: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET&lt;br/&gt;Assertion: ( ( ( exists(/iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:analysisCollection) = count(//iwxxm:analysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(/iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:supplementaryAnalysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>

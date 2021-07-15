@@ -115,6 +115,64 @@ function nameClassifier(name, separator)
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes463')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes463" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes463_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes463_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes463_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes463_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes463_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes463_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes463_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes463_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=1<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			The time at which this report was issued&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public Unit</i><br /><strong>&nbsp;&nbsp;issuingVolcanicAshAdvisoryCentre</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
 					<a href="#" onclick="parent.toggleData('DetailsImageAttributes464')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes464" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
@@ -152,14 +210,14 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					sequenceNumber=1<br>
+					sequenceNumber=2<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The time at which this report was issued&lt;br/&gt;
+			The issuing VAAC&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -168,7 +226,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public Unit</i><br /><strong>&nbsp;&nbsp;issuingVolcanicAshAdvisoryCentre</strong>
+					<i>Public EruptingVolcano</i><br /><strong>&nbsp;&nbsp;volcano</strong>
 				</td>
 			</tr>
 			<tr>
@@ -194,7 +252,7 @@ function nameClassifier(name, separator)
 						</tr>
 						<tr id="DetailsImageAttributes465_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
-							<td></td>
+							<td>Range:0 to 1</td>
 						</tr>
 						<tr id="DetailsImageAttributes465_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
@@ -210,14 +268,14 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					sequenceNumber=2<br>
+					sequenceNumber=3<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The issuing VAAC&lt;br/&gt;
+			The erupting volcano that is the source of volcanic ash&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -226,7 +284,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public EruptingVolcano</i><br /><strong>&nbsp;&nbsp;volcano</strong>
+					<i>Public <a href="../EA10/EA215.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;stateOrRegion</strong>
 				</td>
 			</tr>
 			<tr>
@@ -268,14 +326,14 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					sequenceNumber=3<br>
+					nillable=true<br>sequenceNumber=4<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The erupting volcano that is the source of volcanic ash&lt;br/&gt;
+			State, or region if ash is not reported over a State&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -284,7 +342,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA10/EA215.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;stateOrRegion</strong>
+					<i>Public <a href="../EA11/EA231.htm">LengthWithNilReason</a></i><br /><strong>&nbsp;&nbsp;summitElevation</strong>
 				</td>
 			</tr>
 			<tr>
@@ -326,14 +384,14 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					nillable=true<br>sequenceNumber=4<br>
+					nillable=true<br>sequenceNumber=5<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			State, or region if ash is not reported over a State&lt;br/&gt;
+			Elevation of the summit.&#160; If reported it shall either be in meters (&quot;m&quot;) or feet (&quot;[ft_i]&quot;).&lt;br/&gt;&lt;br/&gt;When the elevation is unknown, it shall be empty with a nil reason of &#39;unknown&#39;.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -342,7 +400,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA11/EA231.htm">LengthWithNilReason</a></i><br /><strong>&nbsp;&nbsp;summitElevation</strong>
+					<i>Public <a href="../EA10/EA215.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;advisoryNumber</strong>
 				</td>
 			</tr>
 			<tr>
@@ -384,14 +442,14 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					nillable=true<br>sequenceNumber=5<br>
+					nillable=true<br>sequenceNumber=6<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			Elevation of the summit.&#160; If reported it shall either be in meters (&quot;m&quot;) or feet (&quot;[ft_i]&quot;).&lt;br/&gt;&lt;br/&gt;When the elevation is unknown, it shall be empty with a nil reason of &#39;unknown&#39;.&lt;br/&gt;
+			Advisory number: year in full and message number (separate sequence for each volcano)&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -400,7 +458,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA10/EA215.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;advisoryNumber</strong>
+					<i>Public <a href="../EA10/EA215.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;informationSource</strong>
 				</td>
 			</tr>
 			<tr>
@@ -442,14 +500,14 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					nillable=true<br>sequenceNumber=6<br>
+					nillable=true<br>sequenceNumber=7<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			Advisory number: year in full and message number (separate sequence for each volcano)&lt;br/&gt;
+			Information source - described in free text&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -458,7 +516,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA10/EA215.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;informationSource</strong>
+					<i>Public <a href="EA132.htm">AviationColourCode</a></i><br /><strong>&nbsp;&nbsp;colourCode</strong>
 				</td>
 			</tr>
 			<tr>
@@ -500,14 +558,14 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					nillable=true<br>sequenceNumber=7<br>
+					nillable=true<br>sequenceNumber=8<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			Information source - described in free text&lt;br/&gt;
+			The aviation colour code&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -516,7 +574,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="EA132.htm">AviationColourCode</a></i><br /><strong>&nbsp;&nbsp;colourCode</strong>
+					<i>Public <a href="../EA10/EA215.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;eruptionDetails</strong>
 				</td>
 			</tr>
 			<tr>
@@ -558,14 +616,14 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					nillable=true<br>sequenceNumber=8<br>
+					nillable=true<br>sequenceNumber=9<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The aviation colour code&lt;br/&gt;
+			Eruption details (excluding date/time of eruption(s)).&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -574,7 +632,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA10/EA215.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;eruptionDetails</strong>
+					<i>Public <a href="EA125.htm">VolcanicAshObservedOrEstimatedConditions</a></i><br /><strong>&nbsp;&nbsp;observation</strong>
 				</td>
 			</tr>
 			<tr>
@@ -616,14 +674,14 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					nillable=true<br>sequenceNumber=9<br>
+					sequenceNumber=10<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			Eruption details (excluding date/time of eruption(s)).&lt;br/&gt;
+			The observed (or estimated) conditions of volcanic ash clouds.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -632,7 +690,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="EA125.htm">VolcanicAshObservedOrEstimatedConditions</a></i><br /><strong>&nbsp;&nbsp;observation</strong>
+					<i>Public <a href="EA126.htm">VolcanicAshForecastConditions</a></i><br /><strong>&nbsp;&nbsp;forecast</strong>
 				</td>
 			</tr>
 			<tr>
@@ -658,7 +716,7 @@ function nameClassifier(name, separator)
 						</tr>
 						<tr id="DetailsImageAttributes473_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to 1</td>
+							<td>Range:0 to *</td>
 						</tr>
 						<tr id="DetailsImageAttributes473_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
@@ -674,14 +732,14 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					sequenceNumber=10<br>
+					sequenceNumber=11<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The observed (or estimated) conditions of volcanic ash clouds.&lt;br/&gt;
+			The forecast conditions of volcanic ash clouds.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -690,7 +748,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="EA126.htm">VolcanicAshForecastConditions</a></i><br /><strong>&nbsp;&nbsp;forecast</strong>
+					<i>Public <a href="../EA10/EA215.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;remarks</strong>
 				</td>
 			</tr>
 			<tr>
@@ -716,7 +774,7 @@ function nameClassifier(name, separator)
 						</tr>
 						<tr id="DetailsImageAttributes474_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to *</td>
+							<td>Range:0 to 1</td>
 						</tr>
 						<tr id="DetailsImageAttributes474_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
@@ -732,14 +790,14 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					sequenceNumber=11<br>
+					nillable=true<br>sequenceNumber=12<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The forecast conditions of volcanic ash clouds.&lt;br/&gt;
+			Remarks, as necessary.&lt;br/&gt;&lt;br/&gt;When the remark is nil, it should be indicated by a missing remarks with a nil reason of &#39;inapplicable&#39;&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -748,7 +806,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA10/EA215.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;remarks</strong>
+					<i>Public TM_Instant</i><br /><strong>&nbsp;&nbsp;nextAdvisoryTime</strong>
 				</td>
 			</tr>
 			<tr>
@@ -790,64 +848,6 @@ function nameClassifier(name, separator)
 						</tr>
 					</table>
 					
-					nillable=true<br>sequenceNumber=12<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
-			Remarks, as necessary.&lt;br/&gt;&lt;br/&gt;When the remark is nil, it should be indicated by a missing remarks with a nil reason of &#39;inapplicable&#39;&lt;br/&gt;
-		</td>
-	</tr>
-</table></div>
-
-						
-				</td>
-			</tr>			<tr>
-				<td width="100%" class="TableRow">
-					<i>Public TM_Instant</i><br /><strong>&nbsp;&nbsp;nextAdvisoryTime</strong>
-				</td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes476')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes476" border="0" />Details:</a>
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes476_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes476_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes476_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes476_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes476_04" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to 1</td>
-						</tr>
-						<tr id="DetailsImageAttributes476_05" style="display: none;">
-							<td width="75"><i>Transient: </i></td>
-							<td>False</td>
-						</tr>
-						<tr id="DetailsImageAttributes476_06" style="display: none;">
-							<td width="75"><i>Derived: </i></td>
-							<td>False</td>
-						</tr>
-							<tr id="DetailsImageAttributes476_07" style="display: none;">
-							<td width="75"><i>IsID: </i></td>
-						<td>False</td>
-						</tr>
-					</table>
-					
 					sequenceNumber=13<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
@@ -877,8 +877,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario477" onclick="parent.toggleDiv('detailsDIVScenario477','DetailsImageScenario477')" />Details:
-						<div id="detailsDIVScenario477" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario476" onclick="parent.toggleDiv('detailsDIVScenario476','DetailsImageScenario476')" />Details:
+						<div id="detailsDIVScenario476" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Creates a property type that requires its instance to be encoded inline (applies to ISO 19136:2007 encoding rule).<br /></div>
 
 						</div>
@@ -890,8 +890,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario478" onclick="parent.toggleDiv('detailsDIVScenario478','DetailsImageScenario478')" />Details:
-						<div id="detailsDIVScenario478" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario477" onclick="parent.toggleDiv('detailsDIVScenario477','DetailsImageScenario477')" />Details:
+						<div id="detailsDIVScenario477" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the type as an objection collection.<br /></div>
 
 						</div>
@@ -903,8 +903,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario479" onclick="parent.toggleDiv('detailsDIVScenario479','DetailsImageScenario479')" />Details:
-						<div id="detailsDIVScenario479" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario478" onclick="parent.toggleDiv('detailsDIVScenario478','DetailsImageScenario478')" />Details:
+						<div id="detailsDIVScenario478" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Suppresses creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).<br /></div>
 
 						</div>
@@ -926,8 +926,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints480" onclick="parent.toggleDiv('detailsDIVConstraints480','DetailsImageConstraints480')" />Details:
-							<div id="detailsDIVConstraints480" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints479" onclick="parent.toggleDiv('detailsDIVConstraints479','DetailsImageConstraints479')" />Details:
+							<div id="detailsDIVConstraints479" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshAdvisory.VolcanicAshAdvisory-1&lt;br/&gt;Description: A non-operational report or a report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime and iwxxm:issuingVolcanicAshAdvisoryCentre&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) gt 0) or (@permissibleUsage = &#39;NON-OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
@@ -941,8 +941,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints481" onclick="parent.toggleDiv('detailsDIVConstraints481','DetailsImageConstraints481')" />Details:
-							<div id="detailsDIVConstraints481" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints480" onclick="parent.toggleDiv('detailsDIVConstraints480','DetailsImageConstraints480')" />Details:
+							<div id="detailsDIVConstraints480" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshAdvisory.VolcanicAshAdvisory-2&lt;br/&gt;Description: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:summitElevation, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:summitElevation) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
@@ -956,8 +956,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints482" onclick="parent.toggleDiv('detailsDIVConstraints482','DetailsImageConstraints482')" />Details:
-							<div id="detailsDIVConstraints482" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints481" onclick="parent.toggleDiv('detailsDIVConstraints481','DetailsImageConstraints481')" />Details:
+							<div id="detailsDIVConstraints481" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshAdvisory.VolcanicAshAdvisory-3&lt;br/&gt;Description: If a geometry is defined for iwxxm:volcano//metce:position with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty&lt;br/&gt;Assertion: ( if( exists(iwxxm:volcano//metce:position) ) then( empty(index-of(iwxxm:volcano//metce:position//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension=&#39;2&#39; and exists(@axisLabels)), false())) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>

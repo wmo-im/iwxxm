@@ -397,7 +397,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMETEvolvingConditionCollection-1">
       <sch:rule context="//iwxxm:SIGMETEvolvingConditionCollection">
-         <sch:assert test="( (exists(/iwxxm:TropicalCycloneSIGMET) and (count(.) = count(iwxxm:tropicalCyclonePosition)) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETEvolvingConditionCollection-1: iwxxm:tropicalCyclonePosition shall and only be present in a TropicalCycloneSIGMET</sch:assert>
+         <sch:assert test="( ( ( exists(/iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:analysisCollection) = count(//iwxxm:analysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(/iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:supplementaryAnalysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETEvolvingConditionCollection-1: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMET-1">
@@ -437,7 +437,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMETPositionCollection-1">
       <sch:rule context="//iwxxm:SIGMETPositionCollection">
-         <sch:assert test="( (exists(/iwxxm:TropicalCycloneSIGMET) and (count(.) = count(iwxxm:tropicalCyclonePosition)) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETPositionCollection-1: iwxxm:tropicalCyclonePosition shall and only be present in a TropicalCycloneSIGMET</sch:assert>
+         <sch:assert test="( ( ( exists(/iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:analysisCollection) = count(//iwxxm:analysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(/iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:supplementaryAnalysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETPositionCollection-1: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.WeatherCausingVisibilityReduction">
