@@ -155,7 +155,7 @@
     <iwxxm:supplementaryAnalysisCollection>
         <iwxxm:analysisAndForecastPositionAnalysis gml:id="uuid.ac9ed7d3-530e-47ce-86b2-339899dac9ce">
             <iwxxm:analysis>
-                <iwxxm:SIGMETEvolvingConditionCollection>
+                <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.3ad1cf6a-2e0f-4bf5-90b4-c42c3afe0031">
                     <iwxxm:phenomenonTime xlink:href="#uuid.5299e948-f719-4fd2-85fc-20ad96644250"/>
                     <iwxxm:member>
                         <iwxxm:SIGMETEvolvingCondition gml:id="uuid.2425da44-f643-45c8-972c-ff122f50de80" intensityChange="NO_CHANGE">
