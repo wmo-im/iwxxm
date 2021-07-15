@@ -12,7 +12,7 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
             xmlns:iwxxm="http://icao.int/iwxxm/2021-2"
-            xsi:schemaLocation="http://icao.int/iwxxm/2021-2 http://schemas.wmo.int/iwxxm/2021-2RC1/iwxxm.xsd"
+            xsi:schemaLocation="http://icao.int/iwxxm/2021-2 http://schemas.wmo.int/iwxxm/2021-2RC2/iwxxm.xsd"
             gml:id="uuid.636569b5-6b9b-4ed7-aa60-ad373a9e372b"
             reportStatus="NORMAL"
             permissibleUsage="OPERATIONAL"

@@ -1,5 +1,25 @@
 =========================================
-2021-2RC1 - May 2021
+2021-2 Release Candidate 2 - July 2021
+=========================================
+Package METAR/SPECI (Version 3.1.0RC2)
+Package TAF (Version 3.0.1RC2)
+Package SIGMET (Version 4.0.0RC2)
+  * Changes involving Amendments 79 and 80 to ICAO Annex 3
+    * Revised the representation to meet the requirements in Notes 20 and 21 to Table A6-1A
+  * Revised the examples to give correct orientation of positions in a polygon
+Package AIRMET (Version 3.1.0RC2)
+Package Tropical Cyclone Advisory (Version 3.1.0RC2)
+Package Volcanic Ash Advisory (Version 3.1.0RC2)
+  * Revised the examples to give correct orientation of positions in a polygon
+Package Space Weather Advisory (Version 3.0.1RC2)
+  * Revised the examples to give correct orientation of positions in a polygon
+Package WAFS Significant Weather Forecast (Version 1.0.0RC2)
+Package Meteorological Feature (Version 1.0.0RC2)
+Package Common (Version 3.1.0RC2)
+Package Measures (Version 3.0.0)
+
+=========================================
+2021-2 Release Candidate 1 - May 2021
 =========================================
 Package METAR/SPECI (Version 3.1.0RC1)
   * Fixed the issue of unnecessarily restricting the maximum number of iwxxm:trendForecast to 3

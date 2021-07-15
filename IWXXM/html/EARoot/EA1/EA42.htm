@@ -110,7 +110,7 @@ function nameClassifier(name, separator)
 		</tr>
 						<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA11/EA240.htm">MeasureWithNilReason</a></i><br /><strong>&nbsp;&nbsp;airTemperature</strong>
+					<i>Public <a href="../EA11/EA232.htm">MeasureWithNilReason</a></i><br /><strong>&nbsp;&nbsp;airTemperature</strong>
 				</td>
 			</tr>
 			<tr>
@@ -168,7 +168,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA11/EA240.htm">MeasureWithNilReason</a></i><br /><strong>&nbsp;&nbsp;dewpointTemperature</strong>
+					<i>Public <a href="../EA11/EA232.htm">MeasureWithNilReason</a></i><br /><strong>&nbsp;&nbsp;dewpointTemperature</strong>
 				</td>
 			</tr>
 			<tr>
@@ -226,7 +226,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA11/EA240.htm">MeasureWithNilReason</a></i><br /><strong>&nbsp;&nbsp;qnh</strong>
+					<i>Public <a href="../EA11/EA232.htm">MeasureWithNilReason</a></i><br /><strong>&nbsp;&nbsp;qnh</strong>
 				</td>
 			</tr>
 			<tr>
@@ -352,6 +352,29 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
+						<a href="EA45.htm">«dataType» AerodromeSeaCondition</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> seaCondition<br />
+						Sea surface temperature and state of the sea or significant wave height are recent weather phenomena to be reported as supplementary information.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink83" onclick="parent.toggleDiv('detailsDIVLink83','DetailsImageLink83')" />Details:
+							<div id="detailsDIVLink83" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
 						<a href="EA58.htm">«codeList» AerodromePresentWeather</a><br />
 						Class &nbsp;
 					</td>
@@ -368,8 +391,8 @@ When present weather cannot be observed by the automatic observing system due to
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink83" onclick="parent.toggleDiv('detailsDIVLink83','DetailsImageLink83')" />Details:
-							<div id="detailsDIVLink83" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink84" onclick="parent.toggleDiv('detailsDIVLink84','DetailsImageLink84')" />Details:
+							<div id="detailsDIVLink84" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">le.&lt;br/&gt;</div>
 
 							</div>
@@ -392,8 +415,8 @@ When present weather cannot be observed by the automatic observing system due to
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink84" onclick="parent.toggleDiv('detailsDIVLink84','DetailsImageLink84')" />Details:
-							<div id="detailsDIVLink84" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink85" onclick="parent.toggleDiv('detailsDIVLink85','DetailsImageLink85')" />Details:
+							<div id="detailsDIVLink85" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -415,8 +438,34 @@ When present weather cannot be observed by the automatic observing system due to
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink85" onclick="parent.toggleDiv('detailsDIVLink85','DetailsImageLink85')" />Details:
-							<div id="detailsDIVLink85" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink86" onclick="parent.toggleDiv('detailsDIVLink86','DetailsImageLink86')" />Details:
+							<div id="detailsDIVLink86" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA47.htm">«dataType» AerodromeCloud</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> cloud<br />
+						When no clouds are detected by the automatic observing system, it should be indicated by a missing cloud group with a nil reason of notDetectedByAutoSystem ("NCD" from TAC).  
+
+When there are no clouds of operational significance and no restriction on vertical visibility and “CAVOK” is not appropriate ("NSC") it should be indicated by a missing cloud group with a nil reason of nothingOfOperationalSignificance
+	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink87" onclick="parent.toggleDiv('detailsDIVLink87','DetailsImageLink87')" />Details:
+							<div id="detailsDIVLink87" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -442,8 +491,8 @@ When all runways are closed due to snow, this shall be indicated with a "runwayS
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink86" onclick="parent.toggleDiv('detailsDIVLink86','DetailsImageLink86')" />Details:
-							<div id="detailsDIVLink86" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink88" onclick="parent.toggleDiv('detailsDIVLink88','DetailsImageLink88')" />Details:
+							<div id="detailsDIVLink88" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -465,31 +514,8 @@ When all runways are closed due to snow, this shall be indicated with a "runwayS
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink87" onclick="parent.toggleDiv('detailsDIVLink87','DetailsImageLink87')" />Details:
-							<div id="detailsDIVLink87" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA53.htm">«codeList» AerodromeRecentWeather</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> recentWeather<br />
-						Recent weather is one of the recent weather phenomena to be reported as supplementary information.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink88" onclick="parent.toggleDiv('detailsDIVLink88','DetailsImageLink88')" />Details:
-							<div id="detailsDIVLink88" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink89" onclick="parent.toggleDiv('detailsDIVLink89','DetailsImageLink89')" />Details:
+							<div id="detailsDIVLink89" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -511,32 +537,6 @@ When all runways are closed due to snow, this shall be indicated with a "runwayS
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink89" onclick="parent.toggleDiv('detailsDIVLink89','DetailsImageLink89')" />Details:
-							<div id="detailsDIVLink89" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA47.htm">«dataType» AerodromeCloud</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> cloud<br />
-						When no clouds are detected by the automatic observing system, it should be indicated by a missing cloud group with a nil reason of notDetectedByAutoSystem ("NCD" from TAC).  
-
-When there are no clouds of operational significance and no restriction on vertical visibility and “CAVOK” is not appropriate ("NSC") it should be indicated by a missing cloud group with a nil reason of nothingOfOperationalSignificance
-	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink90" onclick="parent.toggleDiv('detailsDIVLink90','DetailsImageLink90')" />Details:
 							<div id="detailsDIVLink90" class="DetailsDiv" >
 							&nbsp;
@@ -546,7 +546,7 @@ When there are no clouds of operational significance and no restriction on verti
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA45.htm">«dataType» AerodromeSeaCondition</a><br />
+						<a href="EA53.htm">«codeList» AerodromeRecentWeather</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -554,8 +554,8 @@ When there are no clouds of operational significance and no restriction on verti
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> seaCondition<br />
-						Sea surface temperature and state of the sea or significant wave height are recent weather phenomena to be reported as supplementary information.	
+						<strong>Name:</strong> recentWeather<br />
+						Recent weather is one of the recent weather phenomena to be reported as supplementary information.	
 					</td>
 				</tr>
 				<tr>

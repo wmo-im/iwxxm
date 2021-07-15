@@ -6,7 +6,7 @@
    xmlns:metce="http://def.wmo.int/metce/2013"
    xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://icao.int/iwxxm/2021-2 http://schemas.wmo.int/iwxxm/2021-2RC1/iwxxm.xsd"
+   xsi:schemaLocation="http://icao.int/iwxxm/2021-2 http://schemas.wmo.int/iwxxm/2021-2RC2/iwxxm.xsd"
    gml:id="uuid.fb4861a8-0438-4f17-b8a7-efc13de58dec" 
    reportStatus="NORMAL" 
    permissibleUsage="OPERATIONAL">
@@ -75,7 +75,12 @@
                                         <gml:PolygonPatch>
                                             <gml:exterior>
                                                 <gml:LinearRing>
-                                                    <gml:posList>54.00 159.50 54.00 161.00 53.00 159.75 54.00 159.50</gml:posList>
+                                                    <gml:posList>
+                                                        54.00 159.50
+                                                        53.00 159.75
+                                                        54.00 161.00
+                                                        54.00 159.50
+                                                    </gml:posList>
                                                 </gml:LinearRing>
                                             </gml:exterior>
                                         </gml:PolygonPatch>
@@ -102,7 +107,13 @@
                                         <gml:PolygonPatch>
                                             <gml:exterior>
                                                 <gml:LinearRing>
-                                                    <gml:posList>51.50 161.50 51.50 162.50 52.50 162.50 52.50 161.50 51.50 161.50</gml:posList>
+                                                    <gml:posList>
+                                                        51.50 161.50
+                                                        51.50 162.50
+                                                        52.50 162.50 
+                                                        52.50 161.50 
+                                                        51.50 161.50
+                                                    </gml:posList>
                                                 </gml:LinearRing>
                                             </gml:exterior>
                                         </gml:PolygonPatch>
@@ -139,7 +150,13 @@
                                         <gml:PolygonPatch>
                                             <gml:exterior>
                                                 <gml:LinearRing>
-                                                    <gml:posList>51.50 160.50 51.50 162.50 53.50 162.50 53.50 160.50 51.50 160.50</gml:posList>
+                                                    <gml:posList>
+                                                        51.50 160.50 
+                                                        51.50 162.50 
+                                                        53.50 162.50 
+                                                        53.50 160.50 
+                                                        51.50 160.50
+                                                    </gml:posList>
                                                 </gml:LinearRing>
                                             </gml:exterior>
                                         </gml:PolygonPatch>
@@ -164,7 +181,13 @@
                                         <gml:PolygonPatch>
                                             <gml:exterior>
                                                 <gml:LinearRing>
-                                                    <gml:posList>48.50 163.50 48.50 166.50 51.50 166.50 51.50 163.50 48.50 163.50</gml:posList>
+                                                    <gml:posList>
+                                                        48.50 163.50 
+                                                        48.50 166.50 
+                                                        51.50 166.50 
+                                                        51.50 163.50 
+                                                        48.50 163.50
+                                                    </gml:posList>
                                                 </gml:LinearRing>
                                             </gml:exterior>
                                         </gml:PolygonPatch>
@@ -199,7 +222,13 @@
                                         <gml:PolygonPatch>
                                             <gml:exterior>
                                                 <gml:LinearRing>
-                                                    <gml:posList>48.50 161.50 48.50 166.00 53.00 166.00 53.00 161.50 48.50 161.50</gml:posList>
+                                                    <gml:posList>
+                                                        48.50 161.50 
+                                                        48.50 166.00 
+                                                        53.00 166.00 
+                                                        53.00 161.50 
+                                                        48.50 161.50
+                                                    </gml:posList>
                                                 </gml:LinearRing>
                                             </gml:exterior>
                                         </gml:PolygonPatch>
