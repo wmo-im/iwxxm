@@ -71,7 +71,7 @@
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
 
     <iwxxm:analysisCollection>
-        <iwxxm:analysisAndForecastPositionAnalysis>
+        <iwxxm:analysisAndForecastPositionAnalysis gml:id="uuid.04ead0ab-6c11-42e2-a076-f4e7592ec3c7">
             <iwxxm:analysis>
                 <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.fb90468d-60bb-4828-99ed-3ff730759ac3" timeIndicator="OBSERVATION">
                     <iwxxm:phenomenonTime>
@@ -109,7 +109,6 @@
                     </iwxxm:member>
                 </iwxxm:SIGMETEvolvingConditionCollection>
             </iwxxm:analysis>
-
             <iwxxm:forecastPositionAnalysis>
                 <iwxxm:SIGMETPositionCollection gml:id="uuid.a76bad9a-9d0b-45ea-82ed-c5f697b9d68a">
                     <iwxxm:phenomenonTime>

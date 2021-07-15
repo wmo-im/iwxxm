@@ -71,7 +71,7 @@
     <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/VA"/>
 
     <iwxxm:analysisCollection>
-        <iwxxm:analysisAndForecastPositionAnalysis>
+        <iwxxm:analysisAndForecastPositionAnalysis gml:id="uuid.a361ebcd-0505-41e2-b9fe-4b772ee25254">
             <iwxxm:analysis>
                 <iwxxm:SIGMETEvolvingConditionCollection gml:id="uuid.ed862622-5643-4c5a-8922-01a04d18dbab" timeIndicator="OBSERVATION">
                     <iwxxm:phenomenonTime>
@@ -110,7 +110,7 @@
                                 </aixm:AirspaceVolume>
                             </iwxxm:geometry>
                         </iwxxm:SIGMETEvolvingCondition>
-		    </iwxxm:member>
+		            </iwxxm:member>
                 </iwxxm:SIGMETEvolvingConditionCollection>
             </iwxxm:analysis>
             <iwxxm:forecastPositionAnalysis>
@@ -147,12 +147,13 @@
                             </iwxxm:geometry>
                         </iwxxm:SIGMETPosition>
                     </iwxxm:member>
-		</iwxxm:SIGMETPositionCollection>
+	    	    </iwxxm:SIGMETPositionCollection>
             </iwxxm:forecastPositionAnalysis>
         </iwxxm:analysisAndForecastPositionAnalysis>
     </iwxxm:analysisCollection>
+ 
     <iwxxm:supplementaryAnalysisCollection>
-        <iwxxm:analysisAndForecastPositionAnalysis>
+        <iwxxm:analysisAndForecastPositionAnalysis gml:id="uuid.ac9ed7d3-530e-47ce-86b2-339899dac9ce">
             <iwxxm:analysis>
                 <iwxxm:SIGMETEvolvingConditionCollection>
                     <iwxxm:phenomenonTime xlink:href="#uuid.5299e948-f719-4fd2-85fc-20ad96644250"/>
@@ -220,7 +221,7 @@
                         </iwxxm:SIGMETPosition>
                     </iwxxm:member>
                 </iwxxm:SIGMETPositionCollection>
-	    </iwxxm:forecastPositionAnalysis>
+            </iwxxm:forecastPositionAnalysis>
         </iwxxm:analysisAndForecastPositionAnalysis>
     </iwxxm:supplementaryAnalysisCollection>
 
