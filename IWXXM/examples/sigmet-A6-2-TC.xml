@@ -79,13 +79,13 @@
                             <gml:timePosition>2012-08-25T16:00:00Z</gml:timePosition>
                         </gml:TimeInstant>
                     </iwxxm:phenomenonTime>
-                    <iwxxm:tropicalCyclonePosition>
-                        <gml:Point gml:id="uuid.e84be2a6-cb1e-4905-b70a-6958c3cea1e3" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                            <gml:pos>27.10 -73.10</gml:pos>
-                        </gml:Point>
-                    </iwxxm:tropicalCyclonePosition>
                     <iwxxm:member>
                         <iwxxm:SIGMETEvolvingCondition gml:id="uuid.c0a23437-9eb7-4e6b-82f2-6fbd5757440c">
+                            <iwxxm:tropicalCyclonePosition>
+                                <gml:Point gml:id="uuid.e84be2a6-cb1e-4905-b70a-6958c3cea1e3" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:pos>27.10 -73.10</gml:pos>
+                                </gml:Point>
+                            </iwxxm:tropicalCyclonePosition>
                             <iwxxm:geometry>
                                 <aixm:AirspaceVolume gml:id="uuid.08077323-fbd5-4e04-a787-fccff0543f0a">
                                     <aixm:upperLimit uom="FL">500</aixm:upperLimit>
@@ -125,13 +125,13 @@
                             <gml:timePosition>2012-08-25T22:00:00Z</gml:timePosition>
                         </gml:TimeInstant>
                     </iwxxm:phenomenonTime>
-                    <iwxxm:tropicalCyclonePosition>
-                        <gml:Point gml:id="uuid.1e0ca159-77e7-4d85-8ace-44aadf52f9af" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                            <gml:pos>27.6667 -73.75</gml:pos>
-                        </gml:Point>
-                    </iwxxm:tropicalCyclonePosition>
                     <iwxxm:member>
                         <iwxxm:SIGMETPosition gml:id="uuid.338354de-7634-4fca-ac75-3675cb592284">
+                            <iwxxm:tropicalCyclonePosition>
+                                <gml:Point gml:id="uuid.1e0ca159-77e7-4d85-8ace-44aadf52f9af" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                    <gml:pos>27.6667 -73.75</gml:pos>
+                                </gml:Point>
+                            </iwxxm:tropicalCyclonePosition>
                             <iwxxm:geometry nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
                         </iwxxm:SIGMETPosition>
                     </iwxxm:member>

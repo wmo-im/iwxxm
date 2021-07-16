@@ -335,6 +335,11 @@
          <sch:assert test="( if( exists(iwxxm:geometry/*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( empty(index-of(iwxxm:geometry//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">SIGMET.SIGMETPosition-1: If a geometry of iwxxm:geometry is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="SIGMET.SIGMETPosition-2">
+      <sch:rule context="//iwxxm:SIGMETPosition">
+         <sch:assert test="( ( ( exists(/iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:analysisCollection) = count(//iwxxm:analysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(/iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:supplementaryAnalysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETPosition-2: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-1">
       <sch:rule context="//iwxxm:SIGMET|//iwxxm:VolcanicAshSIGMET|//iwxxm:TropicalCycloneSIGMET">
          <sch:assert test="( @reportStatus != 'AMENDMENT' and @reportStatus != 'CORRECTION' )">SIGMET.SIGMET-1: A SIGMET report cannot have a reportStatus of 'AMENDMENT' or 'CORRECTION'</sch:assert>
@@ -395,9 +400,9 @@
          <sch:assert test="( if( exists(iwxxm:speedOfMotion) and not(iwxxm:speedOfMotion/@xsi:nil = 'true') ) then ( (iwxxm:speedOfMotion/@uom = 'km/h') or (iwxxm:speedOfMotion/@uom = '[kn_i]') ) else( true() ) )">SIGMET.SIGMETEvolvingCondition-3: speedOfMotion shall be reported in kilometres per hour (km/h) or knots ([kn_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="SIGMET.SIGMETEvolvingConditionCollection-1">
-      <sch:rule context="//iwxxm:SIGMETEvolvingConditionCollection">
-         <sch:assert test="( ( ( exists(/iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:analysisCollection) = count(//iwxxm:analysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(/iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:supplementaryAnalysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETEvolvingConditionCollection-1: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET</sch:assert>
+   <sch:pattern id="SIGMET.SIGMETEvolvingCondition-5">
+      <sch:rule context="//iwxxm:SIGMETEvolvingCondition">
+         <sch:assert test="( ( ( exists(/iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:analysisCollection) = count(//iwxxm:analysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(/iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:supplementaryAnalysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETEvolvingCondition-5: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMET-1">
@@ -433,11 +438,6 @@
    <sch:pattern id="VolcanicAshSIGMET.VolcanicAshSIGMET-3">
       <sch:rule context="//iwxxm:VolcanicAshSIGMET">
          <sch:assert test="( if( exists(iwxxm:volcanicAshMovedToFIR) ) then( @isCancelReport = 'true' ) else( true() ) )">VolcanicAshSIGMET.VolcanicAshSIGMET-3: iwxxm:volcanicAshMovedToFIR can only be used in a 'CANCELLATION' report</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="SIGMET.SIGMETPositionCollection-1">
-      <sch:rule context="//iwxxm:SIGMETPositionCollection">
-         <sch:assert test="( ( ( exists(/iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:analysisCollection) = count(//iwxxm:analysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(/iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:supplementaryAnalysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETPositionCollection-1: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.WeatherCausingVisibilityReduction">
