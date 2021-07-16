@@ -203,7 +203,7 @@ Forecast "maximumSurfaceWindSpeed" is less than 34 knots
   A NIL shall be indicated in "maximumSurfaceWindSpeed" with nilReason set to 'http://codes.wmo.int/common/nil/nothingOfOperationalSignificance'
 
 Target is forecast to no longer categorize as a tropical cyclone
-  A NIL shall be indicated in "tropicalCyclonePosition" with nilReason set to 'http://codes.wmo.int/common/nil/inappropriate'
+  A NIL shall be indicated in "tropicalCyclonePosition" with nilReason set to 'http://codes.wmo.int/common/nil/inapplicable'
 
 ==========================
 Space Weather Advisory
