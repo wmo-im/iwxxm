@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">7/15/2021 2:47:46 AM</td>
+			<td class="ObjectDetailsValue">7/17/2021 12:19:00 AM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -297,7 +297,7 @@ function nameClassifier(name, separator)
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">Mandatory items in an ordinary report</td>
+					<td width="80%" class="TableRow">volcanicAshMovedToFIR can only be used in a 'CANCELLATION' report</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -305,21 +305,6 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints333" onclick="parent.toggleDiv('detailsDIVConstraints333','DetailsImageConstraints333')" />Details:
 							<div id="detailsDIVConstraints333" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshSIGMET.VolcanicAshSIGMET-2&lt;br/&gt;Description: An ordinary report should also have iwxxm:eruptingVolcano&lt;br/&gt;Assertion: ( if( (empty(@isCancelReport) or @isCancelReport = &#39;false&#39;) and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:eruptingVolcano) ) else( true() ) )&lt;br/&gt;</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">volcanicAshMovedToFIR can only be used in a 'CANCELLATION' report</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints334" onclick="parent.toggleDiv('detailsDIVConstraints334','DetailsImageConstraints334')" />Details:
-							<div id="detailsDIVConstraints334" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshSIGMET.VolcanicAshSIGMET-3&lt;br/&gt;Description: iwxxm:volcanicAshMovedToFIR can only be used in a &#39;CANCELLATION&#39; report&lt;br/&gt;Assertion: ( if( exists(iwxxm:volcanicAshMovedToFIR) ) then( @isCancelReport = &#39;true&#39; ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
@@ -333,8 +318,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints335" onclick="parent.toggleDiv('detailsDIVConstraints335','DetailsImageConstraints335')" />Details:
-							<div id="detailsDIVConstraints335" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints334" onclick="parent.toggleDiv('detailsDIVConstraints334','DetailsImageConstraints334')" />Details:
+							<div id="detailsDIVConstraints334" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshSIGMET.VolcanicAshSIGMET-6&lt;br/&gt;Description: If a geometry is defined for iwxxm:eruptingVolcano//metce:position by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty&lt;br/&gt;Assertion: ( if( exists(iwxxm:eruptingVolcano//metce:position) ) then( empty(for $i in iwxxm:eruptingVolcano//metce:position//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()] return $i[not(@srsDimension=&#39;2&#39;) or @axisLabels=&#39;&#39;]) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
@@ -348,8 +333,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints336" onclick="parent.toggleDiv('detailsDIVConstraints336','DetailsImageConstraints336')" />Details:
-							<div id="detailsDIVConstraints336" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints335" onclick="parent.toggleDiv('detailsDIVConstraints335','DetailsImageConstraints335')" />Details:
+							<div id="detailsDIVConstraints335" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshSIGMET.VolcanicAshSIGMET-7&lt;br/&gt;Description: If a geometry is defined for iwxxm:volcanicAshMovedToFIR//aixm:geometryComponent by providing @srsName, @srsDimension must equal to 2 and @aixsLabels must be non-empty&lt;br/&gt;Assertion: ( if( exists(iwxxm:volcanicAshMovedToFIR//aixm:geometryComponent) ) then( iwxxm:volcanicAshMovedToFIR//aixm:geometryComponent//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension=&#39;2&#39; and exists(@axisLabels)) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>

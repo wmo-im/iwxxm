@@ -430,11 +430,6 @@
          <sch:assert test="( if( @isCancelReport = 'true' and string-length(@translationFailedTAC) eq 0 ) then( empty(iwxxm:eruptingVolcano) ) else( true() ) )">VolcanicAshSIGMET.VolcanicAshSIGMET-1: In a 'CANCELLATION' report iwxxm:eruptingVolcano shall be absent</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="VolcanicAshSIGMET.VolcanicAshSIGMET-2">
-      <sch:rule context="//iwxxm:VolcanicAshSIGMET">
-         <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:eruptingVolcano) ) else( true() ) )">VolcanicAshSIGMET.VolcanicAshSIGMET-2: An ordinary report should also have iwxxm:eruptingVolcano</sch:assert>
-      </sch:rule>
-   </sch:pattern>
    <sch:pattern id="VolcanicAshSIGMET.VolcanicAshSIGMET-3">
       <sch:rule context="//iwxxm:VolcanicAshSIGMET">
          <sch:assert test="( if( exists(iwxxm:volcanicAshMovedToFIR) ) then( @isCancelReport = 'true' ) else( true() ) )">VolcanicAshSIGMET.VolcanicAshSIGMET-3: iwxxm:volcanicAshMovedToFIR can only be used in a 'CANCELLATION' report</sch:assert>
