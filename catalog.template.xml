@@ -6,7 +6,7 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     
   <!-- IWXXM template - IWXXM_VERSION to be replaced by the appropriate IWXXM version (such as 2.1) and IWXXM version path (such as 2.1.0) -->
-  <rewriteSystem systemIdStartString="http://schemas.wmo.int/iwxxm/${IWXXM_VERSION}" rewritePrefix="${IWXXM_VERSION_DIR}/"/>
+  <rewriteSystem systemIdStartString="http://schemas.wmo.int/iwxxm/${IWXXM_VERSION}" rewritePrefix="${IWXXM_VERSION_DIR}"/>
 
   <!-- Other non-IWXXM schemas from schemas.wmo.int -->
   <rewriteSystem systemIdStartString="http://schemas.wmo.int/" rewritePrefix="externalSchema/schemas.wmo.int/"/>

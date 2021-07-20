@@ -42,7 +42,13 @@ def run(schemaPath, outputDir):
         sn[value]=key
     ns.update(sn)
 
-    xsdfiles = [join(schemaPath,f) for f in os.listdir(schemaPath) if f.endswith(".xsd") and isfile(join(schemaPath, f))]
+    #xsdfiles = [join(schemaPath,f) for f in os.listdir(schemaPath) if f.endswith(".xsd") and isfile(join(schemaPath, f))]
+
+    xsdfiles = []
+    for root,d_names,f_names in os.walk(schemaPath):
+        for f in f_names:
+            if f.endswith(".xsd") and isfile(os.path.join(root, f)):
+                xsdfiles.append(os.path.join(root, f))
 
     # dictionary mapping from XSD Type names such as 'AerodromeRecentWeatherType' to the path on codes.wmo.int such as 'http://codes.wmo.int/49-2/AerodromeRecentWeather'
     typeToCodeList={}

@@ -21,46 +21,43 @@ def main():
         print("This script must be run from the root directory of the repository, usually 'iwxxm', which contains README.md")
         sys.exit(1)
 
-    # obtain codes registry content
-    codeLists.run('IWXXM', 'IWXXM/rule/')
-
-    # only validate the latest version and examples.  Older versions had a number of issues that have already been fixed
-    # and there is little point in running tests against them
+    # get version and path to iwxxm.xsd
     with open('LATEST_VERSION') as fhandle:
         LV = fhandle.read().strip()
-        devVersion = LV.split('\n')[1]
-        valVersion = LV.split('\n')[0]
+        XSDVersion = LV.split('\n')[0]
+        XSDPath = LV.split('\n')[1]
 
-    iwxxmDirs = [os.path.join(cwd,devVersion)]
+    # obtain codes registry content
+    codeLists.run('IWXXM', os.path.join(XSDPath,'rule'))
+
+    FullXSDPath = os.path.join(cwd,XSDPath)
     returnCode=0
-    for dir in iwxxmDirs:
-        result = validate_dir(dir, valVersion)
-        if result > 0:
-            print("========= Validation FAILED on %s =========" % dir)
-            returnCode = result
-        else:
-            print("========= Validation SUCCESSFUL on %s =========" % dir)
+    result = validate_dir(cwd, XSDPath, XSDVersion)
+    if result > 0:
+        print("========= Validation FAILED on %s =========" % FullXSDPath)
+        returnCode = result
+    else:
+        print("========= Validation SUCCESSFUL on %s =========" % FullXSDPath)
 
     if returnCode != 0:
         sys.exit( returnCode )
 
-def validate_dir(dir, vver):
+def validate_dir(rdir, dir, ver):
+    fdir = os.path.join(rdir, dir)
     catalogTemplate='catalog.template.xml'
-    iwxxmDir=os.path.split(dir)[1]
-    iwxxmVersion = vver
-    thisCatalogFile=catalogTemplate.replace('template',iwxxmDir)
+    thisCatalogFile=catalogTemplate.replace('template',ver)
 
     # replace ${IWXXM_VERSION} and ${IWXXM_VERSION_DIR} with appropriate values in the catalog.xml file
     with open( catalogTemplate ) as templateFhandle:
         with open( thisCatalogFile, 'w' ) as catalogFhandle:
             catalogText=templateFhandle.read()
-            catalogText=catalogText.replace("${IWXXM_VERSION}", iwxxmVersion)
-            catalogText=catalogText.replace("${IWXXM_VERSION_DIR}", iwxxmDir)
+            catalogText=catalogText.replace("${IWXXM_VERSION}", ver)
+            catalogText=catalogText.replace("${IWXXM_VERSION_DIR}", dir)
             catalogFhandle.write(catalogText)
 
-    print('Validating %s against XML Schema and Schematron' % dir)
-    examplesDir = os.path.join(dir,'examples')
-    validationResult = os.system( 'bin/crux-1.3-all.jar -c %s -s %s/rule/iwxxm.sch %s/*.xml' % (thisCatalogFile,dir,examplesDir) )
+    print('Validating %s against XML Schema and Schematron' % fdir)
+    examplesDir = os.path.join(fdir,'examples')
+    validationResult = os.system( 'bin/crux-1.3-all.jar -c %s -s %s/rule/iwxxm.sch %s/*.xml' % (thisCatalogFile,fdir,examplesDir) )
     if validationResult > 0:
         print('FAILED validation.  Continuing...')
     else:

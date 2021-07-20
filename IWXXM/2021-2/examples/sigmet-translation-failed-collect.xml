@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collect:MeteorologicalBulletin
+    xmlns:collect="http://def.wmo.int/collect/2014"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://def.wmo.int/collect/2014 http://schemas.wmo.int/collect/1.2/collect.xsd"
+    gml:id="uuid.fee171e9-1aec-4815-bcca-9e3c467388c6">
+
+    <collect:meteorologicalInformation>
+	
+        <iwxxm:SIGMET
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+            xmlns:iwxxm="http://icao.int/iwxxm/2021-2"
+            xsi:schemaLocation="http://icao.int/iwxxm/2021-2 http://schemas.wmo.int/iwxxm/2021-2/iwxxm.xsd"
+            gml:id="uuid.636569b5-6b9b-4ed7-aa60-ad373a9e372b"
+            reportStatus="NORMAL"
+            permissibleUsage="OPERATIONAL"
+            translatedBulletinID="WSYU31 YUSO 101000"
+            translatedBulletinReceptionTime="2012-08-10T10:05:00Z"
+            translationCentreDesignator="YUZZ"
+            translationCentreName="Fictional translation centre"
+            translationTime="2012-08-10T10:05:00Z"
+            translationFailedTAC="YUDD SIGMET 2 VALID 101200/101600 YUSO-
+                                  YUDD SHANLON FIR INVALID TS">
+        
+            <iwxxm:issueTime>
+                <gml:TimeInstant gml:id="uuid.5599e948-f719-4fc2-85fc-20ad96644250">
+                    <gml:timePosition>2012-08-10T12:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:issueTime>
+            
+            <iwxxm:issuingAirTrafficServicesUnit>
+              <aixm:Unit gml:id="uuid.8af40fb0-ea32-4192-81bf-f6f00b7d08b0">
+                <aixm:timeSlice>
+                  <aixm:UnitTimeSlice gml:id="uuid.bdc408dd-bc52-496c-9d68-26115d716188">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>YUDD FIC</aixm:name>
+                    <aixm:type>FIC</aixm:type>
+                    <aixm:designator>YUDD</aixm:designator>
+                  </aixm:UnitTimeSlice>
+                </aixm:timeSlice>
+              </aixm:Unit>
+            </iwxxm:issuingAirTrafficServicesUnit>
+            
+            <iwxxm:validPeriod>
+                <gml:TimePeriod gml:id="uuid.2635a879-81e5-4ac0-994f-b46050ba5e83">
+                    <gml:beginPosition>2012-08-10T12:00:00Z</gml:beginPosition>
+                    <gml:endPosition>2012-08-10T16:00:00Z</gml:endPosition>
+                </gml:TimePeriod>
+            </iwxxm:validPeriod>
+        
+        </iwxxm:SIGMET>
+
+    </collect:meteorologicalInformation>
+
+    <collect:bulletinIdentifier>A_LSYU31YUSO101000_C_YUSO_20120810100000.xml</collect:bulletinIdentifier>
+
+</collect:MeteorologicalBulletin>
