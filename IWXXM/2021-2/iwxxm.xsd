@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2021-2" version="2021-2RC2" xmlns:iwxxm="http://icao.int/iwxxm/2021-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm" version="2021-2RC2" xmlns:iwxxm="http://icao.int/iwxxm" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="../measures/3.0.0/measures.xsd"></include>
 	<include schemaLocation="../common/3.1.0/common.xsd"></include>
 	<include schemaLocation="../metFeature/1.0.0/metFeature.xsd"></include>
