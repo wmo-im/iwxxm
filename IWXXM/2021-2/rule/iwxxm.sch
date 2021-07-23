@@ -9,7 +9,7 @@
    <sch:ns prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
    <sch:ns prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
    <sch:ns prefix="reg" uri="http://purl.org/linked-data/registry#"/>
-   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/2021-2"/>
+   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm"/>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState-1">
       <sch:rule context="//iwxxm:AerodromeRunwayState">
          <sch:assert test="( if( @allRunways = 'true' ) then( empty(iwxxm:runway) ) else( true() ) )">METAR_SPECI.AerodromeRunwayState-1: When all runways are being reported upon, no specific runway should be reported</sch:assert>
