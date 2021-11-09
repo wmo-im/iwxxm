@@ -6,7 +6,7 @@
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2021-2 http://schemas.wmo.int/iwxxm/2021-2RC2/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2021-2 http://schemas.wmo.int/iwxxm/2021-2/iwxxm.xsd"
     gml:id="uuid.64c3912b-b09a-494a-8731-321f28b759e4"
     reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL">

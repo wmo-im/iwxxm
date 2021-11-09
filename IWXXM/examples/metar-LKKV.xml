@@ -3,7 +3,7 @@
     permissibleUsage="OPERATIONAL" reportStatus="NORMAL" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/2021-2"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2021-2 http://schemas.wmo.int/iwxxm/2021-2RC2/iwxxm.xsd">
+    xsi:schemaLocation="http://icao.int/iwxxm/2021-2 http://schemas.wmo.int/iwxxm/2021-2/iwxxm.xsd">
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.8053a919-45e1-4f22-9654-5c74032f4b64">
             <gml:timePosition>2007-07-25T12:00:00Z</gml:timePosition>
