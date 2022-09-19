@@ -38,7 +38,7 @@
                     <gml:pos>54.03 159.27</gml:pos>
                 </gml:Point>
             </metce:position>
-            <metce:eruptionDate>2008-09-23T01:30:00Z</metce:eruptionDate>
+            <metce:eruptionDate>2008-09-23T00:00:00Z</metce:eruptionDate>
         </metce:EruptingVolcano>
     </iwxxm:volcano>
 
