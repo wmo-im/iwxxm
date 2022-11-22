@@ -51,8 +51,8 @@
                           <gml:validTime/>
                           <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                           <aixm:type>FIR</aixm:type>
-                          <aixm:designator>YUCC</aixm:designator>
-                          <aixm:name>AMSWELL FIR</aixm:name>
+                          <aixm:designator>YUDD</aixm:designator>
+                          <aixm:name>SHANLON FIR</aixm:name>
                     </aixm:AirspaceTimeSlice>
               </aixm:timeSlice>
         </aixm:Airspace>
