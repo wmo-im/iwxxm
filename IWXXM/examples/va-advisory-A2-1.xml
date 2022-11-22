@@ -24,7 +24,7 @@
                     <gml:validTime/>
                     <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                     <aixm:name>TOKYO</aixm:name>
-                    <aixm:type>OTHER:VACC</aixm:type>
+                    <aixm:type>OTHER:VAAC</aixm:type>
                 </aixm:UnitTimeSlice>
             </aixm:timeSlice>
         </aixm:Unit>
