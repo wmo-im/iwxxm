@@ -91,12 +91,7 @@
                                                 <gml:PolygonPatch>
                                                     <gml:exterior>
                                                         <gml:LinearRing>
-                                                            <gml:posList>
-                                                                60.0 -11.5
-                                                                60.0 -16.0
-                                                                59.0 -13.0
-                                                                60.0 -11.5
-                                                            </gml:posList>
+                                                            <gml:posList>60.0 -11.83 60.0 -16.0 59.0 -13.0 60.0 -11.83</gml:posList>
                                                         </gml:LinearRing>
                                                     </gml:exterior>
                                                 </gml:PolygonPatch>
@@ -126,12 +121,7 @@
                                                 <gml:PolygonPatch>
                                                     <gml:exterior>
                                                         <gml:LinearRing>
-                                                            <gml:posList>
-                                                                60.0 -12.0
-                                                                60.0 -15.35
-                                                                58.0 -14.0
-                                                                60.0 -12.0
-                                                            </gml:posList>
+                                                            <gml:posList>60.0 -12.0 58.0 -14.0 60.0 -15.58 60.0 -12.0</gml:posList>
                                                         </gml:LinearRing>
                                                     </gml:exterior>
                                                 </gml:PolygonPatch>
