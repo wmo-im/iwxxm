@@ -89,7 +89,7 @@
                                     <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
                                     <aixm:horizontalProjection>
                                         <aixm:Surface gml:id="uuid.99f0ea38-755d-4435-b7c7-7cc5afcce237" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                            <gml:polygonPatches>
+                                            <gml:patches>
                                                 <gml:PolygonPatch>
                                                     <gml:exterior>
                                                         <gml:LinearRing>
@@ -97,7 +97,7 @@
                                                         </gml:LinearRing>
                                                     </gml:exterior>
                                                 </gml:PolygonPatch>
-                                            </gml:polygonPatches>
+                                            </gml:patches>
                                         </aixm:Surface>
                                     </aixm:horizontalProjection>
                                 </aixm:AirspaceVolume>
@@ -119,7 +119,7 @@
                                 <aixm:AirspaceVolume gml:id="uuid.e985f12a-5e11-433c-aa5e-699eecb0c244">
                                     <aixm:horizontalProjection>
                                         <aixm:Surface gml:id="uuid.a667da6f-fb8a-4029-93f3-509ab9408220" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                            <gml:polygonPatches>
+                                            <gml:patches>
                                                 <gml:PolygonPatch>
                                                     <gml:exterior>
                                                         <gml:LinearRing>
@@ -127,7 +127,7 @@
                                                         </gml:LinearRing>
                                                     </gml:exterior>
                                                 </gml:PolygonPatch>
-                                            </gml:polygonPatches>
+                                            </gml:patches>
                                         </aixm:Surface>
                                     </aixm:horizontalProjection>
                                 </aixm:AirspaceVolume>
