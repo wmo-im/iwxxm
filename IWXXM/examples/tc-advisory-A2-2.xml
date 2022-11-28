@@ -55,7 +55,7 @@
                     <aixm:upperLimitReference>STD</aixm:upperLimitReference>
                     <aixm:horizontalProjection>
                         <aixm:Surface gml:id="uuid.62695824-f234-4618-b459-90bb795cde9a" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                            <gml:polygonPatches>
+                            <gml:patches>
                                 <gml:PolygonPatch>
                                     <gml:exterior>
                                         <gml:Ring>
@@ -72,7 +72,7 @@
                                         </gml:Ring>
                                     </gml:exterior>
                                 </gml:PolygonPatch>
-                            </gml:polygonPatches>
+                            </gml:patches>
                         </aixm:Surface>
                     </aixm:horizontalProjection>
                 </aixm:AirspaceVolume>
