@@ -17,7 +17,7 @@ Please provide feedback to or raise your question to [tt-avdata@groups.wmo.int](
 
 # References
 
-*   IWXXM on WMO Community Platform
+*   [IWXXM on WMO Community Platform](https://community.wmo.int/activity-areas/wis/iwxxm)
 *   [WMO No.306 Volume I.3, _Manual on Codes. Part D - Representations derived from data models_](https://library.wmo.int/index.php?lvl=notice_display&id=19508)
 *   [ICAO Doc 10003, _Manual on the Digital Exchange of Aeronautical Meteorological Information_](https://store.icao.int/en/manual-on-the-icao-meteorological-information-exchange-model-doc-10003)
 
