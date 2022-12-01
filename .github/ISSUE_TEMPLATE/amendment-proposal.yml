@@ -46,8 +46,8 @@ body:
     attributes:
       label: Publication(s)
       description: Publication title, WMO number, relevant volume, part, section, regulation, provision, paragraph or other such subdivisions of the publication to which the amendment applies.
-      placeholder: Enter publication name and location of amendment in the publication.
-      value: "Example: Manual on Codes (WMO-No. 306), Volume I.2, Common Code Table C-4"
+      placeholder: Enter publication name and other relevant information.
+      value: "Example: Manual on Codes (WMO-No. 306), Volume I.3, METAR"
     validations:
       required: true
   - type: dropdown
