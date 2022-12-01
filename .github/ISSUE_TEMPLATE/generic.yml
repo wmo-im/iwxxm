@@ -1,0 +1,17 @@
+name: Generic issue
+description: Issue for any topic other than amendments to manuals. 
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Describe the issue, include as much detail as possible.
+    validations:
+      required: true
+  - type: textarea
+    id: contact
+    attributes:
+      label: Requestor
+      description: Name (affiliation) and contact details. 
+      placeholder: Enter requestor details.
+      value: "Anna Milan (WMO), @amilan17"
