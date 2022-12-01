@@ -1,0 +1,79 @@
+name: Proposal for an Amendment
+description: Proposal for amendments to WMO publications that may be submitted for WMO approval with the standard or fast-track procedure.
+title: "[Enter table name, number and a very brief description of change]"
+body:
+  - type: markdown
+    attributes:
+      value: The content in this issue, excluding the initial request, will be kept up to date during the drafting of the proposal. Please pay attention to accuracy, spelling and grammar as it may be referenced in an official document for WMO adoption. 
+  - type: textarea
+    id: initial-request
+    attributes:
+      label: Initial request
+      description: Overview description of the amendment(s) requested. Include as much relevant information possible, such as rationale, purpose, and implementation plans. *This field should only be edited by the requestor.*
+      placeholder: Enter summary of request for amendment(s).
+    validations:
+      required: true
+  - type: textarea
+    id: amendment-details
+    attributes:
+      label: Amendment details 
+      description: Full description of exact changes proposed. This content may evolve as decisions are finalized.
+      placeholder: Enter details of amendments requested. Convert CSV to Markdown at https://www.convertcsv.com/csv-to-markdown.htm
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Comments
+      description: Other information that may be informative and relevant.
+  - type: textarea
+    id: requestor
+    attributes:
+      label: Requestor(s)
+      description: Name of individuals, groups, or organizations that are requesting the amendment. Include relevant affiliations, if applicable.
+      placeholder: Enter requestor details.
+      value: "Enter list of requestors."
+    validations:
+      required: true
+  - type: textarea
+    id: stakeholder
+    attributes:
+      label: Stakeholder(s)
+      description: Name of individuals, groups, or organizations that have an interest or may be impacted by the amendment. Include relevant affiliations, if applicable.
+      placeholder: Enter stakeholder details.
+      value: "Enter list of stakeholder(s)."
+  - type: textarea
+    id: publication
+    attributes:
+      label: Publication(s)
+      description: Publication title, WMO number, relevant volume, part, section, regulation, provision, paragraph or other such subdivisions of the publication to which the amendment applies.
+      placeholder: Enter publication name and location of amendment in the publication.
+      value: "Example: Manual on Codes (WMO-No. 306), Volume I.2, Common Code Table C-4"
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Expected impact of change
+      description: Choose LOW (for editorial changes to existing codes), MEDIUM (for new codes) or HIGH (for deprecated and superseded codes)
+      multiple: false
+      options:
+        - "LOW"
+        - "MEDIUM"
+        - "HIGH"
+  - type: textarea
+    id: collaborators
+    attributes:
+      label: Collaborators
+      description: Names of groups or individuals (and affiliation) that were consulted during, or assisted with, the drafting of the proposal.
+      placeholder: Enter collaborator details.
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Other publications, websites or resources that were reviewed during the drafting of the proposal.
+      placeholder: Enter references reviewed. 
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: Details of validation, if applicable.  
+      placeholder: Enter if validation was performed.
