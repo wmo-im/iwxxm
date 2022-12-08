@@ -81,7 +81,7 @@
 	                    <aixm:maximumLimit xsi:nil="true" nilReason="unknown"/>
                             <aixm:horizontalProjection>
                                 <aixm:Surface gml:id="uuid.626c2d10-d5ba-427e-a0c8-98949dd20a69" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                    <gml:polygonPatches>
+                                    <gml:patches>
                                         <gml:PolygonPatch>
                                             <gml:exterior>
                                                 <gml:LinearRing>
@@ -95,7 +95,7 @@
                                                 </gml:LinearRing>
                                             </gml:exterior>
                                         </gml:PolygonPatch>
-                                    </gml:polygonPatches>
+                                    </gml:patches>
                                 </aixm:Surface>
                             </aixm:horizontalProjection>
                         </aixm:AirspaceVolume>
