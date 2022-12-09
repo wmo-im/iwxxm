@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iwxxm:TAF 
-    xmlns:iwxxm="http://icao.int/iwxxm/2021-2" 
+    xmlns:iwxxm="http://icao.int/iwxxm/2023-1" 
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-    xsi:schemaLocation="http://icao.int/iwxxm/2021-2 http://schemas.wmo.int/iwxxm/2021-2/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2023-1 http://schemas.wmo.int/iwxxm/2023-1RC1/iwxxm.xsd"
     gml:id="uuid.d6a85870-f32e-4ea8-8502-c7d9be7e0144"
     reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL">

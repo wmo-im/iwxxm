@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">7/16/2021 3:25:03 PM</td>
+			<td class="ObjectDetailsValue">12/8/2022 11:23:29 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -388,8 +388,7 @@ function nameClassifier(name, separator)
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">tropicalCyclonePosition shall only be present in analysisCollection of TropicalCycloneSIGMET
-</td>
+					<td width="80%" class="TableRow">tropicalCyclonePosition shall only be present in analysisCollection of TropicalCycloneSIGMET</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -397,7 +396,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints299" onclick="parent.toggleDiv('detailsDIVConstraints299','DetailsImageConstraints299')" />Details:
 							<div id="detailsDIVConstraints299" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMETPosition-2&lt;br/&gt;Description: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET&lt;br/&gt;Assertion: ( ( ( exists(/iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:analysisCollection) = count(//iwxxm:analysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(/iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:supplementaryAnalysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMETPosition-2&lt;br/&gt;Description: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET&lt;br/&gt;Assertion: ( ( ( exists(//iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection) = count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(//iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:TropicalCycloneSIGMET//iwxxm:supplementaryAnalysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(//iwxxm:TropicalCycloneSIGMET)) and (count(//iwxxm:TropicalCycloneSIGMET//iwxxm:tropicalCyclonePosition) = 0) ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>

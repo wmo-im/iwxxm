@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">7/15/2021 2:48:11 AM</td>
+			<td class="ObjectDetailsValue">12/8/2022 11:18:50 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -306,6 +306,21 @@ function nameClassifier(name, separator)
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints326" onclick="parent.toggleDiv('detailsDIVConstraints326','DetailsImageConstraints326')" />Details:
 							<div id="detailsDIVConstraints326" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: TropicalCycloneSIGMET.TropicalCycloneSIGMET-2&lt;br/&gt;Description: An ordinary report should also have iwxxm:TropicalCyclone&lt;br/&gt;Assertion: ( if( (empty(@isCancelReport) or @isCancelReport = &#39;false&#39;) and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:tropicalCyclone) ) else( true() ) )&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">There shall only be one iwxxm:analysisCollection in iwxxm:TropicalCycloneSIGMET</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints327" onclick="parent.toggleDiv('detailsDIVConstraints327','DetailsImageConstraints327')" />Details:
+							<div id="detailsDIVConstraints327" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: TropicalCycloneSIGMET.TropicalCycloneSIGMET-3&lt;br/&gt;Description: There shall only be one iwxxm:analysisCollection in iwxxm:TropicalCycloneSIGMET&lt;br/&gt;Assertion: ( if( exists(//iwxxm:TropicalCycloneSIGMET) ) then( count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection) = 1 ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
