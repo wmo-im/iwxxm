@@ -154,12 +154,12 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 					</element>
 					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The expected direction of movement of a meteorological condition. Stationary phenomenon shall be denoted with both iwxxm:directionOfMotion and iwxxm:speedOfMotion absent.  Direction of motion to shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
+							<documentation>The expected direction of movement of a meteorological condition. Stationary phenomenon shall be denoted with an empty iwxxm:directionOfMotion with nilReason "http://codes.wmo.int/common/nil/inapplicable" and iwxxm:speedOfMotion of 0. Direction of motion to shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".</documentation>
 						</annotation>
 					</element>
 					<element name="speedOfMotion" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The expected speed of movement of a meteorological condition. Stationary phenomenon shall be denoted with both iwxxm:directionOfMotion and iwxxm:speedOfMotion absent. Speed of movement shall be given in either "km/h" or "[kn_i]" (knot).</documentation>
+							<documentation>The expected speed of movement of a meteorological condition. Stationary phenomenon shall be denoted with an empty iwxxm:directionOfMotion with nilReason "http://codes.wmo.int/common/nil/inapplicable" and iwxxm:speedOfMotion of 0. Speed of movement shall be given in either "km/h" or "[kn_i]" (knot).</documentation>
 						</annotation>
 					</element>
 					<element name="cloudBase" type="gml:LengthType" minOccurs="0" maxOccurs="1">
