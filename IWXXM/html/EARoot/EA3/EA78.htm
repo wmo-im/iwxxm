@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">7/16/2021 3:20:31 PM</td>
+			<td class="ObjectDetailsValue">12/9/2022 4:10:19 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -226,7 +226,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA11/EA229.htm">AngleWithNilReason</a></i><br /><strong>&nbsp;&nbsp;directionOfMotion</strong>
+					<i>Public <a href="../EA11/EA230.htm">AngleWithNilReason</a></i><br /><strong>&nbsp;&nbsp;directionOfMotion</strong>
 				</td>
 			</tr>
 			<tr>
@@ -275,7 +275,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			This element refers to the expected direction of movement which the phenomenon is moving towards, .e.g, &quot;moving east&quot;. Stationary phenomenon shall be denoted with both iwxxm:directionOfMotion and iwxxm:speedOfMotion absent.&lt;br/&gt;&lt;br/&gt;This element value is given in degrees from true North. Plane angle unit of measure (uom) is &quot;deg&quot;. &lt;br/&gt;
+			This element refers to the expected direction of movement which the phenomenon is moving towards, .e.g, &quot;moving east&quot;. Stationary phenomenon shall be denoted with an empty iwxxm:directionOfMotion with nilReason &quot;http://codes.wmo.int/common/nil/inapplicable&quot; and iwxxm:speedOfMotion of 0.&lt;br/&gt;&lt;br/&gt;This element value is given in degrees from true North. Plane angle unit of measure (uom) is &quot;deg&quot;. &lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -333,7 +333,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The expected speed of movement of a meteorological condition. Stationary phenomenon shall be denoted with both iwxxm:directionOfMotion and iwxxm:speedOfMotion absent.&lt;br/&gt;&lt;br/&gt;speedOfMotion can be provided in either two units of measures: &quot;km/h&quot; or &quot;[kn_i]&quot; (knots).&lt;br/&gt;&lt;br/&gt;
+			The expected speed of movement of a meteorological condition. Stationary phenomenon shall be denoted with an empty iwxxm:directionOfMotion with nilReason &quot;http://codes.wmo.int/common/nil/inapplicable&quot; and iwxxm:speedOfMotion of 0.&lt;br/&gt;&lt;br/&gt;speedOfMotion can be provided in either two units of measures: &quot;km/h&quot; or &quot;[kn_i]&quot; (knots).&lt;br/&gt;&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -615,7 +615,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints285" onclick="parent.toggleDiv('detailsDIVConstraints285','DetailsImageConstraints285')" />Details:
 							<div id="detailsDIVConstraints285" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMETEvolvingCondition-5&lt;br/&gt;Description: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET&lt;br/&gt;Assertion: ( ( ( exists(/iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:analysisCollection) = count(//iwxxm:analysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(/iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:supplementaryAnalysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: SIGMET.SIGMETEvolvingCondition-5&lt;br/&gt;Description: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET&lt;br/&gt;Assertion: ( ( ( exists(//iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection) = count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(//iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:TropicalCycloneSIGMET//iwxxm:supplementaryAnalysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(//iwxxm:TropicalCycloneSIGMET)) and (count(//iwxxm:TropicalCycloneSIGMET//iwxxm:tropicalCyclonePosition) = 0) ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>

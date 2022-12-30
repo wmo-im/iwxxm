@@ -9,7 +9,7 @@
    <sch:ns prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
    <sch:ns prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
    <sch:ns prefix="reg" uri="http://purl.org/linked-data/registry#"/>
-   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/2021-2"/>
+   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/2023-1"/>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState-1">
       <sch:rule context="//iwxxm:AerodromeRunwayState">
          <sch:assert test="( if( @allRunways = 'true' ) then( empty(iwxxm:runway) ) else( true() ) )">METAR_SPECI.AerodromeRunwayState-1: When all runways are being reported upon, no specific runway should be reported</sch:assert>
@@ -337,7 +337,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMETPosition-2">
       <sch:rule context="//iwxxm:SIGMETPosition">
-         <sch:assert test="( ( ( exists(/iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:analysisCollection) = count(//iwxxm:analysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(/iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:supplementaryAnalysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETPosition-2: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET</sch:assert>
+         <sch:assert test="( ( ( exists(//iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection) = count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(//iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:TropicalCycloneSIGMET//iwxxm:supplementaryAnalysisCollection//iwxxm:forecastPositionAnalysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(//iwxxm:TropicalCycloneSIGMET)) and (count(//iwxxm:TropicalCycloneSIGMET//iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETPosition-2: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET-1">
@@ -402,7 +402,7 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMETEvolvingCondition-5">
       <sch:rule context="//iwxxm:SIGMETEvolvingCondition">
-         <sch:assert test="( ( ( exists(/iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:analysisCollection) = count(//iwxxm:analysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(/iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:supplementaryAnalysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(/iwxxm:TropicalCycloneSIGMET)) and (count(iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETEvolvingCondition-5: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET</sch:assert>
+         <sch:assert test="( ( ( exists(//iwxxm:TropicalCycloneSIGMET) and (count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection) = count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) and ( exists(//iwxxm:TropicalCycloneSIGMET) and not(exists(//iwxxm:TropicalCycloneSIGMET//iwxxm:supplementaryAnalysisCollection//iwxxm:analysis//iwxxm:tropicalCyclonePosition) ) ) ) or ( not(exists(//iwxxm:TropicalCycloneSIGMET)) and (count(//iwxxm:TropicalCycloneSIGMET//iwxxm:tropicalCyclonePosition) = 0) ) )">SIGMET.SIGMETEvolvingCondition-5: iwxxm:tropicalCyclonePosition shall only be present in iwxxm:analysisCollection of iwxxm:TropicalCycloneSIGMET</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMET-1">
@@ -413,6 +413,11 @@
    <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMET-2">
       <sch:rule context="//iwxxm:TropicalCycloneSIGMET">
          <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( exists(iwxxm:tropicalCyclone) ) else( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMET-2: An ordinary report should also have iwxxm:TropicalCyclone</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMET-3">
+      <sch:rule context="//iwxxm:TropicalCycloneSIGMET">
+         <sch:assert test="( if( exists(//iwxxm:TropicalCycloneSIGMET) ) then( count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection) = 1 ) else( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMET-3: There shall only be one iwxxm:analysisCollection in iwxxm:TropicalCycloneSIGMET</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshSIGMET.VolcanicAshSIGMET-6">
@@ -703,6 +708,11 @@
    <sch:pattern id="WAFSSignificantWeatherForecast.CloudDistribution">
       <sch:rule context="//iwxxm:CloudDistribution">
          <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-008.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:CloudDistribution should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-008</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="WAFSSignificantWeatherForecast.DegreeOfIcing">
+      <sch:rule context="//iwxxm:DegreeOfIcing">
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-041.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:DegreeOfIcing should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-041</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.CloudType">

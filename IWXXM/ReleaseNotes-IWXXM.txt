@@ -1,4 +1,14 @@
 =========================================
+2023-1 Release Candidate 1 - January 2023
+=========================================
+Package SIGMET (Version 4.0.1RC1)
+  * Fixed SIGMET.SIGMETPosition-2 and SIGMET.SIGMETEvolvingCondition-5 which will be triggered whether a SIGMET
+    report is encapsulated by a COLLECT construct
+Package WAFS Significant Weather Forecast (Version 1.1.0RC1)
+  * Introduced the missing icing phenomenon required in Amendment 79 to ICAO Annex 3
+* Revised the examples with regard to typos, incorrect representations and use of deprecated GML elements
+
+=========================================
 2021-2 - 15 November 2021
 =========================================
 Publishing of finalised release

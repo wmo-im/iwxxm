@@ -4,13 +4,13 @@
     Based on the sample shown on document "Representing WAFS Significant Weather (SIGWX) Data in BUFR"
 -->
 <iwxxm:WAFSSignificantWeatherForecast 
-    xmlns:iwxxm="http://icao.int/iwxxm/2021-2"
+    xmlns:iwxxm="http://icao.int/iwxxm/2023-1"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd
-    http://icao.int/iwxxm/2021-2 http://schemas.wmo.int/iwxxm/2021-2/iwxxm.xsd"
+    http://icao.int/iwxxm/2023-1 http://schemas.wmo.int/iwxxm/2023-1RC1/iwxxm.xsd"
     gml:id="uuid.ce3b61b9-d360-4da1-83b9-67e668406869" reportStatus="NORMAL" permissibleUsage="OPERATIONAL">
 
     <!-- Unique identifier of the collective -->
@@ -39,6 +39,7 @@
     <!-- A list of all phenomena of all objects -->
     <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/JETSTREAM"/>
     <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/TURBULENCE"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/AIRFRAME_ICING"/>
     <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/CLOUD"/>
     <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/TROPOPAUSE"/>
     <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/RADIATION"/>
@@ -196,6 +197,44 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:DegreeOfTurbulence xlink:href="http://codes.wmo.int/bufr4/codeflag/0-11-030/10"/>
+            </iwxxm:phenomenonProperty>
+        </iwxxm:MeteorologicalFeature>
+    </iwxxm:feature>
+
+    <!-- An Icing Object -->
+    <iwxxm:feature>
+        <iwxxm:MeteorologicalFeature gml:id="uuid.48f96fb3-6534-4593-b760-9c65d0b9fa96">
+            <gml:identifier codeSpace="http://wafs/sigwxobj">f597964d-1c4f-4564-b30c-03b318c71a60</gml:identifier>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/AIRFRAME_ICING"/>
+            <iwxxm:phenomenonGeometry>
+                <iwxxm:ElevatedVolume gml:id="uuid.7eaf9fd5-f648-4c40-82cd-81cb1e6387ad" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <gml:patches>
+                        <gml:PolygonPatch>
+                            <gml:exterior>
+                                <gml:Ring>
+                                    <gml:curveMember>
+                                        <gml:Curve gml:id="uuid.012c21ce-6d29-4769-bdca-d042b306fca0" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                                            <gml:segments>
+                                                <gml:CubicSpline>
+                                                    <gml:posList> -41.623153 -158.734129 -42.921036 -158.310418 -43.614695 -156.565840 -44.448049 -154.972043 -45.933174 -154.748367 -46.733087 -153.171172 -46.985416 -151.164300 -46.884731 -149.037755 -47.995659 -147.690252 -48.199330 -145.711761 -46.904387 -145.018761 -45.627836 -145.977674 -44.393574 -146.977162 -42.959553 -147.449231 -41.878655 -148.831074 -41.959083 -150.789464 -41.053172 -152.365167 -40.289571 -154.037198 -40.159991 -155.942752 -40.378993 -157.783406 -41.623153 -158.734129 </gml:posList>
+                                                    <gml:vectorAtStart> -35.75874 -5.02593 </gml:vectorAtStart>
+                                                    <gml:vectorAtEnd> -35.75874 -5.02593 </gml:vectorAtEnd>
+                                                </gml:CubicSpline>
+                                            </gml:segments>
+                                        </gml:Curve>
+                                    </gml:curveMember>
+                                </gml:Ring>
+                            </gml:exterior>
+                        </gml:PolygonPatch>
+                    </gml:patches>
+                    <iwxxm:upperElevation uom="FL">240</iwxxm:upperElevation>
+                    <iwxxm:upperVerticalReference>MSL</iwxxm:upperVerticalReference>
+                    <iwxxm:lowerElevation uom="FL">100</iwxxm:lowerElevation>
+                    <iwxxm:lowerVerticalReference>MSL</iwxxm:lowerVerticalReference>
+                </iwxxm:ElevatedVolume>
+            </iwxxm:phenomenonGeometry>
+            <iwxxm:phenomenonProperty>
+                <iwxxm:DegreeOfIcing xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-041/3"/>
             </iwxxm:phenomenonProperty>
         </iwxxm:MeteorologicalFeature>
     </iwxxm:feature>
