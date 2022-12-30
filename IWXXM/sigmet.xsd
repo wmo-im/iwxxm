@@ -112,14 +112,14 @@ In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE 
 					</element>
 					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>This element refers to the expected direction of movement which the phenomenon is moving towards, .e.g, "moving east". Stationary phenomenon shall be denoted with both iwxxm:directionOfMotion and iwxxm:speedOfMotion absent.
+							<documentation>This element refers to the expected direction of movement which the phenomenon is moving towards, .e.g, "moving east". Stationary phenomenon shall be denoted with an empty iwxxm:directionOfMotion with nilReason "http://codes.wmo.int/common/nil/inapplicable" and iwxxm:speedOfMotion of 0.
 
 This element value is given in degrees from true North. Plane angle unit of measure (uom) is "deg". </documentation>
 						</annotation>
 					</element>
 					<element name="speedOfMotion" type="gml:SpeedType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The expected speed of movement of a meteorological condition. Stationary phenomenon shall be denoted with both iwxxm:directionOfMotion and iwxxm:speedOfMotion absent.
+							<documentation>The expected speed of movement of a meteorological condition. Stationary phenomenon shall be denoted with an empty iwxxm:directionOfMotion with nilReason "http://codes.wmo.int/common/nil/inapplicable" and iwxxm:speedOfMotion of 0.
 
 speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]" (knots).</documentation>
 						</annotation>
@@ -347,7 +347,7 @@ The expected end of occurrence of volcanic ash ("NO VA EXP") is indicated with a
 		<complexContent>
 			<extension base="iwxxm:SIGMETType">
 				<sequence>
-					<element name="supplementaryAnalysisCollection" minOccurs="0" maxOccurs="1">
+					<element name="supplementaryAnalysisCollection" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Observed and/or forecast conditions of the cumulonimbus clouds associated with a tropical cyclone.  To be used for more than one cumulonimbus clouds simultaneously affecting the FIR concerned.</documentation>
 						</annotation>
