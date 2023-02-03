@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema">
-        <import namespace="http://icao.int/iwxxm/2021-2" schemaLocation="http://schemas.wmo.int/iwxxm/2021-2/iwxxm.xsd"/>
+        <import namespace="http://icao.int/iwxxm/2023-1" schemaLocation="http://schemas.wmo.int/iwxxm/2023-1/iwxxm.xsd"/>
         <import namespace="http://def.wmo.int/collect/2014" schemaLocation="http://schemas.wmo.int/collect/1.2/collect.xsd"/>
 	<annotation>
 		<documentation>A convenience schema file for validating against IWXXM and WMO Collect.  This is useful for XML validators (such as libxml2) that allow only a single schema location.</documentation>
