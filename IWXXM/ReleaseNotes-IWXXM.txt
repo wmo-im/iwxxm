@@ -4,6 +4,9 @@
 Package SIGMET (Version 4.0.1RC1)
   * Fixed SIGMET.SIGMETPosition-2 and SIGMET.SIGMETEvolvingCondition-5 which will be triggered whether a SIGMET
     report is encapsulated by a COLLECT construct
+  * Aligned the documentation of iwxxm:directionOfMotion and iwxxm:speedOfMotion with those in TAC-to-XML-Guidance.txt
+Package AIRMET (Version 3.1.1RC1)
+  * Aligned the documentation of iwxxm:directionOfMotion and iwxxm:speedOfMotion with those in TAC-to-XML-Guidance.txt
 Package WAFS Significant Weather Forecast (Version 1.1.0RC1)
   * Introduced the missing icing phenomenon required in Amendment 79 to ICAO Annex 3
 * Revised the examples with regard to typos, incorrect representations and use of deprecated GML elements
