@@ -5,5 +5,5 @@
 # Permanent exclusions
 
 # Temporary exclusions (to be re-enabled once available, ideally before the release is issued)
-http://codes.wmo.int/49-2/MeteorologicalFeature
+#http://codes.wmo.int/49-2/MeteorologicalFeature
 http://online-resource-of-features

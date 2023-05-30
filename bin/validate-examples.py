@@ -24,8 +24,8 @@ def main():
     # get version and path to iwxxm.xsd
     with open('LATEST_VERSION') as fhandle:
         LV = fhandle.read().strip()
-        XSDVersion = LV.split('\n')[0]
-        XSDPath = LV.split('\n')[1]
+        XSDVersion = LV.split('\r\n')[0]
+        XSDPath = LV.split('\r\n')[1]
 
     # obtain codes registry content
     codeLists.run('IWXXM', os.path.join(XSDPath,'rule'))
