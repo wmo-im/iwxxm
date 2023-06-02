@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2023-02-03 14:55:21">
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2023-04-19 06:55:07">
 	<XMI.header>
 		<XMI.documentation>
 			<XMI.exporter>Enterprise Architect</XMI.exporter>
@@ -12,17 +12,17 @@
 				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
 				<UML:Package name="ICAO Meteorological Information Exchange Model" xmi.id="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 					<UML:ModelElement.stereotype>
-						<UML:Stereotype xmi.idref="EAID_7BC96B16_320C_43e7_8E1A_41C479B2FA11"/>
+						<UML:Stereotype xmi.idref="EAID_23B515A7_341E_431c_993F_B79E77034880"/>
 					</UML:ModelElement.stereotype>
 					<UML:ModelElement.taggedValue>
 						<UML:TaggedValue tag="documentation" value="The ICAO Meteorological Information Exchange Model (IWXXM) package, including METAR, SPECI, TAF, and other reports as defined in ICAO Annex 3.  IWXXM reports are essential operational meteorology products used to enable safe and efficient air travel worldwide.&#xA;&#xA;The report types in this package include METAR, SPECI, TAF, SIGMET, AIRMET, Volcanic Ash Advisory (VAA), Tropical Cyclone Advisory (TCA), and Space Weather Advisory.&#xA;&#xA;This package builds upon the ISO 19100 family (ISO TC211) and WMO standard meteorological modeling constructs. Additionally, the constructs in this application schema refer to a number of aviation constructs such Runway and Airspace from AIXM.  The full relationship of this package with external dependencies are shown in the 'Package Dependencies' diagram.&#xA;&#xA;Not all of the reports types from Annex 3 are currently represented, this may be expanded in a future version.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence.  Technical Regulations may impose requirements that are not described in this schema."/>
 						<UML:TaggedValue tag="parent" value="EAPK_E81ED326_6A6E_415f_97A7_62148BE89642"/>
 						<UML:TaggedValue tag="created" value="2012-03-02 15:29:28"/>
-						<UML:TaggedValue tag="modified" value="2022-12-09 10:40:10"/>
+						<UML:TaggedValue tag="modified" value="2023-04-19 06:47:56"/>
 						<UML:TaggedValue tag="iscontrolled" value="FALSE"/>
 						<UML:TaggedValue tag="lastloaddate" value="2018-04-23 07:49:58"/>
 						<UML:TaggedValue tag="lastsavedate" value="2012-03-02 15:29:28"/>
-						<UML:TaggedValue tag="version" value="2023-1RC1"/>
+						<UML:TaggedValue tag="version" value="2023-1"/>
 						<UML:TaggedValue tag="isprotected" value="FALSE"/>
 						<UML:TaggedValue tag="usedtd" value="FALSE"/>
 						<UML:TaggedValue tag="xmiver" value="Enterprise Architect XMI/UML 1.3"/>
@@ -84,11 +84,11 @@
 										<UML:TaggedValue tag="isSpecification" value="false"/>
 										<UML:TaggedValue tag="ea_stype" value="Package"/>
 										<UML:TaggedValue tag="ea_ntype" value="0"/>
-										<UML:TaggedValue tag="version" value="3.1.1RC1"/>
+										<UML:TaggedValue tag="version" value="3.1.1"/>
 										<UML:TaggedValue tag="isActive" value="false"/>
 										<UML:TaggedValue tag="package" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 										<UML:TaggedValue tag="date_created" value="2016-02-16 10:02:24"/>
-										<UML:TaggedValue tag="date_modified" value="2023-02-03 14:54:40"/>
+										<UML:TaggedValue tag="date_modified" value="2023-04-19 06:48:48"/>
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_51F8B3AA_1A36_465d_9700_5E2B617EE772"/>
@@ -239,11 +239,11 @@
 										<UML:TaggedValue tag="isSpecification" value="false"/>
 										<UML:TaggedValue tag="ea_stype" value="Package"/>
 										<UML:TaggedValue tag="ea_ntype" value="0"/>
-										<UML:TaggedValue tag="version" value="4.0.1RC1"/>
+										<UML:TaggedValue tag="version" value="4.0.1"/>
 										<UML:TaggedValue tag="isActive" value="false"/>
 										<UML:TaggedValue tag="package" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 										<UML:TaggedValue tag="date_created" value="2012-05-02 09:45:17"/>
-										<UML:TaggedValue tag="date_modified" value="2022-12-09 00:08:15"/>
+										<UML:TaggedValue tag="date_modified" value="2023-04-19 06:48:35"/>
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_E412FEC7_FA90_4b4f_BB89_ECBB773CDCB3"/>
@@ -363,11 +363,11 @@
 										<UML:TaggedValue tag="isSpecification" value="false"/>
 										<UML:TaggedValue tag="ea_stype" value="Package"/>
 										<UML:TaggedValue tag="ea_ntype" value="0"/>
-										<UML:TaggedValue tag="version" value="1.1.0RC1"/>
+										<UML:TaggedValue tag="version" value="1.1.0"/>
 										<UML:TaggedValue tag="isActive" value="false"/>
 										<UML:TaggedValue tag="package" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 										<UML:TaggedValue tag="date_created" value="2020-03-19 16:11:37"/>
-										<UML:TaggedValue tag="date_modified" value="2022-12-09 00:08:36"/>
+										<UML:TaggedValue tag="date_modified" value="2023-04-19 06:49:19"/>
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997"/>
@@ -1057,7 +1057,7 @@
 						</UML:Dependency>
 						<UML:Package name="METAR/SPECI" xmi.id="EAPK_CA480557_2AAC_4a38_A487_DA136C232B0F" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB"/>
+								<UML:Stereotype xmi.idref="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="METAR and SPECI reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.&#xA;&#xA;METAR and SPECI reports include identical information but are issued for different purposes.&#xA;&#xA;METAR reports are routine observations made at an aerodrome throughout the day.  METAR observations are made (and distributed) at intervals of one hour or, if so determined by regional air navigation agreement, at intervals of one half-hour.&#xA;&#xA;SPECI reports are special (i.e., non-routine) observation made at an aerodrome as needed. SPECI observations are made (and distributed) in accordance with criteria established by the meteorological authority, in consultation with the appropriate ATS authority, operators and others concerned.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -4520,7 +4520,7 @@
 						</UML:Package>
 						<UML:Package name="TAF" xmi.id="EAPK_B0C787A8_5F53_4209_B721_28726BACAB9B" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB"/>
+								<UML:Stereotype xmi.idref="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="TAF reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.&#xA;&#xA;An Aerodrome Forecast (TAF) report is a routine forecast of meteorological conditions at an aerodrome intended for distribution.  TAF reports include base forecast conditions, and modifications to those conditions throughout the valid period.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -5623,17 +5623,17 @@
 						</UML:Package>
 						<UML:Package name="SIGMET" xmi.id="EAPK_E412FEC7_FA90_4b4f_BB89_ECBB773CDCB3" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB"/>
+								<UML:Stereotype xmi.idref="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="SIGMET reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.&#xA;&#xA;SIGMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These weather phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
 								<UML:TaggedValue tag="parent" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 								<UML:TaggedValue tag="created" value="2012-05-02 09:45:17"/>
-								<UML:TaggedValue tag="modified" value="2022-12-09 00:08:15"/>
+								<UML:TaggedValue tag="modified" value="2023-04-19 06:48:35"/>
 								<UML:TaggedValue tag="iscontrolled" value="FALSE"/>
 								<UML:TaggedValue tag="lastloaddate" value="2012-05-02 12:24:38"/>
 								<UML:TaggedValue tag="lastsavedate" value="2012-05-02 12:24:38"/>
-								<UML:TaggedValue tag="version" value="4.0.1RC1"/>
+								<UML:TaggedValue tag="version" value="4.0.1"/>
 								<UML:TaggedValue tag="isprotected" value="FALSE"/>
 								<UML:TaggedValue tag="usedtd" value="FALSE"/>
 								<UML:TaggedValue tag="logxml" value="FALSE"/>
@@ -7210,17 +7210,17 @@
 						</UML:Package>
 						<UML:Package name="AIRMET" xmi.id="EAPK_51F8B3AA_1A36_465d_9700_5E2B617EE772" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB"/>
+								<UML:Stereotype xmi.idref="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="AIRMET reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.&#xA;&#xA;AIRMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These weather phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
 								<UML:TaggedValue tag="parent" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 								<UML:TaggedValue tag="created" value="2016-02-16 10:02:24"/>
-								<UML:TaggedValue tag="modified" value="2023-02-03 14:54:40"/>
+								<UML:TaggedValue tag="modified" value="2023-04-19 06:48:48"/>
 								<UML:TaggedValue tag="iscontrolled" value="FALSE"/>
 								<UML:TaggedValue tag="lastloaddate" value="2013-08-02 10:51:04"/>
 								<UML:TaggedValue tag="lastsavedate" value="2013-08-02 10:51:04"/>
-								<UML:TaggedValue tag="version" value="3.1.1RC1"/>
+								<UML:TaggedValue tag="version" value="3.1.1"/>
 								<UML:TaggedValue tag="isprotected" value="FALSE"/>
 								<UML:TaggedValue tag="usedtd" value="FALSE"/>
 								<UML:TaggedValue tag="logxml" value="FALSE"/>
@@ -8538,7 +8538,7 @@
 						</UML:Package>
 						<UML:Package name="Tropical Cyclone Advisory" xmi.id="EAPK_E98C2095_7CA4_4f4d_BEB6_6EBFF2DFAD12" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB"/>
+								<UML:Stereotype xmi.idref="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Tropical Cyclone Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.&#xA;&#xA;Tropical Cyclone Advisories (TCA) report the occurrence and/or expected occurrence of tropical cyclone phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -9581,7 +9581,7 @@
 						</UML:Package>
 						<UML:Package name="Volcanic Ash Advisory" xmi.id="EAPK_E619C133_EFAC_40f4_994A_DA88401165BC" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB"/>
+								<UML:Stereotype xmi.idref="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Volcanic Ash Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.&#xA;&#xA;Volcanic Ash Advisories report the occurrence and/or expected occurrence of specified en-route volcanic ash phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -11055,7 +11055,7 @@
 						</UML:Package>
 						<UML:Package name="Space Weather Advisory" xmi.id="EAPK_3EA1153B_C26C_4b3f_84AE_513773D6E688" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB"/>
+								<UML:Stereotype xmi.idref="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Space Weather Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.&#xA;&#xA;Space Weather Advisories report the occurrence and/or expected occurrence of space weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -11684,17 +11684,17 @@
 						</UML:Package>
 						<UML:Package name="WAFS Significant Weather Forecast" xmi.id="EAPK_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB"/>
+								<UML:Stereotype xmi.idref="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="This package defines a collective and selected meteorological objects for the World Area Forecast System (WAFS) to deliver forecasts of significant en-route weather phenomena as Significant Weather (SIGWX) forecasts.  &#xA;&#xA;Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.&#xA;"/>
 								<UML:TaggedValue tag="parent" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 								<UML:TaggedValue tag="created" value="2020-03-19 16:11:37"/>
-								<UML:TaggedValue tag="modified" value="2022-12-09 00:08:36"/>
+								<UML:TaggedValue tag="modified" value="2023-04-19 06:49:19"/>
 								<UML:TaggedValue tag="iscontrolled" value="FALSE"/>
 								<UML:TaggedValue tag="lastloaddate" value="2021-04-15 18:09:23"/>
 								<UML:TaggedValue tag="lastsavedate" value="2021-04-15 18:09:23"/>
-								<UML:TaggedValue tag="version" value="1.1.0RC1"/>
+								<UML:TaggedValue tag="version" value="1.1.0"/>
 								<UML:TaggedValue tag="isprotected" value="FALSE"/>
 								<UML:TaggedValue tag="usedtd" value="FALSE"/>
 								<UML:TaggedValue tag="logxml" value="FALSE"/>
@@ -12665,13 +12665,13 @@
 						</UML:Package>
 						<UML:Package name="Meteorological Feature" xmi.id="EAPK_E1546630_A7E6_4c35_B620_D822E0BD466A" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB"/>
+								<UML:Stereotype xmi.idref="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="This package provides basic features for describing meteorological and related phenomena specialised for the aviation domain.&#xA;&#xA;Feature types defined in this package, in addition to the strong-typed approach usually employed in GML encoding pattern, also apply virtual-typed pattern in those areas where it is more convenient to define properties from a controlled source.&#xA;&#xA;For ease of maintenance the controlled source are a set of constraints defined together with the Class diagrams used to generate the XML/GML application schemas of IWXXM.  Scripts will be used to extract constraints from the Class diagrams and generate Schematron rules to enforce conformance to the information model.&#xA;&#xA;&#xA;"/>
 								<UML:TaggedValue tag="parent" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 								<UML:TaggedValue tag="created" value="2020-03-19 14:20:35"/>
-								<UML:TaggedValue tag="modified" value="2022-12-08 23:26:26"/>
+								<UML:TaggedValue tag="modified" value="2023-04-19 06:49:25"/>
 								<UML:TaggedValue tag="iscontrolled" value="FALSE"/>
 								<UML:TaggedValue tag="lastloaddate" value="2021-04-15 18:08:30"/>
 								<UML:TaggedValue tag="lastsavedate" value="2021-04-15 18:08:30"/>
@@ -14454,13 +14454,13 @@
 						</UML:Package>
 						<UML:Package name="Common" xmi.id="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB"/>
+								<UML:Stereotype xmi.idref="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Common constructs used across multiple packages.  This package includes constructs closely related to the aviation weather domain.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
 								<UML:TaggedValue tag="parent" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 								<UML:TaggedValue tag="created" value="2012-05-25 11:27:13"/>
-								<UML:TaggedValue tag="modified" value="2022-12-08 23:26:37"/>
+								<UML:TaggedValue tag="modified" value="2023-04-19 06:49:30"/>
 								<UML:TaggedValue tag="iscontrolled" value="FALSE"/>
 								<UML:TaggedValue tag="lastloaddate" value="2012-05-30 13:55:12"/>
 								<UML:TaggedValue tag="lastsavedate" value="2012-05-30 13:55:12"/>
@@ -16152,13 +16152,13 @@
 						</UML:Package>
 						<UML:Package name="Measures" xmi.id="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB"/>
+								<UML:Stereotype xmi.idref="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Common measured quantities used across multiple packages.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
 								<UML:TaggedValue tag="parent" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 								<UML:TaggedValue tag="created" value="2015-11-03 12:47:10"/>
-								<UML:TaggedValue tag="modified" value="2022-12-08 23:26:47"/>
+								<UML:TaggedValue tag="modified" value="2023-04-19 06:49:35"/>
 								<UML:TaggedValue tag="iscontrolled" value="FALSE"/>
 								<UML:TaggedValue tag="lastloaddate" value="2013-04-30 21:21:54"/>
 								<UML:TaggedValue tag="lastsavedate" value="2013-04-30 21:21:54"/>
@@ -16491,10 +16491,10 @@
 						</UML:Package>
 					</UML:Namespace.ownedElement>
 				</UML:Package>
-				<UML:Stereotype xmi.id="EAID_7BC96B16_320C_43e7_8E1A_41C479B2FA11" name="applicationSchema" isRoot="false" isLeaf="false" isAbstract="false">
+				<UML:Stereotype xmi.id="EAID_23B515A7_341E_431c_993F_B79E77034880" name="applicationSchema" isRoot="false" isLeaf="false" isAbstract="false">
 					<UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
 				</UML:Stereotype>
-				<UML:Stereotype xmi.id="EAID_916ACB50_BF95_431a_8C42_C665B012C3EB" name="leaf" isRoot="false" isLeaf="false" isAbstract="false">
+				<UML:Stereotype xmi.id="EAID_794F72BD_E602_45a7_A770_A7EEF81F64CC" name="leaf" isRoot="false" isLeaf="false" isAbstract="false">
 					<UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
 				</UML:Stereotype>
 				<UML:DataType xmi.id="eaxmiid1" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
@@ -16512,13 +16512,13 @@
 		</UML:Model>
 		<UML:TaggedValue tag="gmlProfileSchema" xmi.id="EAID_48460EC2_B452_f7b4_B5D4_CD48BB98B555" value="gmliwxxm.xsd#NOTES#Description: URL of the schema location of a GML profile (optional).&#xA;" modelElement="MX_EAID_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 		<UML:TaggedValue tag="targetNamespace" xmi.id="EAID_393CD814_A7C4_a8a7_BF82_5B8A4A54FAB8" value="http://icao.int/iwxxm/2023-1#NOTES#Description: Target XML namespace of the application schema.&#xA;" modelElement="MX_EAID_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
-		<UML:TaggedValue tag="version" xmi.id="EAID_6F40CEE6_EEB6_6fee_A2BF_A825D072D0FB" value="2023-1RC1#NOTES#Description: Current version of the application schema.&#xA;" modelElement="MX_EAID_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
+		<UML:TaggedValue tag="version" xmi.id="EAID_6F40CEE6_EEB6_6fee_A2BF_A825D072D0FB" value="2023-1#NOTES#Description: Current version of the application schema.&#xA;" modelElement="MX_EAID_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 		<UML:TaggedValue tag="xmlns" xmi.id="EAID_08B91BD2_07A2_fe07_A2AC_DCE0D0B5965A" value="iwxxm#NOTES#Description: Namespace prefix to be used as short form of the target namespace.&#xA;" modelElement="MX_EAID_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 		<UML:TaggedValue tag="xsdDocument" xmi.id="EAID_6E79370E_22BE_9922_B12B_9F5AF5D99A80" value="iwxxm.xsd#NOTES#Description: Name of an XML Schema document to create representing the content of this package.&#xA;" modelElement="MX_EAID_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 		<UML:TaggedValue tag="version" xmi.id="EAID_73CE961F_5788_4df6_ABE6_8242B021EF0E" value="3.0.1" modelElement="EAID_3EA1153B_C26C_4b3f_84AE_513773D6E688"/>
 		<UML:TaggedValue tag="xsdDocument" xmi.id="EAID_6E79370E_A411_27a4_A433_C47295B902B5" value="spaceWxAdvisory.xsd#NOTES#Description: Name of an XML Schema document to create representing the content of this package.&#xA;" modelElement="EAID_3EA1153B_C26C_4b3f_84AE_513773D6E688"/>
 		<UML:TaggedValue tag="xsdEncodingRule" xmi.id="EAID_BCD3CBEE_7651_1576_ABDC_3579E8E8020E" value="iso19136_2007_METCE_Extensions#NOTES#Values: iso19136_2007,iso19139_2007,iso19136_2007_METCE_Extensions&#xA;Default: iso19136_2007_METCE_Extensions&#xA;Description: XML Schema encoding rule to apply.&#xA;" modelElement="EAID_3EA1153B_C26C_4b3f_84AE_513773D6E688"/>
-		<UML:TaggedValue tag="version" xmi.id="EAID_072BBD01_9D48_4ddb_9579_7563ED09B997" value="3.1.1RC1" modelElement="EAID_51F8B3AA_1A36_465d_9700_5E2B617EE772"/>
+		<UML:TaggedValue tag="version" xmi.id="EAID_072BBD01_9D48_4ddb_9579_7563ED09B997" value="3.1.1" modelElement="EAID_51F8B3AA_1A36_465d_9700_5E2B617EE772"/>
 		<UML:TaggedValue tag="xsdDocument" xmi.id="EAID_6E79370E_7310_e473_9649_A04C753D0E45" value="airmet.xsd#NOTES#Description: Name of an XML Schema document to create representing the content of this package&#xA;" modelElement="EAID_51F8B3AA_1A36_465d_9700_5E2B617EE772"/>
 		<UML:TaggedValue tag="xsdEncodingRule" xmi.id="EAID_BCD3CBEE_ACD0_8fac_8653_F68D1E06ACBB" value="iso19136_2007_METCE_Extensions#NOTES#Values: iso19136_2007 | iso19139_2007 | iso19136_2007_METCE_Extensions&#xA;Default: iso19136_2007_METCE_Extensions&#xA;Description: XML Schema encoding rule to apply&#xA;" modelElement="EAID_51F8B3AA_1A36_465d_9700_5E2B617EE772"/>
 		<UML:TaggedValue tag="version" xmi.id="EAID_37F46CBA_A3D0_4bab_A8D1_B0FA2741D2C8" value="3.1.0" modelElement="EAID_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
@@ -16533,7 +16533,7 @@
 		<UML:TaggedValue tag="version" xmi.id="EAID_70F3DB4D_5667_4669_B017_36C774B5A34B" value="1.0.0" modelElement="EAID_E1546630_A7E6_4c35_B620_D822E0BD466A"/>
 		<UML:TaggedValue tag="xsdDocument" xmi.id="EAID_6E79370E_A411_27a4_8C23_DE939C67F045" value="metFeature.xsd#NOTES#Description: Name of an XML Schema document to create representing the content of this package.&#xA;" modelElement="EAID_E1546630_A7E6_4c35_B620_D822E0BD466A"/>
 		<UML:TaggedValue tag="xsdEncodingRule" xmi.id="EAID_BCD3CBEE_7651_1576_B81A_B727F99757CE" value="iso19136_2007_METCE_Extensions#NOTES#Values: iso19136_2007,iso19139_2007,iso19136_2007_METCE_Extensions&#xA;Default: iso19136_2007_METCE_Extensions&#xA;Description: XML Schema encoding rule to apply.&#xA;" modelElement="EAID_E1546630_A7E6_4c35_B620_D822E0BD466A"/>
-		<UML:TaggedValue tag="version" xmi.id="EAID_452C60CD_072C_4778_8664_BE1DD59440C6" value="4.0.1RC1" modelElement="EAID_E412FEC7_FA90_4b4f_BB89_ECBB773CDCB3"/>
+		<UML:TaggedValue tag="version" xmi.id="EAID_452C60CD_072C_4778_8664_BE1DD59440C6" value="4.0.1" modelElement="EAID_E412FEC7_FA90_4b4f_BB89_ECBB773CDCB3"/>
 		<UML:TaggedValue tag="xsdDocument" xmi.id="EAID_6E79370E_7310_e473_803D_721721718D14" value="sigmet.xsd#NOTES#Description: Name of an XML Schema document to create representing the content of this package&#xA;" modelElement="EAID_E412FEC7_FA90_4b4f_BB89_ECBB773CDCB3"/>
 		<UML:TaggedValue tag="xsdEncodingRule" xmi.id="EAID_BCD3CBEE_ACD0_8fac_A7BA_6E2A22CEF666" value="iso19136_2007_METCE_Extensions#NOTES#Values: iso19136_2007 | iso19139_2007 | iso19136_2007_METCE_Extensions&#xA;Default: iso19136_2007_METCE_Extensions&#xA;Description: XML Schema encoding rule to apply&#xA;" modelElement="EAID_E412FEC7_FA90_4b4f_BB89_ECBB773CDCB3"/>
 		<UML:TaggedValue tag="version" xmi.id="EAID_D0F0DF7D_AEF5_474a_987C_BE0483334411" value="3.1.0" modelElement="EAID_E619C133_EFAC_40f4_994A_DA88401165BC"/>
@@ -16545,7 +16545,7 @@
 		<UML:TaggedValue tag="version" xmi.id="EAID_82986373_007B_4135_8F53_A64E0CD3FCE7" value="3.0.0" modelElement="EAID_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
 		<UML:TaggedValue tag="xsdDocument" xmi.id="EAID_6E79370E_A411_27a4_A53F_7E706402057D" value="measures.xsd#NOTES#Description: Name of an XML Schema document to create representing the content of this package.&#xA;" modelElement="EAID_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
 		<UML:TaggedValue tag="xsdEncodingRule" xmi.id="EAID_BCD3CBEE_7651_1576_BAF2_D64065A174A6" value="iso19136_2007_METCE_Extensions#NOTES#Values: iso19136_2007,iso19139_2007,iso19136_2007_METCE_Extensions&#xA;Default: iso19136_2007_METCE_Extensions&#xA;Description: XML Schema encoding rule to apply.&#xA;" modelElement="EAID_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
-		<UML:TaggedValue tag="version" xmi.id="EAID_D37123E2_68DD_4a09_A6E0_DCB49F12FFE3" value="1.1.0RC1" modelElement="EAID_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997"/>
+		<UML:TaggedValue tag="version" xmi.id="EAID_D37123E2_68DD_4a09_A6E0_DCB49F12FFE3" value="1.1.0" modelElement="EAID_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997"/>
 		<UML:TaggedValue tag="xsdDocument" xmi.id="EAID_6E79370E_A411_27a4_A329_777BA6860269" value="WAFSSigWxFC.xsd#NOTES#Description: Name of an XML Schema document to create representing the content of this package.&#xA;" modelElement="EAID_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997"/>
 		<UML:TaggedValue tag="xsdEncodingRule" xmi.id="EAID_BCD3CBEE_7651_1576_9E17_AB7B6C3B72C3" value="iso19136_2007_METCE_Extensions#NOTES#Values: iso19136_2007,iso19139_2007,iso19136_2007_METCE_Extensions&#xA;Default: iso19136_2007_METCE_Extensions&#xA;Description: XML Schema encoding rule to apply.&#xA;" modelElement="EAID_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997"/>
 		<UML:Diagram name="ICAO Meteorological Information Exchange Model" xmi.id="EAID_23004314_2FF5_4dc8_A62F_4B2182AD506F" diagramType="PackageDiagram" owner="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C" toolName="Enterprise Architect 2.5">
