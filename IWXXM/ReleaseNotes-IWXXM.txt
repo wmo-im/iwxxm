@@ -1,5 +1,21 @@
 =========================================
-2023-1 - 15 June 2023
+2024-x Release Candidate 1 - Aug 2023
+=========================================
+Package Volcanic Ash Advisory (Version 3.2.0RC1)
+  * Replaced iwxxm:summitElevation with iwxxm:sourceElevation with type aixm:CodeVerticalReferenceBaseType
+  * Removed iwxxm:colourCode
+  * Revised the options in iwxxm:VolcanicAshObservedOrEstimatedConditions/status
+  * Revised the notes in various elements
+  * Updated the example for Volcanic Ash Advisory
+Package Space Weather Advisory (Version 3.1.0RC1)
+  * Replaced iwxxm:phenomenon with iwxxm:effect with an enumeration of space weather effects
+  * Changed the multiplicity of iwxxm:replacedAdvisoryNumber from [0..1] to [0..4]
+  * Introduced iwxxm:intensityAndRegion to indicate the intensity and coverage of a space weather event
+  * Modified the codelist iwxxm:SpaceWeatherLocation to align with the change of nomaclature of DAYSIDE and NIGHTSIDE
+  * Updated the examples for Space Weather Advisory
+
+=========================================
+2023-1 - May 2023
 =========================================
 Publishing of finalised release
 

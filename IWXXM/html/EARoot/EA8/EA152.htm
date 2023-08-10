@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>WAFS Significant Weather Forecast</title>
+<title>WAFS Significant Weather Forecast::WAFSSignificantWeatherForecast</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("WAFS Significant Weather Forecast", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("WAFSSignificantWeatherForecast", " : "))</script>  : Public  &lt;&lt;featureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">3/19/2020 4:11:37 PM</td>
+			<td width="85%" class="ObjectDetailsValue">20-Mar-20 5:21:39 PM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">4/19/2023 6:49:19 AM</td>
+			<td class="ObjectDetailsValue">07-May-21 8:58:50 AM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -55,7 +55,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
-			<td class="ObjectDetailsValue">1.1.0</td>
+			<td class="ObjectDetailsValue">1.0</td>
 		</tr>
 		<tr id="proj02" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
@@ -87,18 +87,20 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{FDA65F60-6CCC-41a4-A253-C9FF9E9B2997}</td>
+			<td class="ObjectDetailsValue">{FC81D245-763B-486f-869F-3A2B6222AA6A}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"></td>
+			<td class="ObjectDetailsValue"><a href="EA145.htm">Context Diagram: Significant Weather Forecast</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">This package defines a collective and selected meteorological objects for the World Area Forecast System (WAFS) to deliver forecasts of significant en-route weather phenomena as Significant Weather (SIGWX) forecasts.&#160; &lt;br/&gt;&lt;br/&gt;Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.&lt;br/&gt;&lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">Forecasts of significant en-route weather phenomena provided by the World Area Forecast System (WAFS).&lt;br/&gt;&lt;br/&gt;See ICAO Annex 3 / WMO No. 49-2 for details.&lt;br/&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
 <div class="ItemBody" id="TaggedValTable">
 	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -107,46 +109,121 @@ function nameClassifier(name, separator)
 			<td width="50%" class="TableHeading">Value</td>
 		</tr>
 					<tr>
-				<td width="50%" class="TableRow" valign="top">version</td>
-				<td width="50%" class="TableRow" valign="top">1.1.0</td>
+				<td width="50%" class="TableRow" valign="top">byValuePropertyType</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario573" onclick="parent.toggleDiv('detailsDIVScenario573','DetailsImageScenario573')" />Details:
-						<div id="detailsDIVScenario573" class="DetailsDiv" >
-						&nbsp;
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">xsdDocument</td>
-				<td width="50%" class="TableRow" valign="top">WAFSSigWxFC.xsd</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario574" onclick="parent.toggleDiv('detailsDIVScenario574','DetailsImageScenario574')" />Details:
-						<div id="detailsDIVScenario574" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Description: Name of an XML Schema document to create representing the content of this package.<br /></div>
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario582" onclick="parent.toggleDiv('detailsDIVScenario582','DetailsImageScenario582')" />Details:
+						<div id="detailsDIVScenario582" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Creates a property type that requires its instance to be encoded inline (applies to ISO 19136:2007 encoding rule).<br /></div>
 
 						</div>
 					</div>
 				</td>
 			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">xsdEncodingRule</td>
-				<td width="50%" class="TableRow" valign="top">iso19136_2007_METCE_Extensions</td>
+				<td width="50%" class="TableRow" valign="top">isCollection</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario575" onclick="parent.toggleDiv('detailsDIVScenario575','DetailsImageScenario575')" />Details:
-						<div id="detailsDIVScenario575" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: iso19136_2007,iso19139_2007,iso19136_2007_METCE_Extensions<br />Default: iso19136_2007_METCE_Extensions<br />Description: XML Schema encoding rule to apply.<br /></div>
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario583" onclick="parent.toggleDiv('detailsDIVScenario583','DetailsImageScenario583')" />Details:
+						<div id="detailsDIVScenario583" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the type as an objection collection.<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">noPropertyType</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario584" onclick="parent.toggleDiv('detailsDIVScenario584','DetailsImageScenario584')" />Details:
+						<div id="detailsDIVScenario584" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Suppresses creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).<br /></div>
 
 						</div>
 					</div>
 				</td>
 			</tr>
 	</table>
-</div>	</div>
+</div>		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">phenomenonCategory = 'weatherForecasts'</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints585" onclick="parent.toggleDiv('detailsDIVConstraints585','DetailsImageConstraints585')" />Details:
+							<div id="detailsDIVConstraints585" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-1&lt;br/&gt;Description: iwxxm:phenomenonCategory shall be equal to &#39;weatherForecasts&#39;.&lt;br/&gt;Assertion: ( iwxxm:phenomenonCategory = &#39;weatherForecasts&#39; )&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">phenomenonBaseTime is mandatory</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints586" onclick="parent.toggleDiv('detailsDIVConstraints586','DetailsImageConstraints586')" />Details:
+							<div id="detailsDIVConstraints586" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-2&lt;br/&gt;Description: iwxxm:phenomenonBaseTime is mandatory&lt;br/&gt;Assertion: ( exists(iwxxm:phenomenonBaseTime) )&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">originatingCentre must have a child element of WorldAreaForecastCentre</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints587" onclick="parent.toggleDiv('detailsDIVConstraints587','DetailsImageConstraints587')" />Details:
+							<div id="detailsDIVConstraints587" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-3&lt;br/&gt;Description: iwxxm:originatingCentre must have a child element of iwxxm:WorldAreaForecastCentre&lt;br/&gt;Assertion: ( exists(iwxxm:originatingCentre/iwxxm:WorldAreaForecastCentre) )&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Connection</td>
+					<td width="10%" class="TableHeading">Direction</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA9/EA180.htm">«featureType» MeteorologicalFeatureCollection</a></td>
+					<td width="10%" class="TableRow" valign="top">Class</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
 <div class="pageFooter"></div>
  
 </body>

@@ -9,7 +9,7 @@
    <sch:ns prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
    <sch:ns prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
    <sch:ns prefix="reg" uri="http://purl.org/linked-data/registry#"/>
-   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/2023-1"/>
+   <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/2024-x"/>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayState-1">
       <sch:rule context="//iwxxm:AerodromeRunwayState">
          <sch:assert test="( if( @allRunways = 'true' ) then( empty(iwxxm:runway) ) else( true() ) )">METAR_SPECI.AerodromeRunwayState-1: When all runways are being reported upon, no specific runway should be reported</sch:assert>
@@ -605,16 +605,6 @@
          <sch:assert test="( if( exists(iwxxm:speedOfMotion) and not(iwxxm:speedOfMotion/@xsi:nil = 'true') ) then( (iwxxm:speedOfMotion/@uom = 'km/h') or (iwxxm:speedOfMotion/@uom = '[kn_i]') ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshCloud-2: speedOfMotion shall be reported in kilometres per hour (km/h) or knots ([kn_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="VolcanicAshAdvisory.AviationColourCode">
-      <sch:rule context="//iwxxm:AviationColourCode">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AviationColourCode.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AviationColourCode should be a member of code list http://codes.wmo.int/49-2/AviationColourCode</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory.colourCode">
-      <sch:rule context="//iwxxm:VolcanicAshAdvisory/iwxxm:colourCode">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AviationColourCode.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:VolcanicAshAdvisory/iwxxm:colourCode should be a member of code list http://codes.wmo.int/49-2/AviationColourCode</sch:assert>
-      </sch:rule>
-   </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-3">
       <sch:rule context="//iwxxm:VolcanicAshAdvisory">
          <sch:assert test="( if( exists(iwxxm:volcano//metce:position) ) then( empty(index-of(iwxxm:volcano//metce:position//gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-3: If a geometry is defined for iwxxm:volcano//metce:position with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
@@ -627,7 +617,7 @@
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-2">
       <sch:rule context="//iwxxm:VolcanicAshAdvisory">
-         <sch:assert test="( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = 'OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:summitElevation) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-2: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:summitElevation, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
+         <sch:assert test="( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = 'OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:sourceElevation) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-2: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:sourceElevation, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.WindConditions-3">
@@ -680,16 +670,6 @@
          <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxLocation.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SpaceWeatherRegion/iwxxm:locationIndicator should be a member of code list http://codes.wmo.int/49-2/SpaceWxLocation</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherPhenomena">
-      <sch:rule context="//iwxxm:SpaceWeatherPhenomena">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SpaceWeatherPhenomena should be a member of code list http://codes.wmo.int/49-2/SpaceWxPhenomena</sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherAdvisory.phenomenon">
-      <sch:rule context="//iwxxm:SpaceWeatherAdvisory/iwxxm:phenomenon">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SpaceWeatherAdvisory/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/SpaceWxPhenomena</sch:assert>
-      </sch:rule>
-   </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherRegion-1">
       <sch:rule context="//iwxxm:SpaceWeatherRegion">
          <sch:assert test="( if( exists(iwxxm:location//*[self::aixm:horizontalProjection or self::aixm:centreline]) ) then( empty(index-of(iwxxm:location//*[self::aixm:Surface or self::aixm:Curve]/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension='2' and exists(@axisLabels)), false())) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherRegion-1: If a geometry of iwxxm:location is defined with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty</sch:assert>
@@ -702,7 +682,7 @@
    </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherAdvisory-2">
       <sch:rule context="//iwxxm:SpaceWeatherAdvisory">
-         <sch:assert test="( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = 'OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingSpaceWeatherCentre) and exists(iwxxm:advisoryNumber) and exists(iwxxm:phenomenon) and exists(iwxxm:analysis) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherAdvisory-2: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingSpaceWeatherCentre, iwxxm:advisoryNumber, iwxxm:phenomenon, iwxxm:analysis, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
+         <sch:assert test="( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = 'OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingSpaceWeatherCentre) and exists(iwxxm:advisoryNumber) and exists(iwxxm:effect) and exists(iwxxm:analysis) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">SpaceWeatherAdvisory.SpaceWeatherAdvisory-2: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingSpaceWeatherCentre, iwxxm:advisoryNumber, iwxxm:effect, iwxxm:analysis, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.CloudDistribution">

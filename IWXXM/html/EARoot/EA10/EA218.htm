@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Common::CloudLayer</title>
+<title>Common::ReportStatus</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("CloudLayer", " : "))</script>  : Public  &lt;&lt;dataType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("ReportStatus", " : "))</script>  : Public  &lt;&lt;enumeration&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">4/6/2012 1:36:02 PM</td>
+			<td width="85%" class="ObjectDetailsValue">20-Oct-18 9:13:14 PM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">8/2/2020 2:34:10 PM</td>
+			<td class="ObjectDetailsValue">02-Aug-20 2:35:40 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">braeckel</td>
+			<td class="ObjectDetailsValue">blchoy</td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -87,21 +87,18 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{5314E3B1-CB85-4967-BF47-7E2365F63CD6}</td>
+			<td class="ObjectDetailsValue">{55D3D301-8348-419c-B759-73E18FEC5B24}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="../EA1/EA19.htm">Context Diagram: METAR/SPECI Observation</a>, <a href="../EA1/EA21.htm">Context Diagram: METAR/SPECI Trend Forecast</a>, <a href="../EA2/EA61.htm">Context Diagram: TAF Forecast</a>, <a href="EA193.htm">Context Diagram: Cloud</a></td>
+			<td class="ObjectDetailsValue"><a href="EA190.htm">Context Diagram: Report</a>, <a href="../EA9/EA170.htm">Context Diagram: Meteorological Feature and Collection</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">A cloud layer, including a cloud amount, cloud base and cloud type.&lt;br/&gt;&lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">This indicates the issuance status of the report, including:&lt;br/&gt;&lt;br/&gt;NORMAL: The report is issued for the first time&lt;br/&gt;AMENDMENT: The report is an amendment to a previously issued report&lt;br/&gt;CORRECTION: The report is a correction to a previously issued report&lt;br/&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
-			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
-			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
-			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 		</ul>
 <div class="ItemBody" id="AttributesTable">
 	<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -110,56 +107,56 @@ function nameClassifier(name, separator)
 		</tr>
 						<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="EA226.htm">CloudAmountReportedAtAerodrome</a></i><br /><strong>&nbsp;&nbsp;amount</strong>
+					<i>Public </i><br /><strong>&nbsp;&nbsp;NORMAL</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes757')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes757" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes771')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes771" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes757_00" style="display: none;">
+						<tr id="DetailsImageAttributes771_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes757_01" style="display: none;">
+						<tr id="DetailsImageAttributes771_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes757_02" style="display: none;">
+						<tr id="DetailsImageAttributes771_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
 						</tr>
-						<tr id="DetailsImageAttributes757_03" style="display: none;">
+						<tr id="DetailsImageAttributes771_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes757_04" style="display: none;">
+						<tr id="DetailsImageAttributes771_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes757_05" style="display: none;">
+						<tr id="DetailsImageAttributes771_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes757_06" style="display: none;">
+						<tr id="DetailsImageAttributes771_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes757_07" style="display: none;">
+							<tr id="DetailsImageAttributes771_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
 					</table>
 					
-					nillable=true<br>sequenceNumber=1<br>
+					
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The observed cloud amount&lt;br/&gt;
+			The first issuance of a report. &lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -168,56 +165,56 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA11/EA231.htm">DistanceWithNilReason</a></i><br /><strong>&nbsp;&nbsp;base</strong>
+					<i>Public </i><br /><strong>&nbsp;&nbsp;AMENDMENT</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes758')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes758" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes772')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes772" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes758_00" style="display: none;">
+						<tr id="DetailsImageAttributes772_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes758_01" style="display: none;">
+						<tr id="DetailsImageAttributes772_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes758_02" style="display: none;">
+						<tr id="DetailsImageAttributes772_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
 						</tr>
-						<tr id="DetailsImageAttributes758_03" style="display: none;">
+						<tr id="DetailsImageAttributes772_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes758_04" style="display: none;">
+						<tr id="DetailsImageAttributes772_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes758_05" style="display: none;">
+						<tr id="DetailsImageAttributes772_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes758_06" style="display: none;">
+						<tr id="DetailsImageAttributes772_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes758_07" style="display: none;">
+							<tr id="DetailsImageAttributes772_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
 					</table>
 					
-					nillable=true<br>quantity=<a href="http://codes.wmo.int/common/quantity-kind/heightOfBaseOfCloud" target="_blank" >http://codes.wmo.int/common/quantity-kind/heightOfBaseOfCloud</a><br>sequenceNumber=2<br>
+					
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			For a given cloud or cloud layer, height of the lowest level in the atmosphere at which the air contains a perceptible quantity of cloud particles.&lt;br/&gt;&lt;br/&gt;Measured cloud bases shall be reported in meters (&quot;m&quot;) or feet (&quot;[ft_i]&quot;).&lt;br/&gt;
+			The report is an amendment to a previously issued report.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -226,56 +223,56 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="EA225.htm">SigConvectiveCloudType</a></i><br /><strong>&nbsp;&nbsp;cloudType</strong>
+					<i>Public </i><br /><strong>&nbsp;&nbsp;CORRECTION</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes759')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes759" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes773')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes773" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes759_00" style="display: none;">
+						<tr id="DetailsImageAttributes773_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes759_01" style="display: none;">
+						<tr id="DetailsImageAttributes773_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes759_02" style="display: none;">
+						<tr id="DetailsImageAttributes773_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
 						</tr>
-						<tr id="DetailsImageAttributes759_03" style="display: none;">
+						<tr id="DetailsImageAttributes773_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes759_04" style="display: none;">
+						<tr id="DetailsImageAttributes773_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to 1</td>
+							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes759_05" style="display: none;">
+						<tr id="DetailsImageAttributes773_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes759_06" style="display: none;">
+						<tr id="DetailsImageAttributes773_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes759_07" style="display: none;">
+							<tr id="DetailsImageAttributes773_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
 					</table>
 					
-					nillable=true<br>sequenceNumber=3<br>
+					
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The observed significant cloud types: cumulonimbus or towering cumulus&lt;br/&gt;
+			The report is a correction to a previously issued report.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -285,122 +282,6 @@ function nameClassifier(name, separator)
 			</tr>
 	</table>
 </div>
-		<div class="ItemBody" id="AssociationsFromTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA1/EA47.htm">«dataType» AerodromeCloud</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> layer<br />
-						&nbsp;	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink760" onclick="parent.toggleDiv('detailsDIVLink760','DetailsImageLink760')" />Details:
-							<div id="detailsDIVLink760" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">The observed cloud groups, up to four may be included.&lt;br/&gt;&lt;br/&gt;When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the cloud amount and the height of cloud base cannot be observed (&quot;//////&quot;) this is indicated by a missing cloud layer with a nil reason of either notObservable if the value could not be observed due to a sensor or system failure, or notDetectedByAutoSystem if the automated system is working properly but did not observe any values&lt;br/&gt;</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA214.htm">AerodromeCloudForecast</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> layer<br />
-						Description of individual layer of cloud.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink761" onclick="parent.toggleDiv('detailsDIVLink761','DetailsImageLink761')" />Details:
-							<div id="detailsDIVLink761" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
-<div class="ItemBody" id="TaggedValTable">
-	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="50%" class="TableHeading">Tag</td>
-			<td width="50%" class="TableHeading">Value</td>
-		</tr>
-					<tr>
-				<td width="50%" class="TableRow" valign="top">isCollection</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario762" onclick="parent.toggleDiv('detailsDIVScenario762','DetailsImageScenario762')" />Details:
-						<div id="detailsDIVScenario762" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the type as an objection collection.<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">noPropertyType</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario763" onclick="parent.toggleDiv('detailsDIVScenario763','DetailsImageScenario763')" />Details:
-						<div id="detailsDIVScenario763" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Suppresses creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>
-	</table>
-</div>		<div class="ItemBody" id="ConstraintsTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-			  	<tr>
-					<td width="80%" class="TableHeading">Constraint</td>
-					<td width="10%" class="TableHeading">Type</td>
-					<td width="10%" class="TableHeading">Status</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">base/@uom = "m" or base/@uom = "[ft_i]")</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints764" onclick="parent.toggleDiv('detailsDIVConstraints764','DetailsImageConstraints764')" />Details:
-							<div id="detailsDIVConstraints764" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: Common.CloudLayer-1&lt;br/&gt;Description: base shall be reported in metres (m) or feet ([ft_i])&lt;br/&gt;Assertion: ( if( exists(iwxxm:base) and not(iwxxm:base/@xsi:nil = &#39;true&#39;) ) then( (iwxxm:base/@uom = &#39;m&#39;) or (iwxxm:base/@uom = &#39;[ft_i]&#39;) ) else( true() ) )&lt;br/&gt;</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
 	</div>
 <div class="pageFooter"></div>
  
