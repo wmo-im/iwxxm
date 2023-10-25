@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2024-x" version="3.1.0" xmlns:iwxxm="http://icao.int/iwxxm/2024-x" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2024-x" version="3.2.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2024-x" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
@@ -229,7 +229,7 @@ When no clouds of operational significance or no weather of operational signific
 						<annotation>
 							<documentation>The observed air temperature.  This is the temperature indicated by a thermometer exposed to the air in a place sheltered from direct solar radiation.
 
-Measured air temperature shall be given in degrees Celsius ("Cel").</documentation>
+Measured air temperature shall be given in degrees Celsius ("Cel").  It should also be provided in tenths of a degree Celsius.</documentation>
 							<appinfo>
 								<quantity>http://codes.wmo.int/common/quantity-kind/airTemperature</quantity>
 							</appinfo>
@@ -239,7 +239,7 @@ Measured air temperature shall be given in degrees Celsius ("Cel").</documentati
 						<annotation>
 							<documentation>The observed dew point temperature.  This is the temperature to which a given air parcel must be cooled at constant pressure and constant water vapor content in order for saturation to occur.
 
-Measured dew-point temperature shall be given in degrees Celsius ("Cel").</documentation>
+Measured dew-point temperature shall be given in degrees Celsius ("Cel").  It should also be provided in tenths of a degree Celsius.</documentation>
 							<appinfo>
 								<quantity>http://codes.wmo.int/common/quantity-kind/dewPointTemperature</quantity>
 							</appinfo>
@@ -281,7 +281,7 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 							</complexContent>
 						</complexType>
 					</element>
-					<element nillable="true" name="rvr" minOccurs="0" maxOccurs="4">
+					<element nillable="true" name="rvr" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>RVR conditions are required if horizontal visibility or RVR is less than 1500 meters, up to a maximum of four runways</documentation>
 						</annotation>
@@ -343,22 +343,6 @@ When there are no clouds of operational significance and no restriction on verti
 							</complexContent>
 						</complexType>
 					</element>
-					<element nillable="true" name="runwayState" minOccurs="0" maxOccurs="unbounded">
-						<annotation>
-							<documentation>When runways are affected by snow, slush, or other contaminants, a runway state report for each runway in use is required.
-
-There is no maximum number of runway states that can be reported.  This may be changed in a future amendment.
-
-When all runways are closed due to snow, this shall be indicated with a "runwayState" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"</documentation>
-						</annotation>
-						<complexType>
-							<complexContent>
-								<extension base="iwxxm:AerodromeRunwayStatePropertyType">
-									<attribute name="nilReason" type="gml:NilReasonType"/>
-								</extension>
-							</complexContent>
-						</complexType>
-					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Extension block for optional and/or additional parameters for element MeteorologicalAerodromeObservation</documentation>
@@ -384,97 +368,6 @@ Information on visibility, runway visual range, present weather and cloud amount
 			<element ref="iwxxm:MeteorologicalAerodromeObservation"></element>
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
-	</complexType>
-	<element name="AerodromeRunwayState" type="iwxxm:AerodromeRunwayStateType" substitutionGroup="gml:AbstractObject">
-		<annotation>
-			<documentation>An aggregation of runway conditions typically reported together at an aerodrome, including the runway contamination, friction, and deposits.  </documentation>
-		</annotation>
-	</element>
-	<complexType name="AerodromeRunwayStateType">
-		<sequence>
-			<element nillable="true" name="runway" type="iwxxm:RunwayDirectionPropertyType" minOccurs="0" maxOccurs="1">
-				<annotation>
-					<documentation>The runway to which the conditions apply.  The runway may be missing in cases where all runways are closed due to snow</documentation>
-				</annotation>
-			</element>
-			<element nillable="true" name="depositType" type="iwxxm:RunwayDepositsType" minOccurs="0" maxOccurs="1">
-				<annotation>
-					<documentation>The type of runway deposit, such as damp conditions, wet snow, or ice.
-
-WMO 306:
-Table 0919</documentation>
-				</annotation>
-			</element>
-			<element nillable="true" name="contamination" type="iwxxm:RunwayContaminationType" minOccurs="0" maxOccurs="1">
-				<annotation>
-					<documentation>Proportion of runway surface that is contaminated - usually expressed as a percentage of the total runway area.
-
-WMO reporting procedures require that contamination is reported in the following categories:
-- less than 10%;
-- between 11% and 25%;
-- between 26% and 50%; and
-- more than 50%.
-
-See WMO No. 306:
-- WMO Code table 0519
-- BUFR Code table 0 20 087</documentation>
-					<appinfo>
-						<quantity>http://codes.wmo.int/common/quantity-kind/runwayContaminationCoverage</quantity>
-					</appinfo>
-				</annotation>
-			</element>
-			<element nillable="true" name="depthOfDeposit" type="iwxxm:DistanceWithNilReasonType" minOccurs="0" maxOccurs="1">
-				<annotation>
-					<documentation>Depth of deposit on the surface of the runway.
-
-Measured depth of deposit shall be given in millimeters ("mm").
-
-See WMO No. 306 WMO Code table 1079.</documentation>
-					<appinfo>
-						<quantity>http://codes.wmo.int/common/quantity-kind/depthOfRunwayDeposit</quantity>
-					</appinfo>
-				</annotation>
-			</element>
-			<element nillable="true" name="estimatedSurfaceFrictionOrBrakingAction" type="iwxxm:RunwayFrictionCoefficientType" minOccurs="0" maxOccurs="1">
-				<annotation>
-					<documentation>The estimated surface friction or braking action for the affected runway.  When braking conditions are not reported and/or the runway is not operational estimatedSurfaceFrictionOrBrakingAction will not be reported.
-
-WMO 306:
-Table 0366</documentation>
-				</annotation>
-			</element>
-			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
-				<annotation>
-					<documentation>Extension block for optional and/or additional parameters for element AerodromeRunwayState</documentation>
-				</annotation>
-			</element>
-		</sequence>
-		<attribute name="allRunways" type="boolean">
-			<annotation>
-				<documentation>When true, indicates the reported conditions apply to all runways</documentation>
-			</annotation>
-		</attribute>
-		<attribute name="cleared" type="boolean">
-			<annotation>
-				<documentation>Indicates that reported runway has been cleared of meteorological deposits, such as snow.
-
-ICAO Annex 3 / WMO No. 49-2:
-"CLRD"
-
-Section 4.8.1.5, Table A3-2 "State of the runway"</documentation>
-			</annotation>
-		</attribute>
-		<attribute name="fromPreviousReport" type="boolean">
-			<annotation>
-				<documentation>When true, indicates a new runway state report is not available in time for dissemination of the METAR message and the previous runway state report is being repeated</documentation>
-			</annotation>
-		</attribute>
-	</complexType>
-	<complexType name="AerodromeRunwayStatePropertyType">
-		<sequence>
-			<element ref="iwxxm:AerodromeRunwayState"></element>
-		</sequence>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
 	<element name="AerodromeRunwayVisualRange" type="iwxxm:AerodromeRunwayVisualRangeType" substitutionGroup="gml:AbstractObject">
@@ -967,47 +860,6 @@ Height in metres : Category
 See WMO No. 306 Vol I.1 code table 3700 "State of the sea" and WMO No. 306 Vol I.2 FM 94 BUFR code table 0 22 061 "State of the sea".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-22-061</vocabulary>
-				<extensibility>none</extensibility>
-			</appinfo>
-		</annotation>
-		<complexContent>
-			<extension base="gml:ReferenceType"></extension>
-		</complexContent>
-	</complexType>
-	<element name="RunwayDeposits" type="iwxxm:RunwayDepositsType"></element>
-	<complexType name="RunwayDepositsType">
-		<annotation>
-			<documentation>Type of deposit on a runway.
-
-See WMO No. 306 Vol I.1 code table 0919 and WMO No. 306 Vol I.2 FM 94 BUFR code table 0 20 086 "Runway deposits".</documentation>
-			<appinfo>
-				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-20-086</vocabulary>
-				<extensibility>none</extensibility>
-			</appinfo>
-		</annotation>
-		<complexContent>
-			<extension base="gml:ReferenceType"></extension>
-		</complexContent>
-	</complexType>
-	<element name="RunwayContamination" type="iwxxm:RunwayContaminationType"></element>
-	<complexType name="RunwayContaminationType">
-		<annotation>
-			<documentation>Extent of runway surface that is contaminated (covered)</documentation>
-			<appinfo>
-				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-20-087</vocabulary>
-				<extensibility>none</extensibility>
-			</appinfo>
-		</annotation>
-		<complexContent>
-			<extension base="gml:ReferenceType"></extension>
-		</complexContent>
-	</complexType>
-	<element name="RunwayFrictionCoefficient" type="iwxxm:RunwayFrictionCoefficientType"></element>
-	<complexType name="RunwayFrictionCoefficientType">
-		<annotation>
-			<documentation>Extent of runway surface that is contaminated (covered)</documentation>
-			<appinfo>
-				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-20-089</vocabulary>
 				<extensibility>none</extensibility>
 			</appinfo>
 		</annotation>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iwxxm:METAR 
-    xmlns:iwxxm="http://icao.int/iwxxm/2023-1" 
+    xmlns:iwxxm="http://icao.int/iwxxm/2024-x" 
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-    xsi:schemaLocation="http://icao.int/iwxxm/2023-1 http://schemas.wmo.int/iwxxm/2023-1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2024-x http://schemas.wmo.int/iwxxm/2024-xRC1/iwxxm.xsd"
     gml:id="uuid.4324ada0-ddfc-4206-9689-3aa8b58649fd"
     reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL"

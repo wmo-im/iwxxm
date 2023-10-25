@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2024-x" version="1.1.0" xmlns:iwxxm="http://icao.int/iwxxm/2024-x" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2024-x" version="1.1.1RC1" xmlns:iwxxm="http://icao.int/iwxxm/2024-x" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="metFeature.xsd"></include>
 	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
@@ -85,56 +85,6 @@ Wind speeds shall be provided in unit of measurer "m/s" (meters per second).</do
 	<complexType name="WAFSJetStreamWindSymbolPropertyType">
 		<sequence minOccurs="0">
 			<element ref="iwxxm:WAFSJetStreamWindSymbol"></element>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
-	</complexType>
-	<element name="Volcano" type="iwxxm:VolcanoType" substitutionGroup="gml:AbstractGML">
-		<annotation>
-			<documentation>A volcano</documentation>
-		</annotation>
-	</element>
-	<complexType name="VolcanoType">
-		<complexContent>
-			<extension base="gml:AbstractGMLType">
-				<sequence>
-					<element nillable="true" name="name" type="iwxxm:StringWithNilReasonType">
-						<annotation>
-							<documentation>Name of the volcano.</documentation>
-						</annotation>
-					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="VolcanoPropertyType">
-		<sequence minOccurs="0">
-			<element ref="iwxxm:Volcano"></element>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
-	</complexType>
-	<element name="TropicalCyclone" type="iwxxm:TropicalCycloneType" substitutionGroup="gml:AbstractGML">
-		<annotation>
-			<documentation>A tropical cyclone.</documentation>
-		</annotation>
-	</element>
-	<complexType name="TropicalCycloneType">
-		<complexContent>
-			<extension base="gml:AbstractGMLType">
-				<sequence>
-					<element nillable="true" name="name" type="iwxxm:StringWithNilReasonType">
-						<annotation>
-							<documentation>Name of the tropical cyclone.</documentation>
-						</annotation>
-					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="TropicalCyclonePropertyType">
-		<sequence minOccurs="0">
-			<element ref="iwxxm:TropicalCyclone"></element>
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>

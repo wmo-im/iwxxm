@@ -1,6 +1,14 @@
 =========================================
-2024-x Release Candidate 1 - Aug 2023
+2024-x Release Candidate 1 - xxx 2023
 =========================================
+Package METAR/SPECI (Version 3.2.0RC1)
+  * Removed iwxxm:runwayState, iwxxm:AerodromeRunwayState, iwxxm:RunwayDeposits, iwxxm:RunwayContamination, and
+    iwxxm:RunwayFrictionCoefficient, as well as schematron rules METAR_SPECI.AerodromeRunwayState-1 to 3
+  * Revised the multiplicity of iwxxm:rvr to [0..*]
+  * Updated the notes on the possibility to provide temperature and dew-point temperature values in tenths of a degree
+    Celcius
+Package Common (Version 3.2.0RC1)
+  * Removed iwxxm:Runway
 Package Volcanic Ash Advisory (Version 3.2.0RC1)
   * Replaced iwxxm:summitElevation with iwxxm:sourceElevation with type aixm:CodeVerticalReferenceBaseType
   * Removed iwxxm:colourCode
@@ -13,6 +21,12 @@ Package Space Weather Advisory (Version 3.1.0RC1)
   * Introduced iwxxm:intensityAndRegion to indicate the intensity and coverage of a space weather event
   * Modified the codelist iwxxm:SpaceWeatherLocation to align with the change of nomaclature of DAYSIDE and NIGHTSIDE
   * Updated the examples for Space Weather Advisory
+Package WAFS Significant Weather Forecast (Version 1.1.1RC1)
+  * Moved iwxxm:Volcano and iwxxm:TropicalCyclone to Package Meteorological Feature to facilitate reuse of the two features
+Package Quantitative Volcanic Ash Concentration Information (Version 1.0.0RC1)
+  * First introduction
+Package Volcano Observatory Notice for Aviation (Version 1.0.0RC1)
+  * First introduction
 
 =========================================
 2023-1 - May 2023

@@ -46,7 +46,7 @@
                 <iwxxm:SpaceWeatherIntensityAndRegion gml:id="uuid.c264db5c-3f0b-4444-ab5e-71f48a514644">
                     <iwxxm:intensity>MOD</iwxxm:intensity>
                     <iwxxm:region>
-                        <iwxxm:SpaceWeatherRegion>
+                        <iwxxm:SpaceWeatherRegion gml:id="uuid.e7de7c50-1fde-41b7-995d-a28bdb61e446">
                             <iwxxm:location>
                                 <aixm:AirspaceVolume gml:id="uuid.7138f8d1-9854-46cb-a1b1-9d96c5cee46f">
                                     <aixm:horizontalProjection>
@@ -79,7 +79,7 @@
                 <iwxxm:SpaceWeatherIntensityAndRegion gml:id="uuid.00f9026a-845a-4472-acee-9ec5d7ba6839">
                     <iwxxm:intensity>MOD</iwxxm:intensity>
                     <iwxxm:region>
-                        <iwxxm:SpaceWeatherRegion>
+                        <iwxxm:SpaceWeatherRegion gml:id="uuid.1966a889-fedc-4eb8-9066-578492617298">
                             <iwxxm:location>
                                 <aixm:AirspaceVolume gml:id="uuid.a9793439-2c58-462f-b60f-7f39c1e7b3a5">
                                     <aixm:horizontalProjection>

@@ -261,5 +261,13 @@ rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/QUASI-STATIONARY_FRON
         <j.0:fxy>008011</j.0:fxy>
       </skos:Concept>
     </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH">
+        <rdfs:label xml:lang="en">Volcanic Ash</rdfs:label>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >17</skos:notation>
+        <j.0:fxy>008011</j.0:fxy>
+      </skos:Concept>
+    </skos:member>
   </ldp:Container>
 </rdf:RDF>

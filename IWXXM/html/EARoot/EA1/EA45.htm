@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>METAR/SPECI::AerodromeSeaCondition</title>
+<title>METAR/SPECI::AerodromeCloud</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("AerodromeSeaCondition", " : "))</script>  : Public  &lt;&lt;dataType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("AerodromeCloud", " : "))</script>  : Public  &lt;&lt;dataType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">06-Apr-12 2:24:36 PM</td>
+			<td width="85%" class="ObjectDetailsValue">4/6/2012 12:34:13 PM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">02-Aug-20 1:09:05 PM</td>
+			<td class="ObjectDetailsValue">8/2/2020 1:09:54 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,18 +87,19 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{3E6FF9AC-A73D-4b58-AAA4-DEA7F6213C02}</td>
+			<td class="ObjectDetailsValue">{5E784866-C186-4eff-AE03-A63FFCAC92DB}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA19.htm">Context Diagram: METAR/SPECI Observation</a></td>
+			<td class="ObjectDetailsValue"><a href="EA21.htm">Context Diagram: METAR/SPECI Observation</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">An aggregation of sea state conditions typically reported together at an aerodrome.&#160; This includes information on sea-surface temperature and either the state of the sea or significant wave height from aeronautical meteorological stations established on offshore structures in support of helicopter operations&lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">An aggregation of observed cloud conditions typically reported together at an aerodrome, including cloud types, cloud layers, and vertical visibility.&#160; &lt;br/&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
 			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
 			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
@@ -110,172 +111,56 @@ function nameClassifier(name, separator)
 		</tr>
 						<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA11/EA232.htm">MeasureWithNilReason</a></i><br /><strong>&nbsp;&nbsp;seaSurfaceTemperature</strong>
+					<i>Public <a href="../EA13/EA256.htm">LengthWithNilReason</a></i><br /><strong>&nbsp;&nbsp;verticalVisibility</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes122')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes122" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes130')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes130" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes122_00" style="display: none;">
+						<tr id="DetailsImageAttributes130_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes122_01" style="display: none;">
+						<tr id="DetailsImageAttributes130_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes122_02" style="display: none;">
+						<tr id="DetailsImageAttributes130_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes122_03" style="display: none;">
+						<tr id="DetailsImageAttributes130_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes122_04" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes122_05" style="display: none;">
-							<td width="75"><i>Transient: </i></td>
-							<td>False</td>
-						</tr>
-						<tr id="DetailsImageAttributes122_06" style="display: none;">
-							<td width="75"><i>Derived: </i></td>
-							<td>False</td>
-						</tr>
-							<tr id="DetailsImageAttributes122_07" style="display: none;">
-							<td width="75"><i>IsID: </i></td>
-						<td>False</td>
-						</tr>
-					</table>
-					
-					nillable=true<br>quantity=<a href="http://codes.wmo.int/common/quantity-kind/seaSurfaceTemperature" target="_blank" >http://codes.wmo.int/common/quantity-kind/seaSurfaceTemperature</a><br>sequenceNumber=1<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
-			The sea-surface temperature observed by aeronautical meteorological stations established on offshore structures in support of helicopter operations.&lt;br/&gt;&lt;br/&gt;The term sea surface temperature is generally meant to be representative of the upper few meters of the ocean as opposed to the skin temperature, which is the temperature of the upper few centimeters.&lt;br/&gt;&lt;br/&gt;Temperatures shall be reported in degrees Celsius (&quot;Cel&quot;).&lt;br/&gt;&lt;br/&gt;ICAO Annex 3 / WMO No. 49-2:&lt;br/&gt;Section 4.8.1.5a&lt;br/&gt;
-		</td>
-	</tr>
-</table></div>
-
-						
-				</td>
-			</tr>			<tr>
-				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA11/EA230.htm">DistanceWithNilReason</a></i><br /><strong>&nbsp;&nbsp;significantWaveHeight</strong>
-				</td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes123')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes123" border="0" />Details:</a>
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes123_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes123_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes123_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes123_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes123_04" style="display: none;">
+						<tr id="DetailsImageAttributes130_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td>Range:0 to 1</td>
 						</tr>
-						<tr id="DetailsImageAttributes123_05" style="display: none;">
+						<tr id="DetailsImageAttributes130_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes123_06" style="display: none;">
+						<tr id="DetailsImageAttributes130_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes123_07" style="display: none;">
+							<tr id="DetailsImageAttributes130_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
 					</table>
 					
-					nillable=true<br>sequenceNumber=2<br>
+					nillable=true<br>quantity=<a href="http://codes.wmo.int/common/quantity-kind/verticalVisibility" target="_blank" >http://codes.wmo.int/common/quantity-kind/verticalVisibility</a><br>sequenceNumber=1<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The significant wave height observed.&lt;br/&gt;&lt;br/&gt;Significant wave height shall be reported in meters (&quot;m&quot;).&lt;br/&gt;
-		</td>
-	</tr>
-</table></div>
-
-						
-				</td>
-			</tr>			<tr>
-				<td width="100%" class="TableRow">
-					<i>Public <a href="EA54.htm">SeaSurfaceState</a></i><br /><strong>&nbsp;&nbsp;seaState</strong>
-				</td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes124')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes124" border="0" />Details:</a>
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes124_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes124_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes124_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes124_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes124_04" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to 1</td>
-						</tr>
-						<tr id="DetailsImageAttributes124_05" style="display: none;">
-							<td width="75"><i>Transient: </i></td>
-							<td>False</td>
-						</tr>
-						<tr id="DetailsImageAttributes124_06" style="display: none;">
-							<td width="75"><i>Derived: </i></td>
-							<td>False</td>
-						</tr>
-							<tr id="DetailsImageAttributes124_07" style="display: none;">
-							<td width="75"><i>IsID: </i></td>
-						<td>False</td>
-						</tr>
-					</table>
-					
-					nillable=true<br>sequenceNumber=3<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
-			The state of the sea observed by aeronautical meteorological stations established on offshore structures in support of helicopter operations&lt;br/&gt;&lt;br/&gt;ICAO Annex 3 / WMO No. 49-2:&lt;br/&gt;Section 4.8.1.5a&lt;br/&gt;&lt;br/&gt;WMO 306:&lt;br/&gt;Table 3700&lt;br/&gt;
+			The reported vertical visibility.&#160; Vertical visibility is defined as the vertical visual range into an obscuring medium.&lt;br/&gt;&lt;br/&gt;Measured vertical visibility shall be reported in either two units of measures: meters (&quot;m&quot;) or feet (&quot;[ft_i]&quot;).&lt;br/&gt;&lt;br/&gt;Note: vertical visibility is only reported in aviation-specific WMO Code-forms (FM-15 METAR, FM-16 SPECI and FM-51 TAF) thus prevailing visibility is considered to be an aviation-specific quantity.&lt;br/&gt;&lt;br/&gt;When the sky is obscured and the value of the vertical visibility cannot be determined by the automatic observing system due to a temporary failure of the system/sensor (&quot;VV///&quot;) the vertical visibility is missing with a nil reason of notObservable&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -285,6 +170,40 @@ function nameClassifier(name, separator)
 			</tr>
 	</table>
 </div>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA12/EA242.htm">«dataType» CloudLayer</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> layer<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink131" onclick="parent.toggleDiv('detailsDIVLink131','DetailsImageLink131')" />Details:
+							<div id="detailsDIVLink131" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">The observed cloud groups, up to four may be included.&lt;br/&gt;&lt;br/&gt;When cumulonimbus clouds or towering cumulus clouds are detected by the automatic observing system and the cloud amount and the height of cloud base cannot be observed (&quot;//////&quot;) this is indicated by a missing cloud layer with a nil reason of either notObservable if the value could not be observed due to a sensor or system failure, or notDetectedByAutoSystem if the automated system is working properly but did not observe any values&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
 		<div class="ItemBody" id="AssociationsFromTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
@@ -294,7 +213,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA42.htm">MeteorologicalAerodromeObservation</a><br />
+						<a href="EA41.htm">MeteorologicalAerodromeObservation</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -302,14 +221,17 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> seaCondition<br />
-						Sea surface temperature and state of the sea or significant wave height are recent weather phenomena to be reported as supplementary information.	
+						<strong>Name:</strong> cloud<br />
+						When no clouds are detected by the automatic observing system, it should be indicated by a missing cloud group with a nil reason of notDetectedByAutoSystem ("NCD" from TAC).  
+
+When there are no clouds of operational significance and no restriction on vertical visibility and “CAVOK” is not appropriate ("NSC") it should be indicated by a missing cloud group with a nil reason of nothingOfOperationalSignificance
+	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink125" onclick="parent.toggleDiv('detailsDIVLink125','DetailsImageLink125')" />Details:
-							<div id="detailsDIVLink125" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink132" onclick="parent.toggleDiv('detailsDIVLink132','DetailsImageLink132')" />Details:
+							<div id="detailsDIVLink132" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -330,8 +252,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario126" onclick="parent.toggleDiv('detailsDIVScenario126','DetailsImageScenario126')" />Details:
-						<div id="detailsDIVScenario126" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario133" onclick="parent.toggleDiv('detailsDIVScenario133','DetailsImageScenario133')" />Details:
+						<div id="detailsDIVScenario133" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the type as an objection collection.<br /></div>
 
 						</div>
@@ -343,8 +265,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario127" onclick="parent.toggleDiv('detailsDIVScenario127','DetailsImageScenario127')" />Details:
-						<div id="detailsDIVScenario127" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario134" onclick="parent.toggleDiv('detailsDIVScenario134','DetailsImageScenario134')" />Details:
+						<div id="detailsDIVScenario134" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Suppresses creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).<br /></div>
 
 						</div>
@@ -360,60 +282,45 @@ function nameClassifier(name, separator)
 					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">if( exists(seaState) ) then( empty(significantWaveHeight) )</td>
+					<td width="80%" class="TableRow">if( exists(verticalVisibility) ) then( empty(layer) )</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints128" onclick="parent.toggleDiv('detailsDIVConstraints128','DetailsImageConstraints128')" />Details:
-							<div id="detailsDIVConstraints128" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.AerodromeSeaState-1&lt;br/&gt;Description: If the sea state is set, significantWaveHeight is not reported&lt;br/&gt;Assertion: ( if( exists(iwxxm:seaState) ) then( empty(iwxxm:significantWaveHeight) ) else( true() ) )&lt;br/&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints135" onclick="parent.toggleDiv('detailsDIVConstraints135','DetailsImageConstraints135')" />Details:
+							<div id="detailsDIVConstraints135" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.AerodromeCloud-1&lt;br/&gt;Description: When vertical visibility is reported cloud layers should be empty&lt;br/&gt;Assertion: ( if( exists(iwxxm:verticalVisibility) ) then( empty(iwxxm:layer) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">if( exists(significantWaveHeight) ) then( empty(seaState) )</td>
+					<td width="80%" class="TableRow">if( exists(iwxxm:layer) ) then( empty(iwxxm:verticalVisibility) )</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints129" onclick="parent.toggleDiv('detailsDIVConstraints129','DetailsImageConstraints129')" />Details:
-							<div id="detailsDIVConstraints129" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.AerodromeSeaState-2&lt;br/&gt;Description: If significantWaveHeight is reported, seaState should not be set&lt;br/&gt;Assertion: ( if( exists(iwxxm:significantWaveHeight) ) then( empty(iwxxm:seaState) ) else( true() ) )&lt;br/&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints136" onclick="parent.toggleDiv('detailsDIVConstraints136','DetailsImageConstraints136')" />Details:
+							<div id="detailsDIVConstraints136" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.AerodromeCloud-2&lt;br/&gt;Description: When cloud layers are reported vertical visibility should be empty&lt;br/&gt;Assertion: ( if( exists(iwxxm:layer) ) then( empty(iwxxm:verticalVisibility) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">seaSurfaceTemperature/@uom = "Cel"</td>
+					<td width="80%" class="TableRow">verticalVisibility/@uom = "m" or verticalVisibility@uom = "[ft_i]"</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints130" onclick="parent.toggleDiv('detailsDIVConstraints130','DetailsImageConstraints130')" />Details:
-							<div id="detailsDIVConstraints130" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.AerodromeSeaState-3&lt;br/&gt;Description: seaSurfaceTemperature shall be reported in degrees Celsius (Cel)&lt;br/&gt;Assertion: ( if( exists(iwxxm:seaSurfaceTemperature) and not(iwxxm:seaSurfaceTemperature/@xsi:nil = &#39;true&#39;) ) then( iwxxm:seaSurfaceTemperature/@uom = &#39;Cel&#39; ) else( true() ) )&lt;br/&gt;</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">significantWaveHeight/@uom = "m"</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints131" onclick="parent.toggleDiv('detailsDIVConstraints131','DetailsImageConstraints131')" />Details:
-							<div id="detailsDIVConstraints131" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.AerodromeSeaState-4&lt;br/&gt;Description: significantWaveHeight shall be reported in metres (m)&lt;br/&gt;Assertion: ( if( exists(iwxxm:significantWaveHeight) and not(iwxxm:significantWaveHeight/@xsi:nil = &#39;true&#39;) ) then( iwxxm:significantWaveHeight/@uom = &#39;m&#39; ) else( true() ) )&lt;br/&gt;&lt;br/&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints137" onclick="parent.toggleDiv('detailsDIVConstraints137','DetailsImageConstraints137')" />Details:
+							<div id="detailsDIVConstraints137" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.AerodromeCloud-3&lt;br/&gt;Description: verticalVisibility shall be reported in metres (m) or feet ([ft_i])&lt;br/&gt;Assertion: ( if( exists(iwxxm:verticalVisibility) and not(iwxxm:verticalVisibility/@xsi:nil = &#39;true&#39;) ) then( (iwxxm:verticalVisibility/@uom = &#39;m&#39;) or (iwxxm:verticalVisibility/@uom = &#39;[ft_i]&#39;) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>

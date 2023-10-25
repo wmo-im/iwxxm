@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title></title>
+<title>METAR/SPECI</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("", " : "))</script>  : Public   Note</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("METAR/SPECI", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">26-Mar-13 7:05:14 PM</td>
+			<td width="85%" class="ObjectDetailsValue">5/2/2012 11:38:53 AM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">08-Aug-13 2:15:25 PM</td>
+			<td class="ObjectDetailsValue">9/24/2023 9:04:24 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -55,7 +55,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
-			<td class="ObjectDetailsValue">1.0</td>
+			<td class="ObjectDetailsValue">3.2.0RC1</td>
 		</tr>
 		<tr id="proj02" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
@@ -63,7 +63,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj03" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
-			<td class="ObjectDetailsValue">Proposed</td>
+			<td class="ObjectDetailsValue">Implemented</td>
 		</tr>
 		<tr id="proj04" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
@@ -87,15 +87,93 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{5131D4AE-D1AC-4a5e-8D9A-B6D481C61785}</td>
+			<td class="ObjectDetailsValue">{CA480557-2AAC-4a38-A487-DA136C232B0F}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA23.htm">Context Diagram: METAR/SPECI Weather</a></td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">Examples of recent weather (observed at aerodrome):&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Freezing drizzle&lt;/li&gt;&lt;li&gt;Freezing rain&lt;/li&gt;&lt;li&gt;Rain shower&lt;/li&gt;&lt;li&gt;Rain&lt;/li&gt;&lt;li&gt;Rain and snow&lt;/li&gt;&lt;li&gt;Snow shower&lt;/li&gt;&lt;li&gt;Snow&lt;/li&gt;&lt;li&gt;Snow grains&lt;/li&gt;&lt;li&gt;Hail showers&lt;/li&gt;&lt;li&gt;Small hail showers&lt;/li&gt;&lt;li&gt;Blowing snow&lt;/li&gt;&lt;li&gt;Sandstorm&lt;/li&gt;&lt;li&gt;Duststorm&lt;/li&gt;&lt;li&gt;Thunderstorm with rain&lt;/li&gt;&lt;li&gt;Thunderstorm with snow&lt;/li&gt;&lt;li&gt;Thunderstorm with hail&lt;/li&gt;&lt;li&gt;Thunderstorm with small hail&lt;/li&gt;&lt;li&gt;Thunderstorm&lt;/li&gt;&lt;li&gt;Funnel cloud&lt;/li&gt;&lt;li&gt;Volcanic ash&lt;/li&gt;&lt;li&gt;Ice pellets&lt;/li&gt;&lt;li&gt;Unidentified precipitation&lt;/li&gt;&lt;li&gt;Freezing unidentified precipitation&lt;/li&gt;&lt;li&gt;Thunderstorm with unidentified precipitation&lt;/li&gt;&lt;li&gt;Showers with unidentified precipitation&lt;/li&gt;&lt;li&gt;Recent drizzle&lt;/li&gt;&lt;/ul&gt;&lt;p/&gt;</div>
+	<div class="ObjectDetailsNotes">METAR and SPECI reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.&lt;br/&gt;&lt;br/&gt;METAR and SPECI reports include identical information but are issued for different purposes.&lt;br/&gt;&lt;br/&gt;METAR reports are routine observations made at an aerodrome throughout the day.&#160; METAR observations are made (and distributed) at intervals of one hour or, if so determined by regional air navigation agreement, at intervals of one half-hour.&lt;br/&gt;&lt;br/&gt;SPECI reports are special (i.e., non-routine) observation made at an aerodrome as needed. SPECI observations are made (and distributed) in accordance with criteria established by the meteorological authority, in consultation with the appropriate ATS authority, operators and others concerned.&lt;br/&gt;&lt;br/&gt;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.&lt;br/&gt;</div>
 
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+<div class="ItemBody" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="50%" class="TableHeading">Tag</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">version</td>
+				<td width="50%" class="TableRow" valign="top">3.2.0RC1</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario44" onclick="parent.toggleDiv('detailsDIVScenario44','DetailsImageScenario44')" />Details:
+						<div id="detailsDIVScenario44" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">xsdDocument</td>
+				<td width="50%" class="TableRow" valign="top">metarSpeci.xsd</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario45" onclick="parent.toggleDiv('detailsDIVScenario45','DetailsImageScenario45')" />Details:
+						<div id="detailsDIVScenario45" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Description: Name of an XML Schema document to create representing the content of this package.<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">xsdEncodingRule</td>
+				<td width="50%" class="TableRow" valign="top">iso19136_2007_METCE_Extensions</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario46" onclick="parent.toggleDiv('detailsDIVScenario46','DetailsImageScenario46')" />Details:
+						<div id="detailsDIVScenario46" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: iso19136_2007,iso19139_2007,iso19136_2007_METCE_Extensions<br />Default: iso19136_2007_METCE_Extensions<br />Description: XML Schema encoding rule to apply.<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Connection</td>
+					<td width="10%" class="TableHeading">Direction</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top">samplingPoint</td>
+					<td width="10%" class="TableRow" valign="top">Package</td>
+					<td width="10%" class="TableRow" valign="top">Package</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top">observation</td>
+					<td width="10%" class="TableRow" valign="top">Package</td>
+					<td width="10%" class="TableRow" valign="top">Package</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
 <div class="pageFooter"></div>
  
 </body>

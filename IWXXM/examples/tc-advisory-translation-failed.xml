@@ -2,11 +2,11 @@
 <iwxxm:TropicalCycloneAdvisory 
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:iwxxm="http://icao.int/iwxxm/2023-1" 
+    xmlns:iwxxm="http://icao.int/iwxxm/2024-x" 
     xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2023-1 http://schemas.wmo.int/iwxxm/2023-1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2024-x http://schemas.wmo.int/iwxxm/2024-xRC1/iwxxm.xsd"
     gml:id="uuid.4a954e38-b132-4d3c-aaba-90dbd056d497" 
     reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL"

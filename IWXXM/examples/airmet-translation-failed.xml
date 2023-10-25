@@ -2,10 +2,10 @@
 <iwxxm:AIRMET
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:iwxxm="http://icao.int/iwxxm/2023-1" 
+    xmlns:iwxxm="http://icao.int/iwxxm/2024-x" 
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2023-1 http://schemas.wmo.int/iwxxm/2023-1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2024-x http://schemas.wmo.int/iwxxm/2024-xRC1/iwxxm.xsd"
     gml:id="uuid.a587cca7-b8e1-4633-b3a5-7a0e5f6e50c9"
     reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL"
@@ -14,7 +14,7 @@
     translationCentreDesignator="YUZZ"
     translationCentreName="Fictional translation centre"
     translationTime="2014-05-15T15:30:00Z"
-    translationFailedTAC="YUDD AIRMET 1 VALID 151520/151800 YUSO–
+    translationFailedTAC="YUDD AIRMET 1 VALID 151520/151800 YUSO-
     YUDD SHANLON FIR INVALID TS
     OBS N OF S50 TOP ABV FL100 STNR WKN">
 

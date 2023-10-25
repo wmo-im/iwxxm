@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2024-x" version="1.0.0" xmlns:iwxxm="http://icao.int/iwxxm/2024-x" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2024-x" version="1.1.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2024-x" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
@@ -165,7 +165,9 @@ The actual featureType to be used in describing the properties shall be constrai
 	</complexType>
 	<element name="ElevatedEnvelope" type="iwxxm:ElevatedEnvelopeType" substitutionGroup="gml:Envelope">
 		<annotation>
-			<documentation>Describes a 3 dimensional envelope in terms of a horizontal area and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain. </documentation>
+			<documentation>Describes a 3 dimensional envelope in terms of a horizontal area and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain.
+
+To be used in iwxxm:phenomenonGeometry.</documentation>
 		</annotation>
 	</element>
 	<complexType name="ElevatedEnvelopeType">
@@ -205,7 +207,9 @@ The actual featureType to be used in describing the properties shall be constrai
 	</complexType>
 	<element name="ElevatedLevel" type="iwxxm:ElevatedLevelType" substitutionGroup="gml:AbstractGeometricPrimitive">
 		<annotation>
-			<documentation>Describes a vertical level in terms of an elevation which can be expressed in metrics commonly used in the aviation domain. </documentation>
+			<documentation>Describes a vertical level in terms of an elevation which can be expressed in metrics commonly used in the aviation domain.
+
+To be used in iwxxm:phenomenonGeometry.</documentation>
 		</annotation>
 	</element>
 	<complexType name="ElevatedLevelType">
@@ -240,7 +244,9 @@ The actual featureType to be used in describing the properties shall be constrai
 	</complexType>
 	<element name="ElevatedPoint" type="iwxxm:ElevatedPointType" substitutionGroup="gml:Point">
 		<annotation>
-			<documentation>Describes a 3 dimensional point in terms of a horizontal position and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain. </documentation>
+			<documentation>Describes a 3 dimensional point in terms of a horizontal position and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain.
+
+To be used in iwxxm:phenomenonGeometry.</documentation>
 		</annotation>
 	</element>
 	<complexType name="ElevatedPointType">
@@ -275,7 +281,9 @@ The actual featureType to be used in describing the properties shall be constrai
 	</complexType>
 	<element name="ElevatedCurve" type="iwxxm:ElevatedCurveType" substitutionGroup="gml:Curve">
 		<annotation>
-			<documentation>Describes a horizontal curve in 3 dimensional space in terms of its horizontal position and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain. </documentation>
+			<documentation>Describes a horizontal curve in 3 dimensional space in terms of its horizontal position and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain.
+
+To be used in iwxxm:phenomenonGeometry.</documentation>
 		</annotation>
 	</element>
 	<complexType name="ElevatedCurveType">
@@ -310,7 +318,9 @@ The actual featureType to be used in describing the properties shall be constrai
 	</complexType>
 	<element name="ElevatedSurface" type="iwxxm:ElevatedSurfaceType" substitutionGroup="gml:Surface">
 		<annotation>
-			<documentation>Describes a horizontal surface in 3 dimensional space in terms of its horizontal position and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain. </documentation>
+			<documentation>Describes a horizontal surface in 3 dimensional space in terms of its horizontal position and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain.
+
+To be used in iwxxm:phenomenonGeometry.</documentation>
 		</annotation>
 	</element>
 	<complexType name="ElevatedSurfaceType">
@@ -345,7 +355,9 @@ The actual featureType to be used in describing the properties shall be constrai
 	</complexType>
 	<element name="ElevatedVolume" type="iwxxm:ElevatedVolumeType" substitutionGroup="gml:Surface">
 		<annotation>
-			<documentation>Describes a 3 dimensional volume in terms of a horizontal area and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain. </documentation>
+			<documentation>Describes a 3 dimensional volume in terms of a horizontal area and an elevation, the latter of which can be expressed in metrics commonly used in the aviation domain.
+
+To be used in iwxxm:phenomenonGeometry.</documentation>
 		</annotation>
 	</element>
 	<complexType name="ElevatedVolumeType">
@@ -393,6 +405,96 @@ The actual featureType to be used in describing the properties shall be constrai
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
+	<element name="Volcano" type="iwxxm:VolcanoType" substitutionGroup="gml:AbstractGML">
+		<annotation>
+			<documentation>Information of a volcano.
+
+To be used in iwxxm:phenomenonProperty with iwxxm:phenomenon set to https://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANO and iwxxm:phenomenonGeometry defined by gml:Point to indicate the location of the volcano.
+
+When the location is unknown, phenomenonGeometry shall be represented with a nil and a nilReason of 'http://codes.wmo.int/common/nil/unknown'.</documentation>
+		</annotation>
+	</element>
+	<complexType name="VolcanoType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element nillable="true" name="name" type="iwxxm:StringWithNilReasonType">
+						<annotation>
+							<documentation>Name of the Volcano.
+
+When the name is unknown, it shall be represented with a nil in name and nilReason 'http://codes.wmo.int/common/nil/unknown'.</documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="IAVCEINumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>International Association of Volcanology and Chemistry of the Earth's Interior (IAVCEI) number of the volcano.
+
+When the IAVCEI number is unknown, it shall be represented with a nil in IAVCEINumber and nilReason 'http://codes.wmo.int/common/nil/unknown'.</documentation>
+						</annotation>
+					</element>
+					<element nillable="true" name="sourceElevation" type="iwxxm:ElevatedLevelPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Elevation of the vent of the volcano from mean sea level.  If reported it shall either be in meters ("m") or feet ("[ft_i]"). Use negative values to represent levels below mean sea level.
+
+When the elevation is unknown, it shall be represented with a nil in sourceElevation and nilReason 'http://codes.wmo.int/common/nil/unknown'.</documentation>
+						</annotation>
+					</element>
+					<element name="activityStatus" type="iwxxm:VolcanoActivityStatusType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Description of current activity status of the volcano.</documentation>
+						</annotation>
+					</element>
+					<element name="lastVolcanicAshEmission" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Time of last volcanic ash emission.</documentation>
+						</annotation>
+					</element>
+					<element name="onsetTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Time of onset of eruptive activity.</documentation>
+						</annotation>
+					</element>
+					<element name="duration" type="gml:TimePeriodPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Duration of volcanic ash producing eruption.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="VolcanoPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:Volcano"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="TropicalCyclone" type="iwxxm:TropicalCycloneType" substitutionGroup="gml:AbstractGML">
+		<annotation>
+			<documentation>A tropical cyclone.</documentation>
+		</annotation>
+	</element>
+	<complexType name="TropicalCycloneType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element nillable="true" name="name" type="iwxxm:StringWithNilReasonType">
+						<annotation>
+							<documentation>Name of the tropical cyclone.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TropicalCyclonePropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:TropicalCyclone"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
 	<simpleType name="WMOCategoryCodeType">
 		<annotation>
 			<documentation>Additional topic categories for WMO community.
@@ -404,12 +506,59 @@ Only weatherObservations and weatherForecasts are being used in this enumeration
 		<restriction base="string">
 			<enumeration value="weatherObservations">
 				<annotation>
-					<documentation>Weather Observations</documentation>
+					<documentation>Weather Observations.</documentation>
 				</annotation>
 			</enumeration>
 			<enumeration value="weatherForecasts">
 				<annotation>
 					<documentation>Weather Forecasts.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="volcanicObservations">
+				<annotation>
+					<documentation>Volcanic Observations.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="volcanicForecasts">
+				<annotation>
+					<documentation>Volcanic Forecasts.</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="VolcanoActivityStatusType">
+		<annotation>
+			<documentation>Volcano activity status.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="NIL">
+				<annotation>
+					<documentation>Nil.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="UNKNOWN">
+				<annotation>
+					<documentation>Unknown.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DECREASED_ACTIVITY">
+				<annotation>
+					<documentation>Decreased activity.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HEIGHTENED_UNREST">
+				<annotation>
+					<documentation>Heightened unrest.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ERUPTION_ONGOING">
+				<annotation>
+					<documentation>Eruption ongoing.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ERUPTION_OCCURRED">
+				<annotation>
+					<documentation>Eruption occurred.</documentation>
 				</annotation>
 			</enumeration>
 		</restriction>

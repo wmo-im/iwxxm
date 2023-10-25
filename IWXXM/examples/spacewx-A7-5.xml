@@ -48,7 +48,7 @@
                 <iwxxm:SpaceWeatherIntensityAndRegion gml:id="uuid.c264db5c-3f0b-4444-ab5e-71f48a514644">
                     <iwxxm:intensity>MOD</iwxxm:intensity>
                     <iwxxm:region>
-                        <iwxxm:SpaceWeatherRegion>
+                        <iwxxm:SpaceWeatherRegion gml:id="uuid.a836ba07-4d37-4352-a8d3-49882fc4b3a7">
                             <iwxxm:location>
                                 <aixm:AirspaceVolume gml:id="uuid.7138f8d1-9854-46cb-a1b1-9d96c5cee46f">
                                     <aixm:upperLimit uom="OTHER" xsi:nil="true" nilReason="unknown"/>
