@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iwxxm:VolcanoObservatoryNoticeForAviation 
-    xmlns:iwxxm="http://icao.int/iwxxm/2024-x"
+    xmlns:iwxxm="http://icao.int/iwxxm/2025-2"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd
-    http://icao.int/iwxxm/2024-x http://schemas.wmo.int/iwxxm/2024-xRC1/iwxxm.xsd"
+    http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
     gml:id="uuid.bf9c0a92-c909-4efc-8558-472d8aad209f" reportStatus="NORMAL" permissibleUsage="OPERATIONAL">
 
     <!-- Unique identifier of the collective -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2024-x" version="1.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2024-x" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="1.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="metFeature.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
@@ -49,9 +49,12 @@
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<element name="ashDensityCategory" type="iwxxm:VolcanicAshConcentrationsType">
+					<element name="ashDensityCategory" type="gml:CodeType">
 						<annotation>
 							<documentation>Categorical description of ash density within the cloud.</documentation>
+							<appinfo>
+								<gml:defaultCodeSpace>http://icao.int/iwxxm/2025-2/CodeList_VolcanicAshConcentrations.xml#VolcanicAshConcentrations</gml:defaultCodeSpace>
+							</appinfo>
 						</annotation>
 					</element>
 					<element name="ashDensityEqualsOrExceeds" type="gml:MeasureType">

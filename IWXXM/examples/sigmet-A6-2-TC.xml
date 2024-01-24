@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iwxxm:TropicalCycloneSIGMET 
-    xmlns:iwxxm="http://icao.int/iwxxm/2024-x"
+    xmlns:iwxxm="http://icao.int/iwxxm/2025-2"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
     xmlns:metce="http://def.wmo.int/metce/2013"
     xmlns:gml="http://www.opengis.net/gml/3.2" 
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2024-x http://schemas.wmo.int/iwxxm/2024-xRC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
     gml:id="uuid.f12194be-0d82-49ad-ad97-41e46f724dec" 
     reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL">

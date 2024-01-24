@@ -1,12 +1,12 @@
 =========================================
-2024-x Release Candidate 1 - xxx 2023
+2025-2 Release Candidate 1 - Feb 2025
 =========================================
 Package METAR/SPECI (Version 3.2.0RC1)
   * Removed iwxxm:runwayState, iwxxm:AerodromeRunwayState, iwxxm:RunwayDeposits, iwxxm:RunwayContamination, and
     iwxxm:RunwayFrictionCoefficient, as well as schematron rules METAR_SPECI.AerodromeRunwayState-1 to 3
   * Revised the multiplicity of iwxxm:rvr to [0..*]
   * Updated the notes on the possibility to provide temperature and dew-point temperature values in tenths of a degree
-    Celcius
+    Celsius
 Package Common (Version 3.2.0RC1)
   * Removed iwxxm:Runway
 Package Volcanic Ash Advisory (Version 3.2.0RC1)
