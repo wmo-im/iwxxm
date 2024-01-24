@@ -49,12 +49,9 @@
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<element name="ashDensityCategory" type="gml:CodeType">
+					<element name="ashDensityCategory" type="iwxxm:VolcanicAshConcentrationsType">
 						<annotation>
 							<documentation>Categorical description of ash density within the cloud.</documentation>
-							<appinfo>
-								<gml:defaultCodeSpace>http://icao.int/iwxxm/2025-2/CodeList_VolcanicAshConcentrations.xml#VolcanicAshConcentrations</gml:defaultCodeSpace>
-							</appinfo>
 						</annotation>
 					</element>
 					<element name="ashDensityEqualsOrExceeds" type="gml:MeasureType">
