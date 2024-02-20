@@ -257,15 +257,16 @@ rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/QUASI-STATIONARY_FRON
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/RADIATION">
         <rdfs:label xml:lang="en">Radiation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >12</skos:notation>
+        >26</skos:notation>
         <j.0:fxy>008011</j.0:fxy>
       </skos:Concept>
     </skos:member>
-    <skos:member>
+    <rdfs:label>Meteorological feature</rdfs:label>
+    <skos:member>^
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH">
         <rdfs:label xml:lang="en">Volcanic Ash</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >17</skos:notation>
+        >27</skos:notation>
         <j.0:fxy>008011</j.0:fxy>
       </skos:Concept>
     </skos:member>

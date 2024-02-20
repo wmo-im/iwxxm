@@ -83,14 +83,14 @@ When iwxxm:phenomenonCategory="weatherForecasts" it is the forecast time of the 
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	<element name="MeteorologicalFeature" type="iwxxm:MeteorologicalFeatureType" substitutionGroup="gml:AbstractGML">
+	<element name="MeteorologicalFeature" type="iwxxm:MeteorologicalFeatureType" substitutionGroup="gml:AbstractFeature">
 		<annotation>
 			<documentation>Basic feature for describing a meteorological and related phenomenon.</documentation>
 		</annotation>
 	</element>
 	<complexType name="MeteorologicalFeatureType">
 		<complexContent>
-			<extension base="gml:AbstractGMLType">
+			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<element name="issueTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
