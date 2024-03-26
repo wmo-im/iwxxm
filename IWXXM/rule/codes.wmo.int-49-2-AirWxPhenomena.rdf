@@ -90,17 +90,17 @@
       </skos:Concept>
     </skos:member>
     <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/FRQ_CB">
-        <dct:description xml:lang="en">Frequent cumulonimbus cloud</dct:description>
-        <rdfs:label xml:lang="en">Frequent cumulonimbus cloud</rdfs:label>
-        <skos:notation>FRQ CB</skos:notation>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/OCNL_TS">
         <dct:description xml:lang="en">Occasional thunderstorms</dct:description>
         <rdfs:label>Occasional thunderstorms</rdfs:label>
         <skos:notation xml:lang="en">OCNL TS</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/FRQ_CB">
+        <dct:description xml:lang="en">Frequent cumulonimbus cloud</dct:description>
+        <rdfs:label xml:lang="en">Frequent cumulonimbus cloud</rdfs:label>
+        <skos:notation>FRQ CB</skos:notation>
       </skos:Concept>
     </skos:member>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"

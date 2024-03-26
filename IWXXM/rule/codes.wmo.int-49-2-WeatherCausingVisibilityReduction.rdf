@@ -142,8 +142,6 @@
         <skos:notation>SN</skos:notation>
       </skos:Concept>
     </skos:member>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-    >2016-12-30T13:26:25.95Z</dct:modified>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/PO">
         <dct:description xml:lang="en">Dust/stand whirls</dct:description>
@@ -151,6 +149,8 @@
         <skos:notation>PO</skos:notation>
       </skos:Concept>
     </skos:member>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2016-12-30T13:26:25.95Z</dct:modified>
     <dct:description xml:lang="en">ICAO Annex 3/ WMO No. 49-2 Appendix 6 Section 2.1 under SFC VIS</dct:description>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/DS">

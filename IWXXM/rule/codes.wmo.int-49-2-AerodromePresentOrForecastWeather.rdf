@@ -253,6 +253,14 @@
       </skos:Concept>
     </skos:member>
     <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather/-DS">
+        <dct:description xml:lang="en">Light duststorm</dct:description>
+        <rdfs:label xml:lang="en">Light duststorm</rdfs:label>
+        <reg:status>stable</reg:status>
+        <skos:notation>-DS</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/-FZDZRA">
         <rdfs:label xml:lang="en">Light precipitation of freezing drizzle and rain</rdfs:label>
       </skos:Concept>
@@ -1493,8 +1501,6 @@
         <rdfs:label xml:lang="en">Light precipitation of ice pellets and snow grains</rdfs:label>
       </skos:Concept>
     </skos:member>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-    >2</owl:versionInfo>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/VCTS">
         <rdfs:label xml:lang="en">Thunderstorm in the vicinity</rdfs:label>
@@ -1525,8 +1531,6 @@
         <rdfs:label xml:lang="en">Light precipitation of snow, ice pellets and rain</rdfs:label>
       </skos:Concept>
     </skos:member>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-    >2014-09-03T09:52:40.633Z</dct:modified>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/-RAPL">
         <rdfs:label xml:lang="en">Light precipitation of rain and ice pellets</rdfs:label>
@@ -1567,6 +1571,8 @@
         <rdfs:label xml:lang="en">Thunderstorm with heavy precipitation of snow pellets/small hail, rain and snow</rdfs:label>
       </skos:Concept>
     </skos:member>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2021-11-15T15:42:30.033Z</dct:modified>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/+TSSN">
         <rdfs:label xml:lang="en">Thunderstorm with heavy precipitation of snow</rdfs:label>
@@ -1732,6 +1738,8 @@
         <rdfs:label xml:lang="en">Thunderstorm with precipitation of snow and snow pellets/small hail</rdfs:label>
       </skos:Concept>
     </skos:member>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >5</owl:versionInfo>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/+PLSGSN">
         <rdfs:label xml:lang="en">Heavy precipitation of ice pellets, snow grains and snow</rdfs:label>
@@ -1930,6 +1938,14 @@
       </skos:Concept>
     </skos:member>
     <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather/+FC">
+        <dct:description xml:lang="en">Well-developed funnel cloud(s) (tornado or water-spout)</dct:description>
+        <rdfs:label xml:lang="en">Well-developed funnel cloud(s) (tornado or water-spout)</rdfs:label>
+        <reg:status>stable</reg:status>
+        <skos:notation>+FC</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/+SHGSRASN">
         <rdfs:label xml:lang="en">Heavy showery precipitation of snow pellets/small hail, rain and snow</rdfs:label>
       </skos:Concept>
@@ -1967,6 +1983,14 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/+SGRA">
         <rdfs:label xml:lang="en">Heavy precipitation of snow grains and rain</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather/-SS">
+        <dct:description xml:lang="en">Light sandstorm</dct:description>
+        <rdfs:label xml:lang="en">Light sandstorm</rdfs:label>
+        <reg:status>stable</reg:status>
+        <skos:notation>-SS</skos:notation>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -2038,21 +2062,6 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SHRAGR">
         <rdfs:label xml:lang="en">Showery precipitation of rain and hail</rdfs:label>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/-DS">
-        <rdfs:label xml:lang="en">Light duststorm</rdfs:label>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/-SS">
-        <rdfs:label xml:lang="en">Light sandstorm</rdfs:label>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/+FC">
-        <rdfs:label xml:lang="en">Well-developed funnel cloud(s) (tornado or waterspout)</rdfs:label>
       </skos:Concept>
     </skos:member>
   </reg:Register>
