@@ -37,6 +37,8 @@
       </skos:Concept>
     </skos:member>
     <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:52:41.384Z</dct:modified>
     <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
     <rdfs:label>Code Table D-10: Significant Weather Phenomena</rdfs:label>
     <skos:member>
@@ -84,8 +86,6 @@
         <rdfs:label xml:lang="en">Frequent thunderstorm</rdfs:label>
       </skos:Concept>
     </skos:member>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-    >2014-09-03T09:52:41.384Z</dct:modified>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/OBSC_TS">
         <rdfs:label xml:lang="en">Obscured thunderstorm</rdfs:label>

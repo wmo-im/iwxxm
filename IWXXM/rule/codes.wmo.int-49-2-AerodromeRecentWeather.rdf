@@ -108,11 +108,14 @@
         <rdfs:label xml:lang="en">Precipitation of snow grains</rdfs:label>
       </skos:Concept>
     </skos:member>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-    >2014-09-03T09:52:41.1Z</dct:modified>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSGS">
         <rdfs:label xml:lang="en">Thunderstorm with precipitation of snow pellets/small hail</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/306/4678/RASN">
+        <rdfs:label xml:lang="en">Precipitation of rain and snow</rdfs:label>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -120,8 +123,6 @@
         <rdfs:label xml:lang="en">Precipitation of freezing drizzle</rdfs:label>
       </skos:Concept>
     </skos:member>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-    >2</owl:versionInfo>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSRA">
         <rdfs:label xml:lang="en">Thunderstorm with precipitation of rain</rdfs:label>
@@ -148,6 +149,8 @@
         <rdfs:label xml:lang="en">Precipitation of snow</rdfs:label>
       </skos:Concept>
     </skos:member>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2018-04-04T15:53:40.229Z</dct:modified>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/FZUP">
         <rdfs:label xml:lang="en">Unidentified freezing precipitation</rdfs:label>
@@ -170,5 +173,7 @@
       </skos:Concept>
     </skos:member>
     <rdf:type rdf:resource="http://purl.org/linked-data/registry#Register"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >3</owl:versionInfo>
   </ldp:Container>
 </rdf:RDF>

@@ -4,13 +4,13 @@
     Based on the sample shown on document "Representing WAFS Significant Weather (SIGWX) Data in BUFR"
 -->
 <iwxxm:WAFSSignificantWeatherForecast 
-    xmlns:iwxxm="http://icao.int/iwxxm/2023-1"
+    xmlns:iwxxm="http://icao.int/iwxxm/2025-2"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd
-    http://icao.int/iwxxm/2023-1 http://schemas.wmo.int/iwxxm/2023-1/iwxxm.xsd"
+    http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
     gml:id="uuid.ce3b61b9-d360-4da1-83b9-67e668406869" reportStatus="NORMAL" permissibleUsage="OPERATIONAL">
 
     <!-- Unique identifier of the collective -->
@@ -69,7 +69,7 @@
         </gml:TimeInstant>
     </iwxxm:phenomenonBaseTime>
     
-    <!-- phenomenonTime is the time when the object is valid, which is either the observation time or forecast time -->
+    <!-- phenomenonTime is the time when the collective is valid -->
     <iwxxm:phenomenonTime>
         <gml:TimeInstant gml:id="uuid.26328dbd-c763-4fd4-9b3c-40a6400795f0">
             <gml:timePosition>2001-01-31T00:00:00Z</gml:timePosition>

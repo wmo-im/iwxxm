@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>METAR/SPECI::AerodromeRunwayVisualRange</title>
+<title>METAR/SPECI::AerodromeWindShear</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("AerodromeRunwayVisualRange", " : "))</script>  : Public  &lt;&lt;dataType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("AerodromeWindShear", " : "))</script>  : Public  &lt;&lt;dataType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">3/2/2012 5:00:32 PM</td>
+			<td width="85%" class="ObjectDetailsValue">4/6/2012 2:02:03 PM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">8/2/2020 1:09:10 PM</td>
+			<td class="ObjectDetailsValue">8/2/2020 1:08:58 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,14 +87,14 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{0681A812-8C93-4724-88D6-60339FEA1867}</td>
+			<td class="ObjectDetailsValue">{4DE45030-C4F2-441c-8F48-302D1E623FA8}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA19.htm">Context Diagram: METAR/SPECI Observation</a></td>
+			<td class="ObjectDetailsValue"><a href="EA21.htm">Context Diagram: METAR/SPECI Observation</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">An aggregation of runway visual range conditions for a single runway, typically reported together at an aerodrome&lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">An aggregation of wind shear conditions typically reported together at an aerodrome, including the set of affected runways. &lt;br/&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -115,38 +115,38 @@ function nameClassifier(name, separator)
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes114')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes114" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes123')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes123" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes114_00" style="display: none;">
+						<tr id="DetailsImageAttributes123_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes114_01" style="display: none;">
+						<tr id="DetailsImageAttributes123_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes114_02" style="display: none;">
+						<tr id="DetailsImageAttributes123_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes114_03" style="display: none;">
+						<tr id="DetailsImageAttributes123_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes114_04" style="display: none;">
+						<tr id="DetailsImageAttributes123_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
-							<td></td>
+							<td>Range:0 to *</td>
 						</tr>
-						<tr id="DetailsImageAttributes114_05" style="display: none;">
+						<tr id="DetailsImageAttributes123_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes114_06" style="display: none;">
+						<tr id="DetailsImageAttributes123_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes114_07" style="display: none;">
+							<tr id="DetailsImageAttributes123_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
@@ -159,7 +159,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The runway to which reported runway visual range information applies&lt;br/&gt;
+			The specific runway(s) affected by wind shear at this aerodrome. No specific runways are reported when all runways are affected by wind shear&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -168,159 +168,43 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA11/EA231.htm">DistanceWithNilReason</a></i><br /><strong>&nbsp;&nbsp;meanRVR</strong>
+					<i>Public Boolean</i><br /><strong>&nbsp;&nbsp;allRunways</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes115')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes115" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes124')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes124" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes115_00" style="display: none;">
+						<tr id="DetailsImageAttributes124_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes115_01" style="display: none;">
+						<tr id="DetailsImageAttributes124_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes115_02" style="display: none;">
+						<tr id="DetailsImageAttributes124_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes115_03" style="display: none;">
+						<tr id="DetailsImageAttributes124_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes115_04" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes115_05" style="display: none;">
-							<td width="75"><i>Transient: </i></td>
-							<td>False</td>
-						</tr>
-						<tr id="DetailsImageAttributes115_06" style="display: none;">
-							<td width="75"><i>Derived: </i></td>
-							<td>False</td>
-						</tr>
-							<tr id="DetailsImageAttributes115_07" style="display: none;">
-							<td width="75"><i>IsID: </i></td>
-						<td>False</td>
-						</tr>
-					</table>
-					
-					nillable=true<br>quantity=<a href="http://codes.wmo.int/common/quantity-kind/runwayVisualRangeRvr" target="_blank" >http://codes.wmo.int/common/quantity-kind/runwayVisualRangeRvr</a><br>sequenceNumber=2<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
-			The mean recent runway visual range value observed. This mean represents the 10 minute average for observed RVR except when the 10-minute period immediately preceding the observation includes a marked discontinuity in runway visual range values, only those values occurring after the discontinuity is used for obtaining mean values.&lt;br/&gt;&lt;br/&gt;Mean runway visual range distance shall be reported in meters (&quot;m&quot;).&lt;br/&gt;&lt;br/&gt;To report a mean RVR of at least 2000 meters, mean RVR is reported as 2000 meters and the operator is reported as &quot;above&quot;&lt;br/&gt;&lt;br/&gt;Annex 3:&lt;br/&gt;Table A3-2 &quot;RVR/RVR&quot;&lt;br/&gt;Section 4.3.6.6&lt;br/&gt;
-		</td>
-	</tr>
-</table></div>
-
-						
-				</td>
-			</tr>			<tr>
-				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA10/EA220.htm">RelationalOperator</a></i><br /><strong>&nbsp;&nbsp;meanRVROperator</strong>
-				</td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes116')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes116" border="0" />Details:</a>
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes116_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes116_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes116_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes116_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes116_04" style="display: none;">
+						<tr id="DetailsImageAttributes124_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td>Range:0 to 1</td>
 						</tr>
-						<tr id="DetailsImageAttributes116_05" style="display: none;">
+						<tr id="DetailsImageAttributes124_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes116_06" style="display: none;">
+						<tr id="DetailsImageAttributes124_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes116_07" style="display: none;">
-							<td width="75"><i>IsID: </i></td>
-						<td>False</td>
-						</tr>
-					</table>
-					
-					nillable=true<br>sequenceNumber=3<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
-			The reported relational operator for the mean RVR. When reported, this operator is reported in conjunction with mean RVR.&lt;br/&gt;&lt;br/&gt;To report a mean RVR of at least 2000 metres, mean RVR is reported as 2000 metres and the operator is reported as &quot;above&quot;.&#160; To report a mean RVR of less than 50 metres, mean RVR is reported as 50 metres and the operator is reported as &quot;below&quot;.&#160; When no operator is reported, mean RVR represents an exact value with identical semantics to other measured quantities&lt;br/&gt;
-		</td>
-	</tr>
-</table></div>
-
-						
-				</td>
-			</tr>			<tr>
-				<td width="100%" class="TableRow">
-					<i>Public <a href="EA51.htm">VisualRangeTendency</a></i><br /><strong>&nbsp;&nbsp;pastTendency</strong>
-				</td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes117')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes117" border="0" />Details:</a>
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes117_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes117_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes117_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes117_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes117_04" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to 1</td>
-						</tr>
-						<tr id="DetailsImageAttributes117_05" style="display: none;">
-							<td width="75"><i>Transient: </i></td>
-							<td>False</td>
-						</tr>
-						<tr id="DetailsImageAttributes117_06" style="display: none;">
-							<td width="75"><i>Derived: </i></td>
-							<td>False</td>
-						</tr>
-							<tr id="DetailsImageAttributes117_07" style="display: none;">
+							<tr id="DetailsImageAttributes124_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
@@ -333,7 +217,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The runway visual range tendency (up, down, none).&lt;br/&gt;&lt;br/&gt;If the runway visual range values during the 10-minute period have shown a distinct tendency, such that the mean during the first 5 minutes varies by 100 m or more from the mean during the second 5 minutes of the period, this should be indicated. When the variation of the runway visual range values shows an upward or downward tendency, this should be indicated by &quot;Up&quot; or &quot;Down&quot;, respectively. In circumstances when actual fluctuations during the 10-minute period show no distinct tendency, this should be indicated using &quot;No Change?. When indications of tendency are not available, no information should be reported&lt;br/&gt;&lt;br/&gt;ICAO Annex 3 / WMO No. 49:&lt;br/&gt;Table A3-2 Note 9&lt;br/&gt;Section 4.3.6.6a&lt;br/&gt;
+			When true, all runways are observed to have wind shear&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -352,7 +236,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA42.htm">MeteorologicalAerodromeObservation</a><br />
+						<a href="EA41.htm">MeteorologicalAerodromeObservation</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -360,14 +244,14 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> rvr<br />
-						RVR conditions are required if horizontal visibility or RVR is less than 1500 meters, up to a maximum of four runways	
+						<strong>Name:</strong> windShear<br />
+						Wind shear is one of the recent weather phenomena to be reported as supplementary information.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink118" onclick="parent.toggleDiv('detailsDIVLink118','DetailsImageLink118')" />Details:
-							<div id="detailsDIVLink118" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink125" onclick="parent.toggleDiv('detailsDIVLink125','DetailsImageLink125')" />Details:
+							<div id="detailsDIVLink125" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -388,8 +272,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario119" onclick="parent.toggleDiv('detailsDIVScenario119','DetailsImageScenario119')" />Details:
-						<div id="detailsDIVScenario119" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario126" onclick="parent.toggleDiv('detailsDIVScenario126','DetailsImageScenario126')" />Details:
+						<div id="detailsDIVScenario126" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the type as an objection collection.<br /></div>
 
 						</div>
@@ -401,8 +285,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario120" onclick="parent.toggleDiv('detailsDIVScenario120','DetailsImageScenario120')" />Details:
-						<div id="detailsDIVScenario120" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario127" onclick="parent.toggleDiv('detailsDIVScenario127','DetailsImageScenario127')" />Details:
+						<div id="detailsDIVScenario127" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Suppresses creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).<br /></div>
 
 						</div>
@@ -418,15 +302,30 @@ function nameClassifier(name, separator)
 					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">meanRVR/@uom = "m"</td>
+					<td width="80%" class="TableRow">if( @allRunways = 'true' ) then( empty(runway) )</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints121" onclick="parent.toggleDiv('detailsDIVConstraints121','DetailsImageConstraints121')" />Details:
-							<div id="detailsDIVConstraints121" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.AerodromeRunwayVisualRange-1&lt;br/&gt;Description: meanRVR shall be reported in metres (m)&lt;br/&gt;Assertion: ( if( exists(iwxxm:meanRVR) and not(iwxxm:meanRVR/@xsi:nil = &#39;true&#39;) ) then( iwxxm:meanRVR/@uom = &#39;m&#39; ) else( true() ) )&lt;br/&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints128" onclick="parent.toggleDiv('detailsDIVConstraints128','DetailsImageConstraints128')" />Details:
+							<div id="detailsDIVConstraints128" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.AerodromeWindShear-1&lt;br/&gt;Description: When all runways are affected by wind shear, no specific runways should be reported&lt;br/&gt;Assertion: (if( @allRunways = &#39;true&#39; ) then( empty(iwxxm:runway) ) else( true() ) )&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">if( exists(runway) ) then( empty(@allRunways) or (@allRunways = 'false') )</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints129" onclick="parent.toggleDiv('detailsDIVConstraints129','DetailsImageConstraints129')" />Details:
+							<div id="detailsDIVConstraints129" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: METAR_SPECI.AerodromeWindShear-2&lt;br/&gt;Description: When a single Runway is reported upon, the allRunways flag should be missing or false&lt;br/&gt;Assertion: ( if( exists(iwxxm:runway) ) then( empty(@allRunways) or (@allRunways = &#39;false&#39;) )&#160; else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>

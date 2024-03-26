@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="1.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+	<include schemaLocation="metFeature.xsd"></include>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
+	<annotation>
+		<documentation>The Quantitative Volcanic Ash Concentration Information product provides a forecast of significant ash cloud(s) that poses a widespread impact to aircraft operations and air navigation. Guidance on the criteria is provided in the Handbook on the International Airways Watch (Doc 9766).</documentation>
+	</annotation>
+	<element name="QuantitativeVolcanicAshConcentrationInformation" type="iwxxm:QuantitativeVolcanicAshConcentrationInformationType" substitutionGroup="iwxxm:MeteorologicalFeatureCollection">
+		<annotation>
+			<documentation>A product issued by the Volcanic Ash Advisory Center (VAAC) on volcanic ash cloud(s) that poses a widespread impact to aircraft operations and air navigation.</documentation>
+		</annotation>
+	</element>
+	<complexType name="QuantitativeVolcanicAshConcentrationInformationType">
+		<complexContent>
+			<extension base="iwxxm:MeteorologicalFeatureCollectionType">
+				<sequence>
+					<element name="dispersionModelInitialisationTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Start of model forecast integration time.</documentation>
+						</annotation>
+					</element>
+					<element name="dispersionModelSourceElevation" type="iwxxm:ElevatedLevelPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Elevation of erupting ash vent or fissure used in the dispersion model, not necessarily volcano's summit height, in meters ("m") or feet ("[ft_i]"). Use negative values to represent levels below mean sea level.</documentation>
+						</annotation>
+					</element>
+					<element name="dispersionModelAshCloudHeight" type="iwxxm:ElevatedLevelPropertyType" minOccurs="0" maxOccurs="1">
+						<annotation>
+							<documentation>Maximum height of ash cloud or eruption column at initialisation time in meters ("m") or feet ("[ft_i]"). Use negative values to represent levels below mean sea level.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="QuantitativeVolcanicAshConcentrationInformationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:QuantitativeVolcanicAshConcentrationInformation"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="VolcanicAshCloudConcentration" type="iwxxm:VolcanicAshCloudConcentrationType" substitutionGroup="gml:AbstractGML">
+		<annotation>
+			<documentation>Estimated volcanic ash concentration with higher values possible within the ash cloud.</documentation>
+		</annotation>
+	</element>
+	<complexType name="VolcanicAshCloudConcentrationType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element name="ashDensityCategory" type="iwxxm:VolcanicAshConcentrationsType">
+						<annotation>
+							<documentation>Categorical description of ash density within the cloud.</documentation>
+						</annotation>
+					</element>
+					<element name="ashDensityEqualsOrExceeds" type="gml:MeasureType">
+						<annotation>
+							<documentation>Quantitative threshold of ash density within the cloud.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="VolcanicAshCloudConcentrationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="iwxxm:VolcanicAshCloudConcentration"></element>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
+	</complexType>
+	<element name="VolcanicAshConcentrations" type="iwxxm:VolcanicAshConcentrationsType"></element>
+	<complexType name="VolcanicAshConcentrationsType">
+		<annotation>
+			<documentation>The code list for volcanic ash concentrations:
+
+
+	- &gt;= 0.2 mg/m3   "Low and possibly higher"
+	- &gt;= 2 mg/m3     "Medium and possibly higher"
+	- &gt;= 5 mg/m3     "High and possibly higher"
+	- &gt;= 10 mg/m3   "Very High"</documentation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/iwxxm/VolcanicAshConcentrations</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
+</schema>

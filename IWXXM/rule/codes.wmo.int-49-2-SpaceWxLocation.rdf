@@ -47,10 +47,17 @@
     </skos:member>
     <dct:description xml:lang="en">The items within this code table are the locations of space weather phenomena of significance to aeronautical operations</dct:description>
     <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/DAYLIGHT_SIDE">
-        <dct:description xml:lang="en">Daylight Side</dct:description>
-        <rdfs:label xml:lang="en">Daylight Side</rdfs:label>
-        <skos:notation>DAYLIGHT_SIDE</skos:notation>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/DAYSIDE">
+        <dct:description xml:lang="en">Day Side</dct:description>
+        <rdfs:label xml:lang="en">Day Side</rdfs:label>
+        <skos:notation>DAYSIDE</skos:notation>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/NIGHTSIDE">
+        <dct:description xml:lang="en">Night Side</dct:description>
+        <rdfs:label xml:lang="en">Night Side</rdfs:label>
+        <skos:notation>NIGHTSIDE</skos:notation>
       </skos:Concept>
     </skos:member>
     <rdfs:label xml:lang="en">Space Wx Location</rdfs:label>

@@ -1,4 +1,4 @@
-﻿==========================
+==========================
 Introduction
 ==========================
 This document provides guidance on how abbreviations and codes from the Traditional Alphanumeric Codes (TAC) are represented in XML (IWXXM).
@@ -149,40 +149,34 @@ Volcanic Ash Advisory
   An unnamed volcano shall be indicated with an "EruptingVolcano/name" of "UNNAMED"
   
 'UNKNOWN' volcano location
-  An unknown volcano location shall be indicated with an empty "EruptingVolcano/position" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
+  An unknown volcano location shall be indicated with a nil in "EruptingVolcano/position" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
 
 'UNKNOWN' State or region
-  An unknown State or region shall be indicated with an empty "stateOrRegion" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
+  An unknown State or region shall be indicated with a nil in "stateOrRegion" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
 
-'UNKNOWN' summit elevation
-  An unknown summit elevation shall be indicated with an empty "elevation" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
-
-'UNKNOWN' aviation colour code
-  An unknown aviation colour code shall be indicated with an empty "colourCode" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
-  
-'NOT GIVEN' aviation colour code
-  An aviation colour code that is not given shall be indicated with an empty "colourCode" and a nilReason of "http://codes.wmo.int/common/nil/withheld"
-
-'NIL' aviation colour code
-  A NIL aviation colour code shall be indicated in "colourCode" with a nilReason of "http://codes.wmo.int/common/nil/missing"
+'UNKNOWN' source elevation
+  An unknown source elevation shall be indicated with a nil in "elevation" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
 
 'UNKNOWN' eruption details
-  An unknown eruption details shall be indicated with an empty "eruptionDetails" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
+  An unknown eruption details shall be indicated with a nil in "eruptionDetails" and a nilReason of "http://codes.wmo.int/common/nil/unknown"
 
 Eruption details
   Date/time of eruption(s) shall be included in "volcano" and the rest in "eruptionDetails"
 
-'VA NOT IDENTIFIABLE FM SATELLITE DATA'
-  Element "status" under "VolcanicAshObservedOrEstimatedConditions" shall be set to "NOT_IDENTIFIABLE" to reflect this sitution.  Set it to "IDENTIFIABLE" otherwise
-  
+'NOT PROVIDED' time of observation of ash
+  When the time of observation of ash is specified as 'NOT PROVIDED', phenomenonTime shall be nil with a nilReason of "http://codes.wmo.int/common/nil/missing", 
+
+'VA NOT IDENTIFIABLE FM SATELLITE DATA', 'NOT AVBL' and 'NOT PROVIDED'
+  Element "status" under "VolcanicAshObservedOrEstimatedConditions" shall be set accordingly.  Set it to "PROVIDED" otherwise
+
 'NO VA EXP', 'NOT AVBL' and 'NOT PROVIDED'
   Element "status" under "VolcanicAshForecastConditions" shall be set accordingly.  Set it to "PROVIDED" otherwise
 
 'NIL' remarks
-  NIL remarks shall be indicated in "remarks" with nilReason set to "http://codes.wmo.int/common/nil/inapplicable"
+  NIL remarks shall be indicated with a nil in "remarks" and nilReason "http://codes.wmo.int/common/nil/inapplicable"
   
 'NO FURTHER ADVISORIES'
-  A NIL shall be indicated in "nextAdvisoryTime" with a nilReason of "http://codes.wmo.int/common/nil/inapplicable"
+  Element "nextAdvisoryTime" shall be nil with nilReason "http://codes.wmo.int/common/nil/inapplicable"
 
 ==========================
 Tropical Cyclone Advisory
@@ -208,17 +202,17 @@ Target is forecast to no longer categorize as a tropical cyclone
 ==========================
 Space Weather Advisory
 ==========================
-'DAYLIGHT SIDE'
-  DAYLIGHT SIDE shall be indicated with "gml:CircleByCenterPoint" with "gml:pos" set to the latitude and longitude of the sub-solar point at the observed or forecast time, "gml:radius" shall be of sufficient length to circumscribe the sun-lit portion of the Earth, approximately 10100 km.
+'DAYSIDE'
+  DAYSIDE shall be indicated with "gml:CircleByCenterPoint" with "gml:pos" set to the latitude and longitude of the sub-solar point at the observed or forecast time, "gml:radius" shall be of sufficient length to circumscribe the sun-lit portion of the Earth, approximately 10100 km.
 
 No location descriptions provided
   If only polygons are given "locationIndicator" shall be empty with nilReason set to "http://codes.wmo.int/common/nil/inapplicable"
 
 'NOT AVBL'
-  If forecast is NOT AVBL this shall be indicated with "region" nilReason set to "http://codes.wmo.int/common/nil/missing"
+  If forecast is NOT AVBL this shall be indicated with "intensityAndRegion" nilReason set to "http://codes.wmo.int/common/nil/missing"
 
 'NO SWX EXP'
-  If forecast is NO SWX EXP this shall be indicated with "region" nilReason set to "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
+  If forecast is NO SWX EXP this shall be indicated with "intensityAndRegion" nilReason set to "http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"
 
 'NIL' remarks
   NIL remarks shall be indicated with "remarks" nilReason set to "http://codes.wmo.int/common/nil/inapplicable"

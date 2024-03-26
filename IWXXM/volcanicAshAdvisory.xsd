@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2023-1" version="3.1.0" xmlns:iwxxm="http://icao.int/iwxxm/2023-1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="3.2.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.2/metce.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
@@ -31,39 +31,44 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 					</element>
 					<element name="volcano" type="metce:EruptingVolcanoPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The erupting volcano that is the source of volcanic ash</documentation>
+							<documentation>The erupting volcano that is the source of volcanic ash.
+
+An unknown volcano name shall be indicated in EruptingVolcano/name with "UNKNOWN".
+
+An unnamed volcano shall be indicated in EruptingVolcano/name with "UNNAMED".
+
+An unknown volcano location shall be indicated with a nil in EruptingVolcano/position and nilReason "http://codes.wmo.int/common/nil/unknown".</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="stateOrRegion" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>State, or region if ash is not reported over a State</documentation>
+							<documentation>State, or region if ash is not reported over a State.
+
+An unknown State or region shall be indicated with a nil in stateOrRegion and nilReason "http://codes.wmo.int/common/nil/unknown".</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="summitElevation" type="iwxxm:LengthWithNilReasonType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="sourceElevation" type="iwxxm:DistanceWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>Elevation of the summit.  If reported it shall either be in meters ("m") or feet ("[ft_i]").
+							<documentation>Elevation of the vent or the average height of volcanic ash field for re-suspended volcanic ash from mean sea level.  If reported it shall either be in meters ("m") or feet ("[ft_i]"). Use negative values to represent levels below mean sea level.
 
-When the elevation is unknown, it shall be empty with a nil reason of 'unknown'.</documentation>
+When the elevation is unknown, it shall be represented with a nil in sourceElevation and nilReason 'http://codes.wmo.int/common/nil/unknown'.</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="advisoryNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>Advisory number: year in full and message number (separate sequence for each volcano)</documentation>
+							<documentation>Advisory number: year in full and message number (separate sequence for each volcano).</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="informationSource" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>Information source - described in free text</documentation>
-						</annotation>
-					</element>
-					<element nillable="true" name="colourCode" type="iwxxm:AviationColourCodeType" minOccurs="0" maxOccurs="1">
-						<annotation>
-							<documentation>The aviation colour code</documentation>
+							<documentation>Information source - described in free text.</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="eruptionDetails" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>Eruption details (excluding date/time of eruption(s)).</documentation>
+							<documentation>Eruption details (excluding date/time of eruption(s)).
+
+UNKNOWN eruption details shall be indicated with a nil in eruptionDetails and nilReason "http://codes.wmo.int/common/nil/unknown".</documentation>
 						</annotation>
 					</element>
 					<element name="observation" type="iwxxm:VolcanicAshObservedOrEstimatedConditionsPropertyType" minOccurs="0" maxOccurs="1">
@@ -80,16 +85,16 @@ When the elevation is unknown, it shall be empty with a nil reason of 'unknown'.
 						<annotation>
 							<documentation>Remarks, as necessary.
 
-When the remark is nil, it should be indicated by a missing remarks with a nil reason of 'inapplicable'</documentation>
+When there is no remark, it shall be indicated by a nil in remarks and nilReason 'http://codes.wmo.int/common/nil/inapplicable'</documentation>
 						</annotation>
 					</element>
 					<element name="nextAdvisoryTime" type="gml:TimeInstantPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The time at which the next advisory will be issued
+							<documentation>The time at which the next advisory will be issued.
 
 Use attribute indeterminatePosition to element timePosition to indicate if the actual temporal position is before or after the specified value.
 
-When no subsequent advisory is expected to be issued it should be indicated by a missing expected advisory time with a nil reason of 'inapplicable'</documentation>
+When no subsequent advisory is expected to be issued it shall be indicated by a nil in nextAdvisoryTime and nilReason 'http://codes.wmo.int/common/nil/inapplicable'.</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -117,9 +122,11 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
+					<element nillable="true" name="phenomenonTime" type="iwxxm:AbstractTimeObjectPropertyType">
 						<annotation>
-							<documentation>The day and time (in UTC) of observation (or estimation) of volcanic ash</documentation>
+							<documentation>The day and time (in UTC) of observation (or estimation) of volcanic ash.
+
+When time of observation is NOT PROVIDED, it shall be represented with a nil in phenomenonTime and nilReason 'http://codes.wmo.int/common/nil/missing'.</documentation>
 						</annotation>
 					</element>
 					<element name="wind" type="iwxxm:WindObservedOrEstimatedPropertyType" minOccurs="0" maxOccurs="unbounded">
@@ -315,17 +322,32 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 	</complexType>
 	<simpleType name="VolcanicAshObservedOrEstimatedStatusType">
 		<annotation>
-			<documentation>Volcanic ash observation (or estimation) status</documentation>
+			<documentation>Observed or estimated volcanic ash cloud information status.  These include:
+
+PROVIDED: Information is available
+NOT_IDENTIFIABLE: Volcanic ash not identifiable from satellite data
+NOT_AVAILABLE: Information is not available
+NOT_PROVIDED: Information is not provided</documentation>
 		</annotation>
 		<restriction base="string">
+			<enumeration value="NOT_PROVIDED">
+				<annotation>
+					<documentation>Information is not provided.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NOT_AVAILABLE">
+				<annotation>
+					<documentation>Information is not available.</documentation>
+				</annotation>
+			</enumeration>
 			<enumeration value="NOT_IDENTIFIABLE">
 				<annotation>
 					<documentation>Volcanic ash not identifiable from satellite data</documentation>
 				</annotation>
 			</enumeration>
-			<enumeration value="IDENTIFIABLE">
+			<enumeration value="PROVIDED">
 				<annotation>
-					<documentation>Volcanic ash identifiable.</documentation>
+					<documentation>Information is provided.</documentation>
 				</annotation>
 			</enumeration>
 		</restriction>
@@ -334,8 +356,9 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 		<annotation>
 			<documentation>The volcanic ash cloud forecast status indicates the condition other than providing a valid forecast of the volcanic ash cloud.  These include:
 
-NO_VA_EXP: No volcanic ash is expected
-NOT_AVBL: Forecast is not available
+PROVIDED: Forecast is provided
+NO_VOLCANIC_ASH_EXPECTED: No volcanic ash is expected
+NOT_AVAILABLE: Forecast is not available
 NOT_PROVIDED: Forecast is not provided</documentation>
 		</annotation>
 		<restriction base="string">
@@ -361,17 +384,4 @@ NOT_PROVIDED: Forecast is not provided</documentation>
 			</enumeration>
 		</restriction>
 	</simpleType>
-	<element name="AviationColourCode" type="iwxxm:AviationColourCodeType"></element>
-	<complexType name="AviationColourCodeType">
-		<annotation>
-			<documentation>A CodeList representing the values for aviation colour codes specified in ICAO Annex 3 / WMO No. 49-2, such as RED, ORANGE, YELLOW, and GREEN</documentation>
-			<appinfo>
-				<vocabulary>http://codes.wmo.int/49-2/AviationColourCode</vocabulary>
-				<extensibility>none</extensibility>
-			</appinfo>
-		</annotation>
-		<complexContent>
-			<extension base="gml:ReferenceType"></extension>
-		</complexContent>
-	</complexType>
 </schema>

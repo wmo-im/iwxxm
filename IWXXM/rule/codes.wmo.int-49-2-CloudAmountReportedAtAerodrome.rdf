@@ -62,7 +62,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/SCT">
         <dct:description xml:lang="en">Scattered (3 - 4 oktas).</dct:description>
         <rdfs:label xml:lang="en">Scattered</rdfs:label>
-        <skos:notation>SCT</skos:notation>
+        <skos:notation>sCT</skos:notation>
         <skos:related rdf:resource="http://codes.wmo.int/bufr4/codeflag/0-20-008/2"/>
       </skos:Concept>
     </skos:member>
