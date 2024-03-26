@@ -10,7 +10,7 @@ Package METAR/SPECI (Version 3.2.0RC1)
 Package Common (Version 3.2.0RC1)
   * Removed iwxxm:Runway
 Package Volcanic Ash Advisory (Version 3.2.0RC1)
-  * Replaced iwxxm:summitElevation with iwxxm:sourceElevation with type aixm:CodeVerticalReferenceBaseType
+  * Replaced iwxxm:summitElevation with iwxxm:sourceElevation with type iwxxm:DistanceWithNilReasonType
   * Removed iwxxm:colourCode
   * Revised the options in iwxxm:VolcanicAshObservedOrEstimatedConditions/status
   * Revised the notes in various elements
