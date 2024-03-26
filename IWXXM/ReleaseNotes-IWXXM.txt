@@ -1,5 +1,5 @@
 =========================================
-2025-2 Release Candidate 1 - Feb 2025
+2025-2 Release Candidate 1 - March 2024
 =========================================
 Package METAR/SPECI (Version 3.2.0RC1)
   * Removed iwxxm:runwayState, iwxxm:AerodromeRunwayState, iwxxm:RunwayDeposits, iwxxm:RunwayContamination, and
