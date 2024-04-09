@@ -42,8 +42,6 @@
       </skos:Concept>
     </skos:member>
     <dct:publisher rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-    >2014-09-03T09:55:16.09Z</dct:modified>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/2">
         <rdfs:label xml:lang="en">Smooth (wavelets)</rdfs:label>
@@ -122,6 +120,8 @@
         <skos:note xml:lang="en">0</skos:note>
       </skos:Concept>
     </skos:member>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-03T09:55:16.09Z</dct:modified>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/5">
         <rdfs:label xml:lang="en">Rough</rdfs:label>

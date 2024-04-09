@@ -11,8 +11,8 @@
         <iwxxm:TAF
             xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
             xmlns:gml="http://www.opengis.net/gml/3.2"
-            xmlns:iwxxm="http://icao.int/iwxxm/2023-1"
-            xsi:schemaLocation="http://icao.int/iwxxm/2023-1 http://schemas.wmo.int/iwxxm/2023-1/iwxxm.xsd"
+            xmlns:iwxxm="http://icao.int/iwxxm/2025-2"
+            xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
             gml:id="uuid.ae3b123f-4fa1-447e-aa0e-5a950c8abff2"
             reportStatus="NORMAL"
             permissibleUsage="OPERATIONAL">

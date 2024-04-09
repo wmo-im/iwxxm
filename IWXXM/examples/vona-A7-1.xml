@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iwxxm:VolcanoObservatoryNoticeForAviation 
+    xmlns:iwxxm="http://icao.int/iwxxm/2025-2"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd
+    http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
+    gml:id="uuid.bf9c0a92-c909-4efc-8558-472d8aad209f" reportStatus="NORMAL" permissibleUsage="OPERATIONAL">
+
+    <!-- Unique identifier of the collective -->
+    <gml:identifier codeSpace="http://vona/centre/kvert">a9d53294-7fcf-4a73-9dd2-63df64041800</gml:identifier>
+    
+    <!-- A temporal bounding box containing the phenomenonTime of all objects -->
+    <iwxxm:boundingPeriod>
+        <gml:TimePeriod gml:id="uuid.c4e5e9cd-4fd5-4846-a8c3-f21d90857235">
+            <gml:beginPosition>2024-02-16T01:30:00Z</gml:beginPosition>
+            <gml:endPosition>2024-02-16T01:30:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:boundingPeriod>
+    
+    <!-- A spatial bounding box containing the phenomenonGeometry of all objects -->
+    <iwxxm:boundingVolume>
+        <iwxxm:ElevatedEnvelope>
+            <gml:lowerCorner srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">54.03 159.27</gml:lowerCorner>
+            <gml:upperCorner srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">54.03 159.27</gml:upperCorner>
+            <iwxxm:upperElevation uom="M">15000</iwxxm:upperElevation>
+            <iwxxm:upperVerticalReference>MSL</iwxxm:upperVerticalReference>
+            <iwxxm:lowerElevation uom="M">1536</iwxxm:lowerElevation>
+            <iwxxm:lowerVerticalReference>MSL</iwxxm:lowerVerticalReference>
+        </iwxxm:ElevatedEnvelope>
+    </iwxxm:boundingVolume>
+    
+    <!-- A list of all phenomena of all objects -->
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANO"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH"/>
+    
+    <!-- Issue time of the collective -->
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="uuid.ebd7395f-e9fd-4a8f-965f-3573476484e7">
+            <gml:timePosition>2024-02-16T01:30:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+
+    <!-- Originating centre of the collective -->
+    <iwxxm:originatingCentre>
+         <aixm:Unit gml:id="uuid.8e4920c1-7342-4870-98d0-61c154e97d2d">
+            <aixm:timeSlice>
+                <aixm:UnitTimeSlice gml:id="uuid.4445dee4-f57f-44fb-bb6e-f35f1a0ef577">
+                    <gml:validTime/>
+                    <aixm:interpretation>SNAPSHOT</aixm:interpretation>
+                    <aixm:name>KVERT</aixm:name>
+                    <aixm:type>OTHER</aixm:type>
+                    <aixm:designator>KVERT</aixm:designator>
+                </aixm:UnitTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Unit>
+    </iwxxm:originatingCentre>
+   
+    <!-- Category of objects, in this case volcanicObservations -->
+    <iwxxm:phenomenonCategory>volcanicObservations</iwxxm:phenomenonCategory>
+    
+    <!-- phenomenonTime is the time when the collective is valid -->
+    <iwxxm:phenomenonTime>
+        <gml:TimeInstant gml:id="uuid.b2e71246-b5bc-47b8-a553-9425f508e802">
+            <gml:timePosition>2024-02-16T01:30:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:phenomenonTime>
+    
+    <!-- A Volcano Object -->
+    <iwxxm:feature>
+        <iwxxm:MeteorologicalFeature gml:id="uuid.a2885938-cbd0-4953-bd07-c813ce918b1d">
+            <gml:identifier codeSpace="http://vona/volcano">88fb9884-e14e-4c2b-848f-88a34f3d8d07</gml:identifier>
+            <iwxxm:phenomenonCategory>volcanicObservations</iwxxm:phenomenonCategory>
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.39d9d7ac-35ee-48e7-9aff-4ca1bef73508">
+                    <gml:timePosition>2024-02-16T01:30:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANO"/>
+            <iwxxm:phenomenonGeometry>
+                <gml:Point gml:id="uuid.fd4d007a-0444-476c-820e-c3af3e67b917" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
+                    <gml:pos>54.03 159.27</gml:pos>
+                </gml:Point>
+            </iwxxm:phenomenonGeometry>
+            <iwxxm:phenomenonProperty>
+                <iwxxm:Volcano gml:id="uuid.b536caa9-3180-4c0a-9809-88bd7dd66d5d">
+                    <iwxxm:name>KARYMSKY</iwxxm:name>
+                    <iwxxm:IAVCEINumber>300130</iwxxm:IAVCEINumber>
+                    <iwxxm:sourceElevation>
+                        <iwxxm:ElevatedLevel gml:id="uuid.72b3c565-47ad-42c3-8235-4f94be7bff0d" srsDimension="2" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
+                            <iwxxm:elevation uom="M">1536</iwxxm:elevation>
+                            <iwxxm:verticalReference>MSL</iwxxm:verticalReference>
+                        </iwxxm:ElevatedLevel>
+                    </iwxxm:sourceElevation>
+                    <iwxxm:activityStatus>DECREASED_ACTIVITY</iwxxm:activityStatus>
+                </iwxxm:Volcano>
+            </iwxxm:phenomenonProperty>
+        </iwxxm:MeteorologicalFeature>
+    </iwxxm:feature>
+        
+    <!-- A Volcanic Ash Cloud Object -->
+    <iwxxm:feature>
+        <iwxxm:MeteorologicalFeature gml:id="uuid.14210650-668b-48f7-9d8d-f17eede0f253">
+            <gml:identifier codeSpace="http://vona/volcanic_ash_cloud">b99ba0e8-ddd0-4985-b0f8-914ad90d390b</gml:identifier>
+            <iwxxm:phenomenonCategory>volcanicObservations</iwxxm:phenomenonCategory>
+            <iwxxm:phenomenonTime>
+                <gml:TimeInstant gml:id="uuid.ecad909a-95a1-4e24-a137-ba1c883d97a1">
+                    <gml:timePosition>2024-02-16T01:30:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </iwxxm:phenomenonTime>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH"/>
+            <iwxxm:phenomenonGeometry>
+                <iwxxm:ElevatedLevel gml:id="uuid.f17a94a3-2412-44a0-8cd5-12873e4400c7" srsDimension="2" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
+                    <iwxxm:elevation uom="M">15000</iwxxm:elevation>
+                    <iwxxm:verticalReference>MSL</iwxxm:verticalReference>
+                </iwxxm:ElevatedLevel>
+            </iwxxm:phenomenonGeometry>
+            <iwxxm:phenomenonProperty nilReason="http://codes.wmo.int/common/nil/inapplicable"></iwxxm:phenomenonProperty>
+        </iwxxm:MeteorologicalFeature>
+    </iwxxm:feature>
+    
+    <!-- Rest of the elements in VONA collective -->
+    <iwxxm:stateOrRegion>RUSSIA</iwxxm:stateOrRegion>
+    <iwxxm:noticeNumber>2021/4</iwxxm:noticeNumber>
+    <iwxxm:currentColourCode>YELLOW</iwxxm:currentColourCode>
+    <iwxxm:previousColourCode>ORANGE</iwxxm:previousColourCode>
+    <iwxxm:contacts>DUTY VOLCANOLOGIEST, TEL +123-456-789 EMAIL, DUTY.VOLCANOLOGIEST[AT]VOLCANO.COM, WWW.VOLCANO.COM</iwxxm:contacts>
+    <iwxxm:remarks>SATELLITE, SEISMIC AND INFRASOUND DATA SHOW NO EVIDENCE OF FURTHER ERUPTIVE ACT. FUTURE EXPLOSIONS AT KARYMSKY ARE LIKELY. THEY OCCUR WO WRNG AND TYPICALLY PRODUCE SMALL VA CLD THAT DISSIPATE QUICKLY; HOWEVER, LARGER ASH ARE POSS.</iwxxm:remarks>
+    <iwxxm:nextNotice>WILL BE ISSUED BY 20240223/0130Z</iwxxm:nextNotice>
+
+</iwxxm:VolcanoObservatoryNoticeForAviation>
