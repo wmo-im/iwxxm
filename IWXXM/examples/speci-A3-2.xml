@@ -86,6 +86,7 @@
                     <gml:endPosition>2012-08-15T12:00:00Z</gml:endPosition>
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
+            <iwxxm:timeIndicator>UNTIL</iwxxm:timeIndicator>
             <iwxxm:prevailingVisibility uom="m">600</iwxxm:prevailingVisibility>
         </iwxxm:MeteorologicalAerodromeTrendForecast>
     </iwxxm:trendForecast>
@@ -97,6 +98,7 @@
                     <gml:timePosition>2012-08-15T12:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
+            <iwxxm:timeIndicator>AT</iwxxm:timeIndicator>
             <iwxxm:prevailingVisibility uom="m">8000</iwxxm:prevailingVisibility>
             <iwxxm:weather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
             <iwxxm:cloud nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
