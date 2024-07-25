@@ -36,9 +36,9 @@
                 <aixm:UnitTimeSlice gml:id="uuid.f8eb9604-6ddb-4553-9d9e-84548fb7af42">
                   <gml:validTime/>
                   <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                  <aixm:name>YUDD MWO</aixm:name>
+                  <aixm:name>YUSO MWO</aixm:name>
                   <aixm:type>MWO</aixm:type>
-                  <aixm:designator>YUDD</aixm:designator>
+                  <aixm:designator>YUSO</aixm:designator>
                 </aixm:UnitTimeSlice>
           </aixm:timeSlice>
         </aixm:Unit>
