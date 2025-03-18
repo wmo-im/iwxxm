@@ -692,7 +692,7 @@
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalFeature-2">
       <sch:rule context="//iwxxm:MeteorologicalFeature">
-         <sch:assert test="( if( name(..) != 'iwxxm:feature' ) then( exists(iwxxm:issueTime) and exists(iwxxm:originatingCentre) and exists(iwxxm:phenomenonCategory) and exists(iwxxm:phenomenonTime) ) else( true() ) )">MeteorologicalFeature.MeteorologicalFeature-2: Mandatory elements when the parent node is not iwxxm:MeteorologicalFeatureCollection</sch:assert>
+         <sch:assert test="( if( local-name(..) != 'feature' ) then( exists(iwxxm:issueTime) and exists(iwxxm:originatingCentre) and exists(iwxxm:phenomenonCategory) and exists(iwxxm:phenomenonTime) ) else( true() ) )">MeteorologicalFeature.MeteorologicalFeature-2: Mandatory elements when the parent node is not iwxxm:MeteorologicalFeatureCollection</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalPhenomenon">
