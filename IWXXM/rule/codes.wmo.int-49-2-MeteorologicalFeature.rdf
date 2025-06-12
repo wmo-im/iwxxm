@@ -1,274 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-    xmlns:ldp="http://www.w3.org/ns/ldp#"
-    xmlns:version="http://purl.org/linked-data/version#"
-    xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:ui="http://purl.org/linked-data/registry-ui#"
-    xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
-    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
-    xmlns:vann="http://purl.org/vocab/vann/"
-    xmlns:cc="http://creativecommons.org/ns#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.0="http://codes.wmo.int/def/bufr4/"
-    xmlns:reg="http://purl.org/linked-data/registry#"
-    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:void="http://rdfs.org/ns/void#"
-    xmlns:time="http://www.w3.org/2006/time#"
-    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
-    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
-    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
-    xmlns:qudt="http://qudt.org/schema/qudt#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:qb="http://purl.org/linked-data/cube#"
-    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
-    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
-    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
-    xmlns:api="http://purl.org/linked-data/api/vocab#"
-    xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
-  <ldp:Container rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature">
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:ldp="http://www.w3.org/ns/ldp#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:reg="http://purl.org/linked-data/registry#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <reg:Register rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/DUSTSTORM">
+        <skos:notation>DUSTSTORM</skos:notation>
+        <dct:description xml:lang="en">Duststorm</dct:description>
         <rdfs:label xml:lang="en">Duststorm</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >24</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/CONVERGENCE_LINE">
+        <skos:notation>CONVERGENCE_LINE</skos:notation>
+        <dct:description xml:lang="en">Convergence line</dct:description>
         <rdfs:label xml:lang="en">Convergence line</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >9</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
     <skos:member>
-      <skos:Concept
-rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/QUASI-STATIONARY_FRONT_AT_THE_SURFACE">
+      <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/QUASI-STATIONARY_FRONT_AT_THE_SURFACE">
+        <skos:notation>QUASI-STATIONARY_FRONT_AT_THE_SURFACE</skos:notation>
+        <dct:description xml:lang="en">Quasi-stationary front at the surface</dct:description>
         <rdfs:label xml:lang="en">Quasi-stationary front at the surface</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >0</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/JETSTREAM">
+        <skos:notation>JETSTREAM</skos:notation>
+        <dct:description xml:lang="en">Jet stream</dct:description>
         <rdfs:label xml:lang="en">Jet stream</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >10</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/THUNDERSTORM">
+        <skos:notation>THUNDERSTORM</skos:notation>
+        <dct:description xml:lang="en">Thunderstorm</dct:description>
         <rdfs:label xml:lang="en">Thunderstorm</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >21</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/ATMOSPHERICS">
+        <skos:notation>ATMOSPHERICS</skos:notation>
+        <dct:description xml:lang="en">Atmospherics</dct:description>
         <rdfs:label xml:lang="en">Atmospherics</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >18</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANO">
+        <skos:notation>VOLCANO</skos:notation>
+        <dct:description xml:lang="en">Volcano</dct:description>
         <rdfs:label xml:lang="en">Volcano</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >17</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/TROPICAL_CYCLONE">
+        <skos:notation>TROPICAL_CYCLONE</skos:notation>
+        <dct:description xml:lang="en">Tropical cyclone</dct:description>
         <rdfs:label xml:lang="en">Tropical cyclone</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >22</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/INSTABILITY_LINE">
+        <skos:notation>INSTABILITY_LINE</skos:notation>
+        <dct:description xml:lang="en">Instability line</dct:description>
         <rdfs:label xml:lang="en">Instability line</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >7</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/SPECIAL_CLOUDS">
+        <skos:notation>SPECIAL_CLOUDS</skos:notation>
+        <dct:description xml:lang="en">Special clouds</dct:description>
         <rdfs:label xml:lang="en">Special clouds</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >20</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/COLD_FRONT_ABOVE_THE_SURFACE">
+        <skos:notation>COLD_FRONT_ABOVE_THE_SURFACE</skos:notation>
+        <dct:description xml:lang="en">Cold front above the surface</dct:description>
         <rdfs:label xml:lang="en">Cold front above the surface</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >5</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <dct:publisher rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/OCCLUSION">
+        <skos:notation>OCCLUSION</skos:notation>
+        <dct:description xml:lang="en">Occlusion</dct:description>
         <rdfs:label xml:lang="en">Occlusion</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >6</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/AIRFRAME_ICING">
+        <skos:notation>AIRFRAME_ICING</skos:notation>
+        <dct:description xml:lang="en">Airframe icing</dct:description>
         <rdfs:label xml:lang="en">Airframe icing</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >15</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/INTERTROPICAL_FRONT">
+        <skos:notation>INTERTROPICAL_FRONT</skos:notation>
+        <dct:description xml:lang="en">Intertropical front</dct:description>
         <rdfs:label xml:lang="en">Intertropical front</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >8</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-    >2014-09-03T09:54:08.691Z</dct:modified>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/TURBULENCE">
+        <skos:notation>TURBULENCE</skos:notation>
+        <dct:description xml:lang="en">Turbulence</dct:description>
         <rdfs:label xml:lang="en">Turbulence</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >13</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/PHENOMENON">
+        <skos:notation>PHENOMENON</skos:notation>
+        <dct:description xml:lang="en">Phenomenon</dct:description>
         <rdfs:label xml:lang="en">Phenomenon</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >16</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <rdf:type rdf:resource="http://purl.org/linked-data/registry#Register"/>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/WARM_FRONT_ABOVE_THE_SURFACE">
+        <skos:notation>WARM_FRONT_ABOVE_THE_SURFACE</skos:notation>
+        <dct:description xml:lang="en">Warm front above the surface</dct:description>
         <rdfs:label xml:lang="en">Warm front above the surface</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >3</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/QUASI-STATIONARY_FRONT_ABOVE_THE_SURFACE">
+        <skos:notation>QUASI-STATIONARY_FRONT_ABOVE_THE_SURFACE</skos:notation>
+        <dct:description xml:lang="en">Quasi-stationary front above the surface</dct:description>
         <rdfs:label xml:lang="en">Quasi-stationary front above the surface</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >1</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-    >1</owl:versionInfo>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/MOUNTAIN_WAVE">
+        <skos:notation>MOUNTAIN_WAVE</skos:notation>
+        <dct:description xml:lang="en">Mountain wave</dct:description>
         <rdfs:label xml:lang="en">Mountain wave</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >23</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/WARM_FRONT_AT_THE_SURFACE">
+        <skos:notation>WARM_FRONT_AT_THE_SURFACE</skos:notation>
+        <dct:description xml:lang="en">Warm front at the surface</dct:description>
         <rdfs:label xml:lang="en">Warm front at the surface</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >2</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/CLOUD_CLEAR">
+        <skos:notation>CLOUD_CLEAR</skos:notation>
+        <dct:description xml:lang="en">Cloud clear</dct:description>
         <rdfs:label xml:lang="en">Cloud clear</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >11</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/COLD_FRONT_AT_THE_SURFACE">
+        <skos:notation>COLD_FRONT_AT_THE_SURFACE</skos:notation>
+        <dct:description xml:lang="en">Cold front at the surface</dct:description>
         <rdfs:label xml:lang="en">Cold front at the surface</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >4</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/STORM">
+        <skos:notation>STORM</skos:notation>
+        <dct:description xml:lang="en">Storm</dct:description>
         <rdfs:label xml:lang="en">Storm</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >14</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/SANDSTORM">
+        <skos:notation>SANDSTORM</skos:notation>
+        <dct:description xml:lang="en">Sandstorm</dct:description>
         <rdfs:label xml:lang="en">Sandstorm</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >25</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <rdfs:label>Meteorological feature</rdfs:label>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/CLOUD">
+        <skos:notation>CLOUD</skos:notation>
+        <dct:description xml:lang="en">Cloud</dct:description>
         <rdfs:label xml:lang="en">Cloud</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >12</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/TROPOPAUSE">
+        <skos:notation>TROPOPAUSE</skos:notation>
+        <dct:description xml:lang="en">Tropopause</dct:description>
         <rdfs:label xml:lang="en">Tropopause</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >25</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <rdfs:label>Meteorological feature</rdfs:label>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/RADIATION">
+        <skos:notation>RADIATION</skos:notation>
+        <dct:description xml:lang="en">Radiation</dct:description>
         <rdfs:label xml:lang="en">Radiation</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >26</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <rdfs:label>Meteorological feature</rdfs:label>
-    <skos:member>^
+    <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH">
+        <skos:notation>VOLCANIC_ASH</skos:notation>
+        <dct:description xml:lang="en">Volcanic Ash</dct:description>
         <rdfs:label xml:lang="en">Volcanic Ash</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >27</skos:notation>
-        <j.0:fxy>008011</j.0:fxy>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-  </ldp:Container>
+    <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <skos:notation>MeteorologicalFeature</skos:notation>
+    <dct:description xml:lang="en">The items within this code table are the weather phenomena being represented by a weather object.</dct:description>
+    <rdfs:label xml:lang="en">Meteorological Features</rdfs:label>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-07-15T00:00:00+00:00</dct:modified>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+    <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+  </reg:Register>
 </rdf:RDF>

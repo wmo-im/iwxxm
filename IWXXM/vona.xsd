@@ -2,7 +2,19 @@
 <schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="1.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="metFeature.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
-	<element name="VolcanoObservatoryNoticeForAviation" type="iwxxm:VolcanoObservatoryNoticeForAviationType" substitutionGroup="iwxxm:MeteorologicalFeatureCollection"></element>
+	<annotation>
+		<documentation>This package defines a collective and selected meteorological objects for provision of Volcano Observatory Notice for Aviation (VONA) as defined in ICAO Annex 3 and PANS-MET (Doc 10157) for dissemination of critical, operationally relevant information about volcanic activity.  Guidance on the criteria is provided in the Handbook on the International Airways Watch (Doc 9766).
+
+Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.
+
+References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
+	</annotation>
+	<element name="VolcanoObservatoryNoticeForAviation" type="iwxxm:VolcanoObservatoryNoticeForAviationType" substitutionGroup="iwxxm:MeteorologicalFeatureCollection">
+		<annotation>
+			<documentation>A product issued by the State Volcano Observatory (SVO) with a
+summary of volcanic activity and observations about ash emission (or lack thereof) which is intended for aviation users.</documentation>
+		</annotation>
+	</element>
 	<complexType name="VolcanoObservatoryNoticeForAviationType">
 		<complexContent>
 			<extension base="iwxxm:MeteorologicalFeatureCollectionType">

@@ -1,436 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-    xmlns:ldp="http://www.w3.org/ns/ldp#"
-    xmlns:version="http://purl.org/linked-data/version#"
-    xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:ui="http://purl.org/linked-data/registry-ui#"
-    xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
-    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
-    xmlns:vann="http://purl.org/vocab/vann/"
-    xmlns:cc="http://creativecommons.org/ns#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.0="http://codes.wmo.int/def/bufr4/"
-    xmlns:reg="http://purl.org/linked-data/registry#"
-    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:void="http://rdfs.org/ns/void#"
-    xmlns:time="http://www.w3.org/2006/time#"
-    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
-    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
-    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
-    xmlns:qudt="http://qudt.org/schema/qudt#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:qb="http://purl.org/linked-data/cube#"
-    xmlns:j.1="http://codes.wmo.int/common/c-15/me/"
-    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
-    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
-    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
-    xmlns:api="http://purl.org/linked-data/api/vocab#"
-    xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
-  <skos:Collection rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012">
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/25">
-        <rdfs:label xml:lang="en">Altocumulus translucidus in bands, or one or more layers of Altocumulus translucidus or opacus, progressively invading the sky; these Altocumulus clouds generally thicken as a whole</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >25</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/40">
-        <rdfs:label xml:lang="en">CH</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >40</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/42">
-        <rdfs:label xml:lang="en">CL</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >42</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/26">
-        <rdfs:label xml:lang="en">Altocumulus cumulogenitus (or cumulonimbogenitus)</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >26</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/59">
-        <rdfs:label xml:lang="en">Cloud not visible owing to darkness, fog, duststorm, sandstorm, or other analogous phenomena</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >59</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:ldp="http://www.w3.org/ns/ldp#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:reg="http://purl.org/linked-data/registry#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <reg:Register rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/0">
-        <rdfs:label xml:lang="en">Cirrus (Ci)</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >0</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/28">
-        <rdfs:label xml:lang="en">Altocumulus castellanus or floccus</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >28</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <dct:publisher rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/34">
-        <rdfs:label xml:lang="en">Stratocumulus cumulogenitus</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >34</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/36">
-        <rdfs:label xml:lang="en">Stratus nebulosus or Stratus fractus other than of bad weather,* or both</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >36</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/37">
-        <rdfs:label xml:lang="en">Stratus fractus or Cumulus fractus of bad weather,* or both (pannus), usually below Altostratus or Nimbostratus</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >37</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <rdfs:label>Cloud type</rdfs:label>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/20">
-        <rdfs:label xml:lang="en">No CM clouds</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >20</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/63">
-        <rdfs:label xml:lang="en">Missing value</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >63</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-    >2014-09-03T09:54:43.408Z</dct:modified>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/16">
-        <rdfs:label xml:lang="en">Cirrus (often in bands) and Cirrostratus, or Cirrostratus alone, progressively Invading the sky; they generally thicken as a whole; the continuous veil extends more than 45 degrees above the horizon, without the sky being totally covered</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >16</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/18">
-        <rdfs:label xml:lang="en">Cirrostratus not progressively invading the sky and not entirely covering it</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >18</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/10">
-        <rdfs:label xml:lang="en">No CH clouds</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >10</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/41">
-        <rdfs:label xml:lang="en">CM</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >41</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/39">
-        <rdfs:label xml:lang="en">Cumulonimbus capillatus (often with an anvil), with or without Cumulonimbus calvus, Cumulus, Stratocumulus, Stratus or pannus</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >39</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/19">
-        <rdfs:label xml:lang="en">Cirrocumulus alone, or Cirrocumulus predominant among the CH clouds</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >19</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/31">
-        <rdfs:label xml:lang="en">Cumulus humilis or Cumulus fractus other than of bad weather,* or both</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >31</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/11">
-        <rdfs:label xml:lang="en">Cirrus fibratus, sometimes uncinus, not progressively invading the sky</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >11</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/13">
-        <rdfs:label xml:lang="en">Cirrus spissatus cumulonimbogenitus</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >13</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-    >1</owl:versionInfo>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/27">
-        <rdfs:label xml:lang="en">Altocumulus translucidus or opacus in two or more layers, or Altocumulus opacus in a single layer, not progressively invading the sky, or Altocumulus with Altostratus or Nimbostratus</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >27</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+        <skos:notation>0</skos:notation>
+        <dct:description xml:lang="en">Cirrus (Ci)</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/1">
-        <rdfs:label xml:lang="en">Cirrocumulus (Cc)</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >1</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/29">
-        <rdfs:label xml:lang="en">Altocumulus of a chaotic sky, generally at several levels</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >29</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/5">
-        <rdfs:label xml:lang="en">Nimbostratus (Ns)</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >5</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+        <skos:notation>1</skos:notation>
+        <dct:description xml:lang="en">Cirrocumulus (Cc)</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/2">
-        <rdfs:label xml:lang="en">Cirrostratus (Cs)</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >2</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+        <skos:notation>2</skos:notation>
+        <dct:description xml:lang="en">Cirrostratus (Cs)</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/3">
+        <skos:notation>3</skos:notation>
+        <dct:description xml:lang="en">Altocumulus (Ac)</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/4">
-        <rdfs:label xml:lang="en">Altostratus (As)</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >4</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+        <skos:notation>4</skos:notation>
+        <dct:description xml:lang="en">Altostratus (As)</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/5">
+        <skos:notation>5</skos:notation>
+        <dct:description xml:lang="en">Nimbostratus (Ns)</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/6">
-        <rdfs:label xml:lang="en">Stratocumulus (Sc)</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >6</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+        <skos:notation>6</skos:notation>
+        <dct:description xml:lang="en">Stratocumulus (Sc)</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/60">
-        <rdfs:label xml:lang="en">CH clouds invisible owing to darkness, fog, blowing dust or sand, or other similar phenomena, or because of a continuous layer of lower clouds</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >60</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/7">
+        <skos:notation>7</skos:notation>
+        <dct:description xml:lang="en">Stratus (St)</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/8">
-        <rdfs:label xml:lang="en">Cumulus (Cu)</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >8</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/38">
-        <rdfs:label xml:lang="en">Cumulus and Stratocumulus other than Stratocumulus cumulogenitus, with bases at different levels</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >38</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/21">
-        <rdfs:label xml:lang="en">Altostratus translucidus</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >21</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/22">
-        <rdfs:label xml:lang="en">Altostratus opacus or Nimbostratus</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >22</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/24">
-        <rdfs:label xml:lang="en">Patches (often lenticular) of Altocumulus translucidus, continually changing and occurring at one or more levels</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >24</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/30">
-        <rdfs:label xml:lang="en">No CL clouds</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >30</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/32">
-        <rdf:type rdf:resource="http://codes.wmo.int/common/c-15/me/cloudType"/>
-        <rdfs:label xml:lang="en">Towering cumulus</rdfs:label>
-        <rdfs:label xml:lang="en">Cumulus mediocris or congestus, Towering cumulus (TCU), with or without Cumulus of species fractus or humilis or Stratocumulus, all having their bases at the same level</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >32</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/12">
-        <rdfs:label xml:lang="en">Cirrus spissatus, in patches or entangled sheaves, which usually do not increase and sometimes seem to be the remains of the upper part of a Cumulonimbus; or Cirrus castellanus or floccus</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >12</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/14">
-        <rdfs:label xml:lang="en">Cirrus uncinus or fibratus, or both, progressively invading the sky; they generally thicken as a whole</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >14</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/33">
-        <rdfs:label xml:lang="en">Cumulonimbus calvus, with or without Cumulus, Stratocumulus or Stratus</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >33</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/35">
-        <rdfs:label xml:lang="en">Stratocumulus other than Stratocumulus cumulogenitus</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >35</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/3">
-        <rdfs:label xml:lang="en">Altocumulus (Ac)</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >3</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/7">
-        <rdfs:label xml:lang="en">Stratus (St)</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >7</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/61">
-        <rdfs:label xml:lang="en">CM clouds invisible owing to darkness, fog, blowing dust or sand, or other similar phenomena, or because of continuous layer of lower clouds</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >61</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+        <skos:notation>8</skos:notation>
+        <dct:description xml:lang="en">Cumulus (Cu)</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/9">
-        <rdf:type rdf:resource="http://codes.wmo.int/common/c-15/me/cloudType"/>
-        <rdfs:label xml:lang="en">Cumulonimbus</rdfs:label>
-        <rdfs:label xml:lang="en">Cumulonimbus (Cb)</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >9</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+        <skos:notation>9</skos:notation>
+        <dct:description xml:lang="en">Cumulonimbus (Cb)</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/62">
-        <rdfs:label xml:lang="en">CL clouds invisible owing to darkness, fog, blowing dust or sand, or other similar phenomena</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >62</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/10">
+        <skos:notation>10</skos:notation>
+        <dct:description xml:lang="en">No CH clouds</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/11">
+        <skos:notation>11</skos:notation>
+        <dct:description xml:lang="en">Cirrus fibratus, sometimes uncinus, not progressively invading the sky</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/12">
+        <skos:notation>12</skos:notation>
+        <dct:description xml:lang="en">Cirrus spissatus, in patches or entangled sheaves, which usually do not increase and sometimes seem to be the remains of the upper part of a Cumulonimbus; or Cirrus castellanus or floccus</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/13">
+        <skos:notation>13</skos:notation>
+        <dct:description xml:lang="en">Cirrus spissatus cumulonimbogenitus</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/14">
+        <skos:notation>14</skos:notation>
+        <dct:description xml:lang="en">Cirrus uncinus or fibratus, or both, progressively invading the sky; they generally thicken as a whole</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/15">
-        <rdfs:label xml:lang="en">Cirrus (often in bands) and Cirrostratus, or Cirrostratus alone, progressively invading the sky; they generally thicken as a whole, but the continuous veil does not reach 45 degrees above the horizon</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >15</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+        <skos:notation>15</skos:notation>
+        <dct:description xml:lang="en">Cirrus (often in bands) and Cirrostratus, or Cirrostratus alone, progressively invading the sky; they generally thicken as a whole, but the continuous veil does not reach 45 degrees above the horizon</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/16">
+        <skos:notation>16</skos:notation>
+        <dct:description xml:lang="en">Cirrus (often in bands) and Cirrostratus, or Cirrostratus alone, progressively Invading the sky; they generally thicken as a whole; the continuous veil extends more than 45 degrees above the horizon, without the sky being totally covered</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/17">
-        <rdfs:label xml:lang="en">Cirrostratus covering the whole sky</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >17</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+        <skos:notation>17</skos:notation>
+        <dct:description xml:lang="en">Cirrostratus covering the whole sky</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <rdf:type rdf:resource="http://purl.org/linked-data/registry#Register"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/18">
+        <skos:notation>18</skos:notation>
+        <dct:description xml:lang="en">Cirrostratus not progressively invading the sky and not entirely covering it</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/19">
+        <skos:notation>19</skos:notation>
+        <dct:description xml:lang="en">Cirrocumulus alone, or Cirrocumulus predominant among the CH clouds</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/20">
+        <skos:notation>20</skos:notation>
+        <dct:description xml:lang="en">No CM clouds</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/21">
+        <skos:notation>21</skos:notation>
+        <dct:description xml:lang="en">Altostratus translucidus</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/22">
+        <skos:notation>22</skos:notation>
+        <dct:description xml:lang="en">Altostratus opacus or Nimbostratus</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/23">
-        <rdfs:label xml:lang="en">Altocumulus translucidus at a single level</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >23</skos:notation>
-        <j.0:fxy>020012</j.0:fxy>
+        <skos:notation>23</skos:notation>
+        <dct:description xml:lang="en">Altocumulus translucidus at a single level</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-  </skos:Collection>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/24">
+        <skos:notation>24</skos:notation>
+        <dct:description xml:lang="en">Patches (often lenticular) of Altocumulus translucidus, continually changing and occurring at one or more levels</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/25">
+        <skos:notation>25</skos:notation>
+        <dct:description xml:lang="en">Altocumulus translucidus in bands, or one or more layers of Altocumulus translucidus or opacus, progressively invading the sky; these Altocumulus clouds generally thicken as a whole</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/26">
+        <skos:notation>26</skos:notation>
+        <dct:description xml:lang="en">Altocumulus cumulogenitus (or cumulonimbogenitus)</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/27">
+        <skos:notation>27</skos:notation>
+        <dct:description xml:lang="en">Altocumulus translucidus or opacus in two or more layers, or Altocumulus opacus in a single layer, not progressively invading the sky, or Altocumulus with Altostratus or Nimbostratus</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/28">
+        <skos:notation>28</skos:notation>
+        <dct:description xml:lang="en">Altocumulus castellanus or floccus</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/29">
+        <skos:notation>29</skos:notation>
+        <dct:description xml:lang="en">Altocumulus of a chaotic sky, generally at several levels</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/30">
+        <skos:notation>30</skos:notation>
+        <dct:description xml:lang="en">No CL clouds</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/31">
+        <skos:notation>31</skos:notation>
+        <dct:description xml:lang="en">Cumulus humilis or Cumulus fractus other than of bad weather,* or both</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/32">
+        <skos:notation>32</skos:notation>
+        <dct:description xml:lang="en">Cumulus mediocris or congestus, Towering cumulus (TCU), with or without Cumulus of species fractus or humilis or Stratocumulus, all having their bases at the same level</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/33">
+        <skos:notation>33</skos:notation>
+        <dct:description xml:lang="en">Cumulonimbus calvus, with or without Cumulus, Stratocumulus or Stratus</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/34">
+        <skos:notation>34</skos:notation>
+        <dct:description xml:lang="en">Stratocumulus cumulogenitus</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/35">
+        <skos:notation>35</skos:notation>
+        <dct:description xml:lang="en">Stratocumulus other than Stratocumulus cumulogenitus</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/36">
+        <skos:notation>36</skos:notation>
+        <dct:description xml:lang="en">Stratus nebulosus or Stratus fractus other than of bad weather,* or both</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/37">
+        <skos:notation>37</skos:notation>
+        <dct:description xml:lang="en">Stratus fractus or Cumulus fractus of bad weather,* or both (pannus), usually below Altostratus or Nimbostratus</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/38">
+        <skos:notation>38</skos:notation>
+        <dct:description xml:lang="en">Cumulus and Stratocumulus other than Stratocumulus cumulogenitus, with bases at different levels</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/39">
+        <skos:notation>39</skos:notation>
+        <dct:description xml:lang="en">Cumulonimbus capillatus (often with an anvil), with or without Cumulonimbus calvus, Cumulus, Stratocumulus, Stratus or pannus</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/40">
+        <skos:notation>40</skos:notation>
+        <dct:description xml:lang="en">CH</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/41">
+        <skos:notation>41</skos:notation>
+        <dct:description xml:lang="en">CM</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/42">
+        <skos:notation>42</skos:notation>
+        <dct:description xml:lang="en">CL</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/59">
+        <skos:notation>59</skos:notation>
+        <dct:description xml:lang="en">Cloud not visible owing to darkness, fog, duststorm, sandstorm, or other analogous phenomena</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/60">
+        <skos:notation>60</skos:notation>
+        <dct:description xml:lang="en">CH clouds invisible owing to darkness, fog, blowing dust or sand, or other similar phenomena, or because of a continuous layer of lower clouds</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/61">
+        <skos:notation>61</skos:notation>
+        <dct:description xml:lang="en">CM clouds invisible owing to darkness, fog, blowing dust or sand, or other similar phenomena, or because of continuous layer of lower clouds</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/62">
+        <skos:notation>62</skos:notation>
+        <dct:description xml:lang="en">CL clouds invisible owing to darkness, fog, blowing dust or sand, or other similar phenomena</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-012/63">
+        <skos:notation>63</skos:notation>
+        <dct:description xml:lang="en">Missing value</dct:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63</rdfs:label>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <skos:notation>0-20-012</skos:notation>
+    <rdfs:label xml:lang="en">Cloud type</rdfs:label>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-03T09:54:43.408000+00:00</dct:modified>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+    <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+  </reg:Register>
 </rdf:RDF>

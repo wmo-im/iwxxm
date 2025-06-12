@@ -5,7 +5,7 @@
     xmlns:gml="http://www.opengis.net/gml/3.2" 
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC2/iwxxm.xsd"
     gml:id="uuid.dea6234c-f57f-4ccf-be7a-bb00a0265af2" 
     reportStatus="NORMAL" 
     permissibleUsage="OPERATIONAL">
@@ -53,12 +53,31 @@
                                                 <gml:PolygonPatch>
                                                     <gml:exterior>
                                                         <gml:LinearRing>
-                                                            <gml:posList>
-                                                                30 180
-                                                                60 180
-                                                                60 -180
-                                                                30 -180
-                                                                30 180
+                                                            <gml:posList count="140">60.0 101.5 56.3 97.0 51.9 92.9 47.4 89.5 42.9
+                                                                86.7 38.2 84.3 33.5 82.1 30.0 80.7 30.0 80.7 28.8 80.2 24.1 78.4
+                                                                19.3 76.8 14.5 75.3 9.7 73.8 4.9 72.3 0.1 70.9 0.0 70.9 0.0 70.9
+                                                                -4.7 69.5 -9.5 68.0 -14.3 66.6 -19.1 65.0 -23.9 63.4 -28.6 61.6
+                                                                -30.0 61.0 -30.0 61.0 -33.4 59.6 -38.1 57.5 -42.7 55.0 -47.3 52.1
+                                                                -51.8 48.7 -56.1 44.6 -60.0 39.8 -60.0 40.0 -60.0 45.0 -60.0 50.0
+                                                                -60.0 55.0 -60.0 60.0 -60.0 65.0 -60.0 70.0 -60.0 75.0 -60.0 80.0
+                                                                -60.0 85.0 -60.0 90.0 -60.0 95.0 -60.0 100.0 -60.0 105.0 -60.0 110.0
+                                                                -60.0 115.0 -60.0 120.0 -60.0 125.0 -60.0 130.0 -60.0 135.0 -60.0
+                                                                140.0 -60.0 145.0 -60.0 150.0 -60.0 155.0 -60.0 160.0 -60.0 165.0
+                                                                -60.0 170.0 -60.0 175.0 -60.0 180.0 -60.0 -175.0 -60.0 -170.0 -60.0
+                                                                -165.0 -60.0 -160.0 -60.0 -155.0 -60.0 -150.0 -60.0 -145.0 -60.0
+                                                                -140.0 -60.0 -135.0 -60.0 -130.0 -60.0 -125.0 -60.0 -120.0 -60.0
+                                                                -115.0 -60.0 -110.0 -60.0 -105.0 -60.0 -100.0 -60.0 -95.0 -60.0
+                                                                -90.0 -60.0 -85.0 -60.0 -80.0 -60.0 -78.0 -56.1 -82.8 -51.8 -86.9
+                                                                -47.3 -90.3 -42.7 -93.2 -38.1 -95.7 -33.4 -97.8 -30.0 -99.2 -30.0
+                                                                -99.2 -28.6 -99.8 -23.9 -101.6 -19.1 -103.2 -14.3 -104.8 -9.5 -106.2
+                                                                -4.7 -107.7 0.0 -109.1 0.0 -109.1 0.1 -109.1 4.9 -110.5 9.7 -112.0
+                                                                14.5 -113.5 19.3 -115.0 24.1 -116.6 28.8 -118.4 30.0 -118.9 30.0
+                                                                -118.9 33.5 -120.3 38.2 -122.5 42.9 -124.9 47.4 -127.7 51.9 -131.1
+                                                                56.3 -135.2 60.0 -139.7 60.0 -140.0 60.0 -145.0 60.0 -150.0 60.0
+                                                                -155.0 60.0 -160.0 60.0 -165.0 60.0 -170.0 60.0 -175.0 60.0 -180.0
+                                                                60.0 175.0 60.0 170.0 60.0 165.0 60.0 160.0 60.0 155.0 60.0 150.0
+                                                                60.0 145.0 60.0 140.0 60.0 135.0 60.0 130.0 60.0 125.0 60.0 120.0
+                                                                60.0 115.0 60.0 110.0 60.0 105.0 60.0 101.5
                                                             </gml:posList>
                                                         </gml:LinearRing>
                                                     </gml:exterior>
@@ -69,120 +88,9 @@
                                 </aixm:AirspaceVolume>
                             </iwxxm:location>
                             <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/MNH"/>
-                        </iwxxm:SpaceWeatherRegion>
-                    </iwxxm:region>
-                    <iwxxm:region>
-                        <iwxxm:SpaceWeatherRegion gml:id="uuid.03f257e6-63ea-4604-a896-0545c63be45b">
-                            <iwxxm:location>
-                                <aixm:AirspaceVolume gml:id="uuid.uuid.7138f8d1-9854-46cb-a1b1-9d96c5cee46f">
-                                    <aixm:horizontalProjection>
-                                        <aixm:Surface gml:id="uuid.4947b933-5b70-442f-b8e5-bc6237aa8526" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                            <gml:patches>
-                                                <gml:PolygonPatch>
-                                                    <gml:exterior>
-                                                        <gml:LinearRing>
-                                                            <gml:posList>
-                                                                00 180
-                                                                30 180
-                                                                30 -180
-                                                                00 -180
-                                                                00 180
-                                                            </gml:posList>
-                                                        </gml:LinearRing>
-                                                    </gml:exterior>
-                                                </gml:PolygonPatch>
-                                            </gml:patches>
-                                        </aixm:Surface>
-                                    </aixm:horizontalProjection>
-                                </aixm:AirspaceVolume>
-                            </iwxxm:location>
                             <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/EQN"/>
-                        </iwxxm:SpaceWeatherRegion>
-                    </iwxxm:region>
-                    <iwxxm:region>
-                        <iwxxm:SpaceWeatherRegion gml:id="uuid.bf8c0ce9-0e3c-4926-9ada-404c7a377844">
-                            <iwxxm:location>
-                                <aixm:AirspaceVolume gml:id="uuid.35176a41-3b85-4035-8eec-1fdfbed1a73b">
-                                    <aixm:horizontalProjection>
-                                        <aixm:Surface gml:id="uuid.0e5ad8d3-400b-4460-b8ef-833eb456d35e" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                            <gml:patches>
-                                                <gml:PolygonPatch>
-                                                    <gml:exterior>
-                                                        <gml:LinearRing>
-                                                            <gml:posList>
-                                                                -30 180
-                                                                00 180
-                                                                00 -180
-                                                                -30 -180
-                                                                -30 180
-                                                            </gml:posList>
-                                                        </gml:LinearRing>
-                                                    </gml:exterior>
-                                                </gml:PolygonPatch>
-                                            </gml:patches>
-                                        </aixm:Surface>
-                                    </aixm:horizontalProjection>
-                                </aixm:AirspaceVolume>
-                            </iwxxm:location>
                             <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/EQS"/>
-                        </iwxxm:SpaceWeatherRegion>
-                    </iwxxm:region>
-                    <iwxxm:region>
-                        <iwxxm:SpaceWeatherRegion gml:id="uuid.0cfde53e-07ae-41dd-ac1a-9f0a53789d0a">
-                            <iwxxm:location>
-                                <aixm:AirspaceVolume gml:id="uuid.c7ccb885-a5f9-444c-9a90-bf6d24cc97e2">
-                                    <aixm:horizontalProjection>
-                                        <aixm:Surface gml:id="uuid.e60a4857-0205-43ff-970f-2b1e01a67102" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                            <gml:patches>
-                                                <gml:PolygonPatch>
-                                                    <gml:exterior>
-                                                        <gml:LinearRing>
-                                                            <gml:posList>
-                                                                -60 180
-                                                                -30 180
-                                                                -30 -180
-                                                                -60 -180
-                                                                -60 180
-                                                            </gml:posList>
-                                                        </gml:LinearRing>
-                                                    </gml:exterior>
-                                                </gml:PolygonPatch>
-                                            </gml:patches>
-                                        </aixm:Surface>
-                                    </aixm:horizontalProjection>
-                                </aixm:AirspaceVolume>
-                            </iwxxm:location>
                             <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/MSH"/>
-                        </iwxxm:SpaceWeatherRegion>
-                    </iwxxm:region>
-                    <iwxxm:region>
-                        <iwxxm:SpaceWeatherRegion gml:id="uuid.0a7f155f-e952-4747-a318-877b46187186">
-                            <iwxxm:location>
-                                <aixm:AirspaceVolume gml:id="uuid.5dd7358d-f580-45e5-8c7b-2aaa8ebf0574">
-                                    <aixm:horizontalProjection>
-                                        <aixm:Surface gml:id="uuid.7eb777d7-e6b0-42a5-b10d-27210a9e414e" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                            <gml:patches>
-                                                <gml:PolygonPatch>
-                                                    <gml:exterior>
-                                                        <gml:Ring>
-                                                            <gml:curveMember>
-                                                                <gml:Curve gml:id="uuid.bcf98ca2-0fb0-44b9-880d-7f45a284d1b3">
-                                                                    <gml:segments>
-                                                                        <gml:CircleByCenterPoint numArc="1">
-                                                                            <gml:pos>-16.71 70.94</gml:pos>
-                                                                            <gml:radius uom="km">10100</gml:radius>
-                                                                        </gml:CircleByCenterPoint>
-                                                                    </gml:segments>
-                                                                </gml:Curve>
-                                                            </gml:curveMember>
-                                                        </gml:Ring>
-                                                    </gml:exterior>
-                                                </gml:PolygonPatch>
-                                            </gml:patches>
-                                        </aixm:Surface>
-                                    </aixm:horizontalProjection>
-                                </aixm:AirspaceVolume>
-                            </iwxxm:location>
                             <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/DAYSIDE"/>
                         </iwxxm:SpaceWeatherRegion>
                     </iwxxm:region>
@@ -205,8 +113,8 @@
                                                                 <gml:Curve gml:id="uuid.751125de-d41a-41f5-a458-5092a6fe0200">
                                                                     <gml:segments>
                                                                         <gml:CircleByCenterPoint numArc="1">
-                                                                            <gml:pos>9999 9999</gml:pos>
-                                                                            <gml:radius uom="km">10100</gml:radius>
+                                                                            <gml:pos>16.6 -19.1</gml:pos>
+                                                                            <gml:radius uom="km">10018</gml:radius>
                                                                         </gml:CircleByCenterPoint>
                                                                     </gml:segments>
                                                                 </gml:Curve>
@@ -234,7 +142,7 @@
                     <gml:timePosition>2020-11-08T07:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:intensityAndRegion nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:intensityAndRegion xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
@@ -245,7 +153,7 @@
                     <gml:timePosition>2020-11-08T13:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:intensityAndRegion nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:intensityAndRegion xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
@@ -256,7 +164,7 @@
                     <gml:timePosition>2020-11-08T19:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:intensityAndRegion nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:intensityAndRegion xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
@@ -267,7 +175,7 @@
                     <gml:timePosition>2020-11-09T01:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:intensityAndRegion nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:intensityAndRegion xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     

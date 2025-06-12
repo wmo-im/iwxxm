@@ -3,7 +3,11 @@
 	<include schemaLocation="metFeature.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
-		<documentation>The Quantitative Volcanic Ash Concentration Information product provides a forecast of significant ash cloud(s) that poses a widespread impact to aircraft operations and air navigation. Guidance on the criteria is provided in the Handbook on the International Airways Watch (Doc 9766).</documentation>
+		<documentation>This package defines a collective and selected meteorological objects for provision of Quantitative Volcanic Ash (QVA) Concentration Information as defined in ICAO Annex 3 and PANS-MET (Doc 10157) with forecast of significant ash cloud(s) that poses a widespread impact to aircraft operations and air navigation.  Guidance on the criteria is provided in the Handbook on the International Airways Watch (Doc 9766).
+
+Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.
+
+References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
 	<element name="QuantitativeVolcanicAshConcentrationInformation" type="iwxxm:QuantitativeVolcanicAshConcentrationInformationType" substitutionGroup="iwxxm:MeteorologicalFeatureCollection">
 		<annotation>
@@ -27,6 +31,11 @@
 					<element name="dispersionModelAshCloudHeight" type="iwxxm:ElevatedLevelPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Maximum height of ash cloud or eruption column at initialisation time in meters ("m") or feet ("[ft_i]"). Use negative values to represent levels below mean sea level.</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="iwxxm:StringWithNilReasonType">
+						<annotation>
+							<documentation>Additional information to be provided with the QVACI.</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -76,10 +85,10 @@
 			<documentation>The code list for volcanic ash concentrations:
 
 
-	- &gt;= 0.2 mg/m3   "Low and possibly higher"
-	- &gt;= 2 mg/m3     "Medium and possibly higher"
-	- &gt;= 5 mg/m3     "High and possibly higher"
-	- &gt;= 10 mg/m3   "Very High"</documentation>
+	- &gt;= 0.2 mg/m3   "Greater than or equal to 0.2 mg/m3"
+	- &gt;= 2 mg/m3     "Greater than or equal to 2 mg/m3"
+	- &gt;= 5 mg/m3     "Greater than or equal to 5 mg/m3"
+	- &gt;= 10 mg/m3   "Greater than or equal to 10 mg/m3"</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/iwxxm/VolcanicAshConcentrations</vocabulary>
 				<extensibility>none</extensibility>

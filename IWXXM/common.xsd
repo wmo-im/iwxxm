@@ -309,7 +309,7 @@ CORRECTION: The report is a correction to a previously issued report</documentat
 	</simpleType>
 	<simpleType name="RelationalOperatorType">
 		<annotation>
-			<documentation>RelationalOperator defines the restricted set of operators that may be specified alongside numerical quantities in ICAO Annex 3/WMO No. 49.
+			<documentation>RelationalOperator defines the restricted set of operators that may be specified alongside numerical quantities in ICAO Annex 3 and PANS-MET (Doc 10157).
 
 These operators are used in cases where a precise value is not measurable, not precisely known due to measurement limitations, or not reported due to reporting restrictions.
 
@@ -384,9 +384,9 @@ For example, the "above" operator in conjunction with the reported quantity 10.6
 		<annotation>
 			<documentation>AerodromeForecastWeather enables the forecast weather at an aerodrome to be reported.
 
-Only a specific set of weather phenomenon are reported within aviation meteorology as defined in Regulation ICAO Annex 3 / WMO No. 49-2.
+Only a specific set of weather phenomenon are reported within aviation meteorology as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
-This CodeList is specifically defined for aviation purposes as defined in WMO No. 49-2. A superset of definitions are defined in WMO No. 306 Vol I.1 code-table 4678 "Significant weather phenomena".</documentation>
+This CodeList is specifically defined for aviation purposes as defined in PANS-MET. A superset of definitions are defined in WMO No. 306 Vol I.1 code-table 4678 "Significant weather phenomena".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</vocabulary>
 				<extensibility>none</extensibility>
@@ -404,7 +404,7 @@ This CodeList is specifically defined for aviation purposes as defined in WMO No
 - Cumulonimbus
 - Towering cumulus
 
-This CodeList is specifically defined for aviation purposes, as defined in WMO No. 49-2. A superset of definitions are defined in WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 012 "Cloud type".</documentation>
+This CodeList is specifically defined for aviation purposes, as defined in PANS-MET. A superset of definitions are defined in WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 012 "Cloud type".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/SigConvectiveCloudType</vocabulary>
 				<extensibility>none</extensibility>
@@ -425,7 +425,7 @@ This CodeList is specifically defined for aviation purposes, as defined in WMO N
 - Broken (5 - 7 oktas)
 - Overcast (8 oktas)
 
-This CodeList is specifically defined for aviation purposes, as defined in WMO No. 49-2. A superset of cloud-amount categories are defined in WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 008 "Cloud distribution for aviation".</documentation>
+This CodeList is specifically defined for aviation purposes, as defined in PANS-MET. A superset of cloud-amount categories are defined in WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 008 "Cloud distribution for aviation".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome</vocabulary>
 				<extensibility>none</extensibility>

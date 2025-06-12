@@ -4,7 +4,7 @@
 	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
-		<documentation>AIRMET reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
+		<documentation>AIRMET reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
 AIRMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These weather phenomena are reported as impacted regions of airspace.
 
@@ -68,7 +68,7 @@ The AIRMET report class represents the base AIRMET types that may be reported su
 					</element>
 					<element name="issuingAirTrafficServicesUnit" type="iwxxm:UnitPropertyType">
 						<annotation>
-							<documentation>The ATS unit serving the FIR or CTA to which the AIRMET refers.  ICAO Annex 3 / WMO No. 49-2: A6-1: "Location indicator of FIR/CTA"</documentation>
+							<documentation>The ATS unit serving the FIR or CTA to which the AIRMET refers.</documentation>
 						</annotation>
 					</element>
 					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType" minOccurs="0" maxOccurs="1">
@@ -88,7 +88,7 @@ The AIRMET report class represents the base AIRMET types that may be reported su
 					</element>
 					<element name="validPeriod" type="gml:TimePeriodPropertyType">
 						<annotation>
-							<documentation>The valid period for the entire report, including all observations and forecast conditions.  Each observation/forecast phenomenon includes its own period of validity for described meteorological conditions, which is represented as the O&amp;M Observation validTime.</documentation>
+							<documentation>The valid period for the entire report, including all observations and forecast conditions.  Each observation/forecast phenomenon includes its own period of validity for described meteorological conditions.</documentation>
 						</annotation>
 					</element>
 					<element name="cancelledReportSequenceNumber" type="string" minOccurs="0" maxOccurs="1">
@@ -149,7 +149,7 @@ TC TOP (ABV and BLW) conditions are represented by the vertical component of the
 				<sequence>
 					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
-							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
+							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO PANS-MET (Doc 10157): a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
@@ -199,10 +199,7 @@ Cloud base and top may differ from but should be within the AIRMET base and top 
 					</element>
 					<element name="surfaceVisibility" type="gml:LengthType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The surface visibility.  Only used with SFC VIS AIRMETs. Horizontal surface visibility unit of measure shall be given as "m" (metre).
-
-ICAO Annex 3 / WMO No. 49-2:
-Appendix 6 Section 2.1</documentation>
+							<documentation>The surface visibility.  Only used with SFC VIS AIRMETs. Horizontal surface visibility unit of measure shall be given as "m" (metre).</documentation>
 							<appinfo>
 								<quantity>http://codes.wmo.int/common/quantity-kind/aeronauticalPrevailingHorizontalVisibility</quantity>
 							</appinfo>
@@ -279,7 +276,7 @@ See WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 20 028 'Expected change i
 	<element name="AeronauticalAreaWeatherPhenomenon" type="iwxxm:AeronauticalAreaWeatherPhenomenonType"></element>
 	<complexType name="AeronauticalAreaWeatherPhenomenonType">
 		<annotation>
-			<documentation>Weather phenomenon of significance to aviation operations; used in AIRMET reports. The set of permitted options are defined in ICAO Annex 3 / WMO No. 49-2 C.3.1 sub-clause 1.1.4</documentation>
+			<documentation>Weather phenomenon of significance to aviation operations; used in AIRMET reports. The set of permitted options are defined in ICAO PANS-MET (Doc 10157) Section 6.5.4</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/AirWxPhenomena</vocabulary>
 				<extensibility>none</extensibility>
@@ -294,7 +291,7 @@ See WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 20 028 'Expected change i
 		<annotation>
 			<documentation>A weather condition reducing visibility, such as dust, rain or volcanic ash.
 
-See ICAO Annex 3/ WMO No. 49-2 Appendix 6 Section 2.1.</documentation>
+See ICAO PANS-MET (Doc 10157) Section 6.5.4</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction</vocabulary>
 				<extensibility>none</extensibility>

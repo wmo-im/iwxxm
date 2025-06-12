@@ -4,7 +4,7 @@
 	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.2/metce.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
-		<documentation>Volcanic Ash Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
+		<documentation>Volcanic Ash Advisory reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
 Volcanic Ash Advisories report the occurrence and/or expected occurrence of specified en-route volcanic ash phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These phenomena are reported as impacted regions of airspace.
 
@@ -12,7 +12,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 	</annotation>
 	<element name="VolcanicAshAdvisory" type="iwxxm:VolcanicAshAdvisoryType" substitutionGroup="iwxxm:Report">
 		<annotation>
-			<documentation>An advisory of volcanic ash conditions of significance to aviation as represented in ICAO Annex 3 / WMO No. 49-2.  Volcanic ash advisories are issued by volcanic ash advisory centres (VAACs)</documentation>
+			<documentation>An advisory of volcanic ash conditions of significance to aviation as represented in ICAO Annex 3 and PANS-MET (Doc 10157).  Volcanic ash advisories are issued by volcanic ash advisory centres (VAACs)</documentation>
 		</annotation>
 	</element>
 	<complexType name="VolcanicAshAdvisoryType">

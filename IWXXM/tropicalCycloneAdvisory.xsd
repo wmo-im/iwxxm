@@ -4,7 +4,7 @@
 	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.2/metce.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
-		<documentation>Tropical Cyclone Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
+		<documentation>Tropical Cyclone Advisory reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
 Tropical Cyclone Advisories (TCA) report the occurrence and/or expected occurrence of tropical cyclone phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.
 
@@ -12,7 +12,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 	</annotation>
 	<element name="TropicalCycloneAdvisory" type="iwxxm:TropicalCycloneAdvisoryType" substitutionGroup="iwxxm:Report">
 		<annotation>
-			<documentation>An advisory of tropical cyclone conditions of significance to aviation as represented in ICAO Annex 3 / WMO No. 49-2.  Tropical cyclone advisories are issued by tropical cyclone advisory centres (TCACs)</documentation>
+			<documentation>An advisory of tropical cyclone conditions of significance to aviation as represented in ICAO Annex 3 and PANS-MET (Doc 10157).  Tropical cyclone advisories are issued by tropical cyclone advisory centres (TCACs)</documentation>
 		</annotation>
 	</element>
 	<complexType name="TropicalCycloneAdvisoryType">

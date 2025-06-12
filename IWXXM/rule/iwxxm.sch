@@ -9,6 +9,7 @@
    <sch:ns prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
    <sch:ns prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
    <sch:ns prefix="reg" uri="http://purl.org/linked-data/registry#"/>
+   <sch:ns prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
    <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/2025-2"/>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayVisualRange-1">
       <sch:rule context="//iwxxm:AerodromeRunwayVisualRange">
@@ -17,12 +18,14 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeRecentWeather">
       <sch:rule context="//iwxxm:AerodromeRecentWeather">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromeRecentWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AerodromeRecentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromeRecentWeather</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromeRecentWeather.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:AerodromeRecentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromeRecentWeather</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservation.recentWeather">
       <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation/iwxxm:recentWeather">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromeRecentWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalAerodromeObservation/iwxxm:recentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromeRecentWeather</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromeRecentWeather.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalAerodromeObservation/iwxxm:recentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromeRecentWeather</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservationReport-1">
@@ -72,12 +75,14 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.SeaSurfaceState">
       <sch:rule context="//iwxxm:SeaSurfaceState">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SeaSurfaceState should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:SeaSurfaceState should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaCondition.seaState">
       <sch:rule context="//iwxxm:AerodromeSeaCondition/iwxxm:seaState">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AerodromeSeaCondition/iwxxm:seaState should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:AerodromeSeaCondition/iwxxm:seaState should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaState-1">
@@ -197,12 +202,14 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromePresentWeather">
       <sch:rule context="//iwxxm:AerodromePresentWeather">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AerodromePresentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:AerodromePresentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeObservation.presentWeather">
       <sch:rule context="//iwxxm:MeteorologicalAerodromeObservation/iwxxm:presentWeather">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalAerodromeObservation/iwxxm:presentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalAerodromeObservation/iwxxm:presentWeather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeHorizontalVisibility-1">
@@ -327,12 +334,14 @@
    </sch:pattern>
    <sch:pattern id="SIGMET.AeronauticalSignificantWeatherPhenomenon">
       <sch:rule context="//iwxxm:AeronauticalSignificantWeatherPhenomenon">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AeronauticalSignificantWeatherPhenomenon should be a member of code list http://codes.wmo.int/49-2/SigWxPhenomena</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:AeronauticalSignificantWeatherPhenomenon should be a member of code list http://codes.wmo.int/49-2/SigWxPhenomena</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMET.phenomenon">
       <sch:rule context="//iwxxm:SIGMET/iwxxm:phenomenon|//iwxxm:VolcanicAshSIGMET/iwxxm:phenomenon|//iwxxm:TropicalCycloneSIGMET/iwxxm:phenomenon">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SIGMET/iwxxm:phenomenon, iwxxm:VolcanicAshSIGMET/iwxxm:phenomenon, iwxxm:TropicalCycloneSIGMET/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/SigWxPhenomena</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:SIGMET/iwxxm:phenomenon, iwxxm:VolcanicAshSIGMET/iwxxm:phenomenon, iwxxm:TropicalCycloneSIGMET/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/SigWxPhenomena</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SIGMET.SIGMETEvolvingCondition-4">
@@ -397,12 +406,14 @@
    </sch:pattern>
    <sch:pattern id="AIRMET.WeatherCausingVisibilityReduction">
       <sch:rule context="//iwxxm:WeatherCausingVisibilityReduction">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-WeatherCausingVisibilityReduction.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:WeatherCausingVisibilityReduction should be a member of code list http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-WeatherCausingVisibilityReduction.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:WeatherCausingVisibilityReduction should be a member of code list http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMETEvolvingCondition.surfaceVisibilityCause">
       <sch:rule context="//iwxxm:AIRMETEvolvingCondition/iwxxm:surfaceVisibilityCause">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-WeatherCausingVisibilityReduction.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AIRMETEvolvingCondition/iwxxm:surfaceVisibilityCause should be a member of code list http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-WeatherCausingVisibilityReduction.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:AIRMETEvolvingCondition/iwxxm:surfaceVisibilityCause should be a member of code list http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMETEvolvingCondition-1">
@@ -452,12 +463,14 @@
    </sch:pattern>
    <sch:pattern id="AIRMET.AeronauticalAreaWeatherPhenomenon">
       <sch:rule context="//iwxxm:AeronauticalAreaWeatherPhenomenon">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AirWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AeronauticalAreaWeatherPhenomenon should be a member of code list http://codes.wmo.int/49-2/AirWxPhenomena</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AirWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:AeronauticalAreaWeatherPhenomenon should be a member of code list http://codes.wmo.int/49-2/AirWxPhenomena</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET.phenomenon">
       <sch:rule context="//iwxxm:AIRMET/iwxxm:phenomenon">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AirWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AIRMET/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/AirWxPhenomena</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AirWxPhenomena.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:AIRMET/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/AirWxPhenomena</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="AIRMET.AIRMET-1">
@@ -617,12 +630,14 @@
    </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherLocation">
       <sch:rule context="//iwxxm:SpaceWeatherLocation">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxLocation.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SpaceWeatherLocation should be a member of code list http://codes.wmo.int/49-2/SpaceWxLocation</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxLocation.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:SpaceWeatherLocation should be a member of code list http://codes.wmo.int/49-2/SpaceWxLocation</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherRegion.locationIndicator">
       <sch:rule context="//iwxxm:SpaceWeatherRegion/iwxxm:locationIndicator">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxLocation.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SpaceWeatherRegion/iwxxm:locationIndicator should be a member of code list http://codes.wmo.int/49-2/SpaceWxLocation</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SpaceWxLocation.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:SpaceWeatherRegion/iwxxm:locationIndicator should be a member of code list http://codes.wmo.int/49-2/SpaceWxLocation</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="SpaceWeatherAdvisory.SpaceWeatherRegion-1">
@@ -642,22 +657,26 @@
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.CloudDistribution">
       <sch:rule context="//iwxxm:CloudDistribution">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-008.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:CloudDistribution should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-008</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-008.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:CloudDistribution should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-008</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.DegreeOfIcing">
       <sch:rule context="//iwxxm:DegreeOfIcing">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-041.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:DegreeOfIcing should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-041</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-041.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:DegreeOfIcing should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-041</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.CloudType">
       <sch:rule context="//iwxxm:CloudType">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-012.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:CloudType should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-012</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-012.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:CloudType should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-012</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.DegreeOfTurbulence">
       <sch:rule context="//iwxxm:DegreeOfTurbulence">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-11-030.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:DegreeOfTurbulence should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-11-030</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-11-030.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:DegreeOfTurbulence should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-11-030</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-3">
@@ -677,12 +696,14 @@
    </sch:pattern>
    <sch:pattern id="QuantitativeVolcanicAshConcentrationInformation.VolcanicAshConcentrations">
       <sch:rule context="//iwxxm:VolcanicAshConcentrations">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-VolcanicAshConcentrations.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:VolcanicAshConcentrations should be a member of code list http://codes.wmo.int/iwxxm/VolcanicAshConcentrations</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-VolcanicAshConcentrations.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:VolcanicAshConcentrations should be a member of code list http://codes.wmo.int/iwxxm/VolcanicAshConcentrations</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="QuantitativeVolcanicAshConcentrationInformation.VolcanicAshCloudConcentration.ashDensityCategory">
       <sch:rule context="//iwxxm:VolcanicAshCloudConcentration/iwxxm:ashDensityCategory">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-VolcanicAshConcentrations.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:VolcanicAshCloudConcentration/iwxxm:ashDensityCategory should be a member of code list http://codes.wmo.int/iwxxm/VolcanicAshConcentrations</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-VolcanicAshConcentrations.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:VolcanicAshCloudConcentration/iwxxm:ashDensityCategory should be a member of code list http://codes.wmo.int/iwxxm/VolcanicAshConcentrations</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalFeature-1">
@@ -692,22 +713,25 @@
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalFeature-2">
       <sch:rule context="//iwxxm:MeteorologicalFeature">
-         <sch:assert test="( if( name(..) != 'iwxxm:feature' ) then( exists(iwxxm:issueTime) and exists(iwxxm:originatingCentre) and exists(iwxxm:phenomenonCategory) and exists(iwxxm:phenomenonTime) ) else( true() ) )">MeteorologicalFeature.MeteorologicalFeature-2: Mandatory elements when the parent node is not iwxxm:MeteorologicalFeatureCollection</sch:assert>
+         <sch:assert test="( if( local-name(..) != 'feature' ) then( exists(iwxxm:issueTime) and exists(iwxxm:originatingCentre) and exists(iwxxm:phenomenonCategory) and exists(iwxxm:phenomenonTime) ) else( true() ) )">MeteorologicalFeature.MeteorologicalFeature-2: Mandatory elements when the parent node is not iwxxm:MeteorologicalFeatureCollection</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalPhenomenon">
       <sch:rule context="//iwxxm:MeteorologicalPhenomenon">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalPhenomenon should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalPhenomenon should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalFeature.phenomenon">
       <sch:rule context="//iwxxm:MeteorologicalFeature/iwxxm:phenomenon">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalFeature/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalFeature/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalFeatureCollection.phenomenaList">
       <sch:rule context="//iwxxm:MeteorologicalFeatureCollection/iwxxm:phenomenaList|//iwxxm:WAFSSignificantWeatherForecast/iwxxm:phenomenaList|//iwxxm:QuantitativeVolcanicAshConcentrationInformation/iwxxm:phenomenaList|//iwxxm:VolcanoObservatoryNoticeForAviation/iwxxm:phenomenaList">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalFeatureCollection/iwxxm:phenomenaList, iwxxm:WAFSSignificantWeatherForecast/iwxxm:phenomenaList, iwxxm:QuantitativeVolcanicAshConcentrationInformation/iwxxm:phenomenaList, iwxxm:VolcanoObservatoryNoticeForAviation/iwxxm:phenomenaList should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalFeatureCollection/iwxxm:phenomenaList, iwxxm:WAFSSignificantWeatherForecast/iwxxm:phenomenaList, iwxxm:QuantitativeVolcanicAshConcentrationInformation/iwxxm:phenomenaList, iwxxm:VolcanoObservatoryNoticeForAviation/iwxxm:phenomenaList should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalFeatureCollection-1">
@@ -717,37 +741,44 @@
    </sch:pattern>
    <sch:pattern id="Common.AerodromeForecastWeather">
       <sch:rule context="//iwxxm:AerodromeForecastWeather">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:AerodromeForecastWeather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:AerodromeForecastWeather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.MeteorologicalAerodromeTrendForecast.weather">
       <sch:rule context="//iwxxm:MeteorologicalAerodromeTrendForecast/iwxxm:weather">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalAerodromeTrendForecast/iwxxm:weather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalAerodromeTrendForecast/iwxxm:weather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.MeteorologicalAerodromeForecast.weather">
       <sch:rule context="//iwxxm:MeteorologicalAerodromeForecast/iwxxm:weather">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:MeteorologicalAerodromeForecast/iwxxm:weather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-AerodromePresentOrForecastWeather.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalAerodromeForecast/iwxxm:weather should be a member of code list http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.SigConvectiveCloudType">
       <sch:rule context="//iwxxm:SigConvectiveCloudType">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigConvectiveCloudType.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:SigConvectiveCloudType should be a member of code list http://codes.wmo.int/49-2/SigConvectiveCloudType</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigConvectiveCloudType.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:SigConvectiveCloudType should be a member of code list http://codes.wmo.int/49-2/SigConvectiveCloudType</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.CloudLayer.cloudType">
       <sch:rule context="//iwxxm:CloudLayer/iwxxm:cloudType">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigConvectiveCloudType.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:CloudLayer/iwxxm:cloudType should be a member of code list http://codes.wmo.int/49-2/SigConvectiveCloudType</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-SigConvectiveCloudType.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:CloudLayer/iwxxm:cloudType should be a member of code list http://codes.wmo.int/49-2/SigConvectiveCloudType</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.CloudAmountReportedAtAerodrome">
       <sch:rule context="//iwxxm:CloudAmountReportedAtAerodrome">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-CloudAmountReportedAtAerodrome.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:CloudAmountReportedAtAerodrome should be a member of code list http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-CloudAmountReportedAtAerodrome.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:CloudAmountReportedAtAerodrome should be a member of code list http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.CloudLayer.amount">
       <sch:rule context="//iwxxm:CloudLayer/iwxxm:amount">
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-CloudAmountReportedAtAerodrome.rdf')/rdf:RDF//skos:member/skos:Concept/@*[local-name()='about'] or @nilReason">Element in iwxxm:CloudLayer/iwxxm:amount should be a member of code list http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome</sch:assert>
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-CloudAmountReportedAtAerodrome.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:CloudLayer/iwxxm:amount should be a member of code list http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.CloudLayer-1">

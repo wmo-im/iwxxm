@@ -6,7 +6,7 @@
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd
-    http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
+    http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC2/iwxxm.xsd"
     gml:id="uuid.bf9c0a92-c909-4efc-8558-472d8aad209f" reportStatus="NORMAL" permissibleUsage="OPERATIONAL">
 
     <!-- Unique identifier of the collective -->
@@ -132,7 +132,7 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:VolcanicAshCloudConcentration gml:id="uuid.6141444b-86c8-4609-b4cc-cb051670b1d2">
-                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/VERY_HIGH"/>
+                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/4"/>
                     <iwxxm:ashDensityEqualsOrExceeds uom="mg/m3">10</iwxxm:ashDensityEqualsOrExceeds>
                 </iwxxm:VolcanicAshCloudConcentration>
             </iwxxm:phenomenonProperty>
@@ -167,7 +167,7 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:VolcanicAshCloudConcentration gml:id="uuid.e7b80d1c-23d4-4cb6-b6f1-4b4cc8ff9831">
-                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/HIGH_AND_POSSIBLY_HIGHER"/>
+                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/3"/>
                     <iwxxm:ashDensityEqualsOrExceeds uom="mg/m3">5</iwxxm:ashDensityEqualsOrExceeds>
                 </iwxxm:VolcanicAshCloudConcentration>
             </iwxxm:phenomenonProperty>
@@ -201,7 +201,7 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:VolcanicAshCloudConcentration gml:id="uuid.a08a12b1-06a5-4a4b-93ca-3b989cf2acf5">
-                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/HIGH_AND_POSSIBLY_HIGHER"/>
+                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/3"/>
                     <iwxxm:ashDensityEqualsOrExceeds uom="mg/m3">5</iwxxm:ashDensityEqualsOrExceeds>
                 </iwxxm:VolcanicAshCloudConcentration>
             </iwxxm:phenomenonProperty>
@@ -238,7 +238,7 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:VolcanicAshCloudConcentration gml:id="uuid.edb61bfd-c071-40f0-967e-499464eac730">
-                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/MEDIUM_AND_POSSIBLY_HIGHER"/>
+                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/2"/>
                     <iwxxm:ashDensityEqualsOrExceeds uom="mg/m3">2</iwxxm:ashDensityEqualsOrExceeds>
                 </iwxxm:VolcanicAshCloudConcentration>
             </iwxxm:phenomenonProperty>
@@ -283,7 +283,7 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:VolcanicAshCloudConcentration gml:id="uuid.7446ca09-cad8-4cd2-97b6-f41d217b3a35">
-                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/LOW_AND_POSSIBLY_HIGHER"/>
+                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/1"/>
                     <iwxxm:ashDensityEqualsOrExceeds uom="mg/m3">0.2</iwxxm:ashDensityEqualsOrExceeds>
                 </iwxxm:VolcanicAshCloudConcentration>
             </iwxxm:phenomenonProperty>
@@ -308,5 +308,6 @@
             <iwxxm:verticalReference>MSL</iwxxm:verticalReference>
         </iwxxm:ElevatedLevel>
     </iwxxm:dispersionModelAshCloudHeight>
+    <iwxxm:remarks>LATEST REP FM KVERT (0120Z) INDICATES ERUPTION HAS CEASED. TWO DISPERSING VA CLD ARE EVIDENT ON SATELLITE IMAGERY</iwxxm:remarks>
 
 </iwxxm:QuantitativeVolcanicAshConcentrationInformation>
