@@ -4,6 +4,7 @@
 Package METAR/SPECI (Version 3.2.0RC2)
 Package Common (Version 3.2.0RC2)
 Package Volcanic Ash Advisory (Version 3.2.0RC2)
+  * Renamed iwxxm:sourceElevation to iwxxm:sourceElevationMSL and make subsequent changes to Schematron rules and examples
 Package Space Weather Advisory (Version 3.1.0RC2)
   * Changed the multiplicity of iwxxm:locationIndicator from [0..1] to [1..6] to cater for having multiple space weather bands
     and the mandatory need to specify the element

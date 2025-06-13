@@ -57,7 +57,7 @@ Describes the horizontal wind speed and direction at the point and optionally th
 						<annotation>
 							<documentation>Horizontal wind speed at the indicated position.
 
-Wind speeds shall be provided in unit of measurer "m/s" (meters per second).</documentation>
+Wind speeds shall be provided in either two units of measure, "m/s" (meters per second) or "[kn_i]" (knot).</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="IsotachUpperElevation" type="iwxxm:ValDistanceVerticalType" minOccurs="0" maxOccurs="1">

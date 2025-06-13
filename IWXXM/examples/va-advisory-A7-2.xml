@@ -44,7 +44,7 @@
 
     <iwxxm:stateOrRegion>RUSSIA</iwxxm:stateOrRegion>
 
-    <iwxxm:sourceElevation uom="m">1536</iwxxm:sourceElevation>
+    <iwxxm:sourceElevationMSL uom="m">1536</iwxxm:sourceElevationMSL>
 
     <iwxxm:advisoryNumber>2024/4</iwxxm:advisoryNumber>
 

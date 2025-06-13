@@ -38,11 +38,11 @@ function nameClassifier(name, separator)
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">2/16/2016 10:02:54 AM</td>
+			<td width="85%" class="ObjectDetailsValue">16-Feb-16 10:02:54 AM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">6/11/2025 3:10:59 AM</td>
+			<td class="ObjectDetailsValue">13-Jun-25 2:56:57 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -342,7 +342,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA13/EA255.htm">DistanceWithNilReason</a></i><br /><strong>&nbsp;&nbsp;sourceElevation</strong>
+					<i>Public <a href="../EA13/EA255.htm">DistanceWithNilReason</a></i><br /><strong>&nbsp;&nbsp;sourceElevationMSL</strong>
 				</td>
 			</tr>
 			<tr>
@@ -391,7 +391,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			Elevation of the vent or the average height of volcanic ash field for re-suspended volcanic ash from mean sea level.&#160; If reported it shall either be in meters (&quot;m&quot;) or feet (&quot;[ft_i]&quot;). Use negative values to represent levels below mean sea level.&lt;br/&gt;&lt;br/&gt;When the elevation is unknown, it shall be represented with a nil in sourceElevation and nilReason &#39;http://codes.wmo.int/common/nil/unknown&#39;.&lt;br/&gt;
+			Elevation of the vent or the average height of volcanic ash field for re-suspended volcanic ash from mean sea level.&#160; If reported it shall either be in meters (&quot;m&quot;) or feet (&quot;[ft_i]&quot;). Use negative values to represent levels below mean sea level.&lt;br/&gt;&lt;br/&gt;When the elevation is unknown, it shall be represented with a nil in sourceElevationMSL and nilReason &#39;http://codes.wmo.int/common/nil/unknown&#39;.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -885,7 +885,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints461" onclick="parent.toggleDiv('detailsDIVConstraints461','DetailsImageConstraints461')" />Details:
 							<div id="detailsDIVConstraints461" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshAdvisory.VolcanicAshAdvisory-2&lt;br/&gt;Description: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:sourceElevation, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:sourceElevation) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )&lt;br/&gt;</div>
+							<div class="ObjectDetailsNotes">Pattern ID: VolcanicAshAdvisory.VolcanicAshAdvisory-2&lt;br/&gt;Description: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:sourceElevationMSL, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:sourceElevationMSL) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
 						</div>
