@@ -12,7 +12,7 @@
 
     <iwxxm:issueTime>
         <gml:TimeInstant gml:id="uuid.d1858428-a96d-4825-aecd-07a929ab07d2">
-            <gml:timePosition>2004-09-25T16:00:00Z</gml:timePosition>
+            <gml:timePosition>2004-09-25T19:00:00Z</gml:timePosition>
         </gml:TimeInstant>
     </iwxxm:issueTime>
 
@@ -41,7 +41,7 @@
         <iwxxm:TropicalCycloneObservedConditions gml:id="uuid.78eddcd7-acfe-4649-b633-36189eaffc5d">
             <iwxxm:phenomenonTime>
                 <gml:TimeInstant gml:id="uuid.023a036d-6945-492b-b9e5-30bf5df83179">
-                    <gml:timePosition>2004-09-25T16:00:00Z</gml:timePosition>
+                    <gml:timePosition>2004-09-25T18:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:tropicalCyclonePosition>

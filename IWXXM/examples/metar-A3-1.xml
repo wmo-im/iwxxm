@@ -98,7 +98,7 @@
     </iwxxm:observation>
 
     <iwxxm:trendForecast>
-        <iwxxm:MeteorologicalAerodromeTrendForecast gml:id="uuid.46584004-93bf-4638-a8be-86a61bc85e0f" changeIndicator="BECOMING">
+        <iwxxm:MeteorologicalAerodromeTrendForecast gml:id="uuid.46584004-93bf-4638-a8be-86a61bc85e0f" changeIndicator="BECOMING" cloudAndVisibilityOK="false">
             <iwxxm:phenomenonTime>
                 <gml:TimePeriod gml:id="uuid.819b0c7a-133f-4029-b1d9-451be77e3c5f">
                     <gml:beginPosition>2012-08-22T16:30:00Z</gml:beginPosition>
@@ -114,10 +114,9 @@
     <iwxxm:trendForecast>
         <iwxxm:MeteorologicalAerodromeTrendForecast gml:id="uuid.be66f283-6aae-4a84-bc84-3831c9b2e7ef" changeIndicator="BECOMING">
             <iwxxm:phenomenonTime>
-                <gml:TimePeriod gml:id="uuid.d4d26581-aea9-4caf-abb3-0304faac191b">
-                    <gml:beginPosition>2012-08-22T18:00:00Z</gml:beginPosition>
-                    <gml:endPosition>2012-08-22T18:00:00Z</gml:endPosition>
-                </gml:TimePeriod>
+                <gml:TimeInstant gml:id="uuid.d4d26581-aea9-4caf-abb3-0304faac191b">
+                    <gml:timePosition>2012-08-22T18:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:timeIndicator>AT</iwxxm:timeIndicator>
             <iwxxm:prevailingVisibility uom="m">10000</iwxxm:prevailingVisibility>

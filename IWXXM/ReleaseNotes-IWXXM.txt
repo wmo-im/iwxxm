@@ -18,6 +18,7 @@ Package Volcano Observatory Notice for Aviation (Version 1.0.0RC2)
 * Fixed the bug in Schematron rule MeteorologicalFeature.MeteorologicalFeature-2
 * Revised the code list RDF files and related schematron rules to allow applicable IWXXM version checking
 * Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
+* Fixed discovered issues and improved the examples with reference to suggestions received
 
 =========================================
 2025-2 Release Candidate 1 - March 2024
