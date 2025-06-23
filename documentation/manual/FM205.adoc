@@ -1,11 +1,11 @@
-FM 205-2023-1 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
-(IWXXM 2023-1)
+FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
+(IWXXM 2025-2)
 
-205-2023-1.1 Scope
+205-2025-2.1 Scope
 
-205-2023-1.1.1 IWXXM-XML shall be used to represent observations and forecasts, and reports thereof, for international civil aviation, as specified by ICAO Annex 3 to the Convention on International Civil Aviation – _Meteorological Service for International Air Navigation_ (hereinafter referred to as ICAO Annex 3).
+205-2025-2.1.1 IWXXM-XML shall be used to represent observations and forecasts, and reports thereof, for international civil aviation, as specified by ICAO Annex 3 to the Convention on International Civil Aviation – _Meteorological Service for International Air Navigation_ (hereinafter referred to as ICAO Annex 3).
 
-205-2023-1.1.2 IWXXM 2023-1 includes provisions for the following types of reports and advisories.
+205-2025-2.1.2 IWXXM 2025-2 includes provisions for the following types of reports and advisories.
 
 {empty}(a) *METAR* is an aerodrome routine meteorological report given at fixed time intervals. The METAR consists of measurements of meteorological parameters of particular importance to aviation safety, navigation and airport operations. The parameters include, but are not limited to, surface wind direction and speed, visibility, runway visual range, when applicable, present weather, cloud amount, cloud types (limited to cumulonimbus and towering cumulus), and height of cloud base, vertical visibility, when applicable, air temperature and dew-point temperature, and airfield pressure setting QNH.
 
@@ -25,63 +25,68 @@ FM 205-2023-1 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 
 {empty}(i) *World Area Forecast System (WAFS) Significant Weather (SIGWX)* is a set of global forecasts (validity up to 48 hours) at fixed time intervals of significant weather phenomena spanning flight level 100 to 600. Such phenomena shall include, but not be limited to, jet stream, cumulonimbus cloud, turbulence, icing, tropopause height, tropical cyclones, volcanic eruptions, radioactive release and sand/dust storms.
 
-205-2023-1.2 IWXXM versions and amendments
+{empty}(j) *Quantitative Volcanic Ash Concentration Information (QVA)* is a message providing information on the concentration of volcanic ash in the atmosphere, including the vertical extent and horizontal distribution of the ash.
 
-205-2023-1.2.1 After IWXXM 3.0, the IWXXM version is represented by the release year and a number.
+{empty}(k) *Volcano Observatory Notice (VONA)* is a message issued by a volcano observatory to provide information on volcanic activity, including eruptions, ash plumes, and other related phenomena.
 
-205-2023-1.2.2 Each release of IWXXM is composed of individual packages with their own version number following the semantic versioning: MAJOR.MINOR.PATCH (example TAF 3.0.1) where: 
+205-2025-2.2 IWXXM versions and amendments
+
+205-2025-2.2.1 After IWXXM 3.0, the IWXXM version is represented by the release year and a number.
+
+205-2025-2.2.2 Each release of IWXXM is composed of individual packages with their own version number following the semantic versioning: MAJOR.MINOR.PATCH (example TAF 3.0.1) where: 
 – A MAJOR (X.y.z) version introduces major conceptual changes. Forward data mapping is not guaranteed. 
 – A MINOR (x.Y.x) version introduces new model elements and capabilities guaranteeing forward data mapping for non-deprecated elements or deprecated elements with replacement. Loss of information may happen for elements being no longer required.
 – A PATCH (x.y.Z) version is limited to bug fixing. Forward and backward data mapping is guaranteed without loss of information. A PATCH version does not impose changes in a consuming system. A PATCH version may still require data conversion to be done ahead of the data entering the consuming system (done by a mediator service).
 
-205-2023-1.2.3 Each IWXXM version addresses the requirements of amendments to ICAO Annex 3. Those amendments affect the packages composing IWXXM in different ways, and the resulting new version of the packages shall reflect the level of change required by the amendments following the semantic versioning described in 205-2023-1.2.2.
+205-2025-2.2.3 Each IWXXM version addresses the requirements of amendments to ICAO Annex 3. Those amendments affect the packages composing IWXXM in different ways, and the resulting new version of the packages shall reflect the level of change required by the amendments following the semantic versioning described in 205-2025-2.2.2.
 
-205-2023-1.2.4 The following table is provided to clarify which version of each package composing IWXXM is compliant with a specific ICAO Annex 3 amendment.
+205-2025-2.2.4 The following table is provided to clarify which version of each package composing IWXXM is compliant with a specific ICAO Annex 3 amendment.
 
-[width="100%",cols="13%,10%,10%,7%,10%,10%,10%,10%,10%,10%",options="header",]
+[width="100%",options="header",]
 |===
-|_ICAO Annex 3 Amendments_ |_IWXM Version_ |_METAR and SPECI_ |_TAF_ |_SIGMET_ |_AIRMET_ |_Tropical Cyclone Advisory_ |_Volcanic Ash Advisory_ |_Space Weather Advisory_ |_WAFS SIGWX Forecast_ 
-|Amendment 78 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |N/A
-|Amendment 79 |2021-2 |3.1.0 |3.0.1 |4.0.0 |3.1.0 |3.1.0 |3.1.0 |3.0.1 |1.0.0
-|Amendment 79 |2023-1 |3.1.0 |3.0.1 |4.0.0 |3.1.1 |3.1.0 |3.1.0 |3.0.1 |1.1.0
+|_ICAO Annex 3 Amendments_ |_IWXM Version_ |_METAR and SPECI_ |_TAF_ |_SIGMET_ |_AIRMET_ |_Tropical Cyclone Advisory_ |_Volcanic Ash Advisory_ |_Space Weather Advisory_ |_WAFS SIGWX Forecast_ |_Quantitative Volcanic Ash Concentration Information_ |_Volcano Observatory Notice_
+|Amendment 78 |3.0.0  |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |N/A   |N/A  |N/A
+|Amendment 79 |2021-2 |3.1.0 |3.0.1 |4.0.0 |3.1.0 |3.1.0 |3.1.0 |3.0.1 |1.0.0 |N/A  |N/A
+|Amendment 79 |2023-1 |3.1.0 |3.0.1 |4.0.0 |3.1.1 |3.1.0 |3.1.0 |3.0.1 |1.1.0 |N/A  |N/A
+|Amendment 82 |2025-2 |3.2.0 |3.0.1 |4.0.0 |3.1.1 |3.1.0 |3.2.0 |3.1.0 |1.1.1 |1.0.0|1.0.0
 |===
 
-205-2023-1.3 IWXXM resources
+205-2025-2.3 IWXXM resources
 
-205-2023-1.3.1 IWXXM 2023-1 is published online at https://schemas.wmo.int/iwxxm/2021-2[https://schemas.wmo.int/iwxxm/2023-1] with the following contents: schemas, schematron rules, examples and the UML model.
+205-2025-2.3.1 IWXXM 2025-2 is published online at https://schemas.wmo.int/iwxxm/2025-2[https://schemas.wmo.int/iwxxm/2025-2] with the following contents: schemas, schematron rules, examples and the UML model.
 
-205-2023-1.3.2 IWXXM schemas are XML Schema Definition (XSD) files that define the structure of IWXXM-XML and are used to validate IWXXM-XML files.
+205-2025-2.3.2 IWXXM schemas are XML Schema Definition (XSD) files that define the structure of IWXXM-XML and are used to validate IWXXM-XML files.
 
-https://schemas.wmo.int/iwxxm/2023-1/iwxxm.xsd
-https://schemas.wmo.int/iwxxm/2023-1/airmet.xsd
-https://schemas.wmo.int/iwxxm/2023-1/common.xsd
-https://schemas.wmo.int/iwxxm/2023-1/measures.xsd
-https://schemas.wmo.int/iwxxm/2023-1/metarSpeci.xsd
-https://schemas.wmo.int/iwxxm/2023-1/metFeature.xsd
-https://schemas.wmo.int/iwxxm/2023-1/sigmet.xsd
-https://schemas.wmo.int/iwxxm/2023-1/spaceWxAdvisory.xsd
-https://schemas.wmo.int/iwxxm/2023-1/taf.xsd
-https://schemas.wmo.int/iwxxm/2023-1/tropicalCycloneAdvisory.xsd
-https://schemas.wmo.int/iwxxm/2023-1/volcanicAshAdvisory.xsd
-https://schemas.wmo.int/iwxxm/2023-1/WAFSSigWxFC.xsd
+https://schemas.wmo.int/iwxxm/2025-2/iwxxm.xsd
+https://schemas.wmo.int/iwxxm/2025-2/airmet.xsd
+https://schemas.wmo.int/iwxxm/2025-2/common.xsd
+https://schemas.wmo.int/iwxxm/2025-2/measures.xsd
+https://schemas.wmo.int/iwxxm/2025-2/metarSpeci.xsd
+https://schemas.wmo.int/iwxxm/2025-2/metFeature.xsd
+https://schemas.wmo.int/iwxxm/2025-2/sigmet.xsd
+https://schemas.wmo.int/iwxxm/2025-2/spaceWxAdvisory.xsd
+https://schemas.wmo.int/iwxxm/2025-2/taf.xsd
+https://schemas.wmo.int/iwxxm/2025-2/tropicalCycloneAdvisory.xsd
+https://schemas.wmo.int/iwxxm/2025-2/volcanicAshAdvisory.xsd
+https://schemas.wmo.int/iwxxm/2025-2/WAFSSigWxFC.xsd
 
-205-2023-1.3.3 IWXXM Schematron Rule is a directory that contains an ISO schematron file that is used to provide enhanced validation of IWXXM-XML files. The schematron file uses the IWXXM code lists represented in Resource Description Framework (RDF) format exported from the WMO Codes Registry for verification of code values.
+205-2025-2.3.3 IWXXM Schematron Rule is a directory that contains an ISO schematron file that is used to provide enhanced validation of IWXXM-XML files. The schematron file uses the IWXXM code lists represented in Resource Description Framework (RDF) format exported from the WMO Codes Registry for verification of code values.
 
-https://schemas.wmo.int/iwxxm/2023-1/rule/iwxxm.sch
+https://schemas.wmo.int/iwxxm/2025-2/rule/iwxxm.sch
 
-205-2023-1.3.4 Examples of IWXXM reports are included to help producers to create IWXXM-XML files. Traditional Alphanumeric Code (TAC) to XML guidance is also included to facilitate conversion of reporting requirements for TAC as described in ICAO Annex 3.
+205-2025-2.3.4 Examples of IWXXM reports are included to help producers to create IWXXM-XML files. Traditional Alphanumeric Code (TAC) to XML guidance is also included to facilitate conversion of reporting requirements for TAC as described in ICAO Annex 3.
 
-https://schemas.wmo.int/iwxxm/2023-1/examples/
+https://schemas.wmo.int/iwxxm/2025-2/examples/
 
-205-2023-1.3.5 The UML Model is a set of files in Unified Modeling Language that provides a visual representation of IWXXM-XML in HTML format.
+205-2025-2.3.5 The UML Model is a set of files in Unified Modeling Language that provides a visual representation of IWXXM-XML in HTML format.
 
-https://schemas.wmo.int/iwxxm/2023-1/html/
+https://schemas.wmo.int/iwxxm/2025-2/html/
 
-*205-2023-1.4 IWXXM code lists*
+*205-2025-2.4 IWXXM code lists*
 
-205-2023-1.4.1 The code lists are published as web-accessible resources on the WMO Codes Registry (http://codes.wmo.int/[http://codes.wmo.int]) to define the authoritative terms required in IWXXM-XML and enable the controlled vocabulary to be managed outside the data model. The following code tables are used in IWXXM 2023-1.
+205-2025-2.4.1 The code lists are published as web-accessible resources on the WMO Codes Registry (http://codes.wmo.int/[http://codes.wmo.int]) to define the authoritative terms required in IWXXM-XML and enable the controlled vocabulary to be managed outside the data model. The following code tables are used in IWXXM 2025-2.
 
-205-2023-1.4.2 Common codes
+205-2025-2.4.2 Common codes
 
 [width="100%",cols="20%,43%,37%",options="header",]
 |===
@@ -89,7 +94,7 @@ https://schemas.wmo.int/iwxxm/2023-1/html/
 |Code table D-1: nil reasons |Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. |http://codes.wmo.int/common/nil
 |===
 
-205-2023-1.4.3 Codes from WMO-No. 49, Volume II
+205-2025-2.4.3 Codes from WMO-No. 49, Volume II
 
 [width="100%",cols="20%,41%,39%",options="header",]
 |===
@@ -107,7 +112,7 @@ https://schemas.wmo.int/iwxxm/2023-1/html/
 |Weather causing visibility reduction |ICAO Annex 3/WMO-No. 49, Volume II, Appendix 6, Section 2.1 under SFC VIS |http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction
 |===
 
-205-2023-1.4.4 Codes from BUFR4 code and flag tables defined in the _Manual on Codes_, Volume I.2
+205-2025-2.4.4 Codes from BUFR4 code and flag tables defined in the _Manual on Codes_, Volume I.2
 
 [width="100%",cols="26%,74%",options="header",]
 |===
