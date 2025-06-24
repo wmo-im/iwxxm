@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:ldp="http://www.w3.org/ns/ldp#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:dct="http://purl.org/dc/terms/"
-  xmlns:reg="http://purl.org/linked-data/registry#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:reg="http://purl.org/linked-data/registry#"
+  xmlns:dct="http://purl.org/dc/terms/"
 >
   <reg:Register rdf:about="http://codes.wmo.int/306/4678">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/BLSN">
         <skos:notation>REBLSN</skos:notation>
-        <dct:description xml:lang="en">Blowing snow</dct:description>
         <rdfs:label xml:lang="en">Blowing snow</rdfs:label>
+        <dct:description xml:lang="en">Blowing snow</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -25,8 +25,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/DS">
         <skos:notation>REDS</skos:notation>
-        <dct:description xml:lang="en">Duststorm</dct:description>
         <rdfs:label xml:lang="en">Duststorm</rdfs:label>
+        <dct:description xml:lang="en">Duststorm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -38,8 +38,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/DZ">
         <skos:notation>REDZ</skos:notation>
-        <dct:description xml:lang="en">Precipitation of drizzle</dct:description>
         <rdfs:label xml:lang="en">Precipitation of drizzle</rdfs:label>
+        <dct:description xml:lang="en">Precipitation of drizzle</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -51,8 +51,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/FC">
         <skos:notation>REFC</skos:notation>
-        <dct:description xml:lang="en">Funnel cloud(s) (tornado or water-spout)</dct:description>
         <rdfs:label xml:lang="en">Funnel cloud(s) (tornado or water-spout)</rdfs:label>
+        <dct:description xml:lang="en">Funnel cloud(s) (tornado or water-spout)</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -64,8 +64,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/FZDZ">
         <skos:notation>REFZDZ</skos:notation>
-        <dct:description xml:lang="en">Precipitation of freezing drizzle</dct:description>
         <rdfs:label xml:lang="en">Precipitation of freezing drizzle</rdfs:label>
+        <dct:description xml:lang="en">Precipitation of freezing drizzle</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -77,8 +77,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/FZRA">
         <skos:notation>REFZRA</skos:notation>
-        <dct:description xml:lang="en">Precipitation of freezing rain</dct:description>
         <rdfs:label xml:lang="en">Precipitation of freezing rain</rdfs:label>
+        <dct:description xml:lang="en">Precipitation of freezing rain</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -90,8 +90,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/FZUP">
         <skos:notation>REFZUP</skos:notation>
-        <dct:description xml:lang="en">Unidentified freezing precipitation</dct:description>
         <rdfs:label xml:lang="en">Unidentified freezing precipitation</rdfs:label>
+        <dct:description xml:lang="en">Unidentified freezing precipitation</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -103,8 +103,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/PL">
         <skos:notation>REPL</skos:notation>
-        <dct:description xml:lang="en">Precipitation of ice pellets</dct:description>
         <rdfs:label xml:lang="en">Precipitation of ice pellets</rdfs:label>
+        <dct:description xml:lang="en">Precipitation of ice pellets</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -116,8 +116,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/RA">
         <skos:notation>RERA</skos:notation>
-        <dct:description xml:lang="en">Precipitation of rain</dct:description>
         <rdfs:label xml:lang="en">Precipitation of rain</rdfs:label>
+        <dct:description xml:lang="en">Precipitation of rain</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -129,8 +129,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/RASN">
         <skos:notation>RERASN</skos:notation>
-        <dct:description xml:lang="en">Precipitation of rain and snow</dct:description>
         <rdfs:label xml:lang="en">Precipitation of rain and snow</rdfs:label>
+        <dct:description xml:lang="en">Precipitation of rain and snow</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -142,8 +142,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SG">
         <skos:notation>RESG</skos:notation>
-        <dct:description xml:lang="en">Precipitation of snow grains</dct:description>
         <rdfs:label xml:lang="en">Precipitation of snow grains</rdfs:label>
+        <dct:description xml:lang="en">Precipitation of snow grains</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -155,8 +155,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SHGR">
         <skos:notation>RESHGR</skos:notation>
-        <dct:description xml:lang="en">Showery precipitation of hail</dct:description>
         <rdfs:label xml:lang="en">Showery precipitation of hail</rdfs:label>
+        <dct:description xml:lang="en">Showery precipitation of hail</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -168,8 +168,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SHGS">
         <skos:notation>RESHGS</skos:notation>
-        <dct:description xml:lang="en">Showery precipitation of snow pellets/small hail</dct:description>
         <rdfs:label xml:lang="en">Showery precipitation of snow pellets/small hail</rdfs:label>
+        <dct:description xml:lang="en">Showery precipitation of snow pellets/small hail</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -181,8 +181,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SHRA">
         <skos:notation>RESHRA</skos:notation>
-        <dct:description xml:lang="en">Showery precipitation of rain</dct:description>
         <rdfs:label xml:lang="en">Showery precipitation of rain</rdfs:label>
+        <dct:description xml:lang="en">Showery precipitation of rain</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -194,8 +194,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SHSN">
         <skos:notation>RESHSN</skos:notation>
-        <dct:description xml:lang="en">Showery precipitation of snow</dct:description>
         <rdfs:label xml:lang="en">Showery precipitation of snow</rdfs:label>
+        <dct:description xml:lang="en">Showery precipitation of snow</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -207,8 +207,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SHUP">
         <skos:notation>RESHUP</skos:notation>
-        <dct:description xml:lang="en">Showery precipitation of unidentified precipitation</dct:description>
         <rdfs:label xml:lang="en">Showery precipitation of unidentified precipitation</rdfs:label>
+        <dct:description xml:lang="en">Showery precipitation of unidentified precipitation</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -220,8 +220,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SN">
         <skos:notation>RESN</skos:notation>
-        <dct:description xml:lang="en">Precipitation of snow</dct:description>
         <rdfs:label xml:lang="en">Precipitation of snow</rdfs:label>
+        <dct:description xml:lang="en">Precipitation of snow</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -233,8 +233,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/SS">
         <skos:notation>RESS</skos:notation>
-        <dct:description xml:lang="en">Sandstorm</dct:description>
         <rdfs:label xml:lang="en">Sandstorm</rdfs:label>
+        <dct:description xml:lang="en">Sandstorm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -246,8 +246,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TS">
         <skos:notation>RETS</skos:notation>
-        <dct:description xml:lang="en">Thunderstorm</dct:description>
         <rdfs:label xml:lang="en">Thunderstorm</rdfs:label>
+        <dct:description xml:lang="en">Thunderstorm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -259,8 +259,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSGR">
         <skos:notation>RETSGR</skos:notation>
-        <dct:description xml:lang="en">Thunderstorm with precipitation of hail</dct:description>
         <rdfs:label xml:lang="en">Thunderstorm with precipitation of hail</rdfs:label>
+        <dct:description xml:lang="en">Thunderstorm with precipitation of hail</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -272,8 +272,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSGS">
         <skos:notation>RETSGS</skos:notation>
-        <dct:description xml:lang="en">Thunderstorm with precipitation of snow pellets/small hail</dct:description>
         <rdfs:label xml:lang="en">Thunderstorm with precipitation of snow pellets/small hail</rdfs:label>
+        <dct:description xml:lang="en">Thunderstorm with precipitation of snow pellets/small hail</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -285,8 +285,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSRA">
         <skos:notation>RETSRA</skos:notation>
-        <dct:description xml:lang="en">Thunderstorm with precipitation of rain</dct:description>
         <rdfs:label xml:lang="en">Thunderstorm with precipitation of rain</rdfs:label>
+        <dct:description xml:lang="en">Thunderstorm with precipitation of rain</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -298,8 +298,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSSN">
         <skos:notation>RETSSN</skos:notation>
-        <dct:description xml:lang="en">Thunderstorm with precipitation of snow</dct:description>
         <rdfs:label xml:lang="en">Thunderstorm with precipitation of snow</rdfs:label>
+        <dct:description xml:lang="en">Thunderstorm with precipitation of snow</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -311,8 +311,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/TSUP">
         <skos:notation>RETSUP</skos:notation>
-        <dct:description xml:lang="en">Thunderstorm with unidentified precipitation</dct:description>
         <rdfs:label xml:lang="en">Thunderstorm with unidentified precipitation</rdfs:label>
+        <dct:description xml:lang="en">Thunderstorm with unidentified precipitation</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -324,8 +324,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/UP">
         <skos:notation>REUP</skos:notation>
-        <dct:description xml:lang="en">Unidentified precipitation</dct:description>
         <rdfs:label xml:lang="en">Unidentified precipitation</rdfs:label>
+        <dct:description xml:lang="en">Unidentified precipitation</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -337,8 +337,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/306/4678/VA">
         <skos:notation>REVA</skos:notation>
-        <dct:description xml:lang="en">Volcanic ash</dct:description>
         <rdfs:label xml:lang="en">Volcanic ash</rdfs:label>
+        <dct:description xml:lang="en">Volcanic ash</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -350,9 +350,8 @@
     <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:notation>AerodromeRecentWeather</skos:notation>
-    <dct:description xml:lang="en">The items within this code table are the weather types that may be reported within a meteorological aerodrome observation report that have occurred during the period since the last issued routine report or last hour, whichever is shorter, but are not observed at the time of the observation. Requirements for reporting recent weather at an aerodrome are specified in Technical Regulations, Volume II (WMO-No. 49), Part II, Appendix 3, [C.3.1.] 4.8.1.1.  This code table contains the set of weather types that are permitted for reporting recent weather. These are a subset of the enumerated set of meteorologically valid combinations specified in Part A, Code Table 4678 comprising elements ‘intensity or proximity’, ‘descriptor’, ‘precipitation’, ‘obscuration’ and/or ‘other’.</dct:description>
     <rdfs:label xml:lang="en">Code Table D-6: Aerodrome recent weather</rdfs:label>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-04T15:53:40.229000+00:00</dct:modified>
+    <dct:description xml:lang="en">The items within this code table are the weather types that may be reported within a meteorological aerodrome observation report that have occurred during the period since the last issued routine report or last hour, whichever is shorter, but are not observed at the time of the observation. Requirements for reporting recent weather at an aerodrome are specified in ICAO Annex 3 and PANS-MET.  This code table contains the set of weather types that are permitted for reporting recent weather. These are a subset of the enumerated set of meteorologically valid combinations specified in the Manual on Codes (WMO No.306), Vol. I.1 Part A, Code table 4678 comprising elements ‘intensity or proximity’, ‘descriptor’, ‘precipitation’, ‘obscuration’ and/or ‘other’.</dct:description>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>

@@ -159,7 +159,7 @@ a) visibility, 10km or more, and the lowest visibility is not reported
 b) no cloud of operational significance
 c) no weather of significance to aviation
 
-Information on visibility, runway visual range, present weather and cloud amount, cloud type and height of cloud base shall not be reported.  See ICAO PANS-MET (Doc 10157) Section 2.1.1.4.</documentation>
+Information on visibility, runway visual range, present weather, cloud amount, cloud type and height of cloud base shall not be reported.  See ICAO PANS-MET (Doc 10157) Section 2.1.1.4.</documentation>
 					</annotation>
 				</attribute>
 			</extension>

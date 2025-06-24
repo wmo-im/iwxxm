@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:ldp="http://www.w3.org/ns/ldp#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dct="http://purl.org/dc/terms/"
   xmlns:reg="http://purl.org/linked-data/registry#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dct="http://purl.org/dc/terms/"
 >
   <reg:Register rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/0">
         <skos:notation>0</skos:notation>
-        <dct:description xml:lang="en">Nil</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdfs:label>
+        <dct:description xml:lang="en">Nil</dct:description>
         <skos:note xml:lang="en">in cloud</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -26,8 +26,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/1">
         <skos:notation>1</skos:notation>
-        <dct:description xml:lang="en">Light</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdfs:label>
+        <dct:description xml:lang="en">Light</dct:description>
         <skos:note xml:lang="en">in cloud</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -40,8 +40,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/2">
         <skos:notation>2</skos:notation>
-        <dct:description xml:lang="en">Moderate</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdfs:label>
+        <dct:description xml:lang="en">Moderate</dct:description>
         <skos:note xml:lang="en">in cloud</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -54,8 +54,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/3">
         <skos:notation>3</skos:notation>
-        <dct:description xml:lang="en">Severe</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdfs:label>
+        <dct:description xml:lang="en">Severe</dct:description>
         <skos:note xml:lang="en">in cloud</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -68,8 +68,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/4">
         <skos:notation>4</skos:notation>
-        <dct:description xml:lang="en">Nil</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdfs:label>
+        <dct:description xml:lang="en">Nil</dct:description>
         <skos:note xml:lang="en">in clear air</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -82,8 +82,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/5">
         <skos:notation>5</skos:notation>
-        <dct:description xml:lang="en">Light</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdfs:label>
+        <dct:description xml:lang="en">Light</dct:description>
         <skos:note xml:lang="en">in clear air</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -96,8 +96,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/6">
         <skos:notation>6</skos:notation>
-        <dct:description xml:lang="en">Moderate</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdfs:label>
+        <dct:description xml:lang="en">Moderate</dct:description>
         <skos:note xml:lang="en">in clear air</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -110,8 +110,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/7">
         <skos:notation>7</skos:notation>
-        <dct:description xml:lang="en">Severe</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdfs:label>
+        <dct:description xml:lang="en">Severe</dct:description>
         <skos:note xml:lang="en">in clear air</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -124,8 +124,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/8">
         <skos:notation>8</skos:notation>
-        <dct:description xml:lang="en">Nil</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdfs:label>
+        <dct:description xml:lang="en">Nil</dct:description>
         <skos:note xml:lang="en">cloud/clear air not specified</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -138,8 +138,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/9">
         <skos:notation>9</skos:notation>
-        <dct:description xml:lang="en">Light</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</rdfs:label>
+        <dct:description xml:lang="en">Light</dct:description>
         <skos:note xml:lang="en">cloud/clear air not specified</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -152,8 +152,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/10">
         <skos:notation>10</skos:notation>
-        <dct:description xml:lang="en">Moderate</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdfs:label>
+        <dct:description xml:lang="en">Moderate</dct:description>
         <skos:note xml:lang="en">cloud/clear air not specified</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -166,8 +166,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/11">
         <skos:notation>11</skos:notation>
-        <dct:description xml:lang="en">Severe</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</rdfs:label>
+        <dct:description xml:lang="en">Severe</dct:description>
         <skos:note xml:lang="en">cloud/clear air not specified</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -180,8 +180,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/12">
         <skos:notation>12</skos:notation>
-        <dct:description xml:lang="en">Extreme, in clear air</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</rdfs:label>
+        <dct:description xml:lang="en">Extreme, in clear air</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -193,8 +193,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/13">
         <skos:notation>13</skos:notation>
-        <dct:description xml:lang="en">Extreme, in cloud</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</rdfs:label>
+        <dct:description xml:lang="en">Extreme, in cloud</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -206,8 +206,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/14">
         <skos:notation>14</skos:notation>
-        <dct:description xml:lang="en">Extreme, cloud/clear air not specified</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</rdfs:label>
+        <dct:description xml:lang="en">Extreme, cloud/clear air not specified</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -219,8 +219,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/15">
         <skos:notation>15</skos:notation>
-        <dct:description xml:lang="en">Light, isolated moderate</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</rdfs:label>
+        <dct:description xml:lang="en">Light, isolated moderate</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -232,8 +232,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/16">
         <skos:notation>16</skos:notation>
-        <dct:description xml:lang="en">Light, occasional moderate</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</rdfs:label>
+        <dct:description xml:lang="en">Light, occasional moderate</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -245,8 +245,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/17">
         <skos:notation>17</skos:notation>
-        <dct:description xml:lang="en">Light, frequently moderate</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</rdfs:label>
+        <dct:description xml:lang="en">Light, frequently moderate</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -258,8 +258,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/18">
         <skos:notation>18</skos:notation>
-        <dct:description xml:lang="en">Moderate, isolated severe</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</rdfs:label>
+        <dct:description xml:lang="en">Moderate, isolated severe</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -271,8 +271,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/19">
         <skos:notation>19</skos:notation>
-        <dct:description xml:lang="en">Moderate, occasional severe</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</rdfs:label>
+        <dct:description xml:lang="en">Moderate, occasional severe</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -284,8 +284,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/20">
         <skos:notation>20</skos:notation>
-        <dct:description xml:lang="en">Moderate, frequently severe</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</rdfs:label>
+        <dct:description xml:lang="en">Moderate, frequently severe</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -297,8 +297,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/21">
         <skos:notation>21</skos:notation>
-        <dct:description xml:lang="en">Severe, isolated extreme</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</rdfs:label>
+        <dct:description xml:lang="en">Severe, isolated extreme</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -310,8 +310,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/22">
         <skos:notation>22</skos:notation>
-        <dct:description xml:lang="en">Severe, occasional extreme</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</rdfs:label>
+        <dct:description xml:lang="en">Severe, occasional extreme</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -323,8 +323,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/23">
         <skos:notation>23</skos:notation>
-        <dct:description xml:lang="en">Severe, frequently extreme</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</rdfs:label>
+        <dct:description xml:lang="en">Severe, frequently extreme</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -336,8 +336,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-11-030/63">
         <skos:notation>63</skos:notation>
-        <dct:description xml:lang="en">Missing value</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63</rdfs:label>
+        <dct:description xml:lang="en">Missing value</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -350,7 +350,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:notation>0-11-030</skos:notation>
     <rdfs:label xml:lang="en">Extended degree of turbulence</rdfs:label>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-03T09:54:26.451000+00:00</dct:modified>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>

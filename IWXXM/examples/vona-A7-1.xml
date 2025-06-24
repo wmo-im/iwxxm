@@ -33,8 +33,8 @@
     </iwxxm:boundingVolume>
     
     <!-- A list of all phenomena of all objects -->
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANO"/>
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANO"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANIC_ASH"/>
     
     <!-- Issue time of the collective -->
     <iwxxm:issueTime>
@@ -78,7 +78,7 @@
                     <gml:timePosition>2024-02-16T01:30:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANO"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANO"/>
             <iwxxm:phenomenonGeometry>
                 <gml:Point gml:id="uuid.fd4d007a-0444-476c-820e-c3af3e67b917" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
                     <gml:pos>54.03 159.27</gml:pos>
@@ -110,22 +110,22 @@
                     <gml:timePosition>2024-02-16T01:30:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANIC_ASH"/>
             <iwxxm:phenomenonGeometry>
                 <iwxxm:ElevatedLevel gml:id="uuid.f17a94a3-2412-44a0-8cd5-12873e4400c7" srsDimension="2" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
                     <iwxxm:elevation uom="M">15000</iwxxm:elevation>
                     <iwxxm:verticalReference>MSL</iwxxm:verticalReference>
                 </iwxxm:ElevatedLevel>
             </iwxxm:phenomenonGeometry>
-            <iwxxm:phenomenonProperty nilReason="http://codes.wmo.int/common/nil/inapplicable"></iwxxm:phenomenonProperty>
+            <iwxxm:phenomenonProperty nilReason="http://codes.wmo.int/iwxxm/nil/inapplicable"></iwxxm:phenomenonProperty>
         </iwxxm:MeteorologicalFeature>
     </iwxxm:feature>
     
     <!-- Rest of the elements in VONA collective -->
     <iwxxm:stateOrRegion>RUSSIA</iwxxm:stateOrRegion>
     <iwxxm:noticeNumber>2021/4</iwxxm:noticeNumber>
-    <iwxxm:currentColourCode>YELLOW</iwxxm:currentColourCode>
-    <iwxxm:previousColourCode>ORANGE</iwxxm:previousColourCode>
+    <iwxxm:currentColourCode xlink:href="http://codes.wmo.int/iwxxm/AviationColourCode/YELLOW"/>
+    <iwxxm:previousColourCode xlink:href="http://codes.wmo.int/iwxxm/AviationColourCode/ORANGE"/>
     <iwxxm:contacts>DUTY VOLCANOLOGIEST, TEL +123-456-789 EMAIL, DUTY.VOLCANOLOGIEST[AT]VOLCANO.COM, WWW.VOLCANO.COM</iwxxm:contacts>
     <iwxxm:remarks>SATELLITE, SEISMIC AND INFRASOUND DATA SHOW NO EVIDENCE OF FURTHER ERUPTIVE ACT. FUTURE EXPLOSIONS AT KARYMSKY ARE LIKELY. THEY OCCUR WO WRNG AND TYPICALLY PRODUCE SMALL VA CLD THAT DISSIPATE QUICKLY; HOWEVER, LARGER ASH ARE POSS.</iwxxm:remarks>
     <iwxxm:nextNotice>WILL BE ISSUED BY 20240223/0130Z</iwxxm:nextNotice>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:ldp="http://www.w3.org/ns/ldp#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dct="http://purl.org/dc/terms/"
   xmlns:reg="http://purl.org/linked-data/registry#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dct="http://purl.org/dc/terms/"
 >
   <reg:Register rdf:about="http://codes.wmo.int/common/nil">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/common/nil/AboveDetectionRange">
         <skos:notation>AboveDetectionRange</skos:notation>
-        <dct:description xml:lang="en">The value was above the detection range of the instrument used to estimate it.</dct:description>
         <rdfs:label xml:lang="en">Above detection range</rdfs:label>
+        <dct:description xml:lang="en">The value was above the detection range of the instrument used to estimate it.</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -25,8 +25,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/common/nil/BelowDetectionRange">
         <skos:notation>BelowDetectionRange</skos:notation>
-        <dct:description xml:lang="en">The value was below the detection range of the instrument used to estimate it.</dct:description>
         <rdfs:label xml:lang="en">Below detection range</rdfs:label>
+        <dct:description xml:lang="en">The value was below the detection range of the instrument used to estimate it.</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -38,8 +38,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/common/nil/inapplicable">
         <skos:notation>inapplicable</skos:notation>
-        <dct:description xml:lang="en">There is no value.</dct:description>
         <rdfs:label xml:lang="en">Inapplicable</rdfs:label>
+        <dct:description xml:lang="en">There is no value.</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -51,8 +51,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/common/nil/missing">
         <skos:notation>missing</skos:notation>
-        <dct:description xml:lang="en">The correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist.</dct:description>
         <rdfs:label xml:lang="en">Missing</rdfs:label>
+        <dct:description xml:lang="en">The correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist.</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -64,8 +64,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/common/nil/noSignificantChange">
         <skos:notation>noSignificantChange</skos:notation>
-        <dct:description xml:lang="en">No significant change is expected to occur.</dct:description>
         <rdfs:label xml:lang="en">No significant change</rdfs:label>
+        <dct:description xml:lang="en">No significant change is expected to occur.</dct:description>
         <skos:altLabel xml:lang="en">NOSIG</skos:altLabel>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -78,8 +78,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/common/nil/notDetectedByAutoSystem">
         <skos:notation>notDetectedByAutoSystem</skos:notation>
-        <dct:description xml:lang="en">The automated observing system did not detect a value (e.g. no cloud detected NCD).</dct:description>
         <rdfs:label xml:lang="en">Nothing detected by automated system</rdfs:label>
+        <dct:description xml:lang="en">The automated observing system did not detect a value (e.g. no cloud detected NCD).</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -91,8 +91,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/common/nil/notObservable">
         <skos:notation>notObservable</skos:notation>
-        <dct:description xml:lang="en">A system failure, sensor failure, or sensor obstruction, prevented the intended observation of the value.</dct:description>
         <rdfs:label xml:lang="en">Not observable</rdfs:label>
+        <dct:description xml:lang="en">A system failure, sensor failure, or sensor obstruction, prevented the intended observation of the value.</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -104,8 +104,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance">
         <skos:notation>nothingOfOperationalSignificance</skos:notation>
-        <dct:description xml:lang="en">Nothing was observed or forecast of operational significance (e.g. nil significant cloud NSC, nil significant weather NSW).</dct:description>
         <rdfs:label xml:lang="en">Nothing of operational signficance</rdfs:label>
+        <dct:description xml:lang="en">Nothing was observed or forecast of operational significance (e.g. nil significant cloud NSC, nil significant weather NSW).</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -117,8 +117,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/common/nil/template">
         <skos:notation>template</skos:notation>
-        <dct:description xml:lang="en">The value will be available later.</dct:description>
         <rdfs:label xml:lang="en">Template</rdfs:label>
+        <dct:description xml:lang="en">The value will be available later.</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -130,8 +130,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/common/nil/unknown">
         <skos:notation>unknown</skos:notation>
-        <dct:description xml:lang="en">The correct value is not known to, and not computable by, the sender of this data. However, a correct value probably exists.</dct:description>
         <rdfs:label xml:lang="en">Unknown</rdfs:label>
+        <dct:description xml:lang="en">The correct value is not known to, and not computable by, the sender of this data. However, a correct value probably exists.</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -143,8 +143,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/common/nil/withheld">
         <skos:notation>withheld</skos:notation>
-        <dct:description xml:lang="en">The value is not divulged.</dct:description>
         <rdfs:label xml:lang="en">Withheld</rdfs:label>
+        <dct:description xml:lang="en">The value is not divulged.</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -156,9 +156,8 @@
     <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:notation>nil</skos:notation>
-    <dct:description xml:lang="en">Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. Terms are drawn from authorities in addition to WMO including ISO/TC 211 (from ISO 19136:2007 Geography markup language clause 8.2.3.1; published on their behalf by the Open Geospatial Consortium).</dct:description>
     <rdfs:label xml:lang="en">Code Table D-1: Nil reasons</rdfs:label>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-03T09:52:34.941000+00:00</dct:modified>
+    <dct:description xml:lang="en">Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. Terms are drawn from authorities in addition to WMO including ISO/TC 211 (from ISO 19136:2007 Geography markup language clause 8.2.3.1; published on their behalf by the Open Geospatial Consortium).</dct:description>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>

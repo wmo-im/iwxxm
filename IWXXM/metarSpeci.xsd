@@ -457,7 +457,7 @@ Significant wave height shall be reported in meters ("m").</documentation>
 				<annotation>
 					<documentation>The state of the sea observed by aeronautical meteorological stations established on offshore structures in support of helicopter operations
 
-See ICAO PANS-MET Doc 10157) Section 2.2.8.1.5 and WMO No.306 Vol. I.1 Table 3700.</documentation>
+See ICAO PANS-MET Doc 10157) Section 2.2.8.1.5 and the Manual on Codes (WMO No.306), Vol. I.1 Table 3700.</documentation>
 				</annotation>
 			</element>
 			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -733,9 +733,9 @@ Direction of minimum visibility shall be given in degrees from true North. Plane
 		<annotation>
 			<documentation>Change qualifier of a trend-type forecast or an aerodrome forecast.
 
-Defined in WMO No. 306 Vol I.1; FM-15 METAR, FM-16 SPECI and FM-51 TAF.
+Defined in the Manual on Codes (WMO No. 306), Vol I.1; FM-15 METAR, FM-16 SPECI and FM-51 TAF.
 
-Also see WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 08 016 'Change qualifier of a trend forecast or an aerodrome forecast'.</documentation>
+Also see WMO No. 306 Vol I.2 Part B FM 94 BUFR Code table 0 08 016 'Change qualifier of a trend forecast or an aerodrome forecast'.</documentation>
 		</annotation>
 		<restriction base="string">
 			<enumeration value="BECOMING">
@@ -752,11 +752,11 @@ Also see WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 08 016 'Change quali
 	</simpleType>
 	<simpleType name="VisualRangeTendencyType">
 		<annotation>
-			<documentation>The tendency of visual range (e.g., upward, downward).  Defined for the purposes of aviation meteorology reporting of the visual range on runways (WMO No. 49-2).
+			<documentation>The tendency of visual range (e.g., upward, downward).  Defined for the purposes of aviation meteorology reporting of the visual range on runways (ICAO Annex 3 and PANS-MET (Doc 10157)).
 
 If the [runway] visual range (RVR) values during the 10-minute period preceding the nominal observation time show a distinct upward or downward tendency such that the mean during the first five minutes varies by 100 metres or more from the mean in the second five minutes of the period, an UPWARD [U] or DOWNWARD [D] tendency is recorded. When no distinct change in RVR is observed, NO CHANGE [N] is recorded. When it is not possible to determine the tendency, MISSING VALUE is recorded.
 
-See WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 018 "Tendency of runway visual range".</documentation>
+See the Manual on Codes (WMO No. 306) Vol I.2 FM 94 BUFR Code table 0 20 018 "Tendency of runway visual range".</documentation>
 		</annotation>
 		<restriction base="string">
 			<enumeration value="UPWARD">
@@ -815,7 +815,7 @@ See WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 018 "Tendency of runway visua
 
 Only a specific set of weather phenomenon are reported within aviation meteorology as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
-This CodeList is specifically defined for aviation purposes as defined in PANS-MET. A superset of definitions are defined in WMO No. 306 Vol I.1 code-table 4678 "Significant weather phenomena".</documentation>
+This codelist is specifically defined for aviation purposes as defined in PANS-MET. A superset of definitions are defined in the Manual on Codes (WMO No. 306), Vol I.1 Code table 4678 "Significant weather phenomena".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/AerodromeRecentWeather</vocabulary>
 				<extensibility>none</extensibility>
@@ -831,18 +831,20 @@ This CodeList is specifically defined for aviation purposes as defined in PANS-M
 			<documentation>Categorical assessment of sea surface state (or other large open body of water) based on height of waves.
 
 Height in metres : Category
-- 0 metres : Calm (glassy)
-- 0-0.1 metres : Calm (rippled)
-- 0.1-0.5 metres : Smooth
-- 0.5-1.25 metres : Slight
-- 1.25-2.5 metres : Moderate
-- 2.5-4 metres : Rough
-- 4-6 metres : Very rough
-- 6-9 metres : High
-- 9-14 metres : Very high
-- &gt;14 metres : Phenomenal
 
-See WMO No. 306 Vol I.1 code table 3700 "State of the sea" and WMO No. 306 Vol I.2 FM 94 BUFR code table 0 22 061 "State of the sea".</documentation>
+	- 0 metres : Calm (glassy)
+	- 0-0.1 metres : Calm (rippled)
+	- 0.1-0.5 metres : Smooth
+	- 0.5-1.25 metres : Slight
+	- 1.25-2.5 metres : Moderate
+	- 2.5-4 metres : Rough
+	- 4-6 metres : Very rough
+	- 6-9 metres : High
+	- 9-14 metres : Very high
+	- &gt;14 metres : Phenomenal
+
+
+See the Manual on Codes (WMO No. 306), Vol I.1 Code table 3700 "State of the sea" and WMO No. 306 Vol I.2 FM 94 BUFR Code table 0 22 061 "State of the sea".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-22-061</vocabulary>
 				<extensibility>none</extensibility>
@@ -859,7 +861,7 @@ See WMO No. 306 Vol I.1 code table 3700 "State of the sea" and WMO No. 306 Vol I
 
 Only a specific set of weather phenomenon are reported within aviation meteorology as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
-This CodeList is specifically defined for aviation purposes as defined in ICAO PANS-MET. A superset of definitions are defined in WMO No. 306 Vol I.1 code-table 4678 "Significant weather phenomena".</documentation>
+This codelist is specifically defined for aviation purposes as defined in ICAO PANS-MET. A superset of definitions are defined in the Manual on Codes (WMO No. 306), Vol I.1 Code table 4678 "Significant weather phenomena".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</vocabulary>
 				<extensibility>none</extensibility>

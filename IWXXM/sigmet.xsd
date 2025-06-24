@@ -107,7 +107,7 @@ In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE 
 					</element>
 					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
-							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO PANS-MET (Doc 10157): a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
+							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomena historically reported in ICAO PANS-MET (Doc 10157): a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">

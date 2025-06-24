@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:ldp="http://www.w3.org/ns/ldp#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dct="http://purl.org/dc/terms/"
-  xmlns:reg="http://purl.org/linked-data/registry#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:reg="http://purl.org/linked-data/registry#"
+  xmlns:dct="http://purl.org/dc/terms/"
 >
   <reg:Register rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/EMBD_TS">
         <skos:notation>EMBD_TS</skos:notation>
-        <dct:description xml:lang="en">Embedded thunderstorm</dct:description>
         <rdfs:label xml:lang="en">Embedded thunderstorm</rdfs:label>
+        <dct:description xml:lang="en">Embedded thunderstorm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -25,8 +25,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/EMBD_TSGR">
         <skos:notation>EMBD_TSGR</skos:notation>
-        <dct:description xml:lang="en">Embedded thunderstorm with hail</dct:description>
         <rdfs:label xml:lang="en">Embedded thunderstorm with hail</rdfs:label>
+        <dct:description xml:lang="en">Embedded thunderstorm with hail</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -38,8 +38,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/FRQ_TS">
         <skos:notation>FRQ_TS</skos:notation>
-        <dct:description xml:lang="en">Frequent thunderstorm</dct:description>
         <rdfs:label xml:lang="en">Frequent thunderstorm</rdfs:label>
+        <dct:description xml:lang="en">Frequent thunderstorm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -51,8 +51,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/FRQ_TSGR">
         <skos:notation>FRQ_TSGR</skos:notation>
-        <dct:description xml:lang="en">Frequent thunderstorm with hail</dct:description>
         <rdfs:label xml:lang="en">Frequent thunderstorm with hail</rdfs:label>
+        <dct:description xml:lang="en">Frequent thunderstorm with hail</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -64,8 +64,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/HVY_DS">
         <skos:notation>HVY_DS</skos:notation>
-        <dct:description xml:lang="en">Heavy dust storm</dct:description>
         <rdfs:label xml:lang="en">Heavy dust storm</rdfs:label>
+        <dct:description xml:lang="en">Heavy dust storm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -77,8 +77,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/HVY_SS">
         <skos:notation>HVY_SS</skos:notation>
-        <dct:description xml:lang="en">Heavy sand storm</dct:description>
         <rdfs:label xml:lang="en">Heavy sand storm</rdfs:label>
+        <dct:description xml:lang="en">Heavy sand storm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -90,8 +90,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/OBSC_TS">
         <skos:notation>OBSC_TS</skos:notation>
-        <dct:description xml:lang="en">Obscured thunderstorm</dct:description>
         <rdfs:label xml:lang="en">Obscured thunderstorm</rdfs:label>
+        <dct:description xml:lang="en">Obscured thunderstorm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -103,8 +103,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/OBSC_TSGR">
         <skos:notation>OBSC_TSGR</skos:notation>
-        <dct:description xml:lang="en">Obscured thunderstorm with hail</dct:description>
         <rdfs:label xml:lang="en">Obscured thunderstorm with hail</rdfs:label>
+        <dct:description xml:lang="en">Obscured thunderstorm with hail</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -116,8 +116,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/RDOACT_CLD">
         <skos:notation>RDOACT_CLD</skos:notation>
-        <dct:description xml:lang="en">Radioactive cloud</dct:description>
         <rdfs:label xml:lang="en">Radioactive cloud</rdfs:label>
+        <dct:description xml:lang="en">Radioactive cloud</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -129,8 +129,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SEV_ICE">
         <skos:notation>SEV_ICE</skos:notation>
-        <dct:description xml:lang="en">Severe airframe icing</dct:description>
         <rdfs:label xml:lang="en">Severe airframe icing</rdfs:label>
+        <dct:description xml:lang="en">Severe airframe icing</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -142,8 +142,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SEV_ICE_FZRA">
         <skos:notation>SEV_ICE_FZRA</skos:notation>
-        <dct:description xml:lang="en">Severe airframe icing from freezing rain</dct:description>
         <rdfs:label xml:lang="en">Severe airframe icing from freezing rain</rdfs:label>
+        <dct:description xml:lang="en">Severe airframe icing from freezing rain</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -155,8 +155,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SEV_MTW">
         <skos:notation>SEV_MTW</skos:notation>
-        <dct:description xml:lang="en">Severe mountain wave</dct:description>
         <rdfs:label xml:lang="en">Severe mountain wave</rdfs:label>
+        <dct:description xml:lang="en">Severe mountain wave</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -168,8 +168,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SEV_TURB">
         <skos:notation>SEV_TURB</skos:notation>
-        <dct:description xml:lang="en">Severe turbulence</dct:description>
         <rdfs:label xml:lang="en">Severe turbulence</rdfs:label>
+        <dct:description xml:lang="en">Severe turbulence</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -181,8 +181,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SQL_TS">
         <skos:notation>SQL_TS</skos:notation>
-        <dct:description xml:lang="en">Squall line</dct:description>
         <rdfs:label xml:lang="en">Squall line</rdfs:label>
+        <dct:description xml:lang="en">Squall line</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -194,8 +194,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/SQL_TSGR">
         <skos:notation>SQL_TSGR</skos:notation>
-        <dct:description xml:lang="en">Squall line with hail</dct:description>
         <rdfs:label xml:lang="en">Squall line with hail</rdfs:label>
+        <dct:description xml:lang="en">Squall line with hail</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -207,8 +207,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/TC">
         <skos:notation>TC</skos:notation>
-        <dct:description xml:lang="en">Tropical cyclone</dct:description>
         <rdfs:label xml:lang="en">Tropical cyclone</rdfs:label>
+        <dct:description xml:lang="en">Tropical cyclone</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -220,8 +220,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SigWxPhenomena/VA">
         <skos:notation>VA</skos:notation>
-        <dct:description xml:lang="en">Volcanic ash</dct:description>
         <rdfs:label xml:lang="en">Volcanic ash</rdfs:label>
+        <dct:description xml:lang="en">Volcanic ash</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -233,9 +233,8 @@
     <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:notation>SigWxPhenomena</skos:notation>
-    <dct:description xml:lang="en">The items within this code table are the types of weather phenomena of significance to aeronautical operations – as used in SIGMET and AIRMET reports and specified in Technical Regulations, Volume II (WMO-No. 49), Part II, Appendix 6, [C.3.1.] 1.1.4.</dct:description>
     <rdfs:label xml:lang="en">Code Table D-10: Significant Weather Phenomena</rdfs:label>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-03T09:52:41.384000+00:00</dct:modified>
+    <dct:description xml:lang="en">The items within this code table are the types of weather phenomena of significance to aeronautical operations – as used in SIGMET and AIRMET reports and specified in ICAO Annex 3 and PANS-MET</dct:description>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>

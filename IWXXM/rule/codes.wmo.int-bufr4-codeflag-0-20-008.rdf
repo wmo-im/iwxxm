@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:ldp="http://www.w3.org/ns/ldp#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dct="http://purl.org/dc/terms/"
   xmlns:reg="http://purl.org/linked-data/registry#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dct="http://purl.org/dc/terms/"
 >
   <reg:Register rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/0">
         <skos:notation>0</skos:notation>
-        <dct:description xml:lang="en">Sky clear</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdfs:label>
+        <dct:description xml:lang="en">Sky clear</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -25,8 +25,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/1">
         <skos:notation>1</skos:notation>
-        <dct:description xml:lang="en">Few</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdfs:label>
+        <dct:description xml:lang="en">Few</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -38,8 +38,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/2">
         <skos:notation>2</skos:notation>
-        <dct:description xml:lang="en">Scattered</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdfs:label>
+        <dct:description xml:lang="en">Scattered</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -51,8 +51,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/3">
         <skos:notation>3</skos:notation>
-        <dct:description xml:lang="en">Broken</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdfs:label>
+        <dct:description xml:lang="en">Broken</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -64,8 +64,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/4">
         <skos:notation>4</skos:notation>
-        <dct:description xml:lang="en">Overcast</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdfs:label>
+        <dct:description xml:lang="en">Overcast</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -77,8 +77,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/6">
         <skos:notation>6</skos:notation>
-        <dct:description xml:lang="en">Scattered/broken</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdfs:label>
+        <dct:description xml:lang="en">Scattered/broken</dct:description>
         <skos:note xml:lang="en">(Many forecasts use scattered/broken or broken/overcast followed by cloud type(s))</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -91,8 +91,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/7">
         <skos:notation>7</skos:notation>
-        <dct:description xml:lang="en">Broken/overcast</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdfs:label>
+        <dct:description xml:lang="en">Broken/overcast</dct:description>
         <skos:note xml:lang="en">(Many forecasts use scattered/broken or broken/overcast followed by cloud type(s))</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -105,8 +105,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/8">
         <skos:notation>8</skos:notation>
-        <dct:description xml:lang="en">Isolated</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdfs:label>
+        <dct:description xml:lang="en">Isolated</dct:description>
         <skos:note xml:lang="en">(Used on aviation charts to describe the cloud type Cb)</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -119,8 +119,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/9">
         <skos:notation>9</skos:notation>
-        <dct:description xml:lang="en">Isolated embedded</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</rdfs:label>
+        <dct:description xml:lang="en">Isolated embedded</dct:description>
         <skos:note xml:lang="en">(Used on aviation charts to describe the cloud type Cb)</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -133,8 +133,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/10">
         <skos:notation>10</skos:notation>
-        <dct:description xml:lang="en">Occasional</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdfs:label>
+        <dct:description xml:lang="en">Occasional</dct:description>
         <skos:note xml:lang="en">(Used on aviation charts to describe the cloud type Cb)</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -147,8 +147,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/11">
         <skos:notation>11</skos:notation>
-        <dct:description xml:lang="en">Occasional embedded</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</rdfs:label>
+        <dct:description xml:lang="en">Occasional embedded</dct:description>
         <skos:note xml:lang="en">(Used on aviation charts to describe the cloud type Cb)</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -161,8 +161,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/12">
         <skos:notation>12</skos:notation>
-        <dct:description xml:lang="en">Frequent</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</rdfs:label>
+        <dct:description xml:lang="en">Frequent</dct:description>
         <skos:note xml:lang="en">(Used on aviation charts to describe the cloud type Cb)</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -175,8 +175,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/13">
         <skos:notation>13</skos:notation>
-        <dct:description xml:lang="en">Dense</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</rdfs:label>
+        <dct:description xml:lang="en">Dense</dct:description>
         <skos:note xml:lang="en">(Used on aviation charts to describe cloud that would cause sudden changes in visibility (less than 1 000 m))</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -189,8 +189,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/14">
         <skos:notation>14</skos:notation>
-        <dct:description xml:lang="en">Layers</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</rdfs:label>
+        <dct:description xml:lang="en">Layers</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -202,8 +202,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/15">
         <skos:notation>15</skos:notation>
-        <dct:description xml:lang="en">Obscured (OBSC)</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</rdfs:label>
+        <dct:description xml:lang="en">Obscured (OBSC)</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -215,8 +215,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/16">
         <skos:notation>16</skos:notation>
-        <dct:description xml:lang="en">Embedded (EMBD)</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</rdfs:label>
+        <dct:description xml:lang="en">Embedded (EMBD)</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -228,8 +228,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/17">
         <skos:notation>17</skos:notation>
-        <dct:description xml:lang="en">Frequent embedded</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</rdfs:label>
+        <dct:description xml:lang="en">Frequent embedded</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -241,8 +241,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-008/31">
         <skos:notation>31</skos:notation>
-        <dct:description xml:lang="en">Missing value</dct:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</rdfs:label>
+        <dct:description xml:lang="en">Missing value</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -255,7 +255,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:notation>0-20-008</skos:notation>
     <rdfs:label xml:lang="en">Cloud distribution for aviation</rdfs:label>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-03T09:54:41.937000+00:00</dct:modified>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>

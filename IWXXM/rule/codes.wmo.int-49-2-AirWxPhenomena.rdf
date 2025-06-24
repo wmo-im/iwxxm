@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:ldp="http://www.w3.org/ns/ldp#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dct="http://purl.org/dc/terms/"
-  xmlns:reg="http://purl.org/linked-data/registry#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:reg="http://purl.org/linked-data/registry#"
+  xmlns:dct="http://purl.org/dc/terms/"
 >
   <reg:Register rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/BKN_CLD">
         <skos:notation>BKN_CLD</skos:notation>
-        <dct:description xml:lang="en">Broken cloud</dct:description>
         <rdfs:label xml:lang="en">Broken cloud</rdfs:label>
+        <dct:description xml:lang="en">Broken cloud</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -24,8 +24,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/FRQ_CB">
         <skos:notation>FRQ_CB</skos:notation>
-        <dct:description xml:lang="en">Frequent cumulonimbus cloud</dct:description>
         <rdfs:label xml:lang="en">Frequent cumulonimbus cloud</rdfs:label>
+        <dct:description xml:lang="en">Frequent cumulonimbus cloud</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -36,8 +36,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/FRQ_TCU">
         <skos:notation>FRQ_TCU</skos:notation>
-        <dct:description xml:lang="en">Frequent towering cumulus cloud</dct:description>
         <rdfs:label xml:lang="en">Frequent towering cumulus cloud</rdfs:label>
+        <dct:description xml:lang="en">Frequent towering cumulus cloud</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -48,8 +48,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/ISOL_CB">
         <skos:notation>ISOL_CB</skos:notation>
-        <dct:description xml:lang="en">Isolated cumulonimbus cloud</dct:description>
         <rdfs:label xml:lang="en">Isolated cumulonimbus cloud</rdfs:label>
+        <dct:description xml:lang="en">Isolated cumulonimbus cloud</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -60,8 +60,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/ISOL_TCU">
         <skos:notation>ISOL_TCU</skos:notation>
-        <dct:description xml:lang="en">Isolated towering cumulus cloud</dct:description>
         <rdfs:label xml:lang="en">Isolated towering cumulus cloud</rdfs:label>
+        <dct:description xml:lang="en">Isolated towering cumulus cloud</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -72,8 +72,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/ISOL_TS">
         <skos:notation>ISOL_TS</skos:notation>
-        <dct:description xml:lang="en">Isolated thunderstorms</dct:description>
         <rdfs:label xml:lang="en">Isolated thunderstorms</rdfs:label>
+        <dct:description xml:lang="en">Isolated thunderstorms</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -84,8 +84,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/ISOL_TSGR">
         <skos:notation>ISOL_TSGR</skos:notation>
-        <dct:description xml:lang="en">Isolated thunderstorms with hail</dct:description>
         <rdfs:label xml:lang="en">Isolated thunderstorms with hail</rdfs:label>
+        <dct:description xml:lang="en">Isolated thunderstorms with hail</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -96,8 +96,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/MOD_ICE">
         <skos:notation>MOD_ICE</skos:notation>
-        <dct:description xml:lang="en">Moderate icing</dct:description>
         <rdfs:label xml:lang="en">Moderate icing</rdfs:label>
+        <dct:description xml:lang="en">Moderate icing</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -108,8 +108,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/MOD_MTW">
         <skos:notation>MOD_MTW</skos:notation>
-        <dct:description xml:lang="en">Moderate mountain wave</dct:description>
         <rdfs:label xml:lang="en">Moderate mountain wave</rdfs:label>
+        <dct:description xml:lang="en">Moderate mountain wave</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -120,8 +120,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/MOD_TURB">
         <skos:notation>MOD_TURB</skos:notation>
-        <dct:description xml:lang="en">Moderate turbulence</dct:description>
         <rdfs:label xml:lang="en">Moderate turbulence</rdfs:label>
+        <dct:description xml:lang="en">Moderate turbulence</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -132,8 +132,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/MT_OBSC">
         <skos:notation>MT_OBSC</skos:notation>
-        <dct:description xml:lang="en">Mountain obscuration</dct:description>
         <rdfs:label xml:lang="en">Mountain obscuration</rdfs:label>
+        <dct:description xml:lang="en">Mountain obscuration</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -144,8 +144,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/OCNL_CB">
         <skos:notation>OCNL_CB</skos:notation>
-        <dct:description xml:lang="en">Occasional cumulonimbus cloud</dct:description>
         <rdfs:label xml:lang="en">Occasional cumulonimbus cloud</rdfs:label>
+        <dct:description xml:lang="en">Occasional cumulonimbus cloud</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -156,8 +156,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/OCNL_TCU">
         <skos:notation>OCNL_TCU</skos:notation>
-        <dct:description xml:lang="en">Occasional towering cumulus cloud</dct:description>
         <rdfs:label xml:lang="en">Occasional towering cumulus cloud</rdfs:label>
+        <dct:description xml:lang="en">Occasional towering cumulus cloud</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -168,8 +168,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/OCNL_TS">
         <skos:notation>OCNL_TS</skos:notation>
-        <dct:description xml:lang="en">Occasional thunderstorms</dct:description>
         <rdfs:label xml:lang="en">Occasional thunderstorms</rdfs:label>
+        <dct:description xml:lang="en">Occasional thunderstorms</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -180,8 +180,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/OCNL_TSGR">
         <skos:notation>OCNL_TSGR</skos:notation>
-        <dct:description xml:lang="en">Occasional thunderstorms with hail</dct:description>
         <rdfs:label xml:lang="en">Occasional thunderstorms with hail</rdfs:label>
+        <dct:description xml:lang="en">Occasional thunderstorms with hail</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -192,8 +192,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/OVC_CLD">
         <skos:notation>OVC_CLD</skos:notation>
-        <dct:description xml:lang="en">Overcast cloud</dct:description>
         <rdfs:label xml:lang="en">Overcast cloud</rdfs:label>
+        <dct:description xml:lang="en">Overcast cloud</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -204,8 +204,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/SFC_VIS">
         <skos:notation>SFC_VIS</skos:notation>
-        <dct:description xml:lang="en">Surface visibility</dct:description>
         <rdfs:label xml:lang="en">Surface visibility</rdfs:label>
+        <dct:description xml:lang="en">Surface visibility</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -216,8 +216,8 @@
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AirWxPhenomena/SFC_WIND">
         <skos:notation>SFC_WIND</skos:notation>
-        <dct:description xml:lang="en">Widespread mean surface wind</dct:description>
         <rdfs:label xml:lang="en">Widespread mean surface wind</rdfs:label>
+        <dct:description xml:lang="en">Widespread mean surface wind</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -228,9 +228,8 @@
     <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:notation>AirWxPhenomena</skos:notation>
-    <dct:description xml:lang="en">ICAO Annex 3/ WMO No. 49-2 Appendix 6 Section 2.1</dct:description>
     <rdfs:label xml:lang="en">Air Wx Phenomena</rdfs:label>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-30T13:26:05.884000+00:00</dct:modified>
+    <dct:description xml:lang="en">The items within this code table are the weather phenomena to be included in a SIGMET message as defind in ICAO Annex 3 and PANS-MET</dct:description>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>

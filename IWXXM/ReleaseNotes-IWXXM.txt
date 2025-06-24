@@ -1,25 +1,38 @@
 =========================================
 2025-2 Release Candidate 2 - June 2025
 =========================================
-Package METAR/SPECI (Version 3.2.0RC2)
-Package Common (Version 3.2.0RC2)
+Package SIGMET (Version 4.0.1 - No change)
+  * Corrected all latitudes and longtitudes of points in the polygon in sigmet-multi-location-VA.xml
 Package Volcanic Ash Advisory (Version 3.2.0RC2)
-  * Renamed iwxxm:sourceElevation to iwxxm:sourceElevationMSL and make subsequent changes to Schematron rules and examples
+  * Renamed iwxxm:sourceElevation to iwxxm:sourceElevationAMSL and make subsequent changes to Schematron rules and examples
+  * Updated example va-advisory-A7-2.xml
 Package Space Weather Advisory (Version 3.1.0RC2)
   * Changed the multiplicity of iwxxm:locationIndicator from [0..1] to [1..6] to cater for having multiple space weather bands
     and the mandatory need to specify the element
   * Updated example spacewx-A7-3.xml to show an improved way to encode the geometry of the affected volume in a Space Weather Advisory
   * Updated all Space Weather Advisory examples to show the correct way to indicate nil information in iwxxm:locationIndicator
-Package WAFS Significant Weather Forecast (Version 1.1.1RC2)
+Package WAFS Significant Weather Forecast (Version 1.2.0RC2)
+  * Revised iwxxm:WAFSSignificantWeatherForecast to allow for extension
+  * Revised to use codelists http://codes.wmo.int/iwxxm/MeteorologicalFeature and http://codes.wmo.int/iwxxm/nil
 Package Quantitative Volcanic Ash Concentration Information (Version 1.0.0RC2)
-  * Revised the codelist http://codes.wmo.int/iwxxm/VolcanicAshConcentrations, as well as example qvaci-Example.xml, to suitable categorize
-    the concentration thresholds
+  * Removed codelist http://codes.wmo.int/iwxxm/VolcanicAshConcentrations. Amended example qvaci-Example.xml accordingly
   * Introduced iwxxm:remarks for provision of additional information in the message
+  * Revised iwxxm:QuantitativeVolcanicAshConcentrationInformation to allow for extension
+  * Revised to use codelists http://codes.wmo.int/iwxxm/MeteorologicalFeature and http://codes.wmo.int/iwxxm/nil
 Package Volcano Observatory Notice for Aviation (Version 1.0.0RC2)
-* Fixed the bug in Schematron rule MeteorologicalFeature.MeteorologicalFeature-2
-* Revised the code list RDF files and related schematron rules to allow applicable IWXXM version checking
-* Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
-* Fixed discovered issues and improved the examples with reference to suggestions received
+  * Replaced Aviation Colour Code enumeration with codelist http://codes.wmo.int/iwxxm/AviationColourCode
+  * Revised example vona-A7-1.xml
+  * Revised iwxxm:VocanoObservatoryNoticeForAviation to allow for extension
+  * Revised to use codelists http://codes.wmo.int/iwxxm/MeteorologicalFeature and http://codes.wmo.int/iwxxm/nil
+Package MeteorologicalFeature (Version 1.1.0RC2)
+  * Revised iwxxm:MeteorologicalFeature to allow for extension
+  * Revised to use codelists http://codes.wmo.int/iwxxm/MeteorologicalFeature and http://codes.wmo.int/iwxxm/nil
+Others
+  * Fixed the bug in Schematron rule MeteorologicalFeature.MeteorologicalFeature-2
+  * Split schematron rule IWXXM.nilReasonCheck for separate use of http://codes.wmo.int/common/nil and http://codes.wmo.int/iwxxm/nil
+  * Revised the code list RDF files and related schematron rules to allow applicable IWXXM version checking
+  * Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
+  * Fixed discovered issues and improved the examples with reference to suggestions received
 
 =========================================
 2025-2 Release Candidate 1 - March 2024

@@ -242,7 +242,17 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 	<element name="SpaceWeatherLocation" type="iwxxm:SpaceWeatherLocationType"></element>
 	<complexType name="SpaceWeatherLocationType">
 		<annotation>
-			<documentation>Coverage being affected by space weather phenomenon.</documentation>
+			<documentation>Coverage affected by space weather phenomenon
+
+
+	- HNH (high northern hemisphere)
+	- MNH (middle northern hemisphere)
+	- EQN (equatorial latitudes northern hemisphere)
+	- EQS (equatorial latitudes southern hemisphere)
+	- MSH (middle latitudes southern hemisphere)
+	- HSH (high latitudes southern hemisphere)
+	- DAYSIDE (Day side)
+	- NIGHTSIDE (Night side)</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/SpaceWxLocation</vocabulary>
 				<extensibility>none</extensibility>

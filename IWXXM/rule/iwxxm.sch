@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
+<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+            queryBinding="xslt2"
+            schemaVersion="1.0.0RC2">
    <sch:title>Schematron validation</sch:title>
    <sch:ns prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
    <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -8,7 +10,6 @@
    <sch:ns prefix="metce" uri="http://def.wmo.int/metce/2013"/>
    <sch:ns prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
    <sch:ns prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
-   <sch:ns prefix="reg" uri="http://purl.org/linked-data/registry#"/>
    <sch:ns prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
    <sch:ns prefix="iwxxm" uri="http://icao.int/iwxxm/2025-2"/>
    <sch:pattern id="METAR_SPECI.AerodromeRunwayVisualRange-1">
@@ -279,7 +280,7 @@
    </sch:pattern>
    <sch:pattern id="TAF.TAF-2">
       <sch:rule context="//iwxxm:TAF">
-         <sch:assert test="( if( (string-length(@translationFailedTAC) gt 0) or (@permissibleUsage = 'NON-OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and exists(iwxxm:validPeriod) ) else( true() ) )">TAF.TAF-2: A non-operational report or a report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome and iwxxm:validPeriod</sch:assert>
+         <sch:assert test="( if( (string-length(@translationFailedTAC) gt 0) or (@permissibleUsage = 'NON-OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:aerodrome) and ((@isCancelReport = 'true' and exists(iwxxm:cancelledReportValidPeriod)) or (not(@isCancelReport = 'true') and exists(iwxxm:validPeriod))) ) else( true() ) )">TAF.TAF-2: A non-operational report or a report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime, iwxxm:aerodrome and (iwxxm:validPeriod or iwxxm:cancelledReportValidPeriod)</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="TAF.TAF-5">
@@ -585,7 +586,7 @@
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.VolcanicAshAdvisory-2">
       <sch:rule context="//iwxxm:VolcanicAshAdvisory">
-         <sch:assert test="( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = 'OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:sourceElevationMSL) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-2: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:sourceElevationMSL, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
+         <sch:assert test="( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = 'OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:sourceElevationAMSL) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )">VolcanicAshAdvisory.VolcanicAshAdvisory-2: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:sourceElevationAMSL, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshAdvisory.WindConditions-3">
@@ -694,16 +695,22 @@
          <sch:assert test="( iwxxm:phenomenonCategory = 'weatherForecasts' )">WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-1: iwxxm:phenomenonCategory shall be equal to 'weatherForecasts'.</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="QuantitativeVolcanicAshConcentrationInformation.VolcanicAshConcentrations">
-      <sch:rule context="//iwxxm:VolcanicAshConcentrations">
+   <sch:pattern id="VolcanoObservatoryNoticeForAviation.AviationColourCode">
+      <sch:rule context="//iwxxm:AviationColourCode">
          <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-VolcanicAshConcentrations.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:VolcanicAshConcentrations should be a member of code list http://codes.wmo.int/iwxxm/VolcanicAshConcentrations</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-AviationColourCode.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:AviationColourCode should be a member of code list http://codes.wmo.int/iwxxm/AviationColourCode</sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="QuantitativeVolcanicAshConcentrationInformation.VolcanicAshCloudConcentration.ashDensityCategory">
-      <sch:rule context="//iwxxm:VolcanicAshCloudConcentration/iwxxm:ashDensityCategory">
+   <sch:pattern id="VolcanoObservatoryNoticeForAviation.VolcanoObservatoryNoticeForAviation.currentColourCode">
+      <sch:rule context="//iwxxm:VolcanoObservatoryNoticeForAviation/iwxxm:currentColourCode">
          <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-VolcanicAshConcentrations.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:VolcanicAshCloudConcentration/iwxxm:ashDensityCategory should be a member of code list http://codes.wmo.int/iwxxm/VolcanicAshConcentrations</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-AviationColourCode.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:VolcanoObservatoryNoticeForAviation/iwxxm:currentColourCode should be a member of code list http://codes.wmo.int/iwxxm/AviationColourCode</sch:assert>
+      </sch:rule>
+   </sch:pattern>
+   <sch:pattern id="VolcanoObservatoryNoticeForAviation.VolcanoObservatoryNoticeForAviation.previousColourCode">
+      <sch:rule context="//iwxxm:VolcanoObservatoryNoticeForAviation/iwxxm:previousColourCode">
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-AviationColourCode.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:VolcanoObservatoryNoticeForAviation/iwxxm:previousColourCode should be a member of code list http://codes.wmo.int/iwxxm/AviationColourCode</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalFeature-1">
@@ -719,19 +726,19 @@
    <sch:pattern id="MeteorologicalFeature.MeteorologicalPhenomenon">
       <sch:rule context="//iwxxm:MeteorologicalPhenomenon">
          <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalPhenomenon should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalPhenomenon should be a member of code list http://codes.wmo.int/iwxxm/MeteorologicalFeature</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalFeature.phenomenon">
       <sch:rule context="//iwxxm:MeteorologicalFeature/iwxxm:phenomenon">
          <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalFeature/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalFeature/iwxxm:phenomenon should be a member of code list http://codes.wmo.int/iwxxm/MeteorologicalFeature</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalFeatureCollection.phenomenaList">
       <sch:rule context="//iwxxm:MeteorologicalFeatureCollection/iwxxm:phenomenaList|//iwxxm:WAFSSignificantWeatherForecast/iwxxm:phenomenaList|//iwxxm:QuantitativeVolcanicAshConcentrationInformation/iwxxm:phenomenaList|//iwxxm:VolcanoObservatoryNoticeForAviation/iwxxm:phenomenaList">
          <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="@xlink:href = document('codes.wmo.int-49-2-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalFeatureCollection/iwxxm:phenomenaList, iwxxm:WAFSSignificantWeatherForecast/iwxxm:phenomenaList, iwxxm:QuantitativeVolcanicAshConcentrationInformation/iwxxm:phenomenaList, iwxxm:VolcanoObservatoryNoticeForAviation/iwxxm:phenomenaList should be a member of code list http://codes.wmo.int/49-2/MeteorologicalFeature</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-iwxxm-MeteorologicalFeature.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:MeteorologicalFeatureCollection/iwxxm:phenomenaList, iwxxm:WAFSSignificantWeatherForecast/iwxxm:phenomenaList, iwxxm:QuantitativeVolcanicAshConcentrationInformation/iwxxm:phenomenaList, iwxxm:VolcanoObservatoryNoticeForAviation/iwxxm:phenomenaList should be a member of code list http://codes.wmo.int/iwxxm/MeteorologicalFeature</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="MeteorologicalFeature.MeteorologicalFeatureCollection-1">
@@ -846,9 +853,16 @@
          <sch:assert test="( if( exists(iwxxm:windGustSpeed) and not(iwxxm:windGustSpeed/@xsi:nil = 'true') ) then( (iwxxm:windGustSpeed/@uom = 'm/s') or (iwxxm:windGustSpeed/@uom = '[kn_i]') ) else( true() ) )">Common.AerodromeSurfaceWindTrendForecast-3: windGustSpeed shall be reported in metres per second (m/s) or knots ([kn_i])</sch:assert>
       </sch:rule>
    </sch:pattern>
+   <sch:pattern id="IWXXM.nilReasonCheckLegacy">
+      <sch:rule context="//SPECI|//METAR|//TAF|//SIGMET|//AIRMET|//TropicalCycloneAdvisory|//VolcanicAshAdvisory|//SpaceWeatherAdvisory">
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="( if( exists(@nilReason) ) then( @nilReason = document('codes.wmo.int-common-nil.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about ) else( true() ) )">IWXXM.nilReasonCheckLegacy: nilReason attributes should be a member of http://codes.wmo.int/common/nil</sch:assert>
+      </sch:rule>
+   </sch:pattern>
    <sch:pattern id="IWXXM.nilReasonCheck">
-      <sch:rule context="//iwxxm:*">
-         <sch:assert test="( if( exists(@nilReason) ) then( @nilReason = document('codes.wmo.int-common-nil.rdf')/rdf:RDF/*/skos:member/*/@*[local-name()='about'] ) else( true() ) )">IWXXM.nilReasonCheck: nilReason attributes should be a member of http://codes.wmo.int/common/nil</sch:assert>
+      <sch:rule context="//WAFSSignificantWeatherForecast|//QuantitativeVolcanicAshConcentrationInformation|//VolcanoObservatoryNoticeForAviation|//MeteorologicalFeature|//MeteorologicalFeatureCollection">
+         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
+         <sch:assert test="( if( exists(@nilReason) ) then( @nilReason = document('codes.wmo.int-iwxxm-nil.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about ) else( true() ) )">IWXXM.nilReasonCheck: nilReason attributes should be a member of http://codes.wmo.int/iwxxm/nil</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="IWXXM.ExtensionAlwaysLast">

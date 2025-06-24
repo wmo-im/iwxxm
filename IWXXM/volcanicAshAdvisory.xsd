@@ -47,11 +47,11 @@ An unknown volcano location shall be indicated with a nil in EruptingVolcano/pos
 An unknown State or region shall be indicated with a nil in stateOrRegion and nilReason "http://codes.wmo.int/common/nil/unknown".</documentation>
 						</annotation>
 					</element>
-					<element nillable="true" name="sourceElevationMSL" type="iwxxm:DistanceWithNilReasonType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="sourceElevationAMSL" type="iwxxm:DistanceWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Elevation of the vent or the average height of volcanic ash field for re-suspended volcanic ash from mean sea level.  If reported it shall either be in meters ("m") or feet ("[ft_i]"). Use negative values to represent levels below mean sea level.
 
-When the elevation is unknown, it shall be represented with a nil in sourceElevationMSL and nilReason 'http://codes.wmo.int/common/nil/unknown'.</documentation>
+When the elevation is unknown, it shall be represented with a nil in sourceElevationAMSL and nilReason 'http://codes.wmo.int/common/nil/unknown'.</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="advisoryNumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
