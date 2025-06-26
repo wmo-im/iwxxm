@@ -57,30 +57,30 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 
 205-2025-2.3.2 IWXXM schemas are XML Schema Definition (XSD) files that define the structure of IWXXM-XML and are used to validate IWXXM-XML files.
 
-https://schemas.wmo.int/iwxxm/2025-2/iwxxm.xsd
-https://schemas.wmo.int/iwxxm/2025-2/airmet.xsd
-https://schemas.wmo.int/iwxxm/2025-2/common.xsd
-https://schemas.wmo.int/iwxxm/2025-2/measures.xsd
-https://schemas.wmo.int/iwxxm/2025-2/metarSpeci.xsd
-https://schemas.wmo.int/iwxxm/2025-2/metFeature.xsd
-https://schemas.wmo.int/iwxxm/2025-2/sigmet.xsd
-https://schemas.wmo.int/iwxxm/2025-2/spaceWxAdvisory.xsd
-https://schemas.wmo.int/iwxxm/2025-2/taf.xsd
-https://schemas.wmo.int/iwxxm/2025-2/tropicalCycloneAdvisory.xsd
-https://schemas.wmo.int/iwxxm/2025-2/volcanicAshAdvisory.xsd
-https://schemas.wmo.int/iwxxm/2025-2/WAFSSigWxFC.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/iwxxm.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/airmet.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/common.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/measures.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/metarSpeci.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/metFeature.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/sigmet.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/spaceWxAdvisory.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/taf.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/tropicalCycloneAdvisory.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/volcanicAshAdvisory.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/WAFSSigWxFC.xsd
 
 205-2025-2.3.3 IWXXM Schematron Rule is a directory that contains an ISO schematron file that is used to provide enhanced validation of IWXXM-XML files. The schematron file uses the IWXXM code lists represented in Resource Description Framework (RDF) format exported from the WMO Codes Registry for verification of code values.
 
-https://schemas.wmo.int/iwxxm/2025-2/rule/iwxxm.sch
+* https://schemas.wmo.int/iwxxm/2025-2/rule/iwxxm.sch
 
 205-2025-2.3.4 Examples of IWXXM reports are included to help producers to create IWXXM-XML files. Traditional Alphanumeric Code (TAC) to XML guidance is also included to facilitate conversion of reporting requirements for TAC as described in ICAO Annex 3.
 
-https://schemas.wmo.int/iwxxm/2025-2/examples/
+* https://schemas.wmo.int/iwxxm/2025-2/examples/
 
 205-2025-2.3.5 The UML Model is a set of files in Unified Modeling Language that provides a visual representation of IWXXM-XML in HTML format.
 
-https://schemas.wmo.int/iwxxm/2025-2/html/
+* https://schemas.wmo.int/iwxxm/2025-2/html/
 
 *205-2025-2.4 IWXXM code lists*
 
