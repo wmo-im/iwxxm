@@ -63,11 +63,13 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 * https://schemas.wmo.int/iwxxm/2025-2/measures.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/metarSpeci.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/metFeature.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/qvaci.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/sigmet.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/spaceWxAdvisory.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/taf.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/tropicalCycloneAdvisory.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/volcanicAshAdvisory.xsd
+* https://schemas.wmo.int/iwxxm/2025-2/vona.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/WAFSSigWxFC.xsd
 
 205-2025-2.3.3 IWXXM Schematron Rule is a directory that contains an ISO schematron file that is used to provide enhanced validation of IWXXM-XML files. The schematron file uses the IWXXM code lists represented in Resource Description Framework (RDF) format exported from the WMO Codes Registry for verification of code values.
@@ -105,7 +107,6 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 |Code table D-8: cloud amount reported at aerodrome a| The items within this code table are the cloud amount categories of operational significance for aviation as specified in the _Technical Regulations_ (WMO-No. 49), Volume II – Meteorological Service for International Air Navigation. This code table contains a subset of the cloud amount categories defined in Volume I.2, FM 94 BUFR, Code table 0 20 008. Each code item is uniquely identified using a URI. The URI is also a URL providing additional information about the associated cloud amount category. |http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome
 |Code table D-9: significant convective cloud type a| The items within this code table are the cloud types of operational significance for aviation as specified in the _Technical Regulations_ (WMO-No. 49), Volume II – Meteorological Service for International Air Navigation. This code table contains a subset of the cloud types defined in Volume I.2, FM 94 BUFR, Code table 0 20 012. Each cloud type is uniquely identified using a URI. The URI is also a URL providing additional information about the associated cloud type. |http://codes.wmo.int/49-2/SigConvectiveCloudType
 |Code table D-10: significant weather phenomena |The items within this code table are the types of weather phenomena of significance to aeronautical operations – as used in SIGMET and AIRMET reports and specified in the _Technical Regulations_ (WMO-No. 49), Volume II, Part II, Appendix 6, 1.1.4. Each weather phenomenon type is uniquely identified using a URI. The URI is also a URL providing additional information about the associated weather phenomenon type. |http://codes.wmo.int/49-2/SigWxPhenomena
-|Meteorological feature |The items within this code table are the weather phenomena being represented by a weather object. This code table contains a subset of the meteorological features defined in Volume I.2, FM 94 BUFR, Code table 0 08 011. |http://codes.wmo.int/49-2/MeteorologicalFeature
 |Space Wx location |The items within this code table are the locations of space weather phenomena of significance to aeronautical operations. |http://codes.wmo.int/49-2/SpaceWxLocation
 |Space Wx phenomena |The items within this code table are the types of space weather phenomena of significance to aeronautical operations. |http://codes.wmo.int/49-2/SpaceWxPhenomena
 |Volcanic aviation colour code |Volcanic Aviation Colour Code ICAO Annex 15 |http://codes.wmo.int/49-2/AviationColourCode 
@@ -126,3 +127,11 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 |State of the sea |http://codes.wmo.int/bufr4/codeflag/0-22-061
 |Airframe icing |http://codes.wmo.int/bufr4/codeflag/0-20-041
 |===
+
+205-2025-2.4.5 IWXXM code lists
+[width="100%",cols="20%,43%,37%",options="header",]
+|===
+|Name |Description |URL
+|Nil reasons |Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. Terms are drawn from authorities in addition to WMO including ISO/TC 211 (from ISO 19136:2007 Geography markup language clause 8.2.3.1; published on their behalf by the Open Geospatial Consortium).	 |http://codes.wmo.int/iwxxm/nil
+|Meteorological Features	 |The items within this code table are the weather phenomena being represented by a weather object.	 |http://codes.wmo.int/iwxxm/meteorologicalFeature
+|Volcanic Aviation Colour Code	 |The items within this code table are the volcano level of alert colour codes for aviation defined in ICAO Doc 9766	 |http://codes.wmo.int/iwxxm/volcanicAviationColourCode
