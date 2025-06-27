@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title></title>
+<title>Space Weather Advisory::SpaceWeatherAdvisory</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("", " : "))</script>  : Public   Note</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("SpaceWeatherAdvisory", " : "))</script>  : Public  &lt;&lt;featureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">26-Apr-18 10:28:35 AM</td>
+			<td width="85%" class="ObjectDetailsValue">26-Apr-18 9:45:53 AM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">26-Apr-18 10:28:49 AM</td>
+			<td class="ObjectDetailsValue">22-Jun-25 1:25:15 AM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -63,7 +63,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj03" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
-			<td class="ObjectDetailsValue">Proposed</td>
+			<td class="ObjectDetailsValue">Implemented</td>
 		</tr>
 		<tr id="proj04" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
@@ -87,15 +87,613 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{52E65D1E-5561-4e21-9049-B27AF6E12A81}</td>
+			<td class="ObjectDetailsValue">{50B8D7EC-1CD8-4f2a-A85B-DFF2B94D5AC6}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA128.htm">Context Diagram: Space Weather Analysis</a></td>
+			<td class="ObjectDetailsValue"><a href="EA125.htm">Context Diagram: Space Weather</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">Used for observed and forecast space weather conditions&lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">An advisory of space weather conditions of significance to aviation as represented in ICAO Annex 3 and PANS-MET (Doc 10157).&#160; Volcanic ash advisories are issued by space weather centres (SWXCs)&lt;br/&gt;</div>
 
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="100%" class="TableHeading">Attribute</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow">
+					<i>Public TM_Instant</i><br /><strong>&nbsp;&nbsp;issueTime</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes524')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes524" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes524_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes524_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes524_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes524_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes524_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes524_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes524_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes524_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=1<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			The time at which this report was issued&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public Unit</i><br /><strong>&nbsp;&nbsp;issuingSpaceWeatherCentre</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes525')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes525" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes525_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes525_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes525_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes525_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes525_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes525_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes525_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes525_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=2<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			The issuing space weather centre (SWXC)&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public <a href="../EA12/EA248.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;advisoryNumber</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes526')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes526" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes526_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes526_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes526_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes526_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes526_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+						<tr id="DetailsImageAttributes526_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes526_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes526_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					nillable=true<br>sequenceNumber=3<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Advisory number: four digit year and unique message number.&#160; Example &quot;2018/1&quot;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public CharacterString</i><br /><strong>&nbsp;&nbsp;replacedAdvisoryNumber</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes527')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes527" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes527_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes527_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes527_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes527_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes527_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 4</td>
+						</tr>
+						<tr id="DetailsImageAttributes527_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes527_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes527_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=4<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			The number of the advisory being replaced.&#160; Example &quot;2018/1&quot;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public <a href="EA136.htm">SpaceWeatherEffect</a></i><br /><strong>&nbsp;&nbsp;effect</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes528')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes528" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes528_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes528_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes528_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes528_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes528_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to *</td>
+						</tr>
+						<tr id="DetailsImageAttributes528_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes528_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes528_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=5<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Space weather effect.&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public <a href="EA133.htm">SpaceWeatherAnalysis</a></i><br /><strong>&nbsp;&nbsp;analysis</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes529')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes529" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes529_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes529_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes529_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes529_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes529_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 5</td>
+						</tr>
+						<tr id="DetailsImageAttributes529_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes529_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes529_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=6<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Observed and forecast space weather information.&#160; Analyses should be reported in the order in which they occur, starting with the initial observed/forecast conditions and proceeding through each subsequent forecast to the end of the period&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public <a href="../EA12/EA248.htm">StringWithNilReason</a></i><br /><strong>&nbsp;&nbsp;remarks</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes530')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes530" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes530_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes530_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes530_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes530_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes530_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+						<tr id="DetailsImageAttributes530_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes530_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes530_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					nillable=true<br>sequenceNumber=7<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Remarks, as necessary.&lt;br/&gt;&lt;br/&gt;When the remark is nil, it should be indicated by a missing remarks with a nil reason of &#39;inapplicable&#39;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public TM_Instant</i><br /><strong>&nbsp;&nbsp;nextAdvisoryTime</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes531')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes531" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes531_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes531_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes531_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes531_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes531_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+						<tr id="DetailsImageAttributes531_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes531_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes531_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=8<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			The time at which the next advisory will be issued&lt;br/&gt;&lt;br/&gt;Use attribute indeterminatePosition to element timePosition to indicate if the actual temporal position is before or after the specified value.&lt;br/&gt;&lt;br/&gt;When no subsequent advisory is expected to be issued it should be indicated by a missing expected advisory time with a nil reason of &#39;inapplicable&#39;&lt;br/&gt;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>
+	</table>
+</div>
+<div class="ItemBody" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="50%" class="TableHeading">Tag</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">byValuePropertyType</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario532" onclick="parent.toggleDiv('detailsDIVScenario532','DetailsImageScenario532')" />Details:
+						<div id="detailsDIVScenario532" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Creates a property type that requires its instance to be encoded inline (applies to ISO 19136:2007 encoding rule).<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">isCollection</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario533" onclick="parent.toggleDiv('detailsDIVScenario533','DetailsImageScenario533')" />Details:
+						<div id="detailsDIVScenario533" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the type as an objection collection.<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">isRootElementLegacy</td>
+				<td width="50%" class="TableRow" valign="top">true</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario534" onclick="parent.toggleDiv('detailsDIVScenario534','DetailsImageScenario534')" />Details:
+						<div id="detailsDIVScenario534" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">noPropertyType</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario535" onclick="parent.toggleDiv('detailsDIVScenario535','DetailsImageScenario535')" />Details:
+						<div id="detailsDIVScenario535" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Suppresses creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">Mandatory items in a non-operational report or report that failed translation</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints536" onclick="parent.toggleDiv('detailsDIVConstraints536','DetailsImageConstraints536')" />Details:
+							<div id="detailsDIVConstraints536" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: SpaceWeatherAdvisory.SpaceWeatherAdvisory-1&lt;br/&gt;Description: A non-operational report or a report that failed translation should have as a minimum appropriately filled elements including iwxxm:issueTime and iwxxm:issuingSpaceWeatherCentre&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) gt 0) or (@permissibleUsage = &#39;NON-OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingSpaceWeatherCentre) ) else( true() ) )&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">Mandatory items in an ordinary report</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints537" onclick="parent.toggleDiv('detailsDIVConstraints537','DetailsImageConstraints537')" />Details:
+							<div id="detailsDIVConstraints537" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">Pattern ID: SpaceWeatherAdvisory.SpaceWeatherAdvisory-2&lt;br/&gt;Description: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingSpaceWeatherCentre, iwxxm:advisoryNumber, iwxxm:effect, iwxxm:analysis, iwxxm:remarks and iwxxm:nextAdvisoryTime&lt;br/&gt;Assertion: ( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = &#39;OPERATIONAL&#39;) ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingSpaceWeatherCentre) and exists(iwxxm:advisoryNumber) and exists(iwxxm:effect) and exists(iwxxm:analysis) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )&lt;br/&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Connection</td>
+					<td width="10%" class="TableHeading">Direction</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA12/EA238.htm">«featureType» Report</a></td>
+					<td width="10%" class="TableRow" valign="top">Class</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
 <div class="pageFooter"></div>
  
 </body>

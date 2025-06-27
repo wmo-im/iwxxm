@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>METAR/SPECI::AerodromeRecentWeather</title>
+<title>METAR/SPECI::SeaSurfaceState</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("AerodromeRecentWeather", " : "))</script>  : Public  &lt;&lt;codeList&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("SeaSurfaceState", " : "))</script>  : Public  &lt;&lt;codeList&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">09-Aug-12 12:38:24 PM</td>
+			<td width="85%" class="ObjectDetailsValue">09-Aug-12 12:27:22 PM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">20-Jun-25 10:49:44 AM</td>
+			<td class="ObjectDetailsValue">20-Jun-25 11:20:00 AM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,53 +87,19 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{196468D4-9465-4efb-BD34-633D1F1D6EFC}</td>
+			<td class="ObjectDetailsValue">{1B428F25-F644-4639-A772-833093E2DC64}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA21.htm">Context Diagram: METAR/SPECI Observation</a>, <a href="EA25.htm">Context Diagram: METAR/SPECI Weather</a></td>
+			<td class="ObjectDetailsValue"><a href="EA26.htm">Context Diagram: METAR/SPECI SeaSurface State</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">Weather phenomenon of operational significance to aviation observed during the period since the last routine report, or last hour, whichever is shorter, but not at the time of observation.&lt;br/&gt;&lt;br/&gt;Only a specific set of weather phenomenon are reported within aviation meteorology as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&lt;br/&gt;&lt;br/&gt;This codelist is specifically defined for aviation purposes as defined in PANS-MET. A superset of definitions are defined in the Manual on Codes (WMO No. 306), Vol I.1 Code table 4678 &quot;Significant weather phenomena&quot;.&lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">Categorical assessment of sea surface state (or other large open body of water) based on height of waves.&lt;br/&gt;&lt;br/&gt;Height in metres : Category&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;0 metres : Calm (glassy)&lt;/li&gt;&lt;li&gt;0-0.1 metres : Calm (rippled)&lt;/li&gt;&lt;li&gt;0.1-0.5 metres : Smooth&lt;/li&gt;&lt;li&gt;0.5-1.25 metres : Slight&lt;/li&gt;&lt;li&gt;1.25-2.5 metres : Moderate&lt;/li&gt;&lt;li&gt;2.5-4 metres : Rough&lt;/li&gt;&lt;li&gt;4-6 metres : Very rough&lt;/li&gt;&lt;li&gt;6-9 metres : High&lt;/li&gt;&lt;li&gt;9-14 metres : Very high&lt;/li&gt;&lt;li&gt;#gt;14 metres : Phenomenal&lt;/li&gt;&lt;/ul&gt;<br />&lt;br/&gt;See the Manual on Codes (WMO No. 306), Vol I.1 Code table 3700 &quot;State of the sea&quot; and WMO No. 306 Vol I.2 FM 94 BUFR Code table 0 22 061 &quot;State of the sea&quot;.&lt;br/&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
 			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
 		</ul>
-		<div class="ItemBody" id="AssociationsFromTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA41.htm">MeteorologicalAerodromeObservation</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> recentWeather<br />
-						Recent weather is one of the recent weather phenomena to be reported as supplementary information.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink179" onclick="parent.toggleDiv('detailsDIVLink179','DetailsImageLink179')" />Details:
-							<div id="detailsDIVLink179" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
 <div class="ItemBody" id="TaggedValTable">
 	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
 		<tr>
@@ -168,7 +134,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="50%" class="TableRow" valign="top">vocabulary</td>
-				<td width="50%" class="TableRow" valign="top"><a href="http://codes.wmo.int/49-2/AerodromeRecentWeather" target="_blank" >http://codes.wmo.int/49-2/AerodromeRecentWeather</a></td>
+				<td width="50%" class="TableRow" valign="top"><a href="http://codes.wmo.int/bufr4/codeflag/0-22-061" target="_blank" >http://codes.wmo.int/bufr4/codeflag/0-22-061</a></td>
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">

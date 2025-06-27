@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2025-06-24 16:44:21">
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2025-06-27 11:03:50">
 	<XMI.header>
 		<XMI.documentation>
 			<XMI.exporter>Enterprise Architect</XMI.exporter>
@@ -12,7 +12,7 @@
 				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
 				<UML:Package name="ICAO Meteorological Information Exchange Model" xmi.id="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 					<UML:ModelElement.stereotype>
-						<UML:Stereotype xmi.idref="EAID_95D7C90C_3F41_4061_A31B_C57FD9E3717C"/>
+						<UML:Stereotype xmi.idref="EAID_85C63A32_7C06_4b8a_9818_82D094D6C961"/>
 					</UML:ModelElement.stereotype>
 					<UML:ModelElement.taggedValue>
 						<UML:TaggedValue tag="documentation" value="The ICAO Meteorological Information Exchange Model (IWXXM) package, including METAR, SPECI, TAF, and other reports as defined in ICAO Annex 3 and PANS-MET (Doc 10157).  IWXXM reports are essential operational meteorology products used to enable safe and efficient air travel worldwide.&#xA;&#xA;The report types in this package include METAR/SPECI, TAF, SIGMET, AIRMET, Volcanic Ash Advisory, Tropical Cyclone Advisory, Space Weather Advisory, WAFS Significant Weather Forecast, Quantitative Volcanic Ash Concentration Information and Volcano Observatory Notice for Aviation.&#xA;&#xA;This package builds upon the ISO 19100 family (ISO TC211) and WMO standard meteorological modeling constructs. Additionally, the constructs in this application schema refer to a number of aviation constructs such Runway and Airspace from AIXM.  The full relationship of this package with external dependencies are shown in the 'Package Dependencies' diagram.&#xA;&#xA;Not all of the reports types from Annex 3 are currently represented, this may be expanded in a future version.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence.  Technical Regulations may impose requirements that are not described in this schema."/>
@@ -141,7 +141,7 @@
 										<UML:Stereotype name="leaf"/>
 									</UML:ModelElement.stereotype>
 									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="documentation" value="Common constructs used across multiple packages.  This package includes constructs closely related to the aviation weather domain.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
+										<UML:TaggedValue tag="documentation" value="Common constructs and measured quantities used across multiple packages.  This package includes constructs closely related to the aviation weather domain.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
 										<UML:TaggedValue tag="isAbstract" value="false"/>
 										<UML:TaggedValue tag="isSpecification" value="false"/>
 										<UML:TaggedValue tag="ea_stype" value="Package"/>
@@ -150,7 +150,7 @@
 										<UML:TaggedValue tag="isActive" value="false"/>
 										<UML:TaggedValue tag="package" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 										<UML:TaggedValue tag="date_created" value="2012-05-25 11:27:13"/>
-										<UML:TaggedValue tag="date_modified" value="2023-09-25 09:37:47"/>
+										<UML:TaggedValue tag="date_modified" value="2025-06-27 10:58:16"/>
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
@@ -382,37 +382,6 @@
 										<UML:TaggedValue tag="ea_eleType" value="package"/>
 										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={D9FFBB20-7BED-4866-8FF2-05750B97AD7B}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=leaf;GUID={12C393F6-4544-4ecf-80CC-2C822A2862CA};FQName=UML Profile for IWXXM::leaf;@ENDSTEREO;$DES;$CLT={F1040D70-BDB5-4bff-8213-7BBDFC9E6044}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-									</UML:ModelElement.taggedValue>
-								</UML:ClassifierRole>
-								<UML:ClassifierRole name="Measures" xmi.id="EAID_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
-									<UML:ModelElement.stereotype>
-										<UML:Stereotype name="leaf"/>
-									</UML:ModelElement.stereotype>
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="documentation" value="Common measured quantities used across multiple packages.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
-										<UML:TaggedValue tag="isAbstract" value="false"/>
-										<UML:TaggedValue tag="isSpecification" value="false"/>
-										<UML:TaggedValue tag="ea_stype" value="Package"/>
-										<UML:TaggedValue tag="ea_ntype" value="0"/>
-										<UML:TaggedValue tag="version" value="3.0.0"/>
-										<UML:TaggedValue tag="isActive" value="false"/>
-										<UML:TaggedValue tag="package" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
-										<UML:TaggedValue tag="date_created" value="2015-11-03 12:47:10"/>
-										<UML:TaggedValue tag="date_modified" value="2021-05-07 16:39:32"/>
-										<UML:TaggedValue tag="gentype" value="Java"/>
-										<UML:TaggedValue tag="tagged" value="0"/>
-										<UML:TaggedValue tag="package2" value="EAID_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
-										<UML:TaggedValue tag="phase" value="1.0"/>
-										<UML:TaggedValue tag="author" value="braeckel"/>
-										<UML:TaggedValue tag="complexity" value="1"/>
-										<UML:TaggedValue tag="status" value="Implemented"/>
-										<UML:TaggedValue tag="stereotype" value="leaf"/>
-										<UML:TaggedValue tag="tpos" value="13"/>
-										<UML:TaggedValue tag="ea_localid" value="1076"/>
-										<UML:TaggedValue tag="ea_eleType" value="package"/>
-										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={A77A1050-5F67-4eda-BC2E-A11FF5DCEF8F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=leaf;GUID={12C393F6-4544-4ecf-80CC-2C822A2862CA};FQName=UML Profile for IWXXM::leaf;@ENDSTEREO;$DES;$CLT={F680CF7A-F9DE-44d8-AC1B-947C7B78EBF7}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 									</UML:ModelElement.taggedValue>
 								</UML:ClassifierRole>
 								<UML:ClassifierRole name="WAFS Significant Weather Forecast" xmi.id="EAID_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
@@ -829,6 +798,7 @@
 								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
 								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={8B3A379D-F65B-4a42-87E5-00803C8712A8}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=import;GUID={809156D1-1658-44fd-9492-1848DFE02C18};FQName=EAUML::import;@ENDSTEREO;$DES;$CLT={67E6358A-6392-4c0b-8F32-4519FE9FB49A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=38;SY=-94;EX=-4;EY=39;EDGE=3;"/>
 								<UML:TaggedValue tag="virtualInheritance" value="0"/>
 								<UML:TaggedValue tag="mb" value=" &#xA;«import»"/>
 							</UML:ModelElement.taggedValue>
@@ -867,6 +837,7 @@
 								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
 								<UML:TaggedValue tag="dst_isNavigable" value="false"/>
 								<UML:TaggedValue tag="dst_style" value="Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="privatedata5" value="EDGE=4;SX=-76;SY=14;EX=-76;EY=14;"/>
 								<UML:TaggedValue tag="virtualInheritance" value="0"/>
 								<UML:TaggedValue tag="mb" value=" &#xA;«import»"/>
 							</UML:ModelElement.taggedValue>
@@ -949,6 +920,7 @@
 								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
 								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={5040B9E6-B476-460c-B699-434314D4E83B}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=import;GUID={809156D1-1658-44fd-9492-1848DFE02C18};FQName=EAUML::import;@ENDSTEREO;$DES;$CLT={9047BC8B-3FA2-450d-B630-B13C3E162665}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=136;SY=-9;EX=0;EY=0;EDGE=2;"/>
 								<UML:TaggedValue tag="virtualInheritance" value="0"/>
 								<UML:TaggedValue tag="mb" value=" &#xA;«import»"/>
 							</UML:ModelElement.taggedValue>
@@ -1031,6 +1003,7 @@
 								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
 								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={3348C02E-6027-42b1-BF72-62BF4936EA62}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=import;GUID={809156D1-1658-44fd-9492-1848DFE02C18};FQName=EAUML::import;@ENDSTEREO;$DES;$CLT={E01F4567-F6C8-400b-9F69-664C7216B70D}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=137;SY=1;EX=-44;EY=7;EDGE=3;"/>
 								<UML:TaggedValue tag="virtualInheritance" value="0"/>
 								<UML:TaggedValue tag="mb" value=" &#xA;«import»"/>
 							</UML:ModelElement.taggedValue>
@@ -1113,13 +1086,14 @@
 								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
 								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={1B7612BE-2FF9-46b0-8C1E-12F51491EF5F}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=import;GUID={809156D1-1658-44fd-9492-1848DFE02C18};FQName=EAUML::import;@ENDSTEREO;$DES;$CLT={E82F5CE3-FB1A-4815-8846-27652A88C4F8}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=136;SY=-18;EX=-1;EY=9;EDGE=2;"/>
 								<UML:TaggedValue tag="virtualInheritance" value="0"/>
 								<UML:TaggedValue tag="mb" value=" &#xA;«import»"/>
 							</UML:ModelElement.taggedValue>
 						</UML:Dependency>
 						<UML:Package name="METAR/SPECI" xmi.id="EAPK_CA480557_2AAC_4a38_A487_DA136C232B0F" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="METAR and SPECI reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;METAR and SPECI reports include identical information but are issued for different purposes.&#xA;&#xA;METAR reports are routine observations made at an aerodrome throughout the day.  METAR observations are made (and distributed) at intervals of one hour or, if so determined by regional air navigation agreement, at intervals of one half-hour.&#xA;&#xA;SPECI reports are special (i.e., non-routine) observation made at an aerodrome as needed. SPECI observations are made (and distributed) in accordance with criteria established by the meteorological authority, in consultation with the appropriate ATS authority, operators and others concerned.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -1341,6 +1315,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11210"/>
 										<UML:TaggedValue tag="ea_targetID" value="11195"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=103;SY=-89;EX=-2;EY=66;EDGE=3;"/>
 										<UML:TaggedValue tag="rb" value="0..*"/>
 										<UML:TaggedValue tag="rt" value="+rvr"/>
 									</UML:ModelElement.taggedValue>
@@ -1411,6 +1386,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11210"/>
 										<UML:TaggedValue tag="ea_targetID" value="11196"/>
+										<UML:TaggedValue tag="privatedata5" value="EDGE=4;SX=-20;SY=-1;EX=82;EY=2;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..3"/>
 										<UML:TaggedValue tag="rt" value="+recentWeather"/>
@@ -1775,6 +1751,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=34;EX=0;EY=0;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -1812,6 +1789,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=1;SY=34;EX=79;EY=-141;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -2141,7 +2119,7 @@
 												<UML:Classifier xmi.idref="EAID_1B428F25_F644_4639_A772_833093E2DC64"/>
 											</UML:StructuralFeature.type>
 											<UML:ModelElement.taggedValue>
-												<UML:TaggedValue tag="description" value="The state of the sea observed by aeronautical meteorological stations established on offshore structures in support of helicopter operations&#xA;&#xA;See ICAO PANS-MET Doc 10157) Section 2.2.8.1.5 and the Manual on Codes (WMO No.306), Vol. I.1 Table 3700."/>
+												<UML:TaggedValue tag="description" value="The state of the sea observed by aeronautical meteorological stations established on offshore structures in support of helicopter operations&#xA;&#xA;See ICAO PANS-MET (Doc 10157) Section 2.2.8.1.5 and the Manual on Codes (WMO No.306), Vol. I.1 Table 3700."/>
 												<UML:TaggedValue tag="type" value="SeaSurfaceState"/>
 												<UML:TaggedValue tag="derived" value="0"/>
 												<UML:TaggedValue tag="containment" value="Not Specified"/>
@@ -2215,6 +2193,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11210"/>
 										<UML:TaggedValue tag="ea_targetID" value="11204"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=205;SY=-36;EX=-149;EY=-12;EDGE=2;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..1"/>
 										<UML:TaggedValue tag="rt" value="+seaCondition"/>
@@ -2362,6 +2341,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11210"/>
 										<UML:TaggedValue tag="ea_targetID" value="11205"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=-205;SY=32;EX=176;EY=-2;EDGE=4;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..1"/>
 										<UML:TaggedValue tag="rt" value="+windShear"/>
@@ -2631,6 +2611,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11208"/>
 										<UML:TaggedValue tag="ea_targetID" value="11271"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=-188;SY=-82;EX=-5;EY=56;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..1"/>
 										<UML:TaggedValue tag="rt" value="+cloud"/>
@@ -2673,6 +2654,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11208"/>
 										<UML:TaggedValue tag="ea_targetID" value="11264"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=-16;SY=-82;EX=0;EY=29;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..3"/>
 										<UML:TaggedValue tag="rt" value="+weather"/>
@@ -2715,6 +2697,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11208"/>
 										<UML:TaggedValue tag="ea_targetID" value="11277"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=159;SY=-82;EX=3;EY=87;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..1"/>
 										<UML:TaggedValue tag="rt" value="+surfaceWind"/>
@@ -2964,6 +2947,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11210"/>
 										<UML:TaggedValue tag="ea_targetID" value="11213"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=90;SY=87;EX=-284;EY=0;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rt" value="+surfaceWind"/>
 									</UML:ModelElement.taggedValue>
@@ -3006,6 +2990,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11210"/>
 										<UML:TaggedValue tag="ea_targetID" value="11214"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=-6;SY=-89;EX=0;EY=-1;EDGE=3;"/>
 										<UML:TaggedValue tag="rb" value="0..3"/>
 										<UML:TaggedValue tag="rt" value="+presentWeather"/>
 									</UML:ModelElement.taggedValue>
@@ -3047,6 +3032,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11210"/>
 										<UML:TaggedValue tag="ea_targetID" value="11219"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=205;SY=30;EX=-1;EY=-11;EDGE=2;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..1"/>
 										<UML:TaggedValue tag="rt" value="+visibility"/>
@@ -3089,6 +3075,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11210"/>
 										<UML:TaggedValue tag="ea_targetID" value="11211"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=-114;SY=-89;EX=7;EY=54;EDGE=3;"/>
 										<UML:TaggedValue tag="rb" value="0..1"/>
 										<UML:TaggedValue tag="rt" value="+cloud"/>
 									</UML:ModelElement.taggedValue>
@@ -3218,6 +3205,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11211"/>
 										<UML:TaggedValue tag="ea_targetID" value="11269"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=4;SY=-60;EX=2;EY=62;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..4"/>
 										<UML:TaggedValue tag="rt" value="+layer"/>
@@ -3411,14 +3399,14 @@
 										<UML:Stereotype name="dataType"/>
 									</UML:ModelElement.stereotype>
 									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="documentation" value="An aggregation of surface wind conditions typically reported together at an aerodrome, including wind direction information, wind speed, and wind gusts.&#xA;&#xA;Wind direction is reported according to ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2b:&#xA;&quot;variations from the mean wind direction during the past 10 minutes shall be reported as follows, if the total variation is 60° or more:&#xA;1) when the total variation is 60° or more and less than 180° and the wind speed is 1.5 m/s (3 kt) or more, such directional variations shall be reported as the two extreme directions between which the surface wind has varied;&#xA;2) when the total variation is 60° or more and less than 180° and the wind speed is less than 1.5 m/s (3 kt), the wind direction shall be reported as variable with no mean wind direction; or&#xA;3) when the total variation is 180° or more, the wind direction shall be reported as variable with no mean wind direction&quot;&#xA;&#xA;Wind direction shall be given in degrees from true North. Plane angle unit of measure (uom) is &quot;deg&quot;.  A true north wind is indicated with a direction of 360. Calm wind is indicated with a direction of 0. Wind speeds and gusts, if present, shall be provided in either two units of measures: &quot;m/s&quot; or &quot;[kn_i]&quot; (knot)."/>
+										<UML:TaggedValue tag="documentation" value="An aggregation of surface wind conditions typically reported together at an aerodrome, including wind direction information, wind speed, and wind gusts.&#xA;&#xA;Wind direction is reported according to ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 b):&#xA;&quot;variations from the mean wind direction during the past 10 minutes shall be reported as follows, if the total variation is 60° or more:&#xA;1) when the total variation is 60° or more and less than 180° and the wind speed is 1.5 m/s (3 kt) or more, such directional variations shall be reported as the two extreme directions between which the surface wind has varied;&#xA;2) when the total variation is 60° or more and less than 180° and the wind speed is less than 1.5 m/s (3 kt), the wind direction shall be reported as variable with no mean wind direction; or&#xA;3) when the total variation is 180° or more, the wind direction shall be reported as variable with no mean wind direction&quot;&#xA;&#xA;Wind direction shall be given in degrees from true North. Plane angle unit of measure (uom) is &quot;deg&quot;.  A true north wind is indicated with a direction of 360. Calm wind is indicated with a direction of 0. Wind speeds and gusts, if present, shall be provided in either two units of measures: &quot;m/s&quot; or &quot;[kn_i]&quot; (knot)."/>
 										<UML:TaggedValue tag="isSpecification" value="false"/>
 										<UML:TaggedValue tag="ea_stype" value="Class"/>
 										<UML:TaggedValue tag="ea_ntype" value="0"/>
 										<UML:TaggedValue tag="version" value="1.0"/>
 										<UML:TaggedValue tag="package" value="EAPK_CA480557_2AAC_4a38_A487_DA136C232B0F"/>
 										<UML:TaggedValue tag="date_created" value="2012-03-20 11:41:35"/>
-										<UML:TaggedValue tag="date_modified" value="2025-06-11 01:05:22"/>
+										<UML:TaggedValue tag="date_modified" value="2025-06-27 10:50:44"/>
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package_name" value="METAR/SPECI"/>
@@ -3473,7 +3461,7 @@
 												<UML:Classifier xmi.idref="EAID_40325185_938A_486d_AEFB_C9789C7E6F79"/>
 											</UML:StructuralFeature.type>
 											<UML:ModelElement.taggedValue>
-												<UML:TaggedValue tag="description" value="The average observed wind speed over the past ten minutes&#xA;&#xA;See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2a.&#xA;&#xA;Wind speeds shall be provided in either two units of measures: &quot;m/s&quot; or &quot;[kn_i]&quot; (knot)."/>
+												<UML:TaggedValue tag="description" value="The average observed wind speed over the past ten minutes&#xA;&#xA;See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 a).&#xA;&#xA;Wind speeds shall be provided in either two units of measures: &quot;m/s&quot; or &quot;[kn_i]&quot; (knot)."/>
 												<UML:TaggedValue tag="type" value="VelocityWithNilReason"/>
 												<UML:TaggedValue tag="derived" value="0"/>
 												<UML:TaggedValue tag="containment" value="Not Specified"/>
@@ -3530,7 +3518,7 @@
 												<UML:Classifier xmi.idref="EAID_40325185_938A_486d_AEFB_C9789C7E6F79"/>
 											</UML:StructuralFeature.type>
 											<UML:ModelElement.taggedValue>
-												<UML:TaggedValue tag="description" value="Variations from the mean wind speed (gusts) during the past 10 minutes.&#xA;&#xA;See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2c.&#xA;&#xA;Wind gusts shall be provided in either two units of measures: &quot;m/s&quot; or &quot;[kn_i]&quot; (knot)."/>
+												<UML:TaggedValue tag="description" value="Variations from the mean wind speed (gusts) during the past 10 minutes.&#xA;&#xA;See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 c).&#xA;&#xA;Wind gusts shall be provided in either two units of measures: &quot;m/s&quot; or &quot;[kn_i]&quot; (knot)."/>
 												<UML:TaggedValue tag="type" value="VelocityWithNilReason"/>
 												<UML:TaggedValue tag="derived" value="0"/>
 												<UML:TaggedValue tag="containment" value="Not Specified"/>
@@ -3588,7 +3576,7 @@
 												<UML:Classifier xmi.idref="EAID_D1EAD7B6_7825_4e94_BE03_CBD5307AA1A0"/>
 											</UML:StructuralFeature.type>
 											<UML:ModelElement.taggedValue>
-												<UML:TaggedValue tag="description" value="The extreme clockwise direction from which the wind has varied, inclusive.&#xA;&#xA;This corresponds to the dxdxdx part of the reported variation dndndnVdxdxdx in TAC.&#xA;&#xA;See ICAO PANS-MET Section 2.2.1.5.2b 1)"/>
+												<UML:TaggedValue tag="description" value="The extreme clockwise direction from which the wind has varied, inclusive.&#xA;&#xA;This corresponds to the dxdxdx part of the reported variation dndndnVdxdxdx in TAC.&#xA;&#xA;See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 b) 1)"/>
 												<UML:TaggedValue tag="type" value="AngleWithNilReason"/>
 												<UML:TaggedValue tag="containment" value="Not Specified"/>
 												<UML:TaggedValue tag="ordered" value="0"/>
@@ -3599,7 +3587,7 @@
 												<UML:TaggedValue tag="duplicates" value="0"/>
 												<UML:TaggedValue tag="ea_guid" value="{94AB4B38-6778-43f4-895A-BCFEE2534012}"/>
 												<UML:TaggedValue tag="ea_localid" value="20039"/>
-												<UML:TaggedValue tag="styleex" value="volatile=0;"/>
+												<UML:TaggedValue tag="styleex" value="volatile=0;union=0;"/>
 												<UML:TaggedValue tag="quantity" value="http://codes.wmo.int/common/quantity-kind/windDirection" xmi.id="EAID_234F6CB1_32BB_42fb_9BDA_312F95E09324"/>
 												<UML:TaggedValue tag="sequenceNumber" value="6" xmi.id="EAID_76B6A604_47C6_4526_83BE_89C88DBD5E6D"/>
 												<UML:TaggedValue tag="nillable" value="true" xmi.id="EAID_F7C18954_28D9_4f2e_A4AE_C63C49D02D0D"/>
@@ -3613,7 +3601,7 @@
 												<UML:Classifier xmi.idref="EAID_D1EAD7B6_7825_4e94_BE03_CBD5307AA1A0"/>
 											</UML:StructuralFeature.type>
 											<UML:ModelElement.taggedValue>
-												<UML:TaggedValue tag="description" value="The extreme counter-clockwise direction from which the wind has varied, inclusive.&#xA;&#xA;This corresponds to the dndndn part of the reported variation dndndnVdxdxdx in TAC.&#xA;&#xA;See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2b 1)"/>
+												<UML:TaggedValue tag="description" value="The extreme counter-clockwise direction from which the wind has varied, inclusive.&#xA;&#xA;This corresponds to the dndndn part of the reported variation dndndnVdxdxdx in TAC.&#xA;&#xA;See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 b) 1)"/>
 												<UML:TaggedValue tag="type" value="AngleWithNilReason"/>
 												<UML:TaggedValue tag="derived" value="0"/>
 												<UML:TaggedValue tag="containment" value="Not Specified"/>
@@ -3628,7 +3616,7 @@
 												<UML:TaggedValue tag="duplicates" value="0"/>
 												<UML:TaggedValue tag="ea_guid" value="{1CFFAFC0-F49F-4195-9FF3-8738EB1E7CB1}"/>
 												<UML:TaggedValue tag="ea_localid" value="19805"/>
-												<UML:TaggedValue tag="styleex" value="volatile=0;IsLiteral=0;"/>
+												<UML:TaggedValue tag="styleex" value="volatile=0;IsLiteral=0;union=0;"/>
 												<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={FF3E159E-178D-441a-9AE6-D1A4CBD4C679}$XID;$NAM=CustomProperties$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=isID@ENDNAME;@TYPE=Boolean@ENDTYPE;@VALU=0@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={1CFFAFC0-F49F-4195-9FF3-8738EB1E7CB1}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 												<UML:TaggedValue tag="quantity" value="http://codes.wmo.int/common/quantity-kind/windDirection" xmi.id="EAID_7491AAFC_CCF0_4dc4_BB8C_8D9BCC240218"/>
 												<UML:TaggedValue tag="sequenceNumber" value="7" xmi.id="EAID_0BFCFB8E_1804_4f62_A1A0_2ED8AB228ED0"/>
@@ -4094,7 +4082,7 @@
 						</UML:Package>
 						<UML:Package name="TAF" xmi.id="EAPK_B0C787A8_5F53_4209_B721_28726BACAB9B" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="TAF reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;An Aerodrome Forecast (TAF) report is a routine forecast of meteorological conditions at an aerodrome intended for distribution.  TAF reports include base forecast conditions, and modifications to those conditions throughout the valid period.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -4318,6 +4306,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11224"/>
 										<UML:TaggedValue tag="ea_targetID" value="11275"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=238;SY=-53;EX=0;EY=0;EDGE=2;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..1"/>
 										<UML:TaggedValue tag="rt" value="+surfaceWind"/>
@@ -4359,6 +4348,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11224"/>
 										<UML:TaggedValue tag="ea_targetID" value="11225"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=-145;SY=-76;EX=156;EY=75;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..2"/>
 										<UML:TaggedValue tag="rt" value="+temperature"/>
@@ -4400,6 +4390,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11224"/>
 										<UML:TaggedValue tag="ea_targetID" value="11271"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=39;EY=50;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..1"/>
 										<UML:TaggedValue tag="rt" value="+cloud"/>
@@ -4441,6 +4432,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11224"/>
 										<UML:TaggedValue tag="ea_targetID" value="11264"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=128;SY=-77;EX=4;EY=34;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..3"/>
 										<UML:TaggedValue tag="rt" value="+weather"/>
@@ -5197,7 +5189,7 @@
 						</UML:Package>
 						<UML:Package name="SIGMET" xmi.id="EAPK_E412FEC7_FA90_4b4f_BB89_ECBB773CDCB3" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="SIGMET reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;SIGMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These weather phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -5489,6 +5481,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11374"/>
 										<UML:TaggedValue tag="ea_targetID" value="11366"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=-25;EX=1;EY=47;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="1..*"/>
 										<UML:TaggedValue tag="rt" value="+member"/>
@@ -5964,6 +5957,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -6001,6 +5995,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=-57;SY=60;EX=120;EY=-154;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -6284,6 +6279,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11371"/>
 										<UML:TaggedValue tag="ea_targetID" value="11370"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=2;SY=1;EX=0;EY=-1;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="1..*"/>
 										<UML:TaggedValue tag="rt" value="+member"/>
@@ -6784,7 +6780,7 @@
 						</UML:Package>
 						<UML:Package name="AIRMET" xmi.id="EAPK_51F8B3AA_1A36_465d_9700_5E2B617EE772" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="AIRMET reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;AIRMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These weather phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -6967,6 +6963,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11387"/>
 										<UML:TaggedValue tag="ea_targetID" value="11390"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=-2;EY=-1;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="1..*"/>
 										<UML:TaggedValue tag="rt" value="+member"/>
@@ -8112,7 +8109,7 @@
 						</UML:Package>
 						<UML:Package name="Tropical Cyclone Advisory" xmi.id="EAPK_E98C2095_7CA4_4f4d_BEB6_6EBFF2DFAD12" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Tropical Cyclone Advisory reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;Tropical Cyclone Advisories (TCA) report the occurrence and/or expected occurrence of tropical cyclone phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -9155,7 +9152,7 @@
 						</UML:Package>
 						<UML:Package name="Volcanic Ash Advisory" xmi.id="EAPK_E619C133_EFAC_40f4_994A_DA88401165BC" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Volcanic Ash Advisory reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;Volcanic Ash Advisories report the occurrence and/or expected occurrence of specified en-route volcanic ash phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -9469,6 +9466,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11317"/>
 										<UML:TaggedValue tag="ea_targetID" value="11258"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..*"/>
 										<UML:TaggedValue tag="rt" value="+ashCloud"/>
@@ -9638,7 +9636,7 @@
 										<UML:TaggedValue tag="version" value="1.0"/>
 										<UML:TaggedValue tag="package" value="EAPK_E619C133_EFAC_40f4_994A_DA88401165BC"/>
 										<UML:TaggedValue tag="date_created" value="2016-02-16 10:02:54"/>
-										<UML:TaggedValue tag="date_modified" value="2025-06-22 01:24:53"/>
+										<UML:TaggedValue tag="date_modified" value="2025-06-24 20:12:10"/>
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package_name" value="Volcanic Ash Advisory"/>
@@ -9714,11 +9712,11 @@
 												<UML:Expression/>
 											</UML:Attribute.initialValue>
 											<UML:StructuralFeature.type>
-												<UML:Classifier xmi.idref="EAID_90E6121A_076C_41d2_813E_6166A4B02E95"/>
+												<UML:Classifier xmi.idref="EAID_16FF96CB_25B9_41f2_B051_FBE1E4FAA7AD"/>
 											</UML:StructuralFeature.type>
 											<UML:ModelElement.taggedValue>
 												<UML:TaggedValue tag="description" value="The erupting volcano that is the source of volcanic ash.&#xA;&#xA;An unknown volcano name shall be indicated in EruptingVolcano/name with &quot;UNKNOWN&quot;.&#xA;&#xA;An unnamed volcano shall be indicated in EruptingVolcano/name with &quot;UNNAMED&quot;.&#xA;&#xA;An unknown volcano location shall be indicated with a nil in EruptingVolcano/position and nilReason &quot;http://codes.wmo.int/common/nil/unknown&quot;."/>
-												<UML:TaggedValue tag="type" value="EruptingVolcano"/>
+												<UML:TaggedValue tag="type" value="Volcano"/>
 												<UML:TaggedValue tag="derived" value="0"/>
 												<UML:TaggedValue tag="containment" value="Not Specified"/>
 												<UML:TaggedValue tag="length" value="0"/>
@@ -9989,7 +9987,7 @@
 										</UML:Constraint>
 										<UML:Constraint name="Mandatory items in an ordinary report">
 											<UML:ModelElement.taggedValue>
-												<UML:TaggedValue tag="description" value="Pattern ID: VolcanicAshAdvisory.VolcanicAshAdvisory-2&#xA;Description: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:sourceElevationMSL, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime&#xA;Assertion: ( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = 'OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:sourceElevationMSL) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )"/>
+												<UML:TaggedValue tag="description" value="Pattern ID: VolcanicAshAdvisory.VolcanicAshAdvisory-2&#xA;Description: An ordinary report should have appropriately filled elements including iwxxm:issueTime, iwxxm:issuingVolcanicAshAdvisoryCentre, iwxxm:volcano, iwxxm:stateOrRegion, iwxxm:sourceElevationAMSL, iwxxm:advisoryNumber, iwxxm:informationSource, iwxxm:eruptionDetails, iwxxm:observation, iwxxm:forecast, iwxxm:remarks and iwxxm:nextAdvisoryTime&#xA;Assertion: ( if( (string-length(@translationFailedTAC) eq 0) and (@permissibleUsage = 'OPERATIONAL') ) then( exists(iwxxm:issueTime) and exists(iwxxm:issuingVolcanicAshAdvisoryCentre) and exists(iwxxm:volcano) and exists(iwxxm:stateOrRegion) and exists(iwxxm:sourceElevationAMSL) and exists(iwxxm:advisoryNumber) and exists(iwxxm:informationSource) and exists(iwxxm:eruptionDetails) and exists(iwxxm:observation) and exists(iwxxm:forecast) and exists(iwxxm:remarks) and exists(iwxxm:nextAdvisoryTime) ) else( true() ) )"/>
 												<UML:TaggedValue tag="type" value="Invariant"/>
 												<UML:TaggedValue tag="weight" value="1.00"/>
 												<UML:TaggedValue tag="status" value="Approved"/>
@@ -10249,6 +10247,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11317"/>
 										<UML:TaggedValue tag="ea_targetID" value="11316"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=7;SY=0;EX=7;EY=0;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..*"/>
 										<UML:TaggedValue tag="rt" value="+wind"/>
@@ -10386,6 +10385,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11318"/>
 										<UML:TaggedValue tag="ea_targetID" value="11322"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=2;SY=1;EX=-1;EY=0;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..*"/>
 										<UML:TaggedValue tag="rt" value="+ashCloud"/>
@@ -10598,7 +10598,7 @@
 						</UML:Package>
 						<UML:Package name="Space Weather Advisory" xmi.id="EAPK_3EA1153B_C26C_4b3f_84AE_513773D6E688" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Space Weather Advisory reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;Space Weather Advisories report the occurrence and/or expected occurrence of space weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -10757,6 +10757,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11398"/>
 										<UML:TaggedValue tag="ea_targetID" value="11291"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="1"/>
 										<UML:TaggedValue tag="rt" value="+region"/>
@@ -11528,7 +11529,7 @@
 						</UML:Package>
 						<UML:Package name="WAFS Significant Weather Forecast" xmi.id="EAPK_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="This package defines a collection of meteorological objects for the World Area Forecast System (WAFS) to deliver forecasts of significant en-route weather phenomena as Significant Weather (SIGWX) forecasts as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.&#xA;"/>
@@ -12453,7 +12454,7 @@
 						</UML:Package>
 						<UML:Package name="Quantitative Volcanic Ash Concentration Information" xmi.id="EAPK_F1040D70_BDB5_4bff_8213_7BBDFC9E6044" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="This package defines a collection of meteorological objects for the provision of Quantitative Volcanic Ash (QVA) Concentration Information as defined in ICAO Annex 3 and PANS-MET (Doc 10157) with a forecast of significant ash cloud(s) that pose a widespread impact to aircraft operations and air navigation.  Guidance on the criteria is provided in the Handbook on the International Airways Watch (Doc 9766).&#xA;&#xA;Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -12791,7 +12792,7 @@
 						</UML:Package>
 						<UML:Package name="Volcano Observatory Notice For Aviation" xmi.id="EAPK_77D2EC58_9BFA_4e7b_ABE7_F0B0A4BA898C" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="This package defines a collection of meteorological objects for provision of Volcano Observatory Notice for Aviation (VONA) as defined in ICAO Annex 3 and PANS-MET (Doc 10157) for dissemination of critical, operationally relevant information about volcanic activity.  Guidance on the criteria is provided in the Handbook on the International Airways Watch (Doc 9766).&#xA;&#xA;Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -13553,7 +13554,7 @@
 						</UML:Package>
 						<UML:Package name="Meteorological Feature" xmi.id="EAPK_E1546630_A7E6_4c35_B620_D822E0BD466A" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="This package provides basic features for describing meteorological and related phenomena specialised for the aviation domain.&#xA;&#xA;Feature types defined in this package, in addition to the strong-typed approach usually employed in GML encoding pattern, also apply virtual-typed pattern in those areas where it is more convenient to define properties from a controlled source.&#xA;&#xA;For ease of maintenance the controlled source are a set of constraints defined together with the Class diagrams used to generate the XML/GML application schemas of IWXXM.  Scripts will be used to extract constraints from the Class diagrams and generate Schematron rules to enforce conformance to the information model.&#xA;&#xA;&#xA;"/>
@@ -13807,6 +13808,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -14099,6 +14101,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11339"/>
 										<UML:TaggedValue tag="ea_targetID" value="11336"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=-1;SY=-96;EX=-1;EY=-3;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="1..*"/>
 										<UML:TaggedValue tag="rt" value="+feature"/>
@@ -14269,6 +14272,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -14973,6 +14977,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -15124,6 +15129,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=-1;SY=1;EX=2;EY=1;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -15274,6 +15280,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -15424,6 +15431,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -15847,13 +15855,13 @@
 						</UML:Package>
 						<UML:Package name="Common" xmi.id="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
+								<UML:Stereotype xmi.idref="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
-								<UML:TaggedValue tag="documentation" value="Common constructs used across multiple packages.  This package includes constructs closely related to the aviation weather domain.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
+								<UML:TaggedValue tag="documentation" value="Common constructs and measured quantities used across multiple packages.  This package includes constructs closely related to the aviation weather domain.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
 								<UML:TaggedValue tag="parent" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
 								<UML:TaggedValue tag="created" value="2012-05-25 11:27:13"/>
-								<UML:TaggedValue tag="modified" value="2025-06-11 00:51:45"/>
+								<UML:TaggedValue tag="modified" value="2025-06-27 10:58:16"/>
 								<UML:TaggedValue tag="iscontrolled" value="FALSE"/>
 								<UML:TaggedValue tag="lastloaddate" value="2012-05-30 13:55:12"/>
 								<UML:TaggedValue tag="lastsavedate" value="2012-05-30 13:55:12"/>
@@ -15894,13 +15902,76 @@
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Implemented"/>
 										<UML:TaggedValue tag="stereotype" value="codeList"/>
-										<UML:TaggedValue tag="tpos" value="12"/>
+										<UML:TaggedValue tag="tpos" value="18"/>
 										<UML:TaggedValue tag="ea_localid" value="11264"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={2AC765F7-8B7A-42a7-927A-557F7B9231CB}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=codeList;GUID={98671F90-3766-483f-AF10-CCAEFF4AC31E};FQName=UML Profile for IWXXM::codeList;@ENDSTEREO;$DES;$CLT={14CFE2EE-7E14-4003-9798-5342B4376B6D}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Class>
+								<UML:Class name="LengthWithNilReason" xmi.id="EAID_234205D4_4280_40c2_90EA_8906B3B5C7B7" visibility="public" namespace="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="A nillable Length quantity.  Unlike the base Length measure, references to this type may be nil and include a nilReason"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Class"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="package" value="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
+										<UML:TaggedValue tag="date_created" value="2015-11-03 12:47:10"/>
+										<UML:TaggedValue tag="date_modified" value="2025-06-27 10:55:31"/>
+										<UML:TaggedValue tag="gentype" value="Java"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="Common"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="braeckel"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="product_name" value="Java"/>
+										<UML:TaggedValue tag="status" value="Implemented"/>
+										<UML:TaggedValue tag="tpos" value="9"/>
+										<UML:TaggedValue tag="ea_localid" value="11280"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="$ea_attsclassified" value="{7E086FBA-CED3-47c3-A6BF-3F55750F7881},{B4B86911-F9AC-4403-834A-79821F446C2B}"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Class>
+								<UML:Generalization subtype="EAID_234205D4_4280_40c2_90EA_8906B3B5C7B7" supertype="EAID_6FF43F87_FD8E_4c40_8A4D_EB136AB2AA7B" xmi.id="EAID_5329F98E_0A91_4a21_ABD8_71D0885CCC4F" visibility="public">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="style" value="3"/>
+										<UML:TaggedValue tag="ea_type" value="Generalization"/>
+										<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+										<UML:TaggedValue tag="linemode" value="3"/>
+										<UML:TaggedValue tag="linecolor" value="-1"/>
+										<UML:TaggedValue tag="linewidth" value="0"/>
+										<UML:TaggedValue tag="seqno" value="0"/>
+										<UML:TaggedValue tag="headStyle" value="0"/>
+										<UML:TaggedValue tag="lineStyle" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="13172"/>
+										<UML:TaggedValue tag="ea_sourceName" value="LengthWithNilReason"/>
+										<UML:TaggedValue tag="ea_targetName" value="Length"/>
+										<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+										<UML:TaggedValue tag="ea_targetType" value="Class"/>
+										<UML:TaggedValue tag="ea_sourceID" value="11280"/>
+										<UML:TaggedValue tag="ea_targetID" value="2008"/>
+										<UML:TaggedValue tag="src_visibility" value="Public"/>
+										<UML:TaggedValue tag="src_aggregation" value="0"/>
+										<UML:TaggedValue tag="src_isOrdered" value="false"/>
+										<UML:TaggedValue tag="src_targetScope" value="instance"/>
+										<UML:TaggedValue tag="src_changeable" value="none"/>
+										<UML:TaggedValue tag="src_isNavigable" value="false"/>
+										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="dst_visibility" value="Public"/>
+										<UML:TaggedValue tag="dst_aggregation" value="0"/>
+										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+										<UML:TaggedValue tag="dst_changeable" value="none"/>
+										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=4;"/>
+										<UML:TaggedValue tag="virtualInheritance" value="0"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Generalization>
 								<UML:Comment xmi.id="EAID_38769383_3EAA_47e9_ABF3_33FB9E7AC569" visibility="public" namespace="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1">
 									<UML:ModelElement.taggedValue>
 										<UML:TaggedValue tag="documentation" value="Examples of forecast weather (requiring qualification with intensity):&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;Drizzle&lt;/li&gt;&#xA;	&lt;li&gt;Rain&lt;/li&gt;&#xA;	&lt;li&gt;Snow&lt;/li&gt;&#xA;	&lt;li&gt;Snow grains&lt;/li&gt;&#xA;	&lt;li&gt;Ice pellets&lt;/li&gt;&#xA;	&lt;li&gt;Duststorm&lt;/li&gt;&#xA;	&lt;li&gt;Sandstorm&lt;/li&gt;&#xA;	&lt;li&gt;Freezing drizzle&lt;/li&gt;&#xA;	&lt;li&gt;Freezing rain&lt;/li&gt;&#xA;	&lt;li&gt;Hail shower&lt;/li&gt;&#xA;	&lt;li&gt;Small hail shower&lt;/li&gt;&#xA;	&lt;li&gt;Rain shower&lt;/li&gt;&#xA;	&lt;li&gt;Snow shower&lt;/li&gt;&#xA;	&lt;li&gt;Thunderstorm with hail&lt;/li&gt;&#xA;	&lt;li&gt;Thunderstorm with small hail&lt;/li&gt;&#xA;	&lt;li&gt;Thunderstorm with rain&lt;/li&gt;&#xA;	&lt;li&gt;Thunderstorm with snow&lt;/li&gt;&#xA;&lt;/ul&gt;"/>
@@ -15925,6 +15996,69 @@
 										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Comment>
+								<UML:Class name="VelocityWithNilReason" xmi.id="EAID_40325185_938A_486d_AEFB_C9789C7E6F79" visibility="public" namespace="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="A nillable Velocity quantity.  Unlike the base Velocity measure, references to this type may be nil and may include a nilReason"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Class"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="package" value="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
+										<UML:TaggedValue tag="date_created" value="2018-05-17 08:05:50"/>
+										<UML:TaggedValue tag="date_modified" value="2025-06-27 10:55:31"/>
+										<UML:TaggedValue tag="gentype" value="Java"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="Common"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="be"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="product_name" value="Java"/>
+										<UML:TaggedValue tag="status" value="Implemented"/>
+										<UML:TaggedValue tag="tpos" value="11"/>
+										<UML:TaggedValue tag="ea_localid" value="11299"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="$ea_attsclassified" value="{5A63B4FA-D115-41f9-BE99-069F9B89DC69},{417FDC77-B3F0-4835-B6AA-A2F078A520CB},{2B73C9C6-3392-449f-B523-69860E7F9922},{3696C6F6-D2A4-4e64-A54A-A606A8F13B2E}"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Class>
+								<UML:Generalization subtype="EAID_40325185_938A_486d_AEFB_C9789C7E6F79" supertype="EAID_16A86DD1_3DA0_45b6_A135_31BC5AB5B43C" xmi.id="EAID_3E5B4BED_2BE9_47b2_B22F_436DF30AAA4E" visibility="public">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="style" value="3"/>
+										<UML:TaggedValue tag="ea_type" value="Generalization"/>
+										<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+										<UML:TaggedValue tag="linemode" value="3"/>
+										<UML:TaggedValue tag="linecolor" value="-1"/>
+										<UML:TaggedValue tag="linewidth" value="0"/>
+										<UML:TaggedValue tag="seqno" value="0"/>
+										<UML:TaggedValue tag="headStyle" value="0"/>
+										<UML:TaggedValue tag="lineStyle" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="13169"/>
+										<UML:TaggedValue tag="ea_sourceName" value="VelocityWithNilReason"/>
+										<UML:TaggedValue tag="ea_targetName" value="Velocity"/>
+										<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+										<UML:TaggedValue tag="ea_targetType" value="Class"/>
+										<UML:TaggedValue tag="ea_sourceID" value="11299"/>
+										<UML:TaggedValue tag="ea_targetID" value="1993"/>
+										<UML:TaggedValue tag="src_visibility" value="Public"/>
+										<UML:TaggedValue tag="src_aggregation" value="0"/>
+										<UML:TaggedValue tag="src_isOrdered" value="false"/>
+										<UML:TaggedValue tag="src_targetScope" value="instance"/>
+										<UML:TaggedValue tag="src_changeable" value="none"/>
+										<UML:TaggedValue tag="src_isNavigable" value="false"/>
+										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="dst_visibility" value="Public"/>
+										<UML:TaggedValue tag="dst_aggregation" value="0"/>
+										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+										<UML:TaggedValue tag="dst_changeable" value="none"/>
+										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=1;"/>
+										<UML:TaggedValue tag="virtualInheritance" value="0"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Generalization>
 								<UML:Class name="SigConvectiveCloudType" xmi.id="EAID_429C0F3C_7D97_40a6_8C5B_0F4BF708B471" visibility="public" namespace="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
 									<UML:ModelElement.stereotype>
 										<UML:Stereotype name="codeList"/>
@@ -15947,7 +16081,7 @@
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Implemented"/>
 										<UML:TaggedValue tag="stereotype" value="codeList"/>
-										<UML:TaggedValue tag="tpos" value="13"/>
+										<UML:TaggedValue tag="tpos" value="19"/>
 										<UML:TaggedValue tag="ea_localid" value="11266"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="$ea_attsclassified" value="{86067744-B79D-4338-A16E-B9B998831784}"/>
@@ -15977,7 +16111,7 @@
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Implemented"/>
 										<UML:TaggedValue tag="stereotype" value="enumeration"/>
-										<UML:TaggedValue tag="tpos" value="8"/>
+										<UML:TaggedValue tag="tpos" value="14"/>
 										<UML:TaggedValue tag="ea_localid" value="11267"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="$ea_attsclassified" value="{A4983B93-0640-4fdb-ACAE-7D2CD5996E40},{105BD08C-7003-4a99-B904-F557AEE26365},{6FF2DD18-66FA-49ff-BD2F-3FFBC3CCBFA9},{33A95121-2730-44d2-A32D-A8296713A9EA},{5B7F2BF1-0448-4311-9B37-840FC7733249},{68A26212-A646-45d9-98D0-12FFA0FCF96E},{6CC176FD-F4DA-483c-9C15-C1734635AA81},{8B07FA00-3E87-4e4f-9542-1006204E3CF7}"/>
@@ -16069,7 +16203,7 @@
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Implemented"/>
 										<UML:TaggedValue tag="stereotype" value="codeList"/>
-										<UML:TaggedValue tag="tpos" value="14"/>
+										<UML:TaggedValue tag="tpos" value="20"/>
 										<UML:TaggedValue tag="ea_localid" value="11268"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="$ea_attsclassified" value="{53452BB0-A481-4aac-B140-1961E78ED737}"/>
@@ -16221,6 +16355,7 @@
 										<UML:TaggedValue tag="ea_targetType" value="Class"/>
 										<UML:TaggedValue tag="ea_sourceID" value="11271"/>
 										<UML:TaggedValue tag="ea_targetID" value="11269"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=7;SY=1;EX=-3;EY=-1;EDGE=3;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 										<UML:TaggedValue tag="rb" value="0..4"/>
 										<UML:TaggedValue tag="rt" value="+layer"/>
@@ -16266,7 +16401,7 @@
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Implemented"/>
 										<UML:TaggedValue tag="stereotype" value="enumeration"/>
-										<UML:TaggedValue tag="tpos" value="7"/>
+										<UML:TaggedValue tag="tpos" value="13"/>
 										<UML:TaggedValue tag="ea_localid" value="11325"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="$ea_attsclassified" value="{019326B8-E2D0-47bf-89E4-5473932E1466}"/>
@@ -16375,7 +16510,7 @@
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Implemented"/>
 										<UML:TaggedValue tag="stereotype" value="featureType"/>
-										<UML:TaggedValue tag="tpos" value="1"/>
+										<UML:TaggedValue tag="tpos" value="2"/>
 										<UML:TaggedValue tag="ea_localid" value="11270"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
@@ -16598,6 +16733,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -16623,7 +16759,7 @@
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Proposed"/>
 										<UML:TaggedValue tag="stereotype" value="featureType"/>
-										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="tpos" value="1"/>
 										<UML:TaggedValue tag="ea_localid" value="11326"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
@@ -16768,7 +16904,7 @@
 										<UML:TaggedValue tag="complexity" value="1"/>
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Implemented"/>
-										<UML:TaggedValue tag="tpos" value="2"/>
+										<UML:TaggedValue tag="tpos" value="3"/>
 										<UML:TaggedValue tag="ea_localid" value="11271"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
@@ -16878,7 +17014,7 @@
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Mandatory"/>
 										<UML:TaggedValue tag="stereotype" value="enumeration"/>
-										<UML:TaggedValue tag="tpos" value="9"/>
+										<UML:TaggedValue tag="tpos" value="15"/>
 										<UML:TaggedValue tag="ea_localid" value="11273"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="$ea_attsclassified" value="{5E39F960-5B70-4ee7-8330-447B0026FFE2}"/>
@@ -16972,7 +17108,7 @@
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Implemented"/>
 										<UML:TaggedValue tag="stereotype" value="enumeration"/>
-										<UML:TaggedValue tag="tpos" value="11"/>
+										<UML:TaggedValue tag="tpos" value="17"/>
 										<UML:TaggedValue tag="ea_localid" value="11274"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="$ea_attsclassified" value="{F97D6086-6EC0-4a47-BFEB-EC78321809D0},{59E07D30-15B1-463d-B6B4-4CF8B83F406D},{17DF0C36-3685-4921-8C4D-A36B1276CC00}"/>
@@ -17062,7 +17198,7 @@
 										<UML:TaggedValue tag="complexity" value="1"/>
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Implemented"/>
-										<UML:TaggedValue tag="tpos" value="4"/>
+										<UML:TaggedValue tag="tpos" value="12"/>
 										<UML:TaggedValue tag="ea_localid" value="11305"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="$ea_attsclassified" value="{5715BCBD-9D66-48f4-AD36-B0875EDB05B7},{9828CD53-82E8-4ef9-8C1B-E7508F5CAC11},{8B05ACD4-92D9-4d9d-A2A0-A64F6053C99A},{48E3AC22-4E43-4938-8D02-F8FE3AA29271},{4DF4C1BF-188B-4794-8D03-20AF37578263},{C552EDB8-DE39-4f7f-ABF9-46146D7417A6},{68772197-710C-450f-8396-80F316AD08F1},{B2822AE1-AEA8-4fba-9738-7078FEFD5595},{1FAC3EC2-8BC4-4177-B597-414DA1C2914A},{2DF3A060-FA9A-45e6-BDD8-7F613F710BF8},{2053A333-F54D-4155-9A55-A3C389F983D2},{33774A86-A3C1-4842-AC04-91ECB6A37857},{B947911B-7DE8-42a9-91CB-EDDC62C56D04},{507C72F2-00EE-407f-A08C-03379481C891},{540943A0-6888-484e-B35E-5E02A9B33AF7},{B58984C0-B663-45cd-B328-43992E85A3D8},{89A3257E-844F-4cb4-A4E5-EDEC0B248793},{F923ED7F-7FA9-41cf-877B-3947998FF106},{7AF7F098-EC86-49e5-BE78-780DC638965A},{7CB85DA2-7DCA-45e9-8041-DD829FC4AF56},{CE785DAF-D736-4cfd-BFC9-8D3F9A2ACFB9},{E8BED30C-2BE1-4252-946D-29890BD99D4B}"/>
@@ -17103,6 +17239,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=1;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -17124,7 +17261,7 @@
 										<UML:TaggedValue tag="complexity" value="1"/>
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Implemented"/>
-										<UML:TaggedValue tag="tpos" value="3"/>
+										<UML:TaggedValue tag="tpos" value="4"/>
 										<UML:TaggedValue tag="ea_localid" value="11275"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
@@ -17203,6 +17340,7 @@
 										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
 										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
 										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="EDGE=1;EX=14;EY=-87;SX=-5;SY=43;"/>
 										<UML:TaggedValue tag="virtualInheritance" value="0"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Generalization>
@@ -17230,6 +17368,195 @@
 										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 									</UML:ModelElement.taggedValue>
 								</UML:Comment>
+								<UML:Class name="DistanceWithNilReason" xmi.id="EAID_CBC4C6D8_DE57_4e16_BB44_6DB450590E50" visibility="public" namespace="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="A nillable Distance quantity.  Unlike the base Distance measure, references to this type may be nil and may include a nilReason"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Class"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="package" value="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
+										<UML:TaggedValue tag="date_created" value="2015-11-03 12:47:10"/>
+										<UML:TaggedValue tag="date_modified" value="2025-06-27 10:55:31"/>
+										<UML:TaggedValue tag="gentype" value="Java"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="Common"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="braeckel"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="product_name" value="Java"/>
+										<UML:TaggedValue tag="status" value="Implemented"/>
+										<UML:TaggedValue tag="tpos" value="8"/>
+										<UML:TaggedValue tag="ea_localid" value="11281"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="$ea_attsclassified" value="{32F03980-1220-48ad-AA3F-CD33E96B992C},{83F2E8AC-0489-4311-8A7F-E55DB49D48C4},{FB55FD68-6785-4856-A5C1-EC9C1BB3F057},{5400B1A6-AE7F-48b7-937E-2F9C7E0C2E4C},{C9D55E25-B71E-414f-9490-D36970F51AED},{0E632DBB-EFA2-4149-B170-1C4F86CAB7F3}"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Class>
+								<UML:Generalization subtype="EAID_CBC4C6D8_DE57_4e16_BB44_6DB450590E50" supertype="EAID_2CF3B75E_8B1F_4853_B0B4_10C65AD71551" xmi.id="EAID_AD2F41B2_BC8C_4691_A616_ED0035082706" visibility="public">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="style" value="3"/>
+										<UML:TaggedValue tag="ea_type" value="Generalization"/>
+										<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+										<UML:TaggedValue tag="linemode" value="3"/>
+										<UML:TaggedValue tag="linecolor" value="-1"/>
+										<UML:TaggedValue tag="linewidth" value="0"/>
+										<UML:TaggedValue tag="seqno" value="0"/>
+										<UML:TaggedValue tag="headStyle" value="0"/>
+										<UML:TaggedValue tag="lineStyle" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="13173"/>
+										<UML:TaggedValue tag="ea_sourceName" value="DistanceWithNilReason"/>
+										<UML:TaggedValue tag="ea_targetName" value="Distance"/>
+										<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+										<UML:TaggedValue tag="ea_targetType" value="Class"/>
+										<UML:TaggedValue tag="ea_sourceID" value="11281"/>
+										<UML:TaggedValue tag="ea_targetID" value="1997"/>
+										<UML:TaggedValue tag="src_visibility" value="Public"/>
+										<UML:TaggedValue tag="src_aggregation" value="0"/>
+										<UML:TaggedValue tag="src_isOrdered" value="false"/>
+										<UML:TaggedValue tag="src_targetScope" value="instance"/>
+										<UML:TaggedValue tag="src_changeable" value="none"/>
+										<UML:TaggedValue tag="src_isNavigable" value="false"/>
+										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="dst_visibility" value="Public"/>
+										<UML:TaggedValue tag="dst_aggregation" value="0"/>
+										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+										<UML:TaggedValue tag="dst_changeable" value="none"/>
+										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=-75;SY=0;EX=57;EY=2;EDGE=4;"/>
+										<UML:TaggedValue tag="virtualInheritance" value="0"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Generalization>
+								<UML:Class name="AngleWithNilReason" xmi.id="EAID_D1EAD7B6_7825_4e94_BE03_CBD5307AA1A0" visibility="public" namespace="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="A nillable Angle quantity.  Unlike the base Angle measure, references to this type may be nil and may include a nilReason"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Class"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="package" value="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
+										<UML:TaggedValue tag="date_created" value="2016-07-26 07:14:09"/>
+										<UML:TaggedValue tag="date_modified" value="2025-06-27 10:55:31"/>
+										<UML:TaggedValue tag="gentype" value="Java"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="Common"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="be"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="product_name" value="Java"/>
+										<UML:TaggedValue tag="status" value="Implemented"/>
+										<UML:TaggedValue tag="tpos" value="7"/>
+										<UML:TaggedValue tag="ea_localid" value="11282"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="$ea_attsclassified" value="{87263AC8-7518-4d4a-8BFD-7413A6296023},{6758A8E6-D27F-4b74-8E3C-C9F43BD28EAD},{94AB4B38-6778-43f4-895A-BCFEE2534012},{39B2EAA8-D830-44e2-8CFE-7D5F9E35F99B},{55DDD6F8-FDE4-4082-BFD7-558734D6A19D},{1CFFAFC0-F49F-4195-9FF3-8738EB1E7CB1}"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Class>
+								<UML:Generalization subtype="EAID_D1EAD7B6_7825_4e94_BE03_CBD5307AA1A0" supertype="EAID_6D08D328_8034_496e_BD66_678B4E078207" xmi.id="EAID_9CAAED4C_D028_4871_A0C0_B4806A601EB0" visibility="public">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="style" value="3"/>
+										<UML:TaggedValue tag="ea_type" value="Generalization"/>
+										<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+										<UML:TaggedValue tag="linemode" value="3"/>
+										<UML:TaggedValue tag="linecolor" value="-1"/>
+										<UML:TaggedValue tag="linewidth" value="0"/>
+										<UML:TaggedValue tag="seqno" value="0"/>
+										<UML:TaggedValue tag="headStyle" value="0"/>
+										<UML:TaggedValue tag="lineStyle" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="13171"/>
+										<UML:TaggedValue tag="ea_sourceName" value="AngleWithNilReason"/>
+										<UML:TaggedValue tag="ea_targetName" value="Angle"/>
+										<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+										<UML:TaggedValue tag="ea_targetType" value="Class"/>
+										<UML:TaggedValue tag="ea_sourceID" value="11282"/>
+										<UML:TaggedValue tag="ea_targetID" value="2007"/>
+										<UML:TaggedValue tag="src_visibility" value="Public"/>
+										<UML:TaggedValue tag="src_aggregation" value="0"/>
+										<UML:TaggedValue tag="src_isOrdered" value="false"/>
+										<UML:TaggedValue tag="src_targetScope" value="instance"/>
+										<UML:TaggedValue tag="src_changeable" value="none"/>
+										<UML:TaggedValue tag="src_isNavigable" value="false"/>
+										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="dst_visibility" value="Public"/>
+										<UML:TaggedValue tag="dst_aggregation" value="0"/>
+										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+										<UML:TaggedValue tag="dst_changeable" value="none"/>
+										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=1;"/>
+										<UML:TaggedValue tag="virtualInheritance" value="0"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Generalization>
+								<UML:Class name="MeasureWithNilReason" xmi.id="EAID_DCF0E12A_9176_49f1_B65F_BC07A97C98EE" visibility="public" namespace="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="A nillable Measure quantity.  Unlike the base measure, references to this type may be nil and may include a nilReason"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Class"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="package" value="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
+										<UML:TaggedValue tag="date_created" value="2018-05-17 07:46:26"/>
+										<UML:TaggedValue tag="date_modified" value="2025-06-27 10:55:31"/>
+										<UML:TaggedValue tag="gentype" value="Java"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="Common"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="be"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="product_name" value="Java"/>
+										<UML:TaggedValue tag="status" value="Implemented"/>
+										<UML:TaggedValue tag="tpos" value="10"/>
+										<UML:TaggedValue tag="ea_localid" value="11297"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="$ea_attsclassified" value="{E06F4A2B-2CF1-47b8-97B1-06E1DA99FD97},{FA55129F-2BD8-4c3a-A357-148E368A5E67},{BC170036-0C47-4979-9784-7276CA970127},{D74C848A-FC55-4b5c-9459-D8E3F560A35D}"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Class>
+								<UML:Generalization subtype="EAID_DCF0E12A_9176_49f1_B65F_BC07A97C98EE" supertype="EAID_475E7573_D79F_4d66_A409_045AF233ED79" xmi.id="EAID_C3F6111B_276D_4829_8B75_4B077B5BB5D7" visibility="public">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="style" value="3"/>
+										<UML:TaggedValue tag="ea_type" value="Generalization"/>
+										<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+										<UML:TaggedValue tag="linemode" value="3"/>
+										<UML:TaggedValue tag="linecolor" value="-1"/>
+										<UML:TaggedValue tag="linewidth" value="0"/>
+										<UML:TaggedValue tag="seqno" value="0"/>
+										<UML:TaggedValue tag="headStyle" value="0"/>
+										<UML:TaggedValue tag="lineStyle" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="13170"/>
+										<UML:TaggedValue tag="ea_sourceName" value="MeasureWithNilReason"/>
+										<UML:TaggedValue tag="ea_targetName" value="Measure"/>
+										<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+										<UML:TaggedValue tag="ea_targetType" value="Class"/>
+										<UML:TaggedValue tag="ea_sourceID" value="11297"/>
+										<UML:TaggedValue tag="ea_targetID" value="2000"/>
+										<UML:TaggedValue tag="src_visibility" value="Public"/>
+										<UML:TaggedValue tag="src_aggregation" value="0"/>
+										<UML:TaggedValue tag="src_isOrdered" value="false"/>
+										<UML:TaggedValue tag="src_targetScope" value="instance"/>
+										<UML:TaggedValue tag="src_changeable" value="none"/>
+										<UML:TaggedValue tag="src_isNavigable" value="false"/>
+										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="dst_visibility" value="Public"/>
+										<UML:TaggedValue tag="dst_aggregation" value="0"/>
+										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+										<UML:TaggedValue tag="dst_changeable" value="none"/>
+										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="privatedata5" value="SX=-35;SY=32;EX=54;EY=-41;EDGE=1;"/>
+										<UML:TaggedValue tag="virtualInheritance" value="0"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Generalization>
 								<UML:Class name="AerodromeSurfaceWindTrendForecast" xmi.id="EAID_EACDF6E8_B1FC_4f52_9198_7EA987EC963B" visibility="public" namespace="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
 									<UML:ModelElement.stereotype>
 										<UML:Stereotype name="dataType"/>
@@ -17447,7 +17774,7 @@
 										<UML:TaggedValue tag="product_name" value="Java"/>
 										<UML:TaggedValue tag="status" value="Implemented"/>
 										<UML:TaggedValue tag="stereotype" value="enumeration"/>
-										<UML:TaggedValue tag="tpos" value="10"/>
+										<UML:TaggedValue tag="tpos" value="16"/>
 										<UML:TaggedValue tag="ea_localid" value="11278"/>
 										<UML:TaggedValue tag="ea_eleType" value="element"/>
 										<UML:TaggedValue tag="$ea_attsclassified" value="{63F3DD13-5181-4ef5-BAB6-4088F2BEB6A6}"/>
@@ -17543,351 +17870,12 @@
 								</UML:Comment>
 							</UML:Namespace.ownedElement>
 						</UML:Package>
-						<UML:Package name="Measures" xmi.id="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
-							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA"/>
-							</UML:ModelElement.stereotype>
-							<UML:ModelElement.taggedValue>
-								<UML:TaggedValue tag="documentation" value="Common measured quantities used across multiple packages.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
-								<UML:TaggedValue tag="parent" value="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C"/>
-								<UML:TaggedValue tag="created" value="2015-11-03 12:47:10"/>
-								<UML:TaggedValue tag="modified" value="2025-06-11 00:51:50"/>
-								<UML:TaggedValue tag="iscontrolled" value="FALSE"/>
-								<UML:TaggedValue tag="lastloaddate" value="2013-04-30 21:21:54"/>
-								<UML:TaggedValue tag="lastsavedate" value="2013-04-30 21:21:54"/>
-								<UML:TaggedValue tag="version" value="3.0.0"/>
-								<UML:TaggedValue tag="isprotected" value="FALSE"/>
-								<UML:TaggedValue tag="usedtd" value="FALSE"/>
-								<UML:TaggedValue tag="logxml" value="FALSE"/>
-								<UML:TaggedValue tag="tpos" value="13"/>
-								<UML:TaggedValue tag="batchsave" value="0"/>
-								<UML:TaggedValue tag="batchload" value="0"/>
-								<UML:TaggedValue tag="phase" value="1.0"/>
-								<UML:TaggedValue tag="status" value="Implemented"/>
-								<UML:TaggedValue tag="author" value="braeckel"/>
-								<UML:TaggedValue tag="complexity" value="1"/>
-								<UML:TaggedValue tag="stereotype" value="leaf"/>
-								<UML:TaggedValue tag="ea_stype" value="Public"/>
-							</UML:ModelElement.taggedValue>
-							<UML:Namespace.ownedElement>
-								<UML:Class name="LengthWithNilReason" xmi.id="EAID_234205D4_4280_40c2_90EA_8906B3B5C7B7" visibility="public" namespace="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="documentation" value="A nillable Length quantity.  Unlike the base Length measure, references to this type may be nil and include a nilReason"/>
-										<UML:TaggedValue tag="isSpecification" value="false"/>
-										<UML:TaggedValue tag="ea_stype" value="Class"/>
-										<UML:TaggedValue tag="ea_ntype" value="0"/>
-										<UML:TaggedValue tag="version" value="1.0"/>
-										<UML:TaggedValue tag="package" value="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
-										<UML:TaggedValue tag="date_created" value="2015-11-03 12:47:10"/>
-										<UML:TaggedValue tag="date_modified" value="2020-08-02 14:41:00"/>
-										<UML:TaggedValue tag="gentype" value="Java"/>
-										<UML:TaggedValue tag="tagged" value="0"/>
-										<UML:TaggedValue tag="package_name" value="Measures"/>
-										<UML:TaggedValue tag="phase" value="1.0"/>
-										<UML:TaggedValue tag="author" value="braeckel"/>
-										<UML:TaggedValue tag="complexity" value="1"/>
-										<UML:TaggedValue tag="product_name" value="Java"/>
-										<UML:TaggedValue tag="status" value="Implemented"/>
-										<UML:TaggedValue tag="tpos" value="0"/>
-										<UML:TaggedValue tag="ea_localid" value="11280"/>
-										<UML:TaggedValue tag="ea_eleType" value="element"/>
-										<UML:TaggedValue tag="$ea_attsclassified" value="{7E086FBA-CED3-47c3-A6BF-3F55750F7881},{B4B86911-F9AC-4403-834A-79821F446C2B}"/>
-										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-									</UML:ModelElement.taggedValue>
-								</UML:Class>
-								<UML:Generalization subtype="EAID_234205D4_4280_40c2_90EA_8906B3B5C7B7" supertype="EAID_6FF43F87_FD8E_4c40_8A4D_EB136AB2AA7B" xmi.id="EAID_5329F98E_0A91_4a21_ABD8_71D0885CCC4F" visibility="public">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="style" value="3"/>
-										<UML:TaggedValue tag="ea_type" value="Generalization"/>
-										<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
-										<UML:TaggedValue tag="linemode" value="3"/>
-										<UML:TaggedValue tag="linecolor" value="-1"/>
-										<UML:TaggedValue tag="linewidth" value="0"/>
-										<UML:TaggedValue tag="seqno" value="0"/>
-										<UML:TaggedValue tag="headStyle" value="0"/>
-										<UML:TaggedValue tag="lineStyle" value="0"/>
-										<UML:TaggedValue tag="ea_localid" value="13172"/>
-										<UML:TaggedValue tag="ea_sourceName" value="LengthWithNilReason"/>
-										<UML:TaggedValue tag="ea_targetName" value="Length"/>
-										<UML:TaggedValue tag="ea_sourceType" value="Class"/>
-										<UML:TaggedValue tag="ea_targetType" value="Class"/>
-										<UML:TaggedValue tag="ea_sourceID" value="11280"/>
-										<UML:TaggedValue tag="ea_targetID" value="2008"/>
-										<UML:TaggedValue tag="src_visibility" value="Public"/>
-										<UML:TaggedValue tag="src_aggregation" value="0"/>
-										<UML:TaggedValue tag="src_isOrdered" value="false"/>
-										<UML:TaggedValue tag="src_targetScope" value="instance"/>
-										<UML:TaggedValue tag="src_changeable" value="none"/>
-										<UML:TaggedValue tag="src_isNavigable" value="false"/>
-										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
-										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
-										<UML:TaggedValue tag="dst_visibility" value="Public"/>
-										<UML:TaggedValue tag="dst_aggregation" value="0"/>
-										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
-										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
-										<UML:TaggedValue tag="dst_changeable" value="none"/>
-										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
-										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
-										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
-										<UML:TaggedValue tag="virtualInheritance" value="0"/>
-									</UML:ModelElement.taggedValue>
-								</UML:Generalization>
-								<UML:Class name="VelocityWithNilReason" xmi.id="EAID_40325185_938A_486d_AEFB_C9789C7E6F79" visibility="public" namespace="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="documentation" value="A nillable Velocity quantity.  Unlike the base Velocity measure, references to this type may be nil and may include a nilReason"/>
-										<UML:TaggedValue tag="isSpecification" value="false"/>
-										<UML:TaggedValue tag="ea_stype" value="Class"/>
-										<UML:TaggedValue tag="ea_ntype" value="0"/>
-										<UML:TaggedValue tag="version" value="1.0"/>
-										<UML:TaggedValue tag="package" value="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
-										<UML:TaggedValue tag="date_created" value="2018-05-17 08:05:50"/>
-										<UML:TaggedValue tag="date_modified" value="2020-08-02 14:41:11"/>
-										<UML:TaggedValue tag="gentype" value="Java"/>
-										<UML:TaggedValue tag="tagged" value="0"/>
-										<UML:TaggedValue tag="package_name" value="Measures"/>
-										<UML:TaggedValue tag="phase" value="1.0"/>
-										<UML:TaggedValue tag="author" value="be"/>
-										<UML:TaggedValue tag="complexity" value="1"/>
-										<UML:TaggedValue tag="product_name" value="Java"/>
-										<UML:TaggedValue tag="status" value="Implemented"/>
-										<UML:TaggedValue tag="tpos" value="0"/>
-										<UML:TaggedValue tag="ea_localid" value="11299"/>
-										<UML:TaggedValue tag="ea_eleType" value="element"/>
-										<UML:TaggedValue tag="$ea_attsclassified" value="{5A63B4FA-D115-41f9-BE99-069F9B89DC69},{417FDC77-B3F0-4835-B6AA-A2F078A520CB},{2B73C9C6-3392-449f-B523-69860E7F9922},{3696C6F6-D2A4-4e64-A54A-A606A8F13B2E}"/>
-										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-									</UML:ModelElement.taggedValue>
-								</UML:Class>
-								<UML:Generalization subtype="EAID_40325185_938A_486d_AEFB_C9789C7E6F79" supertype="EAID_16A86DD1_3DA0_45b6_A135_31BC5AB5B43C" xmi.id="EAID_3E5B4BED_2BE9_47b2_B22F_436DF30AAA4E" visibility="public">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="style" value="3"/>
-										<UML:TaggedValue tag="ea_type" value="Generalization"/>
-										<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
-										<UML:TaggedValue tag="linemode" value="3"/>
-										<UML:TaggedValue tag="linecolor" value="-1"/>
-										<UML:TaggedValue tag="linewidth" value="0"/>
-										<UML:TaggedValue tag="seqno" value="0"/>
-										<UML:TaggedValue tag="headStyle" value="0"/>
-										<UML:TaggedValue tag="lineStyle" value="0"/>
-										<UML:TaggedValue tag="ea_localid" value="13169"/>
-										<UML:TaggedValue tag="ea_sourceName" value="VelocityWithNilReason"/>
-										<UML:TaggedValue tag="ea_targetName" value="Velocity"/>
-										<UML:TaggedValue tag="ea_sourceType" value="Class"/>
-										<UML:TaggedValue tag="ea_targetType" value="Class"/>
-										<UML:TaggedValue tag="ea_sourceID" value="11299"/>
-										<UML:TaggedValue tag="ea_targetID" value="1993"/>
-										<UML:TaggedValue tag="src_visibility" value="Public"/>
-										<UML:TaggedValue tag="src_aggregation" value="0"/>
-										<UML:TaggedValue tag="src_isOrdered" value="false"/>
-										<UML:TaggedValue tag="src_targetScope" value="instance"/>
-										<UML:TaggedValue tag="src_changeable" value="none"/>
-										<UML:TaggedValue tag="src_isNavigable" value="false"/>
-										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
-										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
-										<UML:TaggedValue tag="dst_visibility" value="Public"/>
-										<UML:TaggedValue tag="dst_aggregation" value="0"/>
-										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
-										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
-										<UML:TaggedValue tag="dst_changeable" value="none"/>
-										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
-										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
-										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
-										<UML:TaggedValue tag="virtualInheritance" value="0"/>
-									</UML:ModelElement.taggedValue>
-								</UML:Generalization>
-								<UML:Class name="DistanceWithNilReason" xmi.id="EAID_CBC4C6D8_DE57_4e16_BB44_6DB450590E50" visibility="public" namespace="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="documentation" value="A nillable Distance quantity.  Unlike the base Distance measure, references to this type may be nil and may include a nilReason"/>
-										<UML:TaggedValue tag="isSpecification" value="false"/>
-										<UML:TaggedValue tag="ea_stype" value="Class"/>
-										<UML:TaggedValue tag="ea_ntype" value="0"/>
-										<UML:TaggedValue tag="version" value="1.0"/>
-										<UML:TaggedValue tag="package" value="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
-										<UML:TaggedValue tag="date_created" value="2015-11-03 12:47:10"/>
-										<UML:TaggedValue tag="date_modified" value="2020-08-02 14:40:50"/>
-										<UML:TaggedValue tag="gentype" value="Java"/>
-										<UML:TaggedValue tag="tagged" value="0"/>
-										<UML:TaggedValue tag="package_name" value="Measures"/>
-										<UML:TaggedValue tag="phase" value="1.0"/>
-										<UML:TaggedValue tag="author" value="braeckel"/>
-										<UML:TaggedValue tag="complexity" value="1"/>
-										<UML:TaggedValue tag="product_name" value="Java"/>
-										<UML:TaggedValue tag="status" value="Implemented"/>
-										<UML:TaggedValue tag="tpos" value="0"/>
-										<UML:TaggedValue tag="ea_localid" value="11281"/>
-										<UML:TaggedValue tag="ea_eleType" value="element"/>
-										<UML:TaggedValue tag="$ea_attsclassified" value="{32F03980-1220-48ad-AA3F-CD33E96B992C},{83F2E8AC-0489-4311-8A7F-E55DB49D48C4},{FB55FD68-6785-4856-A5C1-EC9C1BB3F057},{5400B1A6-AE7F-48b7-937E-2F9C7E0C2E4C},{C9D55E25-B71E-414f-9490-D36970F51AED},{0E632DBB-EFA2-4149-B170-1C4F86CAB7F3}"/>
-										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-									</UML:ModelElement.taggedValue>
-								</UML:Class>
-								<UML:Generalization subtype="EAID_CBC4C6D8_DE57_4e16_BB44_6DB450590E50" supertype="EAID_2CF3B75E_8B1F_4853_B0B4_10C65AD71551" xmi.id="EAID_AD2F41B2_BC8C_4691_A616_ED0035082706" visibility="public">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="style" value="3"/>
-										<UML:TaggedValue tag="ea_type" value="Generalization"/>
-										<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
-										<UML:TaggedValue tag="linemode" value="3"/>
-										<UML:TaggedValue tag="linecolor" value="-1"/>
-										<UML:TaggedValue tag="linewidth" value="0"/>
-										<UML:TaggedValue tag="seqno" value="0"/>
-										<UML:TaggedValue tag="headStyle" value="0"/>
-										<UML:TaggedValue tag="lineStyle" value="0"/>
-										<UML:TaggedValue tag="ea_localid" value="13173"/>
-										<UML:TaggedValue tag="ea_sourceName" value="DistanceWithNilReason"/>
-										<UML:TaggedValue tag="ea_targetName" value="Distance"/>
-										<UML:TaggedValue tag="ea_sourceType" value="Class"/>
-										<UML:TaggedValue tag="ea_targetType" value="Class"/>
-										<UML:TaggedValue tag="ea_sourceID" value="11281"/>
-										<UML:TaggedValue tag="ea_targetID" value="1997"/>
-										<UML:TaggedValue tag="src_visibility" value="Public"/>
-										<UML:TaggedValue tag="src_aggregation" value="0"/>
-										<UML:TaggedValue tag="src_isOrdered" value="false"/>
-										<UML:TaggedValue tag="src_targetScope" value="instance"/>
-										<UML:TaggedValue tag="src_changeable" value="none"/>
-										<UML:TaggedValue tag="src_isNavigable" value="false"/>
-										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
-										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
-										<UML:TaggedValue tag="dst_visibility" value="Public"/>
-										<UML:TaggedValue tag="dst_aggregation" value="0"/>
-										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
-										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
-										<UML:TaggedValue tag="dst_changeable" value="none"/>
-										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
-										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
-										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
-										<UML:TaggedValue tag="virtualInheritance" value="0"/>
-									</UML:ModelElement.taggedValue>
-								</UML:Generalization>
-								<UML:Class name="AngleWithNilReason" xmi.id="EAID_D1EAD7B6_7825_4e94_BE03_CBD5307AA1A0" visibility="public" namespace="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="documentation" value="A nillable Angle quantity.  Unlike the base Angle measure, references to this type may be nil and may include a nilReason"/>
-										<UML:TaggedValue tag="isSpecification" value="false"/>
-										<UML:TaggedValue tag="ea_stype" value="Class"/>
-										<UML:TaggedValue tag="ea_ntype" value="0"/>
-										<UML:TaggedValue tag="version" value="1.0"/>
-										<UML:TaggedValue tag="package" value="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
-										<UML:TaggedValue tag="date_created" value="2016-07-26 07:14:09"/>
-										<UML:TaggedValue tag="date_modified" value="2020-08-02 14:40:44"/>
-										<UML:TaggedValue tag="gentype" value="Java"/>
-										<UML:TaggedValue tag="tagged" value="0"/>
-										<UML:TaggedValue tag="package_name" value="Measures"/>
-										<UML:TaggedValue tag="phase" value="1.0"/>
-										<UML:TaggedValue tag="author" value="be"/>
-										<UML:TaggedValue tag="complexity" value="1"/>
-										<UML:TaggedValue tag="product_name" value="Java"/>
-										<UML:TaggedValue tag="status" value="Implemented"/>
-										<UML:TaggedValue tag="tpos" value="0"/>
-										<UML:TaggedValue tag="ea_localid" value="11282"/>
-										<UML:TaggedValue tag="ea_eleType" value="element"/>
-										<UML:TaggedValue tag="$ea_attsclassified" value="{87263AC8-7518-4d4a-8BFD-7413A6296023},{6758A8E6-D27F-4b74-8E3C-C9F43BD28EAD},{94AB4B38-6778-43f4-895A-BCFEE2534012},{39B2EAA8-D830-44e2-8CFE-7D5F9E35F99B},{55DDD6F8-FDE4-4082-BFD7-558734D6A19D},{1CFFAFC0-F49F-4195-9FF3-8738EB1E7CB1}"/>
-										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-									</UML:ModelElement.taggedValue>
-								</UML:Class>
-								<UML:Generalization subtype="EAID_D1EAD7B6_7825_4e94_BE03_CBD5307AA1A0" supertype="EAID_6D08D328_8034_496e_BD66_678B4E078207" xmi.id="EAID_9CAAED4C_D028_4871_A0C0_B4806A601EB0" visibility="public">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="style" value="3"/>
-										<UML:TaggedValue tag="ea_type" value="Generalization"/>
-										<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
-										<UML:TaggedValue tag="linemode" value="3"/>
-										<UML:TaggedValue tag="linecolor" value="-1"/>
-										<UML:TaggedValue tag="linewidth" value="0"/>
-										<UML:TaggedValue tag="seqno" value="0"/>
-										<UML:TaggedValue tag="headStyle" value="0"/>
-										<UML:TaggedValue tag="lineStyle" value="0"/>
-										<UML:TaggedValue tag="ea_localid" value="13171"/>
-										<UML:TaggedValue tag="ea_sourceName" value="AngleWithNilReason"/>
-										<UML:TaggedValue tag="ea_targetName" value="Angle"/>
-										<UML:TaggedValue tag="ea_sourceType" value="Class"/>
-										<UML:TaggedValue tag="ea_targetType" value="Class"/>
-										<UML:TaggedValue tag="ea_sourceID" value="11282"/>
-										<UML:TaggedValue tag="ea_targetID" value="2007"/>
-										<UML:TaggedValue tag="src_visibility" value="Public"/>
-										<UML:TaggedValue tag="src_aggregation" value="0"/>
-										<UML:TaggedValue tag="src_isOrdered" value="false"/>
-										<UML:TaggedValue tag="src_targetScope" value="instance"/>
-										<UML:TaggedValue tag="src_changeable" value="none"/>
-										<UML:TaggedValue tag="src_isNavigable" value="false"/>
-										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
-										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
-										<UML:TaggedValue tag="dst_visibility" value="Public"/>
-										<UML:TaggedValue tag="dst_aggregation" value="0"/>
-										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
-										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
-										<UML:TaggedValue tag="dst_changeable" value="none"/>
-										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
-										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
-										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
-										<UML:TaggedValue tag="virtualInheritance" value="0"/>
-									</UML:ModelElement.taggedValue>
-								</UML:Generalization>
-								<UML:Class name="MeasureWithNilReason" xmi.id="EAID_DCF0E12A_9176_49f1_B65F_BC07A97C98EE" visibility="public" namespace="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="documentation" value="A nillable Measure quantity.  Unlike the base measure, references to this type may be nil and may include a nilReason"/>
-										<UML:TaggedValue tag="isSpecification" value="false"/>
-										<UML:TaggedValue tag="ea_stype" value="Class"/>
-										<UML:TaggedValue tag="ea_ntype" value="0"/>
-										<UML:TaggedValue tag="version" value="1.0"/>
-										<UML:TaggedValue tag="package" value="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
-										<UML:TaggedValue tag="date_created" value="2018-05-17 07:46:26"/>
-										<UML:TaggedValue tag="date_modified" value="2020-08-02 14:41:05"/>
-										<UML:TaggedValue tag="gentype" value="Java"/>
-										<UML:TaggedValue tag="tagged" value="0"/>
-										<UML:TaggedValue tag="package_name" value="Measures"/>
-										<UML:TaggedValue tag="phase" value="1.0"/>
-										<UML:TaggedValue tag="author" value="be"/>
-										<UML:TaggedValue tag="complexity" value="1"/>
-										<UML:TaggedValue tag="product_name" value="Java"/>
-										<UML:TaggedValue tag="status" value="Implemented"/>
-										<UML:TaggedValue tag="tpos" value="0"/>
-										<UML:TaggedValue tag="ea_localid" value="11297"/>
-										<UML:TaggedValue tag="ea_eleType" value="element"/>
-										<UML:TaggedValue tag="$ea_attsclassified" value="{E06F4A2B-2CF1-47b8-97B1-06E1DA99FD97},{FA55129F-2BD8-4c3a-A357-148E368A5E67},{BC170036-0C47-4979-9784-7276CA970127},{D74C848A-FC55-4b5c-9459-D8E3F560A35D}"/>
-										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-									</UML:ModelElement.taggedValue>
-								</UML:Class>
-								<UML:Generalization subtype="EAID_DCF0E12A_9176_49f1_B65F_BC07A97C98EE" supertype="EAID_475E7573_D79F_4d66_A409_045AF233ED79" xmi.id="EAID_C3F6111B_276D_4829_8B75_4B077B5BB5D7" visibility="public">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue tag="style" value="3"/>
-										<UML:TaggedValue tag="ea_type" value="Generalization"/>
-										<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
-										<UML:TaggedValue tag="linemode" value="3"/>
-										<UML:TaggedValue tag="linecolor" value="-1"/>
-										<UML:TaggedValue tag="linewidth" value="0"/>
-										<UML:TaggedValue tag="seqno" value="0"/>
-										<UML:TaggedValue tag="headStyle" value="0"/>
-										<UML:TaggedValue tag="lineStyle" value="0"/>
-										<UML:TaggedValue tag="ea_localid" value="13170"/>
-										<UML:TaggedValue tag="ea_sourceName" value="MeasureWithNilReason"/>
-										<UML:TaggedValue tag="ea_targetName" value="Measure"/>
-										<UML:TaggedValue tag="ea_sourceType" value="Class"/>
-										<UML:TaggedValue tag="ea_targetType" value="Class"/>
-										<UML:TaggedValue tag="ea_sourceID" value="11297"/>
-										<UML:TaggedValue tag="ea_targetID" value="2000"/>
-										<UML:TaggedValue tag="src_visibility" value="Public"/>
-										<UML:TaggedValue tag="src_aggregation" value="0"/>
-										<UML:TaggedValue tag="src_isOrdered" value="false"/>
-										<UML:TaggedValue tag="src_targetScope" value="instance"/>
-										<UML:TaggedValue tag="src_changeable" value="none"/>
-										<UML:TaggedValue tag="src_isNavigable" value="false"/>
-										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
-										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
-										<UML:TaggedValue tag="dst_visibility" value="Public"/>
-										<UML:TaggedValue tag="dst_aggregation" value="0"/>
-										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
-										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
-										<UML:TaggedValue tag="dst_changeable" value="none"/>
-										<UML:TaggedValue tag="dst_isNavigable" value="true"/>
-										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
-										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;"/>
-										<UML:TaggedValue tag="virtualInheritance" value="0"/>
-									</UML:ModelElement.taggedValue>
-								</UML:Generalization>
-							</UML:Namespace.ownedElement>
-						</UML:Package>
 					</UML:Namespace.ownedElement>
 				</UML:Package>
-				<UML:Stereotype xmi.id="EAID_95D7C90C_3F41_4061_A31B_C57FD9E3717C" name="applicationSchema" isRoot="false" isLeaf="false" isAbstract="false">
+				<UML:Stereotype xmi.id="EAID_85C63A32_7C06_4b8a_9818_82D094D6C961" name="applicationSchema" isRoot="false" isLeaf="false" isAbstract="false">
 					<UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
 				</UML:Stereotype>
-				<UML:Stereotype xmi.id="EAID_3F7DD247_F3E9_4dad_99A4_2A1595E97CEA" name="leaf" isRoot="false" isLeaf="false" isAbstract="false">
+				<UML:Stereotype xmi.id="EAID_AD5A0BE3_53C3_4efd_9C25_82E907C247E6" name="leaf" isRoot="false" isLeaf="false" isAbstract="false">
 					<UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
 				</UML:Stereotype>
 				<UML:DataType xmi.id="eaxmiid1" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
@@ -17942,9 +17930,6 @@
 		<UML:TaggedValue tag="version" xmi.id="EAID_3202365F_389B_4248_96C4_60EB032CA8CB" value="1.0.0RC1" modelElement="EAID_F1040D70_BDB5_4bff_8213_7BBDFC9E6044"/>
 		<UML:TaggedValue tag="xsdDocument" xmi.id="EAID_6E79370E_A411_27a4_8161_B0291B3C8E94" value="qvaci.xsd#NOTES#Description: Name of an XML Schema document to create representing the content of this package.&#xA;" modelElement="EAID_F1040D70_BDB5_4bff_8213_7BBDFC9E6044"/>
 		<UML:TaggedValue tag="xsdEncodingRule" xmi.id="EAID_BCD3CBEE_7651_1576_A5C5_5F10D6E1E874" value="iso19136_2007_METCE_Extensions#NOTES#Values: iso19136_2007,iso19139_2007,iso19136_2007_METCE_Extensions&#xA;Default: iso19136_2007_METCE_Extensions&#xA;Description: XML Schema encoding rule to apply.&#xA;" modelElement="EAID_F1040D70_BDB5_4bff_8213_7BBDFC9E6044"/>
-		<UML:TaggedValue tag="version" xmi.id="EAID_82986373_007B_4135_8F53_A64E0CD3FCE7" value="3.0.0" modelElement="EAID_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
-		<UML:TaggedValue tag="xsdDocument" xmi.id="EAID_6E79370E_A411_27a4_A53F_7E706402057D" value="measures.xsd#NOTES#Description: Name of an XML Schema document to create representing the content of this package.&#xA;" modelElement="EAID_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
-		<UML:TaggedValue tag="xsdEncodingRule" xmi.id="EAID_BCD3CBEE_7651_1576_BAF2_D64065A174A6" value="iso19136_2007_METCE_Extensions#NOTES#Values: iso19136_2007,iso19139_2007,iso19136_2007_METCE_Extensions&#xA;Default: iso19136_2007_METCE_Extensions&#xA;Description: XML Schema encoding rule to apply.&#xA;" modelElement="EAID_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
 		<UML:TaggedValue tag="version" xmi.id="EAID_D37123E2_68DD_4a09_A6E0_DCB49F12FFE3" value="1.1.1RC1" modelElement="EAID_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997"/>
 		<UML:TaggedValue tag="xsdDocument" xmi.id="EAID_6E79370E_A411_27a4_A329_777BA6860269" value="WAFSSigWxFC.xsd#NOTES#Description: Name of an XML Schema document to create representing the content of this package.&#xA;" modelElement="EAID_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997"/>
 		<UML:TaggedValue tag="xsdEncodingRule" xmi.id="EAID_BCD3CBEE_7651_1576_9E17_AB7B6C3B72C3" value="iso19136_2007_METCE_Extensions#NOTES#Values: iso19136_2007,iso19139_2007,iso19136_2007_METCE_Extensions&#xA;Default: iso19136_2007_METCE_Extensions&#xA;Description: XML Schema encoding rule to apply.&#xA;" modelElement="EAID_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997"/>
@@ -18506,7 +18491,7 @@
 				<UML:TaggedValue tag="version" value="1.0"/>
 				<UML:TaggedValue tag="author" value="braeckel"/>
 				<UML:TaggedValue tag="created_date" value="2016-02-16 10:02:54"/>
-				<UML:TaggedValue tag="modified_date" value="2025-06-13 14:57:34"/>
+				<UML:TaggedValue tag="modified_date" value="2025-06-24 20:12:20"/>
 				<UML:TaggedValue tag="package" value="EAPK_E619C133_EFAC_40f4_994A_DA88401165BC"/>
 				<UML:TaggedValue tag="type" value="Logical"/>
 				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;tcol=-1;ofCol=-1;hl=1;cls=0;SwimlaneFont=lfh:-13,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
@@ -18514,10 +18499,10 @@
 				<UML:TaggedValue tag="tpos" value="1"/>
 				<UML:TaggedValue tag="ea_localid" value="4340"/>
 				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=815;DocSize.cy=1067;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
-				<UML:TaggedValue tag="styleex" value="SaveTag=73240FD1;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=E10255AE;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;"/>
 			</UML:ModelElement.taggedValue>
 			<UML:Diagram.element>
-				<UML:DiagramElement geometry="Left=226;Top=74;Right=603;Bottom=357;" subject="EAID_5B908549_2E66_4358_BB49_4175A5F74F31" seqno="1" style="BCol=6008319;DUID=03CC12C0;Constraint=1;AttCustom=0;OpCustom=0;PType=0;RzO=1;"/>
+				<UML:DiagramElement geometry="Left=225;Top=74;Right=602;Bottom=357;" subject="EAID_5B908549_2E66_4358_BB49_4175A5F74F31" seqno="1" style="BCol=6008319;DUID=03CC12C0;Constraint=1;AttCustom=0;OpCustom=0;PType=0;RzO=1;"/>
 			</UML:Diagram.element>
 		</UML:Diagram>
 		<UML:Diagram name="Context Diagram: Volcanic Ash Observed Conditions" xmi.id="EAID_A329D056_537A_4749_AB64_EFE379E87932" diagramType="ClassDiagram" owner="EAPK_E619C133_EFAC_40f4_994A_DA88401165BC" toolName="Enterprise Architect 2.5">
@@ -18868,7 +18853,7 @@
 				<UML:TaggedValue tag="modified_date" value="2023-09-24 21:36:09"/>
 				<UML:TaggedValue tag="package" value="EAPK_77D2EC58_9BFA_4e7b_ABE7_F0B0A4BA898C"/>
 				<UML:TaggedValue tag="type" value="Logical"/>
-				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;hl=1;cls=0;SwimlaneFont=lfh:-13,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;hl=1;cls=0;"/>
 				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<UML:TaggedValue tag="tpos" value="3"/>
 				<UML:TaggedValue tag="ea_localid" value="4372"/>
@@ -19041,6 +19026,10 @@
 		<UML:TaggedValue tag="asDictionary" xmi.id="EAID_0BE3FA2A_350C_1d35_8C48_64401E6C3C67" value="true#NOTES#Values: true,false&#xA;Default: true&#xA;Description: Encode code list as externally managed dictionary (applies to ISO 19136:2007 encoding rule).&#xA;" modelElement="EAID_14CFE2EE_7E14_4003_9798_5342B4376B6D"/>
 		<UML:TaggedValue tag="extensibility" xmi.id="EAID_F6B0A50D_E44F_a7e4_9DC3_E269FFA114E0" value="none#NOTES#Values: none,narrower,open,any&#xA;Default: none&#xA;Description: This refers to extensions by a third party, not to extensions by the owner of the vocabulary; the owner will always be able to revise the vocabulary. I.e., if the value is 'none', the referenced vocabulary may not be extended by third parties; if the value is 'narrower', the vocabulary may be extended by narrower terms that have an existing term as a parent; if the value is 'any', the vocabulary may be extended by additional terms on any level. This value must be 'all', empty or missing, if the value 'vocabulary' is empty or missing; in this case any vocabulary may be used.&#xA;" modelElement="EAID_14CFE2EE_7E14_4003_9798_5342B4376B6D"/>
 		<UML:TaggedValue tag="vocabulary" xmi.id="EAID_D435E218_989A_f998_B8E9_698E6B07280C" value="http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather#NOTES#Description: URI of the vocabulary/code list in the WMO Codes Registry or in some external registry. The value has to be provided, if an online version of the vocabulary is used.&#xA;" modelElement="EAID_14CFE2EE_7E14_4003_9798_5342B4376B6D"/>
+		<UML:TaggedValue tag="noIWXXMExtension" xmi.id="EAID_DD90FFFD_04D0_4c3f_B5B1_7D78994F3FC6" value="true" modelElement="EAID_234205D4_4280_40c2_90EA_8906B3B5C7B7"/>
+		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_BB3C0968_AC93_4f60_99D1_FB23809C187C" value="true" modelElement="EAID_234205D4_4280_40c2_90EA_8906B3B5C7B7"/>
+		<UML:TaggedValue tag="noIWXXMExtension" xmi.id="EAID_CFE9DA2C_B4AD_4f3f_BC24_0E228F70D0D4" value="true" modelElement="EAID_40325185_938A_486d_AEFB_C9789C7E6F79"/>
+		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_275BAED8_3EBD_483f_A976_DB6058F1E069" value="true" modelElement="EAID_40325185_938A_486d_AEFB_C9789C7E6F79"/>
 		<UML:TaggedValue tag="asDictionary" xmi.id="EAID_0BE3FA2A_350C_1d35_A0BD_58FE08F3B1D0" value="true#NOTES#Values: true,false&#xA;Default: true&#xA;Description: Encode code list as externally managed dictionary (applies to ISO 19136:2007 encoding rule).&#xA;" modelElement="EAID_429C0F3C_7D97_40a6_8C5B_0F4BF708B471"/>
 		<UML:TaggedValue tag="extensibility" xmi.id="EAID_F6B0A50D_E44F_a7e4_8749_88304D68713E" value="none#NOTES#Values: none,narrower,open,any&#xA;Default: none&#xA;Description: This refers to extensions by a third party, not to extensions by the owner of the vocabulary; the owner will always be able to revise the vocabulary. I.e., if the value is 'none', the referenced vocabulary may not be extended by third parties; if the value is 'narrower', the vocabulary may be extended by narrower terms that have an existing term as a parent; if the value is 'any', the vocabulary may be extended by additional terms on any level. This value must be 'all', empty or missing, if the value 'vocabulary' is empty or missing; in this case any vocabulary may be used.&#xA;" modelElement="EAID_429C0F3C_7D97_40a6_8C5B_0F4BF708B471"/>
 		<UML:TaggedValue tag="vocabulary" xmi.id="EAID_D435E218_989A_f998_BD36_966203C66FB5" value="http://codes.wmo.int/49-2/SigConvectiveCloudType#NOTES#Description: URI of the vocabulary/code list in the WMO Codes Registry or in some external registry. The value has to be provided, if an online version of the vocabulary is used.&#xA;" modelElement="EAID_429C0F3C_7D97_40a6_8C5B_0F4BF708B471"/>
@@ -19061,6 +19050,12 @@
 		<UML:TaggedValue tag="byValuePropertyType" xmi.id="EAID_91FE5A30_012B_4d3b_BCA6_F6D9F4C4B2B5" value="false" modelElement="EAID_B38F16A3_DC3C_4a9d_9877_DA5F7164D95D"/>
 		<UML:TaggedValue tag="isCollection" xmi.id="EAID_0B450B74_84CF_4cae_93CF_A5DE9EFAD542" value="false" modelElement="EAID_B38F16A3_DC3C_4a9d_9877_DA5F7164D95D"/>
 		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_5B209811_72A1_4e7f_A840_547BA99DC024" value="false" modelElement="EAID_B38F16A3_DC3C_4a9d_9877_DA5F7164D95D"/>
+		<UML:TaggedValue tag="noIWXXMExtension" xmi.id="EAID_9DC4A802_1D77_40e5_8CCE_890E66E7805B" value="true" modelElement="EAID_CBC4C6D8_DE57_4e16_BB44_6DB450590E50"/>
+		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_9B43124B_B9D2_478f_9C22_75A070E1E658" value="true" modelElement="EAID_CBC4C6D8_DE57_4e16_BB44_6DB450590E50"/>
+		<UML:TaggedValue tag="noIWXXMExtension" xmi.id="EAID_DC19C789_1A08_4ba4_A85E_B90CD9EE6D11" value="true" modelElement="EAID_D1EAD7B6_7825_4e94_BE03_CBD5307AA1A0"/>
+		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_275BAED8_3EBD_483f_A0F4_7ACF84C6DEF6" value="true" modelElement="EAID_D1EAD7B6_7825_4e94_BE03_CBD5307AA1A0"/>
+		<UML:TaggedValue tag="noIWXXMExtension" xmi.id="EAID_2D313669_2034_42c1_9B39_F9E1027B252F" value="true" modelElement="EAID_DCF0E12A_9176_49f1_B65F_BC07A97C98EE"/>
+		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_275BAED8_3EBD_483f_BC99_F5787E231D12" value="true" modelElement="EAID_DCF0E12A_9176_49f1_B65F_BC07A97C98EE"/>
 		<UML:TaggedValue tag="isCollection" xmi.id="EAID_26B33348_A3EF_6ca3_899D_9EAC0A1549A5" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;Description: Identifies the type as an objection collection.&#xA;" modelElement="EAID_EACDF6E8_B1FC_4f52_9198_7EA987EC963B"/>
 		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_F9638764_31AB_2a31_9976_311BCE7D9551" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;Description: Suppresses creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).&#xA;" modelElement="EAID_EACDF6E8_B1FC_4f52_9198_7EA987EC963B"/>
 		<UML:Diagram name="Context Diagram: Cloud" xmi.id="EAID_54BBFBEA_E7AC_4a1d_A689_EF1F3CF7EB0B" diagramType="ClassDiagram" owner="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" toolName="Enterprise Architect 2.5">
@@ -19218,47 +19213,17 @@
 				<UML:DiagramElement geometry="Left=265;Top=222;Right=367;Bottom=294;" subject="EAID_7AAE80A5_FBCD_4e56_A495_7F52106DDE4D" seqno="1" style="DUID=A2EE34DF;"/>
 			</UML:Diagram.element>
 		</UML:Diagram>
-		<UML:Diagram name="Context Diagram: String" xmi.id="EAID_9A90F8AA_91DB_4df7_8551_2C5613121573" diagramType="ClassDiagram" owner="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" toolName="Enterprise Architect 2.5">
-			<UML:ModelElement.taggedValue>
-				<UML:TaggedValue tag="version" value="1.0"/>
-				<UML:TaggedValue tag="author" value="braeckel"/>
-				<UML:TaggedValue tag="created_date" value="2018-06-08 11:41:17"/>
-				<UML:TaggedValue tag="modified_date" value="2018-06-21 15:00:22"/>
-				<UML:TaggedValue tag="package" value="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
-				<UML:TaggedValue tag="type" value="Logical"/>
-				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;hl=1;cls=0;SwimlaneFont=lfh:-13,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
-				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
-				<UML:TaggedValue tag="tpos" value="9"/>
-				<UML:TaggedValue tag="ea_localid" value="4352"/>
-				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=815;DocSize.cy=1067;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
-				<UML:TaggedValue tag="styleex" value="SaveTag=5592D8E6;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;"/>
-			</UML:ModelElement.taggedValue>
-			<UML:Diagram.element>
-				<UML:DiagramElement geometry="Left=195;Top=99;Right=456;Bottom=351;" subject="EAID_AF7C81A6_B1C1_4469_A09F_B97989024A14" seqno="1" style="DUID=C07FC479;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
-				<UML:DiagramElement geometry="Left=258;Top=425;Right=389;Bottom=495;" subject="EAID_7FEC60C1_4FB7_4d84_B48F_079526E1CD1F" seqno="2" style="DUID=77E0F4AE;"/>
-				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_AC75A6AC_D7ED_4397_A5DB_70058736CF54" style="Mode=3;EOID=C07FC479;SOID=77E0F4AE;Color=-1;LWidth=0;Hidden=0;"/>
-			</UML:Diagram.element>
-		</UML:Diagram>
-		<UML:TaggedValue tag="noIWXXMExtension" xmi.id="EAID_DD90FFFD_04D0_4c3f_B5B1_7D78994F3FC6" value="true" modelElement="EAID_234205D4_4280_40c2_90EA_8906B3B5C7B7"/>
-		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_BB3C0968_AC93_4f60_99D1_FB23809C187C" value="true" modelElement="EAID_234205D4_4280_40c2_90EA_8906B3B5C7B7"/>
-		<UML:TaggedValue tag="noIWXXMExtension" xmi.id="EAID_CFE9DA2C_B4AD_4f3f_BC24_0E228F70D0D4" value="true" modelElement="EAID_40325185_938A_486d_AEFB_C9789C7E6F79"/>
-		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_275BAED8_3EBD_483f_A976_DB6058F1E069" value="true" modelElement="EAID_40325185_938A_486d_AEFB_C9789C7E6F79"/>
-		<UML:TaggedValue tag="noIWXXMExtension" xmi.id="EAID_9DC4A802_1D77_40e5_8CCE_890E66E7805B" value="true" modelElement="EAID_CBC4C6D8_DE57_4e16_BB44_6DB450590E50"/>
-		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_9B43124B_B9D2_478f_9C22_75A070E1E658" value="true" modelElement="EAID_CBC4C6D8_DE57_4e16_BB44_6DB450590E50"/>
-		<UML:TaggedValue tag="noIWXXMExtension" xmi.id="EAID_DC19C789_1A08_4ba4_A85E_B90CD9EE6D11" value="true" modelElement="EAID_D1EAD7B6_7825_4e94_BE03_CBD5307AA1A0"/>
-		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_275BAED8_3EBD_483f_A0F4_7ACF84C6DEF6" value="true" modelElement="EAID_D1EAD7B6_7825_4e94_BE03_CBD5307AA1A0"/>
-		<UML:TaggedValue tag="noIWXXMExtension" xmi.id="EAID_2D313669_2034_42c1_9B39_F9E1027B252F" value="true" modelElement="EAID_DCF0E12A_9176_49f1_B65F_BC07A97C98EE"/>
-		<UML:TaggedValue tag="noPropertyType" xmi.id="EAID_275BAED8_3EBD_483f_BC99_F5787E231D12" value="true" modelElement="EAID_DCF0E12A_9176_49f1_B65F_BC07A97C98EE"/>
-		<UML:Diagram name="Context Diagram: Measure" xmi.id="EAID_8D563886_9C57_4c5c_A650_9B69AC4FF741" diagramType="ClassDiagram" owner="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7" toolName="Enterprise Architect 2.5">
+		<UML:Diagram name="Context Diagram: Measure" xmi.id="EAID_8D563886_9C57_4c5c_A650_9B69AC4FF741" diagramType="ClassDiagram" owner="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" toolName="Enterprise Architect 2.5">
 			<UML:ModelElement.taggedValue>
 				<UML:TaggedValue tag="version" value="1.0"/>
 				<UML:TaggedValue tag="author" value="Luke"/>
 				<UML:TaggedValue tag="created_date" value="2015-11-03 12:47:10"/>
 				<UML:TaggedValue tag="modified_date" value="2019-02-27 01:28:51"/>
-				<UML:TaggedValue tag="package" value="EAPK_F680CF7A_F9DE_44d8_AC1B_947C7B78EBF7"/>
+				<UML:TaggedValue tag="package" value="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
 				<UML:TaggedValue tag="type" value="Logical"/>
 				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;tcol=-1;ofCol=-1;hl=1;cls=0;SwimlaneFont=lfh:-13,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
 				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="tpos" value="9"/>
 				<UML:TaggedValue tag="ea_localid" value="4349"/>
 				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=827;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
 				<UML:TaggedValue tag="styleex" value="SaveTag=E79FE962;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;"/>
@@ -19283,6 +19248,27 @@
 				<UML:DiagramElement geometry="SX=-75;SY=0;EX=57;EY=2;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_AD2F41B2_BC8C_4691_A616_ED0035082706" style="Mode=3;EOID=58FA66FA;SOID=AA95CCE2;Color=-1;LWidth=0;Hidden=0;"/>
 				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_9CAAED4C_D028_4871_A0C0_B4806A601EB0" style="Mode=3;EOID=8B4C6E24;SOID=86BCD86F;Color=-1;LWidth=0;Hidden=0;"/>
 				<UML:DiagramElement geometry="SX=-35;SY=32;EX=54;EY=-41;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_C3F6111B_276D_4829_8B75_4B077B5BB5D7" style="Mode=3;EOID=D559EC95;SOID=4BA79402;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+		<UML:Diagram name="Context Diagram: String" xmi.id="EAID_9A90F8AA_91DB_4df7_8551_2C5613121573" diagramType="ClassDiagram" owner="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="braeckel"/>
+				<UML:TaggedValue tag="created_date" value="2018-06-08 11:41:17"/>
+				<UML:TaggedValue tag="modified_date" value="2018-06-21 15:00:22"/>
+				<UML:TaggedValue tag="package" value="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
+				<UML:TaggedValue tag="type" value="Logical"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;hl=1;cls=0;SwimlaneFont=lfh:-13,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="tpos" value="8"/>
+				<UML:TaggedValue tag="ea_localid" value="4352"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=815;DocSize.cy=1067;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=5592D8E6;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=195;Top=99;Right=456;Bottom=351;" subject="EAID_AF7C81A6_B1C1_4469_A09F_B97989024A14" seqno="1" style="DUID=C07FC479;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=258;Top=425;Right=389;Bottom=495;" subject="EAID_7FEC60C1_4FB7_4d84_B48F_079526E1CD1F" seqno="2" style="DUID=77E0F4AE;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_AC75A6AC_D7ED_4397_A5DB_70058736CF54" style="Mode=3;EOID=C07FC479;SOID=77E0F4AE;Color=-1;LWidth=0;Hidden=0;"/>
 			</UML:Diagram.element>
 		</UML:Diagram>
 		<UML:DiagramElement geometry="Left=10;Top=10;Right=100;Bottom=70;" subject="EAID_26EE59C8_C3B1_41af_B550_25FD501B56FD" seqno="0" style=" DUID=B4BDB3C3;">
@@ -19438,6 +19424,8 @@
 				<UML:TaggedValue tag="linewidth" value="0"/>
 			</UML:ModelElement.taggedValue>
 		</EANoteLink>
+		<EAStub xmi.id="EAID_6FF43F87_FD8E_4c40_8A4D_EB136AB2AA7B" name="Length" UMLType="Class"/>
+		<EAStub xmi.id="EAID_16A86DD1_3DA0_45b6_A135_31BC5AB5B43C" name="Velocity" UMLType="Class"/>
 		<EANoteLink xmi.id="EAID_48046C76_5830_4926_92F3_E9E0C7E81670" source="EAID_BACA9CE3_419D_4d55_A0F5_7E422A603559" target="EAID_429C0F3C_7D97_40a6_8C5B_0F4BF708B471">
 			<UML:ModelElement.taggedValue>
 				<UML:TaggedValue tag="linecolor" value="-1"/>
@@ -19451,8 +19439,6 @@
 			</UML:ModelElement.taggedValue>
 		</EANoteLink>
 		<EAStub xmi.id="EAID_AF7C81A6_B1C1_4469_A09F_B97989024A14" name="CharacterString" UMLType="Class"/>
-		<EAStub xmi.id="EAID_6FF43F87_FD8E_4c40_8A4D_EB136AB2AA7B" name="Length" UMLType="Class"/>
-		<EAStub xmi.id="EAID_16A86DD1_3DA0_45b6_A135_31BC5AB5B43C" name="Velocity" UMLType="Class"/>
 		<EAStub xmi.id="EAID_2CF3B75E_8B1F_4853_B0B4_10C65AD71551" name="Distance" UMLType="Class"/>
 		<EAStub xmi.id="EAID_6D08D328_8034_496e_BD66_678B4E078207" name="Angle" UMLType="Class"/>
 		<EAStub xmi.id="EAID_475E7573_D79F_4d66_A409_045AF233ED79" name="Measure" UMLType="Class"/>
@@ -19468,7 +19454,6 @@
 		<EAStub xmi.id="EAID_733B9B11_FB58_4890_A947_F863BCC3A958" name="CodeVerticalReferenceBaseType" UMLType="Class"/>
 		<EAStub xmi.id="EAID_DD8DF44F_D61D_417f_891A_51D596A12619" name="Angle" UMLType="Class"/>
 		<EAStub xmi.id="EAID_80CBB012_839A_4862_985F_319BF2E26E38" name="GM_Point" UMLType="Class"/>
-		<EAStub xmi.id="EAID_90E6121A_076C_41d2_813E_6166A4B02E95" name="EruptingVolcano" UMLType="Class"/>
 		<EAStub xmi.id="EAID_8A20810E_D850_4bf0_8E55_9D25E18BFECA" name="AirspaceLayer" UMLType="Class"/>
 		<EAStub xmi.id="EAID_5A6F0FEB_3CBD_446b_8AD4_70F425D3855C" name="Unit" UMLType="Class"/>
 		<EAStub xmi.id="EAID_B91A8D9A_3BAB_4b28_B207_C77C4485BAE0" name="ValDistanceVerticalType" UMLType="Class"/>

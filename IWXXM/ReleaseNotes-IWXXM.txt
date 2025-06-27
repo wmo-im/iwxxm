@@ -1,11 +1,12 @@
 =========================================
-2025-2 Release Candidate 2 - June 2025
+2025-2 Release Candidate 2 - July 2025
 =========================================
 Package SIGMET (Version 4.0.1 - No change)
   * Corrected all latitudes and longtitudes of points in the polygon in sigmet-multi-location-VA.xml
 Package Volcanic Ash Advisory (Version 3.2.0RC2)
   * Renamed iwxxm:sourceElevation to iwxxm:sourceElevationAMSL and make subsequent changes to Schematron rules and examples
   * Updated example va-advisory-A7-2.xml
+  * Changed feature type of iwxxm:Volcano to metce:Volcano
 Package Space Weather Advisory (Version 3.1.0RC2)
   * Changed the multiplicity of iwxxm:locationIndicator from [0..1] to [1..6] to cater for having multiple space weather bands
     and the mandatory need to specify the element
@@ -27,6 +28,8 @@ Package Volcano Observatory Notice for Aviation (Version 1.0.0RC2)
 Package MeteorologicalFeature (Version 1.1.0RC2)
   * Revised iwxxm:MeteorologicalFeature to allow for extension
   * Revised to use codelists http://codes.wmo.int/iwxxm/MeteorologicalFeature and http://codes.wmo.int/iwxxm/nil
+Package Measure (Version 3.0.0 - Deprecated)
+  * Moved all features to Package Common.  This package has been deprecated and measure.xsd removed from distribution
 Others
   * Fixed the bug in Schematron rule MeteorologicalFeature.MeteorologicalFeature-2
   * Split schematron rule IWXXM.nilReasonCheck for separate use of http://codes.wmo.int/common/nil and http://codes.wmo.int/iwxxm/nil

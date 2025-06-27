@@ -29,7 +29,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 							<documentation>The issuing VAAC</documentation>
 						</annotation>
 					</element>
-					<element name="volcano" type="metce:EruptingVolcanoPropertyType" minOccurs="0" maxOccurs="1">
+					<element name="volcano" type="metce:VolcanoPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>The erupting volcano that is the source of volcanic ash.
 

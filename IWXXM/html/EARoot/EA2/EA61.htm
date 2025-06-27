@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>TAF::AerodromeAirTemperatureForecast</title>
+<title>TAF::AerodromeForecastChangeIndicator</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("AerodromeAirTemperatureForecast", " : "))</script>  : Public  &lt;&lt;dataType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("AerodromeForecastChangeIndicator", " : "))</script>  : Public  &lt;&lt;enumeration&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">25-May-12 11:59:39 AM</td>
+			<td width="85%" class="ObjectDetailsValue">20-Oct-15 3:33:09 PM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">11-Jun-25 2:40:10 AM</td>
+			<td class="ObjectDetailsValue">11-Jun-25 2:43:32 AM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,21 +87,18 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{8DF2190B-28F0-40d1-8477-8F2B911FABED}</td>
+			<td class="ObjectDetailsValue">{EBE1A909-C932-4ed6-A752-448DC2F40E1B}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA56.htm">Context Diagram: TAF Forecast</a></td>
+			<td class="ObjectDetailsValue"><a href="EA55.htm">Context Diagram: TAF Forecast</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">An aggregation of air temperature forecast conditions typically reported together at an aerodrome, including the minimum and maximum anticipated air temperatures and when they occur.&lt;br/&gt;&lt;br/&gt;AerodromeAirTemperatureForecast is only reported on base conditions on a TAF, not change forecasts.&lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">The forecast change indicator type, including temporary, permanent, or probable conditions.&#160; This is an extension of ForecastChangeIndicator that includes report-specific entries, and in particular the 30 and 40% probability conditions.&lt;br/&gt;&lt;br/&gt;Note that the TAC representations for &quot;FM&quot;, &quot;TL&quot;, and &quot;AT&quot; are represented by the phenomenonTime on the change forecast (MeteorologicalAerodromeForecast):&lt;br/&gt;&#160;&#160;&#160; FM and TL - a phenomenonTime with a TimePeriod (start is FM and end is TL)&lt;br/&gt;&#160;&#160;&#160; TL - a phenomenonTime with a TimePeriod (start is beginning of forecast validity and end is TL)&lt;br/&gt;&#160;&#160;&#160; FM - a phenomenonTime with a TimePeriod (start is FM and end is end of forecast validity)&lt;br/&gt;&#160;&#160;&#160; AT - a phenomenonTime with a TimeInstant&lt;br/&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
-			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
-			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
-			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 		</ul>
 <div class="ItemBody" id="AttributesTable">
 	<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -110,56 +107,56 @@ function nameClassifier(name, separator)
 		</tr>
 						<tr>
 				<td width="100%" class="TableRow">
-					<i>Public Measure</i><br /><strong>&nbsp;&nbsp;maximumAirTemperature</strong>
+					<i>Public </i><br /><strong>&nbsp;&nbsp;BECOMING</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes227')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes227" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes233')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes233" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes227_00" style="display: none;">
+						<tr id="DetailsImageAttributes233_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes227_01" style="display: none;">
+						<tr id="DetailsImageAttributes233_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes227_02" style="display: none;">
+						<tr id="DetailsImageAttributes233_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
 						</tr>
-						<tr id="DetailsImageAttributes227_03" style="display: none;">
+						<tr id="DetailsImageAttributes233_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes227_04" style="display: none;">
+						<tr id="DetailsImageAttributes233_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes227_05" style="display: none;">
+						<tr id="DetailsImageAttributes233_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes227_06" style="display: none;">
+						<tr id="DetailsImageAttributes233_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes227_07" style="display: none;">
+							<tr id="DetailsImageAttributes233_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
 					</table>
 					
-					quantity=<a href="http://codes.wmo.int/common/quantity-kind/airTemperature" target="_blank" >http://codes.wmo.int/common/quantity-kind/airTemperature</a><br>sequenceNumber=1<br>
+					sequenceNumber=1<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The maximum air temperature expressed in degrees Celsius (&quot;Cel&quot;)&lt;br/&gt;&lt;br/&gt;See ICAO PANS-MET (Doc 10157) Section 4.1.2.5.&lt;br/&gt;
+			Conditions are expected to reach or pass through specified threshold values at a regular or irregular rate and at an unspecified time during the time period.&#160; The time period should normally not exceed 2 hours but in any case should not exceed 4 hours.&lt;br/&gt;&lt;br/&gt;See ICAO PANS-MET (Doc 10157) Section 4.1.3.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -168,43 +165,43 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public TM_Instant</i><br /><strong>&nbsp;&nbsp;maximumAirTemperatureTime</strong>
+					<i>Public </i><br /><strong>&nbsp;&nbsp;TEMPORARY_FLUCTUATIONS</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes228')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes228" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes234')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes234" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes228_00" style="display: none;">
+						<tr id="DetailsImageAttributes234_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes228_01" style="display: none;">
+						<tr id="DetailsImageAttributes234_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes228_02" style="display: none;">
+						<tr id="DetailsImageAttributes234_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
 						</tr>
-						<tr id="DetailsImageAttributes228_03" style="display: none;">
+						<tr id="DetailsImageAttributes234_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes228_04" style="display: none;">
+						<tr id="DetailsImageAttributes234_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes228_05" style="display: none;">
+						<tr id="DetailsImageAttributes234_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes228_06" style="display: none;">
+						<tr id="DetailsImageAttributes234_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes228_07" style="display: none;">
+							<tr id="DetailsImageAttributes234_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
@@ -217,7 +214,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The time of occurrence of the maximum air temperature.&#160; This must be within the period of the phenomenon time for this forecast record&lt;br/&gt;&lt;br/&gt;See ICAO PANS-MET (Doc 10157) Section 4.1.2.5.&lt;br/&gt;
+			Expected temporary fluctuations to meteorological conditions which reach or pass specified threshold criteria and last for a period of less than one hour in each instance and in the aggregate cover less than half of the forecast period during which the fluctuations are expected to occur.&lt;br/&gt;&lt;br/&gt;See ICAO PANS-MET (Doc 10157) Section 4.1.3.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -226,56 +223,56 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public Measure</i><br /><strong>&nbsp;&nbsp;minimumAirTemperature</strong>
+					<i>Public </i><br /><strong>&nbsp;&nbsp;FROM</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes229')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes229" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes235')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes235" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes229_00" style="display: none;">
+						<tr id="DetailsImageAttributes235_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes229_01" style="display: none;">
+						<tr id="DetailsImageAttributes235_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes229_02" style="display: none;">
+						<tr id="DetailsImageAttributes235_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
 						</tr>
-						<tr id="DetailsImageAttributes229_03" style="display: none;">
+						<tr id="DetailsImageAttributes235_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes229_04" style="display: none;">
+						<tr id="DetailsImageAttributes235_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes229_05" style="display: none;">
+						<tr id="DetailsImageAttributes235_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes229_06" style="display: none;">
+						<tr id="DetailsImageAttributes235_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes229_07" style="display: none;">
+							<tr id="DetailsImageAttributes235_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
 					</table>
 					
-					quantity=<a href="http://codes.wmo.int/common/quantity-kind/airTemperature" target="_blank" >http://codes.wmo.int/common/quantity-kind/airTemperature</a><br>sequenceNumber=3<br>
+					sequenceNumber=3<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The minimum air temperature expressed in degrees Celsius (&quot;Cel&quot;)&lt;br/&gt;&lt;br/&gt;See ICAO PANS-MET (Doc 10157) Section 4.1.2.5.&lt;br/&gt;
+			One set of prevailing weather conditions is expected to change significantly and more or less completely to a different set of conditions. Conditions in a FROM group supersede conditions in earlier groups.&lt;br/&gt;&lt;br/&gt;See ICAO PANS-MET (Doc 10157) Section 4.1.3.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -284,43 +281,43 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public TM_Instant</i><br /><strong>&nbsp;&nbsp;minimumAirTemperatureTime</strong>
+					<i>Public </i><br /><strong>&nbsp;&nbsp;PROBABILITY_30</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes230')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes230" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes236')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes236" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes230_00" style="display: none;">
+						<tr id="DetailsImageAttributes236_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes230_01" style="display: none;">
+						<tr id="DetailsImageAttributes236_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes230_02" style="display: none;">
+						<tr id="DetailsImageAttributes236_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
 						</tr>
-						<tr id="DetailsImageAttributes230_03" style="display: none;">
+						<tr id="DetailsImageAttributes236_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes230_04" style="display: none;">
+						<tr id="DetailsImageAttributes236_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes230_05" style="display: none;">
+						<tr id="DetailsImageAttributes236_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes230_06" style="display: none;">
+						<tr id="DetailsImageAttributes236_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes230_07" style="display: none;">
+							<tr id="DetailsImageAttributes236_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
@@ -333,7 +330,181 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The time of occurrence of the minimum air temperature.&#160; This must be within the period of the phenomenon time for this forecast record&lt;br/&gt;&lt;br/&gt;See ICAO PANS-MET (Doc 10157) Section 4.1.2.5.&lt;br/&gt;
+			A 30% probability of occurrence of an alternative value of a forecast element or elements.&lt;br/&gt;&lt;br/&gt;See ICAO PANS-MET (Doc 10157) Section 4.1.4.&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public </i><br /><strong>&nbsp;&nbsp;PROBABILITY_30_TEMPORARY_FLUCTUATIONS</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes237')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes237" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes237_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes237_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes237_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
+						</tr>
+						<tr id="DetailsImageAttributes237_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes237_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes237_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes237_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes237_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=5<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			A 30% probability of occurrence of temporary conditions of an alternative value of a forecast element or elements.&lt;br/&gt;&lt;br/&gt;See ICAO PANS-MET (Doc 10157) Section 4.1.4.&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public </i><br /><strong>&nbsp;&nbsp;PROBABILITY_40</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes238')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes238" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes238_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes238_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes238_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
+						</tr>
+						<tr id="DetailsImageAttributes238_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes238_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes238_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes238_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes238_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=6<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			A 40% probability of occurrence of an alternative value of a forecast element or elements.&lt;br/&gt;&lt;br/&gt;See ICAO PANS-MET (Doc 10157) Section 4.1.4.&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public </i><br /><strong>&nbsp;&nbsp;PROBABILITY_40_TEMPORARY_FLUCTUATIONS</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes239')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes239" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes239_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes239_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes239_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
+						</tr>
+						<tr id="DetailsImageAttributes239_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes239_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes239_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes239_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes239_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=7<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			A 40% probability of occurrence of temporary conditions of an alternative value of a forecast element or elements.&lt;br/&gt;&lt;br/&gt;See ICAO PANS-MET (Doc 10157) Section 4.1.4.&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -343,113 +514,6 @@ function nameClassifier(name, separator)
 			</tr>
 	</table>
 </div>
-		<div class="ItemBody" id="AssociationsFromTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA60.htm">MeteorologicalAerodromeForecast</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> temperature<br />
-						Forecast of temperature.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink231" onclick="parent.toggleDiv('detailsDIVLink231','DetailsImageLink231')" />Details:
-							<div id="detailsDIVLink231" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
-<div class="ItemBody" id="TaggedValTable">
-	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="50%" class="TableHeading">Tag</td>
-			<td width="50%" class="TableHeading">Value</td>
-		</tr>
-					<tr>
-				<td width="50%" class="TableRow" valign="top">isCollection</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario232" onclick="parent.toggleDiv('detailsDIVScenario232','DetailsImageScenario232')" />Details:
-						<div id="detailsDIVScenario232" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the type as an objection collection.<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">noPropertyType</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario233" onclick="parent.toggleDiv('detailsDIVScenario233','DetailsImageScenario233')" />Details:
-						<div id="detailsDIVScenario233" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Suppresses creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>
-	</table>
-</div>		<div class="ItemBody" id="ConstraintsTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-			  	<tr>
-					<td width="80%" class="TableHeading">Constraint</td>
-					<td width="10%" class="TableHeading">Type</td>
-					<td width="10%" class="TableHeading">Status</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">maximumTemperature/@uom = "Cel"</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints234" onclick="parent.toggleDiv('detailsDIVConstraints234','DetailsImageConstraints234')" />Details:
-							<div id="detailsDIVConstraints234" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: TAF.AerodromeAirTemperatureForecast-1&lt;br/&gt;Description: maximumTemperature shall be reported in degrees Celsius (Cel)&lt;br/&gt;Assertion: ( if( exists(iwxxm:maximumTemperature) and not(iwxxm:maximumTemperature/@xsi:nil = &#39;true&#39;) ) then( iwxxm:maximumTemperature/@uom = &#39;Cel&#39; ) else( true() ) )&lt;br/&gt;</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">minimumTemperature/@uom = "Cel"</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints235" onclick="parent.toggleDiv('detailsDIVConstraints235','DetailsImageConstraints235')" />Details:
-							<div id="detailsDIVConstraints235" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: TAF.AerodromeAirTemperatureForecast-2&lt;br/&gt;Description: minimumTemperature shall be reported in degrees Celsius (Cel)&lt;br/&gt;Assertion: ( if( exists(iwxxm:minimumTemperature) and not(iwxxm:minimumTemperature/@xsi:nil = &#39;true&#39;) ) then( iwxxm:minimumTemperature/@uom = &#39;Cel&#39; ) else( true() ) )&lt;br/&gt;</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
 	</div>
 <div class="pageFooter"></div>
  

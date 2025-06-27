@@ -457,7 +457,7 @@ Significant wave height shall be reported in meters ("m").</documentation>
 				<annotation>
 					<documentation>The state of the sea observed by aeronautical meteorological stations established on offshore structures in support of helicopter operations
 
-See ICAO PANS-MET Doc 10157) Section 2.2.8.1.5 and the Manual on Codes (WMO No.306), Vol. I.1 Table 3700.</documentation>
+See ICAO PANS-MET (Doc 10157) Section 2.2.8.1.5 and the Manual on Codes (WMO No.306), Vol. I.1 Table 3700.</documentation>
 				</annotation>
 			</element>
 			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -550,7 +550,7 @@ When the sky is obscured and the value of the vertical visibility cannot be dete
 		<annotation>
 			<documentation>An aggregation of surface wind conditions typically reported together at an aerodrome, including wind direction information, wind speed, and wind gusts.
 
-Wind direction is reported according to ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2b:
+Wind direction is reported according to ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 b):
 "variations from the mean wind direction during the past 10 minutes shall be reported as follows, if the total variation is 60° or more:
 1) when the total variation is 60° or more and less than 180° and the wind speed is 1.5 m/s (3 kt) or more, such directional variations shall be reported as the two extreme directions between which the surface wind has varied;
 2) when the total variation is 60° or more and less than 180° and the wind speed is less than 1.5 m/s (3 kt), the wind direction shall be reported as variable with no mean wind direction; or
@@ -575,7 +575,7 @@ Wind direction shall be given in degrees from true North. Plane angle unit of me
 				<annotation>
 					<documentation>The average observed wind speed over the past ten minutes
 
-See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2a.
+See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 a).
 
 Wind speeds shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
 					<appinfo>
@@ -594,7 +594,7 @@ When no operator is reported, wind speed is an exact value with identical semant
 				<annotation>
 					<documentation>Variations from the mean wind speed (gusts) during the past 10 minutes.
 
-See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2c.
+See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 c).
 
 Wind gusts shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
 					<appinfo>
@@ -615,7 +615,7 @@ When no operator is reported, wind gust speed is an exact value with identical s
 
 This corresponds to the dxdxdx part of the reported variation dndndnVdxdxdx in TAC.
 
-See ICAO PANS-MET Section 2.2.1.5.2b 1)</documentation>
+See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 b) 1)</documentation>
 					<appinfo>
 						<quantity>http://codes.wmo.int/common/quantity-kind/windDirection</quantity>
 					</appinfo>
@@ -627,7 +627,7 @@ See ICAO PANS-MET Section 2.2.1.5.2b 1)</documentation>
 
 This corresponds to the dndndn part of the reported variation dndndnVdxdxdx in TAC.
 
-See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2b 1)</documentation>
+See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 b) 1)</documentation>
 					<appinfo>
 						<quantity>http://codes.wmo.int/common/quantity-kind/windDirection</quantity>
 					</appinfo>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Tropical Cyclone Advisory::TropicalCycloneForecastConditions</title>
+<title>Tropical Cyclone Advisory::TropicalCycloneMovement</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("TropicalCycloneForecastConditions", " : "))</script>  : Public  &lt;&lt;featureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("TropicalCycloneMovement", " : "))</script>  : Public  &lt;&lt;enumeration&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">16-Feb-16 1:58:21 PM</td>
+			<td width="85%" class="ObjectDetailsValue">16-Feb-16 11:48:14 AM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">02-Aug-20 2:13:05 PM</td>
+			<td class="ObjectDetailsValue">11-Jun-25 3:10:18 AM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,20 +87,18 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{0728E69D-4DD6-4388-BD70-35D207DE343B}</td>
+			<td class="ObjectDetailsValue">{AAD985E8-5569-433e-9677-A6DDA22376D4}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA99.htm">Context Diagram: Tropical Cyclone Forecast Conditions</a></td>
+			<td class="ObjectDetailsValue"><a href="EA96.htm">Context Diagram: Tropical Cyclone Observed Conditions</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">Forecast conditions of a tropical cyclone &lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">The movement type for a tropical cyclone, either MOVING or STATIONARY&lt;br/&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
-			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
-			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 		</ul>
 <div class="ItemBody" id="AttributesTable">
 	<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -109,43 +107,43 @@ function nameClassifier(name, separator)
 		</tr>
 						<tr>
 				<td width="100%" class="TableRow">
-					<i>Public TM_Object</i><br /><strong>&nbsp;&nbsp;phenomenonTime</strong>
+					<i>Public int</i><br /><strong>&nbsp;&nbsp;MOVING</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes436')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes436" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes441')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes441" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes436_00" style="display: none;">
+						<tr id="DetailsImageAttributes441_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes436_01" style="display: none;">
+						<tr id="DetailsImageAttributes441_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes436_02" style="display: none;">
+						<tr id="DetailsImageAttributes441_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
 						</tr>
-						<tr id="DetailsImageAttributes436_03" style="display: none;">
+						<tr id="DetailsImageAttributes441_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes436_04" style="display: none;">
+						<tr id="DetailsImageAttributes441_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes436_05" style="display: none;">
+						<tr id="DetailsImageAttributes441_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes436_06" style="display: none;">
+						<tr id="DetailsImageAttributes441_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes436_07" style="display: none;">
+							<tr id="DetailsImageAttributes441_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
@@ -158,7 +156,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The time at which meteorological phenomena occur&lt;br/&gt;
+			The tropical cyclone is moving and will be reported with the associated movement speed and direction&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -167,114 +165,56 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public GM_Point</i><br /><strong>&nbsp;&nbsp;tropicalCyclonePosition</strong>
+					<i>Public int</i><br /><strong>&nbsp;&nbsp;STATIONARY</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes437')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes437" border="0" />Details:</a>
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes442')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes442" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes437_00" style="display: none;">
+						<tr id="DetailsImageAttributes442_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes437_01" style="display: none;">
+						<tr id="DetailsImageAttributes442_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes437_02" style="display: none;">
+						<tr id="DetailsImageAttributes442_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
+							<td>&lt;&lt;enum&gt;&gt;</td>
 						</tr>
-						<tr id="DetailsImageAttributes437_03" style="display: none;">
+						<tr id="DetailsImageAttributes442_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes437_04" style="display: none;">
+						<tr id="DetailsImageAttributes442_04" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes437_05" style="display: none;">
+						<tr id="DetailsImageAttributes442_05" style="display: none;">
 							<td width="75"><i>Transient: </i></td>
 							<td>False</td>
 						</tr>
-						<tr id="DetailsImageAttributes437_06" style="display: none;">
+						<tr id="DetailsImageAttributes442_06" style="display: none;">
 							<td width="75"><i>Derived: </i></td>
 							<td>False</td>
 						</tr>
-							<tr id="DetailsImageAttributes437_07" style="display: none;">
+							<tr id="DetailsImageAttributes442_07" style="display: none;">
 							<td width="75"><i>IsID: </i></td>
 						<td>False</td>
 						</tr>
 					</table>
 					
-					nillable=true<br>sequenceNumber=2<br>
+					sequenceNumber=3<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The tropical cyclone position&lt;br/&gt;
-		</td>
-	</tr>
-</table></div>
-
-						
-				</td>
-			</tr>			<tr>
-				<td width="100%" class="TableRow">
-					<i>Public <a href="../EA13/EA258.htm">VelocityWithNilReason</a></i><br /><strong>&nbsp;&nbsp;maximumSurfaceWindSpeed</strong>
-				</td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes438')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes438" border="0" />Details:</a>
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes438_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes438_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes438_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes438_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes438_04" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes438_05" style="display: none;">
-							<td width="75"><i>Transient: </i></td>
-							<td>False</td>
-						</tr>
-						<tr id="DetailsImageAttributes438_06" style="display: none;">
-							<td width="75"><i>Derived: </i></td>
-							<td>False</td>
-						</tr>
-							<tr id="DetailsImageAttributes438_07" style="display: none;">
-							<td width="75"><i>IsID: </i></td>
-						<td>False</td>
-						</tr>
-					</table>
-					
-					nillable=true<br>sequenceNumber=3<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
-			The maximum 10-minute mean surface wind speed near the centre of the tropical cyclone which shall be provided in either two units of measures: &quot;m/s&quot; or &quot;[kn_i]&quot; (knot).&lt;br/&gt;
+			The tropical cyclone is stationary (#lt; 2 km/h or 1 kt) and will not have a reported movement speed or direction&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -284,93 +224,6 @@ function nameClassifier(name, separator)
 			</tr>
 	</table>
 </div>
-<div class="ItemBody" id="TaggedValTable">
-	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="50%" class="TableHeading">Tag</td>
-			<td width="50%" class="TableHeading">Value</td>
-		</tr>
-					<tr>
-				<td width="50%" class="TableRow" valign="top">byValuePropertyType</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario439" onclick="parent.toggleDiv('detailsDIVScenario439','DetailsImageScenario439')" />Details:
-						<div id="detailsDIVScenario439" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Creates a property type that requires its instance to be encoded inline (applies to ISO 19136:2007 encoding rule).<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">isCollection</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario440" onclick="parent.toggleDiv('detailsDIVScenario440','DetailsImageScenario440')" />Details:
-						<div id="detailsDIVScenario440" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the type as an objection collection.<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">noPropertyType</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario441" onclick="parent.toggleDiv('detailsDIVScenario441','DetailsImageScenario441')" />Details:
-						<div id="detailsDIVScenario441" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Suppresses creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>
-	</table>
-</div>		<div class="ItemBody" id="ConstraintsTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-			  	<tr>
-					<td width="80%" class="TableHeading">Constraint</td>
-					<td width="10%" class="TableHeading">Type</td>
-					<td width="10%" class="TableHeading">Status</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">maximumSurfaceWindSpeed/@uom = "m/s" or maximumSurfaceWindSpeed/@uom = "[kn_i]"</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints442" onclick="parent.toggleDiv('detailsDIVConstraints442','DetailsImageConstraints442')" />Details:
-							<div id="detailsDIVConstraints442" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: TropicalCycloneAdvisory.TropicalCycloneForecastConditions-1&lt;br/&gt;Description: maximumSurfaceWindSpeed shall be reported in metres per second (m/s) or knots ([kn_i])&lt;br/&gt;Assertion: ( if( exists(iwxxm:maximumSurfaceWindSpeed) and not(iwxxm:maximumSurfaceWindSpeed/@xsi:nil = &#39;true&#39;) ) then( (iwxxm:maximumSurfaceWindSpeed/@uom = &#39;m/s&#39;) or (iwxxm:maximumSurfaceWindSpeed/@uom = &#39;[kn_i]&#39;) ) else( true() ) )&lt;br/&gt;</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">CRS requirements for iwxxm:tropicalCyclonePosition</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints443" onclick="parent.toggleDiv('detailsDIVConstraints443','DetailsImageConstraints443')" />Details:
-							<div id="detailsDIVConstraints443" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">Pattern ID: TropicalCycloneAdvisory.TropicalCycloneForecastConditions-2&lt;br/&gt;Description: If a geometry is defined for iwxxm:tropicalCyclonePosition/gml:Point with the provision of attribute srsName, attribute srsDimension must equal to 2 and attribute axisLabels must be non-empty&lt;br/&gt;Assertion: ( if( exists(iwxxm:tropicalCyclonePosition/gml:Point) ) then( empty(index-of(iwxxm:tropicalCyclonePosition/gml:Point/gml:pos/(ancestor-or-self::*[exists(@srsName)])[last()]/(@srsDimension=&#39;2&#39; and exists(@axisLabels)), false())) ) else( true() ) )&lt;br/&gt;</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
 	</div>
 <div class="pageFooter"></div>
  
