@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:ldp="http://www.w3.org/ns/ldp#"
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:reg="http://purl.org/linked-data/registry#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:ldp="http://www.w3.org/ns/ldp#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:dct="http://purl.org/dc/terms/"
 >
   <reg:Register rdf:about="http://codes.wmo.int/306/4678">

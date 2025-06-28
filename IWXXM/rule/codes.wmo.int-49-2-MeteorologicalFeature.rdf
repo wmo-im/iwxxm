@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:ldp="http://www.w3.org/ns/ldp#"
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:reg="http://purl.org/linked-data/registry#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:ldp="http://www.w3.org/ns/ldp#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:dct="http://purl.org/dc/terms/"
 >
   <reg:Register rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature">
@@ -16,7 +16,6 @@
         <dct:description xml:lang="en">Duststorm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -26,7 +25,6 @@
         <dct:description xml:lang="en">Convergence line</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -36,7 +34,6 @@
         <dct:description xml:lang="en">Quasi-stationary front at the surface</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -46,7 +43,6 @@
         <dct:description xml:lang="en">Jet stream</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -56,7 +52,6 @@
         <dct:description xml:lang="en">Thunderstorm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -66,7 +61,6 @@
         <dct:description xml:lang="en">Atmospherics</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -76,7 +70,6 @@
         <dct:description xml:lang="en">Volcano</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -86,7 +79,6 @@
         <dct:description xml:lang="en">Tropical cyclone</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -96,7 +88,6 @@
         <dct:description xml:lang="en">Instability line</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -106,7 +97,6 @@
         <dct:description xml:lang="en">Special clouds</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -116,7 +106,6 @@
         <dct:description xml:lang="en">Cold front above the surface</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -126,7 +115,6 @@
         <dct:description xml:lang="en">Occlusion</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -136,7 +124,6 @@
         <dct:description xml:lang="en">Airframe icing</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -146,7 +133,6 @@
         <dct:description xml:lang="en">Intertropical front</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -156,7 +142,6 @@
         <dct:description xml:lang="en">Turbulence</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -166,7 +151,6 @@
         <dct:description xml:lang="en">Phenomenon</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -176,7 +160,6 @@
         <dct:description xml:lang="en">Warm front above the surface</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -186,7 +169,6 @@
         <dct:description xml:lang="en">Quasi-stationary front above the surface</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -196,7 +178,6 @@
         <dct:description xml:lang="en">Mountain wave</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -206,7 +187,6 @@
         <dct:description xml:lang="en">Warm front at the surface</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -216,7 +196,6 @@
         <dct:description xml:lang="en">Cloud clear</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -226,7 +205,6 @@
         <dct:description xml:lang="en">Cold front at the surface</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -236,7 +214,6 @@
         <dct:description xml:lang="en">Storm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -246,7 +223,6 @@
         <dct:description xml:lang="en">Sandstorm</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -256,7 +232,6 @@
         <dct:description xml:lang="en">Cloud</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -266,7 +241,6 @@
         <dct:description xml:lang="en">Tropopause</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -276,15 +250,6 @@
         <dct:description xml:lang="en">Radiation</dct:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH">
-        <skos:notation>VOLCANIC_ASH</skos:notation>
-        <rdfs:label xml:lang="en">Volcanic Ash</rdfs:label>
-        <dct:description xml:lang="en">Volcanic Ash</dct:description>
-        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
@@ -294,7 +259,6 @@
     <dct:description xml:lang="en">The items within this code table are the weather phenomena being represented by a weather object</dct:description>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
     <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
   </reg:Register>
 </rdf:RDF>
