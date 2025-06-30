@@ -2,7 +2,7 @@
 2025-2 Release Candidate 2 - July 2025
 =========================================
 Package SIGMET (Version 4.0.1 - No change)
-  * Corrected all latitudes and longtitudes of points in the polygon in sigmet-multi-location-VA.xml
+  * Corrected all latitudes and longitudes of points in the polygon in sigmet-multi-location-VA.xml
 Package Volcanic Ash Advisory (Version 3.2.0RC2)
   * Renamed iwxxm:sourceElevation to iwxxm:sourceElevationAMSL and make subsequent changes to Schematron rules and examples
   * Updated example va-advisory-A7-2.xml
