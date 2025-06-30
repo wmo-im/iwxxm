@@ -3,9 +3,9 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 
 205-2025-2.1 Scope
 
-205-2025-2.1.1 IWXXM-XML shall be used to represent observations and forecasts, and reports thereof, for international civil aviation, as specified by ICAO Annex 3 to the Convention on International Civil Aviation – _Meteorological Service for International Air Navigation_ (hereinafter referred to as ICAO Annex 3).
+205-2025-2.1.1 IWXXM-XML shall be used to represent aviation meteorological information, for international civil aviation, as specified by ICAO Annex 3 to the Convention on International Civil Aviation – _Meteorological Service for International Air Navigation_ (hereinafter referred to as ICAO Annex 3) and ICAO Doc 10157 - _The Procedures for Air Navigation Services - Meteorology_ (hereinafter referred to as ICAO PANS-MET).
 
-205-2025-2.1.2 IWXXM 2025-2 includes provisions for the following types of reports and advisories.
+205-2025-2.1.2 IWXXM 2025-2 includes provisions for the following types of aviation meteorological information.
 
 {empty}(a) *METAR* is an aerodrome routine meteorological report given at fixed time intervals. The METAR consists of measurements of meteorological parameters of particular importance to aviation safety, navigation and airport operations. The parameters include, but are not limited to, surface wind direction and speed, visibility, runway visual range, when applicable, present weather, cloud amount, cloud types (limited to cumulonimbus and towering cumulus), and height of cloud base, vertical visibility, when applicable, air temperature and dew-point temperature, and airfield pressure setting QNH.
 
@@ -25,9 +25,9 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 
 {empty}(i) *World Area Forecast System (WAFS) Significant Weather (SIGWX)* is a set of global forecasts (validity up to 48 hours) at fixed time intervals of significant weather phenomena spanning flight level 100 to 600. Such phenomena shall include, but not be limited to, jet stream, cumulonimbus cloud, turbulence, icing, tropopause height, tropical cyclones, volcanic eruptions, radioactive release and sand/dust storms.
 
-{empty}(j) *Quantitative Volcanic Ash Concentration Information (QVA)* is a message providing information on the concentration of volcanic ash in the atmosphere, including the vertical extent and horizontal distribution of the ash.
+{empty}(j) *Quantitative Volcanic Ash (QVA) Concentration Information* is a message providing information on the concentration of volcanic ash in the atmosphere, including the vertical extent and horizontal distribution of the ash.
 
-{empty}(k) *Volcano Observatory Notice (VONA)* is a message issued by a volcano observatory to provide information on volcanic activity, including eruptions, ash plumes, and other related phenomena.
+{empty}(k) *Volcano Observatory Notice for Aviation (VONA)* is a message issued by a volcano observatory to provide information on volcanic activity, including eruptions, ash plumes, and other related phenomena.
 
 205-2025-2.2 IWXXM versions and amendments
 
@@ -38,17 +38,17 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 – A MINOR (x.Y.x) version introduces new model elements and capabilities guaranteeing forward data mapping for non-deprecated elements or deprecated elements with replacement. Loss of information may happen for elements being no longer required.
 – A PATCH (x.y.Z) version is limited to bug fixing. Forward and backward data mapping is guaranteed without loss of information. A PATCH version does not impose changes in a consuming system. A PATCH version may still require data conversion to be done ahead of the data entering the consuming system (done by a mediator service).
 
-205-2025-2.2.3 Each IWXXM version addresses the requirements of amendments to ICAO Annex 3. Those amendments affect the packages composing IWXXM in different ways, and the resulting new version of the packages shall reflect the level of change required by the amendments following the semantic versioning described in 205-2025-2.2.2.
+205-2025-2.2.3 Each IWXXM version addresses the requirements of amendments to ICAO Annex 3 and/or PANS-MET. Those amendments affect the packages composing IWXXM in different ways, and the resulting new version of the packages shall reflect the level of change required by the amendments following the semantic versioning described in 205-2025-2.2.2.
 
-205-2025-2.2.4 The following table is provided to clarify which version of each package composing IWXXM is compliant with a specific ICAO Annex 3 amendment.
+205-2025-2.2.4 The following table is provided to clarify which version of each package composing IWXXM is compliant with a specific ICAO Annex 3 and PANS-MET amendments.
 
 [width="100%",options="header",]
 |===
-|_ICAO Annex 3 Amendments_ |_IWXM Version_ |_METAR and SPECI_ |_TAF_ |_SIGMET_ |_AIRMET_ |_Tropical Cyclone Advisory_ |_Volcanic Ash Advisory_ |_Space Weather Advisory_ |_WAFS SIGWX Forecast_ |_Quantitative Volcanic Ash Concentration Information_ |_Volcano Observatory Notice_
-|Amendment 78 |3.0.0  |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |N/A   |N/A  |N/A
-|Amendment 79 |2021-2 |3.1.0 |3.0.1 |4.0.0 |3.1.0 |3.1.0 |3.1.0 |3.0.1 |1.0.0 |N/A  |N/A
-|Amendment 79 |2023-1 |3.1.0 |3.0.1 |4.0.0 |3.1.1 |3.1.0 |3.1.0 |3.0.1 |1.1.0 |N/A  |N/A
-|Amendment 82 |2025-2 |3.2.0 |3.0.1 |4.0.0 |3.1.1 |3.1.0 |3.2.0 |3.1.0 |1.1.1 |1.0.0|1.0.0
+|_ICAO Annex 3 / PANS-MET_ |_IWXXM Version_ |_METAR and SPECI_ |_TAF_ |_SIGMET_ |_AIRMET_ |_Tropical Cyclone Advisory_ |_Volcanic Ash Advisory_ |_Space Weather Advisory_ |_WAFS SIGWX Forecast_ |_Quantitative Volcanic Ash Concentration Information_ |_Volcano Observatory Notice_
+|Amendment 78 / - |3.0.0  |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |3.0.0 |N/A   |N/A  |N/A
+|Amendment 79 / - |2021-2 |3.1.0 |3.0.1 |4.0.0 |3.1.0 |3.1.0 |3.1.0 |3.0.1 |1.0.0 |N/A  |N/A
+|Amendment 79-81 / - |2023-1 |3.1.0 |3.0.1 |4.0.1 |3.1.1 |3.1.0 |3.1.0 |3.0.1 |1.1.0 |N/A  |N/A
+|Amendment 82 / First Edition |2025-2 |3.2.0 |3.0.1 |4.0.1 |3.1.1 |3.1.0 |3.2.0 |3.1.0 |1.2.0 |1.0.0| 1.0.0
 |===
 
 205-2025-2.3 IWXXM resources
@@ -60,7 +60,6 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 * https://schemas.wmo.int/iwxxm/2025-2/iwxxm.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/airmet.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/common.xsd
-* https://schemas.wmo.int/iwxxm/2025-2/measures.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/metarSpeci.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/metFeature.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/qvaci.xsd
@@ -72,11 +71,11 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 * https://schemas.wmo.int/iwxxm/2025-2/vona.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/WAFSSigWxFC.xsd
 
-205-2025-2.3.3 IWXXM Schematron Rule is a directory that contains an ISO schematron file that is used to provide enhanced validation of IWXXM-XML files. The schematron file uses the IWXXM code lists represented in Resource Description Framework (RDF) format exported from the WMO Codes Registry for verification of code values.
+205-2025-2.3.3 IWXXM Schematron Rule is a directory that contains an ISO schematron file that is used to provide enhanced validation of IWXXM-XML files. The schematron file uses the IWXXM code lists represented in Resource Description Framework (RDF) format compatible with those exported from the WMO Codes Registry for verification of code values.
 
 * https://schemas.wmo.int/iwxxm/2025-2/rule/iwxxm.sch
 
-205-2025-2.3.4 Examples of IWXXM reports are included to help producers to create IWXXM-XML files. Traditional Alphanumeric Code (TAC) to XML guidance is also included to facilitate conversion of reporting requirements for TAC as described in ICAO Annex 3.
+205-2025-2.3.4 Examples of IWXXM reports are included to help producers to create IWXXM-XML files. Traditional Alphanumeric Code (TAC) to XML guidance is also included to facilitate conversion of reporting requirements for TAC as described in ICAO Annex 3 and PANS-MET.
 
 * https://schemas.wmo.int/iwxxm/2025-2/examples/
 
@@ -93,24 +92,24 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 [width="100%",cols="20%,43%,37%",options="header",]
 |===
 |Name |Description |URL
-|Code table D-1: nil reasons |Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. |http://codes.wmo.int/common/nil
+|Code table D-1: nil reasons |Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. Terms are drawn from authorities in addition to WMO including ISO/TC 211 (from ISO 19136:2007 Geography markup language clause 8.2.3.1; published on their behalf by the Open Geospatial Consortium). |http://codes.wmo.int/common/nil
 |===
 
-205-2025-2.4.3 Codes from WMO-No. 49, Volume II
+205-2025-2.4.3 Codes from ICAO Annex 3 (previously also known as WMO-No. 49, Volume II) and PANS-MET
 
 [width="100%",cols="20%,41%,39%",options="header",]
 |===
 |Name |Description |URL
-|Air Wx phenomena |ICAO Annex 3/WMO No. 49, Volume II, Appendix 6, Section 2.1 |http://codes.wmo.int/49-2/AirWxPhenomena
-|Code table D-6: aerodrome recent weather a| The items within this code table are the weather types that may be reported within a meteorological aerodrome observation report that have occurred during the period since the last issued routine report or last hour, whichever is shorter, but are not observed at the time of the observation. Requirements for reporting recent weather at an aerodrome are specified in the _Technical Regulations_ (WMO-No. 49), Volume II, Part II, Appendix 3, 4.8.1.1. This code table contains the set of weather types that are permitted for reporting recent weather. These are a subset of the enumerated set of meteorologically valid combinations specified in Volume I.1, Code table 4678 comprising the following elements: intensity or proximity; descriptor; precipitation; obscuration; and/or other. |http://codes.wmo.int/49-2/AerodromeRecentWeather
-|Code table D-7: aerodrome present or forecast weather |The items within this code table are the weather phenomena that may be reported as forecast to occur or have been observed at an aerodrome. Requirements for reporting present or forecast weather at an aerodrome are specified in the _Technical Regulations_ (WMO-No. 49), Volume II, Part II, Appendix 3, 4.4 (observation), and Appendix 5, 2.2.4 (trend forecast) and 1.2.3 (for TAF). The weather phenomena listed here are a subset of the enumerated set of meteorologically valid combinations specified in Volume I.1, Code table 4678 comprising the following elements: intensity or proximity; descriptor; precipitation; obscuration; and/or other. Each weather type is uniquely identified using a URI. The URI is also a URL providing additional information about the associated weather type. |http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather
-|Code table D-8: cloud amount reported at aerodrome a| The items within this code table are the cloud amount categories of operational significance for aviation as specified in the _Technical Regulations_ (WMO-No. 49), Volume II – Meteorological Service for International Air Navigation. This code table contains a subset of the cloud amount categories defined in Volume I.2, FM 94 BUFR, Code table 0 20 008. Each code item is uniquely identified using a URI. The URI is also a URL providing additional information about the associated cloud amount category. |http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome
-|Code table D-9: significant convective cloud type a| The items within this code table are the cloud types of operational significance for aviation as specified in the _Technical Regulations_ (WMO-No. 49), Volume II – Meteorological Service for International Air Navigation. This code table contains a subset of the cloud types defined in Volume I.2, FM 94 BUFR, Code table 0 20 012. Each cloud type is uniquely identified using a URI. The URI is also a URL providing additional information about the associated cloud type. |http://codes.wmo.int/49-2/SigConvectiveCloudType
-|Code table D-10: significant weather phenomena |The items within this code table are the types of weather phenomena of significance to aeronautical operations – as used in SIGMET and AIRMET reports and specified in the _Technical Regulations_ (WMO-No. 49), Volume II, Part II, Appendix 6, 1.1.4. Each weather phenomenon type is uniquely identified using a URI. The URI is also a URL providing additional information about the associated weather phenomenon type. |http://codes.wmo.int/49-2/SigWxPhenomena
+|Air Wx phenomena |The items within this code table are the weather phenomena to be included in a SIGMET message as defind in ICAO Annex 3 and PANS-MET |http://codes.wmo.int/49-2/AirWxPhenomena
+|Code table D-6: Aerodrome recent weather | The items within this code table are the weather types that may be reported within a meteorological aerodrome observation report that have occurred during the period since the last issued routine report or last hour, whichever is shorter, but are not observed at the time of the observation. Requirements for reporting recent weather at an aerodrome are specified in ICAO Annex 3 and PANS-MET. This code table contains the set of weather types that are permitted for reporting recent weather. These are a subset of the enumerated set of meteorologically valid combinations specified in the Manual on Codes (WMO No.306), Vol. I.1 Part A, Code table 4678 comprising elements ‘intensity or proximity’, ‘descriptor’, ‘precipitation’, ‘obscuration’ and/or ‘other’. |http://codes.wmo.int/49-2/AerodromeRecentWeather
+|Code table D-7: Aerodrome present or forecast weather |The items within this code table are the weather phenomena that may be reported as forecast to occur or have been observed at an aerodrome. Requirements for reporting present or forecast weather at an aerodrome are specified in ICAO Anned 3 and PANS-MET. The weather phenomena listed here are a subset of the enumerated set of meteorologically valid combinations specified in the Manual on Codes (WMO No.306), Vol. I.1 Part A, Code table 4678 comprising elements ‘intensity or proximity’, ‘descriptor’, ‘precipitation’, ‘obscuration’ and/or ‘other’. |http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather
+|Code table D-8: Cloud amount reported at aerodrome |The items within this code table are the cloud amount categories of operational significance for aviation as specified in ICAO Annex 3 and PANS-MET. This code table contains a subset of the cloud amount categories defined in the Manual on Codes (WMO No.306), Vol. I.2 Part B FM 94 BUFR Code The items within this code table are the cloud amount categories of operational significance for aviation as specified in ICAO Annex 3 and PANS-MET. This code table contains a subset of the cloud amount categories defined in the Manual on Codes (WMO No.306), Vol. I.2 Part B FM 94 BUFR Code table 0 20 008.table 0 20 008. |http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome
+|Code table D-9: Significant convective cloud type | The items within this code table are the cloud types of operational significance for aviation as specified in ICAO Annex 3 and PANS-MET. This code table contains a subset of the cloud types defined in the Manual on Codes (WMO No.306), Vol. I.2 Part B FM 94 BUFR Code table 0 20 012. |http://codes.wmo.int/49-2/SigConvectiveCloudType
+|Code table D-10: Significant weather phenomena |The items within this code table are the types of weather phenomena of significance to aeronautical operations – as used in SIGMET and AIRMET reports and specified in ICAO Annex 3 and PANS-MET. |http://codes.wmo.int/49-2/SigWxPhenomena
 |Space Wx location |The items within this code table are the locations of space weather phenomena of significance to aeronautical operations. |http://codes.wmo.int/49-2/SpaceWxLocation
 |Space Wx phenomena |The items within this code table are the types of space weather phenomena of significance to aeronautical operations. |http://codes.wmo.int/49-2/SpaceWxPhenomena
-|Volcanic aviation colour code |Volcanic Aviation Colour Code ICAO Annex 15 |http://codes.wmo.int/49-2/AviationColourCode 
-|Weather causing visibility reduction |ICAO Annex 3/WMO-No. 49, Volume II, Appendix 6, Section 2.1 under SFC VIS |http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction
+|Volcanic aviation colour code |The items within this code table are the volcano level of alert colour codes for aviation defined in ICAO Doc 9766. |http://codes.wmo.int/49-2/AviationColourCode 
+|Weather causing visibility reduction |The items within this code table are the weather phenomena or combinations thereof causing reduction of visibility to less than 5 000 m in widespread areas – as used in AIRMET and specified in ICAO Annex 3 and PANS-MET (SFC VIS). |http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction
 |===
 
 205-2025-2.4.4 Codes from BUFR4 code and flag tables defined in the _Manual on Codes_, Volume I.2
@@ -133,5 +132,5 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 |===
 |Name |Description |URL
 |Nil reasons |Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. Terms are drawn from authorities in addition to WMO including ISO/TC 211 (from ISO 19136:2007 Geography markup language clause 8.2.3.1; published on their behalf by the Open Geospatial Consortium).	 |http://codes.wmo.int/iwxxm/nil
-|Meteorological Features	 |The items within this code table are the weather phenomena being represented by a weather object.	 |http://codes.wmo.int/iwxxm/meteorologicalFeature
-|Volcanic Aviation Colour Code	 |The items within this code table are the volcano level of alert colour codes for aviation defined in ICAO Doc 9766	 |http://codes.wmo.int/iwxxm/volcanicAviationColourCode
+|Meteorological Features |The items within this code table are the weather phenomena being represented by a weather object. |http://codes.wmo.int/iwxxm/meteorologicalFeature
+|Volcanic Aviation Colour Code	 |The items within this code table are the volcano level of alert colour codes for aviation defined in ICAO Doc 9766. |http://codes.wmo.int/iwxxm/volcanicAviationColourCode
