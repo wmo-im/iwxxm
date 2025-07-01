@@ -134,7 +134,6 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 |Nil reasons |Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. Terms are drawn from authorities in addition to WMO including ISO/TC 211 (from ISO 19136:2007 Geography markup language clause 8.2.3.1; published on their behalf by the Open Geospatial Consortium).	 |http://codes.wmo.int/iwxxm/nil
 |Meteorological Features |The items within this code table are the weather phenomena being represented by a weather object. |http://codes.wmo.int/iwxxm/meteorologicalFeature
 |Volcanic Aviation Colour Code	 |The items within this code table are the volcano level of alert colour codes for aviation defined in ICAO Doc 9766. |http://codes.wmo.int/iwxxm/volcanicAviationColourCode
+|===
 
-205-2025-2.4.6 IWXXM code lists and their applicable ICAO Annex 3 and PANS-MET requirements
-
-IWXXM-XML schemas, code lists and related materials published with each IWXXM version are based on the requirements in the respective amendments of ICAO Annex 3 and PANS-MET. To facilitate validation of codes with schematron rule, starting from IWXXM 2025-2, all the codes as well as the code lists have been annotated with their applicable IWXXM versions. The WMO Codes Registry and the RDF representation of the code lists contain all codes applicable to the current and all previous versions of IWXXM.   
+205-2025-2.4.6 IWXXM-XML schemas, code lists and related materials published with each IWXXM version are based on the requirements in the respective amendments of ICAO Annex 3 and PANS-MET. To facilitate validation of codes with schematron rule, starting from IWXXM 2025-2, all the codes as well as the code lists have been annotated with their applicable IWXXM versions. The WMO Codes Registry and the RDF representation of the code lists contain all codes applicable to the current and all previous versions of IWXXM.   
