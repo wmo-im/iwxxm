@@ -23,7 +23,7 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 
 {empty}(h) *Space Weather Advisory* is a message detailing the extent, severity and duration of space weather phenomena expected to affect high-frequency radio communications, satellite communications, satellite-based navigation and surveillance systems, and/or pose radiation risks to aircraft occupants.
 
-{empty}(i) *World Area Forecast System (WAFS) Significant Weather (SIGWX)* is a set of global forecasts (validity up to 48 hours) at fixed time intervals of significant weather phenomena spanning flight level 100 to 600. Such phenomena shall include, but not be limited to, jet stream, cumulonimbus cloud, turbulence, icing, tropopause height, tropical cyclones, volcanic eruptions, radioactive release and sand/dust storms.
+{empty}(i) *World Area Forecast System (WAFS) Significant Weather (SIGWX) Forecast* is a set of global forecasts (validity up to 48 hours) at fixed time intervals of significant weather phenomena spanning flight level 100 to 600. Such phenomena shall include, but not be limited to, jet stream, cumulonimbus cloud, turbulence, icing, tropopause height, tropical cyclones, volcanic eruptions, radioactive release and sand/dust storms.
 
 {empty}(j) *Quantitative Volcanic Ash (QVA) Concentration Information* is a message providing information on the concentration of volcanic ash in the atmosphere, including the vertical extent and horizontal distribution of the ash.
 
@@ -71,7 +71,7 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 * https://schemas.wmo.int/iwxxm/2025-2/vona.xsd
 * https://schemas.wmo.int/iwxxm/2025-2/WAFSSigWxFC.xsd
 
-205-2025-2.3.3 IWXXM Schematron Rule is a directory that contains an ISO schematron file that is used to provide enhanced validation of IWXXM-XML files. The schematron file uses the IWXXM code lists represented in Resource Description Framework (RDF) format compatible with those exported from the WMO Codes Registry for verification of code values.
+205-2025-2.3.3 IWXXM Schematron Rule includes an ISO schematron file that is used to provide enhanced validation of IWXXM-XML files. The schematron file uses the IWXXM code lists represented in Resource Description Framework (RDF) format compatible with those exported from the WMO Codes Registry for verification of code values.
 
 * https://schemas.wmo.int/iwxxm/2025-2/rule/iwxxm.sch
 
@@ -79,7 +79,7 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 
 * https://schemas.wmo.int/iwxxm/2025-2/examples/
 
-205-2025-2.3.5 The UML Model is a set of files in Unified Modeling Language that provides a visual representation of IWXXM-XML in HTML format.
+205-2025-2.3.5 The IWXXM logical model describes the exchange model for aeronautical meteorological information and is represented in Unified Modeling Language (UML). It is also used for generation of IWXXM-XML schemas and schematron rule. An export of the logical model in HTML format is included for browsing.
 
 * https://schemas.wmo.int/iwxxm/2025-2/html/
 
@@ -127,10 +127,14 @@ FM 205-2025-2 IWXXM-XML ICAO METEOROLOGICAL INFORMATION EXCHANGE MODEL
 |Airframe icing |http://codes.wmo.int/bufr4/codeflag/0-20-041
 |===
 
-205-2025-2.4.5 IWXXM code lists
+205-2025-2.4.5 Codes for use with IWXXM Meteorological Feature Package and its extension packages
 [width="100%",cols="20%,43%,37%",options="header",]
 |===
 |Name |Description |URL
 |Nil reasons |Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. Terms are drawn from authorities in addition to WMO including ISO/TC 211 (from ISO 19136:2007 Geography markup language clause 8.2.3.1; published on their behalf by the Open Geospatial Consortium).	 |http://codes.wmo.int/iwxxm/nil
 |Meteorological Features |The items within this code table are the weather phenomena being represented by a weather object. |http://codes.wmo.int/iwxxm/meteorologicalFeature
 |Volcanic Aviation Colour Code	 |The items within this code table are the volcano level of alert colour codes for aviation defined in ICAO Doc 9766. |http://codes.wmo.int/iwxxm/volcanicAviationColourCode
+
+205-2025-2.4.6 IWXXM code lists and their applicable ICAO Annex 3 and PANS-MET requirements
+
+IWXXM-XML schemas, code lists and related materials published with each IWXXM version are based on the requirements in the respective amendments of ICAO Annex 3 and PANS-MET. To facilitate validation of codes with schematron rule, starting from IWXXM 2025-2, all the codes as well as the code lists have been annotated with their applicable IWXXM versions. The WMO Codes Registry and the RDF representation of the code lists contain all codes applicable to the current and all previous versions of IWXXM.   
