@@ -23,7 +23,7 @@ _(Original text from Section 2.3.2, Part II, WMO-No.386)_
 
 The abbreviated heading shall have the following format:
 
-`T1T2A1A2ii CCCC YYGGgg``
+`T1T2A1A2ii CCCC YYGGgg`
 
 The symbols shall have the following meanings:
 
@@ -48,7 +48,7 @@ _(Original text from Section 4, Attachment II-15, WMO-No.386)_
 
 For IWXXM report(s) exchanged as an attachment to an AMHS message over AFS, the file name format shall be as follow:
 
-`A_T1T2A1A2iiCCCCYYGGgg_C_CCCC_yyyyMMddhhmmss.xml[.compression]`
+`A_T1T2A1A2iiCCCCYYGGgg_C_CCCC_yyyyMMddhhmmss[_ffffff].xml[.compression]`
 
 *Product identifier (`T1T2A1A2iiCCCCYYGGgg`)*
 
@@ -60,11 +60,15 @@ For IWXXM report(s) exchanged as an attachment to an AMHS message over AFS, the 
 
 *Date and time stamp (`yyyyMMddhhmmss`)*
 
-* Date and time of creation of the file by the originator.
+* Date `yyyyMMdd` and time `hhmmss` of creation of the file by the originator.
+
+*Free format text (`_ffffff`)*
+
+* (Optional) Six alphanumeric characters containing further identifiers as required by a given originator.
 
 *Compression*
 
-* Specifies the compression technique, which if applied should be gz (Unix Gzip) as recommended by ICAO.
+* (Optional) Specifies the compression technique, which if applied should be gz (Unix Gzip) as recommended by ICAO.
 
 ## Data type designators
 
