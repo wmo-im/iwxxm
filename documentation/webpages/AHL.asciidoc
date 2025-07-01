@@ -1,0 +1,140 @@
+
+*Preamble*
+
+The WMO _Manual on the Global Telecommunication System_ (WMO-No. 386) was published to facilitate cooperation in respect of meteorological telecommunication between WMO Members and specify obligations in the implementation of the World Weather Watch Global Telecommunication System (GTS).
+
+It provided detailed guidelines for practices and procedures, including abbreviated headers and related specifications, used by the International Civil Aviation Organization (ICAO) for exchanging aeronautical meteorological data through its Aeronautical Fixed Service (AFS). However, according to the WIS 2.0 implementation plan, the Global Telecommunication System (GTS) will be decommissioned by 2033, and National Meteorological and Hydrological Services will use the WIS 2.0 platform for data exchange instead.
+
+At the 78th session of the WMO Executive Council (EC-78) Resolution 16 stated that "_the Manual on the Global Telecommunication System (WMO-No.386) will no longer be updated from 31 December 2024_” and also requested WMO “_...to liaise with ICAO in respect of an extant requirement for Attachment II-5. Data designators T1T2A1A2ii in abbreviated headings of the Manual on the Global Telecommunication System.”_
+
+Therefore, this webpage is to ensure the exchange of aviation data over ICAO AFS is not affected by the freezing and subsequent deprecation of WMO-No.386 and WMO-No.9 Vol. C1.
+
+Requests for additions or revisions to the abbreviated headings will be managed by the WMO Task Team on Aviation Data based on ICAO requirements.
+
+== WMO Abbreviated Headings and related specifications relevant for the exchange of aviation data over ICAO AFS
+
+* Version: 0.2.0 (draft) 
+* Date: 1 July 2025
+* Location: https://community.wmo.int/en/activity-areas/wis/iwxxm/ahl-icao-data
+
+## Abbreviated heading
+
+_(Original text from Section 2.3.2, Part II, WMO-No.386)_
+
+The abbreviated heading shall have the following format:
+
+`T1T2A1A2ii CCCC YYGGgg``
+
+The symbols shall have the following meanings:
+
+*Data designators (T1T2A1A2ii*)
+
+* `T1T2` - Data type designators.
+* `A1A2` - Geographical designators.
+* `ii` - It shall be a number with two digits. When an originator or compiler of bulletins issues two or more bulletins with the same `T1T2A1A2` and `CCCC` the `ii` shall be used to differentiate the bulletins and will be unique to each bulletin.
+
+*Location indicator (CCCC)*
+
+* `CCCC` - International four-letter location indicator of the station or centre originating or compiling the bulletin, as agreed internationally, and published in WMO-No.9, Volume C1, Catalogue of Meteorological Bulletins. Once a bulletin has been originated or compiled, the `CCCC` must not be changed. If the contents of a bulletin is changed or recompiled for any reason, the `CCCC` should be changed to indicate the centre or station making the change.
+
+*International date-time group (YYGGgg)*
+
+* `YY` - Day of the month
+* `GGgg` - For bulletins containing meteorological reports intended for standard times of observation, the time shall be the standard time of observation in UTC. For aerodrome, route and area (aeronautical) forecasts: the full hour in UTC (the last two digits shall be 00) preceding the transmission time. For other forecasts and analyses: standard time of observation in UTC on which forecast of analysis is based.
+
+## File naming convention with abbreviated heading
+
+_(Original text from Section 4, Attachment II-15, WMO-No.386)_
+
+For IWXXM report(s) exchanged as an attachment to an AMHS message over AFS, the file name format shall be as follow:
+
+`A_T1T2A1A2iiCCCCYYGGgg_C_CCCC_yyyyMMddhhmmss.xml[.compression]`
+
+*Product identifier (`T1T2A1A2iiCCCCYYGGgg`)*
+
+* (Same as the abbreviated heading above)
+
+*Originator (`CCCC`)*
+
+* (Same as the location indicator above)
+
+*Date and time stamp (`yyyyMMddhhmmss`)*
+
+* Date and time of creation of the file by the originator.
+
+*Compression*
+
+* Specifies the compression technique, which if applied should be gz (Unix Gzip) as recommended by ICAO.
+
+## Data type designators
+
+### Traditional Alphanumeric Code (TAC) messages
+
+_(Original text from Tables A and B1, Attachment II-5, WMO-No.386)_
+
+*T1 Data types*
+
+* S - Surface data
+* F - Forecasts
+* U - Upper-air data
+* W - Warnings
+* N - Notices
+
+[width="100%",cols="10%,10%,40%,40%",options="header",]
+
+|===
+|*T1* |*T2* |*Data type* |*Code form (name)* 
+|S |A |Aviation routine reports |FM 15 (METAR) 
+|S |P |Special aviation weather reports |FM 16 (SPECI) 
+|F |A |Aviation area/GAMET/advisories |FM 53 (ARFOR)/[TEXT] 
+|F |C |Aerodrome (VT < 12 hours) |FM 51 (TAF) 
+|F |T |Aerodrome (VT ≥ 12 hours) |FM 51 (TAF) 
+|F |K |Tropical cyclone advisories |ICAO (Tropical Cyclone Advisory) 
+|F |N |Space weather advisories |ICAO (Space Weather Advisory) 
+|F |V |Volcanic ash advisories |ICAO (Volcanic Ash Advisory) 
+|F |R |Aviation route |FM 54 (ROFOR) 
+|U |A |Aircraft reports |ICAO (AIREP) 
+|W |J |Volcano Observatory Notice for Aviation (VONA) |ICAO (VONA)
+|W |A |AIRMET |ICAO (AIRMET) 
+|W |S |SIGMET |ICAO (SIGMET) 
+|W |C |Tropical cyclone (SIGMET) |ICAO (SIGMET) 
+|W |V |Volcanic ash clouds (SIGMET) |ICAO (SIGMET) 
+|N |O |METNO |[TEXT] 
+|===
+
+### IWXXM messages
+
+_(Original text from Tables A and B7, Attachment II-5, WMO-N0.386)_
+
+*T1 Data type*
+
+* L - Aviation information in XML
+
+[width="100%",cols="10%,10%,40%,40%",options="header",]
+|===
+|*T1* |*T2* |*Data type* |*Code form (XML element)*
+|L |A |Aviation routine reports (METAR) |FM 205 (iwxxm:METAR) 
+|L |P |Special aviation weather reports (SPECI) |FM 205 (iwxxm:SPECI) 
+|L |C |Aerodrome forecast (TAF) (VT < 12 hours) |FM 205 (iwxxm:TAF) 
+|L |T |Aerodrome forecast (TAF) (VT ≥ 12 hours) |FM 205 (iwxxm:TAF) 
+|L |K |Tropical cyclone advisories |FM 205(iwxxm:TropicalCycloneAdvisory) 
+|L |N |Space weather advisories |FM 205 (iwxxm:SpaceWeatherAdvisory) 
+|L |U |Volcanic ash advisories |FM 205 (iwxxm:VolcanicAshAdvisory) 
+|L |J |Volcano Observatory Notice for Aviation (VONA) |FM 205 (iwxxm:VolcanoObservatoryNoticeForAviation)
+|L |W |AIRMET |FM 205 (iwxxm:AIRMET) 
+|L |S |Aviation general warning (SIGMET) |FM 205 (iwxxm:SIGMET) 
+|L |Y |Aviation tropical cyclone warning (SIGMET) |FM 205 (iwxxm:TropicalCycloneSIGMET) 
+|L |V |Aviation volcanic ash warning (SIGMET) |FM 205 (iwxxm:VolcanicAshSIGMET) 
+|===
+
+### Geographical designators
+
+_(Original text from Table C1, Attachment II-5, WMO-No.386)_
+
+https://github.com/user-attachments/files/19912932/A1A2.pdf[[.underline]#A1A2.pdf#]
+
+### Location indicator
+
+_(Original text from Annex I, WMO-No.9 Vol. C1)_
+
+https://github.com/user-attachments/files/19912835/CCCC.pdf[[.underline]#CCCC.pdf#]
