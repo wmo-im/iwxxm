@@ -65,26 +65,6 @@
                                                         </gml:LinearRing>
                                                     </gml:exterior>
                                                 </gml:PolygonPatch>
-                                            </gml:patches>
-                                        </aixm:Surface>
-                                    </aixm:horizontalProjection>
-                                </aixm:AirspaceVolume>
-                            </iwxxm:location>
-                            <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/HNH"/>
-                        </iwxxm:SpaceWeatherRegion>
-                    </iwxxm:region>
-                </iwxxm:SpaceWeatherIntensityAndRegion>
-            </iwxxm:intensityAndRegion>
-            <iwxxm:intensityAndRegion>
-                <iwxxm:SpaceWeatherIntensityAndRegion gml:id="uuid.00f9026a-845a-4472-acee-9ec5d7ba6839">
-                    <iwxxm:intensity>MOD</iwxxm:intensity>
-                    <iwxxm:region>
-                        <iwxxm:SpaceWeatherRegion gml:id="uuid.1966a889-fedc-4eb8-9066-578492617298">
-                            <iwxxm:location>
-                                <aixm:AirspaceVolume gml:id="uuid.a9793439-2c58-462f-b60f-7f39c1e7b3a5">
-                                    <aixm:horizontalProjection>
-                                        <aixm:Surface gml:id="uuid.6c5257ec-6c9d-4427-9b6e-cd2870adc557" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
-                                            <gml:patches>
                                                 <gml:PolygonPatch>
                                                     <gml:exterior>
                                                         <gml:LinearRing>
@@ -103,6 +83,7 @@
                                     </aixm:horizontalProjection>
                                 </aixm:AirspaceVolume>
                             </iwxxm:location>
+                            <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/HNH"/>
                             <iwxxm:locationIndicator xlink:href="http://codes.wmo.int/49-2/SpaceWxLocation/HSH"/>
                         </iwxxm:SpaceWeatherRegion>
                     </iwxxm:region>
@@ -119,7 +100,6 @@
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
             <iwxxm:intensityAndRegion xlink:href="#uuid.c264db5c-3f0b-4444-ab5e-71f48a514644"/>
-            <iwxxm:intensityAndRegion xlink:href="#uuid.00f9026a-845a-4472-acee-9ec5d7ba6839"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
@@ -130,7 +110,7 @@
                     <gml:timePosition>2020-11-08T13:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:intensityAndRegion nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:intensityAndRegion xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
@@ -141,7 +121,7 @@
                     <gml:timePosition>2020-11-08T19:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:intensityAndRegion nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:intensityAndRegion xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
@@ -152,7 +132,7 @@
                     <gml:timePosition>2020-11-09T01:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:intensityAndRegion nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:intensityAndRegion xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     

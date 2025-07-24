@@ -51,8 +51,9 @@
                     <gml:validTime/>
                     <aixm:interpretation>SNAPSHOT</aixm:interpretation>
                     <aixm:name>KVERT</aixm:name>
-                    <aixm:type>OTHER</aixm:type>
-                    <aixm:designator>KVERT</aixm:designator>
+		    <aixm:type>OTHER:SVO</aixm:type>
+		    <aixm:compliantICAO>YES</aixm:compliantICAO>
+                    <aixm:designator>RUPK</aixm:designator>
                 </aixm:UnitTimeSlice>
             </aixm:timeSlice>
         </aixm:Unit>

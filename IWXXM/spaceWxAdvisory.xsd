@@ -134,7 +134,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 							<documentation>Intensity of the space weather phenomena.</documentation>
 						</annotation>
 					</element>
-					<element name="region" type="iwxxm:SpaceWeatherRegionPropertyType">
+					<element name="region" type="iwxxm:SpaceWeatherRegionPropertyType" minOccurs="1" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Region affected by the space weather phenomena.</documentation>
 						</annotation>
