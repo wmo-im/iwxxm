@@ -38,11 +38,11 @@ function nameClassifier(name, separator)
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">6/15/2016 10:46:45 AM</td>
+			<td width="85%" class="ObjectDetailsValue">15-Jun-16 10:46:45 AM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">6/24/2025 1:01:12 AM</td>
+			<td class="ObjectDetailsValue">24-Jun-25 1:01:12 AM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -115,6 +115,64 @@ function nameClassifier(name, separator)
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes787')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes787" border="0" />Details:</a>
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes787_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes787_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes787_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes787_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes787_04" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+						<tr id="DetailsImageAttributes787_05" style="display: none;">
+							<td width="75"><i>Transient: </i></td>
+							<td>False</td>
+						</tr>
+						<tr id="DetailsImageAttributes787_06" style="display: none;">
+							<td width="75"><i>Derived: </i></td>
+							<td>False</td>
+						</tr>
+							<tr id="DetailsImageAttributes787_07" style="display: none;">
+							<td width="75"><i>IsID: </i></td>
+						<td>False</td>
+						</tr>
+					</table>
+					
+					xsdAsAttribute=true<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			The TAC bulletin ID that was translated, of the form &#39;TTAAiiCCCYYGGgg&#39;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public DateTime</i><br /><strong>&nbsp;&nbsp;translatedBulletinReceptionTime</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
 					<a href="#" onclick="parent.toggleData('DetailsImageAttributes788')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes788" border="0" />Details:</a>
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
@@ -159,7 +217,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The TAC bulletin ID that was translated, of the form &#39;TTAAiiCCCYYGGgg&#39;&lt;br/&gt;
+			The time at which the translated TAC bulletin was received by the translation centre&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -168,7 +226,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public DateTime</i><br /><strong>&nbsp;&nbsp;translatedBulletinReceptionTime</strong>
+					<i>Public CharacterString</i><br /><strong>&nbsp;&nbsp;translationCentreDesignator</strong>
 				</td>
 			</tr>
 			<tr>
@@ -217,7 +275,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The time at which the translated TAC bulletin was received by the translation centre&lt;br/&gt;
+			The ICAO designator of the centre which performed translation from TAC to XML&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -226,7 +284,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public CharacterString</i><br /><strong>&nbsp;&nbsp;translationCentreDesignator</strong>
+					<i>Public CharacterString</i><br /><strong>&nbsp;&nbsp;translationCentreName</strong>
 				</td>
 			</tr>
 			<tr>
@@ -275,7 +333,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The ICAO designator of the centre which performed translation from TAC to XML&lt;br/&gt;
+			The name of the translation centre which performed translation from TAC to XML&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -284,7 +342,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public CharacterString</i><br /><strong>&nbsp;&nbsp;translationCentreName</strong>
+					<i>Public DateTime</i><br /><strong>&nbsp;&nbsp;translationTime</strong>
 				</td>
 			</tr>
 			<tr>
@@ -333,7 +391,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The name of the translation centre which performed translation from TAC to XML&lt;br/&gt;
+			The time at which translation was performed from TAC to XML&lt;br/&gt;
 		</td>
 	</tr>
 </table></div>
@@ -342,7 +400,7 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public DateTime</i><br /><strong>&nbsp;&nbsp;translationTime</strong>
+					<i>Public CharacterString</i><br /><strong>&nbsp;&nbsp;translationFailedTAC</strong>
 				</td>
 			</tr>
 			<tr>
@@ -391,64 +449,6 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			The time at which translation was performed from TAC to XML&lt;br/&gt;
-		</td>
-	</tr>
-</table></div>
-
-						
-				</td>
-			</tr>			<tr>
-				<td width="100%" class="TableRow">
-					<i>Public CharacterString</i><br /><strong>&nbsp;&nbsp;translationFailedTAC</strong>
-				</td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes793')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes793" border="0" />Details:</a>
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes793_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes793_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes793_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes793_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes793_04" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to 1</td>
-						</tr>
-						<tr id="DetailsImageAttributes793_05" style="display: none;">
-							<td width="75"><i>Transient: </i></td>
-							<td>False</td>
-						</tr>
-						<tr id="DetailsImageAttributes793_06" style="display: none;">
-							<td width="75"><i>Derived: </i></td>
-							<td>False</td>
-						</tr>
-							<tr id="DetailsImageAttributes793_07" style="display: none;">
-							<td width="75"><i>IsID: </i></td>
-						<td>False</td>
-						</tr>
-					</table>
-					
-					xsdAsAttribute=true<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
 			The full, original TAC that could not be translated.&#160; When translation fails only the report type (i.e, SIGMET or METAR), translation information and other basic report metadata should be provided.&#160; In this case no translated content will be included other than the original TAC.&#160; Translation is considered to have failed when either not all of the TAC could be understood by the translation software or not all of the mandatory TAC content could be found.&#160; Permissible usage may be set as normal and TAC that failed translation may still be used for operational purposes, but under no circumstances should partially translated content be distributed or marked as operational&lt;br/&gt;
 		</td>
 	</tr>
@@ -471,8 +471,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario794" onclick="parent.toggleDiv('detailsDIVScenario794','DetailsImageScenario794')" />Details:
-						<div id="detailsDIVScenario794" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario793" onclick="parent.toggleDiv('detailsDIVScenario793','DetailsImageScenario793')" />Details:
+						<div id="detailsDIVScenario793" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Creates a property type that requires its instance to be encoded inline (applies to ISO 19136:2007 encoding rule).<br /></div>
 
 						</div>
@@ -484,8 +484,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario795" onclick="parent.toggleDiv('detailsDIVScenario795','DetailsImageScenario795')" />Details:
-						<div id="detailsDIVScenario795" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario794" onclick="parent.toggleDiv('detailsDIVScenario794','DetailsImageScenario794')" />Details:
+						<div id="detailsDIVScenario794" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the type as an objection collection.<br /></div>
 
 						</div>
@@ -497,8 +497,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario796" onclick="parent.toggleDiv('detailsDIVScenario796','DetailsImageScenario796')" />Details:
-						<div id="detailsDIVScenario796" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario795" onclick="parent.toggleDiv('detailsDIVScenario795','DetailsImageScenario795')" />Details:
+						<div id="detailsDIVScenario795" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Suppresses creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).<br /></div>
 
 						</div>
@@ -520,8 +520,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints797" onclick="parent.toggleDiv('detailsDIVConstraints797','DetailsImageConstraints797')" />Details:
-							<div id="detailsDIVConstraints797" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints796" onclick="parent.toggleDiv('detailsDIVConstraints796','DetailsImageConstraints796')" />Details:
+							<div id="detailsDIVConstraints796" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: Common.Report-1&lt;br/&gt;Description: Translated reports must include @translatedBulletinID, @translatedBulletinReceptionTime, @translationCentreDesignator, @translationCentreName, @translationTime and optionally @translationFailedTAC if translation failed&lt;br/&gt;Assertion: ( if( exists(@translatedBulletinID) or exists(@translatedBulletinReceptionTime) or exists(@translationCentreDesignator) or exists(@translationCentreName) or exists(@translationTime) or exists(@translationFailedTAC)) then( exists(@translatedBulletinID) and exists(@translatedBulletinReceptionTime) and exists(@translationCentreDesignator) and exists(@translationCentreName) and exists(@translationTime) ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>
@@ -535,8 +535,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints798" onclick="parent.toggleDiv('detailsDIVConstraints798','DetailsImageConstraints798')" />Details:
-							<div id="detailsDIVConstraints798" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints797" onclick="parent.toggleDiv('detailsDIVConstraints797','DetailsImageConstraints797')" />Details:
+							<div id="detailsDIVConstraints797" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">Pattern ID: Common.Report-2&lt;br/&gt;Description: Total size of extension content must not exceed 5000 characters per report&lt;br/&gt;Assertion: ( if( exists(.//iwxxm:extension) ) then( sum(.//iwxxm:extension/.//text()/string-length(.) ) +sum(.//iwxxm:extension/.//element()/( (string-length( name() ) * 2 ) + 5 ) ) +sum(.//iwxxm:extension/.//@*/( 1 + string-length(name()) + 3 + string-length(.) ) ) +sum(.//iwxxm:extension/.//comment()/( string-length( . ) + 7 )) lt 5000 ) else( true() ) )&lt;br/&gt;</div>
 
 							</div>

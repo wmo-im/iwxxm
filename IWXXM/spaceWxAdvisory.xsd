@@ -232,11 +232,6 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 					<documentation>Severe.</documentation>
 				</annotation>
 			</enumeration>
-			<enumeration value="MOD_OR_SEV">
-				<annotation>
-					<documentation>Moderate or severe.</documentation>
-				</annotation>
-			</enumeration>
 		</restriction>
 	</simpleType>
 	<element name="SpaceWeatherLocation" type="iwxxm:SpaceWeatherLocationType"></element>
