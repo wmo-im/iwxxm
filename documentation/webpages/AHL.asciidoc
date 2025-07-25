@@ -13,7 +13,7 @@ Requests for additions or revisions to the abbreviated headings will be managed 
 
 == WMO Abbreviated Headings and related specifications relevant for the exchange of aviation data over ICAO AFS
 
-* Version: 0.2.0 (draft) 
+* Version: 0.3.0 (draft) 
 * Date: 1 July 2025
 * Location: https://community.wmo.int/en/activity-areas/wis/iwxxm/ahl-icao-data
 
@@ -23,11 +23,11 @@ _(Original text from Section 2.3.2, Part II, WMO-No.386)_
 
 The abbreviated heading shall have the following format:
 
-`T1T2A1A2ii CCCC YYGGgg`
+`T1T2A1A2ii CCCC YYGGgg [BBB]`
 
 The symbols shall have the following meanings:
 
-*Data designators (T1T2A1A2ii*)
+*Data designators (T1T2A1A2ii)*
 
 * `T1T2` - Data type designators.
 * `A1A2` - Geographical designators.
@@ -42,27 +42,60 @@ The symbols shall have the following meanings:
 * `YY` - Day of the month
 * `GGgg` - For bulletins containing meteorological reports intended for standard times of observation, the time shall be the standard time of observation in UTC. For aerodrome, route and area (aeronautical) forecasts: the full hour in UTC (the last two digits shall be 00) preceding the transmission time. For other forecasts and analyses: standard time of observation in UTC on which forecast of analysis is based.
 
+*Modification group (BBB)*
+
+* `BBB` - Shall be added when the abbreviated heading line has already been used for the transmission of a corresponding initial bulletin.  Once the initial bulletin has been transmitted, the centre responsible for preparing or compiling the bulletin uses the BBB indicator to transmit additional, subsequent corrected or amended messaages with the same abbreviated heading line:
+
+[loweralpha]
+. To transmit information or reports normally contained in an initial bulletin after the initial bulletin has been transmitted or for a subsequent or additional issuance of a bulletin whose abbreviated heading line would not be unique without a BBB field and CCx or AAx does not apply. The BBB indicator to be used is RRx, where x =:
+
+*** A, for the first bulletin after the issuance of the initial bulletin;
+*** B, if another bulletin needs to be issued;
+*** and so on up to and including x = X
+
+. To transmit a bulletin containing corrected information or reports that have already been issued in a previous bulletin. The BBB indicator to be used is CCx, where x =:
+
+*** A, for the first bulletin containing corrected reports or information;
+*** B, if a second bulletin containing corrected reports or information is issued;
+*** and so on up to including x = X
+
+. To transmit a bulletin containing amendments to the information included in a previously issued bulletin. The BBB indicator to be used is AAx, where x = :
+
+*** A, for the first bulletin containing amendments to information;
+*** B, for a second bulletin containing amendments to information;
+*** and so on up to and including x = X
+
+. If more than 24 BBB indicators have to be used for the sequences detailed in (a), (b) and (c) above, then x = X should continue to be used
+
+. For (a), (b) and (c) above, the characters x = Y and x = Z are to be used for special purposes indicated below:
+.. x = Y should be used for the encoding of BBB when a system failure causes loss of the record of the sequence of character values assigned to x;
+.. x = Z should be used for the encoding of BBB when bulletins are prepared or compiled more than 24 hours after the time of observation.
+
 ## File naming convention with abbreviated heading
 
 _(Original text from Section 4, Attachment II-15, WMO-No.386)_
 
 For IWXXM report(s) exchanged as an attachment to an AMHS message over AFS, the file name format shall be as follow:
 
-`A_T1T2A1A2iiCCCCYYGGgg_C_CCCC_yyyyMMddhhmmss[_ffffff].xml[.compression]`
+`A_T1T2A1A2iiCCCCYYGGgg[BBB]_C_CCCC_yyyyMMddhhmmss[_ffffff].xml[.compression]`
 
-*Product identifier (`T1T2A1A2iiCCCCYYGGgg`)*
+*Product identifier (T1T2A1A2iiCCCCYYGGgg)*
 
 * (Same as the abbreviated heading above)
 
-*Originator (`CCCC`)*
+*Modification group (BBB)*
+
+* (Same as the modification group above)
+
+*Originator (CCCC)*
 
 * (Same as the location indicator above)
 
-*Date and time stamp (`yyyyMMddhhmmss`)*
+*Date and time stamp (yyyyMMddhhmmss)*
 
 * Date `yyyyMMdd` and time `hhmmss` of creation of the file by the originator.
 
-*Free format text (`_ffffff`)*
+*Free format text (ffffff)*
 
 * (Optional) Six alphanumeric characters containing further identifiers as required by a given originator.
 
