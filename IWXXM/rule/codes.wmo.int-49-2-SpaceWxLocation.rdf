@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:reg="http://purl.org/linked-data/registry#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:ldp="http://www.w3.org/ns/ldp#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:ldp="http://www.w3.org/ns/ldp#"
 >
   <reg:Register rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/DAYLIGHT_SIDE">
         <skos:notation>DAYLIGHT_SIDE</skos:notation>
         <rdfs:label xml:lang="en">Daylight Side</rdfs:label>
-        <dct:description xml:lang="en">Daylight Side</dct:description>
+        <dcterms:description xml:lang="en">Daylight Side</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -23,7 +23,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/DAYSIDE">
         <skos:notation>DAYSIDE</skos:notation>
         <rdfs:label xml:lang="en">Day Side</rdfs:label>
-        <dct:description xml:lang="en">Day Side</dct:description>
+        <dcterms:description xml:lang="en">Day Side</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
@@ -31,7 +31,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/NIGHTSIDE">
         <skos:notation>NIGHTSIDE</skos:notation>
         <rdfs:label xml:lang="en">Night Side</rdfs:label>
-        <dct:description xml:lang="en">Night Side</dct:description>
+        <dcterms:description xml:lang="en">Night Side</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
@@ -39,7 +39,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/EQN">
         <skos:notation>EQN</skos:notation>
         <rdfs:label xml:lang="en">Equatorial latitudes northern hemisphere</rdfs:label>
-        <dct:description xml:lang="en">Equatorial latitudes northern hemisphere (30 degrees N – 0 degrees N)</dct:description>
+        <dcterms:description xml:lang="en">Equatorial latitudes northern hemisphere (30 degrees N – 0 degrees N)</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -50,7 +50,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/EQS">
         <skos:notation>EQS</skos:notation>
         <rdfs:label xml:lang="en">Equatorial latitudes southern hemisphere</rdfs:label>
-        <dct:description xml:lang="en">Equatorial latitudes southern hemisphere (0 degrees S – 30 degrees S)</dct:description>
+        <dcterms:description xml:lang="en">Equatorial latitudes southern hemisphere (0 degrees S – 30 degrees S)</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -61,7 +61,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/HNH">
         <skos:notation>HNH</skos:notation>
         <rdfs:label xml:lang="en">High latitudes northern hemisphere</rdfs:label>
-        <dct:description xml:lang="en">High latitudes northern hemisphere (90 degrees N – 60 degrees N)</dct:description>
+        <dcterms:description xml:lang="en">High latitudes northern hemisphere (90 degrees N – 60 degrees N)</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -72,7 +72,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/HSH">
         <skos:notation>HSH</skos:notation>
         <rdfs:label xml:lang="en">High latitudes southern hemisphere</rdfs:label>
-        <dct:description xml:lang="en">High latitudes southern hemisphere (60 degrees S – 90 degrees S)</dct:description>
+        <dcterms:description xml:lang="en">High latitudes southern hemisphere (60 degrees S – 90 degrees S)</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -83,7 +83,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/MNH">
         <skos:notation>MNH</skos:notation>
         <rdfs:label xml:lang="en">Middle latitudes northern hemisphere</rdfs:label>
-        <dct:description xml:lang="en">Middle latitudes northern hemisphere (60 degrees N – 30 degrees N)</dct:description>
+        <dcterms:description xml:lang="en">Middle latitudes northern hemisphere (60 degrees N – 30 degrees N)</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -94,7 +94,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxLocation/MSH">
         <skos:notation>MSH</skos:notation>
         <rdfs:label xml:lang="en">Middle latitudes southern hemisphere</rdfs:label>
-        <dct:description xml:lang="en">Middle latitudes southern hemisphere (30 degrees S – 60 degrees S)</dct:description>
+        <dcterms:description xml:lang="en">Middle latitudes southern hemisphere (30 degrees S – 60 degrees S)</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -105,11 +105,10 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:notation>SpaceWxLocation</skos:notation>
     <rdfs:label xml:lang="en">Space Wx Location</rdfs:label>
-    <dct:description xml:lang="en">The items within this code table are the locations of space weather phenomena of significance to aeronautical operations</dct:description>
+    <dcterms:description xml:lang="en">The items within this code table are the locations of space weather phenomena of significance to aeronautical operations</dcterms:description>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
-    <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
   </reg:Register>
 </rdf:RDF>

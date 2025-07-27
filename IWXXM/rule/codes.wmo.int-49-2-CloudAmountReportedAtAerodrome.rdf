@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:reg="http://purl.org/linked-data/registry#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:ldp="http://www.w3.org/ns/ldp#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:ldp="http://www.w3.org/ns/ldp#"
 >
   <reg:Register rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/BKN">
         <skos:notation>BKN</skos:notation>
         <rdfs:label xml:lang="en">Broken</rdfs:label>
-        <dct:description xml:lang="en">Broken (5 - 7 oktas).</dct:description>
+        <dcterms:description xml:lang="en">Broken (5 - 7 oktas).</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -26,7 +26,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/EMBD">
         <skos:notation>EMBD</skos:notation>
         <rdfs:label xml:lang="en">Embedded</rdfs:label>
-        <dct:description xml:lang="en">Embedded. Applicable only to cumulonimbus (CB).</dct:description>
+        <dcterms:description xml:lang="en">Embedded. Applicable only to cumulonimbus (CB).</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -39,7 +39,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/FEW">
         <skos:notation>FEW</skos:notation>
         <rdfs:label xml:lang="en">Few</rdfs:label>
-        <dct:description xml:lang="en">Few (1 - 2 oktas).</dct:description>
+        <dcterms:description xml:lang="en">Few (1 - 2 oktas).</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -52,7 +52,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/FRQ">
         <skos:notation>FRQ</skos:notation>
         <rdfs:label xml:lang="en">Frequent</rdfs:label>
-        <dct:description xml:lang="en">Frequent. Applicable only to cumulonimbus (CB).</dct:description>
+        <dcterms:description xml:lang="en">Frequent. Applicable only to cumulonimbus (CB).</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -65,7 +65,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/ISOL">
         <skos:notation>ISOL</skos:notation>
         <rdfs:label xml:lang="en">Isolated</rdfs:label>
-        <dct:description xml:lang="en">Isolated. Applicable only to cumulonimbus (CB).</dct:description>
+        <dcterms:description xml:lang="en">Isolated. Applicable only to cumulonimbus (CB).</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -78,7 +78,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/LYR">
         <skos:notation>LYR</skos:notation>
         <rdfs:label xml:lang="en">Layers</rdfs:label>
-        <dct:description xml:lang="en">Layers. Applicable only to cumulonimbus (CB).</dct:description>
+        <dcterms:description xml:lang="en">Layers. Applicable only to cumulonimbus (CB).</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -91,7 +91,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/OCNL">
         <skos:notation>OCNL</skos:notation>
         <rdfs:label xml:lang="en">Occasional</rdfs:label>
-        <dct:description xml:lang="en">Occasional. Applicable only to cumulonimbus (CB).</dct:description>
+        <dcterms:description xml:lang="en">Occasional. Applicable only to cumulonimbus (CB).</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -104,7 +104,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/OVC">
         <skos:notation>OVC</skos:notation>
         <rdfs:label xml:lang="en">Overcast</rdfs:label>
-        <dct:description xml:lang="en">Overcast (8 oktas).</dct:description>
+        <dcterms:description xml:lang="en">Overcast (8 oktas).</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -117,7 +117,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/SCT">
         <skos:notation>SCT</skos:notation>
         <rdfs:label xml:lang="en">Scattered</rdfs:label>
-        <dct:description xml:lang="en">Scattered (3 - 4 oktas).</dct:description>
+        <dcterms:description xml:lang="en">Scattered (3 - 4 oktas).</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -130,7 +130,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome/SKC">
         <skos:notation>SKC</skos:notation>
         <rdfs:label xml:lang="en">Sky clear</rdfs:label>
-        <dct:description xml:lang="en">Sky clear (0 oktas).</dct:description>
+        <dcterms:description xml:lang="en">Sky clear (0 oktas).</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -143,13 +143,12 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:notation>CloudAmountReportedAtAerodrome</skos:notation>
     <rdfs:label xml:lang="en">Code Table D-8: Cloud amount reported at aerodrome</rdfs:label>
-    <dct:description xml:lang="en">The items within this code table are the cloud amount categories of operational significance for aviation as specified in ICAO Annex 3 and PANS-MET. This code table contains a subset of the cloud amount categories defined in the Manual on Codes (WMO No.306), Vol. I.2 Part B FM 94 BUFR Code table 0 20 008.</dct:description>
+    <dcterms:description xml:lang="en">The items within this code table are the cloud amount categories of operational significance for aviation as specified in ICAO Annex 3 and PANS-MET. This code table contains a subset of the cloud amount categories defined in the Manual on Codes (WMO No.306), Vol. I.2 Part B FM 94 BUFR Code table 0 20 008.</dcterms:description>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
-    <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
   </reg:Register>
 </rdf:RDF>

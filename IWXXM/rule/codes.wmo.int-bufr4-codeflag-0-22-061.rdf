@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:reg="http://purl.org/linked-data/registry#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-  xmlns:ldp="http://www.w3.org/ns/ldp#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:ldp="http://www.w3.org/ns/ldp#"
 >
   <reg:Register rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/0">
         <skos:notation>0</skos:notation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdfs:label>
-        <dct:description xml:lang="en">Calm (glassy)</dct:description>
+        <dcterms:description xml:lang="en">Calm (glassy)</dcterms:description>
         <skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -27,7 +27,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/1">
         <skos:notation>1</skos:notation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdfs:label>
-        <dct:description xml:lang="en">Calm (rippled)</dct:description>
+        <dcterms:description xml:lang="en">Calm (rippled)</dcterms:description>
         <skos:note xml:lang="en">0 - 0.1</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -41,7 +41,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/2">
         <skos:notation>2</skos:notation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdfs:label>
-        <dct:description xml:lang="en">Smooth (wavelets)</dct:description>
+        <dcterms:description xml:lang="en">Smooth (wavelets)</dcterms:description>
         <skos:note xml:lang="en">0.1 - 0.5</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -55,7 +55,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/3">
         <skos:notation>3</skos:notation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdfs:label>
-        <dct:description xml:lang="en">Slight</dct:description>
+        <dcterms:description xml:lang="en">Slight</dcterms:description>
         <skos:note xml:lang="en">0.5 - 1.25</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -69,7 +69,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/4">
         <skos:notation>4</skos:notation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdfs:label>
-        <dct:description xml:lang="en">Moderate</dct:description>
+        <dcterms:description xml:lang="en">Moderate</dcterms:description>
         <skos:note xml:lang="en">1.25 - 2.5</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -83,7 +83,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/5">
         <skos:notation>5</skos:notation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdfs:label>
-        <dct:description xml:lang="en">Rough</dct:description>
+        <dcterms:description xml:lang="en">Rough</dcterms:description>
         <skos:note xml:lang="en">2.5 - 4</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -97,7 +97,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/6">
         <skos:notation>6</skos:notation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdfs:label>
-        <dct:description xml:lang="en">Very rough</dct:description>
+        <dcterms:description xml:lang="en">Very rough</dcterms:description>
         <skos:note xml:lang="en">4 - 6</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -111,7 +111,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/7">
         <skos:notation>7</skos:notation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdfs:label>
-        <dct:description xml:lang="en">High</dct:description>
+        <dcterms:description xml:lang="en">High</dcterms:description>
         <skos:note xml:lang="en">6 - 9</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -125,7 +125,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/8">
         <skos:notation>8</skos:notation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdfs:label>
-        <dct:description xml:lang="en">Very high</dct:description>
+        <dcterms:description xml:lang="en">Very high</dcterms:description>
         <skos:note xml:lang="en">9 - 14</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -139,7 +139,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/9">
         <skos:notation>9</skos:notation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</rdfs:label>
-        <dct:description xml:lang="en">Phenomenal</dct:description>
+        <dcterms:description xml:lang="en">Phenomenal</dcterms:description>
         <skos:note xml:lang="en">Over 14</skos:note>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
@@ -153,7 +153,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-22-061/15">
         <skos:notation>15</skos:notation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</rdfs:label>
-        <dct:description xml:lang="en">Missing value</dct:description>
+        <dcterms:description xml:lang="en">Missing value</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
@@ -172,6 +172,5 @@
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
-    <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
   </reg:Register>
 </rdf:RDF>

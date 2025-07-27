@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:reg="http://purl.org/linked-data/registry#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:ldp="http://www.w3.org/ns/ldp#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:ldp="http://www.w3.org/ns/ldp#"
 >
   <reg:Register rdf:about="http://codes.wmo.int/49-2/AviationColourCode">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AviationColourCode/GREEN">
         <skos:notation>GREEN</skos:notation>
         <rdfs:label xml:lang="en">Green</rdfs:label>
-        <dct:description xml:lang="en">Volcano is in normal, non-eruptive state.  Or, after a change from a higher alert level: Volcanic activity considered to have ceased, and volcano reverted to its normal, non-eruptive state.</dct:description>
+        <dcterms:description xml:lang="en">Volcano is in normal, non-eruptive state.  Or, after a change from a higher alert level: Volcanic activity considered to have ceased, and volcano reverted to its normal, non-eruptive state.</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -24,7 +24,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AviationColourCode/NIL">
         <skos:notation>NIL</skos:notation>
         <rdfs:label xml:lang="en">Nil</rdfs:label>
-        <dct:description xml:lang="en">Nil</dct:description>
+        <dcterms:description xml:lang="en">Nil</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -35,7 +35,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AviationColourCode/NOT_GIVEN">
         <skos:notation>NOT_GIVEN</skos:notation>
         <rdfs:label xml:lang="en">Not Given</rdfs:label>
-        <dct:description xml:lang="en">Not Given</dct:description>
+        <dcterms:description xml:lang="en">Not Given</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -46,7 +46,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AviationColourCode/ORANGE">
         <skos:notation>ORANGE</skos:notation>
         <rdfs:label xml:lang="en">Orange</rdfs:label>
-        <dct:description xml:lang="en">Volcano is exhibiting heightened unrest with increased likelihood of eruption.  Or, volcanic eruption is underway with no or minor ash emission [specify ash-plume height if possible].</dct:description>
+        <dcterms:description xml:lang="en">Volcano is exhibiting heightened unrest with increased likelihood of eruption.  Or, volcanic eruption is underway with no or minor ash emission [specify ash-plume height if possible].</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -57,7 +57,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AviationColourCode/RED">
         <skos:notation>RED</skos:notation>
         <rdfs:label xml:lang="en">Red</rdfs:label>
-        <dct:description xml:lang="en">Eruption is forecasted to be imminent with significant emission of ash into the atmosphere likely. Or, eruption is underway with significant emission of ash into the atmosphere [specify ash-plume height if possible].</dct:description>
+        <dcterms:description xml:lang="en">Eruption is forecasted to be imminent with significant emission of ash into the atmosphere likely. Or, eruption is underway with significant emission of ash into the atmosphere [specify ash-plume height if possible].</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -68,7 +68,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AviationColourCode/UNKNOWN">
         <skos:notation>UNKNOWN</skos:notation>
         <rdfs:label xml:lang="en">Unknown</rdfs:label>
-        <dct:description xml:lang="en">Unknown</dct:description>
+        <dcterms:description xml:lang="en">Unknown</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -79,7 +79,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/AviationColourCode/YELLOW">
         <skos:notation>YELLOW</skos:notation>
         <rdfs:label xml:lang="en">Yellow</rdfs:label>
-        <dct:description xml:lang="en">Volcano is experiencing signs of elevated unrest above known background levels. Or, after a change from higher alert level: Volcanic activity has decreased significantly but continues to be closely monitored for possible renewed increase.</dct:description>
+        <dcterms:description xml:lang="en">Volcano is experiencing signs of elevated unrest above known background levels. Or, after a change from higher alert level: Volcanic activity has decreased significantly but continues to be closely monitored for possible renewed increase.</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -90,11 +90,10 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:notation>AviationColourCode</skos:notation>
     <rdfs:label xml:lang="en">Volcanic Aviation Colour Code</rdfs:label>
-    <dct:description xml:lang="en">The items within this code table are the volcano level of alert colour codes for aviation defined in ICAO Doc 9766</dct:description>
+    <dcterms:description xml:lang="en">The items within this code table are the volcano level of alert colour codes for aviation defined in ICAO Doc 9766</dcterms:description>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-    <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
   </reg:Register>
 </rdf:RDF>

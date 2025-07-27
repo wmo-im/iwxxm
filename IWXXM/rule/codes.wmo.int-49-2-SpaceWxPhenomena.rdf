@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:reg="http://purl.org/linked-data/registry#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:ldp="http://www.w3.org/ns/ldp#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:ldp="http://www.w3.org/ns/ldp#"
 >
   <reg:Register rdf:about="http://codes.wmo.int/49-2/SpaceWxPhenomena">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxPhenomena/GNSS_MOD">
         <skos:notation>GNSS_MOD</skos:notation>
         <rdfs:label xml:lang="en">GNSS-based navigation and surveillance (degradation) - moderate</rdfs:label>
-        <dct:description xml:lang="en">GNSS-based navigation and surveillance (degradation) - moderate</dct:description>
+        <dcterms:description xml:lang="en">GNSS-based navigation and surveillance (degradation) - moderate</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -23,7 +23,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxPhenomena/GNSS_SEV">
         <skos:notation>GNSS_SEV</skos:notation>
         <rdfs:label xml:lang="en">GNSS-based navigation and surveillance (degradation) - severe</rdfs:label>
-        <dct:description xml:lang="en">GNSS-based navigation and surveillance (degradation) - severe</dct:description>
+        <dcterms:description xml:lang="en">GNSS-based navigation and surveillance (degradation) - severe</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -33,7 +33,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxPhenomena/HF_COM_MOD">
         <skos:notation>HF_COM_MOD</skos:notation>
         <rdfs:label xml:lang="en">HF communications (propagation, absorption) - moderate</rdfs:label>
-        <dct:description xml:lang="en">HF communications (propagation, absorption) - moderate</dct:description>
+        <dcterms:description xml:lang="en">HF communications (propagation, absorption) - moderate</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -43,7 +43,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxPhenomena/HF_COM_SEV">
         <skos:notation>HF_COM_SEV</skos:notation>
         <rdfs:label xml:lang="en">HF communications (propagation, absorption) - severe</rdfs:label>
-        <dct:description xml:lang="en">HF communications (propagation, absorption) - severe</dct:description>
+        <dcterms:description xml:lang="en">HF communications (propagation, absorption) - severe</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -53,7 +53,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxPhenomena/RADIATION_MOD">
         <skos:notation>RADIATION_MOD</skos:notation>
         <rdfs:label xml:lang="en">Radiation at flight levels (increased exposure) - moderate</rdfs:label>
-        <dct:description xml:lang="en">Radiation at flight levels (increased exposure) - moderate</dct:description>
+        <dcterms:description xml:lang="en">Radiation at flight levels (increased exposure) - moderate</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -63,7 +63,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxPhenomena/RADIATION_SEV">
         <skos:notation>RADIATION_SEV</skos:notation>
         <rdfs:label xml:lang="en">Radiation at flight levels (increased exposure) - severe</rdfs:label>
-        <dct:description xml:lang="en">Radiation at flight levels (increased exposure) - severe</dct:description>
+        <dcterms:description xml:lang="en">Radiation at flight levels (increased exposure) - severe</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -73,7 +73,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxPhenomena/SATCOM_MOD">
         <skos:notation>SATCOM_MOD</skos:notation>
         <rdfs:label xml:lang="en">Communications via satellite (propagation, absorption) - moderate</rdfs:label>
-        <dct:description xml:lang="en">Communications via satellite (propagation, absorption) - moderate</dct:description>
+        <dcterms:description xml:lang="en">Communications via satellite (propagation, absorption) - moderate</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -83,7 +83,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/SpaceWxPhenomena/SATCOM_SEV">
         <skos:notation>SATCOM_SEV</skos:notation>
         <rdfs:label xml:lang="en">Communications via satellite (propagation, absorption) - severe</rdfs:label>
-        <dct:description xml:lang="en">Communications via satellite (propagation, absorption) - severe</dct:description>
+        <dcterms:description xml:lang="en">Communications via satellite (propagation, absorption) - severe</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
@@ -93,10 +93,9 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:notation>SpaceWxPhenomena</skos:notation>
     <rdfs:label xml:lang="en">Space Wx Phenomena</rdfs:label>
-    <dct:description xml:lang="en">The items within this code table are the types of space weather phenomena of significance to aeronautical operations</dct:description>
+    <dcterms:description xml:lang="en">The items within this code table are the types of space weather phenomena of significance to aeronautical operations</dcterms:description>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
-    <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
   </reg:Register>
 </rdf:RDF>

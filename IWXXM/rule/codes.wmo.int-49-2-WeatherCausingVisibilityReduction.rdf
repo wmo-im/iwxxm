@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:reg="http://purl.org/linked-data/registry#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:ldp="http://www.w3.org/ns/ldp#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:ldp="http://www.w3.org/ns/ldp#"
 >
   <reg:Register rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction">
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/BR">
         <skos:notation>BR</skos:notation>
         <rdfs:label xml:lang="en">Mist</rdfs:label>
-        <dct:description xml:lang="en">Mist</dct:description>
+        <dcterms:description xml:lang="en">Mist</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -25,7 +25,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/DS">
         <skos:notation>DS</skos:notation>
         <rdfs:label xml:lang="en">Duststorm</rdfs:label>
-        <dct:description xml:lang="en">Duststorm</dct:description>
+        <dcterms:description xml:lang="en">Duststorm</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -37,7 +37,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/DU">
         <skos:notation>DU</skos:notation>
         <rdfs:label xml:lang="en">Dust</rdfs:label>
-        <dct:description xml:lang="en">Dust</dct:description>
+        <dcterms:description xml:lang="en">Dust</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -49,7 +49,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/DZ">
         <skos:notation>DZ</skos:notation>
         <rdfs:label xml:lang="en">Drizzle</rdfs:label>
-        <dct:description xml:lang="en">Drizzle</dct:description>
+        <dcterms:description xml:lang="en">Drizzle</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -61,7 +61,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/FC">
         <skos:notation>FC</skos:notation>
         <rdfs:label xml:lang="en">Funnel Cloud</rdfs:label>
-        <dct:description xml:lang="en">Funnel Cloud</dct:description>
+        <dcterms:description xml:lang="en">Funnel Cloud</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -73,7 +73,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/FG">
         <skos:notation>FG</skos:notation>
         <rdfs:label xml:lang="en">Fog</rdfs:label>
-        <dct:description xml:lang="en">Fog</dct:description>
+        <dcterms:description xml:lang="en">Fog</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -85,7 +85,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/FU">
         <skos:notation>FU</skos:notation>
         <rdfs:label xml:lang="en">Smoke</rdfs:label>
-        <dct:description xml:lang="en">Smoke</dct:description>
+        <dcterms:description xml:lang="en">Smoke</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -97,7 +97,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/GR">
         <skos:notation>GR</skos:notation>
         <rdfs:label xml:lang="en">Hail</rdfs:label>
-        <dct:description xml:lang="en">Hail</dct:description>
+        <dcterms:description xml:lang="en">Hail</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -109,7 +109,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/GS">
         <skos:notation>GS</skos:notation>
         <rdfs:label xml:lang="en">Small Hail</rdfs:label>
-        <dct:description xml:lang="en">Small Hail</dct:description>
+        <dcterms:description xml:lang="en">Small Hail</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -121,7 +121,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/HZ">
         <skos:notation>HZ</skos:notation>
         <rdfs:label xml:lang="en">Haze</rdfs:label>
-        <dct:description xml:lang="en">Haze</dct:description>
+        <dcterms:description xml:lang="en">Haze</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -133,7 +133,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/PL">
         <skos:notation>PL</skos:notation>
         <rdfs:label xml:lang="en">Ice pellets</rdfs:label>
-        <dct:description xml:lang="en">Ice pellets</dct:description>
+        <dcterms:description xml:lang="en">Ice pellets</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -145,7 +145,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/PO">
         <skos:notation>PO</skos:notation>
         <rdfs:label xml:lang="en">Dust/stand whirls</rdfs:label>
-        <dct:description xml:lang="en">Dust/stand whirls</dct:description>
+        <dcterms:description xml:lang="en">Dust/stand whirls</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -157,7 +157,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/RA">
         <skos:notation>RA</skos:notation>
         <rdfs:label xml:lang="en">Rain</rdfs:label>
-        <dct:description xml:lang="en">Rain</dct:description>
+        <dcterms:description xml:lang="en">Rain</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -169,7 +169,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/SA">
         <skos:notation>SA</skos:notation>
         <rdfs:label xml:lang="en">Sand</rdfs:label>
-        <dct:description xml:lang="en">Sand</dct:description>
+        <dcterms:description xml:lang="en">Sand</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -181,7 +181,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/SG">
         <skos:notation>SG</skos:notation>
         <rdfs:label xml:lang="en">Snow grams</rdfs:label>
-        <dct:description xml:lang="en">Snow grams</dct:description>
+        <dcterms:description xml:lang="en">Snow grams</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -193,7 +193,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/SN">
         <skos:notation>SN</skos:notation>
         <rdfs:label xml:lang="en">Snow</rdfs:label>
-        <dct:description xml:lang="en">Snow</dct:description>
+        <dcterms:description xml:lang="en">Snow</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -205,7 +205,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/SQ">
         <skos:notation>SQ</skos:notation>
         <rdfs:label xml:lang="en">Squall</rdfs:label>
-        <dct:description xml:lang="en">Squall</dct:description>
+        <dcterms:description xml:lang="en">Squall</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -217,7 +217,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/SS">
         <skos:notation>SS</skos:notation>
         <rdfs:label xml:lang="en">Sandstorm</rdfs:label>
-        <dct:description xml:lang="en">Sandstorm</dct:description>
+        <dcterms:description xml:lang="en">Sandstorm</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -229,7 +229,7 @@
       <skos:Concept rdf:about="http://codes.wmo.int/49-2/WeatherCausingVisibilityReduction/VA">
         <skos:notation>VA</skos:notation>
         <rdfs:label xml:lang="en">Volcanic Ash</rdfs:label>
-        <dct:description xml:lang="en">Volcanic Ash</dct:description>
+        <dcterms:description xml:lang="en">Volcanic Ash</dcterms:description>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
         <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
@@ -241,12 +241,11 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
     <skos:notation>WeatherCausingVisibilityReduction</skos:notation>
     <rdfs:label xml:lang="en">Weather Causing Visibility Reduction</rdfs:label>
-    <dct:description xml:lang="en">The items within this code table are the weather phenomena or combinations thereof causing reduction of visibility to less than 5 000 m in widespread areas – as used in AIRMET and specified in ICAO Annex 3 and PANS-MET (SFC VIS)</dct:description>
+    <dcterms:description xml:lang="en">The items within this code table are the weather phenomena or combinations thereof causing reduction of visibility to less than 5 000 m in widespread areas – as used in AIRMET and specified in ICAO Annex 3 and PANS-MET (SFC VIS)</dcterms:description>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
     <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
-    <ldp:hasMemberRelation rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
   </reg:Register>
 </rdf:RDF>
