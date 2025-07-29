@@ -1,1 +1,0 @@
-FM 205 IWXXM-XML chapter in the Manual on Codes (WMO-No. 306), Volume I.3.

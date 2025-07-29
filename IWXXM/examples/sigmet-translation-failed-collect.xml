@@ -12,7 +12,7 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
             xmlns:iwxxm="http://icao.int/iwxxm/2025-2"
-            xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
+            xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC2/iwxxm.xsd"
             gml:id="uuid.636569b5-6b9b-4ed7-aa60-ad373a9e372b"
             reportStatus="NORMAL"
             permissibleUsage="OPERATIONAL"
@@ -26,7 +26,7 @@
         
             <iwxxm:issueTime>
                 <gml:TimeInstant gml:id="uuid.5599e948-f719-4fc2-85fc-20ad96644250">
-                    <gml:timePosition>2012-08-10T12:00:00Z</gml:timePosition>
+                    <gml:timePosition>2012-08-10T10:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:issueTime>
             

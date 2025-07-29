@@ -1,159 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-    xmlns:ldp="http://www.w3.org/ns/ldp#"
-    xmlns:version="http://purl.org/linked-data/version#"
-    xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:ui="http://purl.org/linked-data/registry-ui#"
-    xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
-    xmlns:ssd="http://www.w3.org/ns/sparql-service-description#"
-    xmlns:vann="http://purl.org/vocab/vann/"
-    xmlns:cc="http://creativecommons.org/ns#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.0="http://codes.wmo.int/def/bufr4/"
-    xmlns:reg="http://purl.org/linked-data/registry#"
-    xmlns:bufr4-core="http://codes.wmo.int/bufr4/schema/core/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:void="http://rdfs.org/ns/void#"
-    xmlns:time="http://www.w3.org/2006/time#"
-    xmlns:dgu="http://reference.data.gov.uk/def/reference/"
-    xmlns:common-unit="http://codes.wmo.int/common/schema/unit/"
-    xmlns:common-core="http://codes.wmo.int/common/schema/core/"
-    xmlns:qudt="http://qudt.org/schema/qudt#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:qb="http://purl.org/linked-data/cube#"
-    xmlns:grib2-parameter="http://codes.wmo.int/grib2/schema/parameter/"
-    xmlns:qudt-unit="http://qudt.org/vocab/unit#"
-    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
-    xmlns:api="http://purl.org/linked-data/api/vocab#"
-    xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    xmlns:grib2-core="http://codes.wmo.int/grib2/schema/core/">
+  xmlns:reg="http://purl.org/linked-data/registry#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:ldp="http://www.w3.org/ns/ldp#"
+>
   <reg:Register rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041">
     <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/7">
-        <rdfs:label xml:lang="en">Severe icing</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >7</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/0">
+        <skos:notation>0</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdfs:label>
+        <dcterms:description xml:lang="en">No icing</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-    >1</owl:versionInfo>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/6">
-        <rdfs:label xml:lang="en">Moderate icing in precipitation</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >6</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-    >2014-09-03T09:54:52.297Z</dct:modified>
-    <reg:manager rdf:resource="http://codes.wmo.int/system/organization/www-dm"/>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/15">
-        <rdfs:label xml:lang="en">Missing value</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >15</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/11">
-        <rdfs:label xml:lang="en">Trace of icing in cloud</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >11</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <rdfs:label>Airframe icing</rdfs:label>
-    <dct:publisher rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
-    <reg:owner rdf:resource="http://codes.wmo.int/system/organization/wmo"/>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/1">
-        <rdfs:label xml:lang="en">Light icing</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >1</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/0">
-        <rdfs:label xml:lang="en">No icing</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >0</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/10">
-        <rdfs:label xml:lang="en">Trace of icing</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >10</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/9">
-        <rdfs:label xml:lang="en">Severe icing in precipitation</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >9</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/3">
-        <rdfs:label xml:lang="en">Light icing in precipitation</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >3</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/12">
-        <rdfs:label xml:lang="en">Trace of icing in precipitation</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >12</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
-      </skos:Concept>
-    </skos:member>
-    <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/8">
-        <rdfs:label xml:lang="en">Severe icing in cloud</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >8</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
+        <skos:notation>1</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdfs:label>
+        <dcterms:description xml:lang="en">Light icing</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/2">
-        <rdfs:label xml:lang="en">Light icing in cloud</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >2</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
+        <skos:notation>2</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdfs:label>
+        <dcterms:description xml:lang="en">Light icing in cloud</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/3">
+        <skos:notation>3</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdfs:label>
+        <dcterms:description xml:lang="en">Light icing in precipitation</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/4">
+        <skos:notation>4</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdfs:label>
+        <dcterms:description xml:lang="en">Moderate icing</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
     <skos:member>
       <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/5">
-        <rdfs:label xml:lang="en">Moderate icing in cloud</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >5</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
+        <skos:notation>5</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdfs:label>
+        <dcterms:description xml:lang="en">Moderate icing in cloud</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
-    <ldp:membershipPredicate rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
     <skos:member>
-      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/4">
-        <rdfs:label xml:lang="en">Moderate icing</rdfs:label>
-        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >4</skos:notation>
-        <j.0:fxy>020041</j.0:fxy>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/6">
+        <skos:notation>6</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdfs:label>
+        <dcterms:description xml:lang="en">Moderate icing in precipitation</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
       </skos:Concept>
     </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/7">
+        <skos:notation>7</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdfs:label>
+        <dcterms:description xml:lang="en">Severe icing</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/8">
+        <skos:notation>8</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdfs:label>
+        <dcterms:description xml:lang="en">Severe icing in cloud</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/9">
+        <skos:notation>9</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</rdfs:label>
+        <dcterms:description xml:lang="en">Severe icing in precipitation</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/10">
+        <skos:notation>10</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdfs:label>
+        <dcterms:description xml:lang="en">Trace of icing</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/11">
+        <skos:notation>11</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</rdfs:label>
+        <dcterms:description xml:lang="en">Trace of icing in cloud</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/12">
+        <skos:notation>12</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</rdfs:label>
+        <dcterms:description xml:lang="en">Trace of icing in precipitation</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://codes.wmo.int/bufr4/codeflag/0-20-041/15">
+        <skos:notation>15</skos:notation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</rdfs:label>
+        <dcterms:description xml:lang="en">Missing value</dcterms:description>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+        <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
+      </skos:Concept>
+    </skos:member>
+    <rdf:type rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <skos:notation>0-20-041</skos:notation>
+    <rdfs:label xml:lang="en">Airframe icing</rdfs:label>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/1.1"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2.1"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/3.0"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2021-2"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2023-1"/>
+    <owl:versionInfo rdf:resource="http://icao.int/iwxxm/2025-2"/>
   </reg:Register>
 </rdf:RDF>

@@ -5,7 +5,8 @@
 # Permanent exclusions
 
 # Temporary exclusions (to be re-enabled once available, ideally before the release is issued)
-http://codes.wmo.int/49-2/MeteorologicalFeature
 http://codes.wmo.int/49-2/SpaceWxLocation
-http://codes.wmo.int/iwxxm/VolcanicAshConcentrations
+http://codes.wmo.int/iwxxm/MeteorologicalFeature
+http://codes.wmo.int/iwxxm/AviationColourCode
+http://codes.wmo.int/iwxxm/nil
 http://online-resource-of-features

@@ -3,7 +3,7 @@
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
-		<documentation>Space Weather Advisory reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
+		<documentation>Space Weather Advisory reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
 Space Weather Advisories report the occurrence and/or expected occurrence of space weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These phenomena are reported as impacted regions of airspace.
 
@@ -11,7 +11,7 @@ References to WMO and ICAO Technical Regulations within this XML schema shall ha
 	</annotation>
 	<element name="SpaceWeatherAdvisory" type="iwxxm:SpaceWeatherAdvisoryType" substitutionGroup="iwxxm:Report">
 		<annotation>
-			<documentation>An advisory of space weather conditions of significance to aviation as represented in ICAO Annex 3 / WMO No. 49-2.  Volcanic ash advisories are issued by space weather centres (SWXCs)</documentation>
+			<documentation>An advisory of space weather conditions of significance to aviation as represented in ICAO Annex 3 and PANS-MET (Doc 10157).  Volcanic ash advisories are issued by space weather centres (SWXCs)</documentation>
 		</annotation>
 	</element>
 	<complexType name="SpaceWeatherAdvisoryType">
@@ -94,9 +94,9 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 							<documentation>The time at which meteorological phenomena occur</documentation>
 						</annotation>
 					</element>
-					<element name="intensityAndRegion" type="iwxxm:SpaceWeatherIntensityAndRegionPropertyType" minOccurs="1" maxOccurs="unbounded">
+					<element nillable="true" name="intensityAndRegion" type="iwxxm:SpaceWeatherIntensityAndRegionPropertyType" minOccurs="1" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Container of intensity of the space weather phenomena and affected region(s).</documentation>
+							<documentation>Container of intensity of the space weather phenomena and affected region(s)</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -169,7 +169,7 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 							<documentation>The geographic location at which space weather phenomena occur</documentation>
 						</annotation>
 					</element>
-					<element name="locationIndicator" type="iwxxm:SpaceWeatherLocationType" minOccurs="0" maxOccurs="1">
+					<element nillable="true" name="locationIndicator" type="iwxxm:SpaceWeatherLocationType" minOccurs="1" maxOccurs="6">
 						<annotation>
 							<documentation>The geographic area code, such as high northern latitudes</documentation>
 						</annotation>
@@ -232,16 +232,22 @@ When no subsequent advisory is expected to be issued it should be indicated by a
 					<documentation>Severe.</documentation>
 				</annotation>
 			</enumeration>
-			<enumeration value="MOD_OR_SEV">
-				<annotation>
-					<documentation>Moderate or severe.</documentation>
-				</annotation>
-			</enumeration>
 		</restriction>
 	</simpleType>
 	<element name="SpaceWeatherLocation" type="iwxxm:SpaceWeatherLocationType"></element>
 	<complexType name="SpaceWeatherLocationType">
 		<annotation>
+			<documentation>Coverage affected by space weather phenomenon
+
+
+	- HNH (high northern hemisphere)
+	- MNH (middle northern hemisphere)
+	- EQN (equatorial latitudes northern hemisphere)
+	- EQS (equatorial latitudes southern hemisphere)
+	- MSH (middle latitudes southern hemisphere)
+	- HSH (high latitudes southern hemisphere)
+	- DAYSIDE (Day side)
+	- NIGHTSIDE (Night side)</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/SpaceWxLocation</vocabulary>
 				<extensibility>none</extensibility>
