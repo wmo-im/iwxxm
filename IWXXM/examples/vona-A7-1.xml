@@ -53,7 +53,7 @@
                     <aixm:name>KVERT</aixm:name>
 		    <aixm:type>OTHER:SVO</aixm:type>
 		    <aixm:compliantICAO>YES</aixm:compliantICAO>
-                    <aixm:designator>RUPK</aixm:designator>
+                    <aixm:designator>UHPP</aixm:designator>
                 </aixm:UnitTimeSlice>
             </aixm:timeSlice>
         </aixm:Unit>
