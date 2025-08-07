@@ -39,7 +39,7 @@
 
 *205-2025-2.2.3* Each IWXXM version addresses the requirements of amendments to ICAO Annex 3 and/or PANS-MET. Those amendments affect the packages composing IWXXM in different ways, and the resulting new version of the packages shall reflect the level of change required by the amendments following the semantic versioning described in 205-2025-2.2.2.
 
-*205-2025-2.2.4* The following table is identifies which version of each package composing IWXXM complies with specific ICAO Annex 3 and PANS-MET amendments.
+*205-2025-2.2.4* The following table identifies which version of each package composing IWXXM complies with specific ICAO Annex 3 and PANS-MET amendments.
 
 [width="100%",options="header",]
 |===
@@ -78,7 +78,7 @@
 
 * https://schemas.wmo.int/iwxxm/2025-2/examples/
 
-*205-2025-2.3.5* The IWXXM logical model describes the exchange model for aeronautical meteorological information and is represented in Unified Modeling Language (UML). It is also used for generation of IWXXM-XML schemas and Schematron rules. An export of the logical model in HTML format is included for browsing.
+*205-2025-2.3.5* The IWXXM logical model describes the exchange model for aeronautical meteorological information and is represented in Unified Modeling Language (UML). It is also used to generate IWXXM-XML schemas and Schematron rules. An export of the logical model in HTML format is included for browsing.
 
 * https://schemas.wmo.int/iwxxm/2025-2/html/
 
@@ -130,7 +130,7 @@
 [width="100%",cols="20%,43%,37%",options="header",]
 |===
 |Name |Description |URL
-|Nil reasons |Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. Terms are drawn from authorities in addition to WMO,including ISO/TC 211 (from ISO 19136:2007 Geography markup language clause 8.2.3.1; published on their behalf by the Open Geospatial Consortium).	 |http://codes.wmo.int/iwxxm/nil
+|Nil reasons |Nil-reason terms are used to provide an explanation for recording a missing (or void) value within a data product. Terms are drawn from authorities in addition to WMO, including ISO/TC 211 (from ISO 19136:2007 Geography markup language clause 8.2.3.1; published on their behalf by the Open Geospatial Consortium).	 |http://codes.wmo.int/iwxxm/nil
 |Meteorological Features |The items within this code table are the weather phenomena represented by a weather object. |http://codes.wmo.int/iwxxm/meteorologicalFeature
 |Volcanic Aviation Colour Code	 |The items within this code table are the volcano level of alert colour codes for aviation defined in ICAO Doc 9766. |http://codes.wmo.int/iwxxm/volcanicAviationColourCode
 |===
