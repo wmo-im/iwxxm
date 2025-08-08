@@ -35,7 +35,7 @@
 *205-2025-2.2.2* Each release of IWXXM is composed of individual packages with their version number following the semantic versioning: MAJOR.MINOR.PATCH (example TAF 3.0.1) where: 
 – A MAJOR (X.y.z) version introduces major conceptual changes. Forward data mapping is not guaranteed. 
 – A MINOR (x.Y.x) version introduces new model elements and capabilities guaranteeing forward data mapping for non-deprecated elements or deprecated elements with replacement. Loss of information may happen for elements that are no longer required.
-– A PATCH (x.y.Z) version is limited to bug fixing. Forward and backward data mapping is guaranteed without loss of information. A PATCH version does not impose changes in a consuming system, however,  data conversion may still be required.
+– A PATCH (x.y.Z) version is limited to bug fixing. Forward and backward data mapping is guaranteed without loss of information. A PATCH version does not impose changes in a consuming system; however,  data conversion may still be required.
 
 *205-2025-2.2.3* Each IWXXM version addresses the requirements of amendments to ICAO Annex 3 and/or PANS-MET. Those amendments affect the packages composing IWXXM in different ways, and the resulting new version of the packages shall reflect the level of change required by the amendments following the semantic versioning described in 205-2025-2.2.2.
 
