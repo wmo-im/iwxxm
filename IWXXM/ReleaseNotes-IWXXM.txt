@@ -13,7 +13,6 @@ Package Space Weather Advisory (Version 3.1.0RC2)
   * Updated example spacewx-A7-3.xml to show an improved way to encode the geometry of the affected volume in a Space Weather Advisory
   * Updated all Space Weather Advisory examples to show the correct way to indicate nil information in iwxxm:locationIndicator
 Package WAFS Significant Weather Forecast (Version 1.2.0RC2)
-  * Revised iwxxm:WAFSSignificantWeatherForecast to allow for extension
   * Revised to use codelists http://codes.wmo.int/iwxxm/MeteorologicalFeature and http://codes.wmo.int/iwxxm/nil
 Package Quantitative Volcanic Ash Concentration Information (Version 1.0.0RC2)
   * Removed codelist http://codes.wmo.int/iwxxm/VolcanicAshConcentrations. Amended example qvaci-Example.xml accordingly
