@@ -22,7 +22,6 @@ Package Quantitative Volcanic Ash Concentration Information (Version 1.0.0RC2)
 Package Volcano Observatory Notice for Aviation (Version 1.0.0RC2)
   * Replaced Aviation Colour Code enumeration with codelist http://codes.wmo.int/iwxxm/AviationColourCode
   * Revised example vona-A7-1.xml
-  * Revised iwxxm:VocanoObservatoryNoticeForAviation to allow for extension
   * Revised to use codelists http://codes.wmo.int/iwxxm/MeteorologicalFeature and http://codes.wmo.int/iwxxm/nil
 Package MeteorologicalFeature (Version 1.1.0RC2)
   * Revised iwxxm:MeteorologicalFeature to allow for extension
