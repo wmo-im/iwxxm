@@ -3,7 +3,7 @@
 	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
-		<documentation>Common constructs used across multiple packages.  This package includes constructs closely related to the aviation weather domain.
+		<documentation>Common constructs and measured quantities used across multiple packages.  This package includes constructs closely related to the aviation weather domain.
 
 References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
@@ -165,18 +165,6 @@ This extends AerodromeSurfaceWindTrendForecast to allow for a variable wind dire
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	<element name="StringWithNilReason" type="iwxxm:StringWithNilReasonType">
-		<annotation>
-			<documentation>A nillable string quantity.  References to this type may be nil and may include a nilReason</documentation>
-		</annotation>
-	</element>
-	<complexType name="StringWithNilReasonType">
-		<simpleContent>
-			<extension base="string">
-				<attribute name="nilReason" type="gml:NilReasonType"/>
-			</extension>
-		</simpleContent>
-	</complexType>
 	<element name="AerodromeSurfaceWindTrendForecast" type="iwxxm:AerodromeSurfaceWindTrendForecastType" substitutionGroup="gml:AbstractObject">
 		<annotation>
 			<documentation>A trend forecast of surface wind conditions at an aerodrome.</documentation>
@@ -281,6 +269,78 @@ Measured cloud bases shall be reported in meters ("m") or feet ("[ft_i]").</docu
 		</sequence>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
+	<element name="AngleWithNilReason" type="iwxxm:AngleWithNilReasonType">
+		<annotation>
+			<documentation>A nillable Angle quantity.  Unlike the base Angle measure, references to this type may be nil and may include a nilReason</documentation>
+		</annotation>
+	</element>
+	<complexType name="AngleWithNilReasonType">
+		<simpleContent>
+			<extension base="gml:AngleType">
+				<attribute name="nilReason" type="gml:NilReasonType"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<element name="DistanceWithNilReason" type="iwxxm:DistanceWithNilReasonType">
+		<annotation>
+			<documentation>A nillable Distance quantity.  Unlike the base Distance measure, references to this type may be nil and may include a nilReason</documentation>
+		</annotation>
+	</element>
+	<complexType name="DistanceWithNilReasonType">
+		<simpleContent>
+			<extension base="gml:LengthType">
+				<attribute name="nilReason" type="gml:NilReasonType"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<element name="LengthWithNilReason" type="iwxxm:LengthWithNilReasonType">
+		<annotation>
+			<documentation>A nillable Length quantity.  Unlike the base Length measure, references to this type may be nil and include a nilReason</documentation>
+		</annotation>
+	</element>
+	<complexType name="LengthWithNilReasonType">
+		<simpleContent>
+			<extension base="gml:LengthType">
+				<attribute name="nilReason" type="gml:NilReasonType"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<element name="MeasureWithNilReason" type="iwxxm:MeasureWithNilReasonType">
+		<annotation>
+			<documentation>A nillable Measure quantity.  Unlike the base measure, references to this type may be nil and may include a nilReason</documentation>
+		</annotation>
+	</element>
+	<complexType name="MeasureWithNilReasonType">
+		<simpleContent>
+			<extension base="gml:MeasureType">
+				<attribute name="nilReason" type="gml:NilReasonType"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<element name="VelocityWithNilReason" type="iwxxm:VelocityWithNilReasonType">
+		<annotation>
+			<documentation>A nillable Velocity quantity.  Unlike the base Velocity measure, references to this type may be nil and may include a nilReason</documentation>
+		</annotation>
+	</element>
+	<complexType name="VelocityWithNilReasonType">
+		<simpleContent>
+			<extension base="gml:SpeedType">
+				<attribute name="nilReason" type="gml:NilReasonType"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<element name="StringWithNilReason" type="iwxxm:StringWithNilReasonType">
+		<annotation>
+			<documentation>A nillable string quantity.  References to this type may be nil and may include a nilReason</documentation>
+		</annotation>
+	</element>
+	<complexType name="StringWithNilReasonType">
+		<simpleContent>
+			<extension base="string">
+				<attribute name="nilReason" type="gml:NilReasonType"/>
+			</extension>
+		</simpleContent>
+	</complexType>
 	<simpleType name="ReportStatusType">
 		<annotation>
 			<documentation>This indicates the issuance status of the report, including:
@@ -309,7 +369,7 @@ CORRECTION: The report is a correction to a previously issued report</documentat
 	</simpleType>
 	<simpleType name="RelationalOperatorType">
 		<annotation>
-			<documentation>RelationalOperator defines the restricted set of operators that may be specified alongside numerical quantities in ICAO Annex 3/WMO No. 49.
+			<documentation>RelationalOperator defines the restricted set of operators that may be specified alongside numerical quantities in ICAO Annex 3 and PANS-MET (Doc 10157).
 
 These operators are used in cases where a precise value is not measurable, not precisely known due to measurement limitations, or not reported due to reporting restrictions.
 
@@ -384,9 +444,9 @@ For example, the "above" operator in conjunction with the reported quantity 10.6
 		<annotation>
 			<documentation>AerodromeForecastWeather enables the forecast weather at an aerodrome to be reported.
 
-Only a specific set of weather phenomenon are reported within aviation meteorology as defined in Regulation ICAO Annex 3 / WMO No. 49-2.
+Only a specific set of weather phenomenon are reported within aviation meteorology as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
-This CodeList is specifically defined for aviation purposes as defined in WMO No. 49-2. A superset of definitions are defined in WMO No. 306 Vol I.1 code-table 4678 "Significant weather phenomena".</documentation>
+This codelist is specifically defined for aviation purposes as defined in PANS-MET. A superset of definitions are defined in the Manual on Codes (WMO No. 306), Vol I.1 Code table 4678 "Significant weather phenomena".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</vocabulary>
 				<extensibility>none</extensibility>
@@ -404,7 +464,7 @@ This CodeList is specifically defined for aviation purposes as defined in WMO No
 - Cumulonimbus
 - Towering cumulus
 
-This CodeList is specifically defined for aviation purposes, as defined in WMO No. 49-2. A superset of definitions are defined in WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 012 "Cloud type".</documentation>
+This codelist is specifically defined for aviation purposes, as defined in PANS-MET. A superset of definitions are defined in the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 20 012 "Cloud type".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/SigConvectiveCloudType</vocabulary>
 				<extensibility>none</extensibility>
@@ -425,7 +485,7 @@ This CodeList is specifically defined for aviation purposes, as defined in WMO N
 - Broken (5 - 7 oktas)
 - Overcast (8 oktas)
 
-This CodeList is specifically defined for aviation purposes, as defined in WMO No. 49-2. A superset of cloud-amount categories are defined in WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 008 "Cloud distribution for aviation".</documentation>
+This codelist is specifically defined for aviation purposes, as defined in PANS-MET. A superset of cloud-amount categories are defined in the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 20 008 "Cloud distribution for aviation".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/CloudAmountReportedAtAerodrome</vocabulary>
 				<extensibility>none</extensibility>

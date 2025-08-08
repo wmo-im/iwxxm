@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Cloud: MeteorologicalFeature</title>
+<title>Tropopause: MeteorologicalFeature</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -33,16 +33,16 @@ function nameClassifier(name, separator)
 <body onload="initPage(this);" class="Content">
 <div class="pageHeader"></div>
 <div class="PageBody">
-	<div id="name_classifier" style="display: none;"><a href="../EA11/EA203.htm">«featureType» MeteorologicalFeature</a></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Cloud", " : "))</script>  : Public  &lt;&lt;IWXXMXML&gt;&gt; Object instance</span>
+	<div id="name_classifier" style="display: none;"><a href="../EA11/EA202.htm">«featureType» MeteorologicalFeature</a></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Tropopause", " : "))</script>  : Public  &lt;&lt;IWXXMXML&gt;&gt; Object instance</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">3/20/2020 5:45:15 PM</td>
+			<td width="85%" class="ObjectDetailsValue">20-Mar-20 5:52:27 PM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">3/29/2020 9:35:11 PM</td>
+			<td class="ObjectDetailsValue">03-Apr-20 11:45:07 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,14 +87,14 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{DAC86B72-395D-42d7-A033-5C9F84C010FA}</td>
+			<td class="ObjectDetailsValue">{EF3B7AF5-D2FF-4846-B698-0B7014F450F5}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA144.htm">Context Diagram: Significant Weather Objects</a></td>
+			<td class="ObjectDetailsValue"><a href="EA143.htm">Context Diagram: Significant Weather Objects</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">In the WAFC significant weather representation cloud is represented by an area with information on its base, top, type and distribution.&lt;br/&gt;&lt;br/&gt;The cloud object which is an instance of iwxxm:MeteorologicalFeature has the following characteristics at the indicated phenomenonTime:&lt;br/&gt;&lt;br/&gt;1. iwxxm:phenomenonGeometry shall be a iwxxm:ElevatedVolume with gml:Surface on CRS EPSG:4326 described by gml:CubicSpline with the boundary points of the area and base and top as the iwxxm:lowerElevation and iwxxm:upperElevation of the volume.&lt;br/&gt;2. iwxxm:phenomenonProperty shall describe type and distribution of cloud within the volume.&#160; See WMO No. 306 Vol I.2 FM 94 BUFR code tables 0 20 008 &quot;Cloud Distribution for Aviation&quot; and 0 20 012 &quot;Cloud Type&quot; for details.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">In the WAFC significant weather representation tropopause is made up of contours of tropopause elevation.&lt;br/&gt;&lt;br/&gt;The tropopause object which is an instance of iwxxm:MeteorologicalFeature has the following characteristics at the indicated phenomenonTime:&lt;br/&gt;&lt;br/&gt;1. iwxxm:phenomenonGeometry shall be a gml:Polygon on CRS EPSG:4326 described by gml:CubicSpline with points on the contour.&#160; &lt;br/&gt;2. iwxxm:phenomenonProperty shall indicate the elevation of the contour with iwxxm:ElevatedLevel.&lt;br/&gt;&lt;br/&gt;</div>
 
 <div class="pageFooter"></div>
  

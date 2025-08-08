@@ -38,11 +38,11 @@ function nameClassifier(name, separator)
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">3/2/2012 3:29:28 PM</td>
+			<td width="85%" class="ObjectDetailsValue">02-Mar-12 3:29:28 PM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">1/24/2024 12:36:21 PM</td>
+			<td class="ObjectDetailsValue">24-Jun-25 1:31:28 AM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -55,7 +55,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
-			<td class="ObjectDetailsValue">2025-2RC1</td>
+			<td class="ObjectDetailsValue">2025-2RC2</td>
 		</tr>
 		<tr id="proj02" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
@@ -94,7 +94,7 @@ function nameClassifier(name, separator)
 			<td class="ObjectDetailsValue"><a href="EA1.htm">ICAO Meteorological Information Exchange Model</a>, <a href="EA3.htm">ICAO Meteorological Information Exchange Model (Overview)</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The ICAO Meteorological Information Exchange Model (IWXXM) package, including METAR, SPECI, TAF, and other reports as defined in ICAO Annex 3.&#160; IWXXM reports are essential operational meteorology products used to enable safe and efficient air travel worldwide.&lt;br/&gt;&lt;br/&gt;The report types in this package include METAR, SPECI, TAF, SIGMET, AIRMET, Volcanic Ash Advisory (VAA), Tropical Cyclone Advisory (TCA), and Space Weather Advisory.&lt;br/&gt;&lt;br/&gt;This package builds upon the ISO 19100 family (ISO TC211) and WMO standard meteorological modeling constructs. Additionally, the constructs in this application schema refer to a number of aviation constructs such Runway and Airspace from AIXM.&#160; The full relationship of this package with external dependencies are shown in the &#39;Package Dependencies&#39; diagram.&lt;br/&gt;&lt;br/&gt;Not all of the reports types from Annex 3 are currently represented, this may be expanded in a future version.&lt;br/&gt;&lt;br/&gt;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence.&#160; Technical Regulations may impose requirements that are not described in this schema.&lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">The ICAO Meteorological Information Exchange Model (IWXXM) package, including METAR, SPECI, TAF, and other reports as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#160; IWXXM reports are essential operational meteorology products used to enable safe and efficient air travel worldwide.&lt;br/&gt;&lt;br/&gt;The report types in this package include METAR/SPECI, TAF, SIGMET, AIRMET, Volcanic Ash Advisory, Tropical Cyclone Advisory, Space Weather Advisory, WAFS Significant Weather Forecast, Quantitative Volcanic Ash Concentration Information and Volcano Observatory Notice for Aviation.&lt;br/&gt;&lt;br/&gt;This package builds upon the ISO 19100 family (ISO TC211) and WMO standard meteorological modeling constructs. Additionally, the constructs in this application schema refer to a number of aviation constructs such Runway and Airspace from AIXM.&#160; The full relationship of this package with external dependencies are shown in the &#39;Package Dependencies&#39; diagram.&lt;br/&gt;&lt;br/&gt;Not all of the reports types from Annex 3 are currently represented, this may be expanded in a future version.&lt;br/&gt;&lt;br/&gt;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence.&#160; Technical Regulations may impose requirements that are not described in this schema.&lt;br/&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -120,13 +120,25 @@ function nameClassifier(name, separator)
 					</div>
 				</td>
 			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">targetNamespace</td>
-				<td width="50%" class="TableRow" valign="top"><a href="http://icao.int/iwxxm/2025-2" target="_blank" >http://icao.int/iwxxm/2025-2</a></td>
+				<td width="50%" class="TableRow" valign="top">schematronVersion</td>
+				<td width="50%" class="TableRow" valign="top">1.0.0RC2</td>
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
 					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario1" onclick="parent.toggleDiv('detailsDIVScenario1','DetailsImageScenario1')" />Details:
 						<div id="detailsDIVScenario1" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">targetNamespace</td>
+				<td width="50%" class="TableRow" valign="top"><a href="http://icao.int/iwxxm/2025-2" target="_blank" >http://icao.int/iwxxm/2025-2</a></td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario2" onclick="parent.toggleDiv('detailsDIVScenario2','DetailsImageScenario2')" />Details:
+						<div id="detailsDIVScenario2" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Description: Target XML namespace of the application schema.<br /></div>
 
 						</div>
@@ -134,12 +146,12 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="50%" class="TableRow" valign="top">version</td>
-				<td width="50%" class="TableRow" valign="top">2025-2RC1</td>
+				<td width="50%" class="TableRow" valign="top">2025-2RC2</td>
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario2" onclick="parent.toggleDiv('detailsDIVScenario2','DetailsImageScenario2')" />Details:
-						<div id="detailsDIVScenario2" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario3" onclick="parent.toggleDiv('detailsDIVScenario3','DetailsImageScenario3')" />Details:
+						<div id="detailsDIVScenario3" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Description: Current version of the application schema.<br /></div>
 
 						</div>
@@ -151,8 +163,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario3" onclick="parent.toggleDiv('detailsDIVScenario3','DetailsImageScenario3')" />Details:
-						<div id="detailsDIVScenario3" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario4" onclick="parent.toggleDiv('detailsDIVScenario4','DetailsImageScenario4')" />Details:
+						<div id="detailsDIVScenario4" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Description: Namespace prefix to be used as short form of the target namespace.<br /></div>
 
 						</div>
@@ -164,8 +176,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario4" onclick="parent.toggleDiv('detailsDIVScenario4','DetailsImageScenario4')" />Details:
-						<div id="detailsDIVScenario4" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario5" onclick="parent.toggleDiv('detailsDIVScenario5','DetailsImageScenario5')" />Details:
+						<div id="detailsDIVScenario5" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Description: Name of an XML Schema document to create representing the content of this package.<br /></div>
 
 						</div>
