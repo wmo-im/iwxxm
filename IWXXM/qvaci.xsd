@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="1.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="1.0.0RC2" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="metFeature.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
-		<documentation>The Quantitative Volcanic Ash Concentration Information product provides a forecast of significant ash cloud(s) that poses a widespread impact to aircraft operations and air navigation. Guidance on the criteria is provided in the Handbook on the International Airways Watch (Doc 9766).</documentation>
+		<documentation>This package defines a collection of meteorological objects for the provision of Quantitative Volcanic Ash (QVA) Concentration Information as defined in ICAO Annex 3 and PANS-MET (Doc 10157) with a forecast of significant ash cloud(s) that pose a widespread impact to aircraft operations and air navigation.  Guidance on the criteria is provided in the Handbook on the International Airways Watch (Doc 9766).
+
+Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.
+
+References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
 	<element name="QuantitativeVolcanicAshConcentrationInformation" type="iwxxm:QuantitativeVolcanicAshConcentrationInformationType" substitutionGroup="iwxxm:MeteorologicalFeatureCollection">
 		<annotation>
@@ -29,6 +33,16 @@
 							<documentation>Maximum height of ash cloud or eruption column at initialisation time in meters ("m") or feet ("[ft_i]"). Use negative values to represent levels below mean sea level.</documentation>
 						</annotation>
 					</element>
+					<element name="remarks" type="iwxxm:StringWithNilReasonType">
+						<annotation>
+							<documentation>Additional information to be provided with the QVACI.</documentation>
+						</annotation>
+					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element QuantitativeVolcanicAshConcentrationInformation</documentation>
+						</annotation>
+					</element>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -49,11 +63,6 @@
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<element name="ashDensityCategory" type="iwxxm:VolcanicAshConcentrationsType">
-						<annotation>
-							<documentation>Categorical description of ash density within the cloud.</documentation>
-						</annotation>
-					</element>
 					<element name="ashDensityEqualsOrExceeds" type="gml:MeasureType">
 						<annotation>
 							<documentation>Quantitative threshold of ash density within the cloud.</documentation>
@@ -69,24 +78,5 @@
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
-	</complexType>
-	<element name="VolcanicAshConcentrations" type="iwxxm:VolcanicAshConcentrationsType"></element>
-	<complexType name="VolcanicAshConcentrationsType">
-		<annotation>
-			<documentation>The code list for volcanic ash concentrations:
-
-
-	- &gt;= 0.2 mg/m3   "Low and possibly higher"
-	- &gt;= 2 mg/m3     "Medium and possibly higher"
-	- &gt;= 5 mg/m3     "High and possibly higher"
-	- &gt;= 10 mg/m3   "Very High"</documentation>
-			<appinfo>
-				<vocabulary>http://codes.wmo.int/iwxxm/VolcanicAshConcentrations</vocabulary>
-				<extensibility>none</extensibility>
-			</appinfo>
-		</annotation>
-		<complexContent>
-			<extension base="gml:ReferenceType"></extension>
-		</complexContent>
 	</complexType>
 </schema>

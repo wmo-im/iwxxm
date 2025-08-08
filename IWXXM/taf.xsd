@@ -3,7 +3,7 @@
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
-		<documentation>TAF reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
+		<documentation>TAF reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
 An Aerodrome Forecast (TAF) report is a routine forecast of meteorological conditions at an aerodrome intended for distribution.  TAF reports include base forecast conditions, and modifications to those conditions throughout the valid period.
 
@@ -53,7 +53,7 @@ Prevailing conditions and forecast changes differ in that the prevailing conditi
 					</element>
 					<element name="changeForecast" type="iwxxm:MeteorologicalAerodromeForecastPropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Forecast that modifies the base forecast.  While there is no maximum number of forecasts, this should normally not exceed five in number. ICAO Annex 3 / WMO No. 49-2: Section 1.5: "The number of change and probability groups should be kept to a minimum and should not normally exceed five groups".</documentation>
+							<documentation>Forecast that modifies the base forecast.  While there is no maximum number of forecasts, this should normally not exceed five in number. ICAO PANS-MET (Doc 10157): Section 4.1.5: "The number of change and probability groups should be kept to a minimum and should not normally exceed five groups".</documentation>
 						</annotation>
 					</element>
 					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -159,7 +159,7 @@ a) visibility, 10km or more, and the lowest visibility is not reported
 b) no cloud of operational significance
 c) no weather of significance to aviation
 
-Information on visibility, runway visual range, present weather and cloud amount, cloud type and height of cloud base shall not be reported.  See ICAO Annex 3 / WMO No. 49-2 Section 2.2.</documentation>
+Information on visibility, runway visual range, present weather, cloud amount, cloud type and height of cloud base shall not be reported.  See ICAO PANS-MET (Doc 10157) Section 2.1.1.4.</documentation>
 					</annotation>
 				</attribute>
 			</extension>
@@ -185,8 +185,7 @@ AerodromeAirTemperatureForecast is only reported on base conditions on a TAF, no
 				<annotation>
 					<documentation>The maximum air temperature expressed in degrees Celsius ("Cel")
 
-ICAO Annex 3 / WMO No. 49-2:
-"TX"</documentation>
+See ICAO PANS-MET (Doc 10157) Section 4.1.2.5.</documentation>
 					<appinfo>
 						<quantity>http://codes.wmo.int/common/quantity-kind/airTemperature</quantity>
 					</appinfo>
@@ -196,16 +195,14 @@ ICAO Annex 3 / WMO No. 49-2:
 				<annotation>
 					<documentation>The time of occurrence of the maximum air temperature.  This must be within the period of the phenomenon time for this forecast record
 
-ICAO Annex 3 / WMO No. 49-2:
-"TX"</documentation>
+See ICAO PANS-MET (Doc 10157) Section 4.1.2.5.</documentation>
 				</annotation>
 			</element>
 			<element name="minimumAirTemperature" type="gml:MeasureType">
 				<annotation>
 					<documentation>The minimum air temperature expressed in degrees Celsius ("Cel")
 
-ICAO Annex 3 / WMO No. 49-2:
-"TN"</documentation>
+See ICAO PANS-MET (Doc 10157) Section 4.1.2.5.</documentation>
 					<appinfo>
 						<quantity>http://codes.wmo.int/common/quantity-kind/airTemperature</quantity>
 					</appinfo>
@@ -215,8 +212,7 @@ ICAO Annex 3 / WMO No. 49-2:
 				<annotation>
 					<documentation>The time of occurrence of the minimum air temperature.  This must be within the period of the phenomenon time for this forecast record
 
-ICAO Annex 3 / WMO No. 49-2:
-"TN"</documentation>
+See ICAO PANS-MET (Doc 10157) Section 4.1.2.5.</documentation>
 				</annotation>
 			</element>
 			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -247,56 +243,49 @@ Note that the TAC representations for "FM", "TL", and "AT" are represented by th
 				<annotation>
 					<documentation>Conditions are expected to reach or pass through specified threshold values at a regular or irregular rate and at an unspecified time during the time period.  The time period should normally not exceed 2 hours but in any case should not exceed 4 hours.
 
-ICAO Annex 3 / WMO No. 49-2:
-"BECMG"</documentation>
+See ICAO PANS-MET (Doc 10157) Section 4.1.3.</documentation>
 				</annotation>
 			</enumeration>
 			<enumeration value="TEMPORARY_FLUCTUATIONS">
 				<annotation>
 					<documentation>Expected temporary fluctuations to meteorological conditions which reach or pass specified threshold criteria and last for a period of less than one hour in each instance and in the aggregate cover less than half of the forecast period during which the fluctuations are expected to occur.
 
-ICAO Annex 3 / WMO No. 49-2:
-"TEMPO"</documentation>
+See ICAO PANS-MET (Doc 10157) Section 4.1.3.</documentation>
 				</annotation>
 			</enumeration>
 			<enumeration value="FROM">
 				<annotation>
 					<documentation>One set of prevailing weather conditions is expected to change significantly and more or less completely to a different set of conditions. Conditions in a FROM group supersede conditions in earlier groups.
 
-ICAO Annex 3 / WMO No. 49-2:
-"FM"</documentation>
+See ICAO PANS-MET (Doc 10157) Section 4.1.3.</documentation>
 				</annotation>
 			</enumeration>
 			<enumeration value="PROBABILITY_30">
 				<annotation>
 					<documentation>A 30% probability of occurrence of an alternative value of a forecast element or elements.
 
-ICAO Annex 3 / WMO No. 49-2:
-"PROB30"</documentation>
+See ICAO PANS-MET (Doc 10157) Section 4.1.4.</documentation>
 				</annotation>
 			</enumeration>
 			<enumeration value="PROBABILITY_30_TEMPORARY_FLUCTUATIONS">
 				<annotation>
 					<documentation>A 30% probability of occurrence of temporary conditions of an alternative value of a forecast element or elements.
 
-ICAO Annex 3 / WMO No. 49-2:
-"PROB30 TEMPO"</documentation>
+See ICAO PANS-MET (Doc 10157) Section 4.1.4.</documentation>
 				</annotation>
 			</enumeration>
 			<enumeration value="PROBABILITY_40">
 				<annotation>
 					<documentation>A 40% probability of occurrence of an alternative value of a forecast element or elements.
 
-ICAO Annex 3 / WMO No. 49-2:
-"PROB40"</documentation>
+See ICAO PANS-MET (Doc 10157) Section 4.1.4.</documentation>
 				</annotation>
 			</enumeration>
 			<enumeration value="PROBABILITY_40_TEMPORARY_FLUCTUATIONS">
 				<annotation>
 					<documentation>A 40% probability of occurrence of temporary conditions of an alternative value of a forecast element or elements.
 
-ICAO Annex 3 / WMO No. 49-2:
-"PROB40 TEMPO"</documentation>
+See ICAO PANS-MET (Doc 10157) Section 4.1.4.</documentation>
 				</annotation>
 			</enumeration>
 		</restriction>

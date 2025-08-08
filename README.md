@@ -6,9 +6,9 @@ IWXXM (the ICAO Meteorological Information Exchange Model) is a data format for 
 
 # Summary
 
-IWXXM includes XML/GML-based representations for products standardized in International Civil Aviation Organization (ICAO) Annex III and World Meteorological Organization (WMO) No.49, Vol II, such as METAR/SPECI, TAF, SIGMET, AIRMET, Tropical Cyclone Advisory, Volcanic Ash Advisory, Space Weather Advisory and WAFS Significant Weather Forecast. IWXXM products are used for operational exchanges of meteorological information for use in aviation.
+IWXXM includes XML/GML-based representations for products standardized in International Civil Aviation Organization (ICAO) Annex III and PANS-MET, such as METAR/SPECI, TAF, SIGMET, AIRMET, Tropical Cyclone Advisory, Volcanic Ash Advisory, Space Weather Advisory, WAFS Significant Weather Forecast, Volcano Observatory Notice for Aviation (VONA) and Quantitative Volcanic Ash (QVA) Concentration Information. IWXXM products are used for operational exchanges of meteorological information for use in aviation.
 
-Unlike the traditional forms of the ICAO Annex III / WMO No. 49 products (referred to as Traditional Alphanumeric Codes, or TAC), IWXXM is not intended to be directly used by pilots. IWXXM is designed to be consumed by software acting on behalf of pilots, such as display software.
+Unlike the traditional forms of the ICAO Annex III / PANS-MET products (referred to as Traditional Alphanumeric Codes, or TAC), IWXXM is not intended to be directly used by pilots. IWXXM is designed to be consumed by software acting on behalf of pilots, such as display software.
 
 # Want to provide feedback or raise a question?
 
@@ -23,4 +23,5 @@ Please provide feedback to or raise your question to [tt-avdata@groups.wmo.int](
 # See also
 
 *   The [IWXXM modelling repository](https://github.com/wmo-im/iwxxm-modelling) contains UML model of IWXXM and tools that were used for preparing schemas, schematron rules and associated files in this repository.
+*   The [IWXXM code list repository](https://github.com/wmo-im/iwxxm-codelists) contains code lists for use with IWXXM which will also be uploaded to the [WMO Codes Registry](https://codes.wmo.int) for on-line access.
 *   The [IWXXM translation repository](https://github.com/wmo-im/iwxxm-translation) has resources related to Traditional Alphanumeric Code (TAC) to IWXXM translation, including equivalent TAC/IWXXM pairs and a list of translation software.
