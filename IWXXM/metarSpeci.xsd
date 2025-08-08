@@ -844,7 +844,7 @@ Height in metres : Category
 	- &gt;14 metres : Phenomenal
 
 
-See the Manual on Codes (WMO No. 306), Vol I.1 Code table 3700 "State of the sea" and WMO No. 306 Vol I.2 FM 94 BUFR Code table 0 22 061 "State of the sea".</documentation>
+See the Manual on Codes (WMO No. 306), Vol I.1 Code table 3700 "State of the sea" and Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 22 061 "State of the sea".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-22-061</vocabulary>
 				<extensibility>none</extensibility>
