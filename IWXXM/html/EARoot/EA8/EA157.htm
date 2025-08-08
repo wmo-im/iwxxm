@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>JetStream: MeteorologicalFeature</title>
+<title>Turbulence: MeteorologicalFeature</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -33,16 +33,16 @@ function nameClassifier(name, separator)
 <body onload="initPage(this);" class="Content">
 <div class="pageHeader"></div>
 <div class="PageBody">
-	<div id="name_classifier" style="display: none;"><a href="../EA11/EA203.htm">«featureType» MeteorologicalFeature</a></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("JetStream", " : "))</script>  : Public  &lt;&lt;IWXXMXML&gt;&gt; Object instance</span>
+	<div id="name_classifier" style="display: none;"><a href="../EA11/EA202.htm">«featureType» MeteorologicalFeature</a></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Turbulence", " : "))</script>  : Public  &lt;&lt;IWXXMXML&gt;&gt; Object instance</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">3/20/2020 5:49:08 PM</td>
+			<td width="85%" class="ObjectDetailsValue">3/20/2020 5:52:55 PM</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">3/31/2020 4:15:30 PM</td>
+			<td class="ObjectDetailsValue">3/29/2020 9:35:31 PM</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,14 +87,14 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{229B1BA3-CDC9-4149-9504-76BB395F87FC}</td>
+			<td class="ObjectDetailsValue">{0C820A71-EB8F-4d41-B2FA-B8AE56E0CC29}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA144.htm">Context Diagram: Significant Weather Objects</a></td>
+			<td class="ObjectDetailsValue"><a href="EA143.htm">Context Diagram: Significant Weather Objects</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">In the WAFC significant weather representation a jet is made up of a series of core points, wind symbols (fleche marks) and change bars. The wind symbol at the location of maximum jet speed/speeds also contain vertical depth information including the flight levels of the 80kt isotach below and above the maximum wind speed level. Only jet streams with a speed of 120 knots or more will contain vertical jet depth information.&lt;br/&gt;&lt;br/&gt;The JetStream object which is an instance of iwxxm:MeteorologicalFeature has the following characteristics at the indicated iwxxm:phenomenonTime:&lt;br/&gt;&lt;br/&gt;1. iwxxm:phenomenonGeometry shall be a gml:Curve on CRS EPSG:4326 described by gml:CubicSpline with the core points.&lt;br/&gt;2. iwxxm:phenomenonProperty shall be a iwxxm:WAFCJetStreamWindSymbol describing the location of the wind symbol in latitude, longitude and elevation and other information when available. iwxxm:phenomenonProperty shall be repeated for all wind symbols.&lt;br/&gt;</div>
+	<div class="ObjectDetailsNotes">In the WAFC significant weather representation turbulence is represented by an area with information on its base, top and severity.&lt;br/&gt;&lt;br/&gt;The turbulence object which is an instance of iwxxm:MeteorologicalFeature has the following characteristics at the indicated iwxxm:phenomenonTime:&lt;br/&gt;&lt;br/&gt;1. iwxxm:phenomenonGeometry shall be a iwxxm:ElevatedVolume with gml:Surface on CRS EPSG:4326 described by gml:CubicSpline with the boundary points of the area and base and top as the iwxxm:lowerElevation and iwxxm:upperElevation of the volume.&lt;br/&gt;2. iwxxm:phenomenonProperty shall describe the severity of the turbulence within the volume.&#160; See WMO No. 306 Vol I.2 FM 94 BUFR code table 0 11 030 &quot;Extended Degree of Turbulence&quot; for details.&lt;br/&gt;</div>
 
 <div class="pageFooter"></div>
  
