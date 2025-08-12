@@ -47,18 +47,16 @@
 |*PANS-MET Edition*|n/a|n/a|n/a|*first*
 |IWXXM Version|3.0.0|2021-2|2023-1|2025-2
 |METAR and SPECI|3.0.0|3.1.0|3.1.0|3.2.0
-|TAF|3.0.0|3.0.1|3.0.1|3.0.1
-|SIGMET|3.0.0|4.0.0|4.0.1|4.0.1
-|AIRMET|3.0.0|3.1.0|3.1.1|3.1.1
-|Tropical Cyclone Advisory|3.0.0|3.1.0|3.1.0|3.1.0
+|TAF|3.0.0|3.0.1|3.0.1|3.0.2
+|SIGMET|3.0.0|4.0.0|4.0.1|4.0.2
+|AIRMET|3.0.0|3.1.0|3.1.1|3.1.2
+|Tropical Cyclone Advisory|3.0.0|3.1.0|3.1.0|3.1.1
 |Volcanic Ash Advisory|3.0.0|3.1.0|3.1.0|3.2.0
 |Space Weather Advisory|3.0.0|3.0.1|3.0.1|3.1.0
 |WAFS SIGWX Forecast|n/a|1.0.0|1.1.0|1.2.0
 |Quantitative Volcanic Ash Concentration Information|n/a|n/a|n/a|1.0.0
 |Volcano Observatory Notice for Aviation|n/a|n/a|n/a|1.0.0
 |===
-
-
 
 == 205-2025-2.3 IWXXM resources
 
