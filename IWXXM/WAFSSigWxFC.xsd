@@ -7,13 +7,18 @@
 		<documentation>This package defines a collection of meteorological objects for the World Area Forecast System (WAFS) to deliver forecasts of significant en-route weather phenomena as Significant Weather (SIGWX) forecasts as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
 Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.
+		<documentation>This package defines a collection of meteorological objects for the World Area Forecast System (WAFS) to deliver forecasts of significant en-route weather phenomena as Significant Weather (SIGWX) forecasts as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
+Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.
+
+References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
 	</annotation>
 	<element name="WAFSSignificantWeatherForecast" type="iwxxm:WAFSSignificantWeatherForecastType" substitutionGroup="iwxxm:MeteorologicalFeatureCollection">
 		<annotation>
 			<documentation>Forecasts of significant en-route weather phenomena provided by the World Area Forecast System (WAFS).
 
+See ICAO Annex 3 and PANS-MET (Doc 10157) for details.</documentation>
 See ICAO Annex 3 and PANS-MET (Doc 10157) for details.</documentation>
 		</annotation>
 	</element>
@@ -58,10 +63,12 @@ Describes the horizontal wind speed and direction at the point and optionally th
 							<documentation>Horizontal wind speed at the indicated position.
 
 Wind speeds shall be provided in either two units of measure, "m/s" (meters per second) or "[kn_i]" (knot).</documentation>
+Wind speeds shall be provided in either two units of measure, "m/s" (meters per second) or "[kn_i]" (knot).</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="IsotachUpperElevation" type="iwxxm:ValDistanceVerticalType" minOccurs="0" maxOccurs="1">
 						<annotation>
+							<documentation>The vertical distance of the 80 knot isotach above the jet stream measured from vertical reference.</documentation>
 							<documentation>The vertical distance of the 80 knot isotach above the jet stream measured from vertical reference.</documentation>
 						</annotation>
 					</element>
@@ -72,6 +79,7 @@ Wind speeds shall be provided in either two units of measure, "m/s" (meters per 
 					</element>
 					<element nillable="true" name="IsotachLowerElevation" type="iwxxm:ValDistanceVerticalType" minOccurs="0" maxOccurs="1">
 						<annotation>
+							<documentation>The vertical distance of the 80 knot isotach below the jet stream measured from vertical reference.</documentation>
 							<documentation>The vertical distance of the 80 knot isotach below the jet stream measured from vertical reference.</documentation>
 						</annotation>
 					</element>
@@ -145,6 +153,7 @@ Wind speeds shall be provided in either two units of measure, "m/s" (meters per 
 			<documentation>Degree of turbulence.
 
 See the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 11 030 "Extended Degree of Turbulence".</documentation>
+See the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 11 030 "Extended Degree of Turbulence".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-11-030</vocabulary>
 				<extensibility>none</extensibility>
@@ -159,6 +168,7 @@ See the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 11 030 "E
 		<annotation>
 			<documentation>Degree of icing.
 
+See the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 20 041 "Airframe Icing".</documentation>
 See the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 20 041 "Airframe Icing".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-20-041</vocabulary>
@@ -175,6 +185,7 @@ See the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 20 041 "A
 			<documentation>Cloud distribution.
 
 See the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 20 008 "Cloud Distribution for Aviation".</documentation>
+See the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 20 008 "Cloud Distribution for Aviation".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-20-008</vocabulary>
 				<extensibility>none</extensibility>
@@ -189,6 +200,7 @@ See the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 20 008 "C
 		<annotation>
 			<documentation>Cloud type.
 
+See the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 20 012 "Cloud Type".</documentation>
 See the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR Code table 0 20 012 "Cloud Type".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-20-012</vocabulary>
