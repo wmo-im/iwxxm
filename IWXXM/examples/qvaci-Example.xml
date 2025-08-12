@@ -6,7 +6,7 @@
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd
-    http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
+    http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC2/iwxxm.xsd"
     gml:id="uuid.bf9c0a92-c909-4efc-8558-472d8aad209f" reportStatus="NORMAL" permissibleUsage="OPERATIONAL">
 
     <!-- Unique identifier of the collective -->
@@ -31,8 +31,8 @@
     </iwxxm:boundingVolume>
     
     <!-- A list of all phenomena of all objects -->
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANO"/>
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANO"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANIC_ASH"/>
     
     <!-- Issue time of the collective -->
     <iwxxm:issueTime>
@@ -48,8 +48,6 @@
                 <aixm:UnitTimeSlice gml:id="uuid.255f8893-3b40-412c-81c6-a199ce87432e">
                     <gml:validTime/>
                     <aixm:interpretation>SNAPSHOT</aixm:interpretation>
-                    <!-- Every element below in UnitTimeSlice is designated as optional in the AIXM schema.
-                    Minimum requirement to be useful for QVACI product would be the name and type? -->
                     <aixm:name>DARWIN</aixm:name>
                     <aixm:type>OTHER:VAAC</aixm:type>
                     <aixm:compliantICAO>YES</aixm:compliantICAO>
@@ -79,7 +77,7 @@
                     <gml:timePosition>2021-12-17T10:30:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANO"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANO"/>
             <iwxxm:phenomenonGeometry>
                 <gml:Point gml:id="uuid.09ea50e4-22f9-4ca5-a62f-84b3846efe8a" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
                     <gml:pos>-6.102 105.423</gml:pos>
@@ -110,7 +108,7 @@
                     <gml:timePosition>2021-12-17T12:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>            
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANIC_ASH"/>
             <iwxxm:phenomenonGeometry>
                 <iwxxm:ElevatedVolume gml:id="uuid.f7d0a95a-2a94-4123-894f-34bc9cb57dfc" axisLabels="Lat Long" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:patches>
@@ -132,7 +130,6 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:VolcanicAshCloudConcentration gml:id="uuid.6141444b-86c8-4609-b4cc-cb051670b1d2">
-                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/VERY_HIGH"/>
                     <iwxxm:ashDensityEqualsOrExceeds uom="mg/m3">10</iwxxm:ashDensityEqualsOrExceeds>
                 </iwxxm:VolcanicAshCloudConcentration>
             </iwxxm:phenomenonProperty>
@@ -145,7 +142,7 @@
             <gml:identifier codeSpace="http://qvaci/volcanic_ash_cloud">6a8f883f-f5aa-45cf-8716-d35288d23581</gml:identifier>
             <iwxxm:phenomenonCategory>volcanicForecasts</iwxxm:phenomenonCategory>
             <iwxxm:phenomenonTime xlink:href="#uuid.405828cb-c3dc-424c-b4f9-26b815efa625"/>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANIC_ASH"/>
             <iwxxm:phenomenonGeometry>
                 <iwxxm:ElevatedVolume gml:id="uuid.ed0a014e-dfb6-4f60-a6d8-3de50608a220" axisLabels="Lat Long" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:patches>
@@ -167,7 +164,6 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:VolcanicAshCloudConcentration gml:id="uuid.e7b80d1c-23d4-4cb6-b6f1-4b4cc8ff9831">
-                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/HIGH_AND_POSSIBLY_HIGHER"/>
                     <iwxxm:ashDensityEqualsOrExceeds uom="mg/m3">5</iwxxm:ashDensityEqualsOrExceeds>
                 </iwxxm:VolcanicAshCloudConcentration>
             </iwxxm:phenomenonProperty>
@@ -180,7 +176,7 @@
             <gml:identifier codeSpace="http://qvaci/volcanic_ash_cloud">1623bf0d-8165-43bc-a412-ecdfa2800c5f</gml:identifier>
             <iwxxm:phenomenonCategory>weatherForecasts</iwxxm:phenomenonCategory>
             <iwxxm:phenomenonTime xlink:href="#uuid.405828cb-c3dc-424c-b4f9-26b815efa625"/>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANIC_ASH"/>
             <iwxxm:phenomenonGeometry>                
                 <iwxxm:ElevatedVolume gml:id="uuid.b2f703d0-ca85-484b-a506-a910cef0fdf7" axisLabels="Lat Long" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:patches>
@@ -201,7 +197,6 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:VolcanicAshCloudConcentration gml:id="uuid.a08a12b1-06a5-4a4b-93ca-3b989cf2acf5">
-                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/HIGH_AND_POSSIBLY_HIGHER"/>
                     <iwxxm:ashDensityEqualsOrExceeds uom="mg/m3">5</iwxxm:ashDensityEqualsOrExceeds>
                 </iwxxm:VolcanicAshCloudConcentration>
             </iwxxm:phenomenonProperty>
@@ -214,7 +209,7 @@
             <gml:identifier codeSpace="http://qvaci/volcanic_ash_cloud">138d4ef5-71a8-415a-8f0b-eaae396b896e</gml:identifier>
             <iwxxm:phenomenonCategory>volcanicForecasts</iwxxm:phenomenonCategory>
             <iwxxm:phenomenonTime xlink:href="#uuid.405828cb-c3dc-424c-b4f9-26b815efa625"/>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANIC_ASH"/>
             <iwxxm:phenomenonGeometry>
                 <iwxxm:ElevatedVolume gml:id="uuid.05bf1d7e-6e13-4971-9e7d-f5a279cf669e" axisLabels="Lat Long" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:patches>
@@ -238,7 +233,6 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:VolcanicAshCloudConcentration gml:id="uuid.edb61bfd-c071-40f0-967e-499464eac730">
-                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/MEDIUM_AND_POSSIBLY_HIGHER"/>
                     <iwxxm:ashDensityEqualsOrExceeds uom="mg/m3">2</iwxxm:ashDensityEqualsOrExceeds>
                 </iwxxm:VolcanicAshCloudConcentration>
             </iwxxm:phenomenonProperty>
@@ -251,7 +245,7 @@
             <gml:identifier codeSpace="http://qvaci/volcanic_ash_cloud">03a47ebc-6041-43a9-aec8-dd184dbea790</gml:identifier>
             <iwxxm:phenomenonCategory>volcanicForecasts</iwxxm:phenomenonCategory>
             <iwxxm:phenomenonTime xlink:href="#uuid.405828cb-c3dc-424c-b4f9-26b815efa625"/>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANIC_ASH"/>
             <iwxxm:phenomenonGeometry>
                 <iwxxm:ElevatedVolume gml:id="uuid.cdfc3a49-ba18-4b6c-98d0-2714dd4db864" axisLabels="Lat Long" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:patches>
@@ -283,7 +277,6 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:VolcanicAshCloudConcentration gml:id="uuid.7446ca09-cad8-4cd2-97b6-f41d217b3a35">
-                    <iwxxm:ashDensityCategory xlink:href="http://codes.wmo.int/iwxxm/VolcanicAshConcentrations/LOW_AND_POSSIBLY_HIGHER"/>
                     <iwxxm:ashDensityEqualsOrExceeds uom="mg/m3">0.2</iwxxm:ashDensityEqualsOrExceeds>
                 </iwxxm:VolcanicAshCloudConcentration>
             </iwxxm:phenomenonProperty>
@@ -308,5 +301,6 @@
             <iwxxm:verticalReference>MSL</iwxxm:verticalReference>
         </iwxxm:ElevatedLevel>
     </iwxxm:dispersionModelAshCloudHeight>
+    <iwxxm:remarks>LATEST REP FM KVERT (0120Z) INDICATES ERUPTION HAS CEASED. TWO DISPERSING VA CLD ARE EVIDENT ON SATELLITE IMAGERY</iwxxm:remarks>
 
 </iwxxm:QuantitativeVolcanicAshConcentrationInformation>
