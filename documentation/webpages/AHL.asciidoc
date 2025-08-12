@@ -7,14 +7,14 @@ It provided detailed guidelines for practices and procedures, including abbrevia
 
 At the 78th session of the WMO Executive Council (EC-78) Resolution 16 stated that "_the Manual on the Global Telecommunication System (WMO-No.386) will no longer be updated from 31 December 2024_” and also requested WMO “_...to liaise with ICAO in respect of an extant requirement for Attachment II-5. Data designators T1T2A1A2ii in abbreviated headings of the Manual on the Global Telecommunication System.”_
 
-Therefore, this webpage is to ensure the exchange of aviation data over ICAO AFS is not affected by the freezing and subsequent deprecation of WMO-No.386 and WMO-No.9 Vol. C1.
+Therefore, this webpage is to ensure the exchange of aviation data over ICAO AFS is not affected by the freezing and subsequent deprecation of WMO-No. 386 and WMO-No. 9 Vol. C1.
 
 Requests for additions or revisions to the abbreviated headings will be managed by the WMO Task Team on Aviation Data based on ICAO requirements.
 
 == WMO Abbreviated Headings and related specifications relevant for the exchange of aviation data over ICAO AFS
 
-* Version: 0.3.0 (draft) 
-* Date: 1 July 2025
+* Version: 1.0.1
+* Date: 11 August 2025
 * Location: https://community.wmo.int/en/activity-areas/wis/iwxxm/ahl-icao-data
 
 ## Abbreviated heading
@@ -131,7 +131,7 @@ _(Original text from Tables A and B1, Attachment II-5, WMO-No.386)_
 |F |V |Volcanic ash advisories |ICAO (Volcanic Ash Advisory) 
 |F |R |Aviation route |FM 54 (ROFOR) 
 |U |A |Aircraft reports |ICAO (AIREP) 
-|W |J |Volcano Observatory Notice for Aviation (VONA) |ICAO (VONA)
+|W |M |Volcano Observatory Notice for Aviation (VONA) |ICAO (VONA) [NEW]
 |W |A |AIRMET |ICAO (AIRMET) 
 |W |S |SIGMET |ICAO (SIGMET) 
 |W |C |Tropical cyclone (SIGMET) |ICAO (SIGMET) 
@@ -157,7 +157,7 @@ _(Original text from Tables A and B7, Attachment II-5, WMO-N0.386)_
 |L |K |Tropical cyclone advisories |FM 205(iwxxm:TropicalCycloneAdvisory) 
 |L |N |Space weather advisories |FM 205 (iwxxm:SpaceWeatherAdvisory) 
 |L |U |Volcanic ash advisories |FM 205 (iwxxm:VolcanicAshAdvisory) 
-|L |J |Volcano Observatory Notice for Aviation (VONA) |FM 205 (iwxxm:VolcanoObservatoryNoticeForAviation)
+|L |M |Volcano Observatory Notice for Aviation (VONA) |FM 205 (iwxxm:VolcanoObservatoryNoticeForAviation) [NEW]
 |L |W |AIRMET |FM 205 (iwxxm:AIRMET) 
 |L |S |Aviation general warning (SIGMET) |FM 205 (iwxxm:SIGMET) 
 |L |Y |Aviation tropical cyclone warning (SIGMET) |FM 205 (iwxxm:TropicalCycloneSIGMET) 
