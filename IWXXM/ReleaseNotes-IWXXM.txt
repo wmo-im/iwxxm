@@ -1,18 +1,30 @@
 =========================================
-2025-2 Release Candidate 2 - July 2025
+2025-2 Release Candidate 2 - August 2025
 =========================================
-Package SIGMET (Version 4.0.1 - No change)
+Package METAR/SPECI (Version 3.2.0RC2)
+  * Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
+Package TAF (Version 3.0.2RC2)
+  * Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
+Package SIGMET (Version 4.0.2RC2)
+  * Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
   * Corrected all latitudes and longitudes of points in the polygon in sigmet-multi-location-VA.xml
+Package AIRMET (Version 3.1.2RC2)
+  * Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
+Package Tropical Cyclone Advisory (Version 3.1.1RC2)
+  * Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
 Package Volcanic Ash Advisory (Version 3.2.0RC2)
+  * Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
   * Renamed iwxxm:sourceElevation to iwxxm:sourceElevationAMSL and make subsequent changes to Schematron rules and examples
   * Changed element type of iwxxm:volcano to metce:VolcanoPropertyType
   * Updated example va-advisory-A7-2.xml
 Package Space Weather Advisory (Version 3.1.0RC2)
+  * Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
   * Changed the multiplicity of iwxxm:locationIndicator from [0..1] to [1..6] to cater for having multiple space weather bands
     and the mandatory need to specify the element
   * Updated example spacewx-A7-3.xml to show an improved way to encode the geometry of the affected volume in a Space Weather Advisory
   * Updated all Space Weather Advisory examples to show the correct way to indicate nil information in iwxxm:locationIndicator
 Package WAFS Significant Weather Forecast (Version 1.2.0RC2)
+  * Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
   * Revised to use codelists http://codes.wmo.int/iwxxm/MeteorologicalFeature and http://codes.wmo.int/iwxxm/nil
 Package Quantitative Volcanic Ash Concentration Information (Version 1.0.0RC2)
   * Removed codelist http://codes.wmo.int/iwxxm/VolcanicAshConcentrations. Amended example qvaci-Example.xml accordingly
@@ -34,7 +46,6 @@ Others
   * Fixed the bug in Schematron rule MeteorologicalFeature.MeteorologicalFeature-2
   * Split schematron rule IWXXM.nilReasonCheck for separate use of http://codes.wmo.int/common/nil and http://codes.wmo.int/iwxxm/nil
   * Revised the code list RDF files and related schematron rules to allow applicable IWXXM version checking
-  * Revised the notes in the model and relevant documents to remove references to WMO No.49 Volume II
   * Fixed discovered issues and improved the examples with reference to suggestions received
 
 =========================================
