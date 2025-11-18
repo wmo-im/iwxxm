@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             queryBinding="xslt2"
-            schemaVersion="1.0.0RC2">
+            schemaVersion="1.0.0">
    <sch:title>Schematron validation</sch:title>
    <sch:ns prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
    <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -76,14 +76,12 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.SeaSurfaceState">
       <sch:rule context="//iwxxm:SeaSurfaceState">
-         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:SeaSurfaceState should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF//skos:member/skos:Concept/@rdf:about or @nilReason">Element in iwxxm:SeaSurfaceState should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaCondition.seaState">
       <sch:rule context="//iwxxm:AerodromeSeaCondition/iwxxm:seaState">
-         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:AerodromeSeaCondition/iwxxm:seaState should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-22-061.rdf')/rdf:RDF//skos:member/skos:Concept/@rdf:about or @nilReason">Element in iwxxm:AerodromeSeaCondition/iwxxm:seaState should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-22-061</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSeaState-1">
@@ -658,26 +656,22 @@
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.CloudDistribution">
       <sch:rule context="//iwxxm:CloudDistribution">
-         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-008.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:CloudDistribution should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-008</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-008.rdf')/rdf:RDF//skos:member/skos:Concept/@rdf:about or @nilReason">Element in iwxxm:CloudDistribution should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-008</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.DegreeOfIcing">
       <sch:rule context="//iwxxm:DegreeOfIcing">
-         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-041.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:DegreeOfIcing should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-041</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-041.rdf')/rdf:RDF//skos:member/skos:Concept/@rdf:about or @nilReason">Element in iwxxm:DegreeOfIcing should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-041</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.CloudType">
       <sch:rule context="//iwxxm:CloudType">
-         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-012.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:CloudType should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-012</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-20-012.rdf')/rdf:RDF//skos:member/skos:Concept/@rdf:about or @nilReason">Element in iwxxm:CloudType should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-20-012</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.DegreeOfTurbulence">
       <sch:rule context="//iwxxm:DegreeOfTurbulence">
-         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-11-030.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about or @nilReason">Element in iwxxm:DegreeOfTurbulence should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-11-030</sch:assert>
+         <sch:assert test="@xlink:href = document('codes.wmo.int-bufr4-codeflag-0-11-030.rdf')/rdf:RDF//skos:member/skos:Concept/@rdf:about or @nilReason">Element in iwxxm:DegreeOfTurbulence should be a member of code list http://codes.wmo.int/bufr4/codeflag/0-11-030</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="WAFSSignificantWeatherForecast.WAFSSignificantWeatherForecast-3">
@@ -855,8 +849,7 @@
    </sch:pattern>
    <sch:pattern id="IWXXM.nilReasonCheckLegacy">
       <sch:rule context="//SPECI|//METAR|//TAF|//SIGMET|//AIRMET|//TropicalCycloneAdvisory|//VolcanicAshAdvisory|//SpaceWeatherAdvisory">
-         <sch:let name="iwxxmVersion" value="namespace-uri()"/>
-         <sch:assert test="( if( exists(@nilReason) ) then( @nilReason = document('codes.wmo.int-common-nil.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about ) else( true() ) )">IWXXM.nilReasonCheckLegacy: nilReason attributes should be a member of http://codes.wmo.int/common/nil</sch:assert>
+         <sch:assert test="( if( exists(@nilReason) ) then( @nilReason = document('codes.wmo.int-common-nil.rdf')/rdf:RDF//skos:member/skos:Concept/@rdf:about ) else( true() ) )">IWXXM.nilReasonCheckLegacy: nilReason attributes should be a member of http://codes.wmo.int/common/nil</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="IWXXM.nilReasonCheck">

@@ -4,7 +4,7 @@
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC2/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2/iwxxm.xsd"
     gml:id="uuid.fa3ce106-f401-4670-ae50-cdf76bf68912"
     reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL"
