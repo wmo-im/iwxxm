@@ -9,4 +9,4 @@
 # http://codes.wmo.int/iwxxm/nil
 # http://codes.wmo.int/iwxxm/MeteorologicalFeature
 # http://codes.wmo.int/iwxxm/AviationColourCode
-# http://online-resource-of-features
+http://online-resource-of-features
