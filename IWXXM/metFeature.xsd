@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="1.1.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="1.1.0" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://www.aixm.aero/schema/5.1.1" schemaLocation="http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
@@ -152,6 +152,11 @@ The actual featureType to be used in describing the geometry shall be constraint
 The actual featureType to be used in describing the properties shall be constraint by iwxxm:phenomenonCategory and iwxxm:phenomenon.</documentation>
 						</annotation>
 					</element>
+					<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Extension block for optional and/or additional parameters for element MeteorologicalFeature</documentation>
+						</annotation>
+					</element>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -176,7 +181,7 @@ To be used in iwxxm:phenomenonGeometry.</documentation>
 				<sequence>
 					<element nillable="true" name="upperElevation" type="iwxxm:ValDistanceVerticalType">
 						<annotation>
-							<documentation>The vertical distance of the upper surface measured from Mean Sea Level (MSL).</documentation>
+							<documentation>The vertical distance of the upper surface measured from the vertical reference.</documentation>
 						</annotation>
 					</element>
 					<element name="upperVerticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
@@ -186,7 +191,7 @@ To be used in iwxxm:phenomenonGeometry.</documentation>
 					</element>
 					<element nillable="true" name="lowerElevation" type="iwxxm:ValDistanceVerticalType">
 						<annotation>
-							<documentation>The vertical distance of the lower surface measured from Mean Sea Level (MSL).</documentation>
+							<documentation>The vertical distance of the lower surface measured from the vertical reference.</documentation>
 						</annotation>
 					</element>
 					<element name="lowerVerticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
@@ -218,7 +223,7 @@ To be used in iwxxm:phenomenonGeometry.</documentation>
 				<sequence>
 					<element name="elevation" type="iwxxm:ValDistanceVerticalType">
 						<annotation>
-							<documentation>The vertical distance of the curve measured from Mean Sea Level (MSL).</documentation>
+							<documentation>The vertical distance of the curve measured from the vertical reference.</documentation>
 						</annotation>
 					</element>
 					<element name="verticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
@@ -255,7 +260,7 @@ To be used in iwxxm:phenomenonGeometry.</documentation>
 				<sequence>
 					<element nillable="true" name="elevation" type="iwxxm:ValDistanceVerticalType">
 						<annotation>
-							<documentation>The vertical distance of the point measured from Mean Sea Level (MSL).</documentation>
+							<documentation>The vertical distance of the point measured from the vertical reference.</documentation>
 						</annotation>
 					</element>
 					<element name="verticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
@@ -292,7 +297,7 @@ To be used in iwxxm:phenomenonGeometry.</documentation>
 				<sequence>
 					<element nillable="true" name="elevation" type="iwxxm:ValDistanceVerticalType">
 						<annotation>
-							<documentation>The vertical distance of the curve measured from Mean Sea Level (MSL).</documentation>
+							<documentation>The vertical distance of the curve measured from the vertical reference.</documentation>
 						</annotation>
 					</element>
 					<element name="verticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
@@ -329,7 +334,7 @@ To be used in iwxxm:phenomenonGeometry.</documentation>
 				<sequence>
 					<element nillable="true" name="elevation" type="iwxxm:ValDistanceVerticalType">
 						<annotation>
-							<documentation>The vertical distance of the surface measured from Mean Sea Level (MSL).</documentation>
+							<documentation>The vertical distance of the surface measured from the vertical reference.</documentation>
 						</annotation>
 					</element>
 					<element name="verticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
@@ -366,7 +371,7 @@ To be used in iwxxm:phenomenonGeometry.</documentation>
 				<sequence>
 					<element nillable="true" name="upperElevation" type="iwxxm:ValDistanceVerticalType">
 						<annotation>
-							<documentation>The vertical distance of the upper surface measured from Mean Sea Level (MSL).</documentation>
+							<documentation>The vertical distance of the upper surface measured from the vertical reference.</documentation>
 						</annotation>
 					</element>
 					<element name="upperVerticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
@@ -381,7 +386,7 @@ To be used in iwxxm:phenomenonGeometry.</documentation>
 					</element>
 					<element nillable="true" name="lowerElevation" type="iwxxm:ValDistanceVerticalType">
 						<annotation>
-							<documentation>The vertical distance of the lower surface measured from Mean Sea Level (MSL).</documentation>
+							<documentation>The vertical distance of the lower surface measured from the vertical reference.</documentation>
 						</annotation>
 					</element>
 					<element name="lowerVerticalReference" type="aixm:CodeVerticalReferenceBaseType" minOccurs="0" maxOccurs="1">
@@ -409,9 +414,9 @@ To be used in iwxxm:phenomenonGeometry.</documentation>
 		<annotation>
 			<documentation>Information of a volcano.
 
-To be used in iwxxm:phenomenonProperty with iwxxm:phenomenon set to https://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANO and iwxxm:phenomenonGeometry defined by gml:Point to indicate the location of the volcano.
+To be used in iwxxm:phenomenonProperty with iwxxm:phenomenon set to https://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANO and iwxxm:phenomenonGeometry defined by gml:Point to indicate the location of the volcano.
 
-When the location is unknown, phenomenonGeometry shall be represented with a nil and a nilReason of 'http://codes.wmo.int/common/nil/unknown'.</documentation>
+When the location is unknown, phenomenonGeometry shall be represented with a nil and a nilReason of 'http://codes.wmo.int/iwxxm/nil/unknown'.</documentation>
 		</annotation>
 	</element>
 	<complexType name="VolcanoType">
@@ -422,21 +427,21 @@ When the location is unknown, phenomenonGeometry shall be represented with a nil
 						<annotation>
 							<documentation>Name of the Volcano.
 
-When the name is unknown, it shall be represented with a nil in name and nilReason 'http://codes.wmo.int/common/nil/unknown'.</documentation>
+When the name is unknown, it shall be represented with a nil in name and nilReason 'http://codes.wmo.int/iwxxm/nil/unknown'.</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="IAVCEINumber" type="iwxxm:StringWithNilReasonType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>International Association of Volcanology and Chemistry of the Earth's Interior (IAVCEI) number of the volcano.
 
-When the IAVCEI number is unknown, it shall be represented with a nil in IAVCEINumber and nilReason 'http://codes.wmo.int/common/nil/unknown'.</documentation>
+When the IAVCEI number is unknown, it shall be represented with a nil in IAVCEINumber and nilReason 'http://codes.wmo.int/iwxxm/nil/unknown'.</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="sourceElevation" type="iwxxm:ElevatedLevelPropertyType" minOccurs="0" maxOccurs="1">
 						<annotation>
 							<documentation>Elevation of the vent of the volcano from mean sea level.  If reported it shall either be in meters ("m") or feet ("[ft_i]"). Use negative values to represent levels below mean sea level.
 
-When the elevation is unknown, it shall be represented with a nil in sourceElevation and nilReason 'http://codes.wmo.int/common/nil/unknown'.</documentation>
+When the elevation is unknown, it shall be represented with a nil in sourceElevation and nilReason 'http://codes.wmo.int/iwxxm/nil/unknown'.</documentation>
 						</annotation>
 					</element>
 					<element name="activityStatus" type="iwxxm:VolcanoActivityStatusType" minOccurs="0" maxOccurs="1">
@@ -568,9 +573,9 @@ Only weatherObservations and weatherForecasts are being used in this enumeration
 		<annotation>
 			<documentation>MeteorologicalFeatures identifies the indicated meteorological phenomenon.
 
-This CodeList is specifically defined for aviation purposes.  It is a superset to the definitions defined in WMO No. 306 Vol I.2 FM 94 BUFR code table 0 08 011 "Meteorological feature".</documentation>
+This codelist is specifically defined for aviation purposes.  It is a superset to the definitions defined in the Manual on Codes (WMO No. 306), Vol I.2 FM 94 BUFR code table 0 08 011 "Meteorological feature".</documentation>
 			<appinfo>
-				<vocabulary>http://codes.wmo.int/49-2/MeteorologicalFeature</vocabulary>
+				<vocabulary>http://codes.wmo.int/iwxxm/MeteorologicalFeature</vocabulary>
 				<extensibility>none</extensibility>
 			</appinfo>
 		</annotation>

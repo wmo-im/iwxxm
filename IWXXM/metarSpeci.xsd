@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="3.2.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="3.2.0" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
-		<documentation>METAR and SPECI reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
+		<documentation>METAR and SPECI reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
 METAR and SPECI reports include identical information but are issued for different purposes.
 
@@ -71,9 +71,9 @@ The information contained in METAR and SPECI is identical. SPECI is issued when 
 
 SPECI reports are used for dissemination beyond the aerodrome of origin (mainly intended for flight planning, VOLMET broadcasts and D-VOLMET) unless METAR are issued at half-hourly intervals.
 
-SPECI is issued following the resumption of the issuance of METAR, as necessary, at aerodromes that are not operational throughout 24 hours in accordance with ICAO Annex 3 Section 4.3.1.
+SPECI is issued following the resumption of the issuance of METAR, as necessary, at aerodromes that are not operational throughout 24 hours.
 
-See ICAO Annex 3 / WMO No. 49-2 Table A3-2</documentation>
+See ICAO Annex 3 and PANS-MET (Doc 10157).</documentation>
 		</annotation>
 	</element>
 	<complexType name="SPECIType">
@@ -104,7 +104,7 @@ The information contained in METAR and SPECI is identical. SPECI is issued when 
 
 METARs are a routine report produced for dissemination beyond the aerodrome of origin, and are mainly intended for flight planning, VOLMET broadcasts and D-VOLMET.
 
-See ICAO Annex 3 / WMO No. 49-2 Table A3-2</documentation>
+See ICAO Annex 3 and PANS-MET (Doc 10157).</documentation>
 		</annotation>
 	</element>
 	<complexType name="METARType">
@@ -201,7 +201,7 @@ a) visibility, 10km or more, and the lowest visibility is not reported
 b) no cloud of operational significance
 c) no weather of significance to aviation
 
-Information on visibility, runway visual range, present weather and cloud amount, cloud type and height of cloud base shall not be reported.  See ICAO Annex 3 / WMO No. 49-2 Section 2.2.</documentation>
+Information on visibility, runway visual range, present weather and cloud amount, cloud type and height of cloud base shall not be reported.  See ICAO PANS-MET (Doc 10157) Section 2.2.</documentation>
 					</annotation>
 				</attribute>
 			</extension>
@@ -283,7 +283,7 @@ Measured altimeter setting shall be given in hectoPascals ("hPa").</documentatio
 					</element>
 					<element nillable="true" name="rvr" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>RVR conditions are required if horizontal visibility or RVR is less than 1500 meters, up to a maximum of four runways</documentation>
+							<documentation>RVR conditions are required if horizontal visibility or RVR is less than 1500 meters</documentation>
 						</annotation>
 						<complexType>
 							<complexContent>
@@ -357,7 +357,7 @@ a) visibility, 10km or more, and the lowest visibility is not reported
 b) no cloud of operational significance
 c) no weather of significance to aviation
 
-Information on visibility, runway visual range, present weather and cloud amount, cloud type and height of cloud base shall not be reported.  See ICAO Annex 3 / WMO No. 49-2 Section 2.2.</documentation>
+Information on visibility, runway visual range, present weather and cloud amount, cloud type and height of cloud base shall not be reported.  See ICAO PANS-MET (Doc 10157) Section 2.2.</documentation>
 					</annotation>
 				</attribute>
 			</extension>
@@ -390,9 +390,7 @@ Mean runway visual range distance shall be reported in meters ("m").
 
 To report a mean RVR of at least 2000 meters, mean RVR is reported as 2000 meters and the operator is reported as "above"
 
-Annex 3:
-Table A3-2 "RVR/RVR"
-Section 4.3.6.6</documentation>
+See ICAO PANS-MET (Doc 10157) Section 2.2.3.6.</documentation>
 					<appinfo>
 						<quantity>http://codes.wmo.int/common/quantity-kind/runwayVisualRangeRvr</quantity>
 					</appinfo>
@@ -413,13 +411,11 @@ To report a mean RVR of at least 2000 metres, mean RVR is reported as 2000 metre
 		</sequence>
 		<attribute name="pastTendency" type="iwxxm:VisualRangeTendencyType">
 			<annotation>
-				<documentation>The runway visual range tendency (up, down, none).
+				<documentation>The runway visual range tendency (up, down, no_change).
 
-If the runway visual range values during the 10-minute period have shown a distinct tendency, such that the mean during the first 5 minutes varies by 100 m or more from the mean during the second 5 minutes of the period, this should be indicated. When the variation of the runway visual range values shows an upward or downward tendency, this should be indicated by "Up" or "Down", respectively. In circumstances when actual fluctuations during the 10-minute period show no distinct tendency, this should be indicated using "No Change?. When indications of tendency are not available, no information should be reported
+If the runway visual range values during the 10-minute period have shown a distinct tendency, such that the mean during the first 5 minutes varies by 100 m or more from the mean during the second 5 minutes of the period, this should be indicated. When the variation of the runway visual range values shows an upward or downward tendency, this should be indicated by "Up" or "Down", respectively. In circumstances when actual fluctuations during the 10-minute period show no distinct tendency, this should be indicated using "No Change". When indications of tendency are not available, no information should be reported.
 
-ICAO Annex 3 / WMO No. 49:
-Table A3-2 Note 9
-Section 4.3.6.6a</documentation>
+See ICAO PANS-MET (Doc 10157) Section 2.2.3.6.6.</documentation>
 			</annotation>
 		</attribute>
 	</complexType>
@@ -444,8 +440,7 @@ The term sea surface temperature is generally meant to be representative of the 
 
 Temperatures shall be reported in degrees Celsius ("Cel").
 
-ICAO Annex 3 / WMO No. 49-2:
-Section 4.8.1.5a</documentation>
+See ICAO PAN-MET (Doc 10157) Section 2.2.8.1.5.</documentation>
 					<appinfo>
 						<quantity>http://codes.wmo.int/common/quantity-kind/seaSurfaceTemperature</quantity>
 					</appinfo>
@@ -462,11 +457,7 @@ Significant wave height shall be reported in meters ("m").</documentation>
 				<annotation>
 					<documentation>The state of the sea observed by aeronautical meteorological stations established on offshore structures in support of helicopter operations
 
-ICAO Annex 3 / WMO No. 49-2:
-Section 4.8.1.5a
-
-WMO 306:
-Table 3700</documentation>
+See ICAO PANS-MET (Doc 10157) Section 2.2.8.1.5 and the Manual on Codes (WMO No.306), Vol. I.1 Table 3700.</documentation>
 				</annotation>
 			</element>
 			<element name="extension" type="iwxxm:ExtensionType" minOccurs="0" maxOccurs="unbounded">
@@ -559,11 +550,11 @@ When the sky is obscured and the value of the vertical visibility cannot be dete
 		<annotation>
 			<documentation>An aggregation of surface wind conditions typically reported together at an aerodrome, including wind direction information, wind speed, and wind gusts.
 
-Wind direction is reported according to ICAO Annex 3 / WMO No. 49-2 Section 4.1.5.2b:
-"variations from the mean wind direction during the past 10 minutes is reported as follows, if the total variation is 60 or more:
-1) when the total variation is 60 or more and less than 180 and the wind speed is 1.5 m/s (3 kt) or more, such directional variations are reported as the two extreme directions between which the surface wind has varied;
-2) when the total variation is 60 or more and less than 180 and the wind speed is less than 1.5 m/s (3 kt), the wind direction is reported as variable with no mean wind direction; or
-3) when the total variation is 180 or more, the wind direction is reported as variable with no mean wind direction"
+Wind direction is reported according to ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 b):
+"variations from the mean wind direction during the past 10 minutes shall be reported as follows, if the total variation is 60° or more:
+1) when the total variation is 60° or more and less than 180° and the wind speed is 1.5 m/s (3 kt) or more, such directional variations shall be reported as the two extreme directions between which the surface wind has varied;
+2) when the total variation is 60° or more and less than 180° and the wind speed is less than 1.5 m/s (3 kt), the wind direction shall be reported as variable with no mean wind direction; or
+3) when the total variation is 180° or more, the wind direction shall be reported as variable with no mean wind direction"
 
 Wind direction shall be given in degrees from true North. Plane angle unit of measure (uom) is "deg".  A true north wind is indicated with a direction of 360. Calm wind is indicated with a direction of 0. Wind speeds and gusts, if present, shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
 		</annotation>
@@ -584,8 +575,7 @@ Wind direction shall be given in degrees from true North. Plane angle unit of me
 				<annotation>
 					<documentation>The average observed wind speed over the past ten minutes
 
-ICAO Annex 3 / WMO No. 49-2:
-Section 4.1.5.2a
+See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 a).
 
 Wind speeds shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
 					<appinfo>
@@ -604,8 +594,7 @@ When no operator is reported, wind speed is an exact value with identical semant
 				<annotation>
 					<documentation>Variations from the mean wind speed (gusts) during the past 10 minutes.
 
-ICAO Annex 3 / WMO No. 49-2:
-Section 4.1.5.2c
+See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 c).
 
 Wind gusts shall be provided in either two units of measures: "m/s" or "[kn_i]" (knot).</documentation>
 					<appinfo>
@@ -626,8 +615,7 @@ When no operator is reported, wind gust speed is an exact value with identical s
 
 This corresponds to the dxdxdx part of the reported variation dndndnVdxdxdx in TAC.
 
-ICAO Annex 3 / WMO No. 49-2:
-Section 4.1.5.2b 1)</documentation>
+See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 b) 1)</documentation>
 					<appinfo>
 						<quantity>http://codes.wmo.int/common/quantity-kind/windDirection</quantity>
 					</appinfo>
@@ -639,8 +627,7 @@ Section 4.1.5.2b 1)</documentation>
 
 This corresponds to the dndndn part of the reported variation dndndnVdxdxdx in TAC.
 
-ICAO Annex 3 / WMO No. 49-2:
-Section 4.1.5.2b 1)</documentation>
+See ICAO PANS-MET (Doc 10157) Section 2.2.1.5.2 b) 1)</documentation>
 					<appinfo>
 						<quantity>http://codes.wmo.int/common/quantity-kind/windDirection</quantity>
 					</appinfo>
@@ -682,13 +669,11 @@ Measured prevailing horizontal visibility shall be reported in meters ("m") only
 
 The greatest visibility value, observed in accordance with the definition of "visibility", which is reached within at least half the horizon circle or within at least half of the surface of the aerodrome. These areas could comprise contiguous or non-contiguous sectors.
 
-Note: This value may be assessed by human observation and/or instrumented systems. When instruments are installed, they are
-used to obtain the best estimate of the prevailing visibility.
+Note: This value may be assessed by human observation and/or instrumented systems. When instruments are installed, they are used to obtain the best estimate of the prevailing visibility.
 
 To report a prevailing visibility of at least 10000 meters, prevailing visibility is reported as 10000 meters and the prevailing visibility operator is reported as "above".
 
-ICAO Annex 3 / WMO No. 49-2:
-Section 4.2.4.4b</documentation>
+See ICAO PANS-MET (Doc 10157) Section 2.2.2.4.4.</documentation>
 					<appinfo>
 						<quantity>http://codes.wmo.int/common/quantity-kind/aeronauticalPrevailingHorizontalVisibility</quantity>
 					</appinfo>
@@ -709,7 +694,7 @@ When no operator is reported, prevailing visibility represents an exact value wi
 
 Measured minimum visibility shall be reported in meters ("m") only.
 
-ICAO Annex 3 / WMO No. 49-2 Section 4.2.4.4a:
+ICAO PANS-MET Section 2.2.2.4.4:
 "When the visibility is not the same in different directions and
 a) when the lowest visibility is different from the prevailing visibility, and
   1) less than 1500 m or
@@ -748,9 +733,9 @@ Direction of minimum visibility shall be given in degrees from true North. Plane
 		<annotation>
 			<documentation>Change qualifier of a trend-type forecast or an aerodrome forecast.
 
-Defined in WMO No. 306 Vol I.1; FM-15 METAR, FM-16 SPECI and FM-51 TAF.
+Defined in the Manual on Codes (WMO No. 306), Vol I.1; FM-15 METAR, FM-16 SPECI and FM-51 TAF.
 
-Also see WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 08 016 'Change qualifier of a trend forecast or an aerodrome forecast'.</documentation>
+Also see WMO No. 306 Vol I.2 Part B FM 94 BUFR Code table 0 08 016 'Change qualifier of a trend forecast or an aerodrome forecast'.</documentation>
 		</annotation>
 		<restriction base="string">
 			<enumeration value="BECOMING">
@@ -767,11 +752,11 @@ Also see WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 08 016 'Change quali
 	</simpleType>
 	<simpleType name="VisualRangeTendencyType">
 		<annotation>
-			<documentation>The tendency of visual range (e.g., upward, downward).  Defined for the purposes of aviation meteorology reporting of the visual range on runways (WMO No. 49-2).
+			<documentation>The tendency of visual range (e.g., upward, downward).  Defined for the purposes of aviation meteorology reporting of the visual range on runways (ICAO Annex 3 and PANS-MET (Doc 10157)).
 
 If the [runway] visual range (RVR) values during the 10-minute period preceding the nominal observation time show a distinct upward or downward tendency such that the mean during the first five minutes varies by 100 metres or more from the mean in the second five minutes of the period, an UPWARD [U] or DOWNWARD [D] tendency is recorded. When no distinct change in RVR is observed, NO CHANGE [N] is recorded. When it is not possible to determine the tendency, MISSING VALUE is recorded.
 
-See WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 018 "Tendency of runway visual range".</documentation>
+See the Manual on Codes (WMO No. 306) Vol I.2 FM 94 BUFR Code table 0 20 018 "Tendency of runway visual range".</documentation>
 		</annotation>
 		<restriction base="string">
 			<enumeration value="UPWARD">
@@ -828,9 +813,9 @@ See WMO No. 306 Vol I.2 FM 94 BUFR code-table 0 20 018 "Tendency of runway visua
 		<annotation>
 			<documentation>Weather phenomenon of operational significance to aviation observed during the period since the last routine report, or last hour, whichever is shorter, but not at the time of observation.
 
-Only a specific set of weather phenomenon are reported within aviation meteorology as defined in Regulation ICAO Annex 3 / WMO No. 49-2.
+Only a specific set of weather phenomenon are reported within aviation meteorology as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
-This CodeList is specifically defined for aviation purposes as defined in WMO No. 49-2. A superset of definitions are defined in WMO No. 306 Vol I.1 code-table 4678 "Significant weather phenomena".</documentation>
+This codelist is specifically defined for aviation purposes as defined in PANS-MET. A superset of definitions are defined in the Manual on Codes (WMO No. 306), Vol I.1 Code table 4678 "Significant weather phenomena".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/AerodromeRecentWeather</vocabulary>
 				<extensibility>none</extensibility>
@@ -846,18 +831,20 @@ This CodeList is specifically defined for aviation purposes as defined in WMO No
 			<documentation>Categorical assessment of sea surface state (or other large open body of water) based on height of waves.
 
 Height in metres : Category
-- 0 metres : Calm (glassy)
-- 0-0.1 metres : Calm (rippled)
-- 0.1-0.5 metres : Smooth
-- 0.5-1.25 metres : Slight
-- 1.25-2.5 metres : Moderate
-- 2.5-4 metres : Rough
-- 4-6 metres : Very rough
-- 6-9 metres : High
-- 9-14 metres : Very high
-- &gt;14 metres : Phenomenal
 
-See WMO No. 306 Vol I.1 code table 3700 "State of the sea" and WMO No. 306 Vol I.2 FM 94 BUFR code table 0 22 061 "State of the sea".</documentation>
+	- 0 metres : Calm (glassy)
+	- 0-0.1 metres : Calm (rippled)
+	- 0.1-0.5 metres : Smooth
+	- 0.5-1.25 metres : Slight
+	- 1.25-2.5 metres : Moderate
+	- 2.5-4 metres : Rough
+	- 4-6 metres : Very rough
+	- 6-9 metres : High
+	- 9-14 metres : Very high
+	- &gt;14 metres : Phenomenal
+
+
+See the Manual on Codes (WMO No. 306), Vol I.1 Code table 3700 "State of the sea" and WMO No. 306 Vol I.2 FM 94 BUFR Code table 0 22 061 "State of the sea".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-22-061</vocabulary>
 				<extensibility>none</extensibility>
@@ -872,9 +859,9 @@ See WMO No. 306 Vol I.1 code table 3700 "State of the sea" and WMO No. 306 Vol I
 		<annotation>
 			<documentation>The present weather observed at, or in near vicinity of, an aerodrome.
 
-Only a specific set of weather phenomenon are reported within aviation meteorology as defined in Regulation ICAO Annex 3 / WMO No. 49-2.
+Only a specific set of weather phenomenon are reported within aviation meteorology as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
-This CodeList is specifically defined for aviation purposes as defined in WMO No. 49-2. A superset of definitions are defined in WMO No. 306 Vol I.1 code-table 4678 "Significant weather phenomena".</documentation>
+This codelist is specifically defined for aviation purposes as defined in ICAO PANS-MET. A superset of definitions are defined in the Manual on Codes (WMO No. 306), Vol I.1 Code table 4678 "Significant weather phenomena".</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/AerodromePresentOrForecastWeather</vocabulary>
 				<extensibility>none</extensibility>

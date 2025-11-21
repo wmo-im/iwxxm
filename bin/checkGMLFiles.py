@@ -95,6 +95,8 @@ def check_files(dir):
                             if checked:
                                 print("\tRESOLVING xlink:href %s" % xlinkTarget)
                                 response = urlRequest.urlopen(xlinkTarget)
+                                # Use the following instead when checking against the test registry http://ci.codes.wmo.int
+                                #response = urlRequest.urlopen(xlinkTarget.replace('codes','ci.codes'))
                                 code = response.getcode()
                                 content = response.read().decode('UTF-8')
                                 # a 2xx response code is acceptable

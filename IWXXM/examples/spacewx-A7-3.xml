@@ -5,7 +5,7 @@
     xmlns:gml="http://www.opengis.net/gml/3.2" 
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2/iwxxm.xsd"
     gml:id="uuid.dea6234c-f57f-4ccf-be7a-bb00a0265af2" 
     reportStatus="NORMAL" 
     permissibleUsage="OPERATIONAL">
@@ -39,7 +39,7 @@
                 <gml:TimeInstant gml:id="uuid.c0710916-7571-400d-91cc-9c55aea01e94">
                     <gml:timePosition>2020-11-08T01:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
-	        </iwxxm:phenomenonTime>
+	    </iwxxm:phenomenonTime>
             <iwxxm:intensityAndRegion>
                 <iwxxm:SpaceWeatherIntensityAndRegion gml:id="uuid.34415dca-6fab-45e4-8225-c45960b1e9d2">
                     <iwxxm:intensity>SEV</iwxxm:intensity>

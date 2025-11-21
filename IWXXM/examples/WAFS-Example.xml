@@ -10,7 +10,7 @@
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1/AIXM_Features.xsd
-    http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
+    http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2/iwxxm.xsd"
     gml:id="uuid.ce3b61b9-d360-4da1-83b9-67e668406869" reportStatus="NORMAL" permissibleUsage="OPERATIONAL">
 
     <!-- Unique identifier of the collective -->
@@ -37,15 +37,15 @@
     </iwxxm:boundingVolume>
     
     <!-- A list of all phenomena of all objects -->
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/JETSTREAM"/>
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/TURBULENCE"/>
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/AIRFRAME_ICING"/>
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/CLOUD"/>
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/TROPOPAUSE"/>
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/RADIATION"/>
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/SANDSTORM"/>
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/TROPICAL_CYCLONE"/>
-    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANO"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/JETSTREAM"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/TURBULENCE"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/AIRFRAME_ICING"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/CLOUD"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/TROPOPAUSE"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/RADIATION"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/SANDSTORM"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/TROPICAL_CYCLONE"/>
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANO"/>
     
     <!-- Issue time of the collective -->
     <iwxxm:issueTime>
@@ -80,7 +80,7 @@
     <iwxxm:feature>
         <iwxxm:MeteorologicalFeature gml:id="uuid.8c3d3467-e398-4627-ab23-f9e57c2215b5">
             <gml:identifier codeSpace="http://wafs/sigwxobj">eb324455-236c-46f8-b80d-c6d42c3a634c</gml:identifier>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/JETSTREAM"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/JETSTREAM"/>
             <iwxxm:phenomenonGeometry>
                 <gml:Curve gml:id="uuid.7b5a197a-d9bf-4f3b-ba36-701fe019b6d2" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
                     <gml:segments>
@@ -167,7 +167,7 @@
     <iwxxm:feature>
         <iwxxm:MeteorologicalFeature gml:id="uuid.aaaf9f38-dc4c-410d-b056-c130a049bde9">
             <gml:identifier codeSpace="http://wafs/sigwxobj">b3d925c1-a81e-474c-ae3c-4f6281ec5d8a</gml:identifier>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/TURBULENCE"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/TURBULENCE"/>
             <iwxxm:phenomenonGeometry>
                 <iwxxm:ElevatedVolume gml:id="uuid.138a9477-e1fd-43e2-8060-0eb6a093d0eb" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
                     <gml:patches>
@@ -205,7 +205,7 @@
     <iwxxm:feature>
         <iwxxm:MeteorologicalFeature gml:id="uuid.48f96fb3-6534-4593-b760-9c65d0b9fa96">
             <gml:identifier codeSpace="http://wafs/sigwxobj">f597964d-1c4f-4564-b30c-03b318c71a60</gml:identifier>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/AIRFRAME_ICING"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/AIRFRAME_ICING"/>
             <iwxxm:phenomenonGeometry>
                 <iwxxm:ElevatedVolume gml:id="uuid.7eaf9fd5-f648-4c40-82cd-81cb1e6387ad" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                     <gml:patches>
@@ -243,7 +243,7 @@
     <iwxxm:feature>
         <iwxxm:MeteorologicalFeature gml:id="uuid.6f770e58-488b-4d89-b828-4c952b7d6a65">
             <gml:identifier codeSpace="http://wafs/sigwxobj">6db03e65-d1f7-47ed-b791-10d0d75ac280</gml:identifier>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/CLOUD"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/CLOUD"/>
             <iwxxm:phenomenonGeometry>
                 <iwxxm:ElevatedVolume gml:id="uuid.6b082591-74f4-46fe-9d13-05e76e34a0d8" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
                     <gml:patches>
@@ -267,7 +267,7 @@
                     </gml:patches>
                     <iwxxm:upperElevation uom="M">12496.8</iwxxm:upperElevation>
                     <iwxxm:upperVerticalReference>MSL</iwxxm:upperVerticalReference>
-                    <iwxxm:lowerElevation xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
+                    <iwxxm:lowerElevation xsi:nil="true" nilReason="http://codes.wmo.int/iwxxm/nil/inapplicable"/>
                 </iwxxm:ElevatedVolume>
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
@@ -283,7 +283,7 @@
     <iwxxm:feature>
         <iwxxm:MeteorologicalFeature gml:id="uuid.4cefc622-5784-49db-9d3d-7463c7a05dc6">
             <gml:identifier codeSpace="http://wafs/sigwxobj">6e1ee07d-bc2c-4984-8094-1fb3c4ee7d83</gml:identifier>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/TROPOPAUSE"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/TROPOPAUSE"/>
             <iwxxm:phenomenonGeometry>
                 <gml:Polygon gml:id="uuid.90d73d97-bebc-42ec-b071-36c8da98111c" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
                     <gml:exterior>
@@ -316,7 +316,7 @@
     <iwxxm:feature>
         <iwxxm:MeteorologicalFeature gml:id="uuid.bb8c4828-5d6e-41fb-ac96-130a8c3a7cf2">
             <gml:identifier codeSpace="http://wafs/sigwxobj">1cc0c3ef-aacd-479d-97ba-bf4f503b1b40</gml:identifier>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANO"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANO"/>
             <iwxxm:phenomenonGeometry>
                 <gml:Point gml:id="uuid.cd904e07-520a-4fe1-83fb-5682ce393417" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
                     <gml:pos>37.7 15.0</gml:pos>
@@ -334,13 +334,13 @@
     <iwxxm:feature>
         <iwxxm:MeteorologicalFeature gml:id="uuid.53fd5553-39d1-4f79-8439-d695d22e8590">
             <gml:identifier codeSpace="http://wafs/sigwxobj">35b3e5f8-5e11-48f1-a74e-bb1e01488b6e</gml:identifier>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/SANDSTORM"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/SANDSTORM"/>
             <iwxxm:phenomenonGeometry>
                 <gml:Point gml:id="uuid.d586b0de-8302-468e-bdb9-0ecb30fbf392" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
                     <gml:pos>25.0 -78.0</gml:pos>
                 </gml:Point>
             </iwxxm:phenomenonGeometry>
-            <iwxxm:phenomenonProperty nilReason="http://codes.wmo.int/common/nil/inapplicable"/>
+            <iwxxm:phenomenonProperty nilReason="http://codes.wmo.int/iwxxm/nil/inapplicable"/>
         </iwxxm:MeteorologicalFeature>
     </iwxxm:feature>
 
@@ -348,7 +348,7 @@
     <iwxxm:feature>
         <iwxxm:MeteorologicalFeature gml:id="uuid.024d97bd-0dae-4a8e-8b94-3bac68c961e9">
             <gml:identifier codeSpace="http://wafs/sigwxobj">374cea66-08d4-4db2-b832-e55b786c630c</gml:identifier>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/TROPICAL_CYCLONE"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/TROPICAL_CYCLONE"/>
             <iwxxm:phenomenonGeometry>
                 <gml:Point gml:id="uuid.8441de6b-f3f0-49b1-9f54-a65459a88ff5" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
                     <gml:pos>25.0 -78.0</gml:pos>
@@ -366,7 +366,7 @@
     <iwxxm:feature>
         <iwxxm:MeteorologicalFeature gml:id="uuid.821e1c84-9688-4585-861f-153770ed4a90">
             <gml:identifier codeSpace="http://wafs/sigwxobj">f48de38b-a245-4b05-b5b4-9b418c588a3f</gml:identifier>
-            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/RADIATION"/>
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/iwxxm/MeteorologicalFeature/RADIATION"/>
             <iwxxm:phenomenonGeometry>
                 <gml:Point gml:id="uuid.8d9b76b1-4125-4dee-8bd0-c99ee136e44f" srsDimension="2" axisLabels="Lat Long" srsName="http://www.opengis.net/def/ers/EPSG/0/4326">
                     <gml:pos>53.2 -24.1</gml:pos>
@@ -374,8 +374,8 @@
             </iwxxm:phenomenonGeometry>
             <iwxxm:phenomenonProperty>
                 <iwxxm:RadiationIncident gml:id="uuid.1603b181-af47-41b2-9388-352420ca6ad1">
-                    <iwxxm:siteName nilReason="http://codes.wmo.int/common/nil/missing"/>
-                    <iwxxm:incidentTime nilReason="http://codes.wmo.int/common/nil/missing"/>
+                    <iwxxm:siteName nilReason="http://codes.wmo.int/iwxxm/nil/missing"/>
+                    <iwxxm:incidentTime nilReason="http://codes.wmo.int/iwxxm/nil/missing"/>
                 </iwxxm:RadiationIncident>
             </iwxxm:phenomenonProperty>
         </iwxxm:MeteorologicalFeature>

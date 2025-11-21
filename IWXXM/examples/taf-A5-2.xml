@@ -5,7 +5,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2/iwxxm.xsd"
     gml:id="uuid.dfbfe27c-3478-4efc-9800-124b90030e39"
     reportStatus="AMENDMENT"
     permissibleUsage="OPERATIONAL"

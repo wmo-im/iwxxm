@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="1.0.0RC1" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="1.0.0" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="metFeature.xsd"></include>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
-	<element name="VolcanoObservatoryNoticeForAviation" type="iwxxm:VolcanoObservatoryNoticeForAviationType" substitutionGroup="iwxxm:MeteorologicalFeatureCollection"></element>
+	<annotation>
+		<documentation>This package defines a collection of meteorological objects for provision of Volcano Observatory Notice for Aviation (VONA) as defined in ICAO Annex 3 and PANS-MET (Doc 10157) for dissemination of critical, operationally relevant information about volcanic activity.  Guidance on the criteria is provided in the Handbook on the International Airways Watch (Doc 9766).
+
+Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.
+
+References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.</documentation>
+	</annotation>
+	<element name="VolcanoObservatoryNoticeForAviation" type="iwxxm:VolcanoObservatoryNoticeForAviationType" substitutionGroup="iwxxm:MeteorologicalFeatureCollection">
+		<annotation>
+			<documentation>A product issued by the State Volcano Observatory (SVO) with a
+summary of volcanic activity and observations about ash emission (or lack thereof) which is intended for aviation users.</documentation>
+		</annotation>
+	</element>
 	<complexType name="VolcanoObservatoryNoticeForAviationType">
 		<complexContent>
 			<extension base="iwxxm:MeteorologicalFeatureCollectionType">
@@ -17,12 +29,12 @@
 							<documentation>VONA Notice Number.</documentation>
 						</annotation>
 					</element>
-					<element name="currentColourCode" type="iwxxm:AviationColourCodeType">
+					<element nillable="true" name="currentColourCode" type="iwxxm:AviationColourCodeType">
 						<annotation>
 							<documentation>Current aviation colour code.</documentation>
 						</annotation>
 					</element>
-					<element name="previousColourCode" type="iwxxm:AviationColourCodeType">
+					<element nillable="true" name="previousColourCode" type="iwxxm:AviationColourCodeType">
 						<annotation>
 							<documentation>Previous aviation colour code.</documentation>
 						</annotation>
@@ -62,7 +74,7 @@
 		<annotation>
 			<documentation>Re-suspended volcanic ash.
 
-To be used in iwxxm:phenomenonProperty of iwxxm:MeteorologicalFeature and iwxxm:phenomenon set to https://codes.wmo.int/49-2/MeteorologicalFeature/RESUSPENDED_VOLCANIC_ASH with iwxxm:phenomenonGeometry defined by iwxxm:ElevatedSurface to indicate the coverage of the re-suspended volcanic ash source.</documentation>
+To be used in iwxxm:phenomenonProperty of iwxxm:MeteorologicalFeature and iwxxm:phenomenon set to https://codes.wmo.int/iwxxm/MeteorologicalFeature/RESUSPENDED_VOLCANIC_ASH with iwxxm:phenomenonGeometry defined by iwxxm:ElevatedSurface to indicate the coverage of the re-suspended volcanic ash source.</documentation>
 		</annotation>
 	</element>
 	<complexType name="ResuspendedVolcanicAshType">
@@ -73,7 +85,7 @@ To be used in iwxxm:phenomenonProperty of iwxxm:MeteorologicalFeature and iwxxm:
 						<annotation>
 							<documentation>Average height of re-suspended volcanic ash field.
 
-When the height is UNKNOWN, </documentation>
+When the height is unknown, it shall be represented with a nil in name and nilReason 'http://codes.wmo.int/iwxxm/nil/unknown'.</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -91,11 +103,11 @@ When the height is UNKNOWN, </documentation>
 		<annotation>
 			<documentation>Volcanic ash cloud vertical extent.
 
-To be used in iwxxm:phenomenonProperty of iwxxm:MeteorologicalFeature and iwxxm:phenomenon set to https://codes.wmo.int/49-2/MeteorologicalFeature/VOLCANIC_ASH with iwxxm:phenomenonGeometry defined by iwxxm:ElevatedLevel to indicate the height of the volcanic ash cloud.
+To be used in iwxxm:phenomenonProperty of iwxxm:MeteorologicalFeature and iwxxm:phenomenon set to https://codes.wmo.int/iwxxm/MeteorologicalFeature/VOLCANIC_ASH with iwxxm:phenomenonGeometry defined by iwxxm:ElevatedLevel to indicate the height of the volcanic ash cloud.
 
-When the cloud height is unknown, set iwxxm:phenomenon/../iwxxm:ElevatedLevel to nil with nilReason http://codes.wmo.int/common/nil/unknown.
+When the cloud height is unknown, set iwxxm:phenomenon/../iwxxm:ElevatedLevel to nil with nilReason http://codes.wmo.int/iwxxm/nil/unknown.
 
-When no volcanic cloud is produced, set iwxxm:phenomenonGeometry, iwxxm:heightSource and iwxxm:movement to nil with nilReason http://codes.wmo.int/common/nil/inapplicable.</documentation>
+When no volcanic cloud is produced, set iwxxm:phenomenonGeometry, iwxxm:heightSource and iwxxm:movement to nil with nilReason http://codes.wmo.int/iwxxm/nil/inapplicable.</documentation>
 		</annotation>
 	</element>
 	<complexType name="VolcanicAshCloudVerticalExtentType">
@@ -123,38 +135,6 @@ When no volcanic cloud is produced, set iwxxm:phenomenonGeometry, iwxxm:heightSo
 		<attributeGroup ref="gml:AssociationAttributeGroup"></attributeGroup>
 		<attributeGroup ref="gml:OwnershipAttributeGroup"></attributeGroup>
 	</complexType>
-	<simpleType name="AviationColourCodeType">
-		<annotation>
-			<documentation>Aviation colour code.</documentation>
-		</annotation>
-		<restriction base="string">
-			<enumeration value="UNASSIGNED">
-				<annotation>
-					<documentation>Unassigned.</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="RED">
-				<annotation>
-					<documentation>Red.</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="ORANGE">
-				<annotation>
-					<documentation>Orange.</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="YELLOW">
-				<annotation>
-					<documentation>Yellow.</documentation>
-				</annotation>
-			</enumeration>
-			<enumeration value="GREEN">
-				<annotation>
-					<documentation>Green.</documentation>
-				</annotation>
-			</enumeration>
-		</restriction>
-	</simpleType>
 	<simpleType name="VolcanicAshCloudMovementType">
 		<annotation>
 			<documentation>Volcanic ash cloud movement.</documentation>
@@ -217,4 +197,17 @@ When no volcanic cloud is produced, set iwxxm:phenomenonGeometry, iwxxm:heightSo
 			</enumeration>
 		</restriction>
 	</simpleType>
+	<element name="AviationColourCode" type="iwxxm:AviationColourCodeType"></element>
+	<complexType name="AviationColourCodeType">
+		<annotation>
+			<documentation>Volcano level of alert colour codes for aviation.  See ICAO Doc 9766 for details.</documentation>
+			<appinfo>
+				<vocabulary>http://codes.wmo.int/iwxxm/AviationColourCode</vocabulary>
+				<extensibility>none</extensibility>
+			</appinfo>
+		</annotation>
+		<complexContent>
+			<extension base="gml:ReferenceType"></extension>
+		</complexContent>
+	</complexType>
 </schema>

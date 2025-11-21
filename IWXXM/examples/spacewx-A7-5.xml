@@ -5,7 +5,7 @@
     xmlns:gml="http://www.opengis.net/gml/3.2" 
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2/iwxxm.xsd"
     gml:id="uuid.dea6234c-f57f-4ccf-be7a-bb00a0265af2" 
     reportStatus="NORMAL" 
     permissibleUsage="OPERATIONAL">
@@ -75,7 +75,8 @@
                                     </aixm:horizontalProjection>
                                  </aixm:AirspaceVolume>
                             </iwxxm:location>
-                        </iwxxm:SpaceWeatherRegion>
+                            <iwxxm:locationIndicator xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/inapplicable"/> 
+		        </iwxxm:SpaceWeatherRegion>
                     </iwxxm:region>
                 </iwxxm:SpaceWeatherIntensityAndRegion>
             </iwxxm:intensityAndRegion>
@@ -89,7 +90,7 @@
                     <gml:timePosition>2020-11-08T07:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:intensityAndRegion nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:intensityAndRegion xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
@@ -100,7 +101,7 @@
                     <gml:timePosition>2020-11-08T13:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:intensityAndRegion nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:intensityAndRegion xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
@@ -111,7 +112,7 @@
                     <gml:timePosition>2020-11-08T19:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:intensityAndRegion nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:intensityAndRegion xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     
@@ -122,7 +123,7 @@
                     <gml:timePosition>2016-11-09T01:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
-            <iwxxm:intensityAndRegion nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
+            <iwxxm:intensityAndRegion xsi:nil="true" nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
         </iwxxm:SpaceWeatherAnalysis>
     </iwxxm:analysis>
     

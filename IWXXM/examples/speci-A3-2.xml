@@ -5,7 +5,7 @@
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2RC1/iwxxm.xsd"
+    xsi:schemaLocation="http://icao.int/iwxxm/2025-2 http://schemas.wmo.int/iwxxm/2025-2/iwxxm.xsd"
     gml:id="uuid.8ca15300-d667-4364-86a1-ab8bec9ba833"
     reportStatus="NORMAL"
     permissibleUsage="OPERATIONAL"
@@ -86,6 +86,7 @@
                     <gml:endPosition>2012-08-15T12:00:00Z</gml:endPosition>
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
+            <iwxxm:timeIndicator>UNTIL</iwxxm:timeIndicator>
             <iwxxm:prevailingVisibility uom="m">600</iwxxm:prevailingVisibility>
         </iwxxm:MeteorologicalAerodromeTrendForecast>
     </iwxxm:trendForecast>
@@ -97,6 +98,7 @@
                     <gml:timePosition>2012-08-15T12:00:00Z</gml:timePosition>
                 </gml:TimeInstant>
             </iwxxm:phenomenonTime>
+	    <iwxxm:timeIndicator>AT</iwxxm:timeIndicator>
             <iwxxm:prevailingVisibility uom="m">8000</iwxxm:prevailingVisibility>
             <iwxxm:weather nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>
             <iwxxm:cloud nilReason="http://codes.wmo.int/common/nil/nothingOfOperationalSignificance"/>

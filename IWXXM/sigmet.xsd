@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="4.0.1" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema elementFormDefault="qualified" targetNamespace="http://icao.int/iwxxm/2025-2" version="4.0.2" xmlns:iwxxm="http://icao.int/iwxxm/2025-2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:metce="http://def.wmo.int/metce/2013" xmlns="http://www.w3.org/2001/XMLSchema">
 	<include schemaLocation="common.xsd"></include>
 	<import namespace="http://def.wmo.int/metce/2013" schemaLocation="http://schemas.wmo.int/metce/1.2/metce.xsd"></import>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"></import>
 	<annotation>
-		<documentation>SIGMET reporting constructs as defined in ICAO Annex 3 / WMO No. 49-2.
+		<documentation>SIGMET reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).
 
 SIGMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These weather phenomena are reported as impacted regions of airspace.
 
@@ -93,7 +93,7 @@ Each analysis has a single SIGMETEvolvingConditionCollection as its result.  </d
 
 TC TOP (ABV and BLW) conditions are represented by the vertical component of the geometry.  For example: CB TOP FL500 is represented as a missing lowerLimit and an upperLimit of 500FL.
 
-In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE FIR" from ICAO Annex 3 / WMO No. 49-2), the geometry should be an xlink to the AirspaceVolume under geometryComponent of issuingAirTrafficServicesRegion.</documentation>
+In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE FIR" from ICAO PANS-MET (Doc 10157)), the geometry should be an xlink to the AirspaceVolume under geometryComponent of issuingAirTrafficServicesRegion.</documentation>
 		</annotation>
 	</element>
 	<complexType name="SIGMETEvolvingConditionType">
@@ -107,7 +107,7 @@ In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE 
 					</element>
 					<element name="geometry" type="iwxxm:AirspaceVolumePropertyType">
 						<annotation>
-							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomenon historically reported in ICAO Annex 3 / WMO No. 49-2: a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
+							<documentation>The expected geographic region(s) affected by the reported phenomenon at a particular time (thunderstorms, volcanic ash, etc.).  This geometry covers all combinations of phenomena historically reported in ICAO PANS-MET (Doc 10157): a boundary with a base and top, a TC centre position, and a VA line with a width</documentation>
 						</annotation>
 					</element>
 					<element nillable="true" name="directionOfMotion" type="iwxxm:AngleWithNilReasonType" minOccurs="0" maxOccurs="1">
@@ -191,7 +191,7 @@ speedOfMotion can be provided in either two units of measures: "km/h" or "[kn_i]
 
 TC TOP (ABV and BLW) conditions are represented by the vertical component of the geometry.  For example: CB TOP FL500 is represented as a missing lowerLimit and an upperLimit of 500FL.
 
-In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE FIR" from ICAO Annex 3 / WMO No. 49-2), the geometry should be an xlink to the AirspaceVolume under geometryComponent of issuingAirTrafficServicesRegion.</documentation>
+In cases where the position covers an entire FIR or CTA, ("ENTIRE CTA or ENTIRE FIR" from ICAO PANS-MET (Doc 10157)), the geometry should be an xlink to the AirspaceVolume under geometryComponent of issuingAirTrafficServicesRegion.</documentation>
 		</annotation>
 	</element>
 	<complexType name="SIGMETPositionType">
@@ -249,10 +249,7 @@ SIGMETs may report either observed or forecast hazardous conditions. Additionall
 					</element>
 					<element name="issuingAirTrafficServicesUnit" type="iwxxm:UnitPropertyType">
 						<annotation>
-							<documentation>The ATS unit serving the FIR or CTA to which the SIGMET refers
-
-ICAO Annex 3 / WMO No. 49-2:
-A6-1: "Location indicator of FIR/CTA"</documentation>
+							<documentation>The ATS unit serving the FIR or CTA to which the SIGMET refers.</documentation>
 						</annotation>
 					</element>
 					<element name="originatingMeteorologicalWatchOffice" type="iwxxm:UnitPropertyType" minOccurs="0" maxOccurs="1">
@@ -272,7 +269,7 @@ A6-1: "Location indicator of FIR/CTA"</documentation>
 					</element>
 					<element name="validPeriod" type="gml:TimePeriodPropertyType">
 						<annotation>
-							<documentation>The valid period for the entire report covering all observations and forecast conditions.  Each observation/forecast phenomenon includes its own temporal description for the described meteorological conditions, which is represented as phenomenonTime.
+							<documentation>The valid period for the entire report covering all observations and forecast conditions.  Each observation/forecast phenomenon includes its own temporal description for the described meteorological conditions.
 
 For example, an issued tropical cyclone SIGMET may be valid from 1600 UTC to 2200 UTC with an observed position at 1600 UTC and a forecast position of the centre of the tropical cyclone at 2200 UTC.  In this case the SIGMET validPeriod would be 1600 UTC to 2200 UTC, the analysis phenomenonTime would be 1600 UTC, and the forecastPositionAnalysis phenomenonTime would be 2200 UTC.</documentation>
 						</annotation>
@@ -434,7 +431,7 @@ See WMO No. 306 Vol I.2 Part B FM 94 BUFR code-table 0 20 028 'Expected change i
 	<element name="AeronauticalSignificantWeatherPhenomenon" type="iwxxm:AeronauticalSignificantWeatherPhenomenonType"></element>
 	<complexType name="AeronauticalSignificantWeatherPhenomenonType">
 		<annotation>
-			<documentation>Weather phenomenon of significance to aviation operations; used in SIGMET and AIRMET reports. The set of permitted options are defined in ICAO Annex 3 / WMO No. 49-2 C.3.1 sub-clause 1.1.4</documentation>
+			<documentation>Weather phenomenon of significance to aviation operations; used in SIGMET and AIRMET reports. The set of permitted options are defined in ICAO PANS-MET (Doc 10157) Section 6.4.4.</documentation>
 			<appinfo>
 				<vocabulary>http://codes.wmo.int/49-2/SigWxPhenomena</vocabulary>
 				<extensibility>none</extensibility>
