@@ -1,0 +1,58 @@
+# IWXXM
+
+## ICAO Meteorological Information Exchange Model
+
+## Summary
+IWXXM is an information model designed for the operational exchange of meteorological information for aviation.  Expressed in Unified Modelling Language (UML), the logical model of IWXXM utilizes the Geography Markup Language (GML) defined by the Open Geospatial Consortium (OGC) to express geographical features of meteorological phenomena. 
+
+The XML/GML Schema serialized from the UML model, together with a set of Schematron Rules, constitute the official representation of meteorological information required by Annex 3 to the Convention on International Civil Aviation - Meteorological Service for International Air Navigation and is documented in the World Meteorological Organization (WMO) No. 306 Manual on Codes - International Codes, Volume I.3.
+
+IWXXM includes representations for most of the reports in International Civil Aviation Organization (ICAO) Annex III, such as METAR/SPECI, TAF, SIGMET, AIRMET, Tropical Cyclone Advisory, Volcanic Ash Advisory and Space Weather Advisory.
+
+Unlike the Traditional Alphanumeric Code (TAC) forms of the ICAO Annex III, IWXXM is not intended to be directly used by consumers like pilots. IWXXM is designed to be consumed by software acting on behalf of the consumers, such as display software.
+
+### References
+* https://library.wmo.int/idurl/4/35769[_Manual on Codes_] (WMO-No. 306), Volume I.3. Part D - Representations derived from data models
+* https://store.icao.int/en/manual-on-the-icao-meteorological-information-exchange-model-doc-10003[Manual on the Digital Exchange of Aeronautical Meteorological Information], ICAO Doc 10003
+
+## Latest release* of schema files 
+https://schemas.wmo.int/iwxxm/2025-2/
+
+
+## Package compatibility
+The following table shows the versions of IWXXM and its individual packages (e.g. METAR/SPECI) and their relationships to ICAO Annex 3 requirements. If more than one version are indicated for an IWXXM report, it means the information model of the report has not been changed across the versions and either one of them can be used. After IWXXM 3.0, a new version scheme has been adopted in which individual package will maintain its own version number instead of inheriting the version number from IWXXM. This eliminates the need to advance the version number of a package with no apparent change with its schema.
+
+|=======================================================================================================
+| IWXXM Versions and packages   | http://schemas.wmo.int/iwxxm/1.1/[1.1]    | http://schemas.wmo.int/iwxxm/1.1/[2.1]   | http://schemas.wmo.int/iwxxm/1.1/[3]     | http://schemas.wmo.int/iwxxm/1.1/[2021-2] | http://schemas.wmo.int/iwxxm/1.1/[2023-1] | http://schemas.wmo.int/iwxxm/1.1/[2025-2]
+| METAR and SPECI                                     | 1.1.0 | 2.1.1 | 3.0.0 | 3.1.0  | 3.1.0  | 3.2.0 
+| TAF                                                 | 1.1.0 | 2.1.1 | 3.0.0 | 3.0.1  | 3.0.1  | 3.0.2 
+| SIGMET                                              | 1.1.0 | 2.1.1 | 3.0.0 | 4.0.0  | 4.0.1  | 4.0.2 
+| AIRMET                                              |       | 2.1.1 | 3.0.0 | 3.1.0  | 3.1.1  | 3.1.2 
+| Tropical Cyclone Advisory                           |       | 2.1.1 | 3.0.0 | 3.1.0  | 3.1.0  | 3.1.1 
+| Volcanic Ash Advisory                               |       | 2.1.1 | 3.0.0 | 3.1.0  | 3.1.0  | 3.2.0 
+| Space Weather Advisory                              |       |       | 3.0.0 | 3.0.1  | 3.0.1  | 3.1.0 
+| WAFS SIGWX Forecast                                 |       |       |       | 1.0.0  | 1.1.0  | 1.2.0 
+| Quantitative Volcanic Ash Concentration Information |       |       |       |        |        | 1.0.0 
+| Volcano Observatory Notice for Aviation             |       |       |       |        |        | 1.0.0 
+| ICAO Annex 3 Amendment                              | 76    | 77    | 78    | 79-80  | 79-81  | 82    
+| PANS-MET Edition                                    |       |       |       |        |        | first 
+|=======================================================================================================
+
+
+*_See https://wmo.int/iwxxm-release-communication-plan[IWXXM release communication plan]_
+ 
+## WMO Abbreviated Headings and Related Specifications Relevant for the Exchange of Aviation Data over ICAO AFS
+ 
+https://community.wmo.int/ahls-aviation-data-over-icao-afs
+
+## Development areas
+* The https://github.com/wmo-im/iwxxm[IWXXM repository] contains XML schema and schematron files.
+* The https://github.com/wmo-im/iwxxm-modelling[IWXXM modelling repository] contains UML model of IWXXM and tools that were used for preparing schemas, schematron rules and associated files in this repository.
+* The https://github.com/wmo-im/iwxxm-codelists[IWXXM codelists repository] contains code lists for use with IWXXM which are also uploaded to the https://codes.wmo.int/[WMO Codes Registry] for online access. 
+* The https://github.com/wmo-im/iwxxm-translation[IWXXM translation repository] has resources related to Traditional Alphanumeric Code (TAC) to IWXXM translation, including equivalent TAC/IWXXM pairs and a list of translation software.
+
+## Connect
+Please provide feedback to or raise your question to tt-avdata@groups.wmo.int. You may also request a subscription to the email group at https://groups.wmo.int/. 
+
+_This page was last updated on 25 November 2025_
+_URL: https://community.wmo.int/iwxxm_
