@@ -5,11 +5,11 @@
 ## Summary
 IWXXM is an information model designed for the operational exchange of meteorological information for aviation.  Expressed in Unified Modelling Language (UML), the logical model of IWXXM utilizes the Geography Markup Language (GML) defined by the Open Geospatial Consortium (OGC) to express geographical features of meteorological phenomena. 
 
-The XML/GML Schema serialized from the UML model, together with a set of Schematron Rules, constitute the official representation of meteorological information required by Annex 3 to the Convention on International Civil Aviation - Meteorological Service for International Air Navigation and is documented in the World Meteorological Organization (WMO) No. 306 Manual on Codes - International Codes, Volume I.3.
+The XML/GML Schema serialized from the UML model, together with a set of Schematron Rules, constitute the official representation of meteorological information required by International Civil Aviation Organisation (ICAO) Annex 3 to the Convention on International Civil Aviation - Meteorological Service for International Air Navigation as well as Procedures for Air Navigation Services – Meteorology (PANS-MET) and is documented in the World Meteorological Organization (WMO) No. 306 Manual on Codes - International Codes, Volume I.3.
 
-IWXXM includes representations for most of the reports in International Civil Aviation Organization (ICAO) Annex III, such as METAR/SPECI, TAF, SIGMET, AIRMET, Tropical Cyclone Advisory, Volcanic Ash Advisory and Space Weather Advisory.
+IWXXM includes representations for most of the reports in Annex 3 and PANS-MET, such as METAR/SPECI, TAF, SIGMET, AIRMET, Tropical Cyclone Advisory, Volcanic Ash Advisory, Space Weather Advisory, WAFS Significant Weather Forecast, Volcano Observatory Notice for Avition and Quantitative Volcanic Ash Concentration Information.
 
-Unlike the Traditional Alphanumeric Code (TAC) forms of the ICAO Annex III, IWXXM is not intended to be directly used by consumers like pilots. IWXXM is designed to be consumed by software acting on behalf of the consumers, such as display software.
+Unlike the Traditional Alphanumeric Code (TAC) forms of the ICAO Annex 3 and PANS-MET, IWXXM is not intended to be directly used by consumers like pilots. IWXXM is designed to be consumed by software acting on behalf of the consumers, such as display software.
 
 ### References
 * https://library.wmo.int/idurl/4/35769[_Manual on Codes_] (WMO-No. 306), Volume I.3. Part D - Representations derived from data models
