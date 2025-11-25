@@ -380,7 +380,7 @@
    </sch:pattern>
    <sch:pattern id="TropicalCycloneSIGMET.TropicalCycloneSIGMET-3">
       <sch:rule context="//iwxxm:TropicalCycloneSIGMET">
-         <sch:assert test="( if( exists(//iwxxm:TropicalCycloneSIGMET) ) then( count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection) = 1 ) else( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMET-3: There shall only be one iwxxm:analysisCollection in iwxxm:TropicalCycloneSIGMET</sch:assert>
+         <sch:assert test="( if( (empty(@isCancelReport) or @isCancelReport = 'false') and string-length(@translationFailedTAC) eq 0 ) then( count(//iwxxm:TropicalCycloneSIGMET//iwxxm:analysisCollection) = 1 ) else( true() ) )">TropicalCycloneSIGMET.TropicalCycloneSIGMET-3: There shall only be one iwxxm:analysisCollection in iwxxm:TropicalCycloneSIGMET</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="VolcanicAshSIGMET.VolcanicAshSIGMET-6">
