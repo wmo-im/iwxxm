@@ -14,4 +14,4 @@ body:
       label: Requestor
       description: Name (affiliation) and contact details. 
       placeholder: Enter requestor details.
-      value: "Anna Milan (WMO), @amilan17"
+      value: "enter your name and affiliation"
