@@ -176,7 +176,7 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSurfaceWind-2">
       <sch:rule context="//iwxxm:AerodromeSurfaceWind">
-         <sch:assert test="(if( @variableDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )">METAR_SPECI.AerodromeSurfaceWind-2: Wind direction is not reported when variable winds are indicated</sch:assert>
+         <sch:assert test="(if( @variableWindDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )">METAR_SPECI.AerodromeSurfaceWind-2: Wind direction is not reported when variable winds are indicated</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSurfaceWind-5">
@@ -829,7 +829,7 @@
    </sch:pattern>
    <sch:pattern id="Common.AerodromeSurfaceWindForecast-1">
       <sch:rule context="//iwxxm:AerodromeSurfaceWindForecast">
-         <sch:assert test="( if( @variableDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )">Common.AerodromeSurfaceWindForecast-1: Wind direction is not reported when variable winds are indicated</sch:assert>
+         <sch:assert test="( if( @variableWindDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )">Common.AerodromeSurfaceWindForecast-1: Wind direction is not reported when variable winds are indicated</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.AerodromeSurfaceWindTrendForecast-1">
@@ -848,12 +848,12 @@
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="IWXXM.nilReasonCheckLegacy">
-      <sch:rule context="//SPECI|//METAR|//TAF|//SIGMET|//AIRMET|//TropicalCycloneAdvisory|//VolcanicAshAdvisory|//SpaceWeatherAdvisory">
+      <sch:rule context="//iwxxm:SPECI|//iwxxm:METAR|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory|//iwxxm:SPECI//iwxxm:*|//iwxxm:METAR//iwxxm:*|//iwxxm:TAF//iwxxm:*|//iwxxm:SIGMET//iwxxm:*|//iwxxm:AIRMET//iwxxm:*|//iwxxm:TropicalCycloneAdvisory//iwxxm:*|//iwxxm:VolcanicAshAdvisory//iwxxm:*|//iwxxm:SpaceWeatherAdvisory">
          <sch:assert test="( if( exists(@nilReason) ) then( @nilReason = document('codes.wmo.int-common-nil.rdf')/rdf:RDF//skos:member/skos:Concept/@rdf:about ) else( true() ) )">IWXXM.nilReasonCheckLegacy: nilReason attributes should be a member of http://codes.wmo.int/common/nil</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="IWXXM.nilReasonCheck">
-      <sch:rule context="//WAFSSignificantWeatherForecast|//QuantitativeVolcanicAshConcentrationInformation|//VolcanoObservatoryNoticeForAviation|//MeteorologicalFeature|//MeteorologicalFeatureCollection">
+      <sch:rule context="//iwxxm:WAFSSignificantWeatherForecast|//iwxxm:QuantitativeVolcanicAshConcentrationInformation|//iwxxm:VolcanoObservatoryNoticeForAviation|//iwxxm:MeteorologicalFeature|//iwxxm:MeteorologicalFeatureCollection|//iwxxm:WAFSSignificantWeatherForecast//iwxxm:*|//iwxxm:QuantitativeVolcanicAshConcentrationInformation//iwxxm:*|//iwxxm:VolcanoObservatoryNoticeForAviation//iwxxm:*|//iwxxm:MeteorologicalFeature//iwxxm:*|//iwxxm:MeteorologicalFeatureCollection">
          <sch:let name="iwxxmVersion" value="namespace-uri()"/>
          <sch:assert test="( if( exists(@nilReason) ) then( @nilReason = document('codes.wmo.int-iwxxm-nil.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about ) else( true() ) )">IWXXM.nilReasonCheck: nilReason attributes should be a member of http://codes.wmo.int/iwxxm/nil</sch:assert>
       </sch:rule>

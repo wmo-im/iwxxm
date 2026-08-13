@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2025-11-23 20:20:27">
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2026-08-13 22:46:32">
 	<XMI.header>
 		<XMI.documentation>
 			<XMI.exporter>Enterprise Architect</XMI.exporter>
@@ -10,15 +10,15 @@
 		<UML:Model name="EA Model" xmi.id="MX_EAID_11A6FC05_3754_44f3_BDB4_AD61B159718C">
 			<UML:Namespace.ownedElement>
 				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
-				<UML:Package name="ICAO Meteorological Information Exchange Model" xmi.id="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
+				<UML:Package name="ICAO Meteorological Information Exchange Modela" xmi.id="EAPK_11A6FC05_3754_44f3_BDB4_AD61B159718C" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 					<UML:ModelElement.stereotype>
-						<UML:Stereotype xmi.idref="EAID_C6F39112_25A4_4b75_AC71_A68E6E18C84E"/>
+						<UML:Stereotype xmi.idref="EAID_D85B5923_B199_480c_8824_1D801B9EA15C"/>
 					</UML:ModelElement.stereotype>
 					<UML:ModelElement.taggedValue>
-						<UML:TaggedValue tag="documentation" value="The ICAO Meteorological Information Exchange Model (IWXXM) package, including METAR, SPECI, TAF, and other reports as defined in ICAO Annex 3 and PANS-MET (Doc 10157).  IWXXM reports are essential operational meteorology products used to enable safe and efficient air travel worldwide.&#xA;&#xA;The report types in this package include METAR/SPECI, TAF, SIGMET, AIRMET, Volcanic Ash Advisory, Tropical Cyclone Advisory, Space Weather Advisory, WAFS Significant Weather Forecast, Quantitative Volcanic Ash Concentration Information and Volcano Observatory Notice for Aviation.&#xA;&#xA;This package builds upon the ISO 19100 family (ISO TC211) and WMO standard meteorological modeling constructs. Additionally, the constructs in this application schema refer to a number of aviation constructs such Runway and Airspace from AIXM.  The full relationship of this package with external dependencies are shown in the 'Package Dependencies' diagram.&#xA;&#xA;Not all of the reports types from Annex 3 are currently represented, this may be expanded in a future version.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence.  Technical Regulations may impose requirements that are not described in this schema."/>
+						<UML:TaggedValue tag="documentation" value="The ICAO Meteorological Information Exchange Model (IWXXM) package, including METAR, SPECI, TAF, and other reports as defined in ICAO Annex 3 and PANS-MET (Doc 10157).  IWXXM reports are essential operational meteorology products used to enable safe and efficient air travel worldwide.&#xA;&#xA;The report types in this package include METAR/SPECI, TAF, SIGMET, AIRMET, Volcanic Ash Advisory, Tropical Cyclone Advisory, Space Weather Advisory, WAFS Significant Weather Forecast, Quantitative Volcanic Ash Concentration Information and Volcano Observatory Notice for Aviation.&#xA;&#xA;This package builds upon the ISO 19100 family (ISO TC211) and WMO standard meteorological modeling constructs. Additionally, the constructs in this application schema refer to a number of aviation constructs such as Runway and Airspace from AIXM.  The full relationship of this package with external dependencies are shown in the 'Package Dependencies' diagram.&#xA;&#xA;Not all of the reports types from Annex 3 are currently represented, this may be expanded in a future version.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence.  Technical Regulations may impose requirements that are not described in this schema."/>
 						<UML:TaggedValue tag="parent" value="EAPK_E81ED326_6A6E_415f_97A7_62148BE89642"/>
 						<UML:TaggedValue tag="created" value="2012-03-02 15:29:28"/>
-						<UML:TaggedValue tag="modified" value="2025-11-17 11:59:31"/>
+						<UML:TaggedValue tag="modified" value="2026-08-13 22:36:19"/>
 						<UML:TaggedValue tag="iscontrolled" value="FALSE"/>
 						<UML:TaggedValue tag="lastloaddate" value="2018-04-23 07:49:58"/>
 						<UML:TaggedValue tag="lastsavedate" value="2012-03-02 15:29:28"/>
@@ -61,7 +61,7 @@
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_3EA1153B_C26C_4b3f_84AE_513773D6E688"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="braeckel"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -92,7 +92,7 @@
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_51F8B3AA_1A36_465d_9700_5E2B617EE772"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="braeckel"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -123,7 +123,7 @@
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_77D2EC58_9BFA_4e7b_ABE7_F0B0A4BA898C"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="blchoy"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -154,7 +154,7 @@
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="braeckel"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -185,7 +185,7 @@
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_B0C787A8_5F53_4209_B721_28726BACAB9B"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="braeckel"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -216,7 +216,7 @@
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_CA480557_2AAC_4a38_A487_DA136C232B0F"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="braeckel"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -247,7 +247,7 @@
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_E1546630_A7E6_4c35_B620_D822E0BD466A"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="blchoy"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -278,7 +278,7 @@
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_E412FEC7_FA90_4b4f_BB89_ECBB773CDCB3"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="braeckel"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -309,7 +309,7 @@
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_E619C133_EFAC_40f4_994A_DA88401165BC"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="braeckel"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -340,7 +340,7 @@
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_E98C2095_7CA4_4f4d_BEB6_6EBFF2DFAD12"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="braeckel"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -371,7 +371,7 @@
 										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_F1040D70_BDB5_4bff_8213_7BBDFC9E6044"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="Mark.Oberfield"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -402,7 +402,7 @@
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package2" value="EAID_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997"/>
-										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Model"/>
+										<UML:TaggedValue tag="package_name" value="ICAO Meteorological Information Exchange Modela"/>
 										<UML:TaggedValue tag="phase" value="1.0"/>
 										<UML:TaggedValue tag="author" value="blchoy"/>
 										<UML:TaggedValue tag="complexity" value="1"/>
@@ -700,7 +700,7 @@
 								<UML:TaggedValue tag="lineStyle" value="0"/>
 								<UML:TaggedValue tag="conditional" value=" &#xA;?import?"/>
 								<UML:TaggedValue tag="ea_localid" value="13143"/>
-								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Model"/>
+								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Modela"/>
 								<UML:TaggedValue tag="ea_targetName" value="samplingPoint"/>
 								<UML:TaggedValue tag="ea_sourceType" value="Package"/>
 								<UML:TaggedValue tag="ea_targetType" value="Package"/>
@@ -738,7 +738,7 @@
 								<UML:TaggedValue tag="lineStyle" value="0"/>
 								<UML:TaggedValue tag="conditional" value=" &#xA;?import?"/>
 								<UML:TaggedValue tag="ea_localid" value="13142"/>
-								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Model"/>
+								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Modela"/>
 								<UML:TaggedValue tag="ea_targetName" value="samplingSurface"/>
 								<UML:TaggedValue tag="ea_sourceType" value="Package"/>
 								<UML:TaggedValue tag="ea_targetType" value="Package"/>
@@ -775,7 +775,7 @@
 								<UML:TaggedValue tag="lineStyle" value="0"/>
 								<UML:TaggedValue tag="conditional" value=" &#xA;«import»"/>
 								<UML:TaggedValue tag="ea_localid" value="13141"/>
-								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Model"/>
+								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Modela"/>
 								<UML:TaggedValue tag="ea_targetName" value="ISO 19108 All"/>
 								<UML:TaggedValue tag="ea_sourceType" value="Package"/>
 								<UML:TaggedValue tag="ea_targetType" value="Package"/>
@@ -820,7 +820,7 @@
 								<UML:TaggedValue tag="lineStyle" value="0"/>
 								<UML:TaggedValue tag="conditional" value=" &#xA;?import?"/>
 								<UML:TaggedValue tag="ea_localid" value="13140"/>
-								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Model"/>
+								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Modela"/>
 								<UML:TaggedValue tag="ea_targetName" value="ISO 19136:2007 GML"/>
 								<UML:TaggedValue tag="ea_sourceType" value="Package"/>
 								<UML:TaggedValue tag="ea_targetType" value="Package"/>
@@ -858,7 +858,7 @@
 								<UML:TaggedValue tag="lineStyle" value="0"/>
 								<UML:TaggedValue tag="conditional" value=" &#xA;?import?"/>
 								<UML:TaggedValue tag="ea_localid" value="13139"/>
-								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Model"/>
+								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Modela"/>
 								<UML:TaggedValue tag="ea_targetName" value="ISO 19108:2006 Temporal Schema"/>
 								<UML:TaggedValue tag="ea_sourceType" value="Package"/>
 								<UML:TaggedValue tag="ea_targetType" value="Package"/>
@@ -895,7 +895,7 @@
 								<UML:TaggedValue tag="lineStyle" value="0"/>
 								<UML:TaggedValue tag="conditional" value=" &#xA;«import»"/>
 								<UML:TaggedValue tag="ea_localid" value="13138"/>
-								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Model"/>
+								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Modela"/>
 								<UML:TaggedValue tag="ea_targetName" value="AIXM_v.5.1.1"/>
 								<UML:TaggedValue tag="ea_sourceType" value="Package"/>
 								<UML:TaggedValue tag="ea_targetType" value="Package"/>
@@ -940,7 +940,7 @@
 								<UML:TaggedValue tag="lineStyle" value="0"/>
 								<UML:TaggedValue tag="conditional" value=" &#xA;?import?"/>
 								<UML:TaggedValue tag="ea_localid" value="13137"/>
-								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Model"/>
+								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Modela"/>
 								<UML:TaggedValue tag="ea_targetName" value="ISO 19103:2005 Schema Language"/>
 								<UML:TaggedValue tag="ea_sourceType" value="Package"/>
 								<UML:TaggedValue tag="ea_targetType" value="Package"/>
@@ -977,7 +977,7 @@
 								<UML:TaggedValue tag="lineStyle" value="0"/>
 								<UML:TaggedValue tag="conditional" value=" &#xA;«import»"/>
 								<UML:TaggedValue tag="ea_localid" value="13136"/>
-								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Model"/>
+								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Modela"/>
 								<UML:TaggedValue tag="ea_targetName" value="ISO 19103 All"/>
 								<UML:TaggedValue tag="ea_sourceType" value="Package"/>
 								<UML:TaggedValue tag="ea_targetType" value="Package"/>
@@ -1022,7 +1022,7 @@
 								<UML:TaggedValue tag="lineStyle" value="0"/>
 								<UML:TaggedValue tag="conditional" value=" &#xA;?import?"/>
 								<UML:TaggedValue tag="ea_localid" value="13135"/>
-								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Model"/>
+								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Modela"/>
 								<UML:TaggedValue tag="ea_targetName" value="ISO 19107:2003 Spatial Schema"/>
 								<UML:TaggedValue tag="ea_sourceType" value="Package"/>
 								<UML:TaggedValue tag="ea_targetType" value="Package"/>
@@ -1059,7 +1059,7 @@
 								<UML:TaggedValue tag="lineStyle" value="0"/>
 								<UML:TaggedValue tag="conditional" value=" &#xA;«import»"/>
 								<UML:TaggedValue tag="ea_localid" value="13133"/>
-								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Model"/>
+								<UML:TaggedValue tag="ea_sourceName" value="ICAO Meteorological Information Exchange Modela"/>
 								<UML:TaggedValue tag="ea_targetName" value="METCE"/>
 								<UML:TaggedValue tag="ea_sourceType" value="Package"/>
 								<UML:TaggedValue tag="ea_targetType" value="Package"/>
@@ -1088,7 +1088,7 @@
 						</UML:Dependency>
 						<UML:Package name="METAR/SPECI" xmi.id="EAPK_CA480557_2AAC_4a38_A487_DA136C232B0F" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="METAR and SPECI reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;METAR and SPECI reports include identical information but are issued for different purposes.&#xA;&#xA;METAR reports are routine observations made at an aerodrome throughout the day.  METAR observations are made (and distributed) at intervals of one hour or, if so determined by regional air navigation agreement, at intervals of one half-hour.&#xA;&#xA;SPECI reports are special (i.e., non-routine) observation made at an aerodrome as needed. SPECI observations are made (and distributed) in accordance with criteria established by the meteorological authority, in consultation with the appropriate ATS authority, operators and others concerned.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -3387,7 +3387,7 @@
 										<UML:TaggedValue tag="version" value="1.0"/>
 										<UML:TaggedValue tag="package" value="EAPK_CA480557_2AAC_4a38_A487_DA136C232B0F"/>
 										<UML:TaggedValue tag="date_created" value="2012-03-20 11:41:35"/>
-										<UML:TaggedValue tag="date_modified" value="2025-06-27 10:50:44"/>
+										<UML:TaggedValue tag="date_modified" value="2026-08-13 22:41:28"/>
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package_name" value="METAR/SPECI"/>
@@ -3651,7 +3651,7 @@
 										</UML:Constraint>
 										<UML:Constraint name="if( @variableWindDirection = 'true' ) then( empty(meanWindDirection) )">
 											<UML:ModelElement.taggedValue>
-												<UML:TaggedValue tag="description" value="Pattern ID: METAR_SPECI.AerodromeSurfaceWind-2&#xA;Description: Wind direction is not reported when variable winds are indicated&#xA;Assertion: (if( @variableDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )"/>
+												<UML:TaggedValue tag="description" value="Pattern ID: METAR_SPECI.AerodromeSurfaceWind-2&#xA;Description: Wind direction is not reported when variable winds are indicated&#xA;Assertion: (if( @variableWindDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )"/>
 												<UML:TaggedValue tag="type" value="Invariant"/>
 												<UML:TaggedValue tag="weight" value="1.00"/>
 												<UML:TaggedValue tag="status" value="Approved"/>
@@ -4063,7 +4063,7 @@
 						</UML:Package>
 						<UML:Package name="TAF" xmi.id="EAPK_B0C787A8_5F53_4209_B721_28726BACAB9B" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="TAF reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;An Aerodrome Forecast (TAF) report is a routine forecast of meteorological conditions at an aerodrome intended for distribution.  TAF reports include base forecast conditions, and modifications to those conditions throughout the valid period.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -5166,7 +5166,7 @@
 						</UML:Package>
 						<UML:Package name="SIGMET" xmi.id="EAPK_E412FEC7_FA90_4b4f_BB89_ECBB773CDCB3" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="SIGMET reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;SIGMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These weather phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -6753,7 +6753,7 @@
 						</UML:Package>
 						<UML:Package name="AIRMET" xmi.id="EAPK_51F8B3AA_1A36_465d_9700_5E2B617EE772" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="AIRMET reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;AIRMETs report the occurrence and/or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These weather phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -8081,7 +8081,7 @@
 						</UML:Package>
 						<UML:Package name="Tropical Cyclone Advisory" xmi.id="EAPK_E98C2095_7CA4_4f4d_BEB6_6EBFF2DFAD12" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Tropical Cyclone Advisory reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;Tropical Cyclone Advisories (TCA) report the occurrence and/or expected occurrence of tropical cyclone phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -9124,7 +9124,7 @@
 						</UML:Package>
 						<UML:Package name="Volcanic Ash Advisory" xmi.id="EAPK_E619C133_EFAC_40f4_994A_DA88401165BC" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Volcanic Ash Advisory reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;Volcanic Ash Advisories report the occurrence and/or expected occurrence of specified en-route volcanic ash phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -10567,7 +10567,7 @@
 						</UML:Package>
 						<UML:Package name="Space Weather Advisory" xmi.id="EAPK_3EA1153B_C26C_4b3f_84AE_513773D6E688" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Space Weather Advisory reporting constructs as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;Space Weather Advisories report the occurrence and/or expected occurrence of space weather phenomena which may affect the safety of aircraft operations, and of the development of those phenomena in time and space.  These phenomena are reported as impacted regions of airspace.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -11470,7 +11470,7 @@
 						</UML:Package>
 						<UML:Package name="WAFS Significant Weather Forecast" xmi.id="EAPK_FDA65F60_6CCC_41a4_A253_C9FF9E9B2997" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="This package defines a collection of meteorological objects for the World Area Forecast System (WAFS) to deliver forecasts of significant en-route weather phenomena as Significant Weather (SIGWX) forecasts as defined in ICAO Annex 3 and PANS-MET (Doc 10157).&#xA;&#xA;Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema.&#xA;"/>
@@ -12395,7 +12395,7 @@
 						</UML:Package>
 						<UML:Package name="Quantitative Volcanic Ash Concentration Information" xmi.id="EAPK_F1040D70_BDB5_4bff_8213_7BBDFC9E6044" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="This package defines a collection of meteorological objects for the provision of Quantitative Volcanic Ash (QVA) Concentration Information as defined in ICAO Annex 3 and PANS-MET (Doc 10157) with a forecast of significant ash cloud(s) that pose a widespread impact to aircraft operations and air navigation.  Guidance on the criteria is provided in the Handbook on the International Airways Watch (Doc 9766).&#xA;&#xA;Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -12733,7 +12733,7 @@
 						</UML:Package>
 						<UML:Package name="Volcano Observatory Notice For Aviation" xmi.id="EAPK_77D2EC58_9BFA_4e7b_ABE7_F0B0A4BA898C" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="This package defines a collection of meteorological objects for provision of Volcano Observatory Notice for Aviation (VONA) as defined in ICAO Annex 3 and PANS-MET (Doc 10157) for dissemination of critical, operationally relevant information about volcanic activity.  Guidance on the criteria is provided in the Handbook on the International Airways Watch (Doc 9766).&#xA;&#xA;Class diagrams in this package are the controlled source of the meteorological objects which will also be used to generate Schematron rules for validation of those weakly-typed properties.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -13495,7 +13495,7 @@
 						</UML:Package>
 						<UML:Package name="Meteorological Feature" xmi.id="EAPK_E1546630_A7E6_4c35_B620_D822E0BD466A" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="This package provides basic features for describing meteorological and related phenomena specialised for the aviation domain.&#xA;&#xA;Feature types defined in this package, in addition to the strong-typed approach usually employed in GML encoding pattern, also apply virtual-typed pattern in those areas where it is more convenient to define properties from a controlled source.&#xA;&#xA;For ease of maintenance the controlled source are a set of constraints defined together with the Class diagrams used to generate the XML/GML application schemas of IWXXM.  Scripts will be used to extract constraints from the Class diagrams and generate Schematron rules to enforce conformance to the information model.&#xA;&#xA;&#xA;"/>
@@ -15789,7 +15789,7 @@
 						</UML:Package>
 						<UML:Package name="Common" xmi.id="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 							<UML:ModelElement.stereotype>
-								<UML:Stereotype xmi.idref="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5"/>
+								<UML:Stereotype xmi.idref="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2"/>
 							</UML:ModelElement.stereotype>
 							<UML:ModelElement.taggedValue>
 								<UML:TaggedValue tag="documentation" value="Common constructs and measured quantities used across multiple packages.  This package includes constructs closely related to the aviation weather domain.&#xA;&#xA;References to WMO and ICAO Technical Regulations within this XML schema shall have no formal status and are for information purposes only. Where there are differences between the Technical Regulations and the schema, the Technical Regulations shall take precedence. Technical Regulations may impose requirements that are not described in this schema."/>
@@ -17181,7 +17181,7 @@
 										<UML:TaggedValue tag="version" value="1.0"/>
 										<UML:TaggedValue tag="package" value="EAPK_8007203F_F974_49fe_B78D_661C6DE3F4D1"/>
 										<UML:TaggedValue tag="date_created" value="2012-08-26 13:53:07"/>
-										<UML:TaggedValue tag="date_modified" value="2020-08-02 14:32:33"/>
+										<UML:TaggedValue tag="date_modified" value="2026-08-13 22:44:08"/>
 										<UML:TaggedValue tag="gentype" value="Java"/>
 										<UML:TaggedValue tag="tagged" value="0"/>
 										<UML:TaggedValue tag="package_name" value="Common"/>
@@ -17227,9 +17227,9 @@
 									<UML:ModelElement.constraint>
 										<UML:Constraint name="if( @variableWindDirection = 'true' ) then( empty(meanWindDirection) )">
 											<UML:ModelElement.taggedValue>
-												<UML:TaggedValue tag="description" value="Pattern ID: Common.AerodromeSurfaceWindForecast-1&#xA;Description: Wind direction is not reported when variable winds are indicated&#xA;Assertion: ( if( @variableDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )"/>
+												<UML:TaggedValue tag="description" value="Pattern ID: Common.AerodromeSurfaceWindForecast-1&#xA;Description: Wind direction is not reported when variable winds are indicated&#xA;Assertion: ( if( @variableWindDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )"/>
 												<UML:TaggedValue tag="type" value="Invariant"/>
-												<UML:TaggedValue tag="weight" value="0.00"/>
+												<UML:TaggedValue tag="weight" value="1.00"/>
 												<UML:TaggedValue tag="status" value="Approved"/>
 											</UML:ModelElement.taggedValue>
 										</UML:Constraint>
@@ -17797,10 +17797,10 @@
 						</UML:Package>
 					</UML:Namespace.ownedElement>
 				</UML:Package>
-				<UML:Stereotype xmi.id="EAID_C6F39112_25A4_4b75_AC71_A68E6E18C84E" name="applicationSchema" isRoot="false" isLeaf="false" isAbstract="false">
+				<UML:Stereotype xmi.id="EAID_D85B5923_B199_480c_8824_1D801B9EA15C" name="applicationSchema" isRoot="false" isLeaf="false" isAbstract="false">
 					<UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
 				</UML:Stereotype>
-				<UML:Stereotype xmi.id="EAID_205DCD28_BD34_46f2_9852_F680EE3AABA5" name="leaf" isRoot="false" isLeaf="false" isAbstract="false">
+				<UML:Stereotype xmi.id="EAID_EA797FD2_9EEC_4cf6_803A_6A118D4037E2" name="leaf" isRoot="false" isLeaf="false" isAbstract="false">
 					<UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
 				</UML:Stereotype>
 				<UML:DataType xmi.id="eaxmiid1" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
