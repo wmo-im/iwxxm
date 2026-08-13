@@ -848,12 +848,12 @@
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="IWXXM.nilReasonCheckLegacy">
-      <sch:rule context="//SPECI|//METAR|//TAF|//SIGMET|//AIRMET|//TropicalCycloneAdvisory|//VolcanicAshAdvisory|//SpaceWeatherAdvisory">
+      <sch:rule context="//iwxxm:SPECI|//iwxxm:METAR|//iwxxm:TAF|//iwxxm:SIGMET|//iwxxm:AIRMET|//iwxxm:TropicalCycloneAdvisory|//iwxxm:VolcanicAshAdvisory|//iwxxm:SpaceWeatherAdvisory|//iwxxm:SPECI//iwxxm:*|//iwxxm:METAR//iwxxm:*|//iwxxm:TAF//iwxxm:*|//iwxxm:SIGMET//iwxxm:*|//iwxxm:AIRMET//iwxxm:*|//iwxxm:TropicalCycloneAdvisory//iwxxm:*|//iwxxm:VolcanicAshAdvisory//iwxxm:*|//iwxxm:SpaceWeatherAdvisory">
          <sch:assert test="( if( exists(@nilReason) ) then( @nilReason = document('codes.wmo.int-common-nil.rdf')/rdf:RDF//skos:member/skos:Concept/@rdf:about ) else( true() ) )">IWXXM.nilReasonCheckLegacy: nilReason attributes should be a member of http://codes.wmo.int/common/nil</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="IWXXM.nilReasonCheck">
-      <sch:rule context="//WAFSSignificantWeatherForecast|//QuantitativeVolcanicAshConcentrationInformation|//VolcanoObservatoryNoticeForAviation|//MeteorologicalFeature|//MeteorologicalFeatureCollection">
+      <sch:rule context="//iwxxm:WAFSSignificantWeatherForecast|//iwxxm:QuantitativeVolcanicAshConcentrationInformation|//iwxxm:VolcanoObservatoryNoticeForAviation|//iwxxm:MeteorologicalFeature|//iwxxm:MeteorologicalFeatureCollection|//iwxxm:WAFSSignificantWeatherForecast//iwxxm:*|//iwxxm:QuantitativeVolcanicAshConcentrationInformation//iwxxm:*|//iwxxm:VolcanoObservatoryNoticeForAviation//iwxxm:*|//iwxxm:MeteorologicalFeature//iwxxm:*|//iwxxm:MeteorologicalFeatureCollection">
          <sch:let name="iwxxmVersion" value="namespace-uri()"/>
          <sch:assert test="( if( exists(@nilReason) ) then( @nilReason = document('codes.wmo.int-iwxxm-nil.rdf')/rdf:RDF//skos:member/skos:Concept/owl:versionInfo[@rdf:resource=$iwxxmVersion]/../@rdf:about ) else( true() ) )">IWXXM.nilReasonCheck: nilReason attributes should be a member of http://codes.wmo.int/iwxxm/nil</sch:assert>
       </sch:rule>
