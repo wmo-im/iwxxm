@@ -176,7 +176,7 @@
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSurfaceWind-2">
       <sch:rule context="//iwxxm:AerodromeSurfaceWind">
-         <sch:assert test="(if( @variableDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )">METAR_SPECI.AerodromeSurfaceWind-2: Wind direction is not reported when variable winds are indicated</sch:assert>
+         <sch:assert test="(if( @variableWindDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )">METAR_SPECI.AerodromeSurfaceWind-2: Wind direction is not reported when variable winds are indicated</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="METAR_SPECI.AerodromeSurfaceWind-5">
@@ -829,7 +829,7 @@
    </sch:pattern>
    <sch:pattern id="Common.AerodromeSurfaceWindForecast-1">
       <sch:rule context="//iwxxm:AerodromeSurfaceWindForecast">
-         <sch:assert test="( if( @variableDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )">Common.AerodromeSurfaceWindForecast-1: Wind direction is not reported when variable winds are indicated</sch:assert>
+         <sch:assert test="( if( @variableWindDirection = 'true' ) then( empty(iwxxm:meanWindDirection) ) else( true() ) )">Common.AerodromeSurfaceWindForecast-1: Wind direction is not reported when variable winds are indicated</sch:assert>
       </sch:rule>
    </sch:pattern>
    <sch:pattern id="Common.AerodromeSurfaceWindTrendForecast-1">
