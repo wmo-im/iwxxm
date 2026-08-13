@@ -13,8 +13,8 @@ Requests for additions or revisions to the abbreviated headings will be managed 
 
 == WMO Abbreviated Headings and related specifications relevant for the exchange of aviation data over ICAO AFS
 
-* Version: 1.0.1
-* Date: 11 August 2025
+* Version: 1.1.0
+* Date: XX September 2026
 * Location: https://community.wmo.int/en/activity-areas/wis/iwxxm/ahl-icao-data
 
 ## Abbreviated heading
@@ -131,7 +131,7 @@ _(Original text from Tables A and B1, Attachment II-5, WMO-No.386)_
 |F |V |Volcanic ash advisories |ICAO (Volcanic Ash Advisory) 
 |F |R |Aviation route |FM 54 (ROFOR) 
 |U |A |Aircraft reports |ICAO (AIREP) 
-|W |M |Volcano Observatory Notice for Aviation (VONA) |ICAO (VONA) [NEW]
+|W |M |Volcano Observatory Notice for Aviation (VONA) |ICAO (VONA)
 |W |A |AIRMET |ICAO (AIRMET) 
 |W |S |SIGMET |ICAO (SIGMET) 
 |W |C |Tropical cyclone (SIGMET) |ICAO (SIGMET) 
@@ -157,7 +157,8 @@ _(Original text from Tables A and B7, Attachment II-5, WMO-N0.386)_
 |L |K |Tropical cyclone advisories |FM 205(iwxxm:TropicalCycloneAdvisory) 
 |L |N |Space weather advisories |FM 205 (iwxxm:SpaceWeatherAdvisory) 
 |L |U |Volcanic ash advisories |FM 205 (iwxxm:VolcanicAshAdvisory) 
-|L |M |Volcano Observatory Notice for Aviation (VONA) |FM 205 (iwxxm:VolcanoObservatoryNoticeForAviation) [NEW]
+|L |M |Volcano Observatory Notice for Aviation (VONA) |FM 205 (iwxxm:VolcanoObservatoryNoticeForAviation)
+|L  |Q  |Quantitative Volcanic Ash (QVA) Concentration Information  |FM  205  (iwxxm:QuantitativeVolcanicAshConcentrationInformation)  [NEW]
 |L |W |AIRMET |FM 205 (iwxxm:AIRMET) 
 |L |S |Aviation general warning (SIGMET) |FM 205 (iwxxm:SIGMET) 
 |L |Y |Aviation tropical cyclone warning (SIGMET) |FM 205 (iwxxm:TropicalCycloneSIGMET) 
